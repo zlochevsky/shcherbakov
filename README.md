@@ -1,3 +1,5 @@
+# About
+
 This project, built with [HUGO](https://gohugo.io/), develops the layout of a website dedicated to the works of Mikhail Shcherbakov, a russian songwriter and performer. The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. The maintained version, serving as the starting point for the project, is available at <https://lambda.mkshch.com/>.
 
 The goal of the project is to create a responsive layout for the website while preserving the original style and content as much as possible, making the website more usable for visitors and convenient for maintenance and support. The following objectives are set:
@@ -15,6 +17,19 @@ Specific implementation aspects, e.g. integration with the studio records store 
 Currently, the website is created and maintained by a small Russian-speaking community, which explains why the vast majority of the pages are in Russian. Unfortunately, this circumstance makes it more difficult to attract new people and resources to the project, but at the same time, it gives hope that the website will be cared for by individuals who are passionate about both the work and person of Mikhail Shcherbakov and the memory of the website's creator, Vladimir Smirnov.
 
 The website is created and maintained by people not affiliated with the author, Mikhail Shcherbakov, although some of them know him personally. Moreover, a significant portion of the content is not approved by the author. Therefore, the website will remain inofficial in the foreseeable future. Nevertheless, it continues to be, as it has been for the past decades, the most complete collection of the author's texts on the internet, as well as materials dedicated to him.
+
+# Structure
+
+Main configuration file is hugo.json in the root directory. All the directories in the root, except the `workfiles` directory, are standard Hugo project directories:
+
+- archetypes -- contains so called *archetypes* -- small template files, that configure Hugo's behaviour while creating new pages with no content yet;
+- content -- directory, where all the content files are placed by Hugo and to be placed by developer/editor. These are .md files in *markdown* format, which contain the html markup as well, with the main page content. Hugo converts them to the .html pages on the build stage. At the top of each .md file there is so called *front matter* -- set of page parameters, stored in JSON (or TOML/YAML) format;
+- public -- the directory, where Hugo places all the ready-to-upload site, built with all the static stuff.
+- themes -- contains subdirectories with the site *themes*. Each theme is a site layout, that contains templates files. The project develops `blackalpinist` theme for the site. In theory, it is possible to create an alternative design for the site with another theme.
+- workfiles -- contains files, used for creating current theme and content: images, song catalogue table etc.
+
+
+# Links
 
 Links on Mikhail Shcherbakov:
 

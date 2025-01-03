@@ -10,7 +10,7 @@
 области в&nbsp;1963&nbsp;г. Окончил филологический факультет Московского университета. 
 Живет в&nbsp;Москве. Пишет песни с&nbsp;1978 года. Выступает с&nbsp;концертами.
 Выпустил 27&nbsp;дисков, аудиокассеты, книги песен и&nbsp;стихов.</div>
-<div class="frontimage"><img src="Images/main20.jpg" /></div>
+<div class="frontimage"><img src="Images/main22.jpg" /></div>
 <div class="collections">
 <ul>
 <li><a href="about.html">Об этой коллекции</a><br />(список разделов и общая информация&nbsp;&ndash;<br />что и как можно найти на сайте)</li>
