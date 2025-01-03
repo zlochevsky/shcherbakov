@@ -32,9 +32,9 @@ Main configuration file is hugo.json in the root directory. All the directories 
 
 The project requires:
 
-- (https://git-scm.com/)[Git] client to work with this repository;
-- (https://go.dev/dl/)[Go] installed on your machine;
-- (https://gohugo.io/)[Hugo] Extended Edition installed on your machine. Follow the intructions in the (https://gohugo.io/installation/)[installation manual].
+- <https://git-scm.com/> Git client to work with this repository;
+- <https://go.dev/dl/> Go installed on your machine;
+- <https://gohugo.io/> Hugo Extended Edition installed on your machine. Follow the intructions in the installation manual: https://gohugo.io/installation/
 
 
 # Links
