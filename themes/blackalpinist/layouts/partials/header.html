@@ -1,0 +1,15 @@
+<h1>{{- site.Title }}</h1>
+    <h2>({{- site.Params.Subtitle }})</h2>
+{{- with .GetPage "news" }}
+          {{- if .Param "showAnnounce" }}
+                  {{- if .Param "announce" }}
+    <ul class="announce">
+                                {{- range $value := .Params.announce }}
+      <li>{{- $value | markdownify }}</li>
+                                {{- end }}
+    </ul>
+                  {{- end }}
+          {{-  end }}
+
+{{- end }}
+{{- partial "menu.html" (dict "menuID" "indexheadermenu" "page" .) }}

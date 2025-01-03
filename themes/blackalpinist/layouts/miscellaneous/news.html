@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+
+  <style>
+	body { background: url(/Images/boxs.gif) repeat 24px 24px; }
+  </style>
+
+</head>
+<body>
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="index.html">На главную страницу</a>]</li>
+	<li>[<a href="buy.html">Магазин</a>]</li>
+	<li>[<a href="archive/index.html">Aрхив</a>]</li>
+</ul>
+  <header>
+	  <h2>{{ .Title }}</h2>
+  </header>
+  <main>
+	  {{ if .Param "showAnnounce" }}
+		  {{ if .Param "announceTitle" }}
+			  <h3>{{ .Params.announceTitle }}</h3>
+		  {{ end }}
+		  {{ if .Param "announce" }}
+		  	<ul>
+				{{ range $value := $.Params.announce }}
+				<li>{{ $value | markdownify }}</li>
+				{{ end }}
+			</ul>
+		  {{ else }}
+		  	<p>Пока у редакции нет информации о времени и месте следующего концерта.</p>
+		  {{ end }}
+	  {{  end }}
+
+	  <hr />
+
+	  {{ .Content }}
+  </main>
+<ul class="cornernav">
+	<li>[<a href="#top">К началу</a>]</li>
+	<li>[<a href="index.html">На главную страницу</a>]</li>
+	<li>[<a href="buy.html">Магазин</a>]</li>
+	<li>[<a href="archive/index.html">Aрхив</a>]</li>
+</ul>
+</body>
+</html>

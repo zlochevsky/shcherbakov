@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+
+<style>
+body { color: #333380; a:visited: #888888; a:link: #000080; }
+h3 { color: #333380; }
+.epi { text-align:right; }
+.cornernav { text-align: left; }
+.epiwrapper:after { content: ''; display: block; clear: both; vertical-align: bottom;}
+@media only screen and (min-width: 961px) {
+.cornernav { float: left;}
+.epi { float: none; text-align: right; }
+}
+  </style>
+
+</head>
+<body>
+  <header>
+<a name="top"> </a>
+<div class="epiwrapper">
+<ul class="cornernav">
+	<li>[<a href="index.html">На главную страницу</a>]</li>
+	<li><a href="Books/index.html">[Библиография]</a></li>
+	<li><a href="sociology.html">Социология</a></li>
+	<li>[<a href="fans/index.html">Фан-клуб</a>]</li>
+</ul>
+<aside class="epi">
+	"Это безобразие... Я бы сам<br>хотел написать эти песни!"<br>(Дмитрий Манин)
+</aside>
+</div>
+	  <h2>{{ .Title }}</h2>
+  </header>
+  <main>
+{{ .Content }}
+  </main>
+<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	<li>[<a href="index.html">На главную страницу</a>]</li>
+</ul>
+</body>
+</html>

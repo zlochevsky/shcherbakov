@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+
+<style>
+body { color: #333380; a:visited: #888888; a:link: #000080; }
+h3 { color: #333380; }
+</style>
+
+</head>
+<body>
+<header>
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="index.html">На главную страницу</a>]</li>
+	<li>[<a href="news.html">Новости</a>]</li>
+</ul>
+<h2>{{ .Title | markdownify }}</h2>
+</header>
+  <main>
+{{ .Content }}
+  </main>
+<ul class="cornernav">
+	<li>[<a href="#top">К началу</a>]</li>
+</ul>
+</body>
+</html>

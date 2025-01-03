@@ -1,0 +1,113 @@
+body {
+        color: #000000;
+        background-color: #fefeee;
+	margin-bottom: 20px
+}
+
+a:link {
+        color: #000090;
+}
+a:visited {
+        color: #888888;
+}
+a:link.announce {
+        color: #008800;
+        font-weight: bold;
+}
+.datum {color: red;}
+
+
+
+main,nav,header,footer {
+        width: 100%;
+        margin: 5px 0;
+        box-sizing: border-box;
+}
+header,footer {
+        margin-bottom: 32px;
+        text-align: center;
+}
+h1 {
+        font: normal 2em serif;
+        margin-bottom: 0;
+}
+h1 > a {text-decoration: none;}
+h3 {
+        margin-top: 1em;
+}
+h3 { color: #4B0082; }
+h4 { font-weight: bold; font-size: larger }
+
+
+nav > div, main > div.wrapper > div {
+        border-width: 1px;
+        border-color: #fefeee;
+        border-style: solid;
+        padding: 5px;
+}
+.cornernav, .stringnav {
+	list-style-type: none;
+	padding-inline-start: 0;
+	padding: 0;
+	margin: 0
+}
+.stringnav > li {
+	margin-left: 0
+	}
+.cornernav { text-align: left; }
+p { padding-left: 40px; }
+p.noleftindent { padding-left: 0 }
+ul { margin: .5em 0; }
+li { margin: .25em 0 0 40px; }
+li li { margin-left: .25em }
+hr { margin: 1em 40px}
+
+@media only screen and (max-width: 960px) {
+	body {
+		margin: 0 24px;
+	}
+        nav, main {
+                padding: 5px 0;
+        }
+        nav > div, main > div.wrapper > div {
+                display: block;
+                padding: 20px 10px;
+                margin: 5px;
+	}
+	.cornernav > li {
+		margin: .25em 0 0 0;
+	}
+}
+@media only screen and (min-width: 961px) {
+        .centered, body {
+                margin: 0 50px 20px;
+        }
+	.centertext-desktop {
+		text-align: center
+		}
+	main {
+		padding: 0 120px;
+	}
+        .centertext {
+                text-align: center;
+        }
+	.stringnav > li {
+		display: inline;
+	}
+	.stringnav > li:not(:first-child) {
+		margin-left: 40px;
+	}
+	.cornernav {margin-top: 40px}
+
+}
+@media only screen and (min-width: 1600px) {
+	body {
+		width: 90%;
+	}
+}
+@media only screen and (min-width: 1980px) {
+	body {
+		width 80%;
+	}
+}
+
