@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+</head>
+<body>
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="index.html">На главную страницу</a>]</li>
+	<li>[<a href="fans/index.html">Фан-клуб</a>]</li>
+	{{ if not (strings.Contains .RelPermalink "sociology.html") }}<li>[<a href="sociology.html">Социология</a>]</li>{{ end }}
+	<li>[<a href="praises.html">Отзывы</a>]</li>
+</ul>
+  <header>
+	  <h1>{{ .Title }}</h1>
+	  {{ if .Param "subtitle" }}<h2 style="font-size: 1.3em; font-weight: normal; font-style: italic; margin-top: .3em; margin-bottom: 2.2em">{{ .Params.subtitle }}</h2>{{ end }}
+  </header>
+  <main>
+    {{ .Content }}
+  </main>
+{{ if not (strings.Contains .RelPermalink "sociology.html") }}
+	<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	<li>[<a href="sociology.html">Социология</a>]</li>
+	<li>[<a href="fans/index.html">Фан-клуб</a>]</li>
+	<li>[<a href="index.html">На главную страницу</a>]</li>
+</ul>
+{{ end }}
+</body>
+</html>

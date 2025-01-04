@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
-{{ partial "headbasic.html" . }}
-<style>body {background-image: url(Images/bck2.gif);}</style>  
+  {{ partial "headbasic.html" . }}
+
+<style>
+a:link {
+	color: #006600;
+}
+a:visited {
+	color: #002200;
+}
+</style>
+
 </head>
 <body>
+  <header>
 <a name="top"> </a>
 <ul class="cornernav">
 	<li>[<a href="index.html">На главную страницу</a>]</li>
-	<li>[<a href="news.html">Новости</a>]</li>
-	<li>[<a href="about.html">Список страниц</a>]</li>
+	<li>[<a href="bio.html">О Михаиле Щербакове</a>]</li>
+	<li>[<a href="#disclaimers">Disclaimers</a>]</li>
 </ul>
-  <header>
-	  <h2>{{ .Title }}</h2>
-	 {{ if .Param "subtitle" }}
-	 <p style="text-align: center"><em>{{ .Params.subtitle }}</em>
-	 {{ end }}
+<h1>{{ .Title }}</h1>
   </header>
   <main>
-    {{ .Content }}
+{{ .Content }}
   </main>
 <ul class="cornernav">
 	<li>[<a href="#top">Наверх</a>]</li>
