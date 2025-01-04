@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+  <style>body { background-color: #ffffff; }</style>
+</head>
+<body>
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="index.html">На главную страницу</a>]</li>
+	<li>[<a href="log.html">Лог</a>]</li>
+</ul>
+  <header>
+	  <h2>{{ .Title }}</h2>
+	 {{ if .Param "subtitle" }}
+	 <p style="text-align: center"><em>{{ .Params.subtitle }}</em>
+	 {{ end }}
+  </header>
+  <main>
+    {{ .Content }}
+  </main>
+</ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+<style>
+body { color: #000000; }
+.h1 { font-weight: bold; }
+.epi { text-align:right; margin-top: 20px;}
+.cornernav { text-align: left; }
+.epiwrapper:after { content: ''; display: block; clear: both; vertical-align: bottom;}
+@media only screen and (min-width: 961px) {
+.cornernav { float: left;}
+.epi { float: none; text-align: right; font-style: italic; }
+}
+</style>
+</head>
+<body>
+<a name="top"> </a>
+
+<div class="epiwrapper">
+<ul class="cornernav">
+        <li>[<a href="../index.html">На главную страницу</a>]</li>
+        <li>[<a href="fans/index.html">Фан-клуб</a>]</li>
+        <li>[<a href="../catalogue.html">Каталог песен</a>]</li>
+        <li>[<a href="fans/kom2.html">"Словарь заморских слов", часть 2</a>]</li>
+</ul>
+<aside class="epi">
+	...опасность, которая подстерегает комментаторов &ndash; иногда мы сталкиваемся с результатами этого комментаторского самопопустительства &ndash; это все-таки дать волю своему воображению и поделиться с читателем в рамках комментариев своими достаточно вольными ассоциациями по поводу прочитанного текста. Это можно делать где угодно, но только не в комментариях, в которых мы должны служить читателю...<br>(<a href="http://br00.narod.ru/10660166.htm">Лев Лосев</a>)
+</aside>
+</div>
+<header>
+	  <h1>{{ .Title }}</h1>
+	  {{ if .Param "subtitle" }}<h2 style="font-size: 1.3em; font-weight: normal; margin-top: .3em; margin-bottom: 2.2em">{{ .Params.subtitle }}</h2>{{ end }}
+</header>
+  <main>
+    {{ .Content }}
+  </main>
+	<ul class="cornernav">
+        <li>[<a href="../index.html">На главную страницу</a>]</li>
+        <li>[<a href="fans/index.html">Фан-клуб</a>]</li>
+        <li>[<a href="../catalogue.html">Каталог песен</a>]</li>
+        <li>[<a href="fans/kom2.html">"Словарь заморских слов", часть 2</a>]</li>
+</ul>
+</body>
+</html>
