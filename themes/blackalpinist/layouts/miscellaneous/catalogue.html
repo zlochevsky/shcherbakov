@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>{{ with .Params.name }}{{ . }}{{ else }}{{ printf "%s. %s" site.Title .Title }}{{ end }}</title>
+<style>
+{{- partial "css/common.html" | safeCSS -}}
+{{ partial "css/catalogue.css.html" | safeCSS }}
+</style>
+{{ partialCached "head/js.html" . }}
+</head>
+<body>
+<header>
+<h1>{{ .Params.name }}</h1>
+<h2>{{- .Params.subtitle -}}</h2>
+</header>
+{{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" .) }}
+<main>
+<div>
+        <div class="wrapper">
+                <div>
+                        <div class="search js-only centertext">
+                                Задать фильтр:
+                                <input type="text" id="search" placeholder="название, диск, год..." autofocus>
+                                <button id="clear-search">сброс</button> &emsp; &emsp;
+                                Сортировать вывод:
+                                <button id="alphabetname">по названиям</button>
+                                <button id="alphabetical">по первым словам</button>
+                                <button id="chronological">по годам</button>
+                        </div>
+
+                        <ul id="artlist">
+{{ $songs := .resources.Get "data/songs.json" | transform.Unmarshal }}
+{{ range $songs }}
+
+<li>{{ .name }}</li>
+
+{{/* <li data-datum="{{ with .edit }}{{ . }}{{ else }}{{ .year }}{{ end }}" data-begin="{{ .incipit }}" {{ with .name }}data-name="{{ . }}"{{ end }} class="opus-entry"> <a href="/htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ .year }}{{ end }}/{{ .id }}.html"> <span id="name">{{ with .name }}{{ . }}{{ else }}{{ $songs.incipit }}{{ end }}</span> (<span id="begin">{{ .incipit }}</span>) {{ .year }}{{with .edit }}, {{ . }}{{ end }}</a></li>
+*/}}	{{ end }}
+                        </ul>
+			{{ .Content }}
+                </div>
+        </div>
+</div>
+</main>
+<script>
+// @license magnet:?xt=urn:btih:5ac446d35272cc2e4e85e4325b146d0b7ca8f50c&dn=unlicense.txt Unlicense
+
+document.addEventListener("DOMContentLoaded", () => {
+  for (e of document.getElementsByClassName("js-only")) {
+    e.classList.remove("js-only");
+  }
+
+  const songs = document.querySelectorAll("#artlist li");
+  const search = document.getElementById("search");
+  const clearSearch = document.getElementById("clear-search");
+  const artlist = document.getElementById("artlist");
+  const alphabButton = document.getElementById("alphabetical");
+  const alphanButton = document.getElementById("alphabetname");
+  const chronoButton = document.getElementById("chronological");
+
+  var nameAndBeginSwapped = false;
+  var nameSorted = true;
+  var beginSorted = false;
+  var dateSorted = false;
+
+  search.addEventListener("input", () => {
+    // grab search input value
+    const searchText = search.value.toLowerCase().trim().normalize('NFD').replace(/\p{Diacritic}/gu, "").replace(/"ё"/gu, "е");
+    const searchTerms = searchText.split(" ");
+    const hasFilter = searchText.length > 0;
+//   artlist.classList.toggle("list-searched", hasFilter);
+    // for each opus hide all but matched
+    songs.forEach(function(opus) {
+            const searchString = `${opus.textContent} ${opus.dataset.name} ${opus.dataset.begin} ${opus.dataset.datum} ${opus.dataset.disk} ${opus.dataset.printed}`
+            .toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "").replace(/"ё"/gu, "е");
+            console.log(searchString);
+      const isMatch = searchTerms.every(term => searchString.includes(term));
+      opus.hidden = !isMatch;
+//      opus.classList.toggle("matched-opus", hasFilter && isMatch);
+    });
+  });
+
+  clearSearch.addEventListener("click", () => {
+    search.value = "";
+    search.focus();
+    songs.forEach(opus => {
+      opus.hidden = false;
+//      opus.classList.remove("matched-opus");
+    });
+
+//    artlist.classList.remove("list-searched");
+  });
+
+  function comparatorDatum(a, b) {
+    if (a.dataset.datum < b.dataset.datum) return -1;
+    if (a.dataset.datum > b.dataset.datum) return 1;
+    return 0;
+  }
+
+  function comparatorName(a, b) {
+    if (a.dataset.name < b.dataset.name) return -1;
+    if (a.dataset.name > b.dataset.name) return 1;
+    return 0;
+  }
+
+  function comparatorBegin(a, b) {
+    if (a.dataset.begin < b.dataset.begin) return -1;
+    if (a.dataset.begin > b.dataset.begin) return 1;
+    return 0;
+  }
+
+  function SortDate() {
+    var dates = document.querySelectorAll('[data-datum]');
+    var datesArray = Array.from(dates);
+    let sorted = datesArray.sort(comparatorDatum);
+    sorted.forEach(function(e) {
+      document.querySelector("#artlist").appendChild(e)
+      });
+    dateSorted = true;
+  }
+
+  function SortName() {
+          if (nameAndBeginSwapped == true) {
+    swapNameAndBegin();
+          }
+    var names = document.querySelectorAll('[data-name]');
+    var namesArray = Array.from(names);
+    let sorted = namesArray.sort(comparatorName);
+    sorted.forEach(function(e) {
+      document.querySelector("#artlist").appendChild(e)
+      });
+    nameSorted = true;
+    beginSorted = false;
+  }
+
+
+  function SortBegin() {
+    if (nameAndBeginSwapped == false) {
+      swapNameAndBegin();
+    }
+    var begins = document.querySelectorAll('[data-begin]');
+    var beginsArray = Array.from(begins);
+    let sorted = beginsArray.sort(comparatorBegin);
+    sorted.forEach(function(e) {
+      document.querySelector("#artlist").appendChild(e)
+      });
+    nameSorted = false;
+    beginSorted = true;
+ }
+
+  function swapNameAndBegin() {
+    songs.forEach(function(e) {
+
+     let opusName = e.querySelector("#name");
+
+     if (opusName != null) {
+       let opusNameContent = opusName.textContent;
+
+       let opusBegin = e.querySelector("#begin");
+
+         if (opusBegin != null) { //swap #begin and #name, only if the opus has a #begin entity
+
+         let opusBeginContent = opusBegin.textContent;
+         let nameCopy = opusName.textContent;
+         opusName.textContent = opusBeginContent
+         opusBegin.textContent = nameCopy;
+//       opusBegin = "" ;
+//       opusName = "" ;
+//       nameCopy = "" ;
+       }
+     }
+   });
+   if (nameAndBeginSwapped) {
+     nameAndBeginSwapped = false;
+     } else {
+     nameAndBeginSwapped = true;
+   }
+  }
+
+  alphanButton.addEventListener("click", () => {
+    if(nameSorted == false || dateSorted == true)
+      SortName() && setBorderWidth("3px","1px","1px");
+  });
+
+  alphabButton.addEventListener("click", () => {
+          if(beginSorted == false || dateSorted == true)
+            SortBegin() && setBorderWidth("1px","3px","1px");
+  });
+
+  chronoButton.addEventListener("click", () => {
+    SortDate() && setBorderWidth("1px","1px","3px");
+  });
+
+  function setBorderWidth(alphanVal,alphabVal,chronoVal) {
+    alphanButton.style.borderWidth = alphanVal;
+    alphabButton.style.borderWidth = alphabVal;
+    chronoButton.style.borderWidth = chronoVal;
+  }
+
+});
+
+// @license-end
+</script>
+
+</body>
+</html>
