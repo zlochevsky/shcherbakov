@@ -29,16 +29,14 @@
                                 <button id="alphabetical">по первым словам</button>
                                 <button id="chronological">по годам</button>
                         </div>
-
+{{ $songs := .Site.Data.songs }}
                         <ul id="artlist">
-{{ $songs := .resources.Get "data/songs.json" | transform.Unmarshal }}
 {{ range $songs }}
 
-<li>{{ .name }}</li>
+<li data-datum="{{ with .edit }}{{ . }}{{ else }}{{ .year }}{{ end }}" data-begin="{{ .incipit }}" {{ with .name }}data-name="{{ . }}"{{ end }} class="opus-entry"><a href="/htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ .year }}{{ end }}/{{ .id }}.html"> <span id="name">{{ with .name }}{{ . }}{{ else }}{{ .incipit }}{{ end }}</span> (<span id="begin">{{ .incipit }}</span>) {{ .year }}{{with .edit }}, {{ . }}{{ end }}</a></li>
 
-{{/* <li data-datum="{{ with .edit }}{{ . }}{{ else }}{{ .year }}{{ end }}" data-begin="{{ .incipit }}" {{ with .name }}data-name="{{ . }}"{{ end }} class="opus-entry"> <a href="/htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ .year }}{{ end }}/{{ .id }}.html"> <span id="name">{{ with .name }}{{ . }}{{ else }}{{ $songs.incipit }}{{ end }}</span> (<span id="begin">{{ .incipit }}</span>) {{ .year }}{{with .edit }}, {{ . }}{{ end }}</a></li>
-*/}}	{{ end }}
-                        </ul>
+{{ end }}
+			</ul>
 			{{ .Content }}
                 </div>
         </div>
