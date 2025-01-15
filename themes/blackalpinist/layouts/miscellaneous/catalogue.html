@@ -29,7 +29,22 @@
                                 <button id="alphabetical">по первым словам</button>
                                 <button id="chronological">по годам</button>
                         </div>
-{{ $songs := .Site.Data.songs }}
+
+                        {{ $data := dict }}
+                        {{ $url := printf "%s%s%s%s" site.Params.directus.url "items/works/?access_token="  site.Params.directus.token "&limit=-1" }}
+                        {{ with resources.GetRemote $url }}
+                        {{ with .Err }}
+                        {{ errorf "%s" . }}
+                        {{ else }}
+                        {{ $data = . | transform.Unmarshal }}
+                        {{ end }}
+                        {{ else }}
+                        {{ errorf "Unable to get remote resource %q" $url }}
+                        {{ end }}
+
+                        {{ $songs := $data.data }}
+
+<!--  $songs := .Site.Data.songs -->
                         <ul id="artlist">
 {{ range $songs }}
 
