@@ -24,7 +24,7 @@
 <ul class="mob-link-block">
 <li><a href="htmtexts/1981/index.html">хронологический</a></li>
 <li><a href="alphabetic.html">алфавитный</a></li>
-<li><a href="htmaccords/1981/index.html">гармонический (бета)</a></li>
+<li><a href="catalogue.html">единый</a></li>
 </ul>
 </li>
 </ul>
