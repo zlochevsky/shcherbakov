@@ -30,19 +30,8 @@
                                 <button id="chronological">по годам</button>
                         </div>
 
-                        {{ $data := dict }}
-                        {{ $url := printf "%s%s%s%s" site.Params.directus.url "items/works/?access_token="  site.Params.directus.token "&limit=-1" }}
-                        {{ with resources.GetRemote $url }}
-                        {{ with .Err }}
-                        {{ errorf "%s" . }}
-                        {{ else }}
-                        {{ $data = . | transform.Unmarshal }}
-                        {{ end }}
-                        {{ else }}
-                        {{ errorf "Unable to get remote resource %q" $url }}
-                        {{ end }}
-
-                        {{ $songs := $data.data }}
+{{ $url := printf "%s%s%s" site.Params.directus.url site.Params.directus.songs site.Params.directus.token  }}
+{{ $songs := partial "directus.html" (dict "context" . "url" $url) }}
 
 <!--  $songs := .Site.Data.songs -->
                         <ul id="artlist">
