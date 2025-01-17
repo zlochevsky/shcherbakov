@@ -30,72 +30,68 @@
                                 <button id="chronological">по годам</button>
                         </div>
 
-{{ $url := printf "%s%s?%s&%s" site.Params.directus.url site.Params.directus.songs site.Params.directus.token site.Params.directus.limit }}
+{{ $url := printf "%s%s%s" site.Params.directus.url site.Params.directus.songs site.Params.directus.token  }}
 {{ $songs := partial "directus.html" (dict "context" . "url" $url) }}
-
 <ul id="artlist">
-{{ range collections.Sort $songs.data "sort" "asc" }}
-{{ if not .hidden }}
+{{ range sort $songs "sort" "asc" }}
 <li class="opus-entry"
-	{{- with .sort -}}
-    		data-sort="{{- . -}}"
-	{{- end }} 
-	{{ if isset . .year -}}
+	{{ with .sort }}
+    		data-sort="{{ . }}"
+	{{ end }} 
+	{{ if isset . .year }}
 		data-datum="
-			{{- with .edit -}}
-				{{- . -}}
-			{{- else -}}
-				{{- .year -}}
-			{{- end }}"
-	{{- end }}
+			{{ with .edit }}
+				{{ . }}
+			{{ else }}
+				{{ .year }}
+			{{ end }}"
+	{{ end }}
 	{{ with .incipit }}
-		data-begin="{{- . -}}"
+		data-begin="{{ . }}"
 	{{ end }}
 
-	data-name="{{- with .name -}}
-			{{- . -}}
-		{{- else -}}
-			{{- .incipit -}}
-		{{- end }}"
+	data-name="{{ with .name }}
+			{{ . }}
+		{{ else }}
+			{{ .incipit }}
+		{{ end }}"
 
 	data-datum="{{- with .edit -}}
-			{{- . -}}
+			{{ . }}
 		{{- else -}}
-		{{- .year -}}
-		{{- end -}}">
+		{{ .year }}
+		{{- end -}}"
+		
+
+		>
+
 	<a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .year }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">
-			{{- if .name -}}
-				{{- if .fname }}
-					{{ .fname | strings.FirstUpper -}}
-				{{- else -}}
-					{{- .name | strings.FirstUpper -}}
-				{{- end -}}
-			{{- else -}}
-				{{- if .fincipit -}}
-					{{- .fincipit -}}
-				{{- else -}}
-					{{- .incipit -}}
-				{{- end -}}
-			{{- end -}}
+			{{ with .name }}
+			{{ . }}
+			{{ else }}
+			{{ .incipit }}
+			{{ end }}
 		</a></span> 
-	{{- if .name }}
+	{{ if .name }}		
 		(<span id="begin">
-			{{- if .fincipit -}}
-				{{ .fincipit }}
-			{{- else -}}
-				{{- .incipit -}}
-			{{- end -}}
+			{{ with .fincipit }}
+				{{ . }}
+			{{ else }}
+				{{ .incipit }}
+			{{ end }}
 		</a></span>)
-	{{- end -}}
-		{{- if .year }}	<span class="year">{{ .year -}}
-			{{- if .edit -}}
-			, {{ .edit -}}</span>
-		{{- end -}}
-	{{- end -}}
-	</a> {{ .fincipit }} </li>
-{{- end -}}
-{{- end }}
+	{{ end }}
+		{{ if .year }}
+		{{ .year }}
+			{{ if .edit }}
+			, {{ .edit }}
+		{{ end }}
+	{{ end }}
+	</a></li>
+
+{{ end }}
 			</ul>
+			{{ .Content }}
                 </div>
         </div>
 </div>
