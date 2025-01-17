@@ -37,9 +37,7 @@
 {{ range collections.Sort $songs.data "sort" "asc" }}
 {{ if not .hidden }}
 <li class="opus-entry"
-	{{- with .sort -}}
-    		data-sort="{{- . -}}"
-	{{- end }} 
+    		data-sort="{{ .sort }}"
 	{{ if isset . .year -}}
 		data-datum="
 			{{- with .edit -}}
@@ -48,16 +46,12 @@
 				{{- .year -}}
 			{{- end }}"
 	{{- end }}
-	{{ with .incipit }}
-		data-begin="{{- . -}}"
-	{{ end }}
-
+	data-begin="{{ if .fincipit }}{{ .fincipit }}{{ else }}{{ .incipit }}{{ end }}"
 	data-name="{{- with .name -}}
 			{{- . -}}
 		{{- else -}}
 			{{- .incipit -}}
 		{{- end }}"
-
 	data-datum="{{- with .edit -}}
 			{{- . -}}
 		{{- else -}}
@@ -181,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (nameAndBeginSwapped == true) {
     swapNameAndBegin();
           }
-    var names = document.querySelectorAll('[data-name]');
+    var names = document.querySelectorAll('[data-sort]');
     var namesArray = Array.from(names);
     let sorted = namesArray.sort(comparatorName);
     sorted.forEach(function(e) {
