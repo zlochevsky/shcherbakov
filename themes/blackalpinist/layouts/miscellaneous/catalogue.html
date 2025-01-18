@@ -29,25 +29,32 @@
                                 <button id="alphabetical">по первым словам</button>
                                 <button id="chronological">по годам</button>
                         </div>
-
-{{ $url := printf "%s%s?%s&%s" site.Params.directus.url site.Params.directus.songs site.Params.directus.token site.Params.directus.limit }}
-{{ $songs := partial "directus.html" (dict "context" . "url" $url) }}
-
+{{ $songs := partial "directus.html" }}
 <ul id="artlist">
-{{ range collections.Sort $songs.data "sort" "asc" }}
+{{ range $songs.data }}
 {{ if not .hidden }}
+{{ $dateint := .date }}
+{{ $datesrc := 0 }}
+{{ $date := "" }}
+{{ if lt $dateint 0 }}
+	{{ with $dateint }}
+		{{ $datesrc := math.Abs . | int | cast.ToString }}
+		{{ $date = printf "%s%s%s" "<" $datesrc ">" }}
+	{{ end }}
+{{ else }}
+	{{ $date = $dateint | cast.ToString }}
+{{ end }}
+
 <li class="opus-entry"
     		data-sort="{{ .sort }}"
-	{{ if isset . .year -}}
 		data-datum="
 			{{- with .edit -}}
 				{{- . -}}
 			{{- else -}}
-				{{- .year -}}
+				{{- $date -}}
 			{{- end }}"
-	{{- end }}
-	data-begin="{{ if .fincipit }}{{ .fincipit }}{{ else }}{{ .incipit }}{{ end }}"
-	data-name="{{- with .name -}}
+	data-begin="{{ .fincipit }}"
+	data-name="{{ with .name -}}
 			{{- . -}}
 		{{- else -}}
 			{{- .incipit -}}
@@ -55,36 +62,23 @@
 	data-datum="{{- with .edit -}}
 			{{- . -}}
 		{{- else -}}
-		{{- .year -}}
-		{{- end -}}">
-	<a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .year }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">
+		{{- $date -}}
+		{{- end -}}"> 
+	<a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">
 			{{- if .name -}}
 				{{- if .fname }}
-					{{ .fname | strings.FirstUpper -}}
+					{{- .fname | strings.FirstUpper -}}
 				{{- else -}}
 					{{- .name | strings.FirstUpper -}}
 				{{- end -}}
 			{{- else -}}
-				{{- if .fincipit -}}
-					{{- .fincipit -}}
-				{{- else -}}
-					{{- .incipit -}}
-				{{- end -}}
+				{{- .fincipit }}
 			{{- end -}}
 		</a></span> 
 	{{- if .name }}
-		(<span id="begin">
-			{{- if .fincipit -}}
-				{{ .fincipit }}
-			{{- else -}}
-				{{- .incipit -}}
-			{{- end -}}
-		</a></span>)
+		(<span id="begin">{{ .fincipit }}</a></span>)
 	{{- end -}}
-		{{- if .year }}	<span class="year">{{ .year -}}
-			{{- if .edit -}}
-			, {{ .edit -}}</span>
-		{{- end -}}
+	{{- if $date }}	<span class="year">{{ $date -}}{{- if .edit -}}, {{ .edit -}}</span>{{- end -}}
 	{{- end -}}
 	</a></li>
 {{- end -}}
@@ -144,14 +138,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function comparatorDatum(a, b) {
-    if (a.dataset.datum < b.dataset.datum) return -1;
-    if (a.dataset.datum > b.dataset.datum) return 1;
+    if (
+	    a.dataset.datum < b.dataset.datum
+    ) 
+	  return -1;
+    if (
+	    a.dataset.datum > b.dataset.datum
+    )
+	  return 1;
     return 0;
   }
 
   function comparatorName(a, b) {
-    if (a.dataset.name < b.dataset.name) return -1;
-    if (a.dataset.name > b.dataset.name) return 1;
+    if (a.dataset.sort < b.dataset.sort) return -1;
+    if (a.dataset.sort > b.dataset.sort) return 1;
     return 0;
   }
 

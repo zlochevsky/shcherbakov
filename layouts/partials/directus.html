@@ -1,0 +1,24 @@
+{{ $url := printf "%s%s?%s&%s&%s&%s" 
+		site.Params.directus.url
+		site.Params.directus.songs 
+		site.Params.directus.token
+		site.Params.directus.limit
+		site.Params.directus.fields
+		site.Params.directus.sort
+		}}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}
