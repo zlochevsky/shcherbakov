@@ -1,10 +1,11 @@
-{{ $url := printf "%s%s?%s&%s&%s&%s" 
+{{ $url := printf "%s%s?%s&%s&%s&%s&%s" 
 		site.Params.directus.url
 		site.Params.directus.songs 
 		site.Params.directus.token
 		site.Params.directus.limit
 		site.Params.directus.fields
 		site.Params.directus.sort
+		site.Params.directus.cache
 		}}
 {{ $data := dict }}
 {{ with try (resources.GetRemote $url) }}

@@ -31,58 +31,54 @@
                         </div>
 {{ $songs := partial "directus.html" }}
 <ul id="artlist">
-{{ range $songs.data }}
-{{ if not .hidden }}
-{{ $dateint := .date }}
-{{ $datesrc := 0 }}
-{{ $date := "" }}
-{{ if lt $dateint 0 }}
-	{{ with $dateint }}
-		{{ $datesrc := math.Abs . | int | cast.ToString }}
-		{{ $date = printf "%s%s%s" "<" $datesrc ">" }}
-	{{ end }}
-{{ else }}
-	{{ $date = $dateint | cast.ToString }}
-{{ end }}
+{{- range $songs.data -}}
+{{- if not .hidden -}}
+
+{{- $dateint := .date -}}
+{{- $datesrc := "" -}}
+{{- $date := "" -}}
+{{- if lt $dateint 0 -}}
+	{{- with $dateint -}}
+		{{- $datesrc := math.Abs . | int | cast.ToString -}}
+		{{- $date = printf "%s%s%s" "<" $datesrc ">" -}}
+	{{- end -}}
+{{- else -}}
+	{{- $date = $dateint | cast.ToString -}}
+	{{- $datesrc = $dateint | cast.ToString -}}
+{{- end -}}
+
+
+{{- $name := "" }}
+{{- if .name -}}
+	{{- if .fname }}
+		{{- $name = .fname | strings.FirstUpper -}}
+	{{- else -}}
+		{{- $name = .name | strings.FirstUpper -}}
+	{{- end -}}
+		{{- else -}}
+	{{- $name = .fincipit }}
+{{- end -}}
+
 
 <li class="opus-entry"
-    		data-sort="{{ .sort }}"
-		data-datum="
-			{{- with .edit -}}
-				{{- . -}}
-			{{- else -}}
-				{{- $date -}}
-			{{- end }}"
+	data-sort="{{ .sort }}"
+	data-datum="{{- $datesrc -}}{{ with .edit }} {{ . }}{{ end }}"
 	data-begin="{{ .fincipit }}"
 	data-name="{{ with .name -}}
-			{{- . -}}
+			{{- $name -}}
 		{{- else -}}
 			{{- .incipit -}}
-		{{- end }}"
-	data-datum="{{- with .edit -}}
-			{{- . -}}
-		{{- else -}}
-		{{- $date -}}
-		{{- end -}}"> 
-	<a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">
-			{{- if .name -}}
-				{{- if .fname }}
-					{{- .fname | strings.FirstUpper -}}
-				{{- else -}}
-					{{- .name | strings.FirstUpper -}}
-				{{- end -}}
-			{{- else -}}
-				{{- .fincipit }}
-			{{- end -}}
-		</a></span> 
-	{{- if .name }}
+		{{- end }}"><a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a></span> 
+	{{ if .name -}}
 		(<span id="begin">{{ .fincipit }}</a></span>)
 	{{- end -}}
 	{{- if $date }}	<span class="year">{{ $date -}}{{- if .edit -}}, {{ .edit -}}</span>{{- end -}}
 	{{- end -}}
 	</a></li>
+
+
 {{- end -}}
-{{- end }}
+{{- end -}}
 			</ul>
                 </div>
         </div>
