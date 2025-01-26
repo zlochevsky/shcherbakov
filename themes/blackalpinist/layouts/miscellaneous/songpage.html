@@ -26,6 +26,8 @@
 {{ $path := printf "texts/%s.txt" .Params.id }}
 {{ if os.FileExists $path }}
     <pre data-key="{{ .Params.tonality }}">{{ os.ReadFile $path }}</pre>
+{{ else }}
+                    Файл с аккордами не найден ({{.Params.id}})
 {{ end }}
 {{ .Content }}
                 </div>
