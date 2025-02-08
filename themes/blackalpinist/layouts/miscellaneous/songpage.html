@@ -10,8 +10,8 @@
 {{ partial "css/transposer.css.html" | safeCSS }}
 </style>
         {{ partial "css/transposer.css.html" . }}
-{{ partialCached "head/js.html" . }}
-{{ partialCached "head/transposer.js.html" . }}
+{{ partial "head/js.html" . }}
+{{ partial "head/transposer.js.html" . }}
 </head>
 <body>
 <header>
@@ -23,13 +23,15 @@
 <div>
         <div class="wrapper">
                 <div>
-{{ $path := printf "texts/%s.txt" .Params.id }}
-{{ if os.FileExists $path }}
-    <pre data-key="{{ .Params.tonality }}">{{ os.ReadFile $path }}</pre>
-{{ else }}
-                    Файл с аккордами не найден ({{.Params.id}})
-{{ end }}
-{{ .Content }}
+                    <div id="settings">
+
+
+                    {{ if gt (int .Params.chordsStartAt) 0 }}
+                        <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
+                    {{ end }}
+                    </div>
+                    {{ partial "song.html" .Params }}
+
                 </div>
         </div>
 </div>
