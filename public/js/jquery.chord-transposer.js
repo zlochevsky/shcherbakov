@@ -155,7 +155,7 @@
         }
         currentKey = getKeyByName(startKey);
         var keyLinks = [];
-        $(keys).each(function(i2, key) {
+        $(keys).each(function(i, key) {
           if (currentKey.name == key.name)
             keyLinks.push("<a href='#' class='selected'>" + key.name + "</a>");
           else
@@ -172,20 +172,10 @@
           return false;
         });
         $(this).before(keysHtml);
-
-        $(this).find('span.ch').each(function(index, el){
+        $(this).find("span.ch").each(function(index, el) {
           var txt = $(el).html();
-          $(el).html( wrapChords( txt ));
+          $(el).html(wrapChords(txt));
         });
-        // var output = [];
-        // var lines = $(this).text().split(/\r\n|\n/g);
-        // var line, tmp = "";
-        // for (var i = 0; i < lines.length; i++) {
-        //   line = lines[i];
-        //   output.push("<span>" + wrapChords(line) + "</span>");
-        // }
-        // ;
-        // $(this).html(output.join("\n"));
       });
     };
     $.fn.transpose.defaults = {

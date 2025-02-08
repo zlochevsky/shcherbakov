@@ -224,20 +224,12 @@
       
       $(this).before(keysHtml);
 
-      var output = [];
-      var lines = $(this).text().split(/\r\n|\n/g);
-      var line, tmp = "";
+        $(this).find('span.ch').each(function(index, el){
+            var txt = $(el).html();
+            $(el).html( wrapChords( txt ));
+        });
 
-      for (var i = 0; i < lines.length; i++) {
-          line = lines[i];
 
-//          if (isChordLine(line))
-              output.push("<span>" + wrapChords(line) + "</span>");
-          // else
-          //     output.push("<span>" + line + "</span>");
-      };
-
-      $(this).html(output.join("\n"));
     });
   };
 
