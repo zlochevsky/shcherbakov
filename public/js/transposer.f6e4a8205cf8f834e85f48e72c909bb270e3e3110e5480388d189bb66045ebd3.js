@@ -1,0 +1,1 @@
+(()=>{jQuery.noConflict();function n(){jQuery("span.ch").each(function(e,o){jQuery(o).toggle(),jQuery(".transpose-keys").toggle()})}jQuery(document).ready(function(){jQuery("pre").transpose(),jQuery("#toggleChords").bind("click",function(){var e=jQuery(this);e.toggleClass("note1").toggleClass("note2"),n()})});})();
