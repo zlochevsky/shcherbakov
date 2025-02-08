@@ -1,1 +1,0 @@
-(()=>{jQuery.noConflict();function n(){jQuery("pre span.c").each(function(e,o){jQuery(o).toggle()})}jQuery(document).ready(function(){jQuery("pre").transpose(),jQuery("#toggleChords").bind("click",function(){console.log(3);var e=jQuery(this);e.toggleClass("note1").toggleClass("note2"),n()})});})();
