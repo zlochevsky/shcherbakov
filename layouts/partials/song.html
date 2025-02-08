@@ -1,0 +1,35 @@
+{{ $newLines := slice }}
+{{ $tonality := "Hm"}}
+{{ $path := printf "texts/%s.txt" .id }}
+{{ if os.FileExists $path }}
+    {{ $cont := os.ReadFile $path }}
+
+    {{ if compare.Ne .tonality "" }}
+        {{ $tonality = .tonality }}
+    {{ else }}
+        {{ $reg := `(?s)[A-H][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*(\/[A-H][b\#]*)*` }}
+        {{ $tonality = delimit ( findRE $reg $cont 1 ) "" }}
+    {{ end }}
+
+    {{ $lines := split $cont "\n" }}
+    {{ $pos := math.Max 0 (sub (int .chordsStartAt)  1) }}
+    {{ range $lines }}
+        {{ $line := trim . "\r\n" }}
+        {{ if gt $pos 0 }}
+            {{ if gt (len $line) $pos }}
+              {{ $p1 := substr $line 0 $pos }}
+              {{ $p2 := substr $line $pos }}
+              {{ $newLines = $newLines | append (println $p1 "<span class=\"ch\">" $p2 "</span>" | safeHTML) }}
+            {{ else }}
+              {{ $newLines = $newLines | append (println $line)  }}
+            {{ end }}
+        {{ else }}
+            {{ $newLines = $newLines | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) }}
+        {{ end }}
+    {{ end }}
+{{ else }}
+    {{ $newLines = $newLines | append (printf "Файл с аккордами не найден (%s)" .id)}}
+{{ end }}
+<pre
+data-key="{{ $tonality }}">{{ delimit $newLines "" | safeHTML }}
+</pre>

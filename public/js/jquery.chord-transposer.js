@@ -172,15 +172,20 @@
           return false;
         });
         $(this).before(keysHtml);
-        var output = [];
-        var lines = $(this).text().split(/\r\n|\n/g);
-        var line, tmp = "";
-        for (var i = 0; i < lines.length; i++) {
-          line = lines[i];
-          output.push("<span>" + wrapChords(line) + "</span>");
-        }
-        ;
-        $(this).html(output.join("\n"));
+
+        $(this).find('span.ch').each(function(index, el){
+          var txt = $(el).html();
+          $(el).html( wrapChords( txt ));
+        });
+        // var output = [];
+        // var lines = $(this).text().split(/\r\n|\n/g);
+        // var line, tmp = "";
+        // for (var i = 0; i < lines.length; i++) {
+        //   line = lines[i];
+        //   output.push("<span>" + wrapChords(line) + "</span>");
+        // }
+        // ;
+        // $(this).html(output.join("\n"));
       });
     };
     $.fn.transpose.defaults = {

@@ -68,7 +68,10 @@
 			{{- $name -}}
 		{{- else -}}
 			{{- .incipit -}}
-		{{- end }}"><a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a></span> 
+		{{- end }}">
+	<!-- <a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>-->
+	<a href="texts/{{ .id }}.html"><span id="name">{{ $name }}</a>
+	</span>
 	{{ if .name -}}
 		(<span id="begin">{{ .fincipit }}</a></span>)
 	{{- end -}}

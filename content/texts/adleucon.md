@@ -5,6 +5,7 @@
     "layout": "songpage",
     "params": {
         "id": "adleucon",
-        "tonality": ""
+        "tonality": "Em",
+        "chordsStartAt": 50 
     }
 }

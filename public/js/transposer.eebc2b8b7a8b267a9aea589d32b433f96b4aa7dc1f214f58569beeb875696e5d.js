@@ -1,0 +1,1 @@
+(()=>{jQuery.noConflict();function n(){jQuery("pre span.c").each(function(o,e){jQuery(e).toggle()})}jQuery(document).ready(function(){jQuery("pre").transpose(),jQuery("#toggleChords").bind("click",function(){jQuery(this).html("\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C \u0430\u043A\u043A\u043E\u0440\u0434\u044B"),n()})});})();
