@@ -7,11 +7,10 @@
 <style>
 {{- partial "css/common.html" | safeCSS -}}
 {{ partial "css/catalogue.css.html" | safeCSS }}
-{{ partial "css/transposer.css.html" | safeCSS }}
+
 </style>
-        {{ partial "css/transposer.css.html" . }}
-{{ partial "head/js.html" . }}
-{{ partial "head/transposer.js.html" . }}
+    {{ partial "css/songpage.css.html" | safeHTML }}
+{{ partial "head/songpage.js.html" . }}
 </head>
 <body>
 <header>
@@ -21,15 +20,20 @@
 {{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" .) }}
 <main>
 <div>
+
         <div class="wrapper">
                 <div>
                     <div id="settings">
-
-
                     {{ if gt (int .Params.chordsStartAt) 0 }}
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     {{ end }}
                     </div>
+                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                        <span class="transpose-wrapper">
+
+                        </span>
+                    </details></p>
+
                     {{ partial "song.html" .Params }}
 
                 </div>

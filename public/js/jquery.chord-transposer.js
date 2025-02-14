@@ -171,7 +171,8 @@
           $(this).addClass("selected");
           return false;
         });
-        $(this).before(keysHtml);
+        console.log($(this).parent().find(".transpose-wrapper"));
+        $(this).parent().find(".transpose-wrapper").html(keysHtml);
         $(this).find("span.ch").each(function(index, el) {
           var txt = $(el).html();
           $(el).html(wrapChords(txt));

@@ -1,0 +1,15 @@
+{{ $s := slice "js/jquery_1.4.0.min.js" "js/jquery.chord-transposer.js" "js/transposer.js" }}
+{{- range $s }}
+{{- with resources.Get . }}
+  {{- if eq hugo.Environment "development" }}
+    {{- with . | js.Build }}
+      <script  src="../../{{ .RelPermalink }}"></script>
+    {{- end }}
+  {{- else }}
+    {{- $opts := dict "minify" true }}
+    {{- with . | js.Build $opts | fingerprint }}
+      <script  src="../../{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- end }}
