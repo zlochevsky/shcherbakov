@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kogdajab",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1989",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 55
     }
 }

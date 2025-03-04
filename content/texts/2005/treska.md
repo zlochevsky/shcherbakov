@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "treska",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "2005",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 66,
+        "textFinishAtLine": 62
     }
 }

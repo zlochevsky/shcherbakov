@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "sentenci",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 63,
+        "textFinishAtLine": 41
     }
 }

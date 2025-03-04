@@ -7,7 +7,7 @@
         "id": "ljudisux",
         "tonality": "Hm",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 43,
+        "textFinishAtLine": 46
     }
 }

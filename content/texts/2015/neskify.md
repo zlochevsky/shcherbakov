@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "neskify",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "2015",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 71,
+        "textFinishAtLine": 41
     }
 }

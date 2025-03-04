@@ -7,7 +7,7 @@
         "id": "razvecht",
         "tonality": "Hm",
         "year": "2018",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 45,
+        "textFinishAtLine": 111
     }
 }

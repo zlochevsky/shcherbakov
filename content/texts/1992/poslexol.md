@@ -7,7 +7,7 @@
         "id": "poslexol",
         "tonality": "Hm",
         "year": "1992",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 58
     }
 }

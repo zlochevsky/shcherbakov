@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "chuzhaj1",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1997",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 62,
+        "textFinishAtLine": 35
     }
 }

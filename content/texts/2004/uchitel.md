@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "uchitel",
-        "tonality": "Hm",
+        "tonality": "E",
         "year": "2004",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 62,
+        "textFinishAtLine": 77
     }
 }

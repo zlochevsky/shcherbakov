@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "votpodni",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1989",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 65,
+        "textFinishAtLine": 34
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "izdaleka",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1991",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 59,
+        "textFinishAtLine": 33
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "akoektop",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1988",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 44,
+        "textFinishAtLine": 79
     }
 }

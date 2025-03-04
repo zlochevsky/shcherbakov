@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "unasopja",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 48,
+        "textFinishAtLine": 32
     }
 }

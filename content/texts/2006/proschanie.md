@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "proschanie",
-        "tonality": "Hm",
+        "tonality": "F#m",
         "year": "2006",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 55
     }
 }

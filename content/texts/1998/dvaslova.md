@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "dvaslova",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 46,
+        "textFinishAtLine": 53
     }
 }

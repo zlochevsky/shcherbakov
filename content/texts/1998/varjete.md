@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "varjete",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1998",
-        "chordsStartAt": 50,
+        "chordsStartAt": 56,
         "textFinishAtLine": 100
     }
 }

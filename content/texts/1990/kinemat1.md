@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kinemat1",
-        "tonality": "Hm",
+        "tonality": "C",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 62,
+        "textFinishAtLine": 56
     }
 }

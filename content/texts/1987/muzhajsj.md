@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "muzhajsj",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1987",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 22
     }
 }

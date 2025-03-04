@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vtornik",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 73,
+        "textFinishAtLine": 44
     }
 }

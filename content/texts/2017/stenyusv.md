@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "stenyusv",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "2017",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 67,
+        "textFinishAtLine": 72
     }
 }

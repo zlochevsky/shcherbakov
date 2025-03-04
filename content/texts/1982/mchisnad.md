@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "mchisnad",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 42,
+        "textFinishAtLine": 57
     }
 }

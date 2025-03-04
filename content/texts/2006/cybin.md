@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "cybin",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "2006",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 61,
+        "textFinishAtLine": 85
     }
 }

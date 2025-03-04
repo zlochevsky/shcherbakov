@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "sokolnik",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2009",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 49
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "prosba",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1993",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 64,
+        "textFinishAtLine": 42
     }
 }

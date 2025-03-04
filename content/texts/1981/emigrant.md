@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "emigrant",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1981",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 51
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "pochtina",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "2015",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 75,
+        "textFinishAtLine": 138
     }
 }

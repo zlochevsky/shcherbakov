@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kogoljub",
-        "tonality": "Hm",
+        "tonality": "E",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 46,
+        "textFinishAtLine": 41
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "nastasja",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1983",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 53,
+        "textFinishAtLine": 30
     }
 }

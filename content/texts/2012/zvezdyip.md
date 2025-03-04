@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "zvezdyip",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "2012",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 61,
+        "textFinishAtLine": 40
     }
 }

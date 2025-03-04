@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "konspekt",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "2015",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 57,
+        "textFinishAtLine": 42
     }
 }

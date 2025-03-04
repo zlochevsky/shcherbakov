@@ -7,7 +7,7 @@
         "id": "chinatow",
         "tonality": "Hm",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 46,
+        "textFinishAtLine": 57
     }
 }

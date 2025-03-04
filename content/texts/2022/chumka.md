@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "chumka",
-        "tonality": "Hm",
+        "tonality": "C#m",
         "year": "2022",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 66,
+        "textFinishAtLine": 68
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kudanena",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "2019",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 53,
+        "textFinishAtLine": 26
     }
 }

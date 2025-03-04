@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "bereg",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "2002",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 56,
+        "textFinishAtLine": 34
     }
 }

@@ -7,7 +7,7 @@
         "id": "nadvuhk",
         "tonality": "Hm",
         "year": "2012",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 67,
+        "textFinishAtLine": 38
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "allegro",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "2000",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 59,
+        "textFinishAtLine": 52
     }
 }

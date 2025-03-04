@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "shkolat1",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1991",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 49,
+        "textFinishAtLine": 75
     }
 }

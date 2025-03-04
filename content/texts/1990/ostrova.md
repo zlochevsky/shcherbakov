@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "ostrova",
-        "tonality": "Hm",
+        "tonality": "H",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 63,
+        "textFinishAtLine": 58
     }
 }

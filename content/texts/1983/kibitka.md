@@ -7,7 +7,7 @@
         "id": "kibitka",
         "tonality": "Hm",
         "year": "1983",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 54,
+        "textFinishAtLine": 34
     }
 }

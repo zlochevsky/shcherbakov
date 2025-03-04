@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "peyzazh",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2022",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 55,
+        "textFinishAtLine": 55
     }
 }

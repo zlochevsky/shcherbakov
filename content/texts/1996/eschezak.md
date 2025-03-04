@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "eschezak",
-        "tonality": "Hm",
+        "tonality": "Сm",
         "year": "1996",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 65,
+        "textFinishAtLine": 58
     }
 }

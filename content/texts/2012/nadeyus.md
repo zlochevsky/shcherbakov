@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "nadeyus",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "2012",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 68,
+        "textFinishAtLine": 38
     }
 }

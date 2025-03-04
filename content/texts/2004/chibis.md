@@ -7,7 +7,7 @@
         "id": "chibis",
         "tonality": "Hm",
         "year": "2004",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 77,
+        "textFinishAtLine": 71
     }
 }

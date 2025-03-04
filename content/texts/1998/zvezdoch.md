@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "zvezdoch",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 55,
+        "textFinishAtLine": 71
     }
 }

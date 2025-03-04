@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "jubilejn",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 52,
+        "textFinishAtLine": 31
     }
 }

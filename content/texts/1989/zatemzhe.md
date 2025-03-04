@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "zatemzhe",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1989",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 27
     }
 }

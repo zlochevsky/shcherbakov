@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "nochnoj",
-        "tonality": "Hm",
+        "tonality": "G#m",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 59,
+        "textFinishAtLine": 44
     }
 }

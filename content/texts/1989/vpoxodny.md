@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vpoxodny",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1989",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 46,
+        "textFinishAtLine": 32
     }
 }

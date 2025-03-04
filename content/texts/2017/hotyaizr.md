@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "hotyaizr",
-        "tonality": "Hm",
+        "tonality": "F#m",
         "year": "2017",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 49,
+        "textFinishAtLine": 74
     }
 }

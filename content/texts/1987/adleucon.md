@@ -5,7 +5,7 @@
     "layout": "songpage",
     "params": {
         "id": "adleucon",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1987",
         "chordsStartAt": 50,
         "textFinishAtLine": 29

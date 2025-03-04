@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "ochnulsj",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1992",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 72,
+        "textFinishAtLine": 42
     }
 }

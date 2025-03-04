@@ -7,7 +7,7 @@
         "id": "opyattor",
         "tonality": "Hm",
         "year": "2011",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 53,
+        "textFinishAtLine": 58
     }
 }

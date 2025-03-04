@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "okean",
-        "tonality": "Hm",
+        "tonality": "C",
         "year": "1992",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 48,
+        "textFinishAtLine": 26
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "ksorokon",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1993",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 63,
+        "textFinishAtLine": 60
     }
 }

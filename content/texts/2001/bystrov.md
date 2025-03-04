@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "bystrov",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "2001",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 55,
+        "textFinishAtLine": 57
     }
 }

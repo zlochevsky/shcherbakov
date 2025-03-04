@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "hrustal",
-        "tonality": "Hm",
+        "tonality": "F#m",
         "year": "2022",
         "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "textFinishAtLine": 52
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "proscha4",
-        "tonality": "Hm",
+        "tonality": "C#m",
         "year": "2004",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 37
     }
 }

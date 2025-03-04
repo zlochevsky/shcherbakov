@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "gostinic",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "2000",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 54,
+        "textFinishAtLine": 67
     }
 }

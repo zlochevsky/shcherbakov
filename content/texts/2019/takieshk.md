@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "takieshk",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2019",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 94
     }
 }

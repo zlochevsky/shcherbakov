@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "allegord",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "1989",
         "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "textFinishAtLine": 57
     }
 }

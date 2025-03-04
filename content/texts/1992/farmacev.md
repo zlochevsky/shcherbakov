@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "farmacev",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1992",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 59,
+        "textFinishAtLine": 37
     }
 }

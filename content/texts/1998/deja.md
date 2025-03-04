@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "deja",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 68
     }
 }

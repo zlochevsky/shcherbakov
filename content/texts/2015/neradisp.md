@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "neradisp",
-        "tonality": "Hm",
+        "tonality": "G#m",
         "year": "2015",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 72,
+        "textFinishAtLine": 57
     }
 }

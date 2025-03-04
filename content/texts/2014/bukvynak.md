@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "bukvynak",
-        "tonality": "Hm",
+        "tonality": "C#m",
         "year": "2014",
         "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "textFinishAtLine": 105
     }
 }

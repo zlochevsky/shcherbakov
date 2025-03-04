@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "temapoko",
-        "tonality": "Hm",
+        "tonality": "C",
         "year": "1987",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 22
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "jaekzoti",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1980",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 40,
+        "textFinishAtLine": 101
     }
 }

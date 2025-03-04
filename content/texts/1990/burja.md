@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "burja",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 45,
+        "textFinishAtLine": 39
     }
 }

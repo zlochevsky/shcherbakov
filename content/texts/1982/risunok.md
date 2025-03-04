@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "risunok",
-        "tonality": "Hm",
+        "tonality": "C",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 52,
+        "textFinishAtLine": 33
     }
 }

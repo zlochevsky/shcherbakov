@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "fridrih",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "2005",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 68,
+        "textFinishAtLine": 57
     }
 }

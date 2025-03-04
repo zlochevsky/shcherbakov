@@ -7,7 +7,7 @@
         "id": "pamjativ",
         "tonality": "Hm",
         "year": "1999",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 58,
+        "textFinishAtLine": 54
     }
 }

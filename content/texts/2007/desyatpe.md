@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "desyatpe",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "2007",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 0,
+        "textFinishAtLine": 44  
     }
 }

@@ -12,28 +12,33 @@
     {{ end }}
 
     {{ $lines := split (trim $cont "\r\n") "\n" }}
+    {{ $lastIndex := math.Sub (len $lines) 1 }}
     {{ $pos := math.Max 0 (sub (int .chordsStartAt)  1) }}
     {{ range $k, $v := $lines }}
         {{ $line := trim $v "\r\n" }}
 
-        {{ if (hasPrefix (lower $line) (lower $.title) ) }}
+        {{ if (and (gt 2 $k) (hasPrefix (lower $line) (lower $.title) ) ) }}
             {{ $line = printf "%s%s%s" "<span class=\"sng-title\">" $line "</span>"}}
-        {{ end }}
-
-        {{ if ge $k $.textFinishAtLine }}
-            {{ $line = replaceRE `([0-9]{4})` "<span class=\"year\">$1</span>" $line}}
-        {{ end }}
-
-        {{ if gt $pos 0 }}
-              {{ if gt (len $line) $pos }}
-                {{ $p1 := substr $line 0 $pos }}
-                {{ $p2 := substr $line $pos }}
-                {{ $newLines = $newLines | append (println $p1 "<span class=\"ch\">" $p2 "</span>" | safeHTML) }}
-              {{ else }}
-                {{ $newLines = $newLines | append (println $line)  }}
-              {{ end }}
+            {{ $newLines = $newLines | append (println $line | safeHTML) }}
         {{ else }}
-            {{ $newLines = $newLines | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) }}
+
+            {{ if (or (ge $k $.textFinishAtLine) (eq $k $lastIndex)) }}
+                {{ $line = replaceRE `([0-9]{4})` "<span class=\"year\">$1</span>" $line}}
+                {{ $newLines = $newLines | append (println $line | safeHTML ) }}
+            {{ else }}
+                {{ if gt $pos 0 }}
+                      {{ if and (gt (len $line) $pos) ( gt (len (delimit ( findRE `(?s)[A-Ha-hm#0-9]*` $line) "")) 0) }}
+                        {{ $p1 := substr $line 0 $pos }}
+                        {{ $p2 := substr $line $pos }}
+                        {{ $p2 = replace $p2 ">" "-" }}
+                        {{ $newLines = $newLines | append (println $p1 "<span class=\"ch\">" $p2 "</span>" | safeHTML) }}
+                      {{ else }}
+                        {{ $newLines = $newLines | append (println $line | safeHTML) }}
+                      {{ end }}
+                {{ else }}
+                    {{ $newLines = $newLines | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) }}
+                {{ end }}
+            {{ end }}
         {{ end }}
     {{ end }}
 {{ else }}

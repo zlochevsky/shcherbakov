@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "neznajuk",
-        "tonality": "Hm",
+        "tonality": "E",
         "year": "1995",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 71,
+        "textFinishAtLine": 51
     }
 }

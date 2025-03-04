@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "voslavug",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1989",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 59,
+        "textFinishAtLine": 17
     }
 }

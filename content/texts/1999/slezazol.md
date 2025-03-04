@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "slezazol",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "1999",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 55,
+        "textFinishAtLine": 40
     }
 }

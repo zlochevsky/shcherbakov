@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "odnazhdy",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1991",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 57,
+        "textFinishAtLine": 35
     }
 }

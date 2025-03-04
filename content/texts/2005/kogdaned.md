@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kogdaned",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "2005",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 64,
+        "textFinishAtLine": 54
     }
 }

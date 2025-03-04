@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "shanson",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 55,
+        "textFinishAtLine": 48
     }
 }

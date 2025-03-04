@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "moekoro2",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 54,
+        "textFinishAtLine": 27
     }
 }

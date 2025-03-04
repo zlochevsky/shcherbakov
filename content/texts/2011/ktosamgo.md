@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "ktosamgo",
-        "tonality": "Hm",
+        "tonality": "H",
         "year": "2011",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 70,
+        "textFinishAtLine": 72
     }
 }

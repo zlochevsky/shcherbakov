@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "zavescha",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 73,
+        "textFinishAtLine": 37
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "jaispoln",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 53,
+        "textFinishAtLine": 27
     }
 }

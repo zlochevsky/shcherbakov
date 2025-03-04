@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "otchego1",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1989",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 52,
+        "textFinishAtLine": 55
     }
 }

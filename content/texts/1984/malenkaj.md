@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "malenkaj",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1984",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 57,
+        "textFinishAtLine": 39
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "ryba",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1997",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 63,
+        "textFinishAtLine": 29
     }
 }

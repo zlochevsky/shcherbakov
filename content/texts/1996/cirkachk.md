@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "cirkachk",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1996",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 43,
+        "textFinishAtLine": 41
     }
 }

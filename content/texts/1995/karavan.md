@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "karavan",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1995",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 58,
+        "textFinishAtLine": 46
     }
 }

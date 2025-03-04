@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kupljubi",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "1989",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 46,
+        "textFinishAtLine": 81
     }
 }

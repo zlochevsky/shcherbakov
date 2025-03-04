@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "ballada",
-        "tonality": "Hm",
+        "tonality": "C#m",
         "year": "1993",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 41
     }
 }

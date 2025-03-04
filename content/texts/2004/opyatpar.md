@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "opyatpar",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "2004",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 61,
+        "textFinishAtLine": 57
     }
 }

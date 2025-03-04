@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "predpolo",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "1995",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 63,
+        "textFinishAtLine": 88
     }
 }

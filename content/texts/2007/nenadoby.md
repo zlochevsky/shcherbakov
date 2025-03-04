@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "nenadoby",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2007",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 73,
+        "textFinishAtLine": 36
     }
 }

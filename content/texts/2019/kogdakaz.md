@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kogdakaz",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "2019",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 56,
+        "textFinishAtLine": 42
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "zastolnaya",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "2001",
         "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "textFinishAtLine": 52
     }
 }

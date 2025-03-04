@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "korchma",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 48,
+        "textFinishAtLine": 42
     }
 }

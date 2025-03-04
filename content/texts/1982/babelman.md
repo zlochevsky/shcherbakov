@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "babelman",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 96
     }
 }

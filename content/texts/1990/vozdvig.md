@@ -7,7 +7,7 @@
         "id": "vozdvig",
         "tonality": "Hm",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 48,
+        "textFinishAtLine": 66
     }
 }

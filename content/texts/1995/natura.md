@@ -7,7 +7,7 @@
         "id": "natura",
         "tonality": "Hm",
         "year": "1995",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 49,
+        "textFinishAtLine": 60
     }
 }

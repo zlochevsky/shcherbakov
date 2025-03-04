@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "japomnju",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "1985",
         "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "textFinishAtLine": 39
     }
 }

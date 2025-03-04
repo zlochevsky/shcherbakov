@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "menuet",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1991",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 43,
+        "textFinishAtLine": 64
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kto",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "2022",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 57,
+        "textFinishAtLine": 60
     }
 }

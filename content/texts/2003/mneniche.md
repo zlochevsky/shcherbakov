@@ -7,7 +7,7 @@
         "id": "mneniche",
         "tonality": "Hm",
         "year": "2003",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 62,
+        "textFinishAtLine": 46
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "uzhenera",
-        "tonality": "Hm",
+        "tonality": "C#m",
         "year": "2017",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 70,
+        "textFinishAtLine": 130
     }
 }

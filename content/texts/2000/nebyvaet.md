@@ -7,7 +7,7 @@
         "id": "nebyvaet",
         "tonality": "Hm",
         "year": "2000",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 65,
+        "textFinishAtLine": 49
     }
 }

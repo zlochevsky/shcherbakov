@@ -7,7 +7,7 @@
         "id": "kalejdos",
         "tonality": "Hm",
         "year": "1993",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 52,
+        "textFinishAtLine": 38
     }
 }

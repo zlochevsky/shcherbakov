@@ -7,7 +7,7 @@
         "id": "proscha3",
         "tonality": "Hm",
         "year": "1988",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 48,
+        "textFinishAtLine": 43
     }
 }

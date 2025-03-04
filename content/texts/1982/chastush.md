@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "chastush",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 52,
+        "textFinishAtLine": 43
     }
 }

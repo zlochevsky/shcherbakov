@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "snazemno",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2013",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 49,
+        "textFinishAtLine": 36
     }
 }

@@ -7,7 +7,7 @@
         "id": "orodine",
         "tonality": "Hm",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 68,
+        "textFinishAtLine": 52
     }
 }

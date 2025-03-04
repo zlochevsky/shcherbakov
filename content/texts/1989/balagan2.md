@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "balagan2",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "1989",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 33,
+        "textFinishAtLine": 64
     }
 }

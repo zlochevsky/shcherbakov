@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "bystrov2",
-        "tonality": "Hm",
+        "tonality": "C#m",
         "year": "2009",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 68,
+        "textFinishAtLine": 33
     }
 }

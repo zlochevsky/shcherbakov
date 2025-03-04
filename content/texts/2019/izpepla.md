@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "izpepla",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2019",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 40,
+        "textFinishAtLine": 47
     }
 }

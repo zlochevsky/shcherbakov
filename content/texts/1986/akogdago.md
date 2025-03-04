@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "akogdago",
-        "tonality": "Hm",
+        "tonality": "F#m",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 46,
+        "textFinishAtLine": 49
     }
 }

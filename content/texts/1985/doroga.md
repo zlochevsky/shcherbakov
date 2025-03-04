@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "doroga",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 43
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "schitime",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 61,
+        "textFinishAtLine": 47
     }
 }

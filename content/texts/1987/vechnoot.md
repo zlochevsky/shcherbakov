@@ -7,7 +7,7 @@
         "id": "vechnoot",
         "tonality": "Hm",
         "year": "1987",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 41,
+        "textFinishAtLine": 47
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vekaplyv",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 64,
+        "textFinishAtLine": 23
     }
 }

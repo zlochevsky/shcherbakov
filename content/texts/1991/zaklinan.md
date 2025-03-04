@@ -7,7 +7,7 @@
         "id": "zaklinan",
         "tonality": "Hm",
         "year": "1991",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 43,
+        "textFinishAtLine": 64
     }
 }

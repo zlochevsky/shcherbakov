@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "zakonxod",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 45,
+        "textFinishAtLine": 65
     }
 }

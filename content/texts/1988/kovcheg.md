@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kovcheg",
-        "tonality": "Hm",
+        "tonality": "C#m",
         "year": "1988",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 29
     }
 }

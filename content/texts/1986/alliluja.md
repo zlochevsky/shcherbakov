@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "alliluja",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 63,
+        "textFinishAtLine": 38
     }
 }

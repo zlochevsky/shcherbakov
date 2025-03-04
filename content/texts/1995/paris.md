@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "paris",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1995",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 46
     }
 }

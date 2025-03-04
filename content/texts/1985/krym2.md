@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "krym2",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 45,
+        "textFinishAtLine": 47
     }
 }

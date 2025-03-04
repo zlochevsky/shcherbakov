@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "westcoast",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "2019",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 61,
+        "textFinishAtLine": 39
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kollazh",
-        "tonality": "Hm",
+        "tonality": "C#m",
         "year": "1996",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 43,
+        "textFinishAtLine": 47
     }
 }

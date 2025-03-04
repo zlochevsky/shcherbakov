@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "pavlovsk",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2013",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 71,
+        "textFinishAtLine": 37
     }
 }

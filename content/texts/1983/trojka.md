@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "trojka",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1983",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 37,
+        "textFinishAtLine": 45
     }
 }

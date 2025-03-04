@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "volk",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1996",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 53,
+        "textFinishAtLine": 35
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vosxodja",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 65,
+        "textFinishAtLine": 23
     }
 }

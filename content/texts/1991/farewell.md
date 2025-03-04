@@ -7,7 +7,7 @@
         "id": "farewell",
         "tonality": "Hm",
         "year": "1991",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 62,
+        "textFinishAtLine": 34
     }
 }

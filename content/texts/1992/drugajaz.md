@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "drugajaz",
-        "tonality": "Hm",
+        "tonality": "G",
         "year": "1992",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 58,
+        "textFinishAtLine": 43
     }
 }

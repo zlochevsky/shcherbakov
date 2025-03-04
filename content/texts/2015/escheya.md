@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "escheya",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "2015",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 76,
+        "textFinishAtLine": 80
     }
 }

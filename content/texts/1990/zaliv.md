@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "zaliv",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 58,
+        "textFinishAtLine": 32
     }
 }

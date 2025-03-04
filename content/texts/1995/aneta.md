@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "aneta",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1995",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 79,
+        "textFinishAtLine": 32
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "jim",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 57,
+        "textFinishAtLine": 38
     }
 }

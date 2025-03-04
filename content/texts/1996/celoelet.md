@@ -7,7 +7,7 @@
         "id": "celoelet",
         "tonality": "Hm",
         "year": "1996",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 69,
+        "textFinishAtLine": 64
     }
 }

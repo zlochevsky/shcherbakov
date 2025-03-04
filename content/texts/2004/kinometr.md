@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kinometr",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2004",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 62,
+        "textFinishAtLine": 66
     }
 }

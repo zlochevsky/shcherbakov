@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "dopoezda",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "2004",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 65,
+        "textFinishAtLine": 24
     }
 }

@@ -7,7 +7,7 @@
         "id": "switzerl",
         "tonality": "Hm",
         "year": "1996",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 38,
+        "textFinishAtLine": 38
     }
 }

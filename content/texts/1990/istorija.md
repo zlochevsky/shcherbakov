@@ -7,7 +7,7 @@
         "id": "istorija",
         "tonality": "Hm",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 64,
+        "textFinishAtLine": 35
     }
 }

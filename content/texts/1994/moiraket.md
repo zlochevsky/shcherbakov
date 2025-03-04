@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "moiraket",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 63,
+        "textFinishAtLine": 59
     }
 }

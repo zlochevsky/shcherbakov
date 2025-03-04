@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "ogerojax",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 52,
+        "textFinishAtLine": 37
     }
 }

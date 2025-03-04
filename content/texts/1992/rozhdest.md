@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "rozhdest",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1992",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 59
     }
 }

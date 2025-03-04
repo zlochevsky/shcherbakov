@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "theraven",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 44,
+        "textFinishAtLine": 73
     }
 }

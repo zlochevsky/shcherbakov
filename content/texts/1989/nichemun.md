@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "nichemun",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1989",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 56,
+        "textFinishAtLine": 50
     }
 }

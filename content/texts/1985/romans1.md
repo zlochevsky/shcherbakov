@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "romans1",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 32
     }
 }

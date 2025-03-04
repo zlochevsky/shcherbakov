@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "bezvyxod",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "2007",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 87,
+        "textFinishAtLine": 37
     }
 }

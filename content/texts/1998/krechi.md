@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "krechi",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 67,
+        "textFinishAtLine": 40
     }
 }

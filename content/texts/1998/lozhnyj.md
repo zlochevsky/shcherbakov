@@ -7,7 +7,7 @@
         "id": "lozhnyj",
         "tonality": "Hm",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 59,
+        "textFinishAtLine": 41
     }
 }

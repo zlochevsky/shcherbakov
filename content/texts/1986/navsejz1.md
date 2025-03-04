@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "navsejz1",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1986",
         "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "textFinishAtLine": 23
     }
 }

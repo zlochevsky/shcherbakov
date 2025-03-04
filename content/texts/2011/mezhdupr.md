@@ -7,7 +7,7 @@
         "id": "mezhdupr",
         "tonality": "Hm",
         "year": "2011",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 56,
+        "textFinishAtLine": 65
     }
 }

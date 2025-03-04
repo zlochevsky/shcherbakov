@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "bolero2",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 65,
+        "textFinishAtLine": 48
     }
 }

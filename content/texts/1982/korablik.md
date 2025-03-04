@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "korablik",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 54,
+        "textFinishAtLine": 30
     }
 }

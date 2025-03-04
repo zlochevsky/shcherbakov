@@ -7,7 +7,7 @@
         "id": "rydaytru",
         "tonality": "Hm",
         "year": "2011",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 48,
+        "textFinishAtLine": 37
     }
 }

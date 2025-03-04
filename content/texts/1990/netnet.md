@@ -7,7 +7,7 @@
         "id": "netnet",
         "tonality": "Hm",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 55,
+        "textFinishAtLine": 42
     }
 }

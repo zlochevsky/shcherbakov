@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "chtotako",
-        "tonality": "Hm",
+        "tonality": "G",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 52,
+        "textFinishAtLine": 65
     }
 }

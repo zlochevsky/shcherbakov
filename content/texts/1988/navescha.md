@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "navescha",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1988",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 40,
+        "textFinishAtLine": 74
     }
 }

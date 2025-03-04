@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "poshlyj",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1983",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 38,
+        "textFinishAtLine": 46
     }
 }

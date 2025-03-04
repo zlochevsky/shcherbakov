@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "volhonka",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2001",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 67,
+        "textFinishAtLine": 42
     }
 }

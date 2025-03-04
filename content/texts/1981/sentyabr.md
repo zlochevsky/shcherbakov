@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "sentyabr",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1981",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 44,
+        "textFinishAtLine": 42
     }
 }

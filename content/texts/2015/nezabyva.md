@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "nezabyva",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2015",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 71,
+        "textFinishAtLine": 48
     }
 }

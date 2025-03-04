@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "stodruze",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1983",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 58,
+        "textFinishAtLine": 40
     }
 }

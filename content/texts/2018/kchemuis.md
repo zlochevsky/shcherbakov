@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kchemuis",
-        "tonality": "Hm",
+        "tonality": "G",
         "year": "2018",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 56,
+        "textFinishAtLine": 34
     }
 }

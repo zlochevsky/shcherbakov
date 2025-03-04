@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "prosypaj",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 53,
+        "textFinishAtLine": 69
     }
 }

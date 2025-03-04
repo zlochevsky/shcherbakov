@@ -7,7 +7,7 @@
         "id": "kolodec",
         "tonality": "Hm",
         "year": "2019",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 57,
+        "textFinishAtLine": 23
     }
 }

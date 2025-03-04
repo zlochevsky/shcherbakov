@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "peshkom",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1991",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 46,
+        "textFinishAtLine": 44
     }
 }

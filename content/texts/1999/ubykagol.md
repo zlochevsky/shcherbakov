@@ -7,7 +7,7 @@
         "id": "ubykagol",
         "tonality": "Hm",
         "year": "1999",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 66,
+        "textFinishAtLine": 32
     }
 }

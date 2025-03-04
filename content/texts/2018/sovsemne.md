@@ -7,7 +7,7 @@
         "id": "sovsemne",
         "tonality": "Hm",
         "year": "2018",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 61,
+        "textFinishAtLine": 34
     }
 }

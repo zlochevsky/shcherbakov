@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "popravte",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1983",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 27
     }
 }

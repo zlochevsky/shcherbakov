@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kordebal",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1996",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 66,
+        "textFinishAtLine": 38
     }
 }

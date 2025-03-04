@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "nerazmen",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1999",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 53
     }
 }

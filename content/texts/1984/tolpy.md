@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "tolpy",
-        "tonality": "Hm",
+        "tonality": "C",
         "year": "1984",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 57,
+        "textFinishAtLine": 48
     }
 }

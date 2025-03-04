@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "davajte",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 54,
+        "textFinishAtLine": 50
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vostoch1",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 49,
+        "textFinishAtLine": 58
     }
 }

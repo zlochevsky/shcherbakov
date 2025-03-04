@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "aprel",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 41,
+        "textFinishAtLine": 50
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "nazimnej",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "2012",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 54,
+        "textFinishAtLine": 39
     }
 }

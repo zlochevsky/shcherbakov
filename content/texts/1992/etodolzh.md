@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "etodolzh",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1992",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 65,
+        "textFinishAtLine": 35
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kapitan",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 53
     }
 }

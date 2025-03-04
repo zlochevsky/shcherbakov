@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vpotokah",
-        "tonality": "Hm",
+        "tonality": "Bm",
         "year": "2014",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 47
     }
 }

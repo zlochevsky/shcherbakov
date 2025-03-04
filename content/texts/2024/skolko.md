@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "skolko",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "2024",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 46,
+        "textFinishAtLine": 34
     }
 }

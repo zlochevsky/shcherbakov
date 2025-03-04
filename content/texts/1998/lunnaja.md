@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "lunnaja",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 58,
+        "textFinishAtLine": 66
     }
 }

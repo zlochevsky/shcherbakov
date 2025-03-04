@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kogdamen",
-        "tonality": "Hm",
+        "tonality": "F#m",
         "year": "2011",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 72,
+        "textFinishAtLine": 51
     }
 }

@@ -7,7 +7,7 @@
         "id": "skazhuse",
         "tonality": "Hm",
         "year": "2013",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 75,
+        "textFinishAtLine": 51
     }
 }

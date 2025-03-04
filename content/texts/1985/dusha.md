@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "dusha",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 42,
+        "textFinishAtLine": 29
     }
 }

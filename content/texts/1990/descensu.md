@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "descensu",
-        "tonality": "Hm",
+        "tonality": "F",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 61,
+        "textFinishAtLine": 51
     }
 }

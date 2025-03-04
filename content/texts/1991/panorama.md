@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "panorama",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1991",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 81,
+        "textFinishAtLine": 41
     }
 }

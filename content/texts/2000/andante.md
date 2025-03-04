@@ -7,7 +7,7 @@
         "id": "andante",
         "tonality": "Hm",
         "year": "2000",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 43
     }
 }

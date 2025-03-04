@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "konecned",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1996",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 37
     }
 }

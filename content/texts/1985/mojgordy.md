@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "mojgordy",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1985",
         "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "textFinishAtLine": 29
     }
 }

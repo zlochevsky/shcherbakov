@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "diktant",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 44
     }
 }

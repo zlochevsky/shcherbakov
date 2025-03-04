@@ -7,7 +7,7 @@
         "id": "otrozhde",
         "tonality": "Hm",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 43,
+        "textFinishAtLine": 38
     }
 }

@@ -7,7 +7,7 @@
         "id": "popovodu",
         "tonality": "Hm",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 45,
+        "textFinishAtLine": 47
     }
 }

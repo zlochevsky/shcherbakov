@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "aerodrom",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1989",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 48,
+        "textFinishAtLine": 56
     }
 }

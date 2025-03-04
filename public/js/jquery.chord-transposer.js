@@ -28,7 +28,7 @@
           name = name.substring(0, name.length - 1);
         }
         for (var i = 0; i < keys.length; i++) {
-          if (name == keys[i].name) {
+          if (name.toUpperCase() == keys[i].name.toUpperCase()) {
             return keys[i];
           }
         }
@@ -116,6 +116,9 @@
         var oldChordRoot = getChordRoot(oldChord);
         var newChordRoot = getNewKey(oldChordRoot, delta, targetKey);
         var newChord = newChordRoot.name + oldChord.substr(oldChordRoot.length);
+        if (oldChordRoot == oldChordRoot.toLowerCase()) {
+          newChord = newChord.toLowerCase();
+        }
         el.text(newChord);
         var sib = el[0].nextSibling;
         console.log(sib);
@@ -171,7 +174,6 @@
           $(this).addClass("selected");
           return false;
         });
-        console.log($(this).parent().find(".transpose-wrapper"));
         $(this).parent().find(".transpose-wrapper").html(keysHtml);
         $(this).find("span.ch").each(function(index, el) {
           var txt = $(el).html();
@@ -180,8 +182,8 @@
       });
     };
     $.fn.transpose.defaults = {
-      chordRegex: /^[A-H][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*(\/[A-H][b\#]*)*$/,
-      chordReplaceRegex: /([A-H][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*)/g
+      chordRegex: /^[A-Ha-h][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*(\/[A-H][b\#]*)*$/,
+      chordReplaceRegex: /([A-Ha-h][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*)/g
     };
   })(jQuery);
 })();

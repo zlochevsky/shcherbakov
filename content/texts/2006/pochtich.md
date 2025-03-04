@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "pochtich",
-        "tonality": "Hm",
+        "tonality": "F#m",
         "year": "2006",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 55,
+        "textFinishAtLine": 41
     }
 }

@@ -7,7 +7,7 @@
         "id": "zhaloba",
         "tonality": "Hm",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 64,
+        "textFinishAtLine": 47
     }
 }

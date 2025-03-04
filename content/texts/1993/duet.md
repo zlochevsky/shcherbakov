@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "duet",
-        "tonality": "Hm",
+        "tonality": "G",
         "year": "1993",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 58,
+        "textFinishAtLine": 114
     }
 }

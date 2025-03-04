@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "gorestn",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1983",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 56,
+        "textFinishAtLine": 32
     }
 }

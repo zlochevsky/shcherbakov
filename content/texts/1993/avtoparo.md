@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "avtoparo",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "1993",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 53,
+        "textFinishAtLine": 33
     }
 }

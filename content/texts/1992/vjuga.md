@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vjuga",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1992",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 52
     }
 }

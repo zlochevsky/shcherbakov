@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vgorodev",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "2009",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 54,
+        "textFinishAtLine": 37
     }
 }

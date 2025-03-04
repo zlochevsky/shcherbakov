@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "fontanka",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1992",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 49,
+        "textFinishAtLine": 72
     }
 }

@@ -7,7 +7,7 @@
         "id": "deloshlo",
         "tonality": "Hm",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 55,
+        "textFinishAtLine": 39
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "proschan",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1987",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 48,
+        "textFinishAtLine": 29
     }
 }

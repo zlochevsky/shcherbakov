@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "nemo",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "2002",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 62
     }
 }

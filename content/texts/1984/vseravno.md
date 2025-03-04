@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vseravno",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "1984",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 66,
+        "textFinishAtLine": 27
     }
 }

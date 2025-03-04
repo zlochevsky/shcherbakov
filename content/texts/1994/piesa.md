@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "piesa",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 37
     }
 }

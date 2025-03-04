@@ -7,7 +7,7 @@
         "id": "nikakogo",
         "tonality": "Hm",
         "year": "1984",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 58,
+        "textFinishAtLine": 37
     }
 }

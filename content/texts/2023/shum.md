@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "shum",
-        "tonality": "Hm",
+        "tonality": "G#m",
         "year": "2023",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 58,
+        "textFinishAtLine": 42
     }
 }

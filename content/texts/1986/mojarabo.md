@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "mojarabo",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 44,
+        "textFinishAtLine": 29
     }
 }

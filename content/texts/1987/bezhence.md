@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "bezhence",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1987",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 46,
+        "textFinishAtLine": 34
     }
 }

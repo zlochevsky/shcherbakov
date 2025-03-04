@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vozvrasc",
-        "tonality": "Hm",
+        "tonality": "E",
         "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 56,
+        "textFinishAtLine": 32
     }
 }

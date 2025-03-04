@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "godshel",
-        "tonality": "Hm",
+        "tonality": "F#",
         "year": "2014",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 87
     }
 }

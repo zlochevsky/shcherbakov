@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "poletval",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "2000",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 63,
+        "textFinishAtLine": 52
     }
 }

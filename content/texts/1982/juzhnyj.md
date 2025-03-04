@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "juzhnyj",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 53,
+        "textFinishAtLine": 42
     }
 }

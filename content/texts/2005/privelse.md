@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "privelse",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2005",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 43
     }
 }

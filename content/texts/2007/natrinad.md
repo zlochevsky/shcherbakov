@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "natrinad",
-        "tonality": "Hm",
+        "tonality": "A",
         "year": "2007",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 61,
+        "textFinishAtLine": 57
     }
 }

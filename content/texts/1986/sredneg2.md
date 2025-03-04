@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "sredneg2",
-        "tonality": "Hm",
+        "tonality": "G",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 64,
+        "textFinishAtLine": 32
     }
 }

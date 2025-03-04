@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kolybeln",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1982",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 41,
+        "textFinishAtLine": 46
     }
 }

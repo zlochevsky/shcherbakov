@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "propadu",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 53,
+        "textFinishAtLine": 34
     }
 }

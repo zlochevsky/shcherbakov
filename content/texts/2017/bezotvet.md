@@ -7,7 +7,7 @@
         "id": "bezotvet",
         "tonality": "Hm",
         "year": "2017",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 40,
+        "textFinishAtLine": 128
     }
 }

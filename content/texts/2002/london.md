@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "london",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "2002",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 51
     }
 }

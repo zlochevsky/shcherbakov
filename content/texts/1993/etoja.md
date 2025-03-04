@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "etoja",
-        "tonality": "Hm",
+        "tonality": "C",
         "year": "1993",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 67,
+        "textFinishAtLine": 46
     }
 }

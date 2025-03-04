@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "fevral",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1981",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 40,
+        "textFinishAtLine": 68
     }
 }

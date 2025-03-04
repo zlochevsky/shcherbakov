@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "eastcoast",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "2005",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 68
     }
 }

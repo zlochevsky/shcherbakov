@@ -7,7 +7,7 @@
         "id": "proshuvn",
         "tonality": "Hm",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 44,
+        "textFinishAtLine": 62
     }
 }

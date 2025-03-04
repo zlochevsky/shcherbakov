@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vrjadli",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1994",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 56,
+        "textFinishAtLine": 24
     }
 }

@@ -7,7 +7,7 @@
         "id": "uzhesli",
         "tonality": "Hm",
         "year": "2013",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 72,
+        "textFinishAtLine": 54
     }
 }

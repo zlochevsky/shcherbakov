@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "flot",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "2023",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 41,
+        "textFinishAtLine": 36
     }
 }

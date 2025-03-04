@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "marshkro",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1993",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 62,
+        "textFinishAtLine": 43
     }
 }

@@ -7,7 +7,7 @@
         "id": "netlubez",
         "tonality": "Hm",
         "year": "2015",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 154
     }
 }

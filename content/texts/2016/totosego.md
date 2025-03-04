@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "totosego",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "2016",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 49,
+        "textFinishAtLine": 49
     }
 }

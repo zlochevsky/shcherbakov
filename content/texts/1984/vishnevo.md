@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "vishnevo",
-        "tonality": "Hm",
+        "tonality": "Am",
         "year": "1984",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 62,
+        "textFinishAtLine": 29
     }
 }

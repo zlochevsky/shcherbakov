@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "nesmogna",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "2015",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 46
     }
 }

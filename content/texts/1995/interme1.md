@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "interme1",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1995",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 52,
+        "textFinishAtLine": 41
     }
 }

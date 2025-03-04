@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "otbagazh",
-        "tonality": "Hm",
+        "tonality": "F#m",
         "year": "2010",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 59,
+        "textFinishAtLine": 49
     }
 }

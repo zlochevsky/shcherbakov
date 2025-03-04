@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "etoneja",
-        "tonality": "Hm",
+        "tonality": "D#m",
         "year": "1996",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 43,
+        "textFinishAtLine": 92
     }
 }

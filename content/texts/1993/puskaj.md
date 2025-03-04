@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "puskaj",
-        "tonality": "Hm",
+        "tonality": "C",
         "year": "1993",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 27
     }
 }

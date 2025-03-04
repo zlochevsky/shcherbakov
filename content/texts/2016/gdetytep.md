@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "gdetytep",
-        "tonality": "Hm",
+        "tonality": "C#m",
         "year": "2016",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 52,
+        "textFinishAtLine": 89
     }
 }

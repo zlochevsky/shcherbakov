@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "sezondoz",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "1987",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 36
     }
 }

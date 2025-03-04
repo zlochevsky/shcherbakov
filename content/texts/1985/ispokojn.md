@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "ispokojn",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1985",
         "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "textFinishAtLine": 23
     }
 }

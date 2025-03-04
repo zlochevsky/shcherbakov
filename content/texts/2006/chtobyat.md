@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "chtobyat",
-        "tonality": "Hm",
+        "tonality": "Bm",
         "year": "2006",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 43,
+        "textFinishAtLine": 54
     }
 }

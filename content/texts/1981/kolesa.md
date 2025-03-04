@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kolesa",
-        "tonality": "Hm",
+        "tonality": "G",
         "year": "1981",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 51,
+        "textFinishAtLine": 33
     }
 }

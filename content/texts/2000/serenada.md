@@ -7,7 +7,7 @@
         "id": "serenada",
         "tonality": "Hm",
         "year": "2000",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 43,
+        "textFinishAtLine": 54
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "druzjamo",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 48,
+        "textFinishAtLine": 32
     }
 }

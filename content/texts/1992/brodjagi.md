@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "brodjagi",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1992",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 63,
+        "textFinishAtLine": 27
     }
 }

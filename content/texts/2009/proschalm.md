@@ -7,7 +7,7 @@
         "id": "proschalm",
         "tonality": "Hm",
         "year": "2009",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 43,
+        "textFinishAtLine": 58
     }
 }

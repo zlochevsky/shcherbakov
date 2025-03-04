@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "opilki",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1983",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 54,
+        "textFinishAtLine": 33
     }
 }

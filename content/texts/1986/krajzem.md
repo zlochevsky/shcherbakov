@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "krajzem",
-        "tonality": "Hm",
+        "tonality": "D",
         "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 47,
+        "textFinishAtLine": 30
     }
 }

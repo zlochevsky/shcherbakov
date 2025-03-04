@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "baltijsk",
-        "tonality": "Hm",
+        "tonality": "Dm",
         "year": "1993",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 55,
+        "textFinishAtLine": 26
     }
 }

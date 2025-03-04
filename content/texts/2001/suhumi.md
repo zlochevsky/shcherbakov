@@ -7,7 +7,7 @@
         "id": "suhumi",
         "tonality": "Hm",
         "year": "2001",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 53,
+        "textFinishAtLine": 38
     }
 }

@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "dendensk",
-        "tonality": "Hm",
+        "tonality": "Ebm",
         "year": "1998",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 40,
+        "textFinishAtLine": 35
     }
 }

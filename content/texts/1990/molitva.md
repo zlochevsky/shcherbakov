@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "molitva",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "1990",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 40,
+        "textFinishAtLine": 37
     }
 }
