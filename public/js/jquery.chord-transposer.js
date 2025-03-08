@@ -186,6 +186,21 @@
       chordReplaceRegex: /([A-Ha-h][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*)/g
     };
   })(jQuery);
+  jQuery.noConflict();
+  function toggleChords() {
+    jQuery("span.ch").each(function(i, el) {
+      jQuery(el).toggle();
+      jQuery(".transpose-keys").toggle();
+    });
+  }
+  jQuery(document).ready(function() {
+    jQuery("pre").transpose();
+    jQuery("#toggleChords").bind("click", function() {
+      var e = jQuery(this);
+      e.toggleClass("note1").toggleClass("note2");
+      toggleChords();
+    });
+  });
 })();
 /*!
  * jQuery Chord Transposer plugin v1.0
