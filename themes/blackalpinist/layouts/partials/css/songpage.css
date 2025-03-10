@@ -52,11 +52,41 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.ch, .txt {
-    display: inline;
-}
-
 .sng-title {
     font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.song {
+    font-family: monospace;
+}
+@media only screen and (width <= 70em) {
+    .ch, .txt {
+        display: flow;
+    }
+    .txt {
+        display:block;
+        word-wrap:break-word;
+    }
+    .song {
+        display: block;
+    }
+
+}
+@media only screen and (width > 70em) {
+    .ch, .txt {
+        display: inline;
+        grid-column: 2;
+    }
+    .txt {
+        grid-column: 1;
+    }
+    .song {
+        display: grid;
+        grid-template-columns: fit-content(70%) auto;
+    }
+
+}
+
 }
 

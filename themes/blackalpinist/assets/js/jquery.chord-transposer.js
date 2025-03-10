@@ -257,7 +257,7 @@ function toggleChords() {
 }
 
 jQuery(document).ready(function() {
-    jQuery("pre").transpose();
+    jQuery("div.song").transpose();
     jQuery('#toggleChords').bind('click', function(){
         var e = jQuery(this);
         e.toggleClass('note1').toggleClass('note2');

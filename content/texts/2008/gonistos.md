@@ -7,7 +7,7 @@
         "id": "gonistos",
         "tonality": "Hm",
         "year": "2008",
-        "chordsStartAt": 45,
-        "textFinishAtLine": 48
+        "chordsStartAt": 46,
+        "textFinishAtLine": 49
     }
 }
