@@ -34,6 +34,7 @@
                         {{ $p2 = replaceRE `([\r\n])` "<br />" (replace $p2 ">" "-") }}
 {{ $newLines = $newLines | append (println "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span>" | safeHTML) }}
                       {{ else }}
+                        {{ $newLines = $newLines | append (println "<span class=\"txt\">" (replaceRE `([\s])` "&nbsp;" (trim $line " ")) "</span>" | safeHTML) }}
                       {{ end }}
                 {{ else }}
                     {{ $newLines = $newLines | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) }}
