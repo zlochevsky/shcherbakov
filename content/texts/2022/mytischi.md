@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "mytischi",
-        "tonality": "Hm",
+        "tonality": "Cm",
         "year": "2022",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 52,
+        "textFinishAtLine": 65
     }
 }

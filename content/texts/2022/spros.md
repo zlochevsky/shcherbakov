@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "spros",
-        "tonality": "Hm",
+        "tonality": "Gm",
         "year": "2022",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 66,
+        "textFinishAtLine": 43
     }
 }
