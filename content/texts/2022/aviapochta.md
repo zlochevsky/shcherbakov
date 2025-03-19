@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "aviapochta",
-        "tonality": "F#m",
+        "tonality": "C#m",
         "year": "2022",
         "chordsStartAt": 59,
-        "textFinishAtLine": 57
+        "textFinishAtLine": 58
     }
 }

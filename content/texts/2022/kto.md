@@ -8,6 +8,6 @@
         "tonality": "Am",
         "year": "2022",
         "chordsStartAt": 57,
-        "textFinishAtLine": 60
+        "textFinishAtLine": 61
     }
 }
