@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "chtonam",
-        "tonality": "Dm",
+        "tonality": "Cm",
         "year": "2021",
         "chordsStartAt": 49,
-        "textFinishAtLine": 65
+        "textFinishAtLine": 75
     }
 }
