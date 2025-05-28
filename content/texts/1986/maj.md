@@ -7,7 +7,7 @@
         "id": "maj",
         "tonality": "Am",
         "year": "1986",
-        "chordsStartAt": 43,
+        "chordsStartAt": 32,
         "textFinishAtLine": 56
     }
 }
