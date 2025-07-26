@@ -7,7 +7,7 @@
         "id": "stenyusv",
         "tonality": "Em",
         "year": "2017",
-        "chordsStartAt": 67,
-        "textFinishAtLine": 72
+        "chordsStartAt": 66,
+        "textFinishAtLine": 38
     }
 }
