@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "kakojkos",
-        "tonality": "Dm",
+        "tonality": "C#m",
         "year": "1993",
-        "chordsStartAt": 53,
-        "textFinishAtLine": 50
+        "chordsStartAt": 56,
+        "textFinishAtLine": 52
     }
 }
