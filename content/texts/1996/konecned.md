@@ -8,6 +8,6 @@
         "tonality": "Am",
         "year": "1996",
         "chordsStartAt": 60,
-        "textFinishAtLine": 37
+        "textFinishAtLine": 39
     }
 }
