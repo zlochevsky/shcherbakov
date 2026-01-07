@@ -7,7 +7,7 @@
         "id": "butafor",
         "tonality": "Hm",
         "year": "2022",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 68,
+        "textFinishAtLine": 47
     }
 }
