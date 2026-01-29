@@ -1,0 +1,5 @@
+awk -F: 'NR==FNR { map[$1] = $2; next } { 
+  for (key in map) {
+    gsub(key, map[key]);
+  }
+} 1' ids.csv perfs.4.csv
