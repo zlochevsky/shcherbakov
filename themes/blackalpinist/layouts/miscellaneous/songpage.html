@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>{{ with .Params.name }}{{ . }}{{ else }}{{ printf "%s. %s" site.Title .Title }}{{ end }}</title>
+<title>{{ printf "%s. %s" site.Title .Title }}</title>
 <style>
 {{- partial "css/common.html" | safeCSS -}}
 {{ partial "css/catalogue.css.html" | safeCSS }}
@@ -12,8 +12,8 @@
 </head>
 <body>
 <header>
-<h1>{{ .Params.name }}</h1>
-<h2>{{- .Params.subtitle -}}</h2>
+	<p><b>{{ .Site.Title }}</b></p>
+	<p><small><em>{{- .Site.Params.subtitle -}}</em></small></p>
 </header>
 {{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" .) }}
 <main>
