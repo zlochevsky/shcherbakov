@@ -7,7 +7,8 @@
         "id": "proschalm",
         "tonality": "Hm",
         "year": "2009",
+        "name": "Тогда и там",
         "chordsStartAt": 43,
-        "textFinishAtLine": 58
+        "textFinishAtLine": 64
     }
 }
