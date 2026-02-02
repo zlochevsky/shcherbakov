@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,67 +423,63 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">КАЛЕЙДОСКОП ДЕТСКИЙ</span>
+data-key="Hm"><h1>КАЛЕЙДОСКОП ДЕТСКИЙ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;угодно&nbsp;ль:&nbsp;вот,&nbsp;оптический&nbsp;прибор,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bass:&nbsp;&nbsp; </span><span class="ch"> h  b  h  b  h  b  hbhcc# </span>
-<span class="txt"> нехитрый,&nbsp;так,&nbsp;система&nbsp;трёх&nbsp;зеркал&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#chbh </span>
-<span class="txt"> в&nbsp;цилиндре,&nbsp;плюс&nbsp;цветные&nbsp;пустяки...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> b  h  b  h  b     hbhcc# </span>
-<span class="txt"> Как&nbsp;видишь,&nbsp;вещь&nbsp;нарочно&nbsp;для&nbsp;тебя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#cc#d# </span>
-<span class="txt"> беглянки,&nbsp;скрытной,&nbsp;склонной&nbsp;к&nbsp;миражам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> d  d# d  d# d     d#dc#c Hm </span>
+<span class="line"><span class="txt"> Не&nbsp;угодно&nbsp;ль:&nbsp;вот,&nbsp;оптический&nbsp;прибор,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bass:&nbsp;&nbsp; </span><span class="ch"> h  b  h  b  h  b  hbhcc# </span></span>
+<span class="line"><span class="txt"> нехитрый,&nbsp;так,&nbsp;система&nbsp;трёх&nbsp;зеркал&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#chbh </span></span>
+<span class="line"><span class="txt"> в&nbsp;цилиндре,&nbsp;плюс&nbsp;цветные&nbsp;пустяки...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> b  h  b  h  b     hbhcc# </span></span>
+<span class="line"><span class="txt"> Как&nbsp;видишь,&nbsp;вещь&nbsp;нарочно&nbsp;для&nbsp;тебя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#cc#d# </span></span>
+<span class="line"><span class="txt"> беглянки,&nbsp;скрытной,&nbsp;склонной&nbsp;к&nbsp;миражам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> d  d# d  d# d     d#dc#c Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;свет&nbsp;её&nbsp;направь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ну,&nbsp;чем&nbsp;тебе&nbsp;не&nbsp;явь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Глазей,&nbsp;зевай&nbsp;спросонок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  H7 E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;напоминай&nbsp;дитя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  F# Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ещё&nbsp;бы&nbsp;флот&nbsp;тебе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;к&nbsp;подзорной&nbsp;сей&nbsp;трубе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;ты&nbsp;такой&nbsp;ребёнок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  H7 E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;с&nbsp;каким&nbsp;нельзя&nbsp;шутя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  F# Hm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;свет&nbsp;её&nbsp;направь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ну,&nbsp;чем&nbsp;тебе&nbsp;не&nbsp;явь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Глазей,&nbsp;зевай&nbsp;спросонок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  H7 E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;напоминай&nbsp;дитя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  F# Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ещё&nbsp;бы&nbsp;флот&nbsp;тебе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;к&nbsp;подзорной&nbsp;сей&nbsp;трубе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;ты&nbsp;такой&nbsp;ребёнок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  H7 E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;с&nbsp;каким&nbsp;нельзя&nbsp;шутя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мне-то&nbsp;что,&nbsp;мне&nbsp;легче,&nbsp;я&nbsp;ведь&nbsp;не&nbsp;беглец,&nbsp;&nbsp;&nbsp;&nbsp;bass:&nbsp;&nbsp; </span><span class="ch"> h  b  h  b  h  b  hbhcc# </span>
-<span class="txt"> я&nbsp;здесь&nbsp;живу,&nbsp;мне&nbsp;нравятся&nbsp;несчастья...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#chbh </span>
-<span class="txt"> Ergo:&nbsp;мною&nbsp;можешь&nbsp;пренебречь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> b  h  b  h  b     hbhcc# </span>
-<span class="txt"> отныне&nbsp;только&nbsp;в&nbsp;это&nbsp;зазеркалье&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#cc#d# </span>
-<span class="txt"> глядя,&nbsp;в&nbsp;дивный&nbsp;этот&nbsp;окуляр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> d  d# d  d# d     d#dc#c Hm </span>
+<span class="line"><span class="txt"> Мне-то&nbsp;что,&nbsp;мне&nbsp;легче,&nbsp;я&nbsp;ведь&nbsp;не&nbsp;беглец,&nbsp;&nbsp;&nbsp;&nbsp;bass:&nbsp;&nbsp; </span><span class="ch"> h  b  h  b  h  b  hbhcc# </span></span>
+<span class="line"><span class="txt"> я&nbsp;здесь&nbsp;живу,&nbsp;мне&nbsp;нравятся&nbsp;несчастья...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#chbh </span></span>
+<span class="line"><span class="txt"> Ergo:&nbsp;мною&nbsp;можешь&nbsp;пренебречь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> b  h  b  h  b     hbhcc# </span></span>
+<span class="line"><span class="txt"> отныне&nbsp;только&nbsp;в&nbsp;это&nbsp;зазеркалье&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#cc#d# </span></span>
+<span class="line"><span class="txt"> глядя,&nbsp;в&nbsp;дивный&nbsp;этот&nbsp;окуляр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> d  d# d  d# d     d#dc#c Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Что&nbsp;в&nbsp;нём&nbsp;есть...&nbsp;вопрос&nbsp;не&nbsp;в&nbsp;том,&nbsp;спроси,&nbsp;&nbsp;bass:&nbsp;&nbsp; </span><span class="ch"> h  b  h  b  h  b  hbhcc# </span>
-<span class="txt"> чего&nbsp;в&nbsp;нём&nbsp;нет...&nbsp;любой,&nbsp;на&nbsp;выбор&nbsp;колорит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#chbh </span>
-<span class="txt"> хоть&nbsp;флот,&nbsp;хоть&nbsp;гавань,&nbsp;словом,&nbsp;рафинад,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> b  h  b  h  b     hbhcc# </span>
-<span class="txt"> каштаны,&nbsp;детство&nbsp;в&nbsp;городе&nbsp;приморском,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#cc#d# </span>
-<span class="txt"> яхты,&nbsp;джонки,&nbsp;мачты,&nbsp;кливера...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> d  d# d  d# d     d#dc#c Hm </span>
+<span class="line"><span class="txt"> Что&nbsp;в&nbsp;нём&nbsp;есть...&nbsp;вопрос&nbsp;не&nbsp;в&nbsp;том,&nbsp;спроси,&nbsp;&nbsp;bass:&nbsp;&nbsp; </span><span class="ch"> h  b  h  b  h  b  hbhcc# </span></span>
+<span class="line"><span class="txt"> чего&nbsp;в&nbsp;нём&nbsp;нет...&nbsp;любой,&nbsp;на&nbsp;выбор&nbsp;колорит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#chbh </span></span>
+<span class="line"><span class="txt"> хоть&nbsp;флот,&nbsp;хоть&nbsp;гавань,&nbsp;словом,&nbsp;рафинад,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> b  h  b  h  b     hbhcc# </span></span>
+<span class="line"><span class="txt"> каштаны,&nbsp;детство&nbsp;в&nbsp;городе&nbsp;приморском,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> c  c# c  c# c     c#cc#d# </span></span>
+<span class="line"><span class="txt"> яхты,&nbsp;джонки,&nbsp;мачты,&nbsp;кливера...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> d  d# d  d# d     d#dc#c Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;кто,&nbsp;смотри,&nbsp;вон&nbsp;там?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;По&nbsp;всем&nbsp;статьям&nbsp;-&nbsp;я&nbsp;сам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Залез&nbsp;в&nbsp;одну&nbsp;из&nbsp;джонок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  H7 E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ни&nbsp;дать&nbsp;ни&nbsp;взять&nbsp;матрос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  F# Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Хоть&nbsp;впору&nbsp;звать&nbsp;пажей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;гнать&nbsp;меня&nbsp;взашей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;я&nbsp;такой&nbsp;ребёнок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  H7 E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;с&nbsp;каким&nbsp;нельзя&nbsp;всерьёз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  F# Hm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;кто,&nbsp;смотри,&nbsp;вон&nbsp;там?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;По&nbsp;всем&nbsp;статьям&nbsp;-&nbsp;я&nbsp;сам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Залез&nbsp;в&nbsp;одну&nbsp;из&nbsp;джонок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  H7 E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ни&nbsp;дать&nbsp;ни&nbsp;взять&nbsp;матрос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  F# Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Хоть&nbsp;впору&nbsp;звать&nbsp;пажей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;гнать&nbsp;меня&nbsp;взашей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;я&nbsp;такой&nbsp;ребёнок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  H7 E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;с&nbsp;каким&nbsp;нельзя&nbsp;всерьёз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  F# Hm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1993</span>
-
+<pre><span class="year">1993</span>
 
 
 </pre>
+
 
                 </div>
         </div>

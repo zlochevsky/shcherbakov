@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,77 +423,71 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">Не бывает</span>
+data-key="Hm"><h1>Не бывает</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Hm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Среди&nbsp;тех,&nbsp;кто&nbsp;танцует&nbsp;взахлёб,&nbsp;молодея,&nbsp;виясь&nbsp;и&nbsp;кружа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (бас F-F#) Hm  Em   </span>
-<span class="txt"> я&nbsp;топчусь&nbsp;перед&nbsp;вывеской&nbsp;"стоп",&nbsp;холодея,&nbsp;двоясь&nbsp;и&nbsp;дрожа.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C Em6/C#  F#7  Hm </span>
-<span class="txt"> Реже&nbsp;под&nbsp;ноги&nbsp;глядя,&nbsp;чем&nbsp;вверх,&nbsp;нахожу,&nbsp;что&nbsp;черна&nbsp;высота&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  D  F#m/C#  H/C  H  Em </span>
-<span class="txt"> и&nbsp;охота&nbsp;начнётся&nbsp;в&nbsp;четверг.&nbsp;Или&nbsp;даже&nbsp;уже&nbsp;начата.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Em6  Hm/F#  F#7 G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;всех&nbsp;не&nbsp;догонят.&nbsp;Догонят&nbsp;не&nbsp;всех.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  H7 Em  Hm  F#7 G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всего&nbsp;не&nbsp;отнимут.&nbsp;Отнимут&nbsp;не&nbsp;всё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  H7 Em  Hm  F#7 Hm </span>
+<span class="line"><span class="txt"> Среди&nbsp;тех,&nbsp;кто&nbsp;танцует&nbsp;взахлёб,&nbsp;молодея,&nbsp;виясь&nbsp;и&nbsp;кружа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (бас F-F#) Hm  Em   </span></span>
+<span class="line"><span class="txt"> я&nbsp;топчусь&nbsp;перед&nbsp;вывеской&nbsp;"стоп",&nbsp;холодея,&nbsp;двоясь&nbsp;и&nbsp;дрожа.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C Em6/C#  F#7  Hm </span></span>
+<span class="line"><span class="txt"> Реже&nbsp;под&nbsp;ноги&nbsp;глядя,&nbsp;чем&nbsp;вверх,&nbsp;нахожу,&nbsp;что&nbsp;черна&nbsp;высота&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  D  F#m/C#  H/C  H  Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;охота&nbsp;начнётся&nbsp;в&nbsp;четверг.&nbsp;Или&nbsp;даже&nbsp;уже&nbsp;начата.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Em6  Hm/F#  F#7 G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;всех&nbsp;не&nbsp;догонят.&nbsp;Догонят&nbsp;не&nbsp;всех.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  H7 Em  Hm  F#7 G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всего&nbsp;не&nbsp;отнимут.&nbsp;Отнимут&nbsp;не&nbsp;всё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  H7 Em  Hm  F#7 Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;вполне&nbsp;поворотлив&nbsp;собой&nbsp;утерявший&nbsp;стрелецкую&nbsp;прыть&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (бас F-F#) Hm... </span>
+<span class="line"><span class="txt"> Не&nbsp;вполне&nbsp;поворотлив&nbsp;собой&nbsp;утерявший&nbsp;стрелецкую&nbsp;прыть&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (бас F-F#) Hm... </span></span>
 <span class="txt"> зверобой&nbsp;с&nbsp;рассечённой&nbsp;губой,&nbsp;обещавший&nbsp;меня&nbsp;пережить. </span>
 <span class="txt"> Девяносто&nbsp;навряд&nbsp;ли&nbsp;ему,&nbsp;но&nbsp;не&nbsp;меньше&nbsp;восьмидесяти. </span>
 <span class="txt"> И&nbsp;грозится,&nbsp;по-видимому,&nbsp;он&nbsp;скорее&nbsp;для&nbsp;видимости. </span>
-<span class="txt"> А&nbsp;сам&nbsp;-&nbsp;не&nbsp;сумеет.&nbsp;Сумеет&nbsp;не&nbsp;сам. </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мне&nbsp;он&nbsp;не&nbsp;опасен.&nbsp;Опасен&nbsp;не&nbsp;он.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                          -- Cm </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;сам&nbsp;-&nbsp;не&nbsp;сумеет.&nbsp;Сумеет&nbsp;не&nbsp;сам. </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мне&nbsp;он&nbsp;не&nbsp;опасен.&nbsp;Опасен&nbsp;не&nbsp;он.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                          -- Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ты&nbsp;не&nbsp;едешь&nbsp;в&nbsp;Америку,&nbsp;нет.&nbsp;Я&nbsp;не&nbsp;еду&nbsp;в&nbsp;Америку,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (бас F#-G) Cm  Fm </span>
-<span class="txt"> И&nbsp;отшельник&nbsp;не&nbsp;хочет&nbsp;в&nbsp;Тибет.&nbsp;И&nbsp;никто&nbsp;вообще&nbsp;никуда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Db Fm6/D  G Cm </span>
-<span class="txt"> не&nbsp;летит,&nbsp;не&nbsp;велит&nbsp;лихачу:&nbsp;ну-ка,&nbsp;ну-ка,&nbsp;во&nbsp;Внуково&nbsp;мне!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Eb Gm  C/Db C  Fm </span>
-<span class="txt"> Персонально&nbsp;куда-то&nbsp;лечу.&nbsp;И&nbsp;плачу,&nbsp;натурально,&nbsp;вдвойне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Fm6 Cm/G G Ab </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Бог&nbsp;даст,&nbsp;не&nbsp;настигнут.&nbsp;Не&nbsp;схватят,&nbsp;авось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C Fm  Cm  G  Ab </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;там&nbsp;-&nbsp;будь&nbsp;что&nbsp;будет.&nbsp;Что&nbsp;будет,&nbsp;то&nbsp;будь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C Fm  Cm  G  Cm         -- C#m </span>
+<span class="line"><span class="txt"> Ты&nbsp;не&nbsp;едешь&nbsp;в&nbsp;Америку,&nbsp;нет.&nbsp;Я&nbsp;не&nbsp;еду&nbsp;в&nbsp;Америку,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (бас F#-G) Cm  Fm </span></span>
+<span class="line"><span class="txt"> И&nbsp;отшельник&nbsp;не&nbsp;хочет&nbsp;в&nbsp;Тибет.&nbsp;И&nbsp;никто&nbsp;вообще&nbsp;никуда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Db Fm6/D  G Cm </span></span>
+<span class="line"><span class="txt"> не&nbsp;летит,&nbsp;не&nbsp;велит&nbsp;лихачу:&nbsp;ну-ка,&nbsp;ну-ка,&nbsp;во&nbsp;Внуково&nbsp;мне!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Eb Gm  C/Db C  Fm </span></span>
+<span class="line"><span class="txt"> Персонально&nbsp;куда-то&nbsp;лечу.&nbsp;И&nbsp;плачу,&nbsp;натурально,&nbsp;вдвойне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Fm6 Cm/G G Ab </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Бог&nbsp;даст,&nbsp;не&nbsp;настигнут.&nbsp;Не&nbsp;схватят,&nbsp;авось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C Fm  Cm  G  Ab </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;там&nbsp;-&nbsp;будь&nbsp;что&nbsp;будет.&nbsp;Что&nbsp;будет,&nbsp;то&nbsp;будь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C Fm  Cm  G  Cm         -- C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кабы&nbsp;это&nbsp;вот...&nbsp;это&nbsp;бы&nbsp;вот...&nbsp;чтобы,&nbsp;то&nbsp;есть,&nbsp;не&nbsp;вывеска&nbsp;"стоп", </span><span class="ch"> (бас G-G#) C#m F#m </span>
-<span class="txt"> то&nbsp;есть,&nbsp;даже&nbsp;не&nbsp;наоборот,&nbsp;а&nbsp;вот&nbsp;это...&nbsp;ну&nbsp;как&nbsp;его...&nbsp;чтоб...&nbsp;&nbsp;&nbsp; </span><span class="ch">  D F#m/D# G# C#m </span>
-<span class="txt"> Если,&nbsp;выгнувшись,&nbsp;явит&nbsp;лихач&nbsp;огнедышащих&nbsp;три&nbsp;головы,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  E Abm/D# C#/D C# F#m </span>
-<span class="txt"> чтобы&nbsp;прыгало&nbsp;сердце&nbsp;не&nbsp;вскачь.&nbsp;Либо&nbsp;вовсе&nbsp;не&nbsp;прыгало&nbsp;бы...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  F#m/C# C#m/G# G# A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;так&nbsp;не&nbsp;бывает.&nbsp;Бывает&nbsp;не&nbsp;так.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C# F#m  C#m  G#  A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Замрёт&nbsp;ретивое&nbsp;-&nbsp;и&nbsp;не&nbsp;отомрёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C# F#m  C#m  G#  C#m        Hm <- </span>
+<span class="line"><span class="txt"> Кабы&nbsp;это&nbsp;вот...&nbsp;это&nbsp;бы&nbsp;вот...&nbsp;чтобы,&nbsp;то&nbsp;есть,&nbsp;не&nbsp;вывеска&nbsp;"стоп", </span><span class="ch"> (бас G-G#) C#m F#m </span></span>
+<span class="line"><span class="txt"> то&nbsp;есть,&nbsp;даже&nbsp;не&nbsp;наоборот,&nbsp;а&nbsp;вот&nbsp;это...&nbsp;ну&nbsp;как&nbsp;его...&nbsp;чтоб...&nbsp;&nbsp;&nbsp; </span><span class="ch">  D F#m/D# G# C#m </span></span>
+<span class="line"><span class="txt"> Если,&nbsp;выгнувшись,&nbsp;явит&nbsp;лихач&nbsp;огнедышащих&nbsp;три&nbsp;головы,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  E Abm/D# C#/D C# F#m </span></span>
+<span class="line"><span class="txt"> чтобы&nbsp;прыгало&nbsp;сердце&nbsp;не&nbsp;вскачь.&nbsp;Либо&nbsp;вовсе&nbsp;не&nbsp;прыгало&nbsp;бы...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  F#m/C# C#m/G# G# A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;так&nbsp;не&nbsp;бывает.&nbsp;Бывает&nbsp;не&nbsp;так.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C# F#m  C#m  G#  A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Замрёт&nbsp;ретивое&nbsp;-&nbsp;и&nbsp;не&nbsp;отомрёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C# F#m  C#m  G#  C#m        Hm <- </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;бас:&nbsp; </span><span class="ch"> F-F# H   F#-A G# (bis) </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;бас:&nbsp; </span><span class="ch"> F-F# H   F#-A G# (bis) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Среди&nbsp;тех,&nbsp;кто&nbsp;не&nbsp;ест&nbsp;и&nbsp;не&nbsp;спит,&nbsp;соревнуясь,&nbsp;дымясь&nbsp;и&nbsp;шипя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (бас F-F#) Hm... </span>
+<span class="line"><span class="txt"> Среди&nbsp;тех,&nbsp;кто&nbsp;не&nbsp;ест&nbsp;и&nbsp;не&nbsp;спит,&nbsp;соревнуясь,&nbsp;дымясь&nbsp;и&nbsp;шипя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (бас F-F#) Hm... </span></span>
 <span class="txt"> я&nbsp;слабею,&nbsp;как&nbsp;в&nbsp;озере&nbsp;кит,&nbsp;повинуясь,&nbsp;томясь,&nbsp;но&nbsp;терпя. </span>
 <span class="txt"> И&nbsp;как&nbsp;только&nbsp;всеобщее&nbsp;"за"&nbsp;превратится&nbsp;в&nbsp;зловещее&nbsp;"чу", </span>
 <span class="txt"> я&nbsp;отважно&nbsp;закрою&nbsp;глаза&nbsp;-&nbsp;и&nbsp;со&nbsp;всей&nbsp;прямотою&nbsp;смолчу... </span>
-<span class="txt"> Что&nbsp;взять&nbsp;с&nbsp;запасного!&nbsp;Какой&nbsp;с&nbsp;него&nbsp;спрос? </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Как&nbsp;мог&nbsp;-&nbsp;так&nbsp;и&nbsp;прожил.&nbsp;А&nbsp;много&nbsp;ль&nbsp;он&nbsp;мог?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                          -- Cm </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Что&nbsp;взять&nbsp;с&nbsp;запасного!&nbsp;Какой&nbsp;с&nbsp;него&nbsp;спрос? </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Как&nbsp;мог&nbsp;-&nbsp;так&nbsp;и&nbsp;прожил.&nbsp;А&nbsp;много&nbsp;ль&nbsp;он&nbsp;мог?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                          -- Cm </span></span>
 <span class="txt">  </span>
-<span class="txt"> Подо&nbsp;льдом&nbsp;исчезает&nbsp;залив.&nbsp;Сиротеет&nbsp;солёная&nbsp;верфь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (бас F#-G) Cm... </span>
+<span class="line"><span class="txt"> Подо&nbsp;льдом&nbsp;исчезает&nbsp;залив.&nbsp;Сиротеет&nbsp;солёная&nbsp;верфь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (бас F#-G) Cm... </span></span>
 <span class="txt"> Над&nbsp;торосами&nbsp;небо&nbsp;как&nbsp;взрыв&nbsp;и&nbsp;заря&nbsp;как&nbsp;зелёная&nbsp;ветвь. </span>
 <span class="txt"> Санта-Клаус&nbsp;трясётся&nbsp;в&nbsp;санях,&nbsp;сувениры&nbsp;бренчат&nbsp;в&nbsp;багаже... </span>
 <span class="txt"> И&nbsp;охота&nbsp;начнётся&nbsp;на&nbsp;днях.&nbsp;Или&nbsp;даже&nbsp;в&nbsp;разгаре&nbsp;уже. </span>
-<span class="txt"> Но&nbsp;всех&nbsp;не&nbsp;догонят.&nbsp;Догонят&nbsp;не&nbsp;всех. </span>
-<span class="txt"> Всего&nbsp;не&nbsp;отнимут.&nbsp;Отнимут&nbsp;не&nbsp;всё. </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fin&nbsp;(бас):&nbsp; </span><span class="ch"> F#-G C    G-B G# </span>
-<span class="txt"> 2000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  F#-G C    G-B G# etc </span>
- <br />
- <br />
- <br />
- <br />
-
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;всех&nbsp;не&nbsp;догонят.&nbsp;Догонят&nbsp;не&nbsp;всех. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всего&nbsp;не&nbsp;отнимут.&nbsp;Отнимут&nbsp;не&nbsp;всё. </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fin&nbsp;(бас):&nbsp; </span><span class="ch"> F#-G C    G-B G# </span></span>
+<span class="line"><span class="txt"> 2000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  F#-G C    G-B G# etc </span></span>
 </div>
 <pre>
-    
 
                                                                  Условная нотировка по исп. <span class="year">2015</span> года.
 
@@ -493,8 +495,8 @@ data-key="Hm"><span class="sng-title">Не бывает</span>
                                                                  песня была записана в тональности Hm
                                                                 (по куплетам: Bm-Bm-Hm-Cm-Bm-Hm).
 
-
 </pre>
+
 
                 </div>
         </div>

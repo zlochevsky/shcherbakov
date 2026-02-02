@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,74 +423,71 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Gm"><span class="sng-title">СПРОС</span>
+data-key="Gm"><h1>СПРОС</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Спрашиваешь,&nbsp;почём&nbsp;леденцы?&nbsp;А&nbsp;глаза&nbsp;выкатил,&nbsp;как&nbsp;бубенцы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span>
-<span class="txt"> Так&nbsp;неуютно&nbsp;смотришь,&nbsp;будто&nbsp;нам&nbsp;ты&nbsp;не&nbsp;сын&nbsp;—&nbsp;и&nbsp;мы&nbsp;не&nbsp;отцы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span>
-<span class="txt"> Ох,&nbsp;не&nbsp;о&nbsp;том&nbsp;ты&nbsp;спрашиваешь!&nbsp;Прямо&nbsp;нас&nbsp;ошарашиваешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span>
-<span class="txt"> Ждали&nbsp;—&nbsp;предложит,&nbsp;обнадёжит,&nbsp;скрасит...&nbsp;А&nbsp;ты&nbsp;не&nbsp;скрашиваешь.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span>
+<span class="line"><span class="txt"> Спрашиваешь,&nbsp;почём&nbsp;леденцы?&nbsp;А&nbsp;глаза&nbsp;выкатил,&nbsp;как&nbsp;бубенцы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span></span>
+<span class="line"><span class="txt"> Так&nbsp;неуютно&nbsp;смотришь,&nbsp;будто&nbsp;нам&nbsp;ты&nbsp;не&nbsp;сын&nbsp;—&nbsp;и&nbsp;мы&nbsp;не&nbsp;отцы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span></span>
+<span class="line"><span class="txt"> Ох,&nbsp;не&nbsp;о&nbsp;том&nbsp;ты&nbsp;спрашиваешь!&nbsp;Прямо&nbsp;нас&nbsp;ошарашиваешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span></span>
+<span class="line"><span class="txt"> Ждали&nbsp;—&nbsp;предложит,&nbsp;обнадёжит,&nbsp;скрасит...&nbsp;А&nbsp;ты&nbsp;не&nbsp;скрашиваешь.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Шире&nbsp;карман,&nbsp;детина!&nbsp;Цену&nbsp;придумай&nbsp;сам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- Cm  G Dm5- Cm </span>
-<span class="txt"> Всё&nbsp;—&nbsp;как&nbsp;назначишь.&nbsp;Нам&nbsp;едино&nbsp;—&nbsp;сколько&nbsp;за&nbsp;килограмм.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- C Fm Ab7/F#  G </span>
+<span class="line"><span class="txt"> Шире&nbsp;карман,&nbsp;детина!&nbsp;Цену&nbsp;придумай&nbsp;сам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- Cm  G Dm5- Cm </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;—&nbsp;как&nbsp;назначишь.&nbsp;Нам&nbsp;едино&nbsp;—&nbsp;сколько&nbsp;за&nbsp;килограмм.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- C Fm Ab7/F#  G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Хоть&nbsp;леденцы,&nbsp;хоть&nbsp;весь&nbsp;каталог.&nbsp;Вдоль,&nbsp;поперёк&nbsp;и&nbsp;наискосок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span>
-<span class="txt"> Штучно&nbsp;ли,&nbsp;блочно,&nbsp;нам&nbsp;бы&nbsp;срочно&nbsp;сбыть&nbsp;за&nbsp;бесценок&nbsp;—&nbsp;и&nbsp;наутёк.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span>
-<span class="txt"> Всё&nbsp;—&nbsp;почём&nbsp;зря,&nbsp;от&nbsp;неба&nbsp;до&nbsp;недр.&nbsp;Домна&nbsp;и&nbsp;шахта,&nbsp;пихта&nbsp;и&nbsp;кедр.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span>
-<span class="txt"> Сеялка,&nbsp;мялка.&nbsp;Стройка.&nbsp;Свалка.&nbsp;Сколько&nbsp;не&nbsp;жалко&nbsp;за&nbsp;километр.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span>
+<span class="line"><span class="txt"> Хоть&nbsp;леденцы,&nbsp;хоть&nbsp;весь&nbsp;каталог.&nbsp;Вдоль,&nbsp;поперёк&nbsp;и&nbsp;наискосок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span></span>
+<span class="line"><span class="txt"> Штучно&nbsp;ли,&nbsp;блочно,&nbsp;нам&nbsp;бы&nbsp;срочно&nbsp;сбыть&nbsp;за&nbsp;бесценок&nbsp;—&nbsp;и&nbsp;наутёк.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;—&nbsp;почём&nbsp;зря,&nbsp;от&nbsp;неба&nbsp;до&nbsp;недр.&nbsp;Домна&nbsp;и&nbsp;шахта,&nbsp;пихта&nbsp;и&nbsp;кедр.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span></span>
+<span class="line"><span class="txt"> Сеялка,&nbsp;мялка.&nbsp;Стройка.&nbsp;Свалка.&nbsp;Сколько&nbsp;не&nbsp;жалко&nbsp;за&nbsp;километр.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Лишнего&nbsp;брать&nbsp;не&nbsp;станем.&nbsp;Не&nbsp;пригодилось&nbsp;—&nbsp;что&nbsp;ж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- Cm  G Dm5- Cm </span>
-<span class="txt"> Как&nbsp;только&nbsp;скинем,&nbsp;сразу&nbsp;канем.&nbsp;Скроемся,&nbsp;не&nbsp;найдёшь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- C Fm Ab7/F#  G </span>
+<span class="line"><span class="txt"> Лишнего&nbsp;брать&nbsp;не&nbsp;станем.&nbsp;Не&nbsp;пригодилось&nbsp;—&nbsp;что&nbsp;ж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- Cm  G Dm5- Cm </span></span>
+<span class="line"><span class="txt"> Как&nbsp;только&nbsp;скинем,&nbsp;сразу&nbsp;канем.&nbsp;Скроемся,&nbsp;не&nbsp;найдёшь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- C Fm Ab7/F#  G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;угол&nbsp;такой,&nbsp;куда&nbsp;не&nbsp;пролезть.&nbsp;В&nbsp;самый&nbsp;глухой,&nbsp;какой&nbsp;ни&nbsp;на&nbsp;есть. </span><span class="ch"> Gm  F G Cm </span>
-<span class="txt"> В&nbsp;сумрак&nbsp;чащобы,&nbsp;где&nbsp;бы&nbsp;чтобы&nbsp;—&nbsp;радиосвязь,&nbsp;и&nbsp;ту&nbsp;не&nbsp;провесть.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span>
-<span class="txt"> Мало&nbsp;ли&nbsp;что&nbsp;Москва&nbsp;говорит!&nbsp;У&nbsp;Москвы&nbsp;голова&nbsp;не&nbsp;болит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span>
-<span class="txt"> Нам&nbsp;присудила&nbsp;крюк&nbsp;и&nbsp;мыло.&nbsp;Так&nbsp;и&nbsp;тебя&nbsp;отблагодарит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span>
+<span class="line"><span class="txt"> В&nbsp;угол&nbsp;такой,&nbsp;куда&nbsp;не&nbsp;пролезть.&nbsp;В&nbsp;самый&nbsp;глухой,&nbsp;какой&nbsp;ни&nbsp;на&nbsp;есть. </span><span class="ch"> Gm  F G Cm </span></span>
+<span class="line"><span class="txt"> В&nbsp;сумрак&nbsp;чащобы,&nbsp;где&nbsp;бы&nbsp;чтобы&nbsp;—&nbsp;радиосвязь,&nbsp;и&nbsp;ту&nbsp;не&nbsp;провесть.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span></span>
+<span class="line"><span class="txt"> Мало&nbsp;ли&nbsp;что&nbsp;Москва&nbsp;говорит!&nbsp;У&nbsp;Москвы&nbsp;голова&nbsp;не&nbsp;болит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span></span>
+<span class="line"><span class="txt"> Нам&nbsp;присудила&nbsp;крюк&nbsp;и&nbsp;мыло.&nbsp;Так&nbsp;и&nbsp;тебя&nbsp;отблагодарит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мы&nbsp;—&nbsp;это&nbsp;ты,&nbsp;салага.&nbsp;Ровнею&nbsp;станешь&nbsp;нам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- Cm  G Dm5- Cm </span>
-<span class="txt"> Та&nbsp;же&nbsp;в&nbsp;тебе&nbsp;созреет&nbsp;тяга&nbsp;к&nbsp;самым&nbsp;глухим&nbsp;углам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- C Fm Ab7/F#  G </span>
+<span class="line"><span class="txt"> Мы&nbsp;—&nbsp;это&nbsp;ты,&nbsp;салага.&nbsp;Ровнею&nbsp;станешь&nbsp;нам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- Cm  G Dm5- Cm </span></span>
+<span class="line"><span class="txt"> Та&nbsp;же&nbsp;в&nbsp;тебе&nbsp;созреет&nbsp;тяга&nbsp;к&nbsp;самым&nbsp;глухим&nbsp;углам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- C Fm Ab7/F#  G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;нас-то&nbsp;она&nbsp;—&nbsp;от&nbsp;наших&nbsp;отцов.&nbsp;Тоже&nbsp;хотелось&nbsp;им&nbsp;леденцов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span>
-<span class="txt"> Брали,&nbsp;где&nbsp;можно,&nbsp;осторожно.&nbsp;А&nbsp;где&nbsp;нельзя&nbsp;—&nbsp;ломали&nbsp;засов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span>
-<span class="txt"> Знали&nbsp;—&nbsp;почём,&nbsp;не&nbsp;знали&nbsp;—&nbsp;зачем.&nbsp;Не&nbsp;было&nbsp;формул&nbsp;и&nbsp;теорем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span>
-<span class="txt"> Вникнуть&nbsp;пытались.&nbsp;Просчитались.&nbsp;Что&nbsp;от&nbsp;руки,&nbsp;что&nbsp;на&nbsp;ЭВМ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span>
+<span class="line"><span class="txt"> В&nbsp;нас-то&nbsp;она&nbsp;—&nbsp;от&nbsp;наших&nbsp;отцов.&nbsp;Тоже&nbsp;хотелось&nbsp;им&nbsp;леденцов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span></span>
+<span class="line"><span class="txt"> Брали,&nbsp;где&nbsp;можно,&nbsp;осторожно.&nbsp;А&nbsp;где&nbsp;нельзя&nbsp;—&nbsp;ломали&nbsp;засов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span></span>
+<span class="line"><span class="txt"> Знали&nbsp;—&nbsp;почём,&nbsp;не&nbsp;знали&nbsp;—&nbsp;зачем.&nbsp;Не&nbsp;было&nbsp;формул&nbsp;и&nbsp;теорем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span></span>
+<span class="line"><span class="txt"> Вникнуть&nbsp;пытались.&nbsp;Просчитались.&nbsp;Что&nbsp;от&nbsp;руки,&nbsp;что&nbsp;на&nbsp;ЭВМ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Гипотенуза,&nbsp;катет.&nbsp;Снова&nbsp;умножь,&nbsp;удвой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- Cm  G Dm5- Cm </span>
-<span class="txt"> Тоже&nbsp;к&nbsp;итогу&nbsp;счётчик&nbsp;спятит.&nbsp;Даже&nbsp;новейший&nbsp;твой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- C Fm Ab7/F#  G </span>
+<span class="line"><span class="txt"> Гипотенуза,&nbsp;катет.&nbsp;Снова&nbsp;умножь,&nbsp;удвой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- Cm  G Dm5- Cm </span></span>
+<span class="line"><span class="txt"> Тоже&nbsp;к&nbsp;итогу&nbsp;счётчик&nbsp;спятит.&nbsp;Даже&nbsp;новейший&nbsp;твой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- C Fm Ab7/F#  G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ты&nbsp;—&nbsp;это&nbsp;мы.&nbsp;В&nbsp;совсем&nbsp;не&nbsp;ином&nbsp;веке,&nbsp;на&nbsp;фото,&nbsp;на&nbsp;выпускном.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span>
-<span class="txt"> Тусклые&nbsp;лики,&nbsp;пятна,&nbsp;блики.&nbsp;Всё&nbsp;впереди,&nbsp;весна&nbsp;за&nbsp;окном.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span>
-<span class="txt"> В&nbsp;ухе&nbsp;серьга,&nbsp;на&nbsp;зубе&nbsp;скоба.&nbsp;Те&nbsp;же&nbsp;ужимки&nbsp;и&nbsp;худоба.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span>
-<span class="txt"> Тесно,&nbsp;свободно&nbsp;—&nbsp;лишь&nbsp;бы&nbsp;модно.&nbsp;Цены&nbsp;другие,&nbsp;та&nbsp;же&nbsp;судьба.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span>
+<span class="line"><span class="txt"> Ты&nbsp;—&nbsp;это&nbsp;мы.&nbsp;В&nbsp;совсем&nbsp;не&nbsp;ином&nbsp;веке,&nbsp;на&nbsp;фото,&nbsp;на&nbsp;выпускном.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span></span>
+<span class="line"><span class="txt"> Тусклые&nbsp;лики,&nbsp;пятна,&nbsp;блики.&nbsp;Всё&nbsp;впереди,&nbsp;весна&nbsp;за&nbsp;окном.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span></span>
+<span class="line"><span class="txt"> В&nbsp;ухе&nbsp;серьга,&nbsp;на&nbsp;зубе&nbsp;скоба.&nbsp;Те&nbsp;же&nbsp;ужимки&nbsp;и&nbsp;худоба.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  F G Cm </span></span>
+<span class="line"><span class="txt"> Тесно,&nbsp;свободно&nbsp;—&nbsp;лишь&nbsp;бы&nbsp;модно.&nbsp;Цены&nbsp;другие,&nbsp;та&nbsp;же&nbsp;судьба.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm Eb C#dim Eb/B Dm/A D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Глянув,&nbsp;поймёшь&nbsp;не&nbsp;тотчас&nbsp;—&nbsp;кто&nbsp;тут&nbsp;кому&nbsp;сыны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- Cm  G Dm5- Cm </span>
-<span class="txt"> Все&nbsp;без&nbsp;чинов,&nbsp;без&nbsp;прав,&nbsp;без&nbsp;отчеств.&nbsp;Голодны,&nbsp;неумны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- C Fm Ab7/F#  G  C </span>
-<span class="txt"> Молоды,&nbsp;зелены.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm G Cm  </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm G Cm </span>
- <br />
-
+<span class="line"><span class="txt"> Глянув,&nbsp;поймёшь&nbsp;не&nbsp;тотчас&nbsp;—&nbsp;кто&nbsp;тут&nbsp;кому&nbsp;сыны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- Cm  G Dm5- Cm </span></span>
+<span class="line"><span class="txt"> Все&nbsp;без&nbsp;чинов,&nbsp;без&nbsp;прав,&nbsp;без&nbsp;отчеств.&nbsp;Голодны,&nbsp;неумны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Dm5- C Fm Ab7/F#  G  C </span></span>
+<span class="line"><span class="txt"> Молоды,&nbsp;зелены.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm G Cm  </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm G Cm </span></span>
 </div>
-<pre>
-    <span class="year">2022</span>                                                             
-
+<pre><span class="year">2022</span>                                                             
 
 </pre>
+
 
                 </div>
         </div>

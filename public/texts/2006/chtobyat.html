@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -423,78 +431,74 @@ span.c {
 
                     <div class="song"
 data-key="Bm"><span class="txt"> Чтоб&nbsp;я&nbsp;так&nbsp;жил... </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Чтоб&nbsp;я&nbsp;так&nbsp;жил.&nbsp;Письменность&nbsp;ни&nbsp;к&nbsp;чему,&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 Cm </span>
-<span class="txt"> корифеи&nbsp;слога&nbsp;сплошь&nbsp;самозванцы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Шекспир&nbsp;мираж.&nbsp;Пушкин&nbsp;негр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 Cm Gm </span>
-<span class="txt"> С&nbsp;пелёнок&nbsp;буквы&nbsp;вели&nbsp;меня,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm C# </span>
-<span class="txt"> хотя&nbsp;и&nbsp;прямо,&nbsp;но&nbsp;мимо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F </span>
+<span class="line"><span class="txt"> Чтоб&nbsp;я&nbsp;так&nbsp;жил.&nbsp;Письменность&nbsp;ни&nbsp;к&nbsp;чему,&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 Cm </span></span>
+<span class="line"><span class="txt"> корифеи&nbsp;слога&nbsp;сплошь&nbsp;самозванцы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Шекспир&nbsp;мираж.&nbsp;Пушкин&nbsp;негр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 Cm Gm </span></span>
+<span class="line"><span class="txt"> С&nbsp;пелёнок&nbsp;буквы&nbsp;вели&nbsp;меня,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm C# </span></span>
+<span class="line"><span class="txt"> хотя&nbsp;и&nbsp;прямо,&nbsp;но&nbsp;мимо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мама,&nbsp;отучи&nbsp;ребенка&nbsp;плакать,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Gm </span>
-<span class="txt"> ударяясь&nbsp;о&nbsp;дорогу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm </span>
-<span class="txt"> а&nbsp;потом&nbsp;уже,&nbsp;конечно,&nbsp;покупай&nbsp;велосипед&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Gm </span>
-<span class="txt"> на&nbsp;именины&nbsp;в&nbsp;сорок&nbsp;лет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Bm </span>
+<span class="line"><span class="txt"> Мама,&nbsp;отучи&nbsp;ребенка&nbsp;плакать,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Gm </span></span>
+<span class="line"><span class="txt"> ударяясь&nbsp;о&nbsp;дорогу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm </span></span>
+<span class="line"><span class="txt"> а&nbsp;потом&nbsp;уже,&nbsp;конечно,&nbsp;покупай&nbsp;велосипед&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Gm </span></span>
+<span class="line"><span class="txt"> на&nbsp;именины&nbsp;в&nbsp;сорок&nbsp;лет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Bm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Во&nbsp;сне&nbsp;всю&nbsp;ночь&nbsp;видел&nbsp;деньги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 Cm Gm </span>
-<span class="txt"> Протёр&nbsp;глаза.&nbsp;Глянул&nbsp;-&nbsp;нету.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 Cm Gm </span>
-<span class="txt"> Опять&nbsp;под&nbsp;музыку&nbsp;спал&nbsp;не&nbsp;ту.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm C# </span>
-<span class="txt"> Поосторожней.&nbsp;Не&nbsp;мальчик.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F </span>
+<span class="line"><span class="txt"> Во&nbsp;сне&nbsp;всю&nbsp;ночь&nbsp;видел&nbsp;деньги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 Cm Gm </span></span>
+<span class="line"><span class="txt"> Протёр&nbsp;глаза.&nbsp;Глянул&nbsp;-&nbsp;нету.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 Cm Gm </span></span>
+<span class="line"><span class="txt"> Опять&nbsp;под&nbsp;музыку&nbsp;спал&nbsp;не&nbsp;ту.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm C# </span></span>
+<span class="line"><span class="txt"> Поосторожней.&nbsp;Не&nbsp;мальчик.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мама,&nbsp;научи&nbsp;ребенка&nbsp;плавать&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Gm </span>
-<span class="txt"> или,&nbsp;что&nbsp;ли,&nbsp;не&nbsp;дышать,&nbsp;пока&nbsp;не&nbsp;надо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm   </span>
-<span class="txt"> а&nbsp;потом&nbsp;уже&nbsp;расстёгивай&nbsp;карман&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Gm  </span>
-<span class="txt"> и&nbsp;покупай&nbsp;катамаран.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Bm  </span>
+<span class="line"><span class="txt"> Мама,&nbsp;научи&nbsp;ребенка&nbsp;плавать&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Gm </span></span>
+<span class="line"><span class="txt"> или,&nbsp;что&nbsp;ли,&nbsp;не&nbsp;дышать,&nbsp;пока&nbsp;не&nbsp;надо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm   </span></span>
+<span class="line"><span class="txt"> а&nbsp;потом&nbsp;уже&nbsp;расстёгивай&nbsp;карман&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Gm  </span></span>
+<span class="line"><span class="txt"> и&nbsp;покупай&nbsp;катамаран.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Bm  </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;саду&nbsp;черешня,&nbsp;в&nbsp;роду&nbsp;родня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 </span>
-<span class="txt"> Космос&nbsp;в&nbsp;придачу&nbsp;к&nbsp;метрике&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> от&nbsp;забора&nbsp;и&nbsp;вон&nbsp;дотуда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Того&nbsp;желали&nbsp;вы&nbsp;или&nbsp;как,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 </span>
-<span class="txt"> вас,&nbsp;дорогие&nbsp;дети,&nbsp;никто&nbsp;не&nbsp;спросит&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm </span>
+<span class="line"><span class="txt"> В&nbsp;саду&nbsp;черешня,&nbsp;в&nbsp;роду&nbsp;родня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 </span></span>
+<span class="line"><span class="txt"> Космос&nbsp;в&nbsp;придачу&nbsp;к&nbsp;метрике&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> от&nbsp;забора&nbsp;и&nbsp;вон&nbsp;дотуда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Того&nbsp;желали&nbsp;вы&nbsp;или&nbsp;как,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 </span></span>
+<span class="line"><span class="txt"> вас,&nbsp;дорогие&nbsp;дети,&nbsp;никто&nbsp;не&nbsp;спросит&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm </span></span>
 <span class="txt"> ни&nbsp;до,&nbsp;ни&nbsp;позже. </span>
-<span class="txt"> Не&nbsp;любишь&nbsp;двигаться&nbsp;-&nbsp;не&nbsp;люби.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm C# </span>
-<span class="txt"> Ложись&nbsp;и&nbsp;думай.&nbsp;-&nbsp;Не&nbsp;лягу!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F </span>
+<span class="line"><span class="txt"> Не&nbsp;любишь&nbsp;двигаться&nbsp;-&nbsp;не&nbsp;люби.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm C# </span></span>
+<span class="line"><span class="txt"> Ложись&nbsp;и&nbsp;думай.&nbsp;-&nbsp;Не&nbsp;лягу!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Что&nbsp;бы&nbsp;я&nbsp;ни&nbsp;выдумал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span>
-<span class="txt"> чего&nbsp;бы&nbsp;ни&nbsp;надумал&nbsp;я,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  </span>
-<span class="txt"> а&nbsp;денег&nbsp;не&nbsp;прибудет&nbsp;у&nbsp;меня,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F  </span>
-<span class="txt"> определённо,&nbsp;никогда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  </span>
-<span class="txt"> а&nbsp;вот&nbsp;убудет,&nbsp;это&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Bm </span>
+<span class="line"><span class="txt"> Что&nbsp;бы&nbsp;я&nbsp;ни&nbsp;выдумал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span></span>
+<span class="line"><span class="txt"> чего&nbsp;бы&nbsp;ни&nbsp;надумал&nbsp;я,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  </span></span>
+<span class="line"><span class="txt"> а&nbsp;денег&nbsp;не&nbsp;прибудет&nbsp;у&nbsp;меня,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F  </span></span>
+<span class="line"><span class="txt"> определённо,&nbsp;никогда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  </span></span>
+<span class="line"><span class="txt"> а&nbsp;вот&nbsp;убудет,&nbsp;это&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Bm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всё&nbsp;зло&nbsp;от&nbsp;музыки,&nbsp;всё&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7  </span>
-<span class="txt"> Знал&nbsp;бы,&nbsp;что&nbsp;в&nbsp;ней&nbsp;отрава,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     </span>
-<span class="txt"> давно&nbsp;оглох&nbsp;бы&nbsp;на&nbsp;оба&nbsp;уха.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm     </span>
-<span class="txt"> Порой,&nbsp;задумавшись,&nbsp;подпоёшь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 </span>
-<span class="txt"> После&nbsp;сидишь&nbsp;неделю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   </span>
-<span class="txt"> полощешь&nbsp;горло,&nbsp;обняв&nbsp;черешню.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       </span>
-<span class="txt"> На&nbsp;днях&nbsp;игрушечный&nbsp;взял&nbsp;пугач,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm C#  </span>
-<span class="txt"> приставил&nbsp;к&nbsp;сердцу&nbsp;и&nbsp;щёлкнул.&nbsp;Мимо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F  </span>
+<span class="line"><span class="txt"> Всё&nbsp;зло&nbsp;от&nbsp;музыки,&nbsp;всё&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7  </span></span>
+<span class="line"><span class="txt"> Знал&nbsp;бы,&nbsp;что&nbsp;в&nbsp;ней&nbsp;отрава,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     </span></span>
+<span class="line"><span class="txt"> давно&nbsp;оглох&nbsp;бы&nbsp;на&nbsp;оба&nbsp;уха.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm     </span></span>
+<span class="line"><span class="txt"> Порой,&nbsp;задумавшись,&nbsp;подпоёшь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Eb7 </span></span>
+<span class="line"><span class="txt"> После&nbsp;сидишь&nbsp;неделю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   </span></span>
+<span class="line"><span class="txt"> полощешь&nbsp;горло,&nbsp;обняв&nbsp;черешню.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       </span></span>
+<span class="line"><span class="txt"> На&nbsp;днях&nbsp;игрушечный&nbsp;взял&nbsp;пугач,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm C#  </span></span>
+<span class="line"><span class="txt"> приставил&nbsp;к&nbsp;сердцу&nbsp;и&nbsp;щёлкнул.&nbsp;Мимо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F  </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мама,&nbsp;ты&nbsp;как&nbsp;хочешь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span>
-<span class="txt"> а&nbsp;ребенка&nbsp;не&nbsp;научишь&nbsp;ты&nbsp;летать,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Ebm </span>
-<span class="txt"> бери&nbsp;последнее&nbsp;со&nbsp;счёта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
-<span class="txt"> и&nbsp;как&nbsp;хочешь&nbsp;поступай,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> но&nbsp;самолёт&nbsp;не&nbsp;покупай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Bm </span>
+<span class="line"><span class="txt"> Мама,&nbsp;ты&nbsp;как&nbsp;хочешь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span></span>
+<span class="line"><span class="txt"> а&nbsp;ребенка&nbsp;не&nbsp;научишь&nbsp;ты&nbsp;летать,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Ebm </span></span>
+<span class="line"><span class="txt"> бери&nbsp;последнее&nbsp;со&nbsp;счёта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
+<span class="line"><span class="txt"> и&nbsp;как&nbsp;хочешь&nbsp;поступай,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> но&nbsp;самолёт&nbsp;не&nbsp;покупай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Bm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2006</span>                                      Gm Bm Gm
-
+<pre><span class="year">2006</span>                                      Gm Bm Gm
 
 
 </pre>
+
 
                 </div>
         </div>

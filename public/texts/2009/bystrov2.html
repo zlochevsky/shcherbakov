@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -427,14 +435,14 @@ data-key="C#m"><span class="txt"> Быстров&nbsp;2 </span>
  <br />
 <span class="txt">  </span>
  <br />
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;, </span>
-<span class="txt"> В&nbsp;апреле,&nbsp;да,&nbsp;но&nbsp;был&nbsp;этот&nbsp;весь&nbsp;сыр-бор&nbsp;не&nbsp;первого,&nbsp;а&nbsp;второго.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m    A C# F#m </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;, </span>
-<span class="txt"> И&nbsp;прямо&nbsp;сидел&nbsp;кассир&nbsp;и&nbsp;глядел&nbsp;в&nbsp;упор,&nbsp;но&nbsp;он&nbsp;не&nbsp;узнал&nbsp;Быстрова.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m      G# C#m </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;, </span>
-<span class="txt"> Узнаешь&nbsp;тут,&nbsp;когда&nbsp;в&nbsp;потолок&nbsp;палят,&nbsp;пугают&nbsp;огнём&nbsp;и&nbsp;дымом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  C#m D C# F#m </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;, </span>
-<span class="txt"> и&nbsp;в&nbsp;пятнах&nbsp;на&nbsp;злоумышленнике&nbsp;бушлат,&nbsp;и&nbsp;шапка-ушанка&nbsp;дыбом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m  A7 C#m </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;, </span>
+<span class="line"><span class="txt"> В&nbsp;апреле,&nbsp;да,&nbsp;но&nbsp;был&nbsp;этот&nbsp;весь&nbsp;сыр-бор&nbsp;не&nbsp;первого,&nbsp;а&nbsp;второго.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m    A C# F#m </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;, </span>
+<span class="line"><span class="txt"> И&nbsp;прямо&nbsp;сидел&nbsp;кассир&nbsp;и&nbsp;глядел&nbsp;в&nbsp;упор,&nbsp;но&nbsp;он&nbsp;не&nbsp;узнал&nbsp;Быстрова.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m      G# C#m </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;, </span>
+<span class="line"><span class="txt"> Узнаешь&nbsp;тут,&nbsp;когда&nbsp;в&nbsp;потолок&nbsp;палят,&nbsp;пугают&nbsp;огнём&nbsp;и&nbsp;дымом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  C#m D C# F#m </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;, </span>
+<span class="line"><span class="txt"> и&nbsp;в&nbsp;пятнах&nbsp;на&nbsp;злоумышленнике&nbsp;бушлат,&nbsp;и&nbsp;шапка-ушанка&nbsp;дыбом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m  A7 C#m </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
@@ -453,7 +461,7 @@ data-key="C#m"><span class="txt"> Быстров&nbsp;2 </span>
  <br />
 <span class="txt"> Неясно,&nbsp;как&nbsp;в&nbsp;итоге&nbsp;взбрело&nbsp;ему&nbsp;(такому&nbsp;теперь&nbsp;иному) </span>
 <span class="txt"> свернуть,&nbsp;пусть&nbsp;не&nbsp;к&nbsp;реке,&nbsp;но&nbsp;некоему,&nbsp;действительно,&nbsp;водоёму. </span>
-<span class="txt"> Плохой&nbsp;свидетель&nbsp;&mdash;&nbsp;лодочник-инвалид,&nbsp;под&nbsp;сорок,&nbsp;уже&nbsp;в&nbsp;маразме </span><span class="ch"> , </span>
+<span class="line"><span class="txt"> Плохой&nbsp;свидетель&nbsp;&mdash;&nbsp;лодочник-инвалид,&nbsp;под&nbsp;сорок,&nbsp;уже&nbsp;в&nbsp;маразме </span><span class="ch"> , </span></span>
 <span class="txt"> Ни&nbsp;на&nbsp;одном&nbsp;наречии&nbsp;не&nbsp;говорит,&nbsp;по-португальски&nbsp;разве. </span>
 <span class="txt">  </span>
  <br />
@@ -463,16 +471,13 @@ data-key="C#m"><span class="txt"> Быстров&nbsp;2 </span>
 <span class="txt"> нашли&nbsp;тот&nbsp;самый,&nbsp;кажется,&nbsp;водоём.&nbsp;Или&nbsp;такой&nbsp;же&nbsp;точно. </span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2009</span>                                                               Нотировка приблизительная,
+<pre><span class="year">2009</span>                                                               Нотировка приблизительная,
                                                                    по исполнению <span class="year">2010</span> г. (диск
                                                                    <a href="../../Disks/chmuzyka1.html">&#171;Чужая музыка и не только</a>. Часть 1&#187;).
 
-
 </pre>
+
 
                 </div>
         </div>

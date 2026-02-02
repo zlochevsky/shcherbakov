@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,100 +423,98 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">МАДЛЕН</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F#m&nbsp;(обыгрывается </span><span class="ch"> ) </span>
-<span class="txt"> О,&nbsp;блаженное&nbsp;время!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A </span>
-<span class="txt"> В&nbsp;городах&nbsp;почти&nbsp;повсеместно&nbsp;глянец.&nbsp;И&nbsp;зеркала.&nbsp;&nbsp;&nbsp; </span><span class="ch">        A D F#m </span>
-<span class="txt"> Чрезвычайно&nbsp;удобно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A </span>
-<span class="txt"> Чтобы&nbsp;вспомнить&nbsp;возраст,&nbsp;не&nbsp;нужен&nbsp;паспорт.&nbsp;Видно&nbsp; </span><span class="ch"> и так. A D F#m </span>
+data-key="Hm"><h1>МАДЛЕН</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F#m&nbsp;(обыгрывается </span><span class="ch"> ) </span></span>
+<span class="line"><span class="txt"> О,&nbsp;блаженное&nbsp;время!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A </span></span>
+<span class="line"><span class="txt"> В&nbsp;городах&nbsp;почти&nbsp;повсеместно&nbsp;глянец.&nbsp;И&nbsp;зеркала.&nbsp;&nbsp;&nbsp; </span><span class="ch">        A D F#m </span></span>
+<span class="line"><span class="txt"> Чрезвычайно&nbsp;удобно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A </span></span>
+<span class="line"><span class="txt"> Чтобы&nbsp;вспомнить&nbsp;возраст,&nbsp;не&nbsp;нужен&nbsp;паспорт.&nbsp;Видно&nbsp; </span><span class="ch"> и так. A D F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Прошло&nbsp;отнимавшее&nbsp;весь&nbsp;досуг&nbsp;недовольство&nbsp;чем-то. </span><span class="ch">        Hm D E7/g# D E </span>
-<span class="txt"> Даже&nbsp;собой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        F#m </span>
-<span class="txt"> Прошла&nbsp;нужда&nbsp;от&nbsp;каких-то&nbsp;зависеть&nbsp;мнений,&nbsp;даже&nbsp;св </span><span class="ch"> оих.   Hm G E7/g# F#m </span>
+<span class="line"><span class="txt"> Прошло&nbsp;отнимавшее&nbsp;весь&nbsp;досуг&nbsp;недовольство&nbsp;чем-то. </span><span class="ch">        Hm D E7/g# D E </span></span>
+<span class="line"><span class="txt"> Даже&nbsp;собой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        F#m </span></span>
+<span class="line"><span class="txt"> Прошла&nbsp;нужда&nbsp;от&nbsp;каких-то&nbsp;зависеть&nbsp;мнений,&nbsp;даже&nbsp;св </span><span class="ch"> оих.   Hm G E7/g# F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Завтра&nbsp;съем&nbsp;все&nbsp;конфеты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A </span>
-<span class="txt"> и&nbsp;за&nbsp;это&nbsp;мне&nbsp;ничего&nbsp;не&nbsp;будет.&nbsp;Ни&nbsp;от&nbsp;кого.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A D F#m </span>
-<span class="txt"> Мимо&nbsp;-&nbsp;вдвое&nbsp;моложе&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A </span>
-<span class="txt"> беднота&nbsp;снуёт,&nbsp;подаянья&nbsp;просит.&nbsp;Я&nbsp;подаю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A D F#m </span>
+<span class="line"><span class="txt"> Завтра&nbsp;съем&nbsp;все&nbsp;конфеты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A </span></span>
+<span class="line"><span class="txt"> и&nbsp;за&nbsp;это&nbsp;мне&nbsp;ничего&nbsp;не&nbsp;будет.&nbsp;Ни&nbsp;от&nbsp;кого.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A D F#m </span></span>
+<span class="line"><span class="txt"> Мимо&nbsp;-&nbsp;вдвое&nbsp;моложе&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A </span></span>
+<span class="line"><span class="txt"> беднота&nbsp;снуёт,&nbsp;подаянья&nbsp;просит.&nbsp;Я&nbsp;подаю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        A D F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мадлен&nbsp;-&nbsp;называлась&nbsp;в&nbsp;Париже&nbsp;церковь.&nbsp;Так&nbsp;же&nbsp;и&nbsp;пл </span><span class="ch"> ощадь. Hm D E7/g# D E </span>
-<span class="txt"> Кажется,&nbsp;там&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        F#m </span>
-<span class="txt"> когда-то&nbsp;я&nbsp;подавал&nbsp;неимущим&nbsp;тоже,&nbsp;кажется,&nbsp;зря.&nbsp;&nbsp; </span><span class="ch">        Hm G E7/g# F#m </span>
+<span class="line"><span class="txt"> Мадлен&nbsp;-&nbsp;называлась&nbsp;в&nbsp;Париже&nbsp;церковь.&nbsp;Так&nbsp;же&nbsp;и&nbsp;пл </span><span class="ch"> ощадь. Hm D E7/g# D E </span></span>
+<span class="line"><span class="txt"> Кажется,&nbsp;там&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        F#m </span></span>
+<span class="line"><span class="txt"> когда-то&nbsp;я&nbsp;подавал&nbsp;неимущим&nbsp;тоже,&nbsp;кажется,&nbsp;зря.&nbsp;&nbsp; </span><span class="ch">        Hm G E7/g# F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Прошло,&nbsp;миновало&nbsp;навек&nbsp;былое.&nbsp;Нельзя&nbsp;улучшить,&nbsp;&nbsp;&nbsp; </span><span class="ch">           Hm E7 D </span>
-<span class="txt"> способов&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           F#m </span>
-<span class="txt"> Хотя&nbsp;-&nbsp;как&nbsp;знать?&nbsp;Если&nbsp;завтра&nbsp;откроют&nbsp;способ,&nbsp;не&nbsp; </span><span class="ch"> удивлюсь. G E7/g# F#m </span>
+<span class="line"><span class="txt"> Прошло,&nbsp;миновало&nbsp;навек&nbsp;былое.&nbsp;Нельзя&nbsp;улучшить,&nbsp;&nbsp;&nbsp; </span><span class="ch">           Hm E7 D </span></span>
+<span class="line"><span class="txt"> способов&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           F#m </span></span>
+<span class="line"><span class="txt"> Хотя&nbsp;-&nbsp;как&nbsp;знать?&nbsp;Если&nbsp;завтра&nbsp;откроют&nbsp;способ,&nbsp;не&nbsp; </span><span class="ch"> удивлюсь. G E7/g# F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Скажут:&nbsp;можно&nbsp;вернуться.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span>
-<span class="txt"> Набело&nbsp;преуспеть,&nbsp;избежав&nbsp;ошибок.&nbsp;Даже&nbsp;своих.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A D F#m </span>
-<span class="txt"> Личный&nbsp;статус&nbsp;повысить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span>
-<span class="txt"> Тоже,&nbsp;конечно,&nbsp;свой&nbsp;-&nbsp;не&nbsp;касаясь&nbsp;общих&nbsp;правил&nbsp;игр </span><span class="ch"> ы.        A D F#m </span>
+<span class="line"><span class="txt"> Скажут:&nbsp;можно&nbsp;вернуться.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span></span>
+<span class="line"><span class="txt"> Набело&nbsp;преуспеть,&nbsp;избежав&nbsp;ошибок.&nbsp;Даже&nbsp;своих.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A D F#m </span></span>
+<span class="line"><span class="txt"> Личный&nbsp;статус&nbsp;повысить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span></span>
+<span class="line"><span class="txt"> Тоже,&nbsp;конечно,&nbsp;свой&nbsp;-&nbsp;не&nbsp;касаясь&nbsp;общих&nbsp;правил&nbsp;игр </span><span class="ch"> ы.        A D F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Игра&nbsp;состоит&nbsp;в&nbsp;истребленье&nbsp;всеми&nbsp;всех&nbsp;вкруговую.&nbsp; </span><span class="ch">           Hm D E7/g# D E </span>
-<span class="txt"> Всюду,&nbsp;всегда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           F#m </span>
-<span class="txt"> За&nbsp;кругом&nbsp;круг&nbsp;-&nbsp;в&nbsp;чемпионы&nbsp;выходит&nbsp;тот,&nbsp;кто&nbsp;боль </span><span class="ch"> ше убил.  Hm G E7/g# F#m </span>
+<span class="line"><span class="txt"> Игра&nbsp;состоит&nbsp;в&nbsp;истребленье&nbsp;всеми&nbsp;всех&nbsp;вкруговую.&nbsp; </span><span class="ch">           Hm D E7/g# D E </span></span>
+<span class="line"><span class="txt"> Всюду,&nbsp;всегда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           F#m </span></span>
+<span class="line"><span class="txt"> За&nbsp;кругом&nbsp;круг&nbsp;-&nbsp;в&nbsp;чемпионы&nbsp;выходит&nbsp;тот,&nbsp;кто&nbsp;боль </span><span class="ch"> ше убил.  Hm G E7/g# F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Возводит&nbsp;он&nbsp;в&nbsp;честь&nbsp;победы,&nbsp;конечно,&nbsp;церковь.&nbsp;Даж </span><span class="ch"> е Мадлен. G Gm Dm </span>
-<span class="txt"> Где&nbsp;-&nbsp;кажется,&nbsp;зря&nbsp;-&nbsp;мы&nbsp;платим&nbsp;его&nbsp;потомкам,&nbsp;голо </span><span class="ch"> дным      E G E7/g# </span>
-<span class="txt"> и&nbsp;молодым.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span>
+<span class="line"><span class="txt"> Возводит&nbsp;он&nbsp;в&nbsp;честь&nbsp;победы,&nbsp;конечно,&nbsp;церковь.&nbsp;Даж </span><span class="ch"> е Мадлен. G Gm Dm </span></span>
+<span class="line"><span class="txt"> Где&nbsp;-&nbsp;кажется,&nbsp;зря&nbsp;-&nbsp;мы&nbsp;платим&nbsp;его&nbsp;потомкам,&nbsp;голо </span><span class="ch"> дным      E G E7/g# </span></span>
+<span class="line"><span class="txt"> и&nbsp;молодым.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> a&nbsp;a#&nbsp;Hm </span>
 <span class="txt"> e&nbsp;f&nbsp;F#m </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Чрезвычайно&nbsp;удобно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span>
-<span class="txt"> Не&nbsp;вдали&nbsp;противник,&nbsp;а&nbsp;твой&nbsp;же&nbsp;ближний.&nbsp;Мы&nbsp;против&nbsp; </span><span class="ch"> нас.      A D F#m </span>
-<span class="txt"> Завтра&nbsp;способ&nbsp;отыщут:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span>
-<span class="txt"> улетай&nbsp;в&nbsp;былое,&nbsp;меняй&nbsp;что&nbsp;хочешь.&nbsp;Не&nbsp;полечу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A D F#m </span>
+<span class="line"><span class="txt"> Чрезвычайно&nbsp;удобно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span></span>
+<span class="line"><span class="txt"> Не&nbsp;вдали&nbsp;противник,&nbsp;а&nbsp;твой&nbsp;же&nbsp;ближний.&nbsp;Мы&nbsp;против&nbsp; </span><span class="ch"> нас.      A D F#m </span></span>
+<span class="line"><span class="txt"> Завтра&nbsp;способ&nbsp;отыщут:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span></span>
+<span class="line"><span class="txt"> улетай&nbsp;в&nbsp;былое,&nbsp;меняй&nbsp;что&nbsp;хочешь.&nbsp;Не&nbsp;полечу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A D F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Стократ&nbsp;отражался&nbsp;уже&nbsp;я&nbsp;в&nbsp;реках,&nbsp;множился&nbsp;в&nbsp;глянц </span><span class="ch"> е         Hm D E7/g# D E </span>
-<span class="txt"> и&nbsp;зеркалах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           F#m </span>
-<span class="txt"> За&nbsp;кругом&nbsp;круг&nbsp;-&nbsp;повторял&nbsp;всякий&nbsp;раз&nbsp;ошибки,&nbsp;все&nbsp; </span><span class="ch"> до одной. Hm G E7/g# F#m </span>
+<span class="line"><span class="txt"> Стократ&nbsp;отражался&nbsp;уже&nbsp;я&nbsp;в&nbsp;реках,&nbsp;множился&nbsp;в&nbsp;глянц </span><span class="ch"> е         Hm D E7/g# D E </span></span>
+<span class="line"><span class="txt"> и&nbsp;зеркалах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           F#m </span></span>
+<span class="line"><span class="txt"> За&nbsp;кругом&nbsp;круг&nbsp;-&nbsp;повторял&nbsp;всякий&nbsp;раз&nbsp;ошибки,&nbsp;все&nbsp; </span><span class="ch"> до одной. Hm G E7/g# F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Точь-в-точь&nbsp;-&nbsp;в&nbsp;музыкальной&nbsp;когда-то&nbsp;школе&nbsp;была&nbsp;п </span><span class="ch"> овинность, чтенье с листа. Hm E7 D F#m </span>
-<span class="txt"> Мелодия&nbsp;рядовая,&nbsp;зато&nbsp;повторов&nbsp;хоть&nbsp;отбавляй.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                            Hm G E7/g# F#m </span>
+<span class="line"><span class="txt"> Точь-в-точь&nbsp;-&nbsp;в&nbsp;музыкальной&nbsp;когда-то&nbsp;школе&nbsp;была&nbsp;п </span><span class="ch"> овинность, чтенье с листа. Hm E7 D F#m </span></span>
+<span class="line"><span class="txt"> Мелодия&nbsp;рядовая,&nbsp;зато&nbsp;повторов&nbsp;хоть&nbsp;отбавляй.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                            Hm G E7/g# F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Снова&nbsp;вдвое&nbsp;моложе?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span>
-<span class="txt"> Значит,&nbsp;опять&nbsp;Мадлен&nbsp;и&nbsp;потомки&nbsp;те&nbsp;же?&nbsp;Нет,&nbsp;не&nbsp;хоч </span><span class="ch"> у.        A D F#m </span>
-<span class="txt"> Неспроста&nbsp;повторялся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span>
-<span class="txt"> В&nbsp;том&nbsp;числе&nbsp;-&nbsp;повидал&nbsp;настоящих&nbsp;нищих.&nbsp;Подал,&nbsp;что </span><span class="ch">  мог.     A D F#m </span>
+<span class="line"><span class="txt"> Снова&nbsp;вдвое&nbsp;моложе?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span></span>
+<span class="line"><span class="txt"> Значит,&nbsp;опять&nbsp;Мадлен&nbsp;и&nbsp;потомки&nbsp;те&nbsp;же?&nbsp;Нет,&nbsp;не&nbsp;хоч </span><span class="ch"> у.        A D F#m </span></span>
+<span class="line"><span class="txt"> Неспроста&nbsp;повторялся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span></span>
+<span class="line"><span class="txt"> В&nbsp;том&nbsp;числе&nbsp;-&nbsp;повидал&nbsp;настоящих&nbsp;нищих.&nbsp;Подал,&nbsp;что </span><span class="ch">  мог.     A D F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Отвык&nbsp;вопрошать,&nbsp;почему&nbsp;так&nbsp;страстно&nbsp;мы&nbsp;убиваем&nbsp;&nbsp; </span><span class="ch">           Hm D E7/g# D E </span>
-<span class="txt"> сами&nbsp;себя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           F#m </span>
-<span class="txt"> как&nbsp;будто&nbsp;нам&nbsp;до&nbsp;сих&nbsp;пор&nbsp;интересно&nbsp;-&nbsp;кто&nbsp;кого&nbsp;поб </span><span class="ch"> едит.     Hm G E7/g# F#m </span>
+<span class="line"><span class="txt"> Отвык&nbsp;вопрошать,&nbsp;почему&nbsp;так&nbsp;страстно&nbsp;мы&nbsp;убиваем&nbsp;&nbsp; </span><span class="ch">           Hm D E7/g# D E </span></span>
+<span class="line"><span class="txt"> сами&nbsp;себя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           F#m </span></span>
+<span class="line"><span class="txt"> как&nbsp;будто&nbsp;нам&nbsp;до&nbsp;сих&nbsp;пор&nbsp;интересно&nbsp;-&nbsp;кто&nbsp;кого&nbsp;поб </span><span class="ch"> едит.     Hm G E7/g# F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Почти&nbsp;успел&nbsp;доиграть&nbsp;кое-как&nbsp;и&nbsp;бросить&nbsp;ноты&nbsp;в&nbsp;ого </span><span class="ch"> нь.       G Gm Dm </span>
-<span class="txt"> Не&nbsp;ждал,&nbsp;не&nbsp;гадал,&nbsp;что&nbsp;в&nbsp;самом&nbsp;конце&nbsp;реприза&nbsp;опят </span><span class="ch"> ь,        E G E7/g# </span>
-<span class="txt"> опять&nbsp;не&nbsp;финал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span>
+<span class="line"><span class="txt"> Почти&nbsp;успел&nbsp;доиграть&nbsp;кое-как&nbsp;и&nbsp;бросить&nbsp;ноты&nbsp;в&nbsp;ого </span><span class="ch"> нь.       G Gm Dm </span></span>
+<span class="line"><span class="txt"> Не&nbsp;ждал,&nbsp;не&nbsp;гадал,&nbsp;что&nbsp;в&nbsp;самом&nbsp;конце&nbsp;реприза&nbsp;опят </span><span class="ch"> ь,        E G E7/g# </span></span>
+<span class="line"><span class="txt"> опять&nbsp;не&nbsp;финал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           A </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> a&nbsp;a#&nbsp;Hm </span>
-
 </div>
-<pre>
-    e f F#m
-
+<pre>e f F#m
 </pre>
+
 
                 </div>
         </div>

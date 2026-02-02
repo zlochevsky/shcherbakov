@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,32 +423,32 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">КИНЕМАТОГРАФ 2</span>
+data-key="Hm"><h1>КИНЕМАТОГРАФ 2</h1>
 <span class="txt">  </span>
  <br />
 <span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> Если&nbsp;эта&nbsp;светотень&nbsp;по&nbsp;жанру&nbsp;и&nbsp;не&nbsp;Мона&nbsp;Лиза&nbsp;Джиоконда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H6 Em </span>
-<span class="txt"> , </span>
-<span class="txt"> пусть.&nbsp;Зато&nbsp;она&nbsp;твоя,&nbsp;пигмей,&nbsp;она&nbsp;для&nbsp;всех,&nbsp;не&nbsp;только&nbsp;для&nbsp;бомонда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    H6 </span>
-<span class="txt"> , </span>
-<span class="txt"> Даром,&nbsp;что&nbsp;ли,&nbsp;вместе&nbsp;с&nbsp;залом,&nbsp;путающим&nbsp;-&nbsp;в&nbsp;кадре&nbsp;он&nbsp;или&nbsp;за&nbsp;кадром,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em </span>
-<span class="txt"> , </span>
-<span class="txt"> ты&nbsp;при&nbsp;нежной&nbsp;сцене&nbsp;веки&nbsp;трёшь,&nbsp;а&nbsp;при&nbsp;батальной&nbsp;кланяешься&nbsp;ядрам?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    H6 </span>
+<span class="line"><span class="txt"> Если&nbsp;эта&nbsp;светотень&nbsp;по&nbsp;жанру&nbsp;и&nbsp;не&nbsp;Мона&nbsp;Лиза&nbsp;Джиоконда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H6 Em </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> пусть.&nbsp;Зато&nbsp;она&nbsp;твоя,&nbsp;пигмей,&nbsp;она&nbsp;для&nbsp;всех,&nbsp;не&nbsp;только&nbsp;для&nbsp;бомонда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    H6 </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> Даром,&nbsp;что&nbsp;ли,&nbsp;вместе&nbsp;с&nbsp;залом,&nbsp;путающим&nbsp;-&nbsp;в&nbsp;кадре&nbsp;он&nbsp;или&nbsp;за&nbsp;кадром,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> ты&nbsp;при&nbsp;нежной&nbsp;сцене&nbsp;веки&nbsp;трёшь,&nbsp;а&nbsp;при&nbsp;батальной&nbsp;кланяешься&nbsp;ядрам?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    H6 </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
  <br />
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> Карлик!&nbsp;Хватит&nbsp;уже&nbsp;моргать,&nbsp;найди&nbsp;себе&nbsp;героя&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C#m6  F#m </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> и&nbsp;выдавай&nbsp;за&nbsp;него&nbsp;себя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6  F# </span>
+<span class="txt"> &nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> Карлик!&nbsp;Хватит&nbsp;уже&nbsp;моргать,&nbsp;найди&nbsp;себе&nbsp;героя&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C#m6  F#m </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> и&nbsp;выдавай&nbsp;за&nbsp;него&nbsp;себя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6  F# </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
@@ -465,19 +473,19 @@ data-key="Hm"><span class="sng-title">КИНЕМАТОГРАФ 2</span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Львица!&nbsp;Хватит&nbsp;уже&nbsp;мелькать,&nbsp;найди&nbsp;себе&nbsp;героя. </span>
-<span class="txt"> К&nbsp;тому&nbsp;же,&nbsp;вроде&nbsp;бы,&nbsp;вот&nbsp;и&nbsp;он.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 A7       -- Dm </span>
+<span class="line"><span class="txt"> К&nbsp;тому&nbsp;же,&nbsp;вроде&nbsp;бы,&nbsp;вот&nbsp;и&nbsp;он.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 A7       -- Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Крупный&nbsp;план,&nbsp;ряды&nbsp;немеют,&nbsp;в&nbsp;музыке&nbsp;само&nbsp;собой&nbsp;diminuendo.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm </span>
-<span class="txt"> Шутка&nbsp;ли,&nbsp;живой&nbsp;кумир,&nbsp;ещё-ещё&nbsp;не&nbsp;мёртв,&nbsp;уже-уже&nbsp;легенда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> Нечто&nbsp;в&nbsp;нём&nbsp;не&nbsp;то&nbsp;от&nbsp;лорда&nbsp;Байрона,&nbsp;не&nbsp;то&nbsp;от&nbsp;короля&nbsp;Георга.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm </span>
-<span class="txt"> Школьница&nbsp;-&nbsp;ряду&nbsp;в&nbsp;седьмом,&nbsp;похожая&nbsp;на&nbsp;птицу&nbsp;-&nbsp;бьётся&nbsp;от&nbsp;восторга.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
+<span class="line"><span class="txt"> Крупный&nbsp;план,&nbsp;ряды&nbsp;немеют,&nbsp;в&nbsp;музыке&nbsp;само&nbsp;собой&nbsp;diminuendo.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm </span></span>
+<span class="line"><span class="txt"> Шутка&nbsp;ли,&nbsp;живой&nbsp;кумир,&nbsp;ещё-ещё&nbsp;не&nbsp;мёртв,&nbsp;уже-уже&nbsp;легенда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> Нечто&nbsp;в&nbsp;нём&nbsp;не&nbsp;то&nbsp;от&nbsp;лорда&nbsp;Байрона,&nbsp;не&nbsp;то&nbsp;от&nbsp;короля&nbsp;Георга.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm </span></span>
+<span class="line"><span class="txt"> Школьница&nbsp;-&nbsp;ряду&nbsp;в&nbsp;седьмом,&nbsp;похожая&nbsp;на&nbsp;птицу&nbsp;-&nbsp;бьётся&nbsp;от&nbsp;восторга.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Птица!&nbsp;Хилый&nbsp;в&nbsp;Георге&nbsp;прок,&nbsp;найди&nbsp;себе&nbsp;героя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em6 Am6 </span>
-<span class="txt"> да&nbsp;не&nbsp;теперь,&nbsp;а&nbsp;в&nbsp;каком-нибудь&nbsp;круизе&nbsp;кругосветном.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am6 </span>
-<span class="txt"> Пускай&nbsp;за&nbsp;тысячу&nbsp;миль&nbsp;отсель&nbsp;на&nbsp;влажном&nbsp;побережье&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am6 </span>
-<span class="txt"> тебе&nbsp;он&nbsp;скажет&nbsp;примерно&nbsp;так:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 F#           Hm <- </span>
+<span class="line"><span class="txt"> Птица!&nbsp;Хилый&nbsp;в&nbsp;Георге&nbsp;прок,&nbsp;найди&nbsp;себе&nbsp;героя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em6 Am6 </span></span>
+<span class="line"><span class="txt"> да&nbsp;не&nbsp;теперь,&nbsp;а&nbsp;в&nbsp;каком-нибудь&nbsp;круизе&nbsp;кругосветном.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am6 </span></span>
+<span class="line"><span class="txt"> Пускай&nbsp;за&nbsp;тысячу&nbsp;миль&nbsp;отсель&nbsp;на&nbsp;влажном&nbsp;побережье&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am6 </span></span>
+<span class="line"><span class="txt"> тебе&nbsp;он&nbsp;скажет&nbsp;примерно&nbsp;так:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 F#           Hm <- </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
@@ -489,25 +497,23 @@ data-key="Hm"><span class="sng-title">КИНЕМАТОГРАФ 2</span>
 <span class="txt"> Стены&nbsp;выкрасим&nbsp;в&nbsp;маренго,&nbsp;мой&nbsp;любимый&nbsp;цвет,&nbsp;не&nbsp;броский&nbsp;и&nbsp;не&nbsp;маркий...» </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вспышка&nbsp;рвёт&nbsp;пастораль&nbsp;в&nbsp;куски&nbsp;коротким&nbsp;замыканьем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C#m6  F#m </span>
-<span class="txt"> Кинопроектор&nbsp;дымит&nbsp;вовсю,&nbsp;как&nbsp;шашка&nbsp;дымовая.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 F#m      </span>
-<span class="txt"> С&nbsp;американцами&nbsp;сильный&nbsp;шок,&nbsp;рыдают&nbsp;камбоджийцы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 F#m </span>
-<span class="txt"> «Ужо&nbsp;тебе,&nbsp;-&nbsp;говорят&nbsp;они,&nbsp;-&nbsp;ужо,&nbsp;великий&nbsp;Будда!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 F#m </span>
-<span class="txt"> Ты&nbsp;изобрёл&nbsp;мировую&nbsp;скорбь.&nbsp;Зачем&nbsp;ты&nbsp;это&nbsp;сделал?»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 F#m </span>
+<span class="line"><span class="txt"> Вспышка&nbsp;рвёт&nbsp;пастораль&nbsp;в&nbsp;куски&nbsp;коротким&nbsp;замыканьем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C#m6  F#m </span></span>
+<span class="line"><span class="txt"> Кинопроектор&nbsp;дымит&nbsp;вовсю,&nbsp;как&nbsp;шашка&nbsp;дымовая.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 F#m      </span></span>
+<span class="line"><span class="txt"> С&nbsp;американцами&nbsp;сильный&nbsp;шок,&nbsp;рыдают&nbsp;камбоджийцы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 F#m </span></span>
+<span class="line"><span class="txt"> «Ужо&nbsp;тебе,&nbsp;-&nbsp;говорят&nbsp;они,&nbsp;-&nbsp;ужо,&nbsp;великий&nbsp;Будда!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 F#m </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;изобрёл&nbsp;мировую&nbsp;скорбь.&nbsp;Зачем&nbsp;ты&nbsp;это&nbsp;сделал?»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;что&nbsp;же&nbsp;слышится&nbsp;им&nbsp;в&nbsp;ответ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 </span>
+<span class="line"><span class="txt"> И&nbsp;что&nbsp;же&nbsp;слышится&nbsp;им&nbsp;в&nbsp;ответ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Лалалалала....&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m6 F#m C#m6 etc </span>
+<span class="line"><span class="txt"> Лалалалала....&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m6 F#m C#m6 etc </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1996</span>
-
+<pre><span class="year">1996</span>
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,60 +433,58 @@ span.c {
 data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Под&nbsp;знаменем&nbsp;Фортуны,&nbsp;до&nbsp;боли,&nbsp;до&nbsp;дрожи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Dm </span>
-<span class="txt"> настраивал&nbsp;я&nbsp;струны,&nbsp;прости&nbsp;меня,&nbsp;Боже!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7  Am </span>
-<span class="txt"> И&nbsp;пел&nbsp;в&nbsp;восторге&nbsp;диком&nbsp;о&nbsp;счастье&nbsp;великом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Gm  A7  Dm </span>
-<span class="txt"> А&nbsp;счастье&nbsp;было&nbsp;сладко,&nbsp;но&nbsp;редко&nbsp;и&nbsp;кратко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am  E7  Am </span>
+<span class="line"><span class="txt"> Под&nbsp;знаменем&nbsp;Фортуны,&nbsp;до&nbsp;боли,&nbsp;до&nbsp;дрожи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Dm </span></span>
+<span class="line"><span class="txt"> настраивал&nbsp;я&nbsp;струны,&nbsp;прости&nbsp;меня,&nbsp;Боже!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7  Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;пел&nbsp;в&nbsp;восторге&nbsp;диком&nbsp;о&nbsp;счастье&nbsp;великом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> А&nbsp;счастье&nbsp;было&nbsp;сладко,&nbsp;но&nbsp;редко&nbsp;и&nbsp;кратко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am  E7  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Отцвёл&nbsp;мой&nbsp;дальний&nbsp;берег&nbsp;давно&nbsp;и&nbsp;напрасно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Dm </span>
-<span class="txt"> Звезда&nbsp;моих&nbsp;Америк&nbsp;взошла&nbsp;и&nbsp;погасла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7  Am </span>
-<span class="txt"> Поднявшись&nbsp;из&nbsp;долины&nbsp;почти&nbsp;до&nbsp;вершины,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Gm  A7  Dm </span>
-<span class="txt"> я&nbsp;двинулся&nbsp;обратно,&nbsp;зачем&nbsp;-&nbsp;непонятно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am  E7  Am </span>
+<span class="line"><span class="txt"> Отцвёл&nbsp;мой&nbsp;дальний&nbsp;берег&nbsp;давно&nbsp;и&nbsp;напрасно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Dm </span></span>
+<span class="line"><span class="txt"> Звезда&nbsp;моих&nbsp;Америк&nbsp;взошла&nbsp;и&nbsp;погасла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7  Am </span></span>
+<span class="line"><span class="txt"> Поднявшись&nbsp;из&nbsp;долины&nbsp;почти&nbsp;до&nbsp;вершины,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> я&nbsp;двинулся&nbsp;обратно,&nbsp;зачем&nbsp;-&nbsp;непонятно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am  E7  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Капризные&nbsp;арены&nbsp;мой&nbsp;дар&nbsp;погубили,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Dm </span>
-<span class="txt"> корыстные&nbsp;царевны&nbsp;мой&nbsp;жар&nbsp;потушили.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7  Am </span>
-<span class="txt"> Одна&nbsp;на&nbsp;свете&nbsp;дама,&nbsp;и&nbsp;та&nbsp;-&nbsp;моя&nbsp;мама,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Gm  A7  Dm </span>
-<span class="txt"> меня&nbsp;любила&nbsp;просто,&nbsp;ни&nbsp;за&nbsp;что,&nbsp;ни&nbsp;про&nbsp;что.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am  E7  Am </span>
+<span class="line"><span class="txt"> Капризные&nbsp;арены&nbsp;мой&nbsp;дар&nbsp;погубили,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Dm </span></span>
+<span class="line"><span class="txt"> корыстные&nbsp;царевны&nbsp;мой&nbsp;жар&nbsp;потушили.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7  Am </span></span>
+<span class="line"><span class="txt"> Одна&nbsp;на&nbsp;свете&nbsp;дама,&nbsp;и&nbsp;та&nbsp;-&nbsp;моя&nbsp;мама,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> меня&nbsp;любила&nbsp;просто,&nbsp;ни&nbsp;за&nbsp;что,&nbsp;ни&nbsp;про&nbsp;что.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am  E7  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Смычок&nbsp;пришёл&nbsp;в&nbsp;негодность,&nbsp;струна&nbsp;истрепалась,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm       Em </span>
-<span class="txt"> моя&nbsp;былая&nbsp;гордость&nbsp;до&nbsp;дна&nbsp;исчерпалась.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F#  Hm </span>
-<span class="txt"> Людей&nbsp;просить&nbsp;не&nbsp;смею,&nbsp;царей&nbsp;не&nbsp;имею.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Am  H7  Em </span>
-<span class="txt"> Тебя&nbsp;просить&nbsp;негоже,&nbsp;и&nbsp;всё&nbsp;же,&nbsp;о&nbsp;Боже!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6  Hm  F#7 Hm </span>
+<span class="line"><span class="txt"> Смычок&nbsp;пришёл&nbsp;в&nbsp;негодность,&nbsp;струна&nbsp;истрепалась,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm       Em </span></span>
+<span class="line"><span class="txt"> моя&nbsp;былая&nbsp;гордость&nbsp;до&nbsp;дна&nbsp;исчерпалась.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F#  Hm </span></span>
+<span class="line"><span class="txt"> Людей&nbsp;просить&nbsp;не&nbsp;смею,&nbsp;царей&nbsp;не&nbsp;имею.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Am  H7  Em </span></span>
+<span class="line"><span class="txt"> Тебя&nbsp;просить&nbsp;негоже,&nbsp;и&nbsp;всё&nbsp;же,&nbsp;о&nbsp;Боже!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6  Hm  F#7 Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пройдя&nbsp;любовь-измену&nbsp;от&nbsp;края&nbsp;до&nbsp;края,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm       Em </span>
-<span class="txt"> всему&nbsp;нашёл&nbsp;я&nbsp;цену.&nbsp;Цена&nbsp;небольшая.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F#  Hm </span>
-<span class="txt"> Не&nbsp;дай&nbsp;мне,&nbsp;Боже,&nbsp;боле&nbsp;ни&nbsp;дрожи,&nbsp;ни&nbsp;боли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Am  H7  Em </span>
-<span class="txt"> взамен&nbsp;всего&nbsp;такого&nbsp;-&nbsp;ты&nbsp;дай&nbsp;мне&nbsp;покоя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6  Hm  F#7 Hm </span>
+<span class="line"><span class="txt"> Пройдя&nbsp;любовь-измену&nbsp;от&nbsp;края&nbsp;до&nbsp;края,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm       Em </span></span>
+<span class="line"><span class="txt"> всему&nbsp;нашёл&nbsp;я&nbsp;цену.&nbsp;Цена&nbsp;небольшая.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F#  Hm </span></span>
+<span class="line"><span class="txt"> Не&nbsp;дай&nbsp;мне,&nbsp;Боже,&nbsp;боле&nbsp;ни&nbsp;дрожи,&nbsp;ни&nbsp;боли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Am  H7  Em </span></span>
+<span class="line"><span class="txt"> взамен&nbsp;всего&nbsp;такого&nbsp;-&nbsp;ты&nbsp;дай&nbsp;мне&nbsp;покоя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6  Hm  F#7 Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пускай&nbsp;дымятся&nbsp;где-то&nbsp;и&nbsp;степи,&nbsp;и&nbsp;горы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm       Fm </span>
-<span class="txt"> Куда&nbsp;в&nbsp;мои-то&nbsp;лета&nbsp;мне&nbsp;эти&nbsp;просторы!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#   G   Cm </span>
-<span class="txt"> Пускай&nbsp;в&nbsp;иные&nbsp;страны&nbsp;текут&nbsp;океаны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Bm  C7  Fm </span>
-<span class="txt"> зачем,&nbsp;зачем,&nbsp;Владыко,&nbsp;мне&nbsp;столько&nbsp;воды-то!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  Cm  G7  Cm </span>
+<span class="line"><span class="txt"> Пускай&nbsp;дымятся&nbsp;где-то&nbsp;и&nbsp;степи,&nbsp;и&nbsp;горы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm       Fm </span></span>
+<span class="line"><span class="txt"> Куда&nbsp;в&nbsp;мои-то&nbsp;лета&nbsp;мне&nbsp;эти&nbsp;просторы!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#   G   Cm </span></span>
+<span class="line"><span class="txt"> Пускай&nbsp;в&nbsp;иные&nbsp;страны&nbsp;текут&nbsp;океаны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Bm  C7  Fm </span></span>
+<span class="line"><span class="txt"> зачем,&nbsp;зачем,&nbsp;Владыко,&nbsp;мне&nbsp;столько&nbsp;воды-то!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  Cm  G7  Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ручей,&nbsp;очаг&nbsp;и&nbsp;ложе&nbsp;-&nbsp;не&nbsp;больше,&nbsp;о&nbsp;Боже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m      F#m </span>
-<span class="txt"> Избавь&nbsp;мой&nbsp;слабый&nbsp;гений&nbsp;от&nbsp;всяких&nbsp;учений.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D    G#  C#m </span>
-<span class="txt"> Не&nbsp;нужно&nbsp;мне&nbsp;Сорбонны,&nbsp;но&nbsp;дай&nbsp;мне&nbsp;свободы!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7  Hm  C#7 F#m </span>
-<span class="txt"> И&nbsp;я,&nbsp;презрев&nbsp;лавины,&nbsp;дойду&nbsp;до&nbsp;вершины.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m6 C#m G#7 C#m </span>
+<span class="line"><span class="txt"> Ручей,&nbsp;очаг&nbsp;и&nbsp;ложе&nbsp;-&nbsp;не&nbsp;больше,&nbsp;о&nbsp;Боже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m      F#m </span></span>
+<span class="line"><span class="txt"> Избавь&nbsp;мой&nbsp;слабый&nbsp;гений&nbsp;от&nbsp;всяких&nbsp;учений.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D    G#  C#m </span></span>
+<span class="line"><span class="txt"> Не&nbsp;нужно&nbsp;мне&nbsp;Сорбонны,&nbsp;но&nbsp;дай&nbsp;мне&nbsp;свободы!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7  Hm  C#7 F#m </span></span>
+<span class="line"><span class="txt"> И&nbsp;я,&nbsp;презрев&nbsp;лавины,&nbsp;дойду&nbsp;до&nbsp;вершины.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m6 C#m G#7 C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> До&nbsp;горнего&nbsp;утёса,&nbsp;до&nbsp;высшего&nbsp;класса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm       Gm </span>
-<span class="txt"> до&nbsp;главного&nbsp;вопроса,&nbsp;до&nbsp;смертного&nbsp;часа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   A   Dm </span>
-<span class="txt"> когда&nbsp;в&nbsp;одеждах&nbsp;белых&nbsp;сквозь&nbsp;первые&nbsp;вьюги&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Cm  D7  Gm </span>
-<span class="txt"> на&nbsp;мой&nbsp;отцветший&nbsp;берег&nbsp;слетят&nbsp;твои&nbsp;слуги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6  Dm  A7  Dm </span>
+<span class="line"><span class="txt"> До&nbsp;горнего&nbsp;утёса,&nbsp;до&nbsp;высшего&nbsp;класса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm       Gm </span></span>
+<span class="line"><span class="txt"> до&nbsp;главного&nbsp;вопроса,&nbsp;до&nbsp;смертного&nbsp;часа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   A   Dm </span></span>
+<span class="line"><span class="txt"> когда&nbsp;в&nbsp;одеждах&nbsp;белых&nbsp;сквозь&nbsp;первые&nbsp;вьюги&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Cm  D7  Gm </span></span>
+<span class="line"><span class="txt"> на&nbsp;мой&nbsp;отцветший&nbsp;берег&nbsp;слетят&nbsp;твои&nbsp;слуги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6  Dm  A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1986</span>
-
+<pre><span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

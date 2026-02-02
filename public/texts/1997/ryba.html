@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,48 +423,46 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">РЫБА</span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Мммм...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7 Dm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Дожил.&nbsp;Изник&nbsp;в&nbsp;товаре.&nbsp;Язык&nbsp;на&nbsp;месте,&nbsp;а&nbsp;слов&nbsp;ничуть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span>
-<span class="txt"> Рыба&nbsp;в&nbsp;стеклянном&nbsp;шаре&nbsp;меня&nbsp;смущает.&nbsp;Не&nbsp;что-нибудь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span>
-<span class="txt"> Смотрит&nbsp;она&nbsp;сурово.&nbsp;Молчит&nbsp;неслышно.&nbsp;Блестит&nbsp;едва.&nbsp;А!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F   D7  Gm Dm A7 </span>
-<span class="txt"> Рыба,&nbsp;шепни&nbsp;два&nbsp;слова.&nbsp;Хотя&nbsp;бы,&nbsp;что&nbsp;ли,&nbsp;"жива,&nbsp;жива".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7 Gm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Мелких,&nbsp;себе&nbsp;в&nbsp;убыток,&nbsp;набрал&nbsp;причастий.&nbsp;Вручил&nbsp;на&nbsp;чай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span>
-<span class="txt"> Свился&nbsp;предлинный&nbsp;свиток&nbsp;в&nbsp;предолгий&nbsp;ящик.&nbsp;Прости-прощай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span>
-<span class="txt"> Тщетно&nbsp;топчусь&nbsp;кругами,&nbsp;не&nbsp;возле&nbsp;даже,&nbsp;а&nbsp;вне&nbsp;всего.&nbsp;О!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F   D7  Gm Dm A7 </span>
-<span class="txt"> Рыба,&nbsp;взмахни&nbsp;руками.&nbsp;Минор&nbsp;немыслим,&nbsp;спугни&nbsp;его.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7 Gm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Осень.&nbsp;Дожди.&nbsp;Дремота.&nbsp;Бездонный&nbsp;омут.&nbsp;Бессонный&nbsp;гнёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span>
-<span class="txt"> Бледный&nbsp;на&nbsp;фото&nbsp;кто-то&nbsp;вот-вот&nbsp;очнётся&nbsp;и&nbsp;подмигнёт:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span>
-<span class="txt"> помнишь&nbsp;кофейню&nbsp;в&nbsp;Сохо?&nbsp;Конечно&nbsp;помню.&nbsp;Да&nbsp;толку&nbsp;что!&nbsp;О!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F   D7  Gm Dm A7 </span>
-<span class="txt"> Рыба,&nbsp;мне&nbsp;очень&nbsp;плохо.&nbsp;Мне&nbsp;даже&nbsp;хуже,&nbsp;чем&nbsp;только&nbsp;что.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7 Gm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> "След&nbsp;мой&nbsp;волною&nbsp;смоет",&nbsp;-&nbsp;пропел&nbsp;ребёнок.&nbsp;И&nbsp;след&nbsp;пропал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m G#m D#m </span>
-<span class="txt"> В&nbsp;гости?&nbsp;Сейчас&nbsp;не&nbsp;стоит.&nbsp;Явлюсь&nbsp;к&nbsp;разъезду.&nbsp;Скажу&nbsp;-&nbsp;проспал.&nbsp; </span><span class="ch"> D#m G#m D#m </span>
-<span class="txt"> Или&nbsp;останусь&nbsp;дома,&nbsp;с&nbsp;ковра&nbsp;не&nbsp;двинусь.&nbsp;Не&nbsp;та&nbsp;луна.&nbsp;А!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  D#7 G#m D#m A#7 </span>
-<span class="txt"> Осень.&nbsp;Минор.&nbsp;Истома.&nbsp;Какие&nbsp;гости,&nbsp;когда&nbsp;волна?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m D#m A#7 G#m </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> "Всякой&nbsp;по&nbsp;паре&nbsp;твари",&nbsp;-&nbsp;прочёл&nbsp;я&nbsp;как-то.&nbsp;Незнамо&nbsp;где.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am  Em </span>
-<span class="txt"> Рыба&nbsp;в&nbsp;стеклянном&nbsp;шаре&nbsp;-&nbsp;плохой&nbsp;помощник&nbsp;моей&nbsp;беде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am  Em </span>
-<span class="txt"> Гибкий&nbsp;предмет&nbsp;улова,&nbsp;деталь&nbsp;декора,&nbsp;форель-плотва.&nbsp;А!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   E7  Am Em H7 </span>
-<span class="txt"> Рыба,&nbsp;шепни&nbsp;два&nbsp;слова.&nbsp;Взмахни&nbsp;руками.&nbsp;Жива,&nbsp;жива.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em  H7 Am </span>
-<span class="txt"> &nbsp; </span>
-
+data-key="Dm"><h1>РЫБА</h1>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Мммм...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7 Dm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Дожил.&nbsp;Изник&nbsp;в&nbsp;товаре.&nbsp;Язык&nbsp;на&nbsp;месте,&nbsp;а&nbsp;слов&nbsp;ничуть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span></span>
+<span class="line"><span class="txt"> Рыба&nbsp;в&nbsp;стеклянном&nbsp;шаре&nbsp;меня&nbsp;смущает.&nbsp;Не&nbsp;что-нибудь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span></span>
+<span class="line"><span class="txt"> Смотрит&nbsp;она&nbsp;сурово.&nbsp;Молчит&nbsp;неслышно.&nbsp;Блестит&nbsp;едва.&nbsp;А!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F   D7  Gm Dm A7 </span></span>
+<span class="line"><span class="txt"> Рыба,&nbsp;шепни&nbsp;два&nbsp;слова.&nbsp;Хотя&nbsp;бы,&nbsp;что&nbsp;ли,&nbsp;"жива,&nbsp;жива".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7 Gm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Мелких,&nbsp;себе&nbsp;в&nbsp;убыток,&nbsp;набрал&nbsp;причастий.&nbsp;Вручил&nbsp;на&nbsp;чай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span></span>
+<span class="line"><span class="txt"> Свился&nbsp;предлинный&nbsp;свиток&nbsp;в&nbsp;предолгий&nbsp;ящик.&nbsp;Прости-прощай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span></span>
+<span class="line"><span class="txt"> Тщетно&nbsp;топчусь&nbsp;кругами,&nbsp;не&nbsp;возле&nbsp;даже,&nbsp;а&nbsp;вне&nbsp;всего.&nbsp;О!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F   D7  Gm Dm A7 </span></span>
+<span class="line"><span class="txt"> Рыба,&nbsp;взмахни&nbsp;руками.&nbsp;Минор&nbsp;немыслим,&nbsp;спугни&nbsp;его.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7 Gm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Осень.&nbsp;Дожди.&nbsp;Дремота.&nbsp;Бездонный&nbsp;омут.&nbsp;Бессонный&nbsp;гнёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span></span>
+<span class="line"><span class="txt"> Бледный&nbsp;на&nbsp;фото&nbsp;кто-то&nbsp;вот-вот&nbsp;очнётся&nbsp;и&nbsp;подмигнёт:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm </span></span>
+<span class="line"><span class="txt"> помнишь&nbsp;кофейню&nbsp;в&nbsp;Сохо?&nbsp;Конечно&nbsp;помню.&nbsp;Да&nbsp;толку&nbsp;что!&nbsp;О!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F   D7  Gm Dm A7 </span></span>
+<span class="line"><span class="txt"> Рыба,&nbsp;мне&nbsp;очень&nbsp;плохо.&nbsp;Мне&nbsp;даже&nbsp;хуже,&nbsp;чем&nbsp;только&nbsp;что.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7 Gm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> "След&nbsp;мой&nbsp;волною&nbsp;смоет",&nbsp;-&nbsp;пропел&nbsp;ребёнок.&nbsp;И&nbsp;след&nbsp;пропал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m G#m D#m </span></span>
+<span class="line"><span class="txt"> В&nbsp;гости?&nbsp;Сейчас&nbsp;не&nbsp;стоит.&nbsp;Явлюсь&nbsp;к&nbsp;разъезду.&nbsp;Скажу&nbsp;-&nbsp;проспал.&nbsp; </span><span class="ch"> D#m G#m D#m </span></span>
+<span class="line"><span class="txt"> Или&nbsp;останусь&nbsp;дома,&nbsp;с&nbsp;ковра&nbsp;не&nbsp;двинусь.&nbsp;Не&nbsp;та&nbsp;луна.&nbsp;А!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  D#7 G#m D#m A#7 </span></span>
+<span class="line"><span class="txt"> Осень.&nbsp;Минор.&nbsp;Истома.&nbsp;Какие&nbsp;гости,&nbsp;когда&nbsp;волна?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m D#m A#7 G#m </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> "Всякой&nbsp;по&nbsp;паре&nbsp;твари",&nbsp;-&nbsp;прочёл&nbsp;я&nbsp;как-то.&nbsp;Незнамо&nbsp;где.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am  Em </span></span>
+<span class="line"><span class="txt"> Рыба&nbsp;в&nbsp;стеклянном&nbsp;шаре&nbsp;-&nbsp;плохой&nbsp;помощник&nbsp;моей&nbsp;беде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am  Em </span></span>
+<span class="line"><span class="txt"> Гибкий&nbsp;предмет&nbsp;улова,&nbsp;деталь&nbsp;декора,&nbsp;форель-плотва.&nbsp;А!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   E7  Am Em H7 </span></span>
+<span class="line"><span class="txt"> Рыба,&nbsp;шепни&nbsp;два&nbsp;слова.&nbsp;Взмахни&nbsp;руками.&nbsp;Жива,&nbsp;жива.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em  H7 Am </span></span>
+<span class="txt">  </span>
 </div>
-<pre>
-    <span class="year">1997</span>
-
+<pre><span class="year">1997</span>
 </pre>
+
 
                 </div>
         </div>

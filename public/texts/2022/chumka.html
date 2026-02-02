@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,94 +423,92 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="C#m"><span class="sng-title">ЧУМКА</span>
+data-key="C#m"><h1>ЧУМКА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ты&nbsp;не&nbsp;смотри,&nbsp;что&nbsp;полдень&nbsp;ярок-жарок&nbsp;и&nbsp;кругом&nbsp;забор.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span>
-<span class="txt"> Пройдя&nbsp;осинник,&nbsp;доску&nbsp;сдвинешь,&nbsp;вынешь&nbsp;-&nbsp;и&nbsp;прыжком&nbsp;в&nbsp;зазор.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span>
-<span class="txt"> Чинили&nbsp;долго,&nbsp;беззаветно&nbsp;-&nbsp;тщетно.&nbsp;Всякий&nbsp;раз&nbsp;-&nbsp;дыра.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span>
-<span class="txt"> Решайся,&nbsp;Гретхен.&nbsp;Скоро&nbsp;скучный,&nbsp;душный&nbsp;тихий&nbsp;час.&nbsp;Пора.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span>
+<span class="line"><span class="txt"> Ты&nbsp;не&nbsp;смотри,&nbsp;что&nbsp;полдень&nbsp;ярок-жарок&nbsp;и&nbsp;кругом&nbsp;забор.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span></span>
+<span class="line"><span class="txt"> Пройдя&nbsp;осинник,&nbsp;доску&nbsp;сдвинешь,&nbsp;вынешь&nbsp;-&nbsp;и&nbsp;прыжком&nbsp;в&nbsp;зазор.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span></span>
+<span class="line"><span class="txt"> Чинили&nbsp;долго,&nbsp;беззаветно&nbsp;-&nbsp;тщетно.&nbsp;Всякий&nbsp;раз&nbsp;-&nbsp;дыра.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span></span>
+<span class="line"><span class="txt"> Решайся,&nbsp;Гретхен.&nbsp;Скоро&nbsp;скучный,&nbsp;душный&nbsp;тихий&nbsp;час.&nbsp;Пора.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вещей&nbsp;чем&nbsp;меньше,&nbsp;тем&nbsp;удобней,&nbsp;чтоб&nbsp;не&nbsp;создавать&nbsp;возни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E A C#7/F F#m </span>
-<span class="txt"> Вот&nbsp;разве&nbsp;книгу,&nbsp;хоть&nbsp;и&nbsp;жарко,&nbsp;жалко&nbsp;оставлять.&nbsp;Возьми.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/D# D C#m </span>
-<span class="txt"> Там&nbsp;эта&nbsp;драма...&nbsp;Капулетти...&nbsp;эти&nbsp;все&nbsp;дела,&nbsp;как&nbsp;есть...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span>
-<span class="txt"> Лишь&nbsp;до&nbsp;чумы&nbsp;на&nbsp;оба&nbsp;дома&nbsp;дрёма&nbsp;не&nbsp;дала&nbsp;дочесть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span>
+<span class="line"><span class="txt"> Вещей&nbsp;чем&nbsp;меньше,&nbsp;тем&nbsp;удобней,&nbsp;чтоб&nbsp;не&nbsp;создавать&nbsp;возни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E A C#7/F F#m </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;разве&nbsp;книгу,&nbsp;хоть&nbsp;и&nbsp;жарко,&nbsp;жалко&nbsp;оставлять.&nbsp;Возьми.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/D# D C#m </span></span>
+<span class="line"><span class="txt"> Там&nbsp;эта&nbsp;драма...&nbsp;Капулетти...&nbsp;эти&nbsp;все&nbsp;дела,&nbsp;как&nbsp;есть...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span></span>
+<span class="line"><span class="txt"> Лишь&nbsp;до&nbsp;чумы&nbsp;на&nbsp;оба&nbsp;дома&nbsp;дрёма&nbsp;не&nbsp;дала&nbsp;дочесть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ромео&nbsp;твой&nbsp;сейчас,&nbsp;должно&nbsp;быть,&nbsp;ноготь&nbsp;прикусив,&nbsp;скулит:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span>
-<span class="txt"> <Играет&nbsp;мною&nbsp;Гретхен&nbsp;злая,&nbsp;зная,&nbsp;что&nbsp;ревнив,&nbsp;шалит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span>
-<span class="txt"> Вчера&nbsp;на&nbsp;танцах&nbsp;с&nbsp;этим,&nbsp;в&nbsp;тёртых&nbsp;шортах,&nbsp;трепачом&nbsp;была.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span>
-<span class="txt"> Но&nbsp;не&nbsp;собой&nbsp;она&nbsp;была&nbsp;бы,&nbsp;кабы&nbsp;что-то&nbsp;в&nbsp;нём&nbsp;нашла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span>
+<span class="line"><span class="txt"> Ромео&nbsp;твой&nbsp;сейчас,&nbsp;должно&nbsp;быть,&nbsp;ноготь&nbsp;прикусив,&nbsp;скулит:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span></span>
+<span class="line"><span class="txt"> <Играет&nbsp;мною&nbsp;Гретхен&nbsp;злая,&nbsp;зная,&nbsp;что&nbsp;ревнив,&nbsp;шалит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span></span>
+<span class="line"><span class="txt"> Вчера&nbsp;на&nbsp;танцах&nbsp;с&nbsp;этим,&nbsp;в&nbsp;тёртых&nbsp;шортах,&nbsp;трепачом&nbsp;была.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span></span>
+<span class="line"><span class="txt"> Но&nbsp;не&nbsp;собой&nbsp;она&nbsp;была&nbsp;бы,&nbsp;кабы&nbsp;что-то&nbsp;в&nbsp;нём&nbsp;нашла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Он&nbsp;лишь&nbsp;тоску&nbsp;на&nbsp;всех&nbsp;наводит,&nbsp;ходит&nbsp;вечно&nbsp;без&nbsp;штанин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span>
-<span class="txt"> На&nbsp;брусьях&nbsp;крутит&nbsp;выкрутасы:&nbsp;сбрасывает&nbsp;вес,&nbsp;кретин...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span>
-<span class="txt"> А&nbsp;сам&nbsp;нескладен,&nbsp;неспокоен,&nbsp;скроен&nbsp;как-то&nbsp;врозь&nbsp;и&nbsp;ввысь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span>
-<span class="txt"> Не&nbsp;верю&nbsp;я,&nbsp;не&nbsp;той&nbsp;он&nbsp;пробы,&nbsp;чтобы&nbsp;с&nbsp;ним&nbsp;всерьёз&nbsp;сойтись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span>
+<span class="line"><span class="txt"> Он&nbsp;лишь&nbsp;тоску&nbsp;на&nbsp;всех&nbsp;наводит,&nbsp;ходит&nbsp;вечно&nbsp;без&nbsp;штанин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span></span>
+<span class="line"><span class="txt"> На&nbsp;брусьях&nbsp;крутит&nbsp;выкрутасы:&nbsp;сбрасывает&nbsp;вес,&nbsp;кретин...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;сам&nbsp;нескладен,&nbsp;неспокоен,&nbsp;скроен&nbsp;как-то&nbsp;врозь&nbsp;и&nbsp;ввысь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span></span>
+<span class="line"><span class="txt"> Не&nbsp;верю&nbsp;я,&nbsp;не&nbsp;той&nbsp;он&nbsp;пробы,&nbsp;чтобы&nbsp;с&nbsp;ним&nbsp;всерьёз&nbsp;сойтись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пускай&nbsp;молва&nbsp;о&nbsp;них&nbsp;повсюду,&nbsp;буду&nbsp;глух&nbsp;и&nbsp;чужд...&nbsp;А&nbsp;всё&nbsp;ж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E A C#7/F F#m </span>
-<span class="txt"> Злодейка&nbsp;Гретхен...&nbsp;маргаритка...&nbsp;пытка,&nbsp;хоть&nbsp;и&nbsp;чушь,&nbsp;и&nbsp;ложь...&nbsp;&nbsp; </span><span class="ch"> F#m/D# D C#m </span>
-<span class="txt"> Её&nbsp;не&nbsp;я&nbsp;целует&nbsp;в&nbsp;шею,&nbsp;с&nbsp;нею&nbsp;ча-ча-ча&nbsp;-&nbsp;не&nbsp;мне...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span>
-<span class="txt"> Никто&nbsp;не&nbsp;смел,&nbsp;а&nbsp;я&nbsp;посмею,&nbsp;взгрею&nbsp;трепача.&nbsp;Чтоб&nbsp;не...>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span>
+<span class="line"><span class="txt"> Пускай&nbsp;молва&nbsp;о&nbsp;них&nbsp;повсюду,&nbsp;буду&nbsp;глух&nbsp;и&nbsp;чужд...&nbsp;А&nbsp;всё&nbsp;ж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E A C#7/F F#m </span></span>
+<span class="line"><span class="txt"> Злодейка&nbsp;Гретхен...&nbsp;маргаритка...&nbsp;пытка,&nbsp;хоть&nbsp;и&nbsp;чушь,&nbsp;и&nbsp;ложь...&nbsp;&nbsp; </span><span class="ch"> F#m/D# D C#m </span></span>
+<span class="line"><span class="txt"> Её&nbsp;не&nbsp;я&nbsp;целует&nbsp;в&nbsp;шею,&nbsp;с&nbsp;нею&nbsp;ча-ча-ча&nbsp;-&nbsp;не&nbsp;мне...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span></span>
+<span class="line"><span class="txt"> Никто&nbsp;не&nbsp;смел,&nbsp;а&nbsp;я&nbsp;посмею,&nbsp;взгрею&nbsp;трепача.&nbsp;Чтоб&nbsp;не...>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Меж&nbsp;тем&nbsp;трепач&nbsp;в&nbsp;заботах&nbsp;выше&nbsp;крыши,&nbsp;вся&nbsp;спортчасть&nbsp;-&nbsp;на&nbsp;нём.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span>
-<span class="txt"> Готовься&nbsp;к&nbsp;смотру,&nbsp;честь&nbsp;отряда,&nbsp;надо&nbsp;не&nbsp;упасть&nbsp;лицом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span>
-<span class="txt"> А&nbsp;с&nbsp;кем&nbsp;готовься?&nbsp;Сплошь&nbsp;юннатки,&nbsp;прятки&nbsp;меж&nbsp;осин&nbsp;от&nbsp;них.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span>
-<span class="txt"> Моргнул&nbsp;-&nbsp;и&nbsp;тут&nbsp;же&nbsp;весь&nbsp;в&nbsp;помаде...&nbsp;на&nbsp;десять&nbsp;один&nbsp;-&nbsp;жених.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span>
-<span class="txt">  </span>
- <br />
-<span class="txt">  </span>
- <br />
-<span class="txt"> Беды&nbsp;не&nbsp;видят&nbsp;в&nbsp;макияже,&nbsp;даже&nbsp;в&nbsp;табаках&nbsp;-&nbsp;стыда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span>
-<span class="txt"> Перед&nbsp;отбоем&nbsp;весь&nbsp;осинник&nbsp;в&nbsp;синих&nbsp;облаках.&nbsp;Да-да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span>
-<span class="txt"> Успехов&nbsp;ноль,&nbsp;усердья&nbsp;крохи...&nbsp;вздохи&nbsp;при&nbsp;луне...&nbsp;нытьё...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span>
-<span class="txt"> Ромео&nbsp;прав:&nbsp;похоже,&nbsp;это&nbsp;лето,&nbsp;Гретхен,&nbsp;не&nbsp;твоё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> Ревнивца&nbsp;пылкого&nbsp;другая&nbsp;злая&nbsp;отвлечёт,&nbsp;дразня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E A C#7/F F#m </span>
-<span class="txt"> А&nbsp;трепачу&nbsp;пирожных&nbsp;разных&nbsp;в&nbsp;праздник&nbsp;напечёт&nbsp;родня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/D# D C#m </span>
-<span class="txt"> Он&nbsp;их&nbsp;отдаст&nbsp;юннаткам&nbsp;трескать:&nbsp;дескать,&nbsp;самому&nbsp;вредны...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span>
-<span class="txt"> И&nbsp;все&nbsp;так&nbsp;детски,&nbsp;идиотски,&nbsp;плотски&nbsp;целомудренны!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> К&nbsp;электропоезду&nbsp;короткой&nbsp;тропкой&nbsp;три&nbsp;версты&nbsp;-&nbsp;не&nbsp;крюк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span>
-<span class="txt"> На&nbsp;полный&nbsp;срок&nbsp;добавить&nbsp;летним&nbsp;сплетням&nbsp;остроты&nbsp;-&nbsp;не&nbsp;трюк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span>
-<span class="txt"> Билет&nbsp;-&nbsp;полтинник,&nbsp;Маргаритка,&nbsp;скидка&nbsp;-&nbsp;четвертак&nbsp;-&nbsp;не&nbsp;всем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span>
-<span class="txt"> Ты&nbsp;тихим&nbsp;часом&nbsp;лесом&nbsp;двигай.&nbsp;С&nbsp;книгой&nbsp;или&nbsp;так,&nbsp;ни&nbsp;с&nbsp;чем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A </span>
-<span class="txt"> Не&nbsp;обожглась&nbsp;ты&nbsp;этой&nbsp;самой&nbsp;драмой,&nbsp;усыпил&nbsp;отбой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span>
-<span class="txt"> И&nbsp;тот&nbsp;вчерашний,&nbsp;неумелый,&nbsp;белый&nbsp;танец&nbsp;был&nbsp;-&nbsp;не&nbsp;твой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm </span>
-<span class="txt"> Руки&nbsp;рукой&nbsp;держась,&nbsp;не&nbsp;плыли...&nbsp;или&nbsp;там&nbsp;-&nbsp;щекой&nbsp;щеки...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm B D7/F# Gm </span>
-<span class="txt"> Ты,&nbsp;Гретхен,&nbsp;чапай&nbsp;лесом,&nbsp;чухай...&nbsp;нюхай&nbsp;колокольчики.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm B7/G# A Dm </span>
+<span class="line"><span class="txt"> Меж&nbsp;тем&nbsp;трепач&nbsp;в&nbsp;заботах&nbsp;выше&nbsp;крыши,&nbsp;вся&nbsp;спортчасть&nbsp;-&nbsp;на&nbsp;нём.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span></span>
+<span class="line"><span class="txt"> Готовься&nbsp;к&nbsp;смотру,&nbsp;честь&nbsp;отряда,&nbsp;надо&nbsp;не&nbsp;упасть&nbsp;лицом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;с&nbsp;кем&nbsp;готовься?&nbsp;Сплошь&nbsp;юннатки,&nbsp;прятки&nbsp;меж&nbsp;осин&nbsp;от&nbsp;них.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span></span>
+<span class="line"><span class="txt"> Моргнул&nbsp;-&nbsp;и&nbsp;тут&nbsp;же&nbsp;весь&nbsp;в&nbsp;помаде...&nbsp;на&nbsp;десять&nbsp;один&nbsp;-&nbsp;жених.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
  <br />
-<span class="txt"> Финал&nbsp;дочтёшь,&nbsp;героев&nbsp;женишь,&nbsp;сменишь&nbsp;имена&nbsp;сама.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F B D7/F# Gm </span>
-<span class="txt"> Что&nbsp;до&nbsp;чумы&nbsp;-&nbsp;за&nbsp;ней&nbsp;не&nbsp;станет,&nbsp;грянет&nbsp;и&nbsp;она,&nbsp;чума.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm/E Eb Dm </span>
-<span class="txt"> Всегда&nbsp;плела&nbsp;всему&nbsp;на&nbsp;свете&nbsp;сети&nbsp;-&nbsp;и&nbsp;сплетёт&nbsp;ещё...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm B D7/F# Gm </span>
-<span class="txt"> Кладу&nbsp;цветы&nbsp;на&nbsp;ваши&nbsp;оба&nbsp;гроба,&nbsp;дети.&nbsp;Вот&nbsp;и&nbsp;всё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm B7/G# A Dm </span>
+<span class="line"><span class="txt"> Беды&nbsp;не&nbsp;видят&nbsp;в&nbsp;макияже,&nbsp;даже&nbsp;в&nbsp;табаках&nbsp;-&nbsp;стыда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span></span>
+<span class="line"><span class="txt"> Перед&nbsp;отбоем&nbsp;весь&nbsp;осинник&nbsp;в&nbsp;синих&nbsp;облаках.&nbsp;Да-да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span></span>
+<span class="line"><span class="txt"> Успехов&nbsp;ноль,&nbsp;усердья&nbsp;крохи...&nbsp;вздохи&nbsp;при&nbsp;луне...&nbsp;нытьё...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span></span>
+<span class="line"><span class="txt"> Ромео&nbsp;прав:&nbsp;похоже,&nbsp;это&nbsp;лето,&nbsp;Гретхен,&nbsp;не&nbsp;твоё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-
+<span class="line"><span class="txt"> Ревнивца&nbsp;пылкого&nbsp;другая&nbsp;злая&nbsp;отвлечёт,&nbsp;дразня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E A C#7/F F#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;трепачу&nbsp;пирожных&nbsp;разных&nbsp;в&nbsp;праздник&nbsp;напечёт&nbsp;родня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/D# D C#m </span></span>
+<span class="line"><span class="txt"> Он&nbsp;их&nbsp;отдаст&nbsp;юннаткам&nbsp;трескать:&nbsp;дескать,&nbsp;самому&nbsp;вредны...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span></span>
+<span class="line"><span class="txt"> И&nbsp;все&nbsp;так&nbsp;детски,&nbsp;идиотски,&nbsp;плотски&nbsp;целомудренны!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span></span>
+<span class="txt">  </span>
+ <br />
+<span class="line"><span class="txt"> К&nbsp;электропоезду&nbsp;короткой&nbsp;тропкой&nbsp;три&nbsp;версты&nbsp;-&nbsp;не&nbsp;крюк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span></span>
+<span class="line"><span class="txt"> На&nbsp;полный&nbsp;срок&nbsp;добавить&nbsp;летним&nbsp;сплетням&nbsp;остроты&nbsp;-&nbsp;не&nbsp;трюк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span></span>
+<span class="line"><span class="txt"> Билет&nbsp;-&nbsp;полтинник,&nbsp;Маргаритка,&nbsp;скидка&nbsp;-&nbsp;четвертак&nbsp;-&nbsp;не&nbsp;всем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A C#/F F#m </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;тихим&nbsp;часом&nbsp;лесом&nbsp;двигай.&nbsp;С&nbsp;книгой&nbsp;или&nbsp;так,&nbsp;ни&nbsp;с&nbsp;чем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m A7/G G# C#m </span></span>
+<span class="txt">  </span>
+ <br />
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A </span></span>
+<span class="line"><span class="txt"> Не&nbsp;обожглась&nbsp;ты&nbsp;этой&nbsp;самой&nbsp;драмой,&nbsp;усыпил&nbsp;отбой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span></span>
+<span class="line"><span class="txt"> И&nbsp;тот&nbsp;вчерашний,&nbsp;неумелый,&nbsp;белый&nbsp;танец&nbsp;был&nbsp;-&nbsp;не&nbsp;твой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm </span></span>
+<span class="line"><span class="txt"> Руки&nbsp;рукой&nbsp;держась,&nbsp;не&nbsp;плыли...&nbsp;или&nbsp;там&nbsp;-&nbsp;щекой&nbsp;щеки...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm B D7/F# Gm </span></span>
+<span class="line"><span class="txt"> Ты,&nbsp;Гретхен,&nbsp;чапай&nbsp;лесом,&nbsp;чухай...&nbsp;нюхай&nbsp;колокольчики.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm B7/G# A Dm </span></span>
+<span class="txt">  </span>
+ <br />
+<span class="txt">  </span>
+ <br />
+<span class="line"><span class="txt"> Финал&nbsp;дочтёшь,&nbsp;героев&nbsp;женишь,&nbsp;сменишь&nbsp;имена&nbsp;сама.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F B D7/F# Gm </span></span>
+<span class="line"><span class="txt"> Что&nbsp;до&nbsp;чумы&nbsp;-&nbsp;за&nbsp;ней&nbsp;не&nbsp;станет,&nbsp;грянет&nbsp;и&nbsp;она,&nbsp;чума.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm/E Eb Dm </span></span>
+<span class="line"><span class="txt"> Всегда&nbsp;плела&nbsp;всему&nbsp;на&nbsp;свете&nbsp;сети&nbsp;-&nbsp;и&nbsp;сплетёт&nbsp;ещё...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm B D7/F# Gm </span></span>
+<span class="line"><span class="txt"> Кладу&nbsp;цветы&nbsp;на&nbsp;ваши&nbsp;оба&nbsp;гроба,&nbsp;дети.&nbsp;Вот&nbsp;и&nbsp;всё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm B7/G# A Dm </span></span>
+<span class="txt">  </span>
+ <br />
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
 </div>
-<pre>
-    <span class="year">2022</span>
-
+<pre><span class="year">2022</span>
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,58 +423,56 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">СЕЗОН ДОЖДЕЙ</span>
+data-key="Em"><h1>СЕЗОН ДОЖДЕЙ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Юго-Восток&nbsp;-&nbsp;ненастная&nbsp;страна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   Am </span>
-<span class="txt"> Сезон&nbsp;дождей&nbsp;здесь&nbsp;тянется&nbsp;полгода,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Em </span>
-<span class="txt"> и&nbsp;день&nbsp;за&nbsp;днём,&nbsp;с&nbsp;восхода&nbsp;до&nbsp;восхода,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> лишь&nbsp;непогода&nbsp;царствует&nbsp;одна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Am   H7-E7 </span>
-<span class="txt"> Вот&nbsp;и&nbsp;теперь&nbsp;-&nbsp;медлительный&nbsp;поток&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span>
-<span class="txt"> сошёл&nbsp;с&nbsp;небес,&nbsp;томительно&nbsp;нахлынул,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am </span>
-<span class="txt"> всё&nbsp;изменил,&nbsp;всё&nbsp;сдвинул,&nbsp;опрокинул&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span>
-<span class="txt"> и&nbsp;поглотил&nbsp;страну&nbsp;Юго-Восток.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B/B  B/A  B/G  B/F  B/E  A7 </span>
-<span class="txt"> Теченье&nbsp;вод,&nbsp;бескрайний&nbsp;караван,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Gm </span>
-<span class="txt"> не&nbsp;разобрать,&nbsp;где&nbsp;дно,&nbsp;а&nbsp;где&nbsp;поверхность...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm </span>
-<span class="txt"> Сезон&nbsp;дождей&nbsp;в&nbsp;смятение&nbsp;поверг&nbsp;нас,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm </span>
-<span class="txt"> затеяв&nbsp;свой&nbsp;унылый&nbsp;балаган.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Gm   A7 </span>
-<span class="txt"> Далёкий&nbsp;город&nbsp;облик&nbsp;корабля&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> приобретает&nbsp;в&nbsp;этой&nbsp;непогоде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> Но&nbsp;там&nbsp;никто&nbsp;по&nbsp;палубам&nbsp;не&nbsp;ходит&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7 </span>
-<span class="txt"> и&nbsp;не&nbsp;стоит&nbsp;на&nbsp;вахте&nbsp;у&nbsp;руля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6  F7   Dm6-Am-H7 </span>
+<span class="line"><span class="txt"> Юго-Восток&nbsp;-&nbsp;ненастная&nbsp;страна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   Am </span></span>
+<span class="line"><span class="txt"> Сезон&nbsp;дождей&nbsp;здесь&nbsp;тянется&nbsp;полгода,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;день&nbsp;за&nbsp;днём,&nbsp;с&nbsp;восхода&nbsp;до&nbsp;восхода,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> лишь&nbsp;непогода&nbsp;царствует&nbsp;одна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Am   H7-E7 </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;и&nbsp;теперь&nbsp;-&nbsp;медлительный&nbsp;поток&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span></span>
+<span class="line"><span class="txt"> сошёл&nbsp;с&nbsp;небес,&nbsp;томительно&nbsp;нахлынул,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am </span></span>
+<span class="line"><span class="txt"> всё&nbsp;изменил,&nbsp;всё&nbsp;сдвинул,&nbsp;опрокинул&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;поглотил&nbsp;страну&nbsp;Юго-Восток.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B/B  B/A  B/G  B/F  B/E  A7 </span></span>
+<span class="line"><span class="txt"> Теченье&nbsp;вод,&nbsp;бескрайний&nbsp;караван,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Gm </span></span>
+<span class="line"><span class="txt"> не&nbsp;разобрать,&nbsp;где&nbsp;дно,&nbsp;а&nbsp;где&nbsp;поверхность...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm </span></span>
+<span class="line"><span class="txt"> Сезон&nbsp;дождей&nbsp;в&nbsp;смятение&nbsp;поверг&nbsp;нас,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm </span></span>
+<span class="line"><span class="txt"> затеяв&nbsp;свой&nbsp;унылый&nbsp;балаган.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Gm   A7 </span></span>
+<span class="line"><span class="txt"> Далёкий&nbsp;город&nbsp;облик&nbsp;корабля&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> приобретает&nbsp;в&nbsp;этой&nbsp;непогоде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> Но&nbsp;там&nbsp;никто&nbsp;по&nbsp;палубам&nbsp;не&nbsp;ходит&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;не&nbsp;стоит&nbsp;на&nbsp;вахте&nbsp;у&nbsp;руля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6  F7   Dm6-Am-H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Матросы&nbsp;спят,&nbsp;им&nbsp;горе&nbsp;не&nbsp;беда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   Am </span>
-<span class="txt"> В&nbsp;сезон&nbsp;дождей&nbsp;предписано&nbsp;уставом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Em </span>
-<span class="txt"> всё&nbsp;время&nbsp;спать,&nbsp;прикинувшись&nbsp;усталым...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Корабль&nbsp;дымит,&nbsp;но&nbsp;с&nbsp;места&nbsp;-&nbsp;никуда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Am   H7-E7 </span>
-<span class="txt"> Так,&nbsp;вероятно,&nbsp;греческий&nbsp;чудак&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span>
-<span class="txt"> силач-атлант,&nbsp;прикинувшись&nbsp;бессонным,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am </span>
-<span class="txt"> стоит&nbsp;и&nbsp;спит&nbsp;под&nbsp;небом&nbsp;невесомым,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span>
-<span class="txt"> но&nbsp;напрягает&nbsp;мышцы&nbsp;-&nbsp;просто&nbsp;так.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B/B  B/A  B/G  B/F  B/E  A7 </span>
-<span class="txt"> И&nbsp;лишь&nbsp;мой&nbsp;дом&nbsp;-&nbsp;в&nbsp;пустыне,&nbsp;как&nbsp;монах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Gm </span>
-<span class="txt"> на&nbsp;полпути&nbsp;меж&nbsp;Югом&nbsp;и&nbsp;Востоком&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm </span>
-<span class="txt"> плывёт&nbsp;один,&nbsp;открытый&nbsp;всем&nbsp;потокам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm </span>
-<span class="txt"> челном&nbsp;бесхозным&nbsp;путаясь&nbsp;в&nbsp;волнах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Gm   A7 </span>
-<span class="txt"> Плыви,&nbsp;мой&nbsp;чёлн!&nbsp;Привыкни&nbsp;ко&nbsp;всему,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> держись&nbsp;легко,&nbsp;скользи&nbsp;неторопливо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> Но&nbsp;встречным&nbsp;всем&nbsp;рассказывай&nbsp;правдиво,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7 </span>
-<span class="txt"> как&nbsp;одиноко&nbsp;в&nbsp;море&nbsp;одному...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6  F7   Dm6-Am-H7 </span>
+<span class="line"><span class="txt"> Матросы&nbsp;спят,&nbsp;им&nbsp;горе&nbsp;не&nbsp;беда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   Am </span></span>
+<span class="line"><span class="txt"> В&nbsp;сезон&nbsp;дождей&nbsp;предписано&nbsp;уставом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Em </span></span>
+<span class="line"><span class="txt"> всё&nbsp;время&nbsp;спать,&nbsp;прикинувшись&nbsp;усталым...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Корабль&nbsp;дымит,&nbsp;но&nbsp;с&nbsp;места&nbsp;-&nbsp;никуда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Am   H7-E7 </span></span>
+<span class="line"><span class="txt"> Так,&nbsp;вероятно,&nbsp;греческий&nbsp;чудак&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span></span>
+<span class="line"><span class="txt"> силач-атлант,&nbsp;прикинувшись&nbsp;бессонным,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am </span></span>
+<span class="line"><span class="txt"> стоит&nbsp;и&nbsp;спит&nbsp;под&nbsp;небом&nbsp;невесомым,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span></span>
+<span class="line"><span class="txt"> но&nbsp;напрягает&nbsp;мышцы&nbsp;-&nbsp;просто&nbsp;так.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B/B  B/A  B/G  B/F  B/E  A7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;лишь&nbsp;мой&nbsp;дом&nbsp;-&nbsp;в&nbsp;пустыне,&nbsp;как&nbsp;монах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Gm </span></span>
+<span class="line"><span class="txt"> на&nbsp;полпути&nbsp;меж&nbsp;Югом&nbsp;и&nbsp;Востоком&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm </span></span>
+<span class="line"><span class="txt"> плывёт&nbsp;один,&nbsp;открытый&nbsp;всем&nbsp;потокам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm </span></span>
+<span class="line"><span class="txt"> челном&nbsp;бесхозным&nbsp;путаясь&nbsp;в&nbsp;волнах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Gm   A7 </span></span>
+<span class="line"><span class="txt"> Плыви,&nbsp;мой&nbsp;чёлн!&nbsp;Привыкни&nbsp;ко&nbsp;всему,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> держись&nbsp;легко,&nbsp;скользи&nbsp;неторопливо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> Но&nbsp;встречным&nbsp;всем&nbsp;рассказывай&nbsp;правдиво,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7 </span></span>
+<span class="line"><span class="txt"> как&nbsp;одиноко&nbsp;в&nbsp;море&nbsp;одному...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6  F7   Dm6-Am-H7 </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1987</span>
-
+<pre><span class="year">1987</span>
 </pre>
+
 
                 </div>
         </div>

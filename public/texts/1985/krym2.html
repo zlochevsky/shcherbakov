@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,62 +433,60 @@ span.c {
 data-key="Dm"><span class="txt"> КРЫМ&nbsp;II </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ни&nbsp;на&nbsp;чью&nbsp;не&nbsp;посягну&nbsp;честь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    Dm   E </span>
-<span class="txt"> не&nbsp;точу&nbsp;ни&nbsp;на&nbsp;кого&nbsp;меч,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm   Gm6  A7 </span>
-<span class="txt"> но&nbsp;одна&nbsp;мечта&nbsp;во&nbsp;мне&nbsp;есть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G#   Cm </span>
-<span class="txt"> распрекрасная&nbsp;из&nbsp;всех&nbsp;мечт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;День&nbsp;за&nbsp;днём&nbsp;она&nbsp;растет&nbsp;вширь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   Eb   Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;я&nbsp;ей&nbsp;раб,&nbsp;и&nbsp;я&nbsp;же&nbsp;ей&nbsp;царь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Dm   B    F </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Это&nbsp;ж&nbsp;с&nbsp;виду&nbsp;только&nbsp;я&nbsp;-&nbsp;хмырь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   B </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;нагоняю&nbsp;на&nbsp;людей&nbsp;хмарь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span>
+<span class="line"><span class="txt"> Ни&nbsp;на&nbsp;чью&nbsp;не&nbsp;посягну&nbsp;честь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    Dm   E </span></span>
+<span class="line"><span class="txt"> не&nbsp;точу&nbsp;ни&nbsp;на&nbsp;кого&nbsp;меч,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm   Gm6  A7 </span></span>
+<span class="line"><span class="txt"> но&nbsp;одна&nbsp;мечта&nbsp;во&nbsp;мне&nbsp;есть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G#   Cm </span></span>
+<span class="line"><span class="txt"> распрекрасная&nbsp;из&nbsp;всех&nbsp;мечт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;День&nbsp;за&nbsp;днём&nbsp;она&nbsp;растет&nbsp;вширь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   Eb   Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;я&nbsp;ей&nbsp;раб,&nbsp;и&nbsp;я&nbsp;же&nbsp;ей&nbsp;царь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Dm   B    F </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Это&nbsp;ж&nbsp;с&nbsp;виду&nbsp;только&nbsp;я&nbsp;-&nbsp;хмырь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   B </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;нагоняю&nbsp;на&nbsp;людей&nbsp;хмарь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;на&nbsp;деле&nbsp;я&nbsp;хочу&nbsp;смочь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    Dm   E </span>
-<span class="txt"> улететь&nbsp;от&nbsp;здешних&nbsp;мест&nbsp;прочь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm   Gm6  A7 </span>
-<span class="txt"> И&nbsp;гляжу&nbsp;всё&nbsp;время&nbsp;вдаль,&nbsp;вдаль,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G#   Cm </span>
-<span class="txt"> да&nbsp;отсюда&nbsp;-&nbsp;не&nbsp;видать.&nbsp;Жаль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Улететь&nbsp;хочу,&nbsp;как&nbsp;в&nbsp;том&nbsp;сне,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   Eb   Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;По&nbsp;веленью&nbsp;колдовских&nbsp;чар.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Dm   B    F </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Самолёт&nbsp;не&nbsp;подойдёт&nbsp;мне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   B </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мне&nbsp;воздушный&nbsp;подойдёт&nbsp;шар.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span>
+<span class="line"><span class="txt"> А&nbsp;на&nbsp;деле&nbsp;я&nbsp;хочу&nbsp;смочь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    Dm   E </span></span>
+<span class="line"><span class="txt"> улететь&nbsp;от&nbsp;здешних&nbsp;мест&nbsp;прочь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm   Gm6  A7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;гляжу&nbsp;всё&nbsp;время&nbsp;вдаль,&nbsp;вдаль,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G#   Cm </span></span>
+<span class="line"><span class="txt"> да&nbsp;отсюда&nbsp;-&nbsp;не&nbsp;видать.&nbsp;Жаль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Улететь&nbsp;хочу,&nbsp;как&nbsp;в&nbsp;том&nbsp;сне,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   Eb   Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;По&nbsp;веленью&nbsp;колдовских&nbsp;чар.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Dm   B    F </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Самолёт&nbsp;не&nbsp;подойдёт&nbsp;мне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   B </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мне&nbsp;воздушный&nbsp;подойдёт&nbsp;шар.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;мне&nbsp;люди&nbsp;говорят:&nbsp;"Брось!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    Dm   E </span>
-<span class="txt"> Ну,&nbsp;куда&nbsp;тебе&nbsp;на&nbsp;шар&nbsp;влезть!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm   Gm6  A7 </span>
-<span class="txt"> Всё&nbsp;ты&nbsp;как-то&nbsp;от&nbsp;других&nbsp;вкось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G#   Cm </span>
-<span class="txt"> А&nbsp;ведь&nbsp;сам&nbsp;-&nbsp;не&nbsp;бог&nbsp;весть&nbsp;кто&nbsp;есть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ты&nbsp;для&nbsp;нас,&nbsp;-&nbsp;говорят,&nbsp;-&nbsp;вобще&nbsp;ноль!&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   Eb   Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ишь,&nbsp;удумал&nbsp;про&nbsp;чего&nbsp;петь!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Dm   B    F </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;шарах&nbsp;летать&nbsp;-&nbsp;дурак,&nbsp;что&nbsp;ль?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   B </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На-ка,&nbsp;вот,&nbsp;тебе&nbsp;транвай,&nbsp;едь!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span>
+<span class="line"><span class="txt"> А&nbsp;мне&nbsp;люди&nbsp;говорят:&nbsp;"Брось!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    Dm   E </span></span>
+<span class="line"><span class="txt"> Ну,&nbsp;куда&nbsp;тебе&nbsp;на&nbsp;шар&nbsp;влезть!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm   Gm6  A7 </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;ты&nbsp;как-то&nbsp;от&nbsp;других&nbsp;вкось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G#   Cm </span></span>
+<span class="line"><span class="txt"> А&nbsp;ведь&nbsp;сам&nbsp;-&nbsp;не&nbsp;бог&nbsp;весть&nbsp;кто&nbsp;есть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ты&nbsp;для&nbsp;нас,&nbsp;-&nbsp;говорят,&nbsp;-&nbsp;вобще&nbsp;ноль!&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   Eb   Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ишь,&nbsp;удумал&nbsp;про&nbsp;чего&nbsp;петь!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Dm   B    F </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;шарах&nbsp;летать&nbsp;-&nbsp;дурак,&nbsp;что&nbsp;ль?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   B </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На-ка,&nbsp;вот,&nbsp;тебе&nbsp;транвай,&nbsp;едь!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;несёт&nbsp;меня&nbsp;трамвай&nbsp;вдаль,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    Dm   E </span>
-<span class="txt"> и&nbsp;грызет&nbsp;меня&nbsp;печаль-грусть,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm   Gm6  A7 </span>
-<span class="txt"> не&nbsp;туда,&nbsp;куда&nbsp;хочу,&nbsp;жаль!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G#   Cm </span>
-<span class="txt"> Ну,&nbsp;так&nbsp;что&nbsp;ж,&nbsp;куда-нибудь,&nbsp;пусть!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вы&nbsp;ж,&nbsp;мадам,&nbsp;не&nbsp;лейте&nbsp;слёз&nbsp;здесь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   Eb   Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;как-нибудь,&nbsp;не&nbsp;пропаду&nbsp;там.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Dm   B    F </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;вообще&nbsp;я&nbsp;не&nbsp;умру&nbsp;весь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   B </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Разве&nbsp;только&nbsp;-&nbsp;от&nbsp;любви&nbsp;к&nbsp;вам!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span>
+<span class="line"><span class="txt"> И&nbsp;несёт&nbsp;меня&nbsp;трамвай&nbsp;вдаль,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    Dm   E </span></span>
+<span class="line"><span class="txt"> и&nbsp;грызет&nbsp;меня&nbsp;печаль-грусть,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm   Gm6  A7 </span></span>
+<span class="line"><span class="txt"> не&nbsp;туда,&nbsp;куда&nbsp;хочу,&nbsp;жаль!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G#   Cm </span></span>
+<span class="line"><span class="txt"> Ну,&nbsp;так&nbsp;что&nbsp;ж,&nbsp;куда-нибудь,&nbsp;пусть!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вы&nbsp;ж,&nbsp;мадам,&nbsp;не&nbsp;лейте&nbsp;слёз&nbsp;здесь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   Eb   Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;как-нибудь,&nbsp;не&nbsp;пропаду&nbsp;там.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Dm   B    F </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;вообще&nbsp;я&nbsp;не&nbsp;умру&nbsp;весь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   B </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Разве&nbsp;только&nbsp;-&nbsp;от&nbsp;любви&nbsp;к&nbsp;вам!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Даже&nbsp;если&nbsp;расшибусь&nbsp;вдрызг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    Dm   E </span>
-<span class="txt"> отыщу&nbsp;среди&nbsp;живых&nbsp;щель,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm   Gm6  A7 </span>
-<span class="txt"> распадусь&nbsp;на&nbsp;миллион&nbsp;брызг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G#   Cm </span>
-<span class="txt"> хоть&nbsp;одна&nbsp;да&nbsp;попадёт&nbsp;в&nbsp;цель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;летит&nbsp;трамвай&nbsp;во&nbsp;весь&nbsp;пар,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   Eb   Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;пускай&nbsp;летит,&nbsp;и&nbsp;пёс&nbsp;с&nbsp;ним!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Dm   B    F </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;я&nbsp;всё&nbsp;так&nbsp;же&nbsp;помню&nbsp;свой&nbsp;шар&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   B </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;по-прежнему&nbsp;хочу&nbsp;в&nbsp;Крым.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span>
+<span class="line"><span class="txt"> Даже&nbsp;если&nbsp;расшибусь&nbsp;вдрызг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    Dm   E </span></span>
+<span class="line"><span class="txt"> отыщу&nbsp;среди&nbsp;живых&nbsp;щель,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm   Gm6  A7 </span></span>
+<span class="line"><span class="txt"> распадусь&nbsp;на&nbsp;миллион&nbsp;брызг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G#   Cm </span></span>
+<span class="line"><span class="txt"> хоть&nbsp;одна&nbsp;да&nbsp;попадёт&nbsp;в&nbsp;цель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;летит&nbsp;трамвай&nbsp;во&nbsp;весь&nbsp;пар,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   Eb   Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;пускай&nbsp;летит,&nbsp;и&nbsp;пёс&nbsp;с&nbsp;ним!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   Dm   B    F </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;я&nbsp;всё&nbsp;так&nbsp;же&nbsp;помню&nbsp;свой&nbsp;шар&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   B </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;по-прежнему&nbsp;хочу&nbsp;в&nbsp;Крым.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm   A7   Dm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

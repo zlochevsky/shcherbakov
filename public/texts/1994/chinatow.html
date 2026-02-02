@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,79 +423,77 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">CHINATOWN</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> "...нет&nbsp;заглавной&nbsp;буквы,&nbsp;есть&nbsp;простая,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
+data-key="Hm"><h1>CHINATOWN</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> "...нет&nbsp;заглавной&nbsp;буквы,&nbsp;есть&nbsp;простая,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
 <span class="txt"> мелкая,&nbsp;для&nbsp;выплаты,&nbsp;для&nbsp;траты, </span>
-<span class="txt"> нет&nbsp;начала,&nbsp;есть&nbsp;квартал&nbsp;Китая,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
+<span class="line"><span class="txt"> нет&nbsp;начала,&nbsp;есть&nbsp;квартал&nbsp;Китая,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
 <span class="txt"> есть&nbsp;Китай&nbsp;квартала,&nbsp;вросший&nbsp;в&nbsp;Штаты </span>
-<span class="txt"> Северной&nbsp;Америки,&nbsp;я&nbsp;тоже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
+<span class="line"><span class="txt"> Северной&nbsp;Америки,&nbsp;я&nbsp;тоже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
 <span class="txt"> видимо,&nbsp;врасту".&nbsp;Конец&nbsp;цитаты. </span>
-<span class="txt"> Так&nbsp;или&nbsp;примерно&nbsp;так,&nbsp;похоже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> в&nbsp;лавке&nbsp;сувениров&nbsp;и&nbsp;безделиц&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> из&nbsp;фаянса,&nbsp;воска,&nbsp;камня,&nbsp;кожи&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> думает,&nbsp;быть&nbsp;может,&nbsp;чужеземец&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
+<span class="line"><span class="txt"> Так&nbsp;или&nbsp;примерно&nbsp;так,&nbsp;похоже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> в&nbsp;лавке&nbsp;сувениров&nbsp;и&nbsp;безделиц&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> из&nbsp;фаянса,&nbsp;воска,&nbsp;камня,&nbsp;кожи&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> думает,&nbsp;быть&nbsp;может,&nbsp;чужеземец&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> (крупноват&nbsp;немного&nbsp;для&nbsp;китайца,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
+<span class="line"><span class="txt"> (крупноват&nbsp;немного&nbsp;для&nbsp;китайца,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
 <span class="txt"> для&nbsp;арийца&nbsp;несколько&nbsp;приземист). </span>
-<span class="txt"> Он&nbsp;по&nbsp;лавке&nbsp;в&nbsp;ритме&nbsp;как&nbsp;бы&nbsp;танца&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
+<span class="line"><span class="txt"> Он&nbsp;по&nbsp;лавке&nbsp;в&nbsp;ритме&nbsp;как&nbsp;бы&nbsp;танца&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
 <span class="txt"> ходит&nbsp;иностранными&nbsp;стопами, </span>
-<span class="txt"> роется&nbsp;руками&nbsp;иностранца&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
+<span class="line"><span class="txt"> роется&nbsp;руками&nbsp;иностранца&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
 <span class="txt"> в&nbsp;торбах&nbsp;с&nbsp;черепками,&nbsp;с&nbsp;черепами, </span>
-<span class="txt"> что-то&nbsp;сочиняет,&nbsp;напевает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> морщит&nbsp;бровь&nbsp;и&nbsp;шевелит&nbsp;губами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> Сочинив,&nbsp;немедля&nbsp;забывает&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> всё,&nbsp;но,&nbsp;хоть&nbsp;и&nbsp;знает,&nbsp;что&nbsp;забудет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
+<span class="line"><span class="txt"> что-то&nbsp;сочиняет,&nbsp;напевает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> морщит&nbsp;бровь&nbsp;и&nbsp;шевелит&nbsp;губами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> Сочинив,&nbsp;немедля&nbsp;забывает&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> всё,&nbsp;но,&nbsp;хоть&nbsp;и&nbsp;знает,&nbsp;что&nbsp;забудет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
 <span class="txt">  </span>
-<span class="txt"> записать&nbsp;не&nbsp;хочет,&nbsp;хоть&nbsp;и&nbsp;знает&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
+<span class="line"><span class="txt"> записать&nbsp;не&nbsp;хочет,&nbsp;хоть&nbsp;и&nbsp;знает&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
 <span class="txt"> сам,&nbsp;что&nbsp;первый&nbsp;после&nbsp;рад&nbsp;не&nbsp;будет. </span>
-<span class="txt"> Ходит&nbsp;равномерный,&nbsp;однотонный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
+<span class="line"><span class="txt"> Ходит&nbsp;равномерный,&nbsp;однотонный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
 <span class="txt"> бодрых&nbsp;усыпляет,&nbsp;сонных&nbsp;будит, </span>
-<span class="txt"> временами&nbsp;в&nbsp;сумрак&nbsp;заоконный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
+<span class="line"><span class="txt"> временами&nbsp;в&nbsp;сумрак&nbsp;заоконный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
 <span class="txt"> смотрит&nbsp;иностранными&nbsp;очами, </span>
-<span class="txt"> ёжится&nbsp;и,&nbsp;глядя&nbsp;в&nbsp;сумрак&nbsp;оный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> что-то&nbsp;декламирует&nbsp;о&nbsp;чаре&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> с&nbsp;птичьим&nbsp;молоком&nbsp;иль&nbsp;царской&nbsp;водкой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> либо&nbsp;просто&nbsp;о&nbsp;горячем&nbsp;чае.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
+<span class="line"><span class="txt"> ёжится&nbsp;и,&nbsp;глядя&nbsp;в&nbsp;сумрак&nbsp;оный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> что-то&nbsp;декламирует&nbsp;о&nbsp;чаре&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> с&nbsp;птичьим&nbsp;молоком&nbsp;иль&nbsp;царской&nbsp;водкой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> либо&nbsp;просто&nbsp;о&nbsp;горячем&nbsp;чае.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> За&nbsp;окном&nbsp;канал,&nbsp;и&nbsp;правит&nbsp;лодкой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
+<span class="line"><span class="txt"> За&nbsp;окном&nbsp;канал,&nbsp;и&nbsp;правит&nbsp;лодкой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
 <span class="txt"> ангел,&nbsp;и&nbsp;смеркается&nbsp;всё&nbsp;боле. </span>
-<span class="txt"> Чужеземец&nbsp;бронзу&nbsp;трёт&nbsp;бархоткой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
+<span class="line"><span class="txt"> Чужеземец&nbsp;бронзу&nbsp;трёт&nbsp;бархоткой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
 <span class="txt"> щупает&nbsp;шандалы,&nbsp;жирандоли. </span>
-<span class="txt"> Он&nbsp;не&nbsp;здесь&nbsp;уже,&nbsp;он&nbsp;по&nbsp;соседству,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
+<span class="line"><span class="txt"> Он&nbsp;не&nbsp;здесь&nbsp;уже,&nbsp;он&nbsp;по&nbsp;соседству,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
 <span class="txt"> где-то&nbsp;ближе&nbsp;к&nbsp;детству,&nbsp;к&nbsp;школе,&nbsp;что&nbsp;ли, </span>
-<span class="txt"> ближе&nbsp;к&nbsp;манускрипту,&nbsp;к&nbsp;палимпсесту,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> к&nbsp;бронзовому&nbsp;ангелу&nbsp;с&nbsp;трубою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> Гаснущие&nbsp;блики&nbsp;ближе&nbsp;к&nbsp;сердцу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> принимает&nbsp;он,&nbsp;чем&nbsp;нас&nbsp;с&nbsp;тобою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
+<span class="line"><span class="txt"> ближе&nbsp;к&nbsp;манускрипту,&nbsp;к&nbsp;палимпсесту,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> к&nbsp;бронзовому&nbsp;ангелу&nbsp;с&nbsp;трубою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> Гаснущие&nbsp;блики&nbsp;ближе&nbsp;к&nbsp;сердцу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> принимает&nbsp;он,&nbsp;чем&nbsp;нас&nbsp;с&nbsp;тобою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
 <span class="txt">  </span>
-<span class="txt"> Ближе&nbsp;к&nbsp;водам&nbsp;Стикса,&nbsp;чем&nbsp;канала,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
+<span class="line"><span class="txt"> Ближе&nbsp;к&nbsp;водам&nbsp;Стикса,&nbsp;чем&nbsp;канала,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
 <span class="txt"> он&nbsp;стопу&nbsp;преследует&nbsp;стопою. </span>
-<span class="txt"> Нет&nbsp;начала,&nbsp;есть&nbsp;огонь&nbsp;шандала,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
+<span class="line"><span class="txt"> Нет&nbsp;начала,&nbsp;есть&nbsp;огонь&nbsp;шандала,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
 <span class="txt"> есть&nbsp;чужак,&nbsp;утративший&nbsp;прозванье </span>
-<span class="txt"> в&nbsp;сумерках&nbsp;китайского&nbsp;квартала,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
+<span class="line"><span class="txt"> в&nbsp;сумерках&nbsp;китайского&nbsp;квартала,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
 <span class="txt"> в&nbsp;лавке&nbsp;небылиц,&nbsp;в&nbsp;одно&nbsp;касанье, </span>
-<span class="txt"> с&nbsp;мелкой&nbsp;буквы,&nbsp;со&nbsp;строки&nbsp;не&nbsp;красной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> длящий&nbsp;не&nbsp;своё&nbsp;повествованье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
+<span class="line"><span class="txt"> с&nbsp;мелкой&nbsp;буквы,&nbsp;со&nbsp;строки&nbsp;не&nbsp;красной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> длящий&nbsp;не&nbsp;своё&nbsp;повествованье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;тебе&nbsp;кто&nbsp;не&nbsp;велит,&nbsp;несчастный?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-
+<span class="line"><span class="txt"> А&nbsp;тебе&nbsp;кто&nbsp;не&nbsp;велит,&nbsp;несчастный?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
 </div>
-<pre>
-    <span class="year">1994</span>
-
+<pre><span class="year">1994</span>
 </pre>
+
 
                 </div>
         </div>

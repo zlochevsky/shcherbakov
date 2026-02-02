@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,74 +433,72 @@ span.c {
 data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> То,&nbsp;что&nbsp;хотел&nbsp;бы&nbsp;я&nbsp;высказать,&nbsp;высказыванию&nbsp;не&nbsp;подлежит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span>
-<span class="txt"> ибо&nbsp;вот&nbsp;то,&nbsp;что&nbsp;я&nbsp;высказать&nbsp;хотел&nbsp;бы,&nbsp;оно&nbsp;таково,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span>
-<span class="txt"> что,&nbsp;когда&nbsp;его&nbsp;всё&nbsp;же&nbsp;высказать&nbsp;пытаешься,&nbsp;оно&nbsp;бежит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E    D9/E </span>
-<span class="txt"> а&nbsp;когда&nbsp;не&nbsp;пытаешься,&nbsp;ввек&nbsp;не&nbsp;избавишься&nbsp;от&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span>
+<span class="line"><span class="txt"> То,&nbsp;что&nbsp;хотел&nbsp;бы&nbsp;я&nbsp;высказать,&nbsp;высказыванию&nbsp;не&nbsp;подлежит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span></span>
+<span class="line"><span class="txt"> ибо&nbsp;вот&nbsp;то,&nbsp;что&nbsp;я&nbsp;высказать&nbsp;хотел&nbsp;бы,&nbsp;оно&nbsp;таково,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span></span>
+<span class="line"><span class="txt"> что,&nbsp;когда&nbsp;его&nbsp;всё&nbsp;же&nbsp;высказать&nbsp;пытаешься,&nbsp;оно&nbsp;бежит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E    D9/E </span></span>
+<span class="line"><span class="txt"> а&nbsp;когда&nbsp;не&nbsp;пытаешься,&nbsp;ввек&nbsp;не&nbsp;избавишься&nbsp;от&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кое-кому&nbsp;в&nbsp;этом&nbsp;видятся&nbsp;контуры&nbsp;некоего&nbsp;совершенства.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span>
+<span class="line"><span class="txt"> Кое-кому&nbsp;в&nbsp;этом&nbsp;видятся&nbsp;контуры&nbsp;некоего&nbsp;совершенства.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мне&nbsp;же&nbsp;мерещится&nbsp;нечто&nbsp;нелепое:&nbsp;новый&nbsp;наряд&nbsp;короля;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span>
-<span class="txt"> к&nbsp;чучелу&nbsp;чудища&nbsp;не&nbsp;подошедшие&nbsp;зубы,&nbsp;хребет,&nbsp;плавник;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span>
-<span class="txt"> тёмный&nbsp;аккорд&nbsp;вне&nbsp;тональности,&nbsp;вязкое&nbsp;"до&nbsp;-&nbsp;фа&nbsp;диез&nbsp;-&nbsp;ля";&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E    D9/E </span>
-<span class="txt"> в&nbsp;муках&nbsp;разбитую&nbsp;мастером&nbsp;вазу&nbsp;склеивающий&nbsp;ученик...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span>
+<span class="line"><span class="txt"> Мне&nbsp;же&nbsp;мерещится&nbsp;нечто&nbsp;нелепое:&nbsp;новый&nbsp;наряд&nbsp;короля;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span></span>
+<span class="line"><span class="txt"> к&nbsp;чучелу&nbsp;чудища&nbsp;не&nbsp;подошедшие&nbsp;зубы,&nbsp;хребет,&nbsp;плавник;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span></span>
+<span class="line"><span class="txt"> тёмный&nbsp;аккорд&nbsp;вне&nbsp;тональности,&nbsp;вязкое&nbsp;"до&nbsp;-&nbsp;фа&nbsp;диез&nbsp;-&nbsp;ля";&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E    D9/E </span></span>
+<span class="line"><span class="txt"> в&nbsp;муках&nbsp;разбитую&nbsp;мастером&nbsp;вазу&nbsp;склеивающий&nbsp;ученик...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кое-кто&nbsp;без&nbsp;особых&nbsp;причин&nbsp;именует&nbsp;это&nbsp;соблазном.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span>
+<span class="line"><span class="txt"> Кое-кто&nbsp;без&nbsp;особых&nbsp;причин&nbsp;именует&nbsp;это&nbsp;соблазном.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Бью&nbsp;себя&nbsp;по&nbsp;рукам,&nbsp;твержу:&nbsp;оставь,&nbsp;не&nbsp;сходи,&nbsp;брат,&nbsp;с&nbsp;ума;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span>
-<span class="txt"> ты,&nbsp;даже&nbsp;в&nbsp;родном&nbsp;диалекте&nbsp;не&nbsp;ориентируясь&nbsp;наверняка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span>
-<span class="txt"> будучи&nbsp;лишь&nbsp;приложением&nbsp;к&nbsp;вывеске&nbsp;"Генрих"&nbsp;или&nbsp;там&nbsp;"Франсуа",&nbsp; </span><span class="ch"> Am/E    D9/E </span>
-<span class="txt"> ловишь&nbsp;на&nbsp;слове&nbsp;то,&nbsp;для&nbsp;чего&nbsp;не&nbsp;выдумано&nbsp;языка...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span>
+<span class="line"><span class="txt"> Бью&nbsp;себя&nbsp;по&nbsp;рукам,&nbsp;твержу:&nbsp;оставь,&nbsp;не&nbsp;сходи,&nbsp;брат,&nbsp;с&nbsp;ума;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span></span>
+<span class="line"><span class="txt"> ты,&nbsp;даже&nbsp;в&nbsp;родном&nbsp;диалекте&nbsp;не&nbsp;ориентируясь&nbsp;наверняка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span></span>
+<span class="line"><span class="txt"> будучи&nbsp;лишь&nbsp;приложением&nbsp;к&nbsp;вывеске&nbsp;"Генрих"&nbsp;или&nbsp;там&nbsp;"Франсуа",&nbsp; </span><span class="ch"> Am/E    D9/E </span></span>
+<span class="line"><span class="txt"> ловишь&nbsp;на&nbsp;слове&nbsp;то,&nbsp;для&nbsp;чего&nbsp;не&nbsp;выдумано&nbsp;языка...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кое-кто,&nbsp;неизвестно&nbsp;зачем,&nbsp;прибегает&nbsp;с&nbsp;этим&nbsp;к&nbsp;латыни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span>
+<span class="line"><span class="txt"> Кое-кто,&nbsp;неизвестно&nbsp;зачем,&nbsp;прибегает&nbsp;с&nbsp;этим&nbsp;к&nbsp;латыни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Nomen?&nbsp;Sermo?&nbsp;Aestus?&nbsp;Aevum?&nbsp;Aurum?&nbsp;Oriens?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Malum?&nbsp;Scelus?&nbsp;Lutum?&nbsp;Luctus?&nbsp;Maeror?&nbsp;Odium?..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Ebdim </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Nomen?&nbsp;Sermo?&nbsp;Aestus?&nbsp;Aevum?&nbsp;Aurum?&nbsp;Oriens?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Malum?&nbsp;Scelus?&nbsp;Lutum?&nbsp;Luctus?&nbsp;Maeror?&nbsp;Odium?..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Ebdim </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Видимо,&nbsp;я&nbsp;не&nbsp;прав,&nbsp;говоря,&nbsp;что&nbsp;погоды&nbsp;стоят&nbsp;ещё&nbsp;те.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span>
-<span class="txt"> Видимо,&nbsp;они&nbsp;уже&nbsp;эти,&nbsp;двадцатого&nbsp;раза&nbsp;по&nbsp;сто&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span>
-<span class="txt"> нашей,&nbsp;не&nbsp;чьей-нибудь&nbsp;эры,&nbsp;не&nbsp;в&nbsp;чьей-нибудь&nbsp;нищете...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E    D9/E </span>
-<span class="txt"> Стоп!&nbsp;Это&nbsp;всё&nbsp;уже&nbsp;было,&nbsp;было...&nbsp;значит,&nbsp;не&nbsp;то,&nbsp;не&nbsp;то...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span>
+<span class="line"><span class="txt"> Видимо,&nbsp;я&nbsp;не&nbsp;прав,&nbsp;говоря,&nbsp;что&nbsp;погоды&nbsp;стоят&nbsp;ещё&nbsp;те.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span></span>
+<span class="line"><span class="txt"> Видимо,&nbsp;они&nbsp;уже&nbsp;эти,&nbsp;двадцатого&nbsp;раза&nbsp;по&nbsp;сто&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span></span>
+<span class="line"><span class="txt"> нашей,&nbsp;не&nbsp;чьей-нибудь&nbsp;эры,&nbsp;не&nbsp;в&nbsp;чьей-нибудь&nbsp;нищете...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E    D9/E </span></span>
+<span class="line"><span class="txt"> Стоп!&nbsp;Это&nbsp;всё&nbsp;уже&nbsp;было,&nbsp;было...&nbsp;значит,&nbsp;не&nbsp;то,&nbsp;не&nbsp;то...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кое-кому&nbsp;это&nbsp;кажется&nbsp;чем-то&nbsp;несовместимым&nbsp;с&nbsp;карьерой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span>
+<span class="line"><span class="txt"> Кое-кому&nbsp;это&nbsp;кажется&nbsp;чем-то&nbsp;несовместимым&nbsp;с&nbsp;карьерой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мне&nbsp;же&nbsp;-&nbsp;вот&nbsp;только&nbsp;что&nbsp;-&nbsp;чудилось:&nbsp;вижу,&nbsp;нашёл,&nbsp;сошлось!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span>
-<span class="txt"> Явственно&nbsp;обнаружились&nbsp;какие-то&nbsp;маяки,&nbsp;резеда,&nbsp;мистраль...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span>
-<span class="txt"> Правда,&nbsp;через&nbsp;секунду&nbsp;это&nbsp;покрылось&nbsp;коростой&nbsp;и&nbsp;взорвалось,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E    D9/E </span>
-<span class="txt"> в&nbsp;воздухе&nbsp;вычертив&nbsp;снежную&nbsp;сверхскоростную&nbsp;горизонталь...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span>
+<span class="line"><span class="txt"> Мне&nbsp;же&nbsp;-&nbsp;вот&nbsp;только&nbsp;что&nbsp;-&nbsp;чудилось:&nbsp;вижу,&nbsp;нашёл,&nbsp;сошлось!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span></span>
+<span class="line"><span class="txt"> Явственно&nbsp;обнаружились&nbsp;какие-то&nbsp;маяки,&nbsp;резеда,&nbsp;мистраль...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span></span>
+<span class="line"><span class="txt"> Правда,&nbsp;через&nbsp;секунду&nbsp;это&nbsp;покрылось&nbsp;коростой&nbsp;и&nbsp;взорвалось,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E    D9/E </span></span>
+<span class="line"><span class="txt"> в&nbsp;воздухе&nbsp;вычертив&nbsp;снежную&nbsp;сверхскоростную&nbsp;горизонталь...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кое-кто&nbsp;почитает&nbsp;за&nbsp;благо&nbsp;не&nbsp;трогать&nbsp;этого&nbsp;вовсе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span>
+<span class="line"><span class="txt"> Кое-кто&nbsp;почитает&nbsp;за&nbsp;благо&nbsp;не&nbsp;трогать&nbsp;этого&nbsp;вовсе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Carmen.&nbsp;Metus.&nbsp;Merum.&nbsp;Mustum.&nbsp;Reditus.&nbsp;Requies.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Lumen.&nbsp;Flamen.&nbsp;Caelum.&nbsp;Deus.&nbsp;Venia.&nbsp;Otium...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Ebdim </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Carmen.&nbsp;Metus.&nbsp;Merum.&nbsp;Mustum.&nbsp;Reditus.&nbsp;Requies.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Lumen.&nbsp;Flamen.&nbsp;Caelum.&nbsp;Deus.&nbsp;Venia.&nbsp;Otium...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Ebdim </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сбросить&nbsp;оцепенение,&nbsp;буквы&nbsp;пересчитать,&nbsp;повторить&nbsp;"не&nbsp;то",&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span>
-<span class="txt"> встать,&nbsp;потоптаться&nbsp;несколько&nbsp;-&nbsp;и&nbsp;снова&nbsp;назад,&nbsp;в&nbsp;дурман...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span>
-<span class="txt"> Есть,&nbsp;наконец,&nbsp;эксперты&nbsp;авторитетнее,&nbsp;нежели&nbsp;кое-кто...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E    D9/E </span>
-<span class="txt"> Шар&nbsp;замедляет&nbsp;движение.&nbsp;Прах&nbsp;осыпается&nbsp;со&nbsp;стремян...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span>
+<span class="line"><span class="txt"> Сбросить&nbsp;оцепенение,&nbsp;буквы&nbsp;пересчитать,&nbsp;повторить&nbsp;"не&nbsp;то",&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6/F#  D/F# </span></span>
+<span class="line"><span class="txt"> встать,&nbsp;потоптаться&nbsp;несколько&nbsp;-&nbsp;и&nbsp;снова&nbsp;назад,&nbsp;в&nbsp;дурман...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       Dm/F </span></span>
+<span class="line"><span class="txt"> Есть,&nbsp;наконец,&nbsp;эксперты&nbsp;авторитетнее,&nbsp;нежели&nbsp;кое-кто...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E    D9/E </span></span>
+<span class="line"><span class="txt"> Шар&nbsp;замедляет&nbsp;движение.&nbsp;Прах&nbsp;осыпается&nbsp;со&nbsp;стремян...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7/C   Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кое-кто&nbsp;вообще&nbsp;ничего&nbsp;под&nbsp;этим&nbsp;не&nbsp;разумеет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span>
+<span class="line"><span class="txt"> Кое-кто&nbsp;вообще&nbsp;ничего&nbsp;под&nbsp;этим&nbsp;не&nbsp;разумеет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7/B   Am </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1993</span>
-
+<pre><span class="year">1993</span>
 </pre>
+
 
                 </div>
         </div>

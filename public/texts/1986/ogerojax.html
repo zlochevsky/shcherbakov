@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,64 +423,62 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ПЕСНЯ О ГЕРОЯХ</span>
+data-key="Am"><h1>ПЕСНЯ О ГЕРОЯХ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> За&nbsp;суетность&nbsp;и&nbsp;тщетность&nbsp;наших&nbsp;лет&nbsp;пустынных,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span>
-<span class="txt"> за&nbsp;то,&nbsp;что&nbsp;так&nbsp;томительно&nbsp;и&nbsp;так&nbsp;темно&nbsp;в&nbsp;них,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span>
-<span class="txt"> совсем&nbsp;бы&nbsp;не&nbsp;хотелось&nbsp;осудить&nbsp;невинных,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A  F  A7 Dm </span>
-<span class="txt"> когда&nbsp;б&nbsp;была&nbsp;возможность&nbsp;отыскать&nbsp;виновных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Am G7 C  E </span>
+<span class="line"><span class="txt"> За&nbsp;суетность&nbsp;и&nbsp;тщетность&nbsp;наших&nbsp;лет&nbsp;пустынных,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span></span>
+<span class="line"><span class="txt"> за&nbsp;то,&nbsp;что&nbsp;так&nbsp;томительно&nbsp;и&nbsp;так&nbsp;темно&nbsp;в&nbsp;них,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span></span>
+<span class="line"><span class="txt"> совсем&nbsp;бы&nbsp;не&nbsp;хотелось&nbsp;осудить&nbsp;невинных,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A  F  A7 Dm </span></span>
+<span class="line"><span class="txt"> когда&nbsp;б&nbsp;была&nbsp;возможность&nbsp;отыскать&nbsp;виновных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Am G7 C  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> На&nbsp;помощь&nbsp;нам&nbsp;спешат&nbsp;иных&nbsp;времён&nbsp;агенты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span>
-<span class="txt"> От&nbsp;медленного&nbsp;Тибра&nbsp;и&nbsp;могучей&nbsp;Трои&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span>
-<span class="txt"> над&nbsp;нами&nbsp;бесконечные&nbsp;летят&nbsp;легенды,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A  F  A7 Dm </span>
-<span class="txt"> пред&nbsp;нами&nbsp;незабвенные&nbsp;идут&nbsp;герои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Am G7 C  E </span>
+<span class="line"><span class="txt"> На&nbsp;помощь&nbsp;нам&nbsp;спешат&nbsp;иных&nbsp;времён&nbsp;агенты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span></span>
+<span class="line"><span class="txt"> От&nbsp;медленного&nbsp;Тибра&nbsp;и&nbsp;могучей&nbsp;Трои&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span></span>
+<span class="line"><span class="txt"> над&nbsp;нами&nbsp;бесконечные&nbsp;летят&nbsp;легенды,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A  F  A7 Dm </span></span>
+<span class="line"><span class="txt"> пред&nbsp;нами&nbsp;незабвенные&nbsp;идут&nbsp;герои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Am G7 C  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Их&nbsp;поступь&nbsp;тяжела&nbsp;от&nbsp;долгих&nbsp;лет&nbsp;скитаний,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span>
-<span class="txt"> в&nbsp;речах&nbsp;-&nbsp;благоуханье&nbsp;неземных&nbsp;соцветий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span>
-<span class="txt"> глаза&nbsp;таят&nbsp;следы&nbsp;пережитых&nbsp;страданий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab C7 Ab Fm </span>
-<span class="txt"> в&nbsp;них&nbsp;виден&nbsp;свет&nbsp;миров&nbsp;и&nbsp;слышен&nbsp;гул&nbsp;столетий.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Db Cm H7 E7 </span>
+<span class="line"><span class="txt"> Их&nbsp;поступь&nbsp;тяжела&nbsp;от&nbsp;долгих&nbsp;лет&nbsp;скитаний,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span></span>
+<span class="line"><span class="txt"> в&nbsp;речах&nbsp;-&nbsp;благоуханье&nbsp;неземных&nbsp;соцветий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span></span>
+<span class="line"><span class="txt"> глаза&nbsp;таят&nbsp;следы&nbsp;пережитых&nbsp;страданий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab C7 Ab Fm </span></span>
+<span class="line"><span class="txt"> в&nbsp;них&nbsp;виден&nbsp;свет&nbsp;миров&nbsp;и&nbsp;слышен&nbsp;гул&nbsp;столетий.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Db Cm H7 E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> На&nbsp;наш&nbsp;скалистый&nbsp;берег&nbsp;перекинув&nbsp;трапы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span>
-<span class="txt"> спускаются&nbsp;они&nbsp;из&nbsp;невозможной&nbsp;дали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span>
-<span class="txt"> всем&nbsp;видом&nbsp;говоря,&nbsp;какие&nbsp;мы&nbsp;растяпы:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A  F  A7 Dm </span>
-<span class="txt"> они&nbsp;свершали&nbsp;подвиги,&nbsp;а&nbsp;мы&nbsp;моргали.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Am G7 C  E </span>
+<span class="line"><span class="txt"> На&nbsp;наш&nbsp;скалистый&nbsp;берег&nbsp;перекинув&nbsp;трапы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span></span>
+<span class="line"><span class="txt"> спускаются&nbsp;они&nbsp;из&nbsp;невозможной&nbsp;дали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span></span>
+<span class="line"><span class="txt"> всем&nbsp;видом&nbsp;говоря,&nbsp;какие&nbsp;мы&nbsp;растяпы:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A  F  A7 Dm </span></span>
+<span class="line"><span class="txt"> они&nbsp;свершали&nbsp;подвиги,&nbsp;а&nbsp;мы&nbsp;моргали.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Am G7 C  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;мы&nbsp;на&nbsp;них&nbsp;взираем&nbsp;в&nbsp;убежденье&nbsp;прочном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span>
-<span class="txt"> что&nbsp;все&nbsp;их&nbsp;чудеса&nbsp;у&nbsp;нас&nbsp;давно&nbsp;в&nbsp;продаже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span>
-<span class="txt"> И&nbsp;нам&nbsp;уже&nbsp;не&nbsp;нужен&nbsp;миф&nbsp;о&nbsp;страшном&nbsp;прошлом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab C7 Ab Fm </span>
-<span class="txt"> Всё&nbsp;больше&nbsp;как-то&nbsp;хочется&nbsp;спросить&nbsp;-&nbsp;что&nbsp;дальше?&nbsp;&nbsp;&nbsp; </span><span class="ch"> Db Cm H7 E7 </span>
+<span class="line"><span class="txt"> Но&nbsp;мы&nbsp;на&nbsp;них&nbsp;взираем&nbsp;в&nbsp;убежденье&nbsp;прочном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span></span>
+<span class="line"><span class="txt"> что&nbsp;все&nbsp;их&nbsp;чудеса&nbsp;у&nbsp;нас&nbsp;давно&nbsp;в&nbsp;продаже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span></span>
+<span class="line"><span class="txt"> И&nbsp;нам&nbsp;уже&nbsp;не&nbsp;нужен&nbsp;миф&nbsp;о&nbsp;страшном&nbsp;прошлом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab C7 Ab Fm </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;больше&nbsp;как-то&nbsp;хочется&nbsp;спросить&nbsp;-&nbsp;что&nbsp;дальше?&nbsp;&nbsp;&nbsp; </span><span class="ch"> Db Cm H7 E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;мы&nbsp;всю&nbsp;ночь&nbsp;мечтаем&nbsp;и&nbsp;поём&nbsp;с&nbsp;натугой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span>
-<span class="txt"> какой&nbsp;наступит&nbsp;рай,&nbsp;как&nbsp;только&nbsp;утро&nbsp;грянет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span>
-<span class="txt"> Покуда&nbsp;воет&nbsp;буря,&nbsp;нам&nbsp;и&nbsp;ночь&nbsp;подругой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A  F  A7 Dm </span>
-<span class="txt"> Но&nbsp;что&nbsp;мы&nbsp;будем&nbsp;петь,&nbsp;как&nbsp;только&nbsp;солнце&nbsp;встанет?&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Am G7 C  E </span>
+<span class="line"><span class="txt"> И&nbsp;мы&nbsp;всю&nbsp;ночь&nbsp;мечтаем&nbsp;и&nbsp;поём&nbsp;с&nbsp;натугой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span></span>
+<span class="line"><span class="txt"> какой&nbsp;наступит&nbsp;рай,&nbsp;как&nbsp;только&nbsp;утро&nbsp;грянет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  B  E </span></span>
+<span class="line"><span class="txt"> Покуда&nbsp;воет&nbsp;буря,&nbsp;нам&nbsp;и&nbsp;ночь&nbsp;подругой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A  F  A7 Dm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;что&nbsp;мы&nbsp;будем&nbsp;петь,&nbsp;как&nbsp;только&nbsp;солнце&nbsp;встанет?&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Am G7 C  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Заздравного&nbsp;вина&nbsp;иль&nbsp;погребальной&nbsp;хвои&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span>
-<span class="txt"> подарит&nbsp;нам&nbsp;судьба&nbsp;уже,&nbsp;быть&nbsp;может,&nbsp;скоро?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span>
-<span class="txt"> Об&nbsp;этом&nbsp;ничего&nbsp;не&nbsp;говорят&nbsp;герои,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab C7 Ab Fm </span>
-<span class="txt"> а&nbsp;только&nbsp;всё&nbsp;кивают&nbsp;и&nbsp;вздыхают&nbsp;скорбно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Db Cm H7 E7 </span>
+<span class="line"><span class="txt"> Заздравного&nbsp;вина&nbsp;иль&nbsp;погребальной&nbsp;хвои&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span></span>
+<span class="line"><span class="txt"> подарит&nbsp;нам&nbsp;судьба&nbsp;уже,&nbsp;быть&nbsp;может,&nbsp;скоро?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Ab Fm G </span></span>
+<span class="line"><span class="txt"> Об&nbsp;этом&nbsp;ничего&nbsp;не&nbsp;говорят&nbsp;герои,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab C7 Ab Fm </span></span>
+<span class="line"><span class="txt"> а&nbsp;только&nbsp;всё&nbsp;кивают&nbsp;и&nbsp;вздыхают&nbsp;скорбно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Db Cm H7 E7 </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1986</span>
-
+<pre><span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

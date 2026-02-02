@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -423,54 +431,51 @@ span.c {
 
                     <div class="song"
 data-key="Em"><span class="txt"> Без&nbsp;выходных,&nbsp;в&nbsp;три&nbsp;смены... </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Без&nbsp;выходных,&nbsp;в&nbsp;три&nbsp;смены&nbsp;(конец&nbsp;квартала,&nbsp;своя&nbsp;гордыня)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em Am Em </span>
-<span class="txt"> гвалт&nbsp;за&nbsp;окном&nbsp;и&nbsp;грохот&nbsp;-&nbsp;сдают&nbsp;объект,&nbsp;строители&nbsp;страх&nbsp;проворны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Dm E7 </span>
-<span class="txt"> С&nbsp;десяток&nbsp;зим&nbsp;тому&nbsp;здесь&nbsp;была&nbsp;пустыня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> А&nbsp;нынче&nbsp;улица&nbsp;Красных&nbsp;Зорь:&nbsp;этажи,&nbsp;балконы,&nbsp;антенны,&nbsp;средние&nbsp;волны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C G D H7 </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Диктор&nbsp;сулит&nbsp;концерт&nbsp;по&nbsp;заявкам&nbsp;чьим-то&nbsp;в&nbsp;двенадцать&nbsp;с&nbsp;чем-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em Am Em </span>
-<span class="txt"> Я&nbsp;не&nbsp;писал&nbsp;заявок,&nbsp;но&nbsp;слушать&nbsp;стану,&nbsp;жуя&nbsp;сухомятный&nbsp;полдник.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Dm E7 </span>
-<span class="txt"> Искал&nbsp;разбавить,&nbsp;шарил&nbsp;в&nbsp;шкафах,&nbsp;но&nbsp;тщетно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> Остался&nbsp;лишь&nbsp;полусладкий&nbsp;вздор&nbsp;от&nbsp;гостей&nbsp;вчера&nbsp;или&nbsp;ранее&nbsp;-&nbsp;кто&nbsp;их&nbsp;помнит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C G D H7    -- F#m </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Кто&nbsp;их&nbsp;поймёт&nbsp;внезапных:&nbsp;зачем&nbsp;возникли,&nbsp;чего&nbsp;хотели?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D F#m D F#m </span>
-<span class="txt"> Тратились,&nbsp;рылись&nbsp;в&nbsp;адресном,&nbsp;только&nbsp;бы&nbsp;снять&nbsp;ленивца&nbsp;с&nbsp;кушетки&nbsp;шаткой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m F# Em F# </span>
-<span class="txt"> Дорогой&nbsp;мёрзли,&nbsp;вязли&nbsp;в&nbsp;снегу,&nbsp;холодели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span>
-<span class="txt"> На&nbsp;предпоследний&nbsp;пешком&nbsp;ползли&nbsp;(отключён&nbsp;подъём,&nbsp;что-то&nbsp;там&nbsp;не&nbsp;в&nbsp;порядке&nbsp;с&nbsp;шахтой).&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm D A E          Em <- </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Вздор&nbsp;по&nbsp;чужим&nbsp;заявкам,&nbsp;а&nbsp;щёлкнуть&nbsp;жаль,&nbsp;уж&nbsp;одно&nbsp;к&nbsp;другому.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em Am Em </span>
-<span class="txt"> Не&nbsp;повезло&nbsp;с&nbsp;напитком,&nbsp;так&nbsp;пусть&nbsp;певицу&nbsp;зовут&nbsp;Изабеллой&nbsp;тоже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Dm E7 </span>
-<span class="txt"> Не&nbsp;всё&nbsp;чинить&nbsp;допросы&nbsp;себе&nbsp;дорогому,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> не&nbsp;век&nbsp;терзаться,&nbsp;зачем&nbsp;вчера,&nbsp;а&nbsp;равно&nbsp;и&nbsp;ранее&nbsp;жил,&nbsp;мол,&nbsp;как&nbsp;жить&nbsp;негоже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C G H7 </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Да,&nbsp;мельтешил,&nbsp;слонялся,&nbsp;ломал&nbsp;хлеб-соль,&nbsp;не&nbsp;растя&nbsp;колосьев.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em Am Em </span>
-<span class="txt"> Незачем&nbsp;было&nbsp;жить,&nbsp;низачем&nbsp;и&nbsp;не&nbsp;жил.&nbsp;Имел,&nbsp;что&nbsp;лежало&nbsp;плохо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Dm E7 </span>
-<span class="txt"> Чужую&nbsp;воду&nbsp;брал&nbsp;из&nbsp;чужих&nbsp;колодцев.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> И&nbsp;то&nbsp;не&nbsp;так&nbsp;чтобы&nbsp;очень&nbsp;брал,&nbsp;сторонясь&nbsp;размаха,&nbsp;успеха,&nbsp;переполоха.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C G D H7    -- F#m </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Эх,&nbsp;бирюзовые,&nbsp;золоты&nbsp;колечики,&nbsp;где&nbsp;вы,&nbsp;чьи&nbsp;вы?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D7 F#m D7 F#m </span>
-<span class="txt"> В&nbsp;адресном&nbsp;не&nbsp;узнаешь,&nbsp;не&nbsp;намекнут&nbsp;вино&nbsp;и&nbsp;певица,&nbsp;тёзки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m F# Em F# </span>
-<span class="txt"> Погасли&nbsp;зря&nbsp;среди&nbsp;лебеды-крапивы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span>
-<span class="txt"> приметно-памятные&nbsp;когда-то&nbsp;цветные&nbsp;девичьи-птичьи&nbsp;глазки-слёзки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm D A E          Em <- </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Завтра,&nbsp;вчера,&nbsp;всегда&nbsp;отключён&nbsp;комфорт,&nbsp;высоки&nbsp;ступени.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em Am Em </span>
-<span class="txt"> Выйдешь&nbsp;по&nbsp;что-нибудь,&nbsp;а&nbsp;наверх&nbsp;ползи&nbsp;потом&nbsp;без&nbsp;подъёмной&nbsp;клети.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Dm E7 </span>
-<span class="txt"> Само&nbsp;собой&nbsp;грехи,&nbsp;так&nbsp;ещё&nbsp;колени,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> то&nbsp;те,&nbsp;то&nbsp;эти&nbsp;грозят&nbsp;сумой&nbsp;при&nbsp;оплате&nbsp;в&nbsp;должной&nbsp;валюте,&nbsp;не&nbsp;те,&nbsp;так&nbsp;эти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C G D H7 </span>
-<span class="txt"> &nbsp; </span>
- <br />
-
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Без&nbsp;выходных,&nbsp;в&nbsp;три&nbsp;смены&nbsp;(конец&nbsp;квартала,&nbsp;своя&nbsp;гордыня)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em Am Em </span></span>
+<span class="line"><span class="txt"> гвалт&nbsp;за&nbsp;окном&nbsp;и&nbsp;грохот&nbsp;-&nbsp;сдают&nbsp;объект,&nbsp;строители&nbsp;страх&nbsp;проворны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Dm E7 </span></span>
+<span class="line"><span class="txt"> С&nbsp;десяток&nbsp;зим&nbsp;тому&nbsp;здесь&nbsp;была&nbsp;пустыня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;нынче&nbsp;улица&nbsp;Красных&nbsp;Зорь:&nbsp;этажи,&nbsp;балконы,&nbsp;антенны,&nbsp;средние&nbsp;волны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C G D H7 </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Диктор&nbsp;сулит&nbsp;концерт&nbsp;по&nbsp;заявкам&nbsp;чьим-то&nbsp;в&nbsp;двенадцать&nbsp;с&nbsp;чем-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em Am Em </span></span>
+<span class="line"><span class="txt"> Я&nbsp;не&nbsp;писал&nbsp;заявок,&nbsp;но&nbsp;слушать&nbsp;стану,&nbsp;жуя&nbsp;сухомятный&nbsp;полдник.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Dm E7 </span></span>
+<span class="line"><span class="txt"> Искал&nbsp;разбавить,&nbsp;шарил&nbsp;в&nbsp;шкафах,&nbsp;но&nbsp;тщетно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> Остался&nbsp;лишь&nbsp;полусладкий&nbsp;вздор&nbsp;от&nbsp;гостей&nbsp;вчера&nbsp;или&nbsp;ранее&nbsp;-&nbsp;кто&nbsp;их&nbsp;помнит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C G D H7    -- F#m </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Кто&nbsp;их&nbsp;поймёт&nbsp;внезапных:&nbsp;зачем&nbsp;возникли,&nbsp;чего&nbsp;хотели?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D F#m D F#m </span></span>
+<span class="line"><span class="txt"> Тратились,&nbsp;рылись&nbsp;в&nbsp;адресном,&nbsp;только&nbsp;бы&nbsp;снять&nbsp;ленивца&nbsp;с&nbsp;кушетки&nbsp;шаткой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m F# Em F# </span></span>
+<span class="line"><span class="txt"> Дорогой&nbsp;мёрзли,&nbsp;вязли&nbsp;в&nbsp;снегу,&nbsp;холодели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span></span>
+<span class="line"><span class="txt"> На&nbsp;предпоследний&nbsp;пешком&nbsp;ползли&nbsp;(отключён&nbsp;подъём,&nbsp;что-то&nbsp;там&nbsp;не&nbsp;в&nbsp;порядке&nbsp;с&nbsp;шахтой).&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm D A E          Em <- </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Вздор&nbsp;по&nbsp;чужим&nbsp;заявкам,&nbsp;а&nbsp;щёлкнуть&nbsp;жаль,&nbsp;уж&nbsp;одно&nbsp;к&nbsp;другому.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em Am Em </span></span>
+<span class="line"><span class="txt"> Не&nbsp;повезло&nbsp;с&nbsp;напитком,&nbsp;так&nbsp;пусть&nbsp;певицу&nbsp;зовут&nbsp;Изабеллой&nbsp;тоже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Dm E7 </span></span>
+<span class="line"><span class="txt"> Не&nbsp;всё&nbsp;чинить&nbsp;допросы&nbsp;себе&nbsp;дорогому,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;век&nbsp;терзаться,&nbsp;зачем&nbsp;вчера,&nbsp;а&nbsp;равно&nbsp;и&nbsp;ранее&nbsp;жил,&nbsp;мол,&nbsp;как&nbsp;жить&nbsp;негоже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C G H7 </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Да,&nbsp;мельтешил,&nbsp;слонялся,&nbsp;ломал&nbsp;хлеб-соль,&nbsp;не&nbsp;растя&nbsp;колосьев.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em Am Em </span></span>
+<span class="line"><span class="txt"> Незачем&nbsp;было&nbsp;жить,&nbsp;низачем&nbsp;и&nbsp;не&nbsp;жил.&nbsp;Имел,&nbsp;что&nbsp;лежало&nbsp;плохо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Dm E7 </span></span>
+<span class="line"><span class="txt"> Чужую&nbsp;воду&nbsp;брал&nbsp;из&nbsp;чужих&nbsp;колодцев.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> И&nbsp;то&nbsp;не&nbsp;так&nbsp;чтобы&nbsp;очень&nbsp;брал,&nbsp;сторонясь&nbsp;размаха,&nbsp;успеха,&nbsp;переполоха.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C G D H7    -- F#m </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Эх,&nbsp;бирюзовые,&nbsp;золоты&nbsp;колечики,&nbsp;где&nbsp;вы,&nbsp;чьи&nbsp;вы?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D7 F#m D7 F#m </span></span>
+<span class="line"><span class="txt"> В&nbsp;адресном&nbsp;не&nbsp;узнаешь,&nbsp;не&nbsp;намекнут&nbsp;вино&nbsp;и&nbsp;певица,&nbsp;тёзки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m F# Em F# </span></span>
+<span class="line"><span class="txt"> Погасли&nbsp;зря&nbsp;среди&nbsp;лебеды-крапивы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span></span>
+<span class="line"><span class="txt"> приметно-памятные&nbsp;когда-то&nbsp;цветные&nbsp;девичьи-птичьи&nbsp;глазки-слёзки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm D A E          Em <- </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Завтра,&nbsp;вчера,&nbsp;всегда&nbsp;отключён&nbsp;комфорт,&nbsp;высоки&nbsp;ступени.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em Am Em </span></span>
+<span class="line"><span class="txt"> Выйдешь&nbsp;по&nbsp;что-нибудь,&nbsp;а&nbsp;наверх&nbsp;ползи&nbsp;потом&nbsp;без&nbsp;подъёмной&nbsp;клети.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Dm E7 </span></span>
+<span class="line"><span class="txt"> Само&nbsp;собой&nbsp;грехи,&nbsp;так&nbsp;ещё&nbsp;колени,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> то&nbsp;те,&nbsp;то&nbsp;эти&nbsp;грозят&nbsp;сумой&nbsp;при&nbsp;оплате&nbsp;в&nbsp;должной&nbsp;валюте,&nbsp;не&nbsp;те,&nbsp;так&nbsp;эти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C G D H7 </span></span>
+<span class="txt">  </span>
 </div>
-<pre>
-    <span class="year">2007</span>                                                                                  Em
+<pre><span class="year">2007</span>                                                                                  Em
 	
                                                                                       Нотировка усреднённо-условная,
                                                                                       ориентируется в основном
                                                                                       на исполнение <span class="year">2007</span> г.
 
-
 </pre>
+
 
                 </div>
         </div>

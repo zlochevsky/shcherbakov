@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,74 +423,72 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="D"><span class="sng-title">ECCE HOMO</span>
+data-key="D"><h1>ECCE HOMO</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;ну-ка&nbsp;выпьем,&nbsp;храбрые&nbsp;вояки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D       A         D </span>
-<span class="txt"> друзья-сержанты,&nbsp;братья-денщики!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7                G </span>
-<span class="txt"> Не&nbsp;для&nbsp;тоски&nbsp;хмельной,&nbsp;не&nbsp;ради&nbsp;драки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span>
-<span class="txt"> а&nbsp;для&nbsp;того,&nbsp;что&nbsp;пить&nbsp;не&nbsp;дураки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        D </span>
+<span class="line"><span class="txt"> А&nbsp;ну-ка&nbsp;выпьем,&nbsp;храбрые&nbsp;вояки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D       A         D </span></span>
+<span class="line"><span class="txt"> друзья-сержанты,&nbsp;братья-денщики!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7                G </span></span>
+<span class="line"><span class="txt"> Не&nbsp;для&nbsp;тоски&nbsp;хмельной,&nbsp;не&nbsp;ради&nbsp;драки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span></span>
+<span class="line"><span class="txt"> а&nbsp;для&nbsp;того,&nbsp;что&nbsp;пить&nbsp;не&nbsp;дураки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> К&nbsp;тому&nbsp;же&nbsp;тост&nbsp;готов,&nbsp;достойный&nbsp;века:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span>
-<span class="txt"> я&nbsp;предлагаю&nbsp;выпить&nbsp;за&nbsp;того,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span>
-<span class="txt"> о&nbsp;ком&nbsp;забота&nbsp;наша&nbsp;и&nbsp;опека&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span>
-<span class="txt"> на&nbsp;данный&nbsp;час&nbsp;для&nbsp;нас&nbsp;-&nbsp;важней&nbsp;всего!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        Gm </span>
-<span class="txt"> Во-во,&nbsp;за&nbsp;человека.&nbsp;Да-с!&nbsp;И&nbsp;только&nbsp;за&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      E7  A7    D </span>
+<span class="line"><span class="txt"> К&nbsp;тому&nbsp;же&nbsp;тост&nbsp;готов,&nbsp;достойный&nbsp;века:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span></span>
+<span class="line"><span class="txt"> я&nbsp;предлагаю&nbsp;выпить&nbsp;за&nbsp;того,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span></span>
+<span class="line"><span class="txt"> о&nbsp;ком&nbsp;забота&nbsp;наша&nbsp;и&nbsp;опека&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span></span>
+<span class="line"><span class="txt"> на&nbsp;данный&nbsp;час&nbsp;для&nbsp;нас&nbsp;-&nbsp;важней&nbsp;всего!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        Gm </span></span>
+<span class="line"><span class="txt"> Во-во,&nbsp;за&nbsp;человека.&nbsp;Да-с!&nbsp;И&nbsp;только&nbsp;за&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      E7  A7    D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кто,&nbsp;как&nbsp;не&nbsp;он,&nbsp;сквозь&nbsp;бурные&nbsp;потоки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D       A         D </span>
-<span class="txt"> стремясь&nbsp;из&nbsp;мрака&nbsp;к&nbsp;свету&nbsp;напрямик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7                G </span>
-<span class="txt"> почти&nbsp;один,&nbsp;в&nbsp;немыслимые&nbsp;сроки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span>
-<span class="txt"> всего&nbsp;добился&nbsp;и&nbsp;везде&nbsp;проник?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        D </span>
+<span class="line"><span class="txt"> Кто,&nbsp;как&nbsp;не&nbsp;он,&nbsp;сквозь&nbsp;бурные&nbsp;потоки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D       A         D </span></span>
+<span class="line"><span class="txt"> стремясь&nbsp;из&nbsp;мрака&nbsp;к&nbsp;свету&nbsp;напрямик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7                G </span></span>
+<span class="line"><span class="txt"> почти&nbsp;один,&nbsp;в&nbsp;немыслимые&nbsp;сроки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span></span>
+<span class="line"><span class="txt"> всего&nbsp;добился&nbsp;и&nbsp;везде&nbsp;проник?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кто,&nbsp;как&nbsp;не&nbsp;он,&nbsp;кругом&nbsp;посеял&nbsp;злаки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span>
-<span class="txt"> освободил&nbsp;секреты&nbsp;от&nbsp;оков,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span>
-<span class="txt"> отрыл&nbsp;металлы,&nbsp;выдумал&nbsp;дензнаки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span>
-<span class="txt"> предугадав&nbsp;величье&nbsp;кошельков!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        Gm </span>
-<span class="txt"> Каков?&nbsp;Ведь&nbsp;сын&nbsp;макаки,&nbsp;ан&nbsp;-&nbsp;дорос&nbsp;до&nbsp;облаков!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      E7  A7    D </span>
+<span class="line"><span class="txt"> Кто,&nbsp;как&nbsp;не&nbsp;он,&nbsp;кругом&nbsp;посеял&nbsp;злаки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span></span>
+<span class="line"><span class="txt"> освободил&nbsp;секреты&nbsp;от&nbsp;оков,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span></span>
+<span class="line"><span class="txt"> отрыл&nbsp;металлы,&nbsp;выдумал&nbsp;дензнаки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span></span>
+<span class="line"><span class="txt"> предугадав&nbsp;величье&nbsp;кошельков!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        Gm </span></span>
+<span class="line"><span class="txt"> Каков?&nbsp;Ведь&nbsp;сын&nbsp;макаки,&nbsp;ан&nbsp;-&nbsp;дорос&nbsp;до&nbsp;облаков!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      E7  A7    D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пересеки&nbsp;леса,&nbsp;поля&nbsp;и&nbsp;реки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D       A         D </span>
-<span class="txt"> любые&nbsp;факты&nbsp;к&nbsp;делу&nbsp;привлеки,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7                G </span>
-<span class="txt"> кто,&nbsp;как&nbsp;не&nbsp;он,&nbsp;собрал&nbsp;библиотеки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span>
-<span class="txt"> открыл&nbsp;аптеки,&nbsp;создал&nbsp;парники?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        D </span>
+<span class="line"><span class="txt"> Пересеки&nbsp;леса,&nbsp;поля&nbsp;и&nbsp;реки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D       A         D </span></span>
+<span class="line"><span class="txt"> любые&nbsp;факты&nbsp;к&nbsp;делу&nbsp;привлеки,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7                G </span></span>
+<span class="line"><span class="txt"> кто,&nbsp;как&nbsp;не&nbsp;он,&nbsp;собрал&nbsp;библиотеки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span></span>
+<span class="line"><span class="txt"> открыл&nbsp;аптеки,&nbsp;создал&nbsp;парники?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;говоря&nbsp;уже&nbsp;про&nbsp;крылья-руки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span>
-<span class="txt"> про&nbsp;вместо&nbsp;сердца&nbsp;дизель&nbsp;на&nbsp;песке...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span>
-<span class="txt"> Да&nbsp;помести&nbsp;его&nbsp;в&nbsp;музей&nbsp;науки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span>
-<span class="txt"> и&nbsp;вся&nbsp;Европа&nbsp;хором&nbsp;скажет:&nbsp;"Ке-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        Gm </span>
-<span class="txt"> с-ке-се!&nbsp;Вот&nbsp;это&nbsp;трюки!".&nbsp;И&nbsp;-&nbsp;застынет&nbsp;в&nbsp;столбняке!&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      E7  A7    D </span>
+<span class="line"><span class="txt"> Не&nbsp;говоря&nbsp;уже&nbsp;про&nbsp;крылья-руки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span></span>
+<span class="line"><span class="txt"> про&nbsp;вместо&nbsp;сердца&nbsp;дизель&nbsp;на&nbsp;песке...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span></span>
+<span class="line"><span class="txt"> Да&nbsp;помести&nbsp;его&nbsp;в&nbsp;музей&nbsp;науки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span></span>
+<span class="line"><span class="txt"> и&nbsp;вся&nbsp;Европа&nbsp;хором&nbsp;скажет:&nbsp;"Ке-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        Gm </span></span>
+<span class="line"><span class="txt"> с-ке-се!&nbsp;Вот&nbsp;это&nbsp;трюки!".&nbsp;И&nbsp;-&nbsp;застынет&nbsp;в&nbsp;столбняке!&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      E7  A7    D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Плюс&nbsp;ко&nbsp;всему,&nbsp;среди&nbsp;трудов&nbsp;великих&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D       A         D </span>
-<span class="txt"> он&nbsp;ни&nbsp;о&nbsp;ком&nbsp;не&nbsp;думал&nbsp;свысока&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7                G </span>
-<span class="txt"> и&nbsp;даже&nbsp;нас,&nbsp;бездарных&nbsp;и&nbsp;безликих,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span>
-<span class="txt"> определил&nbsp;в&nbsp;известные&nbsp;войска.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        D </span>
+<span class="line"><span class="txt"> Плюс&nbsp;ко&nbsp;всему,&nbsp;среди&nbsp;трудов&nbsp;великих&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D       A         D </span></span>
+<span class="line"><span class="txt"> он&nbsp;ни&nbsp;о&nbsp;ком&nbsp;не&nbsp;думал&nbsp;свысока&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7                G </span></span>
+<span class="line"><span class="txt"> и&nbsp;даже&nbsp;нас,&nbsp;бездарных&nbsp;и&nbsp;безликих,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span></span>
+<span class="line"><span class="txt"> определил&nbsp;в&nbsp;известные&nbsp;войска.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;потому&nbsp;-&nbsp;разгладим&nbsp;наше&nbsp;хаки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span>
-<span class="txt"> и&nbsp;на&nbsp;века&nbsp;пребудем&nbsp;начеку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span>
-<span class="txt"> Кто,&nbsp;как&nbsp;не&nbsp;он,&nbsp;сидит&nbsp;у&nbsp;нас&nbsp;в&nbsp;бараке?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span>
-<span class="txt"> Кто,&nbsp;как&nbsp;не&nbsp;мы,&nbsp;приставлены&nbsp;к&nbsp;замку?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        Gm </span>
-<span class="txt"> Ку-ку!&nbsp;Ему&nbsp;-&nbsp;салаки!&nbsp;Нам&nbsp;-&nbsp;конфет&nbsp;и&nbsp;коньяку!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      E7  A7    D </span>
+<span class="line"><span class="txt"> А&nbsp;потому&nbsp;-&nbsp;разгладим&nbsp;наше&nbsp;хаки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;на&nbsp;века&nbsp;пребудем&nbsp;начеку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m               Em </span></span>
+<span class="line"><span class="txt"> Кто,&nbsp;как&nbsp;не&nbsp;он,&nbsp;сидит&nbsp;у&nbsp;нас&nbsp;в&nbsp;бараке?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm                D </span></span>
+<span class="line"><span class="txt"> Кто,&nbsp;как&nbsp;не&nbsp;мы,&nbsp;приставлены&nbsp;к&nbsp;замку?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      A7        Gm </span></span>
+<span class="line"><span class="txt"> Ку-ку!&nbsp;Ему&nbsp;-&nbsp;салаки!&nbsp;Нам&nbsp;-&nbsp;конфет&nbsp;и&nbsp;коньяку!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      E7  A7    D </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1990</span>
-
+<pre><span class="year">1990</span>
 </pre>
+
 
                 </div>
         </div>

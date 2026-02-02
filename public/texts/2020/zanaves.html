@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,35 +423,35 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">РЫБА-МЕЧ</span>
+data-key="Hm"><h1>РЫБА-МЕЧ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Занавес&nbsp;любой,&nbsp;хоть&nbsp;самый&nbsp;железный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span>
-<span class="txt"> не&nbsp;сошьётся&nbsp;без&nbsp;белых&nbsp;ниток,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# Hm </span>
-<span class="txt"> поспевай&nbsp;чернилами&nbsp;мазать&nbsp;швы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# Hm </span>
-<span class="txt"> Верность&nbsp;курсу&nbsp;–&nbsp;подвиг&nbsp;не&nbsp;безвозмездный.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span>
-<span class="txt"> Репутация&nbsp;–&nbsp;пережиток.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# Hm </span>
-<span class="txt"> Нумерация&nbsp;–&nbsp;с&nbsp;головы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# Hm </span>
+<span class="line"><span class="txt"> Занавес&nbsp;любой,&nbsp;хоть&nbsp;самый&nbsp;железный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span></span>
+<span class="line"><span class="txt"> не&nbsp;сошьётся&nbsp;без&nbsp;белых&nbsp;ниток,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# Hm </span></span>
+<span class="line"><span class="txt"> поспевай&nbsp;чернилами&nbsp;мазать&nbsp;швы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# Hm </span></span>
+<span class="line"><span class="txt"> Верность&nbsp;курсу&nbsp;–&nbsp;подвиг&nbsp;не&nbsp;безвозмездный.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span></span>
+<span class="line"><span class="txt"> Репутация&nbsp;–&nbsp;пережиток.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# Hm </span></span>
+<span class="line"><span class="txt"> Нумерация&nbsp;–&nbsp;с&nbsp;головы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Весь&nbsp;вложись&nbsp;в&nbsp;упорство&nbsp;и&nbsp;постоянство.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm </span>
-<span class="txt"> Никуда&nbsp;из&nbsp;подводной&nbsp;лодки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm </span>
-<span class="txt"> Тесновато&nbsp;порой,&nbsp;но&nbsp;свеч&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7/G# </span>
-<span class="txt"> стоит.&nbsp;К&nbsp;ужину&nbsp;получишь&nbsp;не&nbsp;просто&nbsp;яства,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm Am </span>
-<span class="txt"> а&nbsp;на&nbsp;мраморной&nbsp;сковородке&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> сицилийскую&nbsp;рыбу-меч.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm F# </span>
+<span class="line"><span class="txt"> Весь&nbsp;вложись&nbsp;в&nbsp;упорство&nbsp;и&nbsp;постоянство.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm </span></span>
+<span class="line"><span class="txt"> Никуда&nbsp;из&nbsp;подводной&nbsp;лодки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm </span></span>
+<span class="line"><span class="txt"> Тесновато&nbsp;порой,&nbsp;но&nbsp;свеч&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7/G# </span></span>
+<span class="line"><span class="txt"> стоит.&nbsp;К&nbsp;ужину&nbsp;получишь&nbsp;не&nbsp;просто&nbsp;яства,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm Am </span></span>
+<span class="line"><span class="txt"> а&nbsp;на&nbsp;мраморной&nbsp;сковородке&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> сицилийскую&nbsp;рыбу-меч.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm F# </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Паника&nbsp;не&nbsp;чаще&nbsp;уже,&nbsp;чем&nbsp;скука. </span>
 <span class="txt"> Что&nbsp;сбылось&nbsp;–&nbsp;того&nbsp;не&nbsp;испортишь. </span>
-<span class="txt"> Déjá&nbsp;vu&nbsp;приклеилось&nbsp;к&nbsp;с'est&nbsp;la&nbsp;vie. </span><span class="ch">  </span>
+<span class="line"><span class="txt"> Déjá&nbsp;vu&nbsp;приклеилось&nbsp;к&nbsp;с'est&nbsp;la&nbsp;vie. </span><span class="ch">  </span></span>
 <span class="txt"> Дым,&nbsp;туман,&nbsp;статистика&nbsp;–&nbsp;потаскуха, </span>
 <span class="txt"> конституция&nbsp;–&nbsp;перевёртыш, </span>
 <span class="txt"> натурально&nbsp;всё&nbsp;по&nbsp;любви. </span>
@@ -481,10 +489,10 @@ data-key="Hm"><span class="sng-title">РЫБА-МЕЧ</span>
 <span class="txt"> бальзамический&nbsp;перепляс". </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Альтернативный&nbsp;шаг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span>
-<span class="txt"> этак&nbsp;и&nbsp;тут&nbsp;же&nbsp;так.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm </span>
-<span class="txt"> Многофигурный&nbsp;ход&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span>
-<span class="txt"> к&nbsp;центру&nbsp;и&nbsp;сразу&nbsp;от.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# Hm </span>
+<span class="line"><span class="txt"> Альтернативный&nbsp;шаг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span></span>
+<span class="line"><span class="txt"> этак&nbsp;и&nbsp;тут&nbsp;же&nbsp;так.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm </span></span>
+<span class="line"><span class="txt"> Многофигурный&nbsp;ход&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span></span>
+<span class="line"><span class="txt"> к&nbsp;центру&nbsp;и&nbsp;сразу&nbsp;от.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# Hm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Сразу&nbsp;и&nbsp;вдоль&nbsp;и&nbsp;сквозь, </span>
@@ -511,12 +519,10 @@ data-key="Hm"><span class="sng-title">РЫБА-МЕЧ</span>
 <span class="txt"> и&nbsp;удирает&nbsp;в&nbsp;лес. </span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <<span class="year">2020</span>>
-
+<pre><<span class="year">2020</span>>
 </pre>
+
 
                 </div>
         </div>

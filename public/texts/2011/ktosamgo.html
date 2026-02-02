@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,110 +423,106 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="H"><span class="sng-title">Теперь и прежде</span>
+data-key="H"><h1>Теперь и прежде</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кто&nbsp;сам&nbsp;головой&nbsp;не&nbsp;понял,&nbsp;тому&nbsp;сейчас&nbsp;объясню&nbsp;словами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H G7 H </span>
-<span class="txt"> Теперь&nbsp;-&nbsp;это&nbsp;вам&nbsp;не&nbsp;раньше,&nbsp;где&nbsp;вы&nbsp;последний,&nbsp;а&nbsp;я&nbsp;за&nbsp;вами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H G7 H </span>
-<span class="txt"> За&nbsp;вами&nbsp;теперь&nbsp;не&nbsp;я,&nbsp;а&nbsp;одно&nbsp;зиянье,&nbsp;ага,&nbsp;зияет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C Am H </span>
-<span class="txt"> и&nbsp;радо&nbsp;оно&nbsp;восполниться,&nbsp;да&nbsp;чем&nbsp;-&nbsp;само&nbsp;не&nbsp;знает.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C H </span>
+<span class="line"><span class="txt"> Кто&nbsp;сам&nbsp;головой&nbsp;не&nbsp;понял,&nbsp;тому&nbsp;сейчас&nbsp;объясню&nbsp;словами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H G7 H </span></span>
+<span class="line"><span class="txt"> Теперь&nbsp;-&nbsp;это&nbsp;вам&nbsp;не&nbsp;раньше,&nbsp;где&nbsp;вы&nbsp;последний,&nbsp;а&nbsp;я&nbsp;за&nbsp;вами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H G7 H </span></span>
+<span class="line"><span class="txt"> За&nbsp;вами&nbsp;теперь&nbsp;не&nbsp;я,&nbsp;а&nbsp;одно&nbsp;зиянье,&nbsp;ага,&nbsp;зияет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C Am H </span></span>
+<span class="line"><span class="txt"> и&nbsp;радо&nbsp;оно&nbsp;восполниться,&nbsp;да&nbsp;чем&nbsp;-&nbsp;само&nbsp;не&nbsp;знает.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;я&nbsp;по&nbsp;Стене&nbsp;Китайской&nbsp;уже&nbsp;хожу,&nbsp;не&nbsp;тужу,&nbsp;не&nbsp;маюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E C7 E </span>
-<span class="txt"> Хвалю&nbsp;заповедник&nbsp;в&nbsp;отзывах.&nbsp;На&nbsp;фото,&nbsp;ага,&nbsp;снимаюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E C7 E </span>
-<span class="txt"> Вокруг&nbsp;меня&nbsp;население&nbsp;-&nbsp;всё&nbsp;между&nbsp;собой&nbsp;похоже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Dm A </span>
-<span class="txt"> И&nbsp;ладно&nbsp;бы&nbsp;меж&nbsp;собой,&nbsp;но&nbsp;всё&nbsp;и&nbsp;на&nbsp;меня&nbsp;оно&nbsp;похоже&nbsp;тоже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F E </span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;по&nbsp;Стене&nbsp;Китайской&nbsp;уже&nbsp;хожу,&nbsp;не&nbsp;тужу,&nbsp;не&nbsp;маюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E C7 E </span></span>
+<span class="line"><span class="txt"> Хвалю&nbsp;заповедник&nbsp;в&nbsp;отзывах.&nbsp;На&nbsp;фото,&nbsp;ага,&nbsp;снимаюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E C7 E </span></span>
+<span class="line"><span class="txt"> Вокруг&nbsp;меня&nbsp;население&nbsp;-&nbsp;всё&nbsp;между&nbsp;собой&nbsp;похоже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Dm A </span></span>
+<span class="line"><span class="txt"> И&nbsp;ладно&nbsp;бы&nbsp;меж&nbsp;собой,&nbsp;но&nbsp;всё&nbsp;и&nbsp;на&nbsp;меня&nbsp;оно&nbsp;похоже&nbsp;тоже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Прямо&nbsp;навеки&nbsp;какое-то&nbsp;братство,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7 Dm A A7 Dm </span>
-<span class="txt"> родство&nbsp;и&nbsp;свойство,&nbsp;поголовный&nbsp;буддизм.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7 Dm A7 D </span>
-<span class="txt"> Меж&nbsp;толп&nbsp;и&nbsp;масс&nbsp;я&nbsp;ближним&nbsp;не&nbsp;стеснён,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm B Gm </span>
-<span class="txt"> поскольку&nbsp;аз&nbsp;есмь&nbsp;он.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A D </span>
+<span class="line"><span class="txt"> Прямо&nbsp;навеки&nbsp;какое-то&nbsp;братство,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7 Dm A A7 Dm </span></span>
+<span class="line"><span class="txt"> родство&nbsp;и&nbsp;свойство,&nbsp;поголовный&nbsp;буддизм.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7 Dm A7 D </span></span>
+<span class="line"><span class="txt"> Меж&nbsp;толп&nbsp;и&nbsp;масс&nbsp;я&nbsp;ближним&nbsp;не&nbsp;стеснён,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm B Gm </span></span>
+<span class="line"><span class="txt"> поскольку&nbsp;аз&nbsp;есмь&nbsp;он.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Во&nbsp;всей&nbsp;вообще&nbsp;природе&nbsp;я&nbsp;отражаюсь,&nbsp;как&nbsp;в&nbsp;трельяже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E... </span>
+<span class="line"><span class="txt"> Во&nbsp;всей&nbsp;вообще&nbsp;природе&nbsp;я&nbsp;отражаюсь,&nbsp;как&nbsp;в&nbsp;трельяже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E... </span></span>
 <span class="txt"> Гляжу&nbsp;с&nbsp;парохода&nbsp;в&nbsp;реку,&nbsp;ага,&nbsp;и&nbsp;вижу&nbsp;в&nbsp;реке&nbsp;меня&nbsp;же. </span>
 <span class="txt"> А&nbsp;судно&nbsp;готово&nbsp;плыть.&nbsp;Капитан:&nbsp;отдай,&nbsp;говорит,&nbsp;швартовы! </span>
 <span class="txt"> Отдам,&nbsp;говорю,&nbsp;но&nbsp;разве&nbsp;мы&nbsp;на&nbsp;"ты"?&nbsp;Ах,&nbsp;что&nbsp;вы,&nbsp;что&nbsp;вы... </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Остерегайтесь,&nbsp;товарищ&nbsp;начальник,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7... </span>
+<span class="line"><span class="txt"> Остерегайтесь,&nbsp;товарищ&nbsp;начальник,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7... </span></span>
 <span class="txt"> в&nbsp;единственном&nbsp;к&nbsp;нам&nbsp;обращаться&nbsp;числе. </span>
 <span class="txt"> Из&nbsp;нас&nbsp;со&nbsp;мной&nbsp;составлен&nbsp;шар&nbsp;земной. </span>
 <span class="txt"> Был&nbsp;мир&nbsp;ничей,&nbsp;стал&nbsp;-&nbsp;мой. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Спокойного&nbsp;судну&nbsp;плаванья,&nbsp;ни&nbsp;качки&nbsp;ему,&nbsp;ни&nbsp;течи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E... </span>
+<span class="line"><span class="txt"> Спокойного&nbsp;судну&nbsp;плаванья,&nbsp;ни&nbsp;качки&nbsp;ему,&nbsp;ни&nbsp;течи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E... </span></span>
 <span class="txt"> Упрёк&nbsp;не&nbsp;речному&nbsp;флоту,&nbsp;но&nbsp;целиком&nbsp;обиходной&nbsp;речи: </span>
 <span class="txt"> действительность&nbsp;обновляется,&nbsp;а&nbsp;пословиц&nbsp;надёжных&nbsp;нету. </span>
 <span class="txt"> Не&nbsp;легче&nbsp;ли&nbsp;нормативы&nbsp;пересмотреть,&nbsp;чем&nbsp;повторять&nbsp;всю&nbsp;эту </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> чушь?&nbsp;Дескать,&nbsp;знай&nbsp;свой&nbsp;ресурс,&nbsp;время&nbsp;вышло...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7... </span>
+<span class="line"><span class="txt"> чушь?&nbsp;Дескать,&nbsp;знай&nbsp;свой&nbsp;ресурс,&nbsp;время&nbsp;вышло...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7... </span></span>
 <span class="txt"> Где&nbsp;край,&nbsp;дескать,&nbsp;стой...&nbsp;Ещё&nbsp;та&nbsp;ерунда! </span>
 <span class="txt"> Иные&nbsp;наступили&nbsp;времена. </span>
 <span class="txt"> Им&nbsp;края&nbsp;нет&nbsp;и&nbsp;дна. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> На&nbsp;что&nbsp;уже&nbsp;слабый&nbsp;пол&nbsp;-&nbsp;и&nbsp;тот&nbsp;меняется&nbsp;повсеместно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E... </span>
+<span class="line"><span class="txt"> На&nbsp;что&nbsp;уже&nbsp;слабый&nbsp;пол&nbsp;-&nbsp;и&nbsp;тот&nbsp;меняется&nbsp;повсеместно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E... </span></span>
 <span class="txt"> Вчера&nbsp;молодая&nbsp;ведьма&nbsp;-&nbsp;нынче&nbsp;добрая&nbsp;мать&nbsp;семейства. </span>
 <span class="txt"> И&nbsp;наволочки&nbsp;теперь&nbsp;у&nbsp;неё&nbsp;как&nbsp;снег.&nbsp;И&nbsp;клёцки&nbsp;в&nbsp;супе. </span>
 <span class="txt"> Неужто&nbsp;же&nbsp;нам&nbsp;она&nbsp;была&nbsp;милей,&nbsp;пока&nbsp;летала&nbsp;в&nbsp;ступе? </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Смейтесь,&nbsp;-&nbsp;твержу&nbsp;я&nbsp;юнцам&nbsp;и&nbsp;юницам,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7... </span>
+<span class="line"><span class="txt"> Смейтесь,&nbsp;-&nbsp;твержу&nbsp;я&nbsp;юнцам&nbsp;и&nbsp;юницам,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7... </span></span>
 <span class="txt"> но&nbsp;так,&nbsp;чтобы&nbsp;после&nbsp;не&nbsp;слепнуть&nbsp;от&nbsp;слёз. </span>
 <span class="txt"> Ты&nbsp;врёшь,&nbsp;ты&nbsp;врёшь!&nbsp;-&nbsp;хохочет&nbsp;молодёжь. </span>
 <span class="txt"> И&nbsp;слепнет&nbsp;сплошь.&nbsp;Ну&nbsp;что&nbsp;ж. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;раз&nbsp;уж&nbsp;оно&nbsp;всё&nbsp;так&nbsp;обстоит,&nbsp;как&nbsp;сказано,&nbsp;а&nbsp;не&nbsp;эдак,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H... </span>
+<span class="line"><span class="txt"> И&nbsp;раз&nbsp;уж&nbsp;оно&nbsp;всё&nbsp;так&nbsp;обстоит,&nbsp;как&nbsp;сказано,&nbsp;а&nbsp;не&nbsp;эдак,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H... </span></span>
 <span class="txt"> то&nbsp;некогда&nbsp;делать&nbsp;выводы&nbsp;(в&nbsp;заключение,&nbsp;напоследок). </span>
 <span class="txt"> Пора&nbsp;сочинять,&nbsp;не&nbsp;глядя&nbsp;уже&nbsp;на&nbsp;мостик&nbsp;на&nbsp;капитанский, </span>
 <span class="txt"> словарь&nbsp;поговорок&nbsp;новых,&nbsp;с&nbsp;переводами&nbsp;на&nbsp;китайский. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;кстати&nbsp;о&nbsp;молодёжи&nbsp;-&nbsp;всё&nbsp;же&nbsp;надо&nbsp;бы&nbsp;с&nbsp;ней&nbsp;построже:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E... </span>
+<span class="line"><span class="txt"> И&nbsp;кстати&nbsp;о&nbsp;молодёжи&nbsp;-&nbsp;всё&nbsp;же&nbsp;надо&nbsp;бы&nbsp;с&nbsp;ней&nbsp;построже:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E... </span></span>
 <span class="txt"> то&nbsp;хочется&nbsp;ей&nbsp;чего-то,&nbsp;то&nbsp;не&nbsp;хочется&nbsp;ей&nbsp;того&nbsp;же. </span>
 <span class="txt"> Ведёт&nbsp;она&nbsp;вас&nbsp;в&nbsp;альковы,&nbsp;ага,&nbsp;срывай,&nbsp;говорит,&nbsp;покровы! </span>
 <span class="txt"> А&nbsp;утром:&nbsp;здрасьте,&nbsp;разве&nbsp;мы&nbsp;на&nbsp;"ты"?&nbsp;Ах,&nbsp;что&nbsp;вы,&nbsp;что&nbsp;вы... </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> О,&nbsp;трудный&nbsp;возраст!&nbsp;Ужель&nbsp;без&nbsp;меня&nbsp;ты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7... </span>
+<span class="line"><span class="txt"> О,&nbsp;трудный&nbsp;возраст!&nbsp;Ужель&nbsp;без&nbsp;меня&nbsp;ты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7... </span></span>
 <span class="txt"> управишься&nbsp;с&nbsp;веком&nbsp;один&nbsp;на&nbsp;один? </span>
 <span class="txt"> Где&nbsp;ты&nbsp;всё&nbsp;сам&nbsp;-&nbsp;там&nbsp;максимум&nbsp;ничья. </span>
 <span class="txt"> Успех&nbsp;лишь&nbsp;там,&nbsp;где&nbsp;я. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;я&nbsp;уже&nbsp;сам&nbsp;в&nbsp;Париже,&nbsp;ага,&nbsp;сижу&nbsp;на&nbsp;Пляс-де-Воже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E... </span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;уже&nbsp;сам&nbsp;в&nbsp;Париже,&nbsp;ага,&nbsp;сижу&nbsp;на&nbsp;Пляс-де-Воже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E... </span></span>
 <span class="txt"> И&nbsp;хочется&nbsp;мне&nbsp;чего-то,&nbsp;и&nbsp;не&nbsp;хочется&nbsp;мне&nbsp;его&nbsp;же. </span>
 <span class="txt"> Вокруг&nbsp;меня&nbsp;население&nbsp;шьётся,&nbsp;треплется&nbsp;и&nbsp;канает. </span>
 <span class="txt"> Как&nbsp;будто&nbsp;недавно&nbsp;вылупилось&nbsp;и&nbsp;щупальца&nbsp;разминает. </span>
-<span class="txt"> И&nbsp;радо&nbsp;бы&nbsp;обрести&nbsp;оно&nbsp;образец.&nbsp;Да&nbsp;в&nbsp;ком&nbsp;-&nbsp;само&nbsp;не&nbsp;знает.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F E </span>
+<span class="line"><span class="txt"> И&nbsp;радо&nbsp;бы&nbsp;обрести&nbsp;оно&nbsp;образец.&nbsp;Да&nbsp;в&nbsp;ком&nbsp;-&nbsp;само&nbsp;не&nbsp;знает.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Племя&nbsp;слепое!&nbsp;Протри&nbsp;окуляры:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7... </span>
+<span class="line"><span class="txt"> Племя&nbsp;слепое!&nbsp;Протри&nbsp;окуляры:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7... </span></span>
 <span class="txt"> он&nbsp;здесь,&nbsp;он&nbsp;везде,&nbsp;все&nbsp;рецепты&nbsp;при&nbsp;нём. </span>
 <span class="txt"> Он&nbsp;друг&nbsp;племён.&nbsp;Он&nbsp;доктор&nbsp;и&nbsp;судья. </span>
 <span class="txt"> И&nbsp;этот&nbsp;"он"&nbsp;есть&nbsp;я. </span>
- <br />
- <br />
-
 </div>
 <pre>
-    
                                                                      Условная гармония по исполнению <span class="year">2015</span> г.
 <span class="year">2011</span>                                                                (диск &#171;<a href="../../Disks/chmuzyka3.html">Чужая музыка и не только. Часть 3</a>&#187;).
 
-
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,81 +423,78 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">СЕРЕНАДА</span>
+data-key="Hm"><h1>СЕРЕНАДА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Em   Hm    Em    F# Hm Em F# Hm </span>
-<span class="txt"> Горный&nbsp;озон&nbsp;прохладной&nbsp;тучей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span>
-<span class="txt"> гонит&nbsp;с&nbsp;закатом&nbsp;жар&nbsp;дневной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span>
-<span class="txt"> Вот&nbsp;ведь&nbsp;какой&nbsp;досадный&nbsp;случай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span>
-<span class="txt"> Прямо&nbsp;не&nbsp;знаю,&nbsp;что&nbsp;со&nbsp;мной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Либо&nbsp;Всевышний&nbsp;даст&nbsp;мне&nbsp;силу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  Gdim  Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;суетный&nbsp;прочь&nbsp;отринуть&nbsp;прах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  G/F   F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Либо&nbsp;сведёт&nbsp;меня&nbsp;в&nbsp;могилу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7   Em    Em/C# Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;та,&nbsp;на&nbsp;балконе,&nbsp;в&nbsp;кружева&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G    Em    F#    G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ах!&nbsp;На&nbsp;балконе,&nbsp;в&nbsp;кружевах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Em    F#    Hm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Em   Hm    Em    F# Hm Em F# Hm </span></span>
+<span class="line"><span class="txt"> Горный&nbsp;озон&nbsp;прохладной&nbsp;тучей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span></span>
+<span class="line"><span class="txt"> гонит&nbsp;с&nbsp;закатом&nbsp;жар&nbsp;дневной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;ведь&nbsp;какой&nbsp;досадный&nbsp;случай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span></span>
+<span class="line"><span class="txt"> Прямо&nbsp;не&nbsp;знаю,&nbsp;что&nbsp;со&nbsp;мной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Либо&nbsp;Всевышний&nbsp;даст&nbsp;мне&nbsp;силу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  Gdim  Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;суетный&nbsp;прочь&nbsp;отринуть&nbsp;прах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  G/F   F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Либо&nbsp;сведёт&nbsp;меня&nbsp;в&nbsp;могилу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7   Em    Em/C# Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;та,&nbsp;на&nbsp;балконе,&nbsp;в&nbsp;кружева&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G    Em    F#    G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ах!&nbsp;На&nbsp;балконе,&nbsp;в&nbsp;кружевах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Em    F#    Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пусть&nbsp;не&nbsp;поймут&nbsp;меня&nbsp;неверно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span>
-<span class="txt"> Я&nbsp;ни&nbsp;секунды&nbsp;не&nbsp;влюблён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span>
-<span class="txt"> Да,&nbsp;красота&nbsp;её&nbsp;безмерна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span>
-<span class="txt"> Локон&nbsp;волнист,&nbsp;лукав&nbsp;наклон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Веер&nbsp;сложив,&nbsp;она&nbsp;с&nbsp;ладони&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  Gdim  Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;белого&nbsp;кормит&nbsp;грызуна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  G/F   F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Нет!&nbsp;я&nbsp;чужой&nbsp;на&nbsp;том&nbsp;балконе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7   Em    Em/C# Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ах!&nbsp;мне&nbsp;не&nbsp;нравится&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G    Em    F#    G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А!&nbsp;мне&nbsp;не&nbsp;нравится&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Em    F#    Hm </span>
+<span class="line"><span class="txt"> Пусть&nbsp;не&nbsp;поймут&nbsp;меня&nbsp;неверно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span></span>
+<span class="line"><span class="txt"> Я&nbsp;ни&nbsp;секунды&nbsp;не&nbsp;влюблён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span></span>
+<span class="line"><span class="txt"> Да,&nbsp;красота&nbsp;её&nbsp;безмерна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span></span>
+<span class="line"><span class="txt"> Локон&nbsp;волнист,&nbsp;лукав&nbsp;наклон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Веер&nbsp;сложив,&nbsp;она&nbsp;с&nbsp;ладони&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  Gdim  Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;белого&nbsp;кормит&nbsp;грызуна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  G/F   F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Нет!&nbsp;я&nbsp;чужой&nbsp;на&nbsp;том&nbsp;балконе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7   Em    Em/C# Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ах!&nbsp;мне&nbsp;не&nbsp;нравится&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G    Em    F#    G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А!&nbsp;мне&nbsp;не&nbsp;нравится&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Em    F#    Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Чуть&nbsp;бы&nbsp;пораньше,&nbsp;лет&nbsp;так&nbsp;на&nbsp;шесть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span>
-<span class="txt"> или&nbsp;хотя&nbsp;бы&nbsp;на&nbsp;пять&nbsp;лет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span>
-<span class="txt"> мне&nbsp;б&nbsp;нипочём&nbsp;восторг&nbsp;и&nbsp;тяжесть&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span>
-<span class="txt"> этой&nbsp;любви.&nbsp;А&nbsp;нынче&nbsp;-&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ночь&nbsp;не&nbsp;молчит,&nbsp;урчит,&nbsp;бормочет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  Gdim  Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;много&nbsp;сулит&nbsp;того-сего.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  G/F   F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;ничего&nbsp;душа&nbsp;не&nbsp;хочет&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7   Em    Em/C# Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;там,&nbsp;где&nbsp;не&nbsp;может&nbsp;ничего-.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G    Em    F#    G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;о!&nbsp;где&nbsp;не&nbsp;может&nbsp;ничего.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Em    F#    Hm </span>
+<span class="line"><span class="txt"> Чуть&nbsp;бы&nbsp;пораньше,&nbsp;лет&nbsp;так&nbsp;на&nbsp;шесть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span></span>
+<span class="line"><span class="txt"> или&nbsp;хотя&nbsp;бы&nbsp;на&nbsp;пять&nbsp;лет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span></span>
+<span class="line"><span class="txt"> мне&nbsp;б&nbsp;нипочём&nbsp;восторг&nbsp;и&nbsp;тяжесть&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span></span>
+<span class="line"><span class="txt"> этой&nbsp;любви.&nbsp;А&nbsp;нынче&nbsp;-&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ночь&nbsp;не&nbsp;молчит,&nbsp;урчит,&nbsp;бормочет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  Gdim  Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;много&nbsp;сулит&nbsp;того-сего.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  G/F   F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;ничего&nbsp;душа&nbsp;не&nbsp;хочет&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7   Em    Em/C# Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;там,&nbsp;где&nbsp;не&nbsp;может&nbsp;ничего-.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G    Em    F#    G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;о!&nbsp;где&nbsp;не&nbsp;может&nbsp;ничего.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Em    F#    Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вздор&nbsp;-&nbsp;эти&nbsp;все&nbsp;плащи&nbsp;и&nbsp;шпаги,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Cm   B </span>
-<span class="txt"> лошади&nbsp;вскачь,&nbsp;враги&nbsp;в&nbsp;расход.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Bm   Cm </span>
-<span class="txt"> Славной&nbsp;стезе&nbsp;зачем&nbsp;зигзаги?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Cm   B </span>
-<span class="txt"> Зорким&nbsp;очам&nbsp;не&nbsp;до&nbsp;красот.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Bm   Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Слушая,&nbsp;как&nbsp;нестройным&nbsp;эхом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C/B  Fm/G# G#dim Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;звон&nbsp;серенад&nbsp;летит&nbsp;во&nbsp;тьму,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C/B  Fm/G# G#/F# G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;белый&nbsp;грызун&nbsp;дрожит&nbsp;всем&nbsp;мехом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C7   Fm    Fm/D  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;не&nbsp;сочувствую&nbsp;ему-.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G#   Fm    G     G# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-у!&nbsp;не&nbsp;сочувствую&nbsp;ему.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Fm    G     Cm </span>
+<span class="line"><span class="txt"> Вздор&nbsp;-&nbsp;эти&nbsp;все&nbsp;плащи&nbsp;и&nbsp;шпаги,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Cm   B </span></span>
+<span class="line"><span class="txt"> лошади&nbsp;вскачь,&nbsp;враги&nbsp;в&nbsp;расход.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Bm   Cm </span></span>
+<span class="line"><span class="txt"> Славной&nbsp;стезе&nbsp;зачем&nbsp;зигзаги?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Cm   B </span></span>
+<span class="line"><span class="txt"> Зорким&nbsp;очам&nbsp;не&nbsp;до&nbsp;красот.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Bm   Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Слушая,&nbsp;как&nbsp;нестройным&nbsp;эхом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C/B  Fm/G# G#dim Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;звон&nbsp;серенад&nbsp;летит&nbsp;во&nbsp;тьму,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C/B  Fm/G# G#/F# G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;белый&nbsp;грызун&nbsp;дрожит&nbsp;всем&nbsp;мехом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C7   Fm    Fm/D  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;не&nbsp;сочувствую&nbsp;ему-.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G#   Fm    G     G# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-у!&nbsp;не&nbsp;сочувствую&nbsp;ему.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Fm    G     Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Демоны&nbsp;страсти&nbsp;вероломной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span>
-<span class="txt"> цельтесь,&nbsp;пожалуй,&nbsp;поточней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span>
-<span class="txt"> Пусто&nbsp;в&nbsp;душе&nbsp;моей&nbsp;огромной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span>
-<span class="txt"> Пасмурно&nbsp;в&nbsp;ней,&nbsp;просторно&nbsp;в&nbsp;ней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Север&nbsp;зовёт&nbsp;её&nbsp;в&nbsp;скитанья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  Gdim  Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;к&nbsp;снежной&nbsp;зиме,&nbsp;к&nbsp;сырой&nbsp;весне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  G/F   F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Спи&nbsp;без&nbsp;меня,&nbsp;страна&nbsp;Испания!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7   Em    Em/C# Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Будем&nbsp;считать,&nbsp;что&nbsp;я&nbsp;здесь&nbsp;не&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G    Em    F#    G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;был,&nbsp;считать,&nbsp;что&nbsp;я&nbsp;здесь&nbsp;не&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Em    F#    G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;был,&nbsp;считать,&nbsp;что&nbsp;я&nbsp;здесь&nbsp;не...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Em    F#    Hm </span>
+<span class="line"><span class="txt"> Демоны&nbsp;страсти&nbsp;вероломной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span></span>
+<span class="line"><span class="txt"> цельтесь,&nbsp;пожалуй,&nbsp;поточней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span></span>
+<span class="line"><span class="txt"> Пусто&nbsp;в&nbsp;душе&nbsp;моей&nbsp;огромной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm   A </span></span>
+<span class="line"><span class="txt"> Пасмурно&nbsp;в&nbsp;ней,&nbsp;просторно&nbsp;в&nbsp;ней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Север&nbsp;зовёт&nbsp;её&nbsp;в&nbsp;скитанья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  Gdim  Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;к&nbsp;снежной&nbsp;зиме,&nbsp;к&nbsp;сырой&nbsp;весне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H/A  Em/G  G/F   F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Спи&nbsp;без&nbsp;меня,&nbsp;страна&nbsp;Испания!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7   Em    Em/C# Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Будем&nbsp;считать,&nbsp;что&nbsp;я&nbsp;здесь&nbsp;не&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G    Em    F#    G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;был,&nbsp;считать,&nbsp;что&nbsp;я&nbsp;здесь&nbsp;не&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Em    F#    G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;был,&nbsp;считать,&nbsp;что&nbsp;я&nbsp;здесь&nbsp;не...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Em    F#    Hm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1999</span>-<span class="year">2000</span>
-
+<pre><span class="year">1999</span>-<span class="year">2000</span>
 
 </pre>
+
 
                 </div>
         </div>

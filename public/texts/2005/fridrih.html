@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,90 +423,87 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">Фридрих идёт</span>
+data-key="Am"><h1>Фридрих идёт</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Айн-цвай-драй,&nbsp;контроль,&nbsp;тоннель,&nbsp;шлагбаум,&nbsp;дебаркадер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Сзади&nbsp;-&nbsp;меркнет,&nbsp;уходя&nbsp;во&nbsp;мглу,&nbsp;секретный&nbsp;цех:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am </span>
-<span class="txt"> кузня&nbsp;ядерных&nbsp;торпед,&nbsp;ракет&nbsp;и&nbsp;просто&nbsp;ядер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> лидер&nbsp;отрасли,&nbsp;в&nbsp;десятке&nbsp;лучших&nbsp;-&nbsp;лучше&nbsp;всех.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am </span>
+<span class="line"><span class="txt"> Айн-цвай-драй,&nbsp;контроль,&nbsp;тоннель,&nbsp;шлагбаум,&nbsp;дебаркадер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Сзади&nbsp;-&nbsp;меркнет,&nbsp;уходя&nbsp;во&nbsp;мглу,&nbsp;секретный&nbsp;цех:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am </span></span>
+<span class="line"><span class="txt"> кузня&nbsp;ядерных&nbsp;торпед,&nbsp;ракет&nbsp;и&nbsp;просто&nbsp;ядер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> лидер&nbsp;отрасли,&nbsp;в&nbsp;десятке&nbsp;лучших&nbsp;-&nbsp;лучше&nbsp;всех.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Фридрих&nbsp;движется&nbsp;домой,&nbsp;шагать&nbsp;ему&nbsp;не&nbsp;грустно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm5- Dm </span>
-<span class="txt"> Смену&nbsp;сдал,&nbsp;помылся,&nbsp;снял&nbsp;щетину&nbsp;со&nbsp;скулы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm5- A </span>
-<span class="txt"> Айн-цвай-драй,&nbsp;считает&nbsp;он.&nbsp;И&nbsp;шаг&nbsp;за&nbsp;шагом&nbsp;грузно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/H Am/C A7/C# Dm B7/D# </span>
-<span class="txt"> город&nbsp;Фридриху&nbsp;навстречу&nbsp;движется&nbsp;из&nbsp;мглы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E Am/F Am/F# A7/C# Dm </span>
+<span class="line"><span class="txt"> Фридрих&nbsp;движется&nbsp;домой,&nbsp;шагать&nbsp;ему&nbsp;не&nbsp;грустно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm5- Dm </span></span>
+<span class="line"><span class="txt"> Смену&nbsp;сдал,&nbsp;помылся,&nbsp;снял&nbsp;щетину&nbsp;со&nbsp;скулы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm5- A </span></span>
+<span class="line"><span class="txt"> Айн-цвай-драй,&nbsp;считает&nbsp;он.&nbsp;И&nbsp;шаг&nbsp;за&nbsp;шагом&nbsp;грузно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/H Am/C A7/C# Dm B7/D# </span></span>
+<span class="line"><span class="txt"> город&nbsp;Фридриху&nbsp;навстречу&nbsp;движется&nbsp;из&nbsp;мглы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E Am/F Am/F# A7/C# Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Стройпромторг,&nbsp;автовокзал,&nbsp;столбы,&nbsp;ухабы,&nbsp;лужи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Стройпромторг,&nbsp;автовокзал,&nbsp;столбы,&nbsp;ухабы,&nbsp;лужи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> Нынче&nbsp;цех&nbsp;в&nbsp;ударе&nbsp;был&nbsp;и&nbsp;много&nbsp;наковал. </span>
 <span class="txt"> Вот&nbsp;он&nbsp;я,&nbsp;бормочет&nbsp;Фридрих,&nbsp;я&nbsp;иду&nbsp;со&nbsp;службы. </span>
 <span class="txt"> Айн-цвай-драй,&nbsp;фонарь,&nbsp;аптека,&nbsp;улица,&nbsp;канал. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Зря&nbsp;ты&nbsp;давеча,&nbsp;в&nbsp;анкету&nbsp;глядя,&nbsp;брови&nbsp;хмурил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm5-... </span>
+<span class="line"><span class="txt"> Зря&nbsp;ты&nbsp;давеча,&nbsp;в&nbsp;анкету&nbsp;глядя,&nbsp;брови&nbsp;хмурил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm5-... </span></span>
 <span class="txt"> Зря&nbsp;ты&nbsp;морщился,&nbsp;геноссе&nbsp;главный&nbsp;инженер. </span>
 <span class="txt"> Вот&nbsp;я&nbsp;-&nbsp;вахту&nbsp;отстоял,&nbsp;дежурство&nbsp;отдежурил. </span>
 <span class="txt"> Эйн-цвей-дрей,&nbsp;такой&nbsp;же&nbsp;немец&nbsp;я,&nbsp;как&nbsp;ты&nbsp;-&nbsp;шумер. </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Ать-два-три,&nbsp;рождён&nbsp;в&nbsp;Твери,&nbsp;перевезён&nbsp;в&nbsp;Саратов. </span>
-<span class="txt"> Назван&nbsp;Фридрих&nbsp;-&nbsp;в&nbsp;честь&nbsp;балета&nbsp;"Фридрихштадтпалас".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Назван&nbsp;Фридрих&nbsp;-&nbsp;в&nbsp;честь&nbsp;балета&nbsp;"Фридрихштадтпалас".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> Был&nbsp;завскладом&nbsp;комбината&nbsp;ядохимикатов. </span>
 <span class="txt"> Убыл,&nbsp;прибыл,&nbsp;стал&nbsp;завхозом&nbsp;цеха&nbsp;здесь&nbsp;у&nbsp;вас. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;праздник&nbsp;выпало&nbsp;дежурство&nbsp;вновь&nbsp;очередное.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm5- </span>
+<span class="line"><span class="txt"> В&nbsp;праздник&nbsp;выпало&nbsp;дежурство&nbsp;вновь&nbsp;очередное.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm5- </span></span>
 <span class="txt"> Что&nbsp;ж,&nbsp;не&nbsp;горше&nbsp;мне&nbsp;оно&nbsp;иных&nbsp;очередных. </span>
 <span class="txt"> Всё&nbsp;одно&nbsp;режим&nbsp;работы&nbsp;сутки&nbsp;через&nbsp;двое. </span>
 <span class="txt"> Праздник,&nbsp;нет&nbsp;ли,&nbsp;двое&nbsp;суток&nbsp;выдай&nbsp;выходных. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Медсанчасть,&nbsp;"Утильсырьё",&nbsp;трамвай&nbsp;десятый&nbsp;номер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Медсанчасть,&nbsp;"Утильсырьё",&nbsp;трамвай&nbsp;десятый&nbsp;номер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> Двое&nbsp;суток&nbsp;хоть&nbsp;земля&nbsp;вокруг&nbsp;по&nbsp;швам&nbsp;трещи. </span>
 <span class="txt"> Я&nbsp;могу&nbsp;уехать&nbsp;хоть&nbsp;в&nbsp;Саратов,&nbsp;хоть&nbsp;в&nbsp;Житомир. </span>
-<span class="txt"> Я&nbsp;вне&nbsp;доступа,&nbsp;майн&nbsp;фройнд,&nbsp;ищи&nbsp;меня&nbsp;свищи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">             --Cm </span>
+<span class="line"><span class="txt"> Я&nbsp;вне&nbsp;доступа,&nbsp;майн&nbsp;фройнд,&nbsp;ищи&nbsp;меня&nbsp;свищи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">             --Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пусть&nbsp;от&nbsp;севера&nbsp;до&nbsp;юга,&nbsp;чёрный&nbsp;как&nbsp;негроид,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> крылья&nbsp;долгие&nbsp;простёр&nbsp;весенний&nbsp;первый&nbsp;шторм.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm </span>
-<span class="txt"> Пусть&nbsp;сильнее&nbsp;грянет&nbsp;он&nbsp;и&nbsp;мглою&nbsp;небо&nbsp;кроет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Я&nbsp;-&nbsp;ложусь&nbsp;в&nbsp;стационар,&nbsp;готовьте&nbsp;хлороформ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm </span>
+<span class="line"><span class="txt"> Пусть&nbsp;от&nbsp;севера&nbsp;до&nbsp;юга,&nbsp;чёрный&nbsp;как&nbsp;негроид,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> крылья&nbsp;долгие&nbsp;простёр&nbsp;весенний&nbsp;первый&nbsp;шторм.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm </span></span>
+<span class="line"><span class="txt"> Пусть&nbsp;сильнее&nbsp;грянет&nbsp;он&nbsp;и&nbsp;мглою&nbsp;небо&nbsp;кроет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;-&nbsp;ложусь&nbsp;в&nbsp;стационар,&nbsp;готовьте&nbsp;хлороформ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Фир-фюнф-зекс,&nbsp;оклад,&nbsp;надбавка,&nbsp;вредность,&nbsp;тотал-шмотал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm5- Fm </span>
-<span class="txt"> Город&nbsp;дышит&nbsp;сонно.&nbsp;Анна&nbsp;смотрит&nbsp;из&nbsp;окна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm5- C </span>
-<span class="txt"> Ахтунг,&nbsp;Анна,&nbsp;я&nbsp;иду,&nbsp;я&nbsp;смену&nbsp;отработал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Cm/D Cm/Eb C7/E Fm G#7/F# </span>
-<span class="txt"> Дал&nbsp;сверх&nbsp;плана&nbsp;с&nbsp;примененьем&nbsp;стекловолокна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/G Cm/G# Cm/A C7/E Fm      Am<- </span>
+<span class="line"><span class="txt"> Фир-фюнф-зекс,&nbsp;оклад,&nbsp;надбавка,&nbsp;вредность,&nbsp;тотал-шмотал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm5- Fm </span></span>
+<span class="line"><span class="txt"> Город&nbsp;дышит&nbsp;сонно.&nbsp;Анна&nbsp;смотрит&nbsp;из&nbsp;окна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm5- C </span></span>
+<span class="line"><span class="txt"> Ахтунг,&nbsp;Анна,&nbsp;я&nbsp;иду,&nbsp;я&nbsp;смену&nbsp;отработал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Cm/D Cm/Eb C7/E Fm G#7/F# </span></span>
+<span class="line"><span class="txt"> Дал&nbsp;сверх&nbsp;плана&nbsp;с&nbsp;примененьем&nbsp;стекловолокна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/G Cm/G# Cm/A C7/E Fm      Am<- </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Главпочтамт,&nbsp;универсам,&nbsp;пожарное&nbsp;подворье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Главпочтамт,&nbsp;универсам,&nbsp;пожарное&nbsp;подворье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> Над&nbsp;подворьем&nbsp;каланча,&nbsp;на&nbsp;каланче&nbsp;звонарь. </span>
 <span class="txt"> У&nbsp;него&nbsp;работа&nbsp;тоже&nbsp;сутки&nbsp;через&nbsp;двое. </span>
 <span class="txt"> Эйн-цвей-дрей,&nbsp;канал,&nbsp;аптека,&nbsp;улица,&nbsp;фонарь. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Фридрих&nbsp;-&nbsp;дома.&nbsp;Ест&nbsp;он&nbsp;овощи,&nbsp;вгрызаясь&nbsp;в&nbsp;мякоть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm5-... </span>
+<span class="line"><span class="txt"> Фридрих&nbsp;-&nbsp;дома.&nbsp;Ест&nbsp;он&nbsp;овощи,&nbsp;вгрызаясь&nbsp;в&nbsp;мякоть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm5-... </span></span>
 <span class="txt"> Завтрак,&nbsp;отдых,&nbsp;сон.&nbsp;И&nbsp;будет&nbsp;так&nbsp;за&nbsp;годом&nbsp;год. </span>
 <span class="txt"> До&nbsp;тех&nbsp;пор,&nbsp;покуда&nbsp;кудри&nbsp;наклонять&nbsp;и&nbsp;плакать </span>
 <span class="txt"> Анна&nbsp;в&nbsp;трауре&nbsp;на&nbsp;камень&nbsp;гордый&nbsp;не&nbsp;придёт. </span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2005</span>                                                               Условная нотировка по исполнению <span class="year">2008</span> г.
-
+<pre><span class="year">2005</span>                                                               Условная нотировка по исполнению <span class="year">2008</span> г.
 
 </pre>
+
 
                 </div>
         </div>

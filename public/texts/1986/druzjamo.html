@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,46 +433,44 @@ span.c {
 data-key="Cm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Друзья-мореходы,&nbsp;творцы-корабелы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7   G    Cm </span>
-<span class="txt"> прекрасны&nbsp;у&nbsp;вас&nbsp;корабли!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  G </span>
-<span class="txt"> И&nbsp;всё-таки&nbsp;зря&nbsp;вы&nbsp;свои&nbsp;каравеллы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Fm   Ab7  Cm   F </span>
-<span class="txt"> к&nbsp;моим&nbsp;берегам&nbsp;привели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  G7   Cm </span>
+<span class="line"><span class="txt"> Друзья-мореходы,&nbsp;творцы-корабелы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7   G    Cm </span></span>
+<span class="line"><span class="txt"> прекрасны&nbsp;у&nbsp;вас&nbsp;корабли!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  G </span></span>
+<span class="line"><span class="txt"> И&nbsp;всё-таки&nbsp;зря&nbsp;вы&nbsp;свои&nbsp;каравеллы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Fm   Ab7  Cm   F </span></span>
+<span class="line"><span class="txt"> к&nbsp;моим&nbsp;берегам&nbsp;привели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  G7   Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> О,&nbsp;как&nbsp;ваши&nbsp;флаги&nbsp;сияли&nbsp;прекрасно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  Cm </span>
-<span class="txt"> в&nbsp;лучах&nbsp;уходящего&nbsp;дня!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  F7   B7 </span>
-<span class="txt"> Вы&nbsp;вдаль&nbsp;отправлялись...&nbsp;Но&nbsp;только&nbsp;напрасно&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm  F    Bm   Fm </span>
-<span class="txt"> вы&nbsp;звали&nbsp;с&nbsp;собою&nbsp;меня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G    Ab </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Fm   Cm   G7   Cm </span>
-<span class="txt"> Напрасно&nbsp;прельщали&nbsp;всем&nbsp;миром,&nbsp;всем&nbsp;светом,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7   G    Cm </span>
-<span class="txt"> всем&nbsp;золотом,&nbsp;всем&nbsp;серебром.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  G </span>
-<span class="txt"> В&nbsp;то&nbsp;время&nbsp;я&nbsp;думал&nbsp;совсем&nbsp;не&nbsp;об&nbsp;этом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Fm   Ab7  Cm   F </span>
-<span class="txt"> я&nbsp;думал&nbsp;совсем&nbsp;о&nbsp;другом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  G7   Cm </span>
+<span class="line"><span class="txt"> О,&nbsp;как&nbsp;ваши&nbsp;флаги&nbsp;сияли&nbsp;прекрасно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  Cm </span></span>
+<span class="line"><span class="txt"> в&nbsp;лучах&nbsp;уходящего&nbsp;дня!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  F7   B7 </span></span>
+<span class="line"><span class="txt"> Вы&nbsp;вдаль&nbsp;отправлялись...&nbsp;Но&nbsp;только&nbsp;напрасно&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm  F    Bm   Fm </span></span>
+<span class="line"><span class="txt"> вы&nbsp;звали&nbsp;с&nbsp;собою&nbsp;меня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G    Ab </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Fm   Cm   G7   Cm </span></span>
+<span class="line"><span class="txt"> Напрасно&nbsp;прельщали&nbsp;всем&nbsp;миром,&nbsp;всем&nbsp;светом,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7   G    Cm </span></span>
+<span class="line"><span class="txt"> всем&nbsp;золотом,&nbsp;всем&nbsp;серебром.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  G </span></span>
+<span class="line"><span class="txt"> В&nbsp;то&nbsp;время&nbsp;я&nbsp;думал&nbsp;совсем&nbsp;не&nbsp;об&nbsp;этом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Fm   Ab7  Cm   F </span></span>
+<span class="line"><span class="txt"> я&nbsp;думал&nbsp;совсем&nbsp;о&nbsp;другом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  G7   Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Тогда&nbsp;я,&nbsp;сгорая&nbsp;в&nbsp;любовных&nbsp;томленьях,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  Cm </span>
-<span class="txt"> мечтал,&nbsp;что&nbsp;от&nbsp;страсти&nbsp;умру,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  F7   B7 </span>
-<span class="txt"> взлетал&nbsp;в&nbsp;небеса&nbsp;и&nbsp;стоял&nbsp;на&nbsp;коленях,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm  F    Bm   Fm </span>
-<span class="txt"> и&nbsp;врал,&nbsp;и&nbsp;не&nbsp;ведал,&nbsp;что&nbsp;вру...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G    Ab </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Fm   Cm   G7   Cm </span>
-<span class="txt"> О,&nbsp;я&nbsp;заблуждался,&nbsp;я&nbsp;думал,&nbsp;что&nbsp;годы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7   G    Cm </span>
-<span class="txt"> развеют&nbsp;туман&nbsp;голубой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  G </span>
-<span class="txt"> Но&nbsp;нынче&nbsp;всё&nbsp;то&nbsp;же,&nbsp;и&nbsp;вы,&nbsp;мореходы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Fm   Ab7  Cm   F </span>
-<span class="txt"> меня&nbsp;не&nbsp;зовите&nbsp;с&nbsp;собой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  G7   Cm </span>
+<span class="line"><span class="txt"> Тогда&nbsp;я,&nbsp;сгорая&nbsp;в&nbsp;любовных&nbsp;томленьях,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  Cm </span></span>
+<span class="line"><span class="txt"> мечтал,&nbsp;что&nbsp;от&nbsp;страсти&nbsp;умру,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  F7   B7 </span></span>
+<span class="line"><span class="txt"> взлетал&nbsp;в&nbsp;небеса&nbsp;и&nbsp;стоял&nbsp;на&nbsp;коленях,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm  F    Bm   Fm </span></span>
+<span class="line"><span class="txt"> и&nbsp;врал,&nbsp;и&nbsp;не&nbsp;ведал,&nbsp;что&nbsp;вру...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G    Ab </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Fm   Cm   G7   Cm </span></span>
+<span class="line"><span class="txt"> О,&nbsp;я&nbsp;заблуждался,&nbsp;я&nbsp;думал,&nbsp;что&nbsp;годы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7   G    Cm </span></span>
+<span class="line"><span class="txt"> развеют&nbsp;туман&nbsp;голубой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  G </span></span>
+<span class="line"><span class="txt"> Но&nbsp;нынче&nbsp;всё&nbsp;то&nbsp;же,&nbsp;и&nbsp;вы,&nbsp;мореходы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Fm   Ab7  Cm   F </span></span>
+<span class="line"><span class="txt"> меня&nbsp;не&nbsp;зовите&nbsp;с&nbsp;собой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  G7   Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;пусть&nbsp;мой&nbsp;кораблик&nbsp;распался&nbsp;на&nbsp;части,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  Cm </span>
-<span class="txt"> и&nbsp;снасти&nbsp;дрожат&nbsp;на&nbsp;ветру...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  F7   B7 </span>
-<span class="txt"> Вчера&nbsp;я&nbsp;чуть&nbsp;было&nbsp;не&nbsp;умер&nbsp;от&nbsp;страсти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm  F    Bm   Fm </span>
-<span class="txt"> а&nbsp;нынче&nbsp;уж&nbsp;точно&nbsp;умру!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G    Ab </span>
+<span class="line"><span class="txt"> И&nbsp;пусть&nbsp;мой&nbsp;кораблик&nbsp;распался&nbsp;на&nbsp;части,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Ab7  Cm </span></span>
+<span class="line"><span class="txt"> и&nbsp;снасти&nbsp;дрожат&nbsp;на&nbsp;ветру...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab7  F7   B7 </span></span>
+<span class="line"><span class="txt"> Вчера&nbsp;я&nbsp;чуть&nbsp;было&nbsp;не&nbsp;умер&nbsp;от&nbsp;страсти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm  F    Bm   Fm </span></span>
+<span class="line"><span class="txt"> а&nbsp;нынче&nbsp;уж&nbsp;точно&nbsp;умру!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   G    Ab </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1986</span>
-
+<pre><span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

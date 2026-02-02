@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,57 +423,55 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ПЕСНЯ БЕЖЕНЦЕВ</span>
+data-key="Am"><h1>ПЕСНЯ БЕЖЕНЦЕВ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кругом&nbsp;туман,&nbsp;впереди&nbsp;туман,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;позади&nbsp;туман,&nbsp;в&nbsp;голове&nbsp;туман...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Пустой&nbsp;карман,&nbsp;полевой&nbsp;бурьян,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;вот-вот&nbsp;буран,&nbsp;и&nbsp;вся&nbsp;жизнь&nbsp;-&nbsp;обман.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#    C7 </span>
-<span class="txt"> Кругом&nbsp;стена,&nbsp;позади&nbsp;весна,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;впереди&nbsp;война,&nbsp;на&nbsp;груди&nbsp;жена,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span>
-<span class="txt"> Я&nbsp;жильё&nbsp;спалил,&nbsp;я&nbsp;ружьё&nbsp;сломал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    Fm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;погнал&nbsp;в&nbsp;чём&nbsp;был,&nbsp;и&nbsp;сбежал,&nbsp;сбежал...&nbsp;&nbsp; </span><span class="ch"> G#    G </span>
+<span class="line"><span class="txt"> Кругом&nbsp;туман,&nbsp;впереди&nbsp;туман,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;позади&nbsp;туман,&nbsp;в&nbsp;голове&nbsp;туман...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Пустой&nbsp;карман,&nbsp;полевой&nbsp;бурьян,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;вот-вот&nbsp;буран,&nbsp;и&nbsp;вся&nbsp;жизнь&nbsp;-&nbsp;обман.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#    C7 </span></span>
+<span class="line"><span class="txt"> Кругом&nbsp;стена,&nbsp;позади&nbsp;весна,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;впереди&nbsp;война,&nbsp;на&nbsp;груди&nbsp;жена,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;жильё&nbsp;спалил,&nbsp;я&nbsp;ружьё&nbsp;сломал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    Fm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;погнал&nbsp;в&nbsp;чём&nbsp;был,&nbsp;и&nbsp;сбежал,&nbsp;сбежал...&nbsp;&nbsp; </span><span class="ch"> G#    G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Эй-эй-эй,&nbsp;погоняй&nbsp;лошадей!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Эй-эй-эй,&nbsp;поторапливайся!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  G  C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Эй-эй,&nbsp;к&nbsp;хлопотной&nbsp;доле&nbsp;своей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;веселей&nbsp;приноравливайся!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  G  C  G  C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G  C  G  C  G  C  E7 Am E7 Am </span>
-<span class="txt"> Впереди&nbsp;овраг,&nbsp;а&nbsp;в&nbsp;овраге&nbsp;враг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;у&nbsp;врага&nbsp;наган,&nbsp;а&nbsp;кругом&nbsp;туман...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Тарантас&nbsp;сожгут,&nbsp;и&nbsp;жену&nbsp;возьмут,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;лошадей&nbsp;в&nbsp;хомут,&nbsp;а&nbsp;меня&nbsp;убьют.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#    C7 </span>
-<span class="txt"> И&nbsp;зачем&nbsp;скакал,&nbsp;и&nbsp;чего&nbsp;искал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;от&nbsp;кого&nbsp;бежал,&nbsp;отчего&nbsp;дрожал?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span>
-<span class="txt"> Всё&nbsp;одно&nbsp;-&nbsp;конец,&nbsp;всё&nbsp;равно&nbsp;-&nbsp;свинец.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    Fm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А,&nbsp;и&nbsp;жизнь&nbsp;одна,&nbsp;и&nbsp;пятак&nbsp;цена!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#    G </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Эй-эй-эй,&nbsp;погоняй&nbsp;лошадей!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Эй-эй-эй,&nbsp;поторапливайся!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  G  C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Эй-эй,&nbsp;к&nbsp;хлопотной&nbsp;доле&nbsp;своей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;веселей&nbsp;приноравливайся!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  G  C  G  C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G  C  G  C  G  C  E7 Am E7 Am </span></span>
+<span class="line"><span class="txt"> Впереди&nbsp;овраг,&nbsp;а&nbsp;в&nbsp;овраге&nbsp;враг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;у&nbsp;врага&nbsp;наган,&nbsp;а&nbsp;кругом&nbsp;туман...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Тарантас&nbsp;сожгут,&nbsp;и&nbsp;жену&nbsp;возьмут,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;лошадей&nbsp;в&nbsp;хомут,&nbsp;а&nbsp;меня&nbsp;убьют.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#    C7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;зачем&nbsp;скакал,&nbsp;и&nbsp;чего&nbsp;искал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;от&nbsp;кого&nbsp;бежал,&nbsp;отчего&nbsp;дрожал?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;одно&nbsp;-&nbsp;конец,&nbsp;всё&nbsp;равно&nbsp;-&nbsp;свинец.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    Fm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А,&nbsp;и&nbsp;жизнь&nbsp;одна,&nbsp;и&nbsp;пятак&nbsp;цена!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#    G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;слёзный&nbsp;всхлип,&nbsp;и&nbsp;колёсный&nbsp;скрип,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;осип,&nbsp;охрип,&nbsp;да&nbsp;не&nbsp;влип,&nbsp;не&nbsp;погиб...&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Позади&nbsp;страна...&nbsp;Пощади,&nbsp;война!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;груди&nbsp;жена,&nbsp;и&nbsp;вся&nbsp;жизнь&nbsp;видна...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#    C7 </span>
-<span class="txt"> Ты,&nbsp;жена,&nbsp;не&nbsp;плачь!&nbsp;Не&nbsp;стреляй,&nbsp;басмач!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Не&nbsp;съедай,&nbsp;шакал!&nbsp;Не&nbsp;зазря&nbsp;скакал!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span>
-<span class="txt"> Свисти,&nbsp;шайтан...&nbsp;Шелести,&nbsp;каштан...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    Fm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Позади&nbsp;туман...&nbsp;Впереди&nbsp;туман...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#    G </span>
+<span class="line"><span class="txt"> И&nbsp;слёзный&nbsp;всхлип,&nbsp;и&nbsp;колёсный&nbsp;скрип,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;осип,&nbsp;охрип,&nbsp;да&nbsp;не&nbsp;влип,&nbsp;не&nbsp;погиб...&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Позади&nbsp;страна...&nbsp;Пощади,&nbsp;война!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;груди&nbsp;жена,&nbsp;и&nbsp;вся&nbsp;жизнь&nbsp;видна...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#    C7 </span></span>
+<span class="line"><span class="txt"> Ты,&nbsp;жена,&nbsp;не&nbsp;плачь!&nbsp;Не&nbsp;стреляй,&nbsp;басмач!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Не&nbsp;съедай,&nbsp;шакал!&nbsp;Не&nbsp;зазря&nbsp;скакал!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span></span>
+<span class="line"><span class="txt"> Свисти,&nbsp;шайтан...&nbsp;Шелести,&nbsp;каштан...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    Fm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Позади&nbsp;туман...&nbsp;Впереди&nbsp;туман...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#    G </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1981</span>, <span class="year">1987</span>
-
+<pre><span class="year">1981</span>, <span class="year">1987</span>
 </pre>
+
 
                 </div>
         </div>

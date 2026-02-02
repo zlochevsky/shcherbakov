@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,42 +433,40 @@ span.c {
 data-key="D"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Поправьте&nbsp;пюпитры,&nbsp;закончен&nbsp;антракт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D Em A7   D </span>
-<span class="txt"> Десятая&nbsp;цифра,&nbsp;двенадцатый&nbsp;такт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (A7) D Em A7   D </span>
-<span class="txt"> Кивнёмте&nbsp;друг&nbsp;другу,&nbsp;начнемте&nbsp;скорей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7 Gm Gm6 D </span>
-<span class="txt"> И&nbsp;чашу&nbsp;по&nbsp;кругу&nbsp;-&nbsp;так&nbsp;будет&nbsp;верней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 Em A7  D </span>
+<span class="line"><span class="txt"> Поправьте&nbsp;пюпитры,&nbsp;закончен&nbsp;антракт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D Em A7   D </span></span>
+<span class="line"><span class="txt"> Десятая&nbsp;цифра,&nbsp;двенадцатый&nbsp;такт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (A7) D Em A7   D </span></span>
+<span class="line"><span class="txt"> Кивнёмте&nbsp;друг&nbsp;другу,&nbsp;начнемте&nbsp;скорей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7 Gm Gm6 D </span></span>
+<span class="line"><span class="txt"> И&nbsp;чашу&nbsp;по&nbsp;кругу&nbsp;-&nbsp;так&nbsp;будет&nbsp;верней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 Em A7  D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Налейте&nbsp;солисту&nbsp;за&nbsp;верхнее&nbsp;"соль".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D Em A7   D </span>
-<span class="txt"> Налейте&nbsp;альтисту&nbsp;за&nbsp;каждый&nbsp;бемоль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (A7) D Em A7   D </span>
-<span class="txt"> Вина&nbsp;не&nbsp;жалейте,&nbsp;налейте&nbsp;басам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7 Gm Gm6 D </span>
-<span class="txt"> и&nbsp;флейте&nbsp;налейте,&nbsp;хотя&nbsp;бы&nbsp;сто&nbsp;грамм.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 Em A7  D </span>
+<span class="line"><span class="txt"> Налейте&nbsp;солисту&nbsp;за&nbsp;верхнее&nbsp;"соль".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D Em A7   D </span></span>
+<span class="line"><span class="txt"> Налейте&nbsp;альтисту&nbsp;за&nbsp;каждый&nbsp;бемоль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (A7) D Em A7   D </span></span>
+<span class="line"><span class="txt"> Вина&nbsp;не&nbsp;жалейте,&nbsp;налейте&nbsp;басам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7 Gm Gm6 D </span></span>
+<span class="line"><span class="txt"> и&nbsp;флейте&nbsp;налейте,&nbsp;хотя&nbsp;бы&nbsp;сто&nbsp;грамм.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 Em A7  D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Гобою,&nbsp;кларнету,&nbsp;тромбону,&nbsp;трубе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D Em A7   D </span>
-<span class="txt"> квинтету,&nbsp;квартету,&nbsp;и&nbsp;мне,&nbsp;и&nbsp;тебе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (A7) D Em A7   D </span>
-<span class="txt"> И&nbsp;всё&nbsp;же,&nbsp;без&nbsp;спору,&nbsp;всех&nbsp;больше,&nbsp;полней&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7 Gm Gm6 D </span>
-<span class="txt"> нальем&nbsp;дирижёру.&nbsp;Так&nbsp;будет&nbsp;верней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 Em A7  D </span>
+<span class="line"><span class="txt"> Гобою,&nbsp;кларнету,&nbsp;тромбону,&nbsp;трубе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D Em A7   D </span></span>
+<span class="line"><span class="txt"> квинтету,&nbsp;квартету,&nbsp;и&nbsp;мне,&nbsp;и&nbsp;тебе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (A7) D Em A7   D </span></span>
+<span class="line"><span class="txt"> И&nbsp;всё&nbsp;же,&nbsp;без&nbsp;спору,&nbsp;всех&nbsp;больше,&nbsp;полней&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7 Gm Gm6 D </span></span>
+<span class="line"><span class="txt"> нальем&nbsp;дирижёру.&nbsp;Так&nbsp;будет&nbsp;верней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 Em A7  D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> За&nbsp;окнами&nbsp;вьюга,&nbsp;не&nbsp;видно&nbsp;ни&nbsp;зги,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D Em A7   D </span>
-<span class="txt"> но&nbsp;чаша&nbsp;по&nbsp;кругу&nbsp;свершает&nbsp;круги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (A7) D Em A7   D </span>
-<span class="txt"> И&nbsp;каждый&nbsp;спокоен,&nbsp;и&nbsp;крепко&nbsp;стоит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7 Gm Gm6 D </span>
-<span class="txt"> как&nbsp;будто&nbsp;он&nbsp;воин,&nbsp;а&nbsp;рядом&nbsp;свои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 Em A7  D </span>
+<span class="line"><span class="txt"> За&nbsp;окнами&nbsp;вьюга,&nbsp;не&nbsp;видно&nbsp;ни&nbsp;зги,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D Em A7   D </span></span>
+<span class="line"><span class="txt"> но&nbsp;чаша&nbsp;по&nbsp;кругу&nbsp;свершает&nbsp;круги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (A7) D Em A7   D </span></span>
+<span class="line"><span class="txt"> И&nbsp;каждый&nbsp;спокоен,&nbsp;и&nbsp;крепко&nbsp;стоит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7 Gm Gm6 D </span></span>
+<span class="line"><span class="txt"> как&nbsp;будто&nbsp;он&nbsp;воин,&nbsp;а&nbsp;рядом&nbsp;свои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 Em A7  D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Хотя,&nbsp;кроме&nbsp;чаши,&nbsp;ты&nbsp;знаешь,&nbsp;мой&nbsp;друг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D Em A7   D </span>
-<span class="txt"> оружие&nbsp;наше&nbsp;-&nbsp;смычок&nbsp;да&nbsp;мундштук.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (A7) D Em A7   D </span>
-<span class="txt"> И&nbsp;всё&nbsp;же&nbsp;без&nbsp;спору,&nbsp;чтоб&nbsp;было&nbsp;верней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7 Gm Gm6 D </span>
-<span class="txt"> нальём&nbsp;дирижёру&nbsp;-&nbsp;ему&nbsp;тяжелей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 Em A7  D </span>
+<span class="line"><span class="txt"> Хотя,&nbsp;кроме&nbsp;чаши,&nbsp;ты&nbsp;знаешь,&nbsp;мой&nbsp;друг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D Em A7   D </span></span>
+<span class="line"><span class="txt"> оружие&nbsp;наше&nbsp;-&nbsp;смычок&nbsp;да&nbsp;мундштук.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (A7) D Em A7   D </span></span>
+<span class="line"><span class="txt"> И&nbsp;всё&nbsp;же&nbsp;без&nbsp;спору,&nbsp;чтоб&nbsp;было&nbsp;верней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7 Gm Gm6 D </span></span>
+<span class="line"><span class="txt"> нальём&nbsp;дирижёру&nbsp;-&nbsp;ему&nbsp;тяжелей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 Em A7  D </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1983</span>
-
+<pre><span class="year">1983</span>
 </pre>
+
 
                 </div>
         </div>

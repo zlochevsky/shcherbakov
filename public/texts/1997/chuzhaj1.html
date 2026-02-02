@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,49 +433,47 @@ span.c {
 data-key="Em"><span class="txt"> ЧУЖАЯ&nbsp;МУЗЫКА&nbsp;I </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em Am C  H7 </span>
-<span class="txt"> Кроме&nbsp;тебя,&nbsp;Дункан,&nbsp;ещё&nbsp;и&nbsp;Макбет&nbsp;потерпел,&nbsp;учтём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span>
-<span class="txt"> Ты&nbsp;королём&nbsp;смотрел,&nbsp;а&nbsp;был&nbsp;лишь&nbsp;одним&nbsp;из&nbsp;ключей&nbsp;к&nbsp;задаче.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span>
-<span class="txt"> Если&nbsp;б&nbsp;не&nbsp;ты,&nbsp;неужто&nbsp;сойтись&nbsp;иначе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span>
-<span class="txt"> звёзды&nbsp;убийц&nbsp;могли?&nbsp;Отвечаю&nbsp;"нет",&nbsp;ничком&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C  H7 E7 </span>
-<span class="txt"> лёжа&nbsp;в&nbsp;пустой&nbsp;мансарде&nbsp;вне&nbsp;сна&nbsp;и&nbsp;яви,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span>
-<span class="txt"> мудрствуя&nbsp;с&nbsp;кем&nbsp;попало&nbsp;о&nbsp;чём&nbsp;захочу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   C  Hm H7 </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em Am C  H7 </span></span>
+<span class="line"><span class="txt"> Кроме&nbsp;тебя,&nbsp;Дункан,&nbsp;ещё&nbsp;и&nbsp;Макбет&nbsp;потерпел,&nbsp;учтём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;королём&nbsp;смотрел,&nbsp;а&nbsp;был&nbsp;лишь&nbsp;одним&nbsp;из&nbsp;ключей&nbsp;к&nbsp;задаче.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span></span>
+<span class="line"><span class="txt"> Если&nbsp;б&nbsp;не&nbsp;ты,&nbsp;неужто&nbsp;сойтись&nbsp;иначе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span></span>
+<span class="line"><span class="txt"> звёзды&nbsp;убийц&nbsp;могли?&nbsp;Отвечаю&nbsp;"нет",&nbsp;ничком&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C  H7 E7 </span></span>
+<span class="line"><span class="txt"> лёжа&nbsp;в&nbsp;пустой&nbsp;мансарде&nbsp;вне&nbsp;сна&nbsp;и&nbsp;яви,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span></span>
+<span class="line"><span class="txt"> мудрствуя&nbsp;с&nbsp;кем&nbsp;попало&nbsp;о&nbsp;чём&nbsp;захочу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   C  Hm H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;прошлом&nbsp;укладчик&nbsp;шпал,&nbsp;а&nbsp;ныне&nbsp;министр&nbsp;вообще&nbsp;путей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span>
-<span class="txt"> не&nbsp;осчастливил&nbsp;ты&nbsp;меня,&nbsp;но,&nbsp;заметим,&nbsp;и&nbsp;не&nbsp;обидел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span>
-<span class="txt"> Если&nbsp;б&nbsp;не&nbsp;ты,&nbsp;каких&nbsp;бы&nbsp;я&nbsp;стран&nbsp;не&nbsp;видел?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span>
-<span class="txt"> Чьих&nbsp;в&nbsp;каталог&nbsp;не&nbsp;внёс&nbsp;бы&nbsp;затей,&nbsp;страстей...&nbsp;детей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C  H7 E7 </span>
-<span class="txt"> пьющих&nbsp;второй&nbsp;нектар&nbsp;безрадостно...&nbsp;либо&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span>
-<span class="txt"> хлеб&nbsp;второпях&nbsp;и&nbsp;сыр&nbsp;ломающих,&nbsp;чтобы&nbsp;не&nbsp;умереть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   C  Hm H7 </span>
+<span class="line"><span class="txt"> В&nbsp;прошлом&nbsp;укладчик&nbsp;шпал,&nbsp;а&nbsp;ныне&nbsp;министр&nbsp;вообще&nbsp;путей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span></span>
+<span class="line"><span class="txt"> не&nbsp;осчастливил&nbsp;ты&nbsp;меня,&nbsp;но,&nbsp;заметим,&nbsp;и&nbsp;не&nbsp;обидел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span></span>
+<span class="line"><span class="txt"> Если&nbsp;б&nbsp;не&nbsp;ты,&nbsp;каких&nbsp;бы&nbsp;я&nbsp;стран&nbsp;не&nbsp;видел?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span></span>
+<span class="line"><span class="txt"> Чьих&nbsp;в&nbsp;каталог&nbsp;не&nbsp;внёс&nbsp;бы&nbsp;затей,&nbsp;страстей...&nbsp;детей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C  H7 E7 </span></span>
+<span class="line"><span class="txt"> пьющих&nbsp;второй&nbsp;нектар&nbsp;безрадостно...&nbsp;либо&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span></span>
+<span class="line"><span class="txt"> хлеб&nbsp;второпях&nbsp;и&nbsp;сыр&nbsp;ломающих,&nbsp;чтобы&nbsp;не&nbsp;умереть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   C  Hm H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Нет,&nbsp;факультет&nbsp;цитат,&nbsp;тебя&nbsp;ни&nbsp;ценить&nbsp;не&nbsp;рвусь,&nbsp;ни&nbsp;винить.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span>
-<span class="txt"> Свежесть&nbsp;в&nbsp;тебе&nbsp;была,&nbsp;но&nbsp;был&nbsp;ведь&nbsp;и&nbsp;приторный&nbsp;тон&nbsp;десертный.&nbsp; </span><span class="ch"> Em   F#m   H7 </span>
-<span class="txt"> Если&nbsp;б&nbsp;не&nbsp;ты,&nbsp;чего&nbsp;бы&nbsp;не&nbsp;знал&nbsp;я,&nbsp;смертный?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span>
-<span class="txt"> Разве&nbsp;гнушался&nbsp;бы&nbsp;заметать&nbsp;следы,&nbsp;темнить,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C  H7 E7 </span>
-<span class="txt"> фору&nbsp;бы&nbsp;брать&nbsp;робел&nbsp;(когда&nbsp;не&nbsp;до&nbsp;шахмат),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span>
-<span class="txt"> путать&nbsp;не&nbsp;смел&nbsp;бы&nbsp;всякий&nbsp;акцент&nbsp;с&nbsp;любым...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   C  Hm H7 </span>
+<span class="line"><span class="txt"> Нет,&nbsp;факультет&nbsp;цитат,&nbsp;тебя&nbsp;ни&nbsp;ценить&nbsp;не&nbsp;рвусь,&nbsp;ни&nbsp;винить.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span></span>
+<span class="line"><span class="txt"> Свежесть&nbsp;в&nbsp;тебе&nbsp;была,&nbsp;но&nbsp;был&nbsp;ведь&nbsp;и&nbsp;приторный&nbsp;тон&nbsp;десертный.&nbsp; </span><span class="ch"> Em   F#m   H7 </span></span>
+<span class="line"><span class="txt"> Если&nbsp;б&nbsp;не&nbsp;ты,&nbsp;чего&nbsp;бы&nbsp;не&nbsp;знал&nbsp;я,&nbsp;смертный?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span></span>
+<span class="line"><span class="txt"> Разве&nbsp;гнушался&nbsp;бы&nbsp;заметать&nbsp;следы,&nbsp;темнить,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C  H7 E7 </span></span>
+<span class="line"><span class="txt"> фору&nbsp;бы&nbsp;брать&nbsp;робел&nbsp;(когда&nbsp;не&nbsp;до&nbsp;шахмат),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span></span>
+<span class="line"><span class="txt"> путать&nbsp;не&nbsp;смел&nbsp;бы&nbsp;всякий&nbsp;акцент&nbsp;с&nbsp;любым...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   C  Hm H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> О,&nbsp;неизвестно&nbsp;кто,&nbsp;умеющий&nbsp;жить&nbsp;неизвестно&nbsp;где.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span>
-<span class="txt"> Недруг&nbsp;я&nbsp;вряд&nbsp;ли&nbsp;твой.&nbsp;Добавим,&nbsp;и&nbsp;брат&nbsp;не&nbsp;тебе,&nbsp;тем&nbsp;паче.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span>
-<span class="txt"> Если&nbsp;б&nbsp;не&nbsp;я,&nbsp;ужель&nbsp;бы&nbsp;ты&nbsp;стал&nbsp;богаче?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span>
-<span class="txt"> Нешто&nbsp;с&nbsp;другим&nbsp;бы&nbsp;компасом&nbsp;шёл&nbsp;теперь&nbsp;к&nbsp;воде&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C  H7 E7 </span>
-<span class="txt"> веки&nbsp;сухие&nbsp;мыть&nbsp;в&nbsp;реке&nbsp;грозовой,&nbsp;янтарной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em F </span>
-<span class="txt"> с&nbsp;промельком&nbsp;капель&nbsp;ясных,&nbsp;как&nbsp;белый&nbsp;день.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F     Em </span>
+<span class="line"><span class="txt"> О,&nbsp;неизвестно&nbsp;кто,&nbsp;умеющий&nbsp;жить&nbsp;неизвестно&nbsp;где.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span></span>
+<span class="line"><span class="txt"> Недруг&nbsp;я&nbsp;вряд&nbsp;ли&nbsp;твой.&nbsp;Добавим,&nbsp;и&nbsp;брат&nbsp;не&nbsp;тебе,&nbsp;тем&nbsp;паче.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F#m   H7 </span></span>
+<span class="line"><span class="txt"> Если&nbsp;б&nbsp;не&nbsp;я,&nbsp;ужель&nbsp;бы&nbsp;ты&nbsp;стал&nbsp;богаче?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span></span>
+<span class="line"><span class="txt"> Нешто&nbsp;с&nbsp;другим&nbsp;бы&nbsp;компасом&nbsp;шёл&nbsp;теперь&nbsp;к&nbsp;воде&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C  H7 E7 </span></span>
+<span class="line"><span class="txt"> веки&nbsp;сухие&nbsp;мыть&nbsp;в&nbsp;реке&nbsp;грозовой,&nbsp;янтарной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em F </span></span>
+<span class="line"><span class="txt"> с&nbsp;промельком&nbsp;капель&nbsp;ясных,&nbsp;как&nbsp;белый&nbsp;день.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   F     Em </span></span>
 <span class="txt"> Или&nbsp;полдень. </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em Am C Hm H7 </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em Am C Hm H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 H7 Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Am Em H7 Em </span>
-
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 H7 Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7 Am Em H7 Em </span></span>
 </div>
-<pre>
-    <span class="year">1997</span>
-
+<pre><span class="year">1997</span>
 </pre>
+
 
                 </div>
         </div>

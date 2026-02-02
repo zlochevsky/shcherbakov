@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,42 +433,40 @@ span.c {
 data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;исполняю&nbsp;всё,&nbsp;что&nbsp;сам&nbsp;себе&nbsp;велю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ Am   Am7+ </span>
-<span class="txt"> куда&nbsp;хочу&nbsp;рулю&nbsp;я&nbsp;без&nbsp;оглядки,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ A7   Dm </span>
-<span class="txt"> Вот&nbsp;я&nbsp;сказал&nbsp;себе,&nbsp;что&nbsp;я&nbsp;тебя&nbsp;люблю&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6       Am </span>
-<span class="txt"> и&nbsp;убедил&nbsp;в&nbsp;момент.&nbsp;И&nbsp;всё&nbsp;в&nbsp;порядке,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   Am   E7   Am7 </span>
+<span class="line"><span class="txt"> Я&nbsp;исполняю&nbsp;всё,&nbsp;что&nbsp;сам&nbsp;себе&nbsp;велю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ Am   Am7+ </span></span>
+<span class="line"><span class="txt"> куда&nbsp;хочу&nbsp;рулю&nbsp;я&nbsp;без&nbsp;оглядки,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ A7   Dm </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;я&nbsp;сказал&nbsp;себе,&nbsp;что&nbsp;я&nbsp;тебя&nbsp;люблю&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6       Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;убедил&nbsp;в&nbsp;момент.&nbsp;И&nbsp;всё&nbsp;в&nbsp;порядке,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   Am   E7   Am7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;убедил&nbsp;себя.&nbsp;И,&nbsp;чтоб&nbsp;само&nbsp;собой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ Am   Am7+ </span>
-<span class="txt"> учесть&nbsp;накладки&nbsp;все&nbsp;и&nbsp;неполадки,&nbsp;да,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ A7   Dm </span>
-<span class="txt"> я&nbsp;прямо&nbsp;в&nbsp;тот&nbsp;же&nbsp;миг&nbsp;поговорил&nbsp;с&nbsp;тобой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6       Am </span>
-<span class="txt"> и&nbsp;объяснил&nbsp;тебе,&nbsp;что&nbsp;всё&nbsp;в&nbsp;порядке,&nbsp;да,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   Am   E7   Am7 </span>
+<span class="line"><span class="txt"> Я&nbsp;убедил&nbsp;себя.&nbsp;И,&nbsp;чтоб&nbsp;само&nbsp;собой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ Am   Am7+ </span></span>
+<span class="line"><span class="txt"> учесть&nbsp;накладки&nbsp;все&nbsp;и&nbsp;неполадки,&nbsp;да,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ A7   Dm </span></span>
+<span class="line"><span class="txt"> я&nbsp;прямо&nbsp;в&nbsp;тот&nbsp;же&nbsp;миг&nbsp;поговорил&nbsp;с&nbsp;тобой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6       Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;объяснил&nbsp;тебе,&nbsp;что&nbsp;всё&nbsp;в&nbsp;порядке,&nbsp;да,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   Am   E7   Am7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> что&nbsp;без&nbsp;тебя&nbsp;никак,&nbsp;что&nbsp;белый&nbsp;свет&nbsp;мне&nbsp;тьма,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ Am   Am7+ </span>
-<span class="txt"> ни&nbsp;огонька&nbsp;кругом&nbsp;и&nbsp;ни&nbsp;лампадки,&nbsp;да;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ A7   Dm </span>
-<span class="txt"> что&nbsp;я&nbsp;сошёл&nbsp;с&nbsp;ума,&nbsp;что&nbsp;всё&nbsp;кругом&nbsp;-&nbsp;тюрьма,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6       Am </span>
-<span class="txt"> что&nbsp;всё&nbsp;во&nbsp;мне&nbsp;горит,&nbsp;и&nbsp;всё&nbsp;в&nbsp;порядке,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   Am   E7   Am7 </span>
+<span class="line"><span class="txt"> что&nbsp;без&nbsp;тебя&nbsp;никак,&nbsp;что&nbsp;белый&nbsp;свет&nbsp;мне&nbsp;тьма,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ Am   Am7+ </span></span>
+<span class="line"><span class="txt"> ни&nbsp;огонька&nbsp;кругом&nbsp;и&nbsp;ни&nbsp;лампадки,&nbsp;да;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ A7   Dm </span></span>
+<span class="line"><span class="txt"> что&nbsp;я&nbsp;сошёл&nbsp;с&nbsp;ума,&nbsp;что&nbsp;всё&nbsp;кругом&nbsp;-&nbsp;тюрьма,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6       Am </span></span>
+<span class="line"><span class="txt"> что&nbsp;всё&nbsp;во&nbsp;мне&nbsp;горит,&nbsp;и&nbsp;всё&nbsp;в&nbsp;порядке,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   Am   E7   Am7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;убедил&nbsp;себя.&nbsp;Я&nbsp;ждал&nbsp;ответа&nbsp;век.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ Am   Am7+ </span>
-<span class="txt"> Я&nbsp;телефон&nbsp;сжимал,&nbsp;как&nbsp;в&nbsp;лихорадке,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ A7   Dm </span>
-<span class="txt"> Я&nbsp;ждал,&nbsp;что&nbsp;ты&nbsp;в&nbsp;ответ&nbsp;мне&nbsp;скажешь:&nbsp;"Нет,&nbsp;привет!"&nbsp;&nbsp; </span><span class="ch"> Dm6       Am </span>
-<span class="txt"> Я&nbsp;знал,&nbsp;ты&nbsp;скажешь&nbsp;"нет"&nbsp;-&nbsp;и&nbsp;всё&nbsp;в&nbsp;порядке,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   Am   E7   Am7 </span>
+<span class="line"><span class="txt"> Я&nbsp;убедил&nbsp;себя.&nbsp;Я&nbsp;ждал&nbsp;ответа&nbsp;век.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ Am   Am7+ </span></span>
+<span class="line"><span class="txt"> Я&nbsp;телефон&nbsp;сжимал,&nbsp;как&nbsp;в&nbsp;лихорадке,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ A7   Dm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;ждал,&nbsp;что&nbsp;ты&nbsp;в&nbsp;ответ&nbsp;мне&nbsp;скажешь:&nbsp;"Нет,&nbsp;привет!"&nbsp;&nbsp; </span><span class="ch"> Dm6       Am </span></span>
+<span class="line"><span class="txt"> Я&nbsp;знал,&nbsp;ты&nbsp;скажешь&nbsp;"нет"&nbsp;-&nbsp;и&nbsp;всё&nbsp;в&nbsp;порядке,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   Am   E7   Am7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;ты&nbsp;сказала&nbsp;"да",&nbsp;и&nbsp;я&nbsp;сгорел&nbsp;дотла&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ Am   Am7+ </span>
-<span class="txt"> за&nbsp;убеждения&nbsp;в&nbsp;жестокой&nbsp;схватке,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ A7   Dm </span>
-<span class="txt"> Ведь&nbsp;ты&nbsp;сказала&nbsp;"да"&nbsp;-&nbsp;и&nbsp;так&nbsp;легко&nbsp;смогла&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6       Am </span>
-<span class="txt"> разубедить&nbsp;меня,&nbsp;-&nbsp;и&nbsp;всё&nbsp;в&nbsp;порядке,&nbsp;да,&nbsp;да,&nbsp;да,&nbsp;да.&nbsp; </span><span class="ch"> A#   Am   E7   Am7 </span>
+<span class="line"><span class="txt"> Но&nbsp;ты&nbsp;сказала&nbsp;"да",&nbsp;и&nbsp;я&nbsp;сгорел&nbsp;дотла&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ Am   Am7+ </span></span>
+<span class="line"><span class="txt"> за&nbsp;убеждения&nbsp;в&nbsp;жестокой&nbsp;схватке,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Am7+ A7   Dm </span></span>
+<span class="line"><span class="txt"> Ведь&nbsp;ты&nbsp;сказала&nbsp;"да"&nbsp;-&nbsp;и&nbsp;так&nbsp;легко&nbsp;смогла&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6       Am </span></span>
+<span class="line"><span class="txt"> разубедить&nbsp;меня,&nbsp;-&nbsp;и&nbsp;всё&nbsp;в&nbsp;порядке,&nbsp;да,&nbsp;да,&nbsp;да,&nbsp;да.&nbsp; </span><span class="ch"> A#   Am   E7   Am7 </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

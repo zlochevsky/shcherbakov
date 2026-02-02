@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,89 +423,80 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Gm"><span class="sng-title">Лондон</span>
+data-key="Gm"><h1>Лондон</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm* Gm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm* Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Думал&nbsp;я,&nbsp;что&nbsp;Лондон&nbsp;сер,&nbsp;как&nbsp;слон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 Cm/A Gm </span>
-<span class="txt"> Думал,&nbsp;что&nbsp;печален&nbsp;он,&nbsp;как&nbsp;стон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B F7/A G </span>
-<span class="txt"> А&nbsp;он&nbsp;светел,&nbsp;разноцветен&nbsp;он.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm* Gm </span>
+<span class="line"><span class="txt"> Думал&nbsp;я,&nbsp;что&nbsp;Лондон&nbsp;сер,&nbsp;как&nbsp;слон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 Cm/A Gm </span></span>
+<span class="line"><span class="txt"> Думал,&nbsp;что&nbsp;печален&nbsp;он,&nbsp;как&nbsp;стон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B F7/A G </span></span>
+<span class="line"><span class="txt"> А&nbsp;он&nbsp;светел,&nbsp;разноцветен&nbsp;он.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm* Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Идучи&nbsp;по&nbsp;мосту&nbsp;Вестминстер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 </span>
-<span class="txt"> слышу&nbsp;нежный&nbsp;голос&nbsp;высших&nbsp;сфер:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> вот,&nbsp;мол,&nbsp;мистер,&nbsp;мост&nbsp;Вестминстер,&nbsp;сэр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm* Gm </span>
+<span class="line"><span class="txt"> Идучи&nbsp;по&nbsp;мосту&nbsp;Вестминстер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 </span></span>
+<span class="line"><span class="txt"> слышу&nbsp;нежный&nbsp;голос&nbsp;высших&nbsp;сфер:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> вот,&nbsp;мол,&nbsp;мистер,&nbsp;мост&nbsp;Вестминстер,&nbsp;сэр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm* Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Где&nbsp;хочу&nbsp;гуляю,&nbsp;счастлив,&nbsp;пьян.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E A </span>
-<span class="txt"> В&nbsp;центре&nbsp;у&nbsp;фонтана&nbsp;ем&nbsp;каштан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A D </span>
-<span class="txt"> Всюду&nbsp;флаги.&nbsp;Джин&nbsp;во&nbsp;фляге&nbsp;прян.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm </span>
+<span class="line"><span class="txt"> Где&nbsp;хочу&nbsp;гуляю,&nbsp;счастлив,&nbsp;пьян.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E A </span></span>
+<span class="line"><span class="txt"> В&nbsp;центре&nbsp;у&nbsp;фонтана&nbsp;ем&nbsp;каштан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A D </span></span>
+<span class="line"><span class="txt"> Всюду&nbsp;флаги.&nbsp;Джин&nbsp;во&nbsp;фляге&nbsp;прян.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;вокруг,&nbsp;забыв&nbsp;зачем&nbsp;живут,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7.. </span>
+<span class="line"><span class="txt"> А&nbsp;вокруг,&nbsp;забыв&nbsp;зачем&nbsp;живут,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7.. </span></span>
 <span class="txt"> лондонцы&nbsp;безрадостно&nbsp;снуют. </span>
 <span class="txt"> Им&nbsp;всё&nbsp;мрачно,&nbsp;всё&nbsp;невзрачно&nbsp;тут. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;Гамбург&nbsp;им&nbsp;теперь&nbsp;бы&nbsp;или&nbsp;в&nbsp;Рим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6... </span>
+<span class="line"><span class="txt"> В&nbsp;Гамбург&nbsp;им&nbsp;теперь&nbsp;бы&nbsp;или&nbsp;в&nbsp;Рим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6... </span></span>
 <span class="txt"> Здешний&nbsp;шум&nbsp;противен&nbsp;им&nbsp;и&nbsp;дым. </span>
 <span class="txt"> Лондон&nbsp;пёстрый&nbsp;как&nbsp;нож&nbsp;острый&nbsp;им. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Скуден&nbsp;быт&nbsp;британца,&nbsp;труден&nbsp;хлеб.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span>
+<span class="line"><span class="txt"> Скуден&nbsp;быт&nbsp;британца,&nbsp;труден&nbsp;хлеб.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span></span>
 <span class="txt"> Утром&nbsp;он&nbsp;садится,&nbsp;глух&nbsp;и&nbsp;слеп, </span>
 <span class="txt"> в&nbsp;чёрный,&nbsp;тесный,&nbsp;шестиместный&nbsp;кэб. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Каждый&nbsp;день&nbsp;он&nbsp;видит&nbsp;Риджент-стрит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7... </span>
+<span class="line"><span class="txt"> Каждый&nbsp;день&nbsp;он&nbsp;видит&nbsp;Риджент-стрит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7... </span></span>
 <span class="txt"> Курит&nbsp;с&nbsp;кем&nbsp;попало&nbsp;и&nbsp;острит. </span>
 <span class="txt"> Безупречно&nbsp;вымыт,&nbsp;вечно&nbsp;брит. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Каждый&nbsp;вечер&nbsp;он,&nbsp;хоть&nbsp;хвор,&nbsp;хоть&nbsp;слаб,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6... </span>
+<span class="line"><span class="txt"> Каждый&nbsp;вечер&nbsp;он,&nbsp;хоть&nbsp;хвор,&nbsp;хоть&nbsp;слаб,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6... </span></span>
 <span class="txt"> гордо&nbsp;входит,&nbsp;что&nbsp;твой&nbsp;маршал&nbsp;в&nbsp;штаб, </span>
 <span class="txt"> в&nbsp;тусклый,&nbsp;скучный,&nbsp;равнодушный&nbsp;паб. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Жаль&nbsp;британцев,&nbsp;худо&nbsp;им&nbsp;вполне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span>
+<span class="line"><span class="txt"> Жаль&nbsp;британцев,&nbsp;худо&nbsp;им&nbsp;вполне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span></span>
 <span class="txt"> В&nbsp;Лондоне&nbsp;они&nbsp;как&nbsp;на&nbsp;Луне. </span>
 <span class="txt"> Всё&nbsp;им&nbsp;тошно&nbsp;здесь,&nbsp;не&nbsp;то&nbsp;что&nbsp;мне. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Немцев&nbsp;жаль,&nbsp;голландцев,&nbsp;римлян&nbsp;жаль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7.. </span>
+<span class="line"><span class="txt"> Немцев&nbsp;жаль,&nbsp;голландцев,&nbsp;римлян&nbsp;жаль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7.. </span></span>
 <span class="txt"> Круглый&nbsp;год&nbsp;в&nbsp;душе&nbsp;у&nbsp;них&nbsp;февраль. </span>
 <span class="txt"> Дышат&nbsp;грузно,&nbsp;смотрят&nbsp;грустно&nbsp;вдаль. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Как&nbsp;бы,&nbsp;мол,&nbsp;пойдя&nbsp;Бог&nbsp;весть&nbsp;куда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6... </span>
+<span class="line"><span class="txt"> Как&nbsp;бы,&nbsp;мол,&nbsp;пойдя&nbsp;Бог&nbsp;весть&nbsp;куда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6... </span></span>
 <span class="txt"> встретить&nbsp;город,&nbsp;где&nbsp;бы&nbsp;жить&nbsp;всегда... </span>
-<span class="txt"> А&nbsp;он&nbsp;&mdash;&nbsp;вот&nbsp;он,&nbsp;ест&nbsp;и&nbsp;пьёт&nbsp;он,&nbsp;да. </span><span class="ch">  </span>
+<span class="line"><span class="txt"> А&nbsp;он&nbsp;&mdash;&nbsp;вот&nbsp;он,&nbsp;ест&nbsp;и&nbsp;пьёт&nbsp;он,&nbsp;да. </span><span class="ch">  </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Слёз&nbsp;не&nbsp;льёт&nbsp;он,&nbsp;флаги&nbsp;шьёт&nbsp;он,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm* F </span>
-<span class="txt"> Ммммм...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Cm Gm D7 Eb7 Cm Gm </span>
+<span class="line"><span class="txt"> Слёз&nbsp;не&nbsp;льёт&nbsp;он,&nbsp;флаги&nbsp;шьёт&nbsp;он,&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm* F </span></span>
+<span class="line"><span class="txt"> Ммммм...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Cm Gm D7 Eb7 Cm Gm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
-
 </div>
 <pre>
-    
 <span class="year">2002</span>                                          Нотировано по исп. <span class="year">2002</span> года. На альбомах 
                                               &#171;<a href="../../Disks/esli.html">Если</a>&#187; и &#171;<a href="../../Disks/chmuzyka3.html">Чужая музыка и не только</a>, часть 3&#187;
                                               песня записана под синтезатор на полтора 
@@ -517,8 +516,8 @@ data-key="Gm"><span class="sng-title">Лондон</span>
   x|---|---|---|      x--|---|---|---|     x|---|---|---|     x|---|---|---|
 
 
-
 </pre>
+
 
                 </div>
         </div>

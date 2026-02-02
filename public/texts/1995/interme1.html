@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,56 +433,53 @@ span.c {
 data-key="Dm"><span class="txt"> ИНТЕРМЕДИЯ&nbsp;I </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Свой&nbsp;век&nbsp;не&nbsp;ярче&nbsp;кривых&nbsp;стенных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-<span class="txt"> щитов&nbsp;с&nbsp;реестрами&nbsp;основных,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;врачебных&nbsp;мер&nbsp;и&nbsp;здоровых&nbsp;норм&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;влачит&nbsp;в&nbsp;отделе&nbsp;готовых&nbsp;форм&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
-<span class="txt"> аптекарь,&nbsp;пешка,&nbsp;ни&nbsp;пуст&nbsp;ни&nbsp;густ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb </span>
-<span class="txt"> а&nbsp;в&nbsp;прошлой&nbsp;жизни&nbsp;он&nbsp;был&nbsp;мангуст,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;борол&nbsp;рептилий,&nbsp;чудовищ&nbsp;бил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Abm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;как&nbsp;пел,&nbsp;но&nbsp;выстрел&nbsp;за&nbsp;них&nbsp;отмстил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gb </span>
-<span class="txt"> испортив&nbsp;песню,&nbsp;и&nbsp;вот&nbsp;теперь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
-<span class="txt"> отважный,&nbsp;нужный,&nbsp;прилежный&nbsp;зверь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;в&nbsp;музее&nbsp;чучелом&nbsp;в&nbsp;полный&nbsp;рост&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;молчит&nbsp;на&nbsp;полке,&nbsp;но&nbsp;ты&nbsp;за&nbsp;хвост&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
+<span class="line"><span class="txt"> Свой&nbsp;век&nbsp;не&nbsp;ярче&nbsp;кривых&nbsp;стенных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="line"><span class="txt"> щитов&nbsp;с&nbsp;реестрами&nbsp;основных,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;врачебных&nbsp;мер&nbsp;и&nbsp;здоровых&nbsp;норм&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;влачит&nbsp;в&nbsp;отделе&nbsp;готовых&nbsp;форм&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
+<span class="line"><span class="txt"> аптекарь,&nbsp;пешка,&nbsp;ни&nbsp;пуст&nbsp;ни&nbsp;густ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb </span></span>
+<span class="line"><span class="txt"> а&nbsp;в&nbsp;прошлой&nbsp;жизни&nbsp;он&nbsp;был&nbsp;мангуст,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;борол&nbsp;рептилий,&nbsp;чудовищ&nbsp;бил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Abm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;как&nbsp;пел,&nbsp;но&nbsp;выстрел&nbsp;за&nbsp;них&nbsp;отмстил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gb </span></span>
+<span class="line"><span class="txt"> испортив&nbsp;песню,&nbsp;и&nbsp;вот&nbsp;теперь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
+<span class="line"><span class="txt"> отважный,&nbsp;нужный,&nbsp;прилежный&nbsp;зверь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;в&nbsp;музее&nbsp;чучелом&nbsp;в&nbsp;полный&nbsp;рост&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;молчит&nbsp;на&nbsp;полке,&nbsp;но&nbsp;ты&nbsp;за&nbsp;хвост&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> его&nbsp;не&nbsp;дёргай,&nbsp;умерь,&nbsp;брат,&nbsp;пыл:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-<span class="txt"> он&nbsp;в&nbsp;прошлой&nbsp;жизни&nbsp;полярник&nbsp;был,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;во&nbsp;льдах&nbsp;без&nbsp;шубы&nbsp;влача&nbsp;свой&nbsp;срок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;свистел&nbsp;сквозь&nbsp;зубы&nbsp;"Зиганшин&nbsp;рок";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
-<span class="txt"> ручной&nbsp;к&nbsp;нему&nbsp;приходил&nbsp;на&nbsp;свист&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb </span>
-<span class="txt"> пингвин&nbsp;и,&nbsp;кланяясь,&nbsp;как&nbsp;артист,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;чудно&nbsp;топорщил&nbsp;подобья&nbsp;крыл,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Abm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;он&nbsp;в&nbsp;прошлой&nbsp;жизни&nbsp;пожарник&nbsp;был,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gb </span>
-<span class="txt"> на&nbsp;бочке&nbsp;ездил,&nbsp;огонь&nbsp;борол,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
-<span class="txt"> а&nbsp;в&nbsp;бочку&nbsp;был&nbsp;запряжён&nbsp;осёл,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;бег&nbsp;осла&nbsp;несмотря&nbsp;на&nbsp;плеть&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;был&nbsp;вял,&nbsp;и&nbsp;дом&nbsp;успевал&nbsp;сгореть;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
+<span class="line"><span class="txt"> его&nbsp;не&nbsp;дёргай,&nbsp;умерь,&nbsp;брат,&nbsp;пыл:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="line"><span class="txt"> он&nbsp;в&nbsp;прошлой&nbsp;жизни&nbsp;полярник&nbsp;был,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;во&nbsp;льдах&nbsp;без&nbsp;шубы&nbsp;влача&nbsp;свой&nbsp;срок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;свистел&nbsp;сквозь&nbsp;зубы&nbsp;"Зиганшин&nbsp;рок";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
+<span class="line"><span class="txt"> ручной&nbsp;к&nbsp;нему&nbsp;приходил&nbsp;на&nbsp;свист&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb </span></span>
+<span class="line"><span class="txt"> пингвин&nbsp;и,&nbsp;кланяясь,&nbsp;как&nbsp;артист,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;чудно&nbsp;топорщил&nbsp;подобья&nbsp;крыл,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Abm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;он&nbsp;в&nbsp;прошлой&nbsp;жизни&nbsp;пожарник&nbsp;был,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gb </span></span>
+<span class="line"><span class="txt"> на&nbsp;бочке&nbsp;ездил,&nbsp;огонь&nbsp;борол,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
+<span class="line"><span class="txt"> а&nbsp;в&nbsp;бочку&nbsp;был&nbsp;запряжён&nbsp;осёл,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;бег&nbsp;осла&nbsp;несмотря&nbsp;на&nbsp;плеть&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;был&nbsp;вял,&nbsp;и&nbsp;дом&nbsp;успевал&nbsp;сгореть;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> когда&nbsp;ж&nbsp;весь&nbsp;город&nbsp;сгорел&nbsp;дотла,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-<span class="txt"> пожар&nbsp;пожрал&nbsp;самого&nbsp;осла,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;след&nbsp;простыл&nbsp;от&nbsp;его&nbsp;копыт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;в&nbsp;прошлой&nbsp;жизни&nbsp;он&nbsp;был&nbsp;самшит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
-<span class="txt"> кустарник&nbsp;южный;&nbsp;Кавказ&nbsp;и&nbsp;Крым&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb </span>
-<span class="txt"> сады&nbsp;свои&nbsp;украшали&nbsp;им,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;он&nbsp;круглый&nbsp;год&nbsp;зеленел,&nbsp;звенел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Abm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ветвился,&nbsp;креп,&nbsp;тяжелел,&nbsp;плотнел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gb </span>
-<span class="txt"> Земли&nbsp;и&nbsp;Солнца&nbsp;являл&nbsp;родство,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
-<span class="txt"> и&nbsp;мебель&nbsp;строили&nbsp;из&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;днях,&nbsp;я&nbsp;слышал,&nbsp;ты&nbsp;стул&nbsp;купил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;он&nbsp;в&nbsp;прошлой&nbsp;жизни&nbsp;Коперник&nbsp;был.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
+<span class="line"><span class="txt"> когда&nbsp;ж&nbsp;весь&nbsp;город&nbsp;сгорел&nbsp;дотла,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="line"><span class="txt"> пожар&nbsp;пожрал&nbsp;самого&nbsp;осла,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;след&nbsp;простыл&nbsp;от&nbsp;его&nbsp;копыт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;в&nbsp;прошлой&nbsp;жизни&nbsp;он&nbsp;был&nbsp;самшит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
+<span class="line"><span class="txt"> кустарник&nbsp;южный;&nbsp;Кавказ&nbsp;и&nbsp;Крым&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb </span></span>
+<span class="line"><span class="txt"> сады&nbsp;свои&nbsp;украшали&nbsp;им,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;он&nbsp;круглый&nbsp;год&nbsp;зеленел,&nbsp;звенел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Abm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ветвился,&nbsp;креп,&nbsp;тяжелел,&nbsp;плотнел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gb </span></span>
+<span class="line"><span class="txt"> Земли&nbsp;и&nbsp;Солнца&nbsp;являл&nbsp;родство,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
+<span class="line"><span class="txt"> и&nbsp;мебель&nbsp;строили&nbsp;из&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;днях,&nbsp;я&nbsp;слышал,&nbsp;ты&nbsp;стул&nbsp;купил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;он&nbsp;в&nbsp;прошлой&nbsp;жизни&nbsp;Коперник&nbsp;был.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1995</span>
-
+<pre><span class="year">1995</span>
 
 </pre>
+
 
                 </div>
         </div>

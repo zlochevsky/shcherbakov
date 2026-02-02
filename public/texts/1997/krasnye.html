@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,21 +423,21 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">Красные ворота</span>
+data-key="Dm"><h1>Красные ворота</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am F7 E7 Am </span>
-<span class="txt"> То&nbsp;галопом,&nbsp;то&nbsp;вверх&nbsp;тор/машками&nbsp;-&nbsp;дни&nbsp;мелькают&nbsp;а/ля&nbsp;дра/же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Dm6/H Am </span>
-<span class="txt"> Например,&nbsp;эти&nbsp;две&nbsp;с&nbsp;ро/машками&nbsp;не&nbsp;по/любят&nbsp;меня&nbsp;у/же.&nbsp;&nbsp;&nbsp;&nbsp;Dm&nbsp;Е&nbsp;Am </span><span class="ch">  </span>
-<span class="txt"> Прежде&nbsp;/взвыл&nbsp;о&nbsp;таком&nbsp;бы&nbsp;бедствии,&nbsp;нынче&nbsp;ж&nbsp;только&nbsp;губу&nbsp;скрив/лю:&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> ниче/го,&nbsp;как-нибудь&nbsp;впо/следствии&nbsp;я&nbsp;их&nbsp;/тоже&nbsp;не&nbsp;/полюб/лю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am F7 E7 Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am F7 E7 Am </span></span>
+<span class="line"><span class="txt"> То&nbsp;галопом,&nbsp;то&nbsp;вверх&nbsp;тор/машками&nbsp;-&nbsp;дни&nbsp;мелькают&nbsp;а/ля&nbsp;дра/же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Dm6/H Am </span></span>
+<span class="line"><span class="txt"> Например,&nbsp;эти&nbsp;две&nbsp;с&nbsp;ро/машками&nbsp;не&nbsp;по/любят&nbsp;меня&nbsp;у/же.&nbsp;&nbsp;&nbsp;&nbsp;Dm&nbsp;Е&nbsp;Am </span><span class="ch">  </span></span>
+<span class="line"><span class="txt"> Прежде&nbsp;/взвыл&nbsp;о&nbsp;таком&nbsp;бы&nbsp;бедствии,&nbsp;нынче&nbsp;ж&nbsp;только&nbsp;губу&nbsp;скрив/лю:&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> ниче/го,&nbsp;как-нибудь&nbsp;впо/следствии&nbsp;я&nbsp;их&nbsp;/тоже&nbsp;не&nbsp;/полюб/лю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am F7 E7 Am </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Не&nbsp;мычи,&nbsp;пассажир,&nbsp;так&nbsp;ласково.&nbsp;Стоит&nbsp;повесть&nbsp;твоя&nbsp;пятак. </span>
@@ -453,30 +461,28 @@ data-key="Dm"><span class="sng-title">Красные ворота</span>
 <span class="txt"> Подожди&nbsp;в&nbsp;турникет&nbsp;рекой&nbsp;впадать&nbsp;и&nbsp;дыши&nbsp;чуть&nbsp;в&nbsp;сторонку,&nbsp;да. </span>
 <span class="txt"> Мне&nbsp;от&nbsp;Красных&nbsp;ворот&nbsp;рукой&nbsp;подать,&nbsp;а&nbsp;тебе&nbsp;ещё&nbsp;вон&nbsp;куда. </span>
 <span class="txt"> Так&nbsp;что&nbsp;крепче&nbsp;держись&nbsp;за&nbsp;поручень.&nbsp;А&nbsp;когда&nbsp;побредёшь&nbsp;пешком, </span>
-<span class="txt"> лучше&nbsp;там&nbsp;припадай&nbsp;к&nbsp;забору,&nbsp;чем&nbsp;упадай&nbsp;в&nbsp;лопухи&nbsp;мешком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Dm Am F7 E7 Am   --Bm </span>
+<span class="line"><span class="txt"> лучше&nbsp;там&nbsp;припадай&nbsp;к&nbsp;забору,&nbsp;чем&nbsp;упадай&nbsp;в&nbsp;лопухи&nbsp;мешком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Dm Am F7 E7 Am   --Bm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вот&nbsp;и&nbsp;якорь&nbsp;стальней&nbsp;стальнейшего.&nbsp;Ночь&nbsp;у&nbsp;Красных&nbsp;ворот&nbsp;свежа.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Bm... </span>
+<span class="line"><span class="txt"> Вот&nbsp;и&nbsp;якорь&nbsp;стальней&nbsp;стальнейшего.&nbsp;Ночь&nbsp;у&nbsp;Красных&nbsp;ворот&nbsp;свежа.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Bm... </span></span>
 <span class="txt"> Светлячковый&nbsp;пунктир&nbsp;дальнейшего&nbsp;проникает&nbsp;в&nbsp;туман,&nbsp;жужжа. </span>
 <span class="txt"> Он&nbsp;теряется&nbsp;близ&nbsp;Рейкьявика.&nbsp;Дальше&nbsp;-&nbsp;джунгли&nbsp;долгот-широт. </span>
-<span class="txt"> В&nbsp;джунглях&nbsp;ни&nbsp;одного&nbsp;человека.&nbsp;Разумеется,&nbsp;я&nbsp;не&nbsp;в&nbsp;счёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Ebm Bm Gb7 F7 Bm  --Hm </span>
+<span class="line"><span class="txt"> В&nbsp;джунглях&nbsp;ни&nbsp;одного&nbsp;человека.&nbsp;Разумеется,&nbsp;я&nbsp;не&nbsp;в&nbsp;счёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Ebm Bm Gb7 F7 Bm  --Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;буквально&nbsp;так&nbsp;синтаксически&nbsp;превратив&nbsp;"никогда"&nbsp;в&nbsp;"нигде",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Hm... </span>
+<span class="line"><span class="txt"> Не&nbsp;буквально&nbsp;так&nbsp;синтаксически&nbsp;превратив&nbsp;"никогда"&nbsp;в&nbsp;"нигде",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Hm... </span></span>
 <span class="txt"> над&nbsp;кремнистым&nbsp;путём&nbsp;классически&nbsp;подпевает&nbsp;звезда&nbsp;звезде. </span>
 <span class="txt"> Я&nbsp;в&nbsp;торжественном&nbsp;их&nbsp;приветствии&nbsp;не&nbsp;нуждаюсь,&nbsp;но&nbsp;не&nbsp;горжусь: </span>
-<span class="txt"> ничего,&nbsp;как-нибудь&nbsp;впоследствии&nbsp;я&nbsp;им&nbsp;тоже&nbsp;не&nbsp;пригожусь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Em Hm G7 F# Hm </span>
+<span class="line"><span class="txt"> ничего,&nbsp;как-нибудь&nbsp;впоследствии&nbsp;я&nbsp;им&nbsp;тоже&nbsp;не&nbsp;пригожусь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Em Hm G7 F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Em Hm G7 F# Hm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Em Hm G7 F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1997</span>
-
+<pre><span class="year">1997</span>
 </pre>
+
 
                 </div>
         </div>

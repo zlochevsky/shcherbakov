@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,66 +423,64 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="G"><span class="sng-title">ПЕСНЯ РЫБАКОВ ФЛОРИДЫ</span>
+data-key="G"><h1>ПЕСНЯ РЫБАКОВ ФЛОРИДЫ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> По&nbsp;нам&nbsp;-&nbsp;хоть&nbsp;реки&nbsp;вспять,&nbsp;на&nbsp;всё&nbsp;нам&nbsp;начихать,&nbsp;(G-F#-G)&nbsp; </span><span class="ch"> G  G7 C  Cm </span>
-<span class="txt"> на&nbsp;вечный&nbsp;дух&nbsp;и&nbsp;на&nbsp;бренную&nbsp;плоть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G     (F#-G) </span>
-<span class="txt"> Флорида&nbsp;нам&nbsp;не&nbsp;мать&nbsp;и&nbsp;даже&nbsp;не&nbsp;мачеха.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7 C  Cm </span>
-<span class="txt"> Земля&nbsp;-&nbsp;не&nbsp;дом,&nbsp;президент&nbsp;-&nbsp;не&nbsp;Господь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Разверзлись&nbsp;хляби&nbsp;в&nbsp;небе,&nbsp;и&nbsp;дождь&nbsp;чередит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7 C  Cm G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;ветер&nbsp;снасти&nbsp;перепутал&nbsp;нам&nbsp;опять.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7       D7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;спи&nbsp;спокойно,&nbsp;беби!&nbsp;Вся&nbsp;жизнь&nbsp;впереди.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  C  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;непонятно,&nbsp;зачем&nbsp;горевать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G     (F#-G) </span>
+<span class="line"><span class="txt"> По&nbsp;нам&nbsp;-&nbsp;хоть&nbsp;реки&nbsp;вспять,&nbsp;на&nbsp;всё&nbsp;нам&nbsp;начихать,&nbsp;(G-F#-G)&nbsp; </span><span class="ch"> G  G7 C  Cm </span></span>
+<span class="line"><span class="txt"> на&nbsp;вечный&nbsp;дух&nbsp;и&nbsp;на&nbsp;бренную&nbsp;плоть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G     (F#-G) </span></span>
+<span class="line"><span class="txt"> Флорида&nbsp;нам&nbsp;не&nbsp;мать&nbsp;и&nbsp;даже&nbsp;не&nbsp;мачеха.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7 C  Cm </span></span>
+<span class="line"><span class="txt"> Земля&nbsp;-&nbsp;не&nbsp;дом,&nbsp;президент&nbsp;-&nbsp;не&nbsp;Господь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Разверзлись&nbsp;хляби&nbsp;в&nbsp;небе,&nbsp;и&nbsp;дождь&nbsp;чередит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7 C  Cm G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;ветер&nbsp;снасти&nbsp;перепутал&nbsp;нам&nbsp;опять.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7       D7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;спи&nbsp;спокойно,&nbsp;беби!&nbsp;Вся&nbsp;жизнь&nbsp;впереди.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  C  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;непонятно,&nbsp;зачем&nbsp;горевать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G     (F#-G) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Все&nbsp;неудачи&nbsp;сплошь,&nbsp;мильон&nbsp;потов&nbsp;за&nbsp;грош,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7 C  Cm </span>
-<span class="txt"> трудись&nbsp;как&nbsp;хошь,&nbsp;а&nbsp;живёшь&nbsp;ты&nbsp;-&nbsp;как&nbsp;рвань.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G     (F#-G) </span>
-<span class="txt"> Но&nbsp;мы&nbsp;попьём&nbsp;пивка,&nbsp;и&nbsp;станет&nbsp;жизнь&nbsp;легка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7 C  Cm </span>
-<span class="txt"> хоть&nbsp;здесь&nbsp;и&nbsp;пиво,&nbsp;разумеется,&nbsp;дрянь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ты&nbsp;о&nbsp;насущном&nbsp;хлебе&nbsp;мечта,&nbsp;уйди&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7 C  Cm G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;за&nbsp;горизонт,&nbsp;за&nbsp;миражи&nbsp;и&nbsp;за&nbsp;морскую&nbsp;гладь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7       D7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;спи&nbsp;спокойно,&nbsp;беби,&nbsp;вся&nbsp;жизнь&nbsp;впереди.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  C  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;непонятно,&nbsp;зачем&nbsp;горевать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G     (F#-G-G#) </span>
+<span class="line"><span class="txt"> Все&nbsp;неудачи&nbsp;сплошь,&nbsp;мильон&nbsp;потов&nbsp;за&nbsp;грош,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7 C  Cm </span></span>
+<span class="line"><span class="txt"> трудись&nbsp;как&nbsp;хошь,&nbsp;а&nbsp;живёшь&nbsp;ты&nbsp;-&nbsp;как&nbsp;рвань.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G     (F#-G) </span></span>
+<span class="line"><span class="txt"> Но&nbsp;мы&nbsp;попьём&nbsp;пивка,&nbsp;и&nbsp;станет&nbsp;жизнь&nbsp;легка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7 C  Cm </span></span>
+<span class="line"><span class="txt"> хоть&nbsp;здесь&nbsp;и&nbsp;пиво,&nbsp;разумеется,&nbsp;дрянь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ты&nbsp;о&nbsp;насущном&nbsp;хлебе&nbsp;мечта,&nbsp;уйди&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7 C  Cm G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;за&nbsp;горизонт,&nbsp;за&nbsp;миражи&nbsp;и&nbsp;за&nbsp;морскую&nbsp;гладь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7       D7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;спи&nbsp;спокойно,&nbsp;беби,&nbsp;вся&nbsp;жизнь&nbsp;впереди.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  C  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;непонятно,&nbsp;зачем&nbsp;горевать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  D7 G     (F#-G-G#) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мы&nbsp;рыбу&nbsp;ловим&nbsp;здесь,&nbsp;у&nbsp;нас&nbsp;работа&nbsp;есть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7 D  Dm </span>
-<span class="txt"> и&nbsp;слава&nbsp;богу,&nbsp;смотри&nbsp;веселей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7 A     (G#-A) </span>
-<span class="txt"> беда&nbsp;нас&nbsp;трогала,&nbsp;мы&nbsp;жили&nbsp;впроголодь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7 D  Dm </span>
-<span class="txt"> но&nbsp;всё&nbsp;же&nbsp;многих&nbsp;других&nbsp;не&nbsp;хужей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7 A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;в&nbsp;мире&nbsp;столько&nbsp;злости,&nbsp;аж&nbsp;леденеют&nbsp;кости!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 D  Dm A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Так&nbsp;подадим&nbsp;друг&nbsp;другу&nbsp;руки,&nbsp;и&nbsp;-&nbsp;споём,&nbsp;споём!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7       E7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;в&nbsp;море&nbsp;столько&nbsp;нефти&nbsp;-&nbsp;утопиться&nbsp;негде!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  D  Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;слава&nbsp;Богу,&nbsp;еще&nbsp;поживём!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7 A </span>
+<span class="line"><span class="txt"> Мы&nbsp;рыбу&nbsp;ловим&nbsp;здесь,&nbsp;у&nbsp;нас&nbsp;работа&nbsp;есть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7 D  Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;слава&nbsp;богу,&nbsp;смотри&nbsp;веселей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7 A     (G#-A) </span></span>
+<span class="line"><span class="txt"> беда&nbsp;нас&nbsp;трогала,&nbsp;мы&nbsp;жили&nbsp;впроголодь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7 D  Dm </span></span>
+<span class="line"><span class="txt"> но&nbsp;всё&nbsp;же&nbsp;многих&nbsp;других&nbsp;не&nbsp;хужей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7 A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;в&nbsp;мире&nbsp;столько&nbsp;злости,&nbsp;аж&nbsp;леденеют&nbsp;кости!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 D  Dm A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Так&nbsp;подадим&nbsp;друг&nbsp;другу&nbsp;руки,&nbsp;и&nbsp;-&nbsp;споём,&nbsp;споём!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7       E7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;в&nbsp;море&nbsp;столько&nbsp;нефти&nbsp;-&nbsp;утопиться&nbsp;негде!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  D  Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;слава&nbsp;Богу,&nbsp;еще&nbsp;поживём!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7 A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;зелёный&nbsp;рассвет&nbsp;обнажает&nbsp;зелёный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мексиканский&nbsp;залив,&nbsp;и&nbsp;зелёный&nbsp;туман&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;застилает&nbsp;нам&nbsp;очи.&nbsp;И&nbsp;в&nbsp;утренний&nbsp;час&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мы&nbsp;обнявшись&nbsp;стоим,&nbsp;ни&nbsp;о&nbsp;чём&nbsp;ни&nbsp;жалея.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;С&nbsp;неба&nbsp;льётся&nbsp;вода,&nbsp;и&nbsp;вода&nbsp;океана&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7 Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пополняет&nbsp;дождём&nbsp;свой&nbsp;несметный&nbsp;запас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;зелёный&nbsp;рассвет&nbsp;обнажает&nbsp;зелёный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мексиканский&nbsp;залив,&nbsp;и&nbsp;зелёный&nbsp;туман&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;застилает&nbsp;нам&nbsp;очи.&nbsp;И&nbsp;в&nbsp;утренний&nbsp;час&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мы&nbsp;обнявшись&nbsp;стоим,&nbsp;ни&nbsp;о&nbsp;чём&nbsp;ни&nbsp;жалея.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;С&nbsp;неба&nbsp;льётся&nbsp;вода,&nbsp;и&nbsp;вода&nbsp;океана&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7 Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пополняет&nbsp;дождём&nbsp;свой&nbsp;несметный&nbsp;запас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;мил&nbsp;нам&nbsp;этот&nbsp;жребий&nbsp;и&nbsp;простор&nbsp;в&nbsp;груди.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7 Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;сын&nbsp;проснётся,&nbsp;подрастёт,&nbsp;и&nbsp;не&nbsp;оставит&nbsp;мать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  H7 E7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Так&nbsp;спи&nbsp;спокойно,&nbsp;беби,&nbsp;вся&nbsp;жизнь&nbsp;впереди!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  D  Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;непонятно,&nbsp;зачем&nbsp;горевать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7 A </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;мил&nbsp;нам&nbsp;этот&nbsp;жребий&nbsp;и&nbsp;простор&nbsp;в&nbsp;груди.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7 Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;сын&nbsp;проснётся,&nbsp;подрастёт,&nbsp;и&nbsp;не&nbsp;оставит&nbsp;мать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  H7 E7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Так&nbsp;спи&nbsp;спокойно,&nbsp;беби,&nbsp;вся&nbsp;жизнь&nbsp;впереди!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  D  Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;непонятно,&nbsp;зачем&nbsp;горевать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7 A </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1982</span>
-
+<pre><span class="year">1982</span>
 </pre>
+
 
                 </div>
         </div>

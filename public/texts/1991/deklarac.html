@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,55 +423,52 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ДЕКЛАРАЦИЯ</span>
+data-key="Am"><h1>ДЕКЛАРАЦИЯ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мы,&nbsp;жители&nbsp;социума,&nbsp;не&nbsp;могущего&nbsp;без&nbsp;войны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Am6/F# F </span>
-<span class="txt"> граждане&nbsp;гипер-Отечества&nbsp;по&nbsp;прозвищу&nbsp;"тройка-птица",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  F      Am6/F# Em </span>
-<span class="txt"> нынче,&nbsp;сложив&nbsp;оружие,&nbsp;с&nbsp;той&nbsp;и&nbsp;другой&nbsp;стороны&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     A7/B   D/A </span>
-<span class="txt"> сходимся,&nbsp;чтобы&nbsp;на&nbsp;миг&nbsp;побрататься&nbsp;и&nbsp;к&nbsp;тебе&nbsp;обратиться.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm     E      Am </span>
+<span class="line"><span class="txt"> Мы,&nbsp;жители&nbsp;социума,&nbsp;не&nbsp;могущего&nbsp;без&nbsp;войны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Am6/F# F </span></span>
+<span class="line"><span class="txt"> граждане&nbsp;гипер-Отечества&nbsp;по&nbsp;прозвищу&nbsp;"тройка-птица",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  F      Am6/F# Em </span></span>
+<span class="line"><span class="txt"> нынче,&nbsp;сложив&nbsp;оружие,&nbsp;с&nbsp;той&nbsp;и&nbsp;другой&nbsp;стороны&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     A7/B   D/A </span></span>
+<span class="line"><span class="txt"> сходимся,&nbsp;чтобы&nbsp;на&nbsp;миг&nbsp;побрататься&nbsp;и&nbsp;к&nbsp;тебе&nbsp;обратиться.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm     E      Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ты&nbsp;-&nbsp;наш&nbsp;потомок&nbsp;общий,&nbsp;грядущий&nbsp;лет&nbsp;через&nbsp;сто,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Am6/F# F </span>
-<span class="txt"> мальчик&nbsp;предполагаемый,&nbsp;воображаемый&nbsp;прапраправнук,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  F      Am6/F# Em </span>
-<span class="txt"> нищий&nbsp;наследник&nbsp;наших,&nbsp;трансформирующихся&nbsp;в&nbsp;ничто&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     A7/B   D/A </span>
-<span class="txt"> дел&nbsp;противоестественных,&nbsp;богопротивных&nbsp;и&nbsp;противоправных.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm     E      Am </span>
+<span class="line"><span class="txt"> Ты&nbsp;-&nbsp;наш&nbsp;потомок&nbsp;общий,&nbsp;грядущий&nbsp;лет&nbsp;через&nbsp;сто,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Am6/F# F </span></span>
+<span class="line"><span class="txt"> мальчик&nbsp;предполагаемый,&nbsp;воображаемый&nbsp;прапраправнук,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  F      Am6/F# Em </span></span>
+<span class="line"><span class="txt"> нищий&nbsp;наследник&nbsp;наших,&nbsp;трансформирующихся&nbsp;в&nbsp;ничто&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     A7/B   D/A </span></span>
+<span class="line"><span class="txt"> дел&nbsp;противоестественных,&nbsp;богопротивных&nbsp;и&nbsp;противоправных.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm     E      Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кто&nbsp;тебе&nbsp;мы,&nbsp;воинствующие&nbsp;прутья&nbsp;былой&nbsp;метлы?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  Hm6/G# G </span>
-<span class="txt"> В&nbsp;судьи&nbsp;или&nbsp;единомышленники&nbsp;нам&nbsp;ты&nbsp;вроде&nbsp;бы&nbsp;не&nbsp;годишься.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F# G      Hm6/G# F#m </span>
-<span class="txt"> Пропасть&nbsp;между&nbsp;тобою&nbsp;и&nbsp;нами&nbsp;огромна&nbsp;-&nbsp;ведь&nbsp;мы&nbsp;мертвы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D     H7/C   E/H </span>
-<span class="txt"> ты&nbsp;же&nbsp;ещё&nbsp;не&nbsp;родился,&nbsp;мальчик.&nbsp;А&nbsp;Бог&nbsp;даст&nbsp;-&nbsp;и&nbsp;не&nbsp;родишься.&nbsp; </span><span class="ch"> Em Gm F# Hm </span>
+<span class="line"><span class="txt"> Кто&nbsp;тебе&nbsp;мы,&nbsp;воинствующие&nbsp;прутья&nbsp;былой&nbsp;метлы?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  Hm6/G# G </span></span>
+<span class="line"><span class="txt"> В&nbsp;судьи&nbsp;или&nbsp;единомышленники&nbsp;нам&nbsp;ты&nbsp;вроде&nbsp;бы&nbsp;не&nbsp;годишься.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F# G      Hm6/G# F#m </span></span>
+<span class="line"><span class="txt"> Пропасть&nbsp;между&nbsp;тобою&nbsp;и&nbsp;нами&nbsp;огромна&nbsp;-&nbsp;ведь&nbsp;мы&nbsp;мертвы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D     H7/C   E/H </span></span>
+<span class="line"><span class="txt"> ты&nbsp;же&nbsp;ещё&nbsp;не&nbsp;родился,&nbsp;мальчик.&nbsp;А&nbsp;Бог&nbsp;даст&nbsp;-&nbsp;и&nbsp;не&nbsp;родишься.&nbsp; </span><span class="ch"> Em Gm F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но,&nbsp;если&nbsp;ты&nbsp;всё&nbsp;же&nbsp;явишься,&nbsp;что&nbsp;странно&nbsp;само&nbsp;по&nbsp;себе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Am6/F# F </span>
-<span class="txt"> и&nbsp;либо&nbsp;жрецом&nbsp;насилия&nbsp;станешь,&nbsp;либо&nbsp;певцом&nbsp;свободы,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  F      Am6/F# Em </span>
-<span class="txt"> долго&nbsp;ещё&nbsp;с&nbsp;тобою&nbsp;аукаться&nbsp;будем,&nbsp;учти&nbsp;сие,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     A7/B   D/A </span>
-<span class="txt"> мы,&nbsp;жившие&nbsp;веком&nbsp;ранее&nbsp;звери&nbsp;твоей&nbsp;породы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm     E      Am </span>
+<span class="line"><span class="txt"> Но,&nbsp;если&nbsp;ты&nbsp;всё&nbsp;же&nbsp;явишься,&nbsp;что&nbsp;странно&nbsp;само&nbsp;по&nbsp;себе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Am6/F# F </span></span>
+<span class="line"><span class="txt"> и&nbsp;либо&nbsp;жрецом&nbsp;насилия&nbsp;станешь,&nbsp;либо&nbsp;певцом&nbsp;свободы,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  F      Am6/F# Em </span></span>
+<span class="line"><span class="txt"> долго&nbsp;ещё&nbsp;с&nbsp;тобою&nbsp;аукаться&nbsp;будем,&nbsp;учти&nbsp;сие,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     A7/B   D/A </span></span>
+<span class="line"><span class="txt"> мы,&nbsp;жившие&nbsp;веком&nbsp;ранее&nbsp;звери&nbsp;твоей&nbsp;породы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm     E      Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Каждый&nbsp;век&nbsp;выражает&nbsp;по-своему&nbsp;в&nbsp;каждой&nbsp;отдельной&nbsp;стране&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  Hm6/G# G </span>
-<span class="txt"> зависть&nbsp;к&nbsp;чужому&nbsp;будущему&nbsp;и&nbsp;страх&nbsp;перед&nbsp;тьмой&nbsp;загробной.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F# G      Hm6/G# F#m </span>
-<span class="txt"> Мы&nbsp;выразили&nbsp;это&nbsp;тем,&nbsp;что&nbsp;вырезали&nbsp;звезду&nbsp;у&nbsp;тебя&nbsp;на&nbsp;спине&nbsp;&nbsp;&nbsp; </span><span class="ch"> D     H7/C   E/H </span>
-<span class="txt"> и&nbsp;бросили&nbsp;тебя&nbsp;одного&nbsp;умирать&nbsp;в&nbsp;стране&nbsp;допотопноподобной.&nbsp;&nbsp; </span><span class="ch"> Em    Em6    Hm  Gm F#     Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6   Hm     Gm  F# Hm6/D </span>
+<span class="line"><span class="txt"> Каждый&nbsp;век&nbsp;выражает&nbsp;по-своему&nbsp;в&nbsp;каждой&nbsp;отдельной&nbsp;стране&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  Hm6/G# G </span></span>
+<span class="line"><span class="txt"> зависть&nbsp;к&nbsp;чужому&nbsp;будущему&nbsp;и&nbsp;страх&nbsp;перед&nbsp;тьмой&nbsp;загробной.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F# G      Hm6/G# F#m </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;выразили&nbsp;это&nbsp;тем,&nbsp;что&nbsp;вырезали&nbsp;звезду&nbsp;у&nbsp;тебя&nbsp;на&nbsp;спине&nbsp;&nbsp;&nbsp; </span><span class="ch"> D     H7/C   E/H </span></span>
+<span class="line"><span class="txt"> и&nbsp;бросили&nbsp;тебя&nbsp;одного&nbsp;умирать&nbsp;в&nbsp;стране&nbsp;допотопноподобной.&nbsp;&nbsp; </span><span class="ch"> Em    Em6    Hm  Gm F#     Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6   Hm     Gm  F# Hm6/D </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1991</span>
-
+<pre><span class="year">1991</span>
 
 </pre>
+
 
                 </div>
         </div>

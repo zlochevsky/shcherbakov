@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,54 +423,52 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="A"><span class="sng-title">КОНИ В ВАГОНЕ</span>
+data-key="A"><h1>КОНИ В ВАГОНЕ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;в&nbsp;штилях,&nbsp;и&nbsp;в&nbsp;штормах,&nbsp;и&nbsp;в&nbsp;тризнах,&nbsp;и&nbsp;в&nbsp;войнах&nbsp;&nbsp;&nbsp; </span><span class="ch"> A               C#m6 </span>
-<span class="txt"> всё&nbsp;видится&nbsp;мне&nbsp;то&nbsp;ли&nbsp;явь,&nbsp;то&nbsp;ли&nbsp;сон:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em              F# </span>
-<span class="txt"> как&nbsp;будто&nbsp;загнали&nbsp;коней&nbsp;моих&nbsp;вольных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   F#m </span>
-<span class="txt"> сначала&nbsp;в&nbsp;загон,&nbsp;а&nbsp;затем&nbsp;и&nbsp;в&nbsp;вагон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   A7 </span>
-<span class="txt"> И&nbsp;медленно,&nbsp;с&nbsp;лязгом,&nbsp;под&nbsp;крики&nbsp;конвойных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    G     C   Am </span>
-<span class="txt"> тяжёлый&nbsp;состав&nbsp;начинает&nbsp;разгон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm    E7  A </span>
+<span class="line"><span class="txt"> И&nbsp;в&nbsp;штилях,&nbsp;и&nbsp;в&nbsp;штормах,&nbsp;и&nbsp;в&nbsp;тризнах,&nbsp;и&nbsp;в&nbsp;войнах&nbsp;&nbsp;&nbsp; </span><span class="ch"> A               C#m6 </span></span>
+<span class="line"><span class="txt"> всё&nbsp;видится&nbsp;мне&nbsp;то&nbsp;ли&nbsp;явь,&nbsp;то&nbsp;ли&nbsp;сон:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em              F# </span></span>
+<span class="line"><span class="txt"> как&nbsp;будто&nbsp;загнали&nbsp;коней&nbsp;моих&nbsp;вольных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   F#m </span></span>
+<span class="line"><span class="txt"> сначала&nbsp;в&nbsp;загон,&nbsp;а&nbsp;затем&nbsp;и&nbsp;в&nbsp;вагон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   A7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;медленно,&nbsp;с&nbsp;лязгом,&nbsp;под&nbsp;крики&nbsp;конвойных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    G     C   Am </span></span>
+<span class="line"><span class="txt"> тяжёлый&nbsp;состав&nbsp;начинает&nbsp;разгон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm    E7  A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Крылатые&nbsp;кони&nbsp;под&nbsp;грохот&nbsp;состава&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A               C#m6 </span>
-<span class="txt"> сложили&nbsp;прекрасные&nbsp;крылья&nbsp;свои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em              F# </span>
-<span class="txt"> Уснувшая&nbsp;стая&nbsp;вздыхает&nbsp;устало,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   F#m </span>
-<span class="txt"> под&nbsp;грохот&nbsp;состава&nbsp;летя&nbsp;в&nbsp;забытьи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   A7 </span>
-<span class="txt"> Пленённые&nbsp;птицы,&nbsp;летучее&nbsp;стадо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    G     C   Am </span>
-<span class="txt"> крылатый&nbsp;табун&nbsp;-&nbsp;это&nbsp;годы&nbsp;мои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm    E7  A </span>
+<span class="line"><span class="txt"> Крылатые&nbsp;кони&nbsp;под&nbsp;грохот&nbsp;состава&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A               C#m6 </span></span>
+<span class="line"><span class="txt"> сложили&nbsp;прекрасные&nbsp;крылья&nbsp;свои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em              F# </span></span>
+<span class="line"><span class="txt"> Уснувшая&nbsp;стая&nbsp;вздыхает&nbsp;устало,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   F#m </span></span>
+<span class="line"><span class="txt"> под&nbsp;грохот&nbsp;состава&nbsp;летя&nbsp;в&nbsp;забытьи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   A7 </span></span>
+<span class="line"><span class="txt"> Пленённые&nbsp;птицы,&nbsp;летучее&nbsp;стадо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    G     C   Am </span></span>
+<span class="line"><span class="txt"> крылатый&nbsp;табун&nbsp;-&nbsp;это&nbsp;годы&nbsp;мои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm    E7  A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Какие&nbsp;их&nbsp;прежде&nbsp;ласкали&nbsp;ладони!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A               C#m6 </span>
-<span class="txt"> А&nbsp;нынче&nbsp;засады&nbsp;в&nbsp;пути&nbsp;сторожат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em              F# </span>
-<span class="txt"> Не&nbsp;дремлют&nbsp;стрелки,&nbsp;только&nbsp;вольные&nbsp;кони&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   F#m </span>
-<span class="txt"> не&nbsp;слышат,&nbsp;не&nbsp;видят,&nbsp;не&nbsp;ведают&nbsp;-&nbsp;спят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   A7 </span>
-<span class="txt"> Влачатся,&nbsp;влекутся&nbsp;в&nbsp;летящем&nbsp;вагоне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    G     C   Am </span>
-<span class="txt"> и&nbsp;снится&nbsp;им,&nbsp;что&nbsp;они&nbsp;сами&nbsp;летят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm    E7  A </span>
+<span class="line"><span class="txt"> Какие&nbsp;их&nbsp;прежде&nbsp;ласкали&nbsp;ладони!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A               C#m6 </span></span>
+<span class="line"><span class="txt"> А&nbsp;нынче&nbsp;засады&nbsp;в&nbsp;пути&nbsp;сторожат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em              F# </span></span>
+<span class="line"><span class="txt"> Не&nbsp;дремлют&nbsp;стрелки,&nbsp;только&nbsp;вольные&nbsp;кони&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   F#m </span></span>
+<span class="line"><span class="txt"> не&nbsp;слышат,&nbsp;не&nbsp;видят,&nbsp;не&nbsp;ведают&nbsp;-&nbsp;спят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   A7 </span></span>
+<span class="line"><span class="txt"> Влачатся,&nbsp;влекутся&nbsp;в&nbsp;летящем&nbsp;вагоне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    G     C   Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;снится&nbsp;им,&nbsp;что&nbsp;они&nbsp;сами&nbsp;летят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm    E7  A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;кажется&nbsp;им,&nbsp;что&nbsp;не&nbsp;будет&nbsp;ни&nbsp;крови,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A               C#m6 </span>
-<span class="txt"> ни&nbsp;грома,&nbsp;ни&nbsp;дыма,&nbsp;ни&nbsp;новой&nbsp;войны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em              F# </span>
-<span class="txt"> Ах,&nbsp;вольные&nbsp;кони&nbsp;из&nbsp;дальней&nbsp;любови!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   F#m </span>
-<span class="txt"> Ах,&nbsp;быстрые&nbsp;птицы&nbsp;из&nbsp;давней&nbsp;весны!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   A7 </span>
-<span class="txt"> Скачите,&nbsp;скачите...&nbsp;стрелки&nbsp;наготове.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    G     C   Am </span>
-<span class="txt"> Летите,&nbsp;летите...&nbsp;курки&nbsp;взведены...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm    E7  A </span>
+<span class="line"><span class="txt"> И&nbsp;кажется&nbsp;им,&nbsp;что&nbsp;не&nbsp;будет&nbsp;ни&nbsp;крови,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A               C#m6 </span></span>
+<span class="line"><span class="txt"> ни&nbsp;грома,&nbsp;ни&nbsp;дыма,&nbsp;ни&nbsp;новой&nbsp;войны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em              F# </span></span>
+<span class="line"><span class="txt"> Ах,&nbsp;вольные&nbsp;кони&nbsp;из&nbsp;дальней&nbsp;любови!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   F#m </span></span>
+<span class="line"><span class="txt"> Ах,&nbsp;быстрые&nbsp;птицы&nbsp;из&nbsp;давней&nbsp;весны!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    E7    A   A7 </span></span>
+<span class="line"><span class="txt"> Скачите,&nbsp;скачите...&nbsp;стрелки&nbsp;наготове.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    G     C   Am </span></span>
+<span class="line"><span class="txt"> Летите,&nbsp;летите...&nbsp;курки&nbsp;взведены...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    Fm    E7  A </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

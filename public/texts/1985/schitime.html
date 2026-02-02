@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,81 +423,77 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ЩИТ И МЕЧ</span>
+data-key="Am"><h1>ЩИТ И МЕЧ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Казалось&nbsp;мне,&nbsp;что&nbsp;так&nbsp;велел&nbsp;весь&nbsp;мир,&nbsp;весь&nbsp;мир,&nbsp;весь&nbsp;мир,&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span>
-<span class="txt"> когда&nbsp;впервые&nbsp;я&nbsp;надел&nbsp;мундир,&nbsp;мундир,&nbsp;мундир.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span>
-<span class="txt"> Занятий&nbsp;ратных&nbsp;быть&nbsp;среди&nbsp;за&nbsp;честь&nbsp;почёл,&nbsp;почёл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span>
-<span class="txt"> И&nbsp;мне&nbsp;весь&nbsp;мир&nbsp;сказал:&nbsp;"Иди!"&nbsp;-&nbsp;и&nbsp;я&nbsp;пошёл,&nbsp;пошёл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span>
+<span class="line"><span class="txt"> Казалось&nbsp;мне,&nbsp;что&nbsp;так&nbsp;велел&nbsp;весь&nbsp;мир,&nbsp;весь&nbsp;мир,&nbsp;весь&nbsp;мир,&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span></span>
+<span class="line"><span class="txt"> когда&nbsp;впервые&nbsp;я&nbsp;надел&nbsp;мундир,&nbsp;мундир,&nbsp;мундир.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span></span>
+<span class="line"><span class="txt"> Занятий&nbsp;ратных&nbsp;быть&nbsp;среди&nbsp;за&nbsp;честь&nbsp;почёл,&nbsp;почёл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;мне&nbsp;весь&nbsp;мир&nbsp;сказал:&nbsp;"Иди!"&nbsp;-&nbsp;и&nbsp;я&nbsp;пошёл,&nbsp;пошёл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;был&nbsp;я&nbsp;смел,&nbsp;покуда&nbsp;прав,&nbsp;и&nbsp;прав,&nbsp;покуда&nbsp;жив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span>
-<span class="txt"> А&nbsp;если&nbsp;что,&nbsp;читал&nbsp;устав,&nbsp;а&nbsp;там&nbsp;-&nbsp;курсив,&nbsp;курсив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G </span>
-<span class="txt"> И&nbsp;был&nbsp;курсив&nbsp;прочней&nbsp;миров,&nbsp;и&nbsp;бил&nbsp;сильней&nbsp;речей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span>
-<span class="txt"> и&nbsp;я&nbsp;забыл&nbsp;и&nbsp;отчий&nbsp;кров,&nbsp;и&nbsp;свет&nbsp;твоих&nbsp;очей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G  Cm </span>
+<span class="line"><span class="txt"> И&nbsp;был&nbsp;я&nbsp;смел,&nbsp;покуда&nbsp;прав,&nbsp;и&nbsp;прав,&nbsp;покуда&nbsp;жив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;если&nbsp;что,&nbsp;читал&nbsp;устав,&nbsp;а&nbsp;там&nbsp;-&nbsp;курсив,&nbsp;курсив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G </span></span>
+<span class="line"><span class="txt"> И&nbsp;был&nbsp;курсив&nbsp;прочней&nbsp;миров,&nbsp;и&nbsp;бил&nbsp;сильней&nbsp;речей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span></span>
+<span class="line"><span class="txt"> и&nbsp;я&nbsp;забыл&nbsp;и&nbsp;отчий&nbsp;кров,&nbsp;и&nbsp;свет&nbsp;твоих&nbsp;очей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G  Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Когда&nbsp;свистел&nbsp;мой&nbsp;тяжкий&nbsp;бич,&nbsp;вперёд&nbsp;брели&nbsp;быки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span>
-<span class="txt"> Когда&nbsp;гремел&nbsp;мой&nbsp;ратный&nbsp;клич,&nbsp;в&nbsp;поход&nbsp;текли&nbsp;полки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span>
-<span class="txt"> Едва&nbsp;я&nbsp;в&nbsp;сторону&nbsp;огня&nbsp;протягивал&nbsp;ладонь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span>
-<span class="txt"> как&nbsp;все&nbsp;молились&nbsp;на&nbsp;меня&nbsp;и&nbsp;шли&nbsp;за&nbsp;мной&nbsp;в&nbsp;огонь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span>
+<span class="line"><span class="txt"> Когда&nbsp;свистел&nbsp;мой&nbsp;тяжкий&nbsp;бич,&nbsp;вперёд&nbsp;брели&nbsp;быки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span></span>
+<span class="line"><span class="txt"> Когда&nbsp;гремел&nbsp;мой&nbsp;ратный&nbsp;клич,&nbsp;в&nbsp;поход&nbsp;текли&nbsp;полки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span></span>
+<span class="line"><span class="txt"> Едва&nbsp;я&nbsp;в&nbsp;сторону&nbsp;огня&nbsp;протягивал&nbsp;ладонь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span></span>
+<span class="line"><span class="txt"> как&nbsp;все&nbsp;молились&nbsp;на&nbsp;меня&nbsp;и&nbsp;шли&nbsp;за&nbsp;мной&nbsp;в&nbsp;огонь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;я&nbsp;носил&nbsp;мундир,&nbsp;мундир,&nbsp;и&nbsp;был&nbsp;красив,&nbsp;красив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span>
-<span class="txt"> А&nbsp;если&nbsp;так&nbsp;-&nbsp;за&nbsp;мной&nbsp;весь&nbsp;мир,&nbsp;а&nbsp;если&nbsp;что&nbsp;-&nbsp;курсив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G </span>
-<span class="txt"> А&nbsp;истина&nbsp;-&nbsp;она&nbsp;одна,&nbsp;одна&nbsp;-&nbsp;в&nbsp;огне,&nbsp;в&nbsp;огне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span>
-<span class="txt"> А&nbsp;если&nbsp;пуля&nbsp;суждена&nbsp;-&nbsp;она&nbsp;не&nbsp;мне,&nbsp;не&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G  Cm </span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;носил&nbsp;мундир,&nbsp;мундир,&nbsp;и&nbsp;был&nbsp;красив,&nbsp;красив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;если&nbsp;так&nbsp;-&nbsp;за&nbsp;мной&nbsp;весь&nbsp;мир,&nbsp;а&nbsp;если&nbsp;что&nbsp;-&nbsp;курсив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G </span></span>
+<span class="line"><span class="txt"> А&nbsp;истина&nbsp;-&nbsp;она&nbsp;одна,&nbsp;одна&nbsp;-&nbsp;в&nbsp;огне,&nbsp;в&nbsp;огне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;если&nbsp;пуля&nbsp;суждена&nbsp;-&nbsp;она&nbsp;не&nbsp;мне,&nbsp;не&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G  Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Так&nbsp;думал&nbsp;я,&nbsp;в&nbsp;дожде&nbsp;свинца&nbsp;не&nbsp;отвернув&nbsp;лица,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span>
-<span class="txt"> не&nbsp;будет&nbsp;этому&nbsp;конца.&nbsp;И&nbsp;не&nbsp;было&nbsp;конца.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span>
-<span class="txt"> И&nbsp;мой&nbsp;солдат&nbsp;вперёд,&nbsp;вперёд&nbsp;кидался&nbsp;под&nbsp;прицел&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span>
-<span class="txt"> и&nbsp;знал,&nbsp;что&nbsp;он&nbsp;умрёт,&nbsp;умрёт,&nbsp;а&nbsp;я&nbsp;останусь&nbsp;цел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span>
+<span class="line"><span class="txt"> Так&nbsp;думал&nbsp;я,&nbsp;в&nbsp;дожде&nbsp;свинца&nbsp;не&nbsp;отвернув&nbsp;лица,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span></span>
+<span class="line"><span class="txt"> не&nbsp;будет&nbsp;этому&nbsp;конца.&nbsp;И&nbsp;не&nbsp;было&nbsp;конца.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;мой&nbsp;солдат&nbsp;вперёд,&nbsp;вперёд&nbsp;кидался&nbsp;под&nbsp;прицел&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;знал,&nbsp;что&nbsp;он&nbsp;умрёт,&nbsp;умрёт,&nbsp;а&nbsp;я&nbsp;останусь&nbsp;цел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Меня&nbsp;осколок&nbsp;пощадит,&nbsp;помилует&nbsp;картечь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span>
-<span class="txt"> ведь&nbsp;мне&nbsp;весь&nbsp;мир&nbsp;доверил&nbsp;щит&nbsp;-&nbsp;и&nbsp;меч,&nbsp;и&nbsp;меч,&nbsp;и&nbsp;меч.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G </span>
-<span class="txt"> И&nbsp;клич&nbsp;звенел,&nbsp;и&nbsp;полк&nbsp;шагал,&nbsp;и&nbsp;я,&nbsp;других&nbsp;затмив,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span>
-<span class="txt"> шагал&nbsp;и&nbsp;пел;&nbsp;я&nbsp;миф&nbsp;слагал,&nbsp;а&nbsp;в&nbsp;нём&nbsp;-&nbsp;курсив,&nbsp;курсив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G  Cm </span>
+<span class="line"><span class="txt"> Меня&nbsp;осколок&nbsp;пощадит,&nbsp;помилует&nbsp;картечь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span></span>
+<span class="line"><span class="txt"> ведь&nbsp;мне&nbsp;весь&nbsp;мир&nbsp;доверил&nbsp;щит&nbsp;-&nbsp;и&nbsp;меч,&nbsp;и&nbsp;меч,&nbsp;и&nbsp;меч.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G </span></span>
+<span class="line"><span class="txt"> И&nbsp;клич&nbsp;звенел,&nbsp;и&nbsp;полк&nbsp;шагал,&nbsp;и&nbsp;я,&nbsp;других&nbsp;затмив,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span></span>
+<span class="line"><span class="txt"> шагал&nbsp;и&nbsp;пел;&nbsp;я&nbsp;миф&nbsp;слагал,&nbsp;а&nbsp;в&nbsp;нём&nbsp;-&nbsp;курсив,&nbsp;курсив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G  Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Когда&nbsp;ж&nbsp;и&nbsp;мне&nbsp;свинца&nbsp;кусок&nbsp;попал&nbsp;в&nbsp;висок,&nbsp;в&nbsp;висок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span>
-<span class="txt"> я&nbsp;молча&nbsp;лёг&nbsp;в&nbsp;песок,&nbsp;в&nbsp;песок,&nbsp;и&nbsp;встать&nbsp;не&nbsp;смог,&nbsp;не&nbsp;смог.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span>
-<span class="txt"> А&nbsp;щит&nbsp;и&nbsp;меч&nbsp;схватил&nbsp;другой&nbsp;и&nbsp;полк&nbsp;повёл&nbsp;вперёд,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span>
-<span class="txt"> но&nbsp;ведал&nbsp;он,&nbsp;что&nbsp;смерть&nbsp;с&nbsp;клюкой&nbsp;вослед&nbsp;за&nbsp;ним&nbsp;идёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span>
+<span class="line"><span class="txt"> Когда&nbsp;ж&nbsp;и&nbsp;мне&nbsp;свинца&nbsp;кусок&nbsp;попал&nbsp;в&nbsp;висок,&nbsp;в&nbsp;висок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span></span>
+<span class="line"><span class="txt"> я&nbsp;молча&nbsp;лёг&nbsp;в&nbsp;песок,&nbsp;в&nbsp;песок,&nbsp;и&nbsp;встать&nbsp;не&nbsp;смог,&nbsp;не&nbsp;смог.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span></span>
+<span class="line"><span class="txt"> А&nbsp;щит&nbsp;и&nbsp;меч&nbsp;схватил&nbsp;другой&nbsp;и&nbsp;полк&nbsp;повёл&nbsp;вперёд,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span></span>
+<span class="line"><span class="txt"> но&nbsp;ведал&nbsp;он,&nbsp;что&nbsp;смерть&nbsp;с&nbsp;клюкой&nbsp;вослед&nbsp;за&nbsp;ним&nbsp;идёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Какое&nbsp;знамя&nbsp;ни&nbsp;развей&nbsp;и&nbsp;форму&nbsp;ни&nbsp;надень,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span>
-<span class="txt"> не&nbsp;отдалишь&nbsp;свиданья&nbsp;с&nbsp;ней&nbsp;ни&nbsp;на&nbsp;век,&nbsp;ни&nbsp;на&nbsp;день.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G </span>
-<span class="txt"> Ни&nbsp;грозный&nbsp;меч,&nbsp;ни&nbsp;яркий&nbsp;шёлк&nbsp;от&nbsp;смерти&nbsp;не&nbsp;спасёт...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span>
-<span class="txt"> Так&nbsp;думал&nbsp;полк,&nbsp;мой&nbsp;храбрый&nbsp;полк,&nbsp;и&nbsp;шёл&nbsp;себе&nbsp;вперёд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G  Cm </span>
+<span class="line"><span class="txt"> Какое&nbsp;знамя&nbsp;ни&nbsp;развей&nbsp;и&nbsp;форму&nbsp;ни&nbsp;надень,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span></span>
+<span class="line"><span class="txt"> не&nbsp;отдалишь&nbsp;свиданья&nbsp;с&nbsp;ней&nbsp;ни&nbsp;на&nbsp;век,&nbsp;ни&nbsp;на&nbsp;день.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G </span></span>
+<span class="line"><span class="txt"> Ни&nbsp;грозный&nbsp;меч,&nbsp;ни&nbsp;яркий&nbsp;шёлк&nbsp;от&nbsp;смерти&nbsp;не&nbsp;спасёт...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      G#m </span></span>
+<span class="line"><span class="txt"> Так&nbsp;думал&nbsp;полк,&nbsp;мой&nbsp;храбрый&nbsp;полк,&nbsp;и&nbsp;шёл&nbsp;себе&nbsp;вперёд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Fm G#  G  Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Шакал&nbsp;могилу&nbsp;раскопал,&nbsp;останки&nbsp;слопал&nbsp;гриф,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span>
-<span class="txt"> буран&nbsp;страницы&nbsp;разметал,&nbsp;жара&nbsp;сожгла&nbsp;курсив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span>
-<span class="txt"> Один&nbsp;мундир&nbsp;лежит,&nbsp;забыт,&nbsp;лежит,&nbsp;забыт&nbsp;и&nbsp;сир.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span>
-<span class="txt"> Весь&nbsp;мир&nbsp;глядит&nbsp;-&nbsp;мундир&nbsp;лежит...&nbsp;Подумаешь,&nbsp;мундир!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span>
+<span class="line"><span class="txt"> Шакал&nbsp;могилу&nbsp;раскопал,&nbsp;останки&nbsp;слопал&nbsp;гриф,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span></span>
+<span class="line"><span class="txt"> буран&nbsp;страницы&nbsp;разметал,&nbsp;жара&nbsp;сожгла&nbsp;курсив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span></span>
+<span class="line"><span class="txt"> Один&nbsp;мундир&nbsp;лежит,&nbsp;забыт,&nbsp;лежит,&nbsp;забыт&nbsp;и&nbsp;сир.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6     Dm </span></span>
+<span class="line"><span class="txt"> Весь&nbsp;мир&nbsp;глядит&nbsp;-&nbsp;мундир&nbsp;лежит...&nbsp;Подумаешь,&nbsp;мундир!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    E7 Am </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
+<pre><span class="year">1985</span>
 
 
 Am6(4 лад) (1 стр.- a,g#,g,g# a)
-
 </pre>
+
 
                 </div>
         </div>

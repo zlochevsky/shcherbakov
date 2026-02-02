@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,42 +433,40 @@ span.c {
 data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Затем&nbsp;же,&nbsp;зачем&nbsp;рыжий&nbsp;клоун&nbsp;рыж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span>
-<span class="txt"> жених&nbsp;твой&nbsp;тебя&nbsp;предпочтёт&nbsp;вдове.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span>
-<span class="txt"> Затем&nbsp;же,&nbsp;зачем&nbsp;на&nbsp;земле&nbsp;Париж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm E7 </span>
-<span class="txt"> ты&nbsp;будешь&nbsp;безвыездно&nbsp;жить&nbsp;в&nbsp;Москве.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F  D7/F# Am </span>
+<span class="line"><span class="txt"> Затем&nbsp;же,&nbsp;зачем&nbsp;рыжий&nbsp;клоун&nbsp;рыж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span></span>
+<span class="line"><span class="txt"> жених&nbsp;твой&nbsp;тебя&nbsp;предпочтёт&nbsp;вдове.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span></span>
+<span class="line"><span class="txt"> Затем&nbsp;же,&nbsp;зачем&nbsp;на&nbsp;земле&nbsp;Париж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm E7 </span></span>
+<span class="line"><span class="txt"> ты&nbsp;будешь&nbsp;безвыездно&nbsp;жить&nbsp;в&nbsp;Москве.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F  D7/F# Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ты&nbsp;чёрную&nbsp;должность&nbsp;ему&nbsp;простишь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span>
-<span class="txt"> И&nbsp;замуж&nbsp;без&nbsp;слов&nbsp;за&nbsp;него&nbsp;пойдёшь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span>
-<span class="txt"> Постольку,&nbsp;поскольку&nbsp;щебечет&nbsp;стриж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm E7 </span>
-<span class="txt"> ты&nbsp;будешь&nbsp;примерной&nbsp;женой.&nbsp;Ну,&nbsp;что&nbsp;ж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F  D7/F# Am </span>
+<span class="line"><span class="txt"> Ты&nbsp;чёрную&nbsp;должность&nbsp;ему&nbsp;простишь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span></span>
+<span class="line"><span class="txt"> И&nbsp;замуж&nbsp;без&nbsp;слов&nbsp;за&nbsp;него&nbsp;пойдёшь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span></span>
+<span class="line"><span class="txt"> Постольку,&nbsp;поскольку&nbsp;щебечет&nbsp;стриж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm E7 </span></span>
+<span class="line"><span class="txt"> ты&nbsp;будешь&nbsp;примерной&nbsp;женой.&nbsp;Ну,&nbsp;что&nbsp;ж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F  D7/F# Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ты&nbsp;въедешь&nbsp;в&nbsp;одну&nbsp;из&nbsp;больших&nbsp;квартир,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span>
-<span class="txt"> где&nbsp;сможешь&nbsp;в&nbsp;избытке&nbsp;иметь&nbsp;всего,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span>
-<span class="txt"> и&nbsp;станешь&nbsp;там&nbsp;чистить&nbsp;его&nbsp;мундир,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm E7 </span>
-<span class="txt"> и&nbsp;орден,&nbsp;и&nbsp;штатский&nbsp;костюм&nbsp;его.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F  D7/F# Am </span>
+<span class="line"><span class="txt"> Ты&nbsp;въедешь&nbsp;в&nbsp;одну&nbsp;из&nbsp;больших&nbsp;квартир,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span></span>
+<span class="line"><span class="txt"> где&nbsp;сможешь&nbsp;в&nbsp;избытке&nbsp;иметь&nbsp;всего,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F7 Dm6 </span></span>
+<span class="line"><span class="txt"> и&nbsp;станешь&nbsp;там&nbsp;чистить&nbsp;его&nbsp;мундир,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm E7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;орден,&nbsp;и&nbsp;штатский&nbsp;костюм&nbsp;его.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  F  D7/F# Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Доходными&nbsp;будут&nbsp;его&nbsp;труды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G7 Em6 </span>
-<span class="txt"> И&nbsp;в&nbsp;праздник,&nbsp;решив&nbsp;отдохнуть&nbsp;от&nbsp;дел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G7 Em6 </span>
-<span class="txt"> он&nbsp;сядет&nbsp;кутить&nbsp;от&nbsp;богатой&nbsp;мзды&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em F#7 </span>
-<span class="txt"> затем&nbsp;же,&nbsp;зачем&nbsp;белый&nbsp;клоун&nbsp;бел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G  E7/F# Hm </span>
+<span class="line"><span class="txt"> Доходными&nbsp;будут&nbsp;его&nbsp;труды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G7 Em6 </span></span>
+<span class="line"><span class="txt"> И&nbsp;в&nbsp;праздник,&nbsp;решив&nbsp;отдохнуть&nbsp;от&nbsp;дел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G7 Em6 </span></span>
+<span class="line"><span class="txt"> он&nbsp;сядет&nbsp;кутить&nbsp;от&nbsp;богатой&nbsp;мзды&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em F#7 </span></span>
+<span class="line"><span class="txt"> затем&nbsp;же,&nbsp;зачем&nbsp;белый&nbsp;клоун&nbsp;бел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G  E7/F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Участвуй&nbsp;в&nbsp;веселье,&nbsp;пирог&nbsp;готовь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G7 Em6 </span>
-<span class="txt"> столы&nbsp;накрывай,&nbsp;развлекай&nbsp;гостей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G7 Em6 </span>
-<span class="txt"> Но&nbsp;помни:&nbsp;в&nbsp;бокале&nbsp;с&nbsp;шампанским&nbsp;кровь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em F#7 </span>
-<span class="txt"> и&nbsp;слёзы,&nbsp;Мария.&nbsp;Не&nbsp;пей,&nbsp;не&nbsp;пей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G  E7/F# Hm </span>
+<span class="line"><span class="txt"> Участвуй&nbsp;в&nbsp;веселье,&nbsp;пирог&nbsp;готовь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G7 Em6 </span></span>
+<span class="line"><span class="txt"> столы&nbsp;накрывай,&nbsp;развлекай&nbsp;гостей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G7 Em6 </span></span>
+<span class="line"><span class="txt"> Но&nbsp;помни:&nbsp;в&nbsp;бокале&nbsp;с&nbsp;шампанским&nbsp;кровь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em F#7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;слёзы,&nbsp;Мария.&nbsp;Не&nbsp;пей,&nbsp;не&nbsp;пей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G  E7/F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1989</span>
-
+<pre><span class="year">1989</span>
 </pre>
+
 
                 </div>
         </div>

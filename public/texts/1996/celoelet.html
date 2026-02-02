@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,98 +423,96 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">ЦЕЛОЕ ЛЕТО</span>
+data-key="Hm"><h1>ЦЕЛОЕ ЛЕТО</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Что&nbsp;изменилось&nbsp;в&nbsp;эти&nbsp;двенадцать&nbsp;месяцев,&nbsp;угадай&nbsp;с&nbsp;налёта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  H7 </span>
-<span class="txt"> Правильно,&nbsp;ничего&nbsp;почти&nbsp;или&nbsp;очень&nbsp;мало.&nbsp;Пустой&nbsp;был&nbsp;срок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  C   Em6/C#   A7 </span>
-<span class="txt"> Публика&nbsp;шевелилась&nbsp;довольно&nbsp;вяло,&nbsp;пыхтя&nbsp;созидала&nbsp;что-то,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   D7  G        H7  Em </span>
-<span class="txt"> после&nbsp;пыхтя&nbsp;ломала.&nbsp;В&nbsp;итоге&nbsp;минус,&nbsp;но&nbsp;он&nbsp;не&nbsp;весьма&nbsp;глубок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G   Hm/G#    F# </span>
+<span class="line"><span class="txt"> Что&nbsp;изменилось&nbsp;в&nbsp;эти&nbsp;двенадцать&nbsp;месяцев,&nbsp;угадай&nbsp;с&nbsp;налёта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  H7 </span></span>
+<span class="line"><span class="txt"> Правильно,&nbsp;ничего&nbsp;почти&nbsp;или&nbsp;очень&nbsp;мало.&nbsp;Пустой&nbsp;был&nbsp;срок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  C   Em6/C#   A7 </span></span>
+<span class="line"><span class="txt"> Публика&nbsp;шевелилась&nbsp;довольно&nbsp;вяло,&nbsp;пыхтя&nbsp;созидала&nbsp;что-то,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   D7  G        H7  Em </span></span>
+<span class="line"><span class="txt"> после&nbsp;пыхтя&nbsp;ломала.&nbsp;В&nbsp;итоге&nbsp;минус,&nbsp;но&nbsp;он&nbsp;не&nbsp;весьма&nbsp;глубок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G   Hm/G#    F# </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Да,&nbsp;кое&nbsp;с&nbsp;чем&nbsp;обошлись&nbsp;неловко,&nbsp;в&nbsp;чём-то&nbsp;перестарались&nbsp;где-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  H7 </span>
-<span class="txt"> Кафель&nbsp;опять&nbsp;приклеили&nbsp;как-то&nbsp;криво,&nbsp;не&nbsp;там&nbsp;прокопали&nbsp;рвы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  C   Em6/C#   A7 </span>
-<span class="txt"> Жителей&nbsp;стало&nbsp;больше,&nbsp;порядку&nbsp;меньше.&nbsp;И&nbsp;речь&nbsp;не&nbsp;о&nbsp;части&nbsp;света:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   H7  Em       Em6 </span>
-<span class="txt"> в&nbsp;Африке&nbsp;климат&nbsp;мягче,&nbsp;но&nbsp;люди&nbsp;едва&nbsp;ли&nbsp;проще,&nbsp;чем&nbsp;я&nbsp;и&nbsp;вы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G   Hm/G#    F# </span>
+<span class="line"><span class="txt"> Да,&nbsp;кое&nbsp;с&nbsp;чем&nbsp;обошлись&nbsp;неловко,&nbsp;в&nbsp;чём-то&nbsp;перестарались&nbsp;где-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  H7 </span></span>
+<span class="line"><span class="txt"> Кафель&nbsp;опять&nbsp;приклеили&nbsp;как-то&nbsp;криво,&nbsp;не&nbsp;там&nbsp;прокопали&nbsp;рвы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  C   Em6/C#   A7 </span></span>
+<span class="line"><span class="txt"> Жителей&nbsp;стало&nbsp;больше,&nbsp;порядку&nbsp;меньше.&nbsp;И&nbsp;речь&nbsp;не&nbsp;о&nbsp;части&nbsp;света:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   H7  Em       Em6 </span></span>
+<span class="line"><span class="txt"> в&nbsp;Африке&nbsp;климат&nbsp;мягче,&nbsp;но&nbsp;люди&nbsp;едва&nbsp;ли&nbsp;проще,&nbsp;чем&nbsp;я&nbsp;и&nbsp;вы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G   Hm/G#    F# </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Меж&nbsp;тем&nbsp;-&nbsp;закончилось&nbsp;целое&nbsp;лето.&nbsp;Увы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
+<span class="line"><span class="txt"> Меж&nbsp;тем&nbsp;-&nbsp;закончилось&nbsp;целое&nbsp;лето.&nbsp;Увы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;изменилась&nbsp;та,&nbsp;от&nbsp;чьего&nbsp;нытья&nbsp;бешусь,&nbsp;у&nbsp;чьего&nbsp;бедра&nbsp;вьюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  H7 </span>
-<span class="txt"> Не&nbsp;изменился&nbsp;я,&nbsp;от&nbsp;чьих&nbsp;буриме&nbsp;она&nbsp;валерьянку&nbsp;пьёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  C   Em6/C#   A7 </span>
-<span class="txt"> Год&nbsp;ей&nbsp;не&nbsp;по&nbsp;душе&nbsp;и&nbsp;не&nbsp;нравлюсь&nbsp;я;&nbsp;так&nbsp;я&nbsp;и&nbsp;себе&nbsp;не&nbsp;нравлюсь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   D7  G        H7  Em </span>
-<span class="txt"> но&nbsp;буриме-то&nbsp;-&nbsp;что&nbsp;ж,&nbsp;непременно&nbsp;в&nbsp;печку,&nbsp;раз&nbsp;неудачный&nbsp;год?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G   Hm/G#    F# </span>
+<span class="line"><span class="txt"> Не&nbsp;изменилась&nbsp;та,&nbsp;от&nbsp;чьего&nbsp;нытья&nbsp;бешусь,&nbsp;у&nbsp;чьего&nbsp;бедра&nbsp;вьюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  H7 </span></span>
+<span class="line"><span class="txt"> Не&nbsp;изменился&nbsp;я,&nbsp;от&nbsp;чьих&nbsp;буриме&nbsp;она&nbsp;валерьянку&nbsp;пьёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  C   Em6/C#   A7 </span></span>
+<span class="line"><span class="txt"> Год&nbsp;ей&nbsp;не&nbsp;по&nbsp;душе&nbsp;и&nbsp;не&nbsp;нравлюсь&nbsp;я;&nbsp;так&nbsp;я&nbsp;и&nbsp;себе&nbsp;не&nbsp;нравлюсь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   D7  G        H7  Em </span></span>
+<span class="line"><span class="txt"> но&nbsp;буриме-то&nbsp;-&nbsp;что&nbsp;ж,&nbsp;непременно&nbsp;в&nbsp;печку,&nbsp;раз&nbsp;неудачный&nbsp;год?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G   Hm/G#    F# </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кроме&nbsp;литературы,&nbsp;чем&nbsp;и&nbsp;дышать,&nbsp;опускаясь&nbsp;на&nbsp;дно&nbsp;морское?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  H7 </span>
-<span class="txt"> Чем&nbsp;и&nbsp;внушать&nbsp;себе,&nbsp;что&nbsp;после&nbsp;дна&nbsp;-&nbsp;ещё&nbsp;одно,&nbsp;и&nbsp;земля&nbsp;не&nbsp;шар?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  C   Em6/C#   A7 </span>
-<span class="txt"> Чем&nbsp;утешаться,&nbsp;слыша,&nbsp;как&nbsp;год&nbsp;от&nbsp;года&nbsp;пуще&nbsp;грозится&nbsp;кое-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   H7  Em       Em6 </span>
-<span class="txt"> кто&nbsp;досадить&nbsp;по&nbsp;первое&nbsp;нам&nbsp;число,&nbsp;вгоняя&nbsp;в&nbsp;озноб&nbsp;и&nbsp;жар?..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G   Hm/G#    F# </span>
+<span class="line"><span class="txt"> Кроме&nbsp;литературы,&nbsp;чем&nbsp;и&nbsp;дышать,&nbsp;опускаясь&nbsp;на&nbsp;дно&nbsp;морское?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  H7 </span></span>
+<span class="line"><span class="txt"> Чем&nbsp;и&nbsp;внушать&nbsp;себе,&nbsp;что&nbsp;после&nbsp;дна&nbsp;-&nbsp;ещё&nbsp;одно,&nbsp;и&nbsp;земля&nbsp;не&nbsp;шар?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  C   Em6/C#   A7 </span></span>
+<span class="line"><span class="txt"> Чем&nbsp;утешаться,&nbsp;слыша,&nbsp;как&nbsp;год&nbsp;от&nbsp;года&nbsp;пуще&nbsp;грозится&nbsp;кое-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   H7  Em       Em6 </span></span>
+<span class="line"><span class="txt"> кто&nbsp;досадить&nbsp;по&nbsp;первое&nbsp;нам&nbsp;число,&nbsp;вгоняя&nbsp;в&nbsp;озноб&nbsp;и&nbsp;жар?..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  G   Hm/G#    F# </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Первое!&nbsp;А&nbsp;нынче&nbsp;уж&nbsp;вон&nbsp;какое.&nbsp;Кошмар.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
+<span class="line"><span class="txt"> Первое!&nbsp;А&nbsp;нынче&nbsp;уж&nbsp;вон&nbsp;какое.&nbsp;Кошмар.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> С&nbsp;литературой,&nbsp;правда,&nbsp;как&nbsp;раз&nbsp;дела&nbsp;вокруг&nbsp;обстоят&nbsp;не&nbsp;кисло.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm  C7 </span>
-<span class="txt"> Что&nbsp;ни&nbsp;столбец&nbsp;газетный,&nbsp;то&nbsp;и&nbsp;сюжет.&nbsp;Мольер&nbsp;тебе&nbsp;и&nbsp;Гомер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Fm  C#   Fm6/D   B7 </span>
-<span class="txt"> Смысл&nbsp;объявился&nbsp;вдруг&nbsp;там,&nbsp;где&nbsp;и&nbsp;мух&nbsp;не&nbsp;водилось,&nbsp;не&nbsp;то&nbsp;что&nbsp;смысла.&nbsp; </span><span class="ch">   Eb  Eb7  Ab      C7  Fm </span>
-<span class="txt"> Что&nbsp;ни&nbsp;сюжет,&nbsp;то&nbsp;ребус.&nbsp;Хоть&nbsp;помещай&nbsp;в&nbsp;задачник.&nbsp;Ну,&nbsp;например.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm  Ab   Cm/A    G </span>
+<span class="line"><span class="txt"> С&nbsp;литературой,&nbsp;правда,&nbsp;как&nbsp;раз&nbsp;дела&nbsp;вокруг&nbsp;обстоят&nbsp;не&nbsp;кисло.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm  C7 </span></span>
+<span class="line"><span class="txt"> Что&nbsp;ни&nbsp;столбец&nbsp;газетный,&nbsp;то&nbsp;и&nbsp;сюжет.&nbsp;Мольер&nbsp;тебе&nbsp;и&nbsp;Гомер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Fm  C#   Fm6/D   B7 </span></span>
+<span class="line"><span class="txt"> Смысл&nbsp;объявился&nbsp;вдруг&nbsp;там,&nbsp;где&nbsp;и&nbsp;мух&nbsp;не&nbsp;водилось,&nbsp;не&nbsp;то&nbsp;что&nbsp;смысла.&nbsp; </span><span class="ch">   Eb  Eb7  Ab      C7  Fm </span></span>
+<span class="line"><span class="txt"> Что&nbsp;ни&nbsp;сюжет,&nbsp;то&nbsp;ребус.&nbsp;Хоть&nbsp;помещай&nbsp;в&nbsp;задачник.&nbsp;Ну,&nbsp;например.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm  Ab   Cm/A    G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мать&nbsp;и&nbsp;отец&nbsp;тайком&nbsp;собирали&nbsp;хронику&nbsp;супротив&nbsp;тиранства.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm  C7 </span>
-<span class="txt"> Сын-семиклассник&nbsp;знал,&nbsp;ибо&nbsp;рос&nbsp;внимательным.&nbsp;Только&nbsp;плохо&nbsp;рос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Fm  C#   Fm6/D   B7 </span>
-<span class="txt"> Так&nbsp;что,&nbsp;стесняясь&nbsp;роста,&nbsp;пока&nbsp;тянул&nbsp;сантиметров&nbsp;на&nbsp;полтораста,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Eb   C7  Fm      Fm6 </span>
-<span class="txt"> не&nbsp;доносил.&nbsp;Потом&nbsp;до&nbsp;ста&nbsp;девяноста&nbsp;вымахал&nbsp;и&nbsp;донёс.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm  Ab   Cm/A    G </span>
+<span class="line"><span class="txt"> Мать&nbsp;и&nbsp;отец&nbsp;тайком&nbsp;собирали&nbsp;хронику&nbsp;супротив&nbsp;тиранства.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm  C7 </span></span>
+<span class="line"><span class="txt"> Сын-семиклассник&nbsp;знал,&nbsp;ибо&nbsp;рос&nbsp;внимательным.&nbsp;Только&nbsp;плохо&nbsp;рос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Fm  C#   Fm6/D   B7 </span></span>
+<span class="line"><span class="txt"> Так&nbsp;что,&nbsp;стесняясь&nbsp;роста,&nbsp;пока&nbsp;тянул&nbsp;сантиметров&nbsp;на&nbsp;полтораста,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Eb   C7  Fm      Fm6 </span></span>
+<span class="line"><span class="txt"> не&nbsp;доносил.&nbsp;Потом&nbsp;до&nbsp;ста&nbsp;девяноста&nbsp;вымахал&nbsp;и&nbsp;донёс.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm  Ab   Cm/A    G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Чем&nbsp;время&nbsp;нравственнее&nbsp;пространства?&nbsp;Вопрос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Fm  G  Cm </span>
+<span class="line"><span class="txt"> Чем&nbsp;время&nbsp;нравственнее&nbsp;пространства?&nbsp;Вопрос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Fm  G  Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Впрочем,&nbsp;я&nbsp;не&nbsp;о&nbsp;времени,&nbsp;я&nbsp;о&nbsp;себе,&nbsp;о&nbsp;частных&nbsp;своих&nbsp;проблемах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C#m  C#7 </span>
-<span class="txt"> о&nbsp;языке&nbsp;насущном,&nbsp;а&nbsp;не&nbsp;о&nbsp;слоге,&nbsp;который&nbsp;сидит&nbsp;в&nbsp;чалме.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   F#m  D   F#m6/Eb   H7 </span>
-<span class="txt"> Действовать&nbsp;ли&nbsp;мне&nbsp;дальше?&nbsp;И&nbsp;если&nbsp;действовать,&nbsp;то&nbsp;в&nbsp;каких&nbsp;морфемах?&nbsp; </span><span class="ch">   E    E7  A          C#7  F#m </span>
-<span class="txt"> Тоном&nbsp;каким&nbsp;бравировать,&nbsp;молодецки&nbsp;глядя&nbsp;в&nbsp;глаза&nbsp;зиме?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C#m  A   C#m/Bb    Ab </span>
+<span class="line"><span class="txt"> Впрочем,&nbsp;я&nbsp;не&nbsp;о&nbsp;времени,&nbsp;я&nbsp;о&nbsp;себе,&nbsp;о&nbsp;частных&nbsp;своих&nbsp;проблемах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C#m  C#7 </span></span>
+<span class="line"><span class="txt"> о&nbsp;языке&nbsp;насущном,&nbsp;а&nbsp;не&nbsp;о&nbsp;слоге,&nbsp;который&nbsp;сидит&nbsp;в&nbsp;чалме.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   F#m  D   F#m6/Eb   H7 </span></span>
+<span class="line"><span class="txt"> Действовать&nbsp;ли&nbsp;мне&nbsp;дальше?&nbsp;И&nbsp;если&nbsp;действовать,&nbsp;то&nbsp;в&nbsp;каких&nbsp;морфемах?&nbsp; </span><span class="ch">   E    E7  A          C#7  F#m </span></span>
+<span class="line"><span class="txt"> Тоном&nbsp;каким&nbsp;бравировать,&nbsp;молодецки&nbsp;глядя&nbsp;в&nbsp;глаза&nbsp;зиме?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C#m  A   C#m/Bb    Ab </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;по-советски&nbsp;пробовал.&nbsp;Не&nbsp;далось,&nbsp;мешал&nbsp;аромат&nbsp;кутузки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C#m  C#7 </span>
-<span class="txt"> Пробовал&nbsp;по-московски&nbsp;-&nbsp;расползлось&nbsp;по&nbsp;швам,&nbsp;оторви&nbsp;да&nbsp;брось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   F#m  D   F#m6/Eb   H7 </span>
-<span class="txt"> Много&nbsp;платя&nbsp;за&nbsp;транспорт,&nbsp;и&nbsp;по-ростовски&nbsp;пробовал,&nbsp;и&nbsp;по-тульски:&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   E    C#7 F#m       F#m6 </span>
-<span class="txt"> взять&nbsp;в&nbsp;оборот&nbsp;хотел&nbsp;неродное&nbsp;слово.&nbsp;Приступом&nbsp;не&nbsp;взялось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C#m  A   C#m/Bb    Ab </span>
+<span class="line"><span class="txt"> Я&nbsp;по-советски&nbsp;пробовал.&nbsp;Не&nbsp;далось,&nbsp;мешал&nbsp;аромат&nbsp;кутузки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C#m  C#7 </span></span>
+<span class="line"><span class="txt"> Пробовал&nbsp;по-московски&nbsp;-&nbsp;расползлось&nbsp;по&nbsp;швам,&nbsp;оторви&nbsp;да&nbsp;брось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   F#m  D   F#m6/Eb   H7 </span></span>
+<span class="line"><span class="txt"> Много&nbsp;платя&nbsp;за&nbsp;транспорт,&nbsp;и&nbsp;по-ростовски&nbsp;пробовал,&nbsp;и&nbsp;по-тульски:&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   E    C#7 F#m       F#m6 </span></span>
+<span class="line"><span class="txt"> взять&nbsp;в&nbsp;оборот&nbsp;хотел&nbsp;неродное&nbsp;слово.&nbsp;Приступом&nbsp;не&nbsp;взялось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C#m  A   C#m/Bb    Ab </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ладно,&nbsp;попробуем&nbsp;по-пластунски.&nbsp;Авось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   F#m  Ab  C#m </span>
+<span class="line"><span class="txt"> Ладно,&nbsp;попробуем&nbsp;по-пластунски.&nbsp;Авось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   F#m  Ab  C#m </span></span>
 <span class="txt">  </span>
-<span class="txt"> Эх,&nbsp;голубые&nbsp;ёлочки,&nbsp;белый&nbsp;снег,&nbsp;вдалеке&nbsp;с&nbsp;бубенцами&nbsp;тройка!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Dm  D7 </span>
-<span class="txt"> Публика&nbsp;шевелится&nbsp;довольно&nbsp;бойко,&nbsp;мало&nbsp;кого&nbsp;штормит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm  Eb   Gm6/E   C7 </span>
-<span class="txt"> Впрок&nbsp;идёт&nbsp;заготовка&nbsp;дров,&nbsp;успех&nbsp;имеют&nbsp;шитьё&nbsp;и&nbsp;кройка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   F   F7   B       D7  Gm </span>
-<span class="txt"> Может,&nbsp;мои&nbsp;мне&nbsp;опыты&nbsp;стоит&nbsp;впредь&nbsp;подписывать&nbsp;"Юнкер&nbsp;Шмидт"?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Dm  B    Dm/B    A </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> Но&nbsp;нет,&nbsp;до&nbsp;поры&nbsp;не&nbsp;буду,&nbsp;помедлю&nbsp;минимум&nbsp;до&nbsp;конца&nbsp;куплета,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Dm  D7 </span>
-<span class="txt"> в&nbsp;коем:&nbsp;я,&nbsp;угловат&nbsp;и&nbsp;хладоустойчив&nbsp;(этакий&nbsp;эскимос),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm  Eb  Gm6/E   C7 </span>
-<span class="txt"> еду&nbsp;всё&nbsp;тем&nbsp;же&nbsp;транспортом&nbsp;без&nbsp;билета.&nbsp;В&nbsp;зубах&nbsp;у&nbsp;меня&nbsp;галета.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   F   D7  Gm      Gm6 </span>
-<span class="txt"> Жизнь&nbsp;дребезжит,&nbsp;подпрыгивает&nbsp;и&nbsp;воспринимается&nbsp;как&nbsp;курьёз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Dm  B   Dm/B    A </span>
+<span class="line"><span class="txt"> Эх,&nbsp;голубые&nbsp;ёлочки,&nbsp;белый&nbsp;снег,&nbsp;вдалеке&nbsp;с&nbsp;бубенцами&nbsp;тройка!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Dm  D7 </span></span>
+<span class="line"><span class="txt"> Публика&nbsp;шевелится&nbsp;довольно&nbsp;бойко,&nbsp;мало&nbsp;кого&nbsp;штормит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm  Eb   Gm6/E   C7 </span></span>
+<span class="line"><span class="txt"> Впрок&nbsp;идёт&nbsp;заготовка&nbsp;дров,&nbsp;успех&nbsp;имеют&nbsp;шитьё&nbsp;и&nbsp;кройка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   F   F7   B       D7  Gm </span></span>
+<span class="line"><span class="txt"> Может,&nbsp;мои&nbsp;мне&nbsp;опыты&nbsp;стоит&nbsp;впредь&nbsp;подписывать&nbsp;"Юнкер&nbsp;Шмидт"?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Dm  B    Dm/B    A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Меж&nbsp;тем&nbsp;закончилось&nbsp;целое&nbsp;лето.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A  B </span>
-<span class="txt"> Adios,&nbsp;amigos,&nbsp;nos&nbsp;encontramos&nbsp;mas&nbsp;tarde,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm B7/G# Dm </span>
-<span class="txt"> nos&nbsp;encontramos...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Dm </span>
+<span class="line"><span class="txt"> Но&nbsp;нет,&nbsp;до&nbsp;поры&nbsp;не&nbsp;буду,&nbsp;помедлю&nbsp;минимум&nbsp;до&nbsp;конца&nbsp;куплета,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Dm  D7 </span></span>
+<span class="line"><span class="txt"> в&nbsp;коем:&nbsp;я,&nbsp;угловат&nbsp;и&nbsp;хладоустойчив&nbsp;(этакий&nbsp;эскимос),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm  Eb  Gm6/E   C7 </span></span>
+<span class="line"><span class="txt"> еду&nbsp;всё&nbsp;тем&nbsp;же&nbsp;транспортом&nbsp;без&nbsp;билета.&nbsp;В&nbsp;зубах&nbsp;у&nbsp;меня&nbsp;галета.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   F   D7  Gm      Gm6 </span></span>
+<span class="line"><span class="txt"> Жизнь&nbsp;дребезжит,&nbsp;подпрыгивает&nbsp;и&nbsp;воспринимается&nbsp;как&nbsp;курьёз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Dm  B   Dm/B    A </span></span>
 <span class="txt">  </span>
  <br />
-
+<span class="line"><span class="txt"> Меж&nbsp;тем&nbsp;закончилось&nbsp;целое&nbsp;лето.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A  B </span></span>
+<span class="line"><span class="txt"> Adios,&nbsp;amigos,&nbsp;nos&nbsp;encontramos&nbsp;mas&nbsp;tarde,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm B7/G# Dm </span></span>
+<span class="line"><span class="txt"> nos&nbsp;encontramos...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Dm </span></span>
+<span class="txt">  </span>
+ <br />
 </div>
-<pre>
-    <span class="year">1996</span>
-
+<pre><span class="year">1996</span>
 </pre>
+
 
                 </div>
         </div>

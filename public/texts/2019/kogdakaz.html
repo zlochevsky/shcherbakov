@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,72 +423,69 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Cm"><span class="sng-title">ВРЕМЕНА ГОДА</span>
+data-key="Cm"><h1>ВРЕМЕНА ГОДА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Когда&nbsp;казалось,&nbsp;что&nbsp;ни&nbsp;в&nbsp;чём&nbsp;опоры&nbsp;нет&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     B </span>
-<span class="txt"> и&nbsp;белый&nbsp;свет&nbsp;не&nbsp;бел,&nbsp;и&nbsp;это&nbsp;хуже&nbsp;чем&nbsp;не&nbsp;мил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm     Ab </span>
-<span class="txt"> себе&nbsp;твердил&nbsp;я:&nbsp;брось,&nbsp;всему&nbsp;ли&nbsp;виной&nbsp;унылый&nbsp;свет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Gm </span>
-<span class="txt"> Каков&nbsp;бы&nbsp;ни&nbsp;был&nbsp;он,&nbsp;а&nbsp;ты&nbsp;его&nbsp;преломил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7     Gm </span>
+<span class="line"><span class="txt"> Когда&nbsp;казалось,&nbsp;что&nbsp;ни&nbsp;в&nbsp;чём&nbsp;опоры&nbsp;нет&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     B </span></span>
+<span class="line"><span class="txt"> и&nbsp;белый&nbsp;свет&nbsp;не&nbsp;бел,&nbsp;и&nbsp;это&nbsp;хуже&nbsp;чем&nbsp;не&nbsp;мил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm     Ab </span></span>
+<span class="line"><span class="txt"> себе&nbsp;твердил&nbsp;я:&nbsp;брось,&nbsp;всему&nbsp;ли&nbsp;виной&nbsp;унылый&nbsp;свет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Gm </span></span>
+<span class="line"><span class="txt"> Каков&nbsp;бы&nbsp;ни&nbsp;был&nbsp;он,&nbsp;а&nbsp;ты&nbsp;его&nbsp;преломил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7     Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Расположил&nbsp;в&nbsp;обрез&nbsp;на&nbsp;каждый&nbsp;божий&nbsp;день,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7     Cm </span>
-<span class="txt"> В&nbsp;семействе&nbsp;-&nbsp;как&nbsp;чужак,&nbsp;в&nbsp;столице&nbsp;-&nbsp;как&nbsp;в&nbsp;лесу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab     Cm   G7 </span>
-<span class="txt"> Умножь&nbsp;на&nbsp;сорок&nbsp;лет,&nbsp;и&nbsp;вот&nbsp;-&nbsp;ни&nbsp;свет,&nbsp;ни&nbsp;тень&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7     Fm </span>
-<span class="txt"> тебе&nbsp;и&nbsp;не&nbsp;по&nbsp;нраву,&nbsp;и&nbsp;не&nbsp;к&nbsp;лицу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Adim Cm </span>
+<span class="line"><span class="txt"> Расположил&nbsp;в&nbsp;обрез&nbsp;на&nbsp;каждый&nbsp;божий&nbsp;день,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7     Cm </span></span>
+<span class="line"><span class="txt"> В&nbsp;семействе&nbsp;-&nbsp;как&nbsp;чужак,&nbsp;в&nbsp;столице&nbsp;-&nbsp;как&nbsp;в&nbsp;лесу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab     Cm   G7 </span></span>
+<span class="line"><span class="txt"> Умножь&nbsp;на&nbsp;сорок&nbsp;лет,&nbsp;и&nbsp;вот&nbsp;-&nbsp;ни&nbsp;свет,&nbsp;ни&nbsp;тень&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7     Fm </span></span>
+<span class="line"><span class="txt"> тебе&nbsp;и&nbsp;не&nbsp;по&nbsp;нраву,&nbsp;и&nbsp;не&nbsp;к&nbsp;лицу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Adim Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Само&nbsp;собой,&nbsp;очки,&nbsp;да&nbsp;много&nbsp;ль&nbsp;встроишь&nbsp;в&nbsp;них?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     B </span>
-<span class="txt"> Учил&nbsp;бы&nbsp;оптику&nbsp;-&nbsp;досада&nbsp;бы&nbsp;теперь&nbsp;не&nbsp;жгла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm     Ab </span>
-<span class="txt"> Начистоту&nbsp;сказать,&nbsp;не&nbsp;шибко&nbsp;ты&nbsp;ловок&nbsp;троечник&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Gm </span>
-<span class="txt"> насчет&nbsp;падения,&nbsp;отражения&nbsp;и&nbsp;угла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7     Gm </span>
+<span class="line"><span class="txt"> Само&nbsp;собой,&nbsp;очки,&nbsp;да&nbsp;много&nbsp;ль&nbsp;встроишь&nbsp;в&nbsp;них?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     B </span></span>
+<span class="line"><span class="txt"> Учил&nbsp;бы&nbsp;оптику&nbsp;-&nbsp;досада&nbsp;бы&nbsp;теперь&nbsp;не&nbsp;жгла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm     Ab </span></span>
+<span class="line"><span class="txt"> Начистоту&nbsp;сказать,&nbsp;не&nbsp;шибко&nbsp;ты&nbsp;ловок&nbsp;троечник&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Gm </span></span>
+<span class="line"><span class="txt"> насчет&nbsp;падения,&nbsp;отражения&nbsp;и&nbsp;угла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7     Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> На&nbsp;солнцепёке&nbsp;вымок&nbsp;сплошь,&nbsp;прохлады&nbsp;ждёшь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7     Cm </span>
-<span class="txt"> В&nbsp;осенней&nbsp;скуке&nbsp;весь&nbsp;поблек,&nbsp;скорей&nbsp;бы&nbsp;снег.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab     Cm   G7 </span>
-<span class="txt"> Но&nbsp;от&nbsp;него&nbsp;зимой&nbsp;завал,&nbsp;весной&nbsp;потоп,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7     Fm </span>
-<span class="txt"> и&nbsp;солнца&nbsp;не&nbsp;дождёшься&nbsp;потом,&nbsp;потом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Adim Cm </span>
+<span class="line"><span class="txt"> На&nbsp;солнцепёке&nbsp;вымок&nbsp;сплошь,&nbsp;прохлады&nbsp;ждёшь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7     Cm </span></span>
+<span class="line"><span class="txt"> В&nbsp;осенней&nbsp;скуке&nbsp;весь&nbsp;поблек,&nbsp;скорей&nbsp;бы&nbsp;снег.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab     Cm   G7 </span></span>
+<span class="line"><span class="txt"> Но&nbsp;от&nbsp;него&nbsp;зимой&nbsp;завал,&nbsp;весной&nbsp;потоп,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7     Fm </span></span>
+<span class="line"><span class="txt"> и&nbsp;солнца&nbsp;не&nbsp;дождёшься&nbsp;потом,&nbsp;потом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Adim Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кому&nbsp;от&nbsp;непогод&nbsp;хватает&nbsp;стен&nbsp;и&nbsp;крыш,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     B </span>
-<span class="txt"> тому&nbsp;и&nbsp;в&nbsp;оптике&nbsp;всегдашний&nbsp;наготове&nbsp;трюк:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm     Ab </span>
-<span class="txt"> перевернул&nbsp;бинокль&nbsp;-&nbsp;и&nbsp;вот&nbsp;уже&nbsp;не&nbsp;чудовищ&nbsp;зришь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Gm </span>
-<span class="txt"> а&nbsp;насекомых&nbsp;мелких,&nbsp;с&nbsp;лапками&nbsp;вместо&nbsp;рук.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7     Gm </span>
+<span class="line"><span class="txt"> Кому&nbsp;от&nbsp;непогод&nbsp;хватает&nbsp;стен&nbsp;и&nbsp;крыш,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     B </span></span>
+<span class="line"><span class="txt"> тому&nbsp;и&nbsp;в&nbsp;оптике&nbsp;всегдашний&nbsp;наготове&nbsp;трюк:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm     Ab </span></span>
+<span class="line"><span class="txt"> перевернул&nbsp;бинокль&nbsp;-&nbsp;и&nbsp;вот&nbsp;уже&nbsp;не&nbsp;чудовищ&nbsp;зришь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Gm </span></span>
+<span class="line"><span class="txt"> а&nbsp;насекомых&nbsp;мелких,&nbsp;с&nbsp;лапками&nbsp;вместо&nbsp;рук.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7     Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Их&nbsp;комариный&nbsp;век&nbsp;угас,&nbsp;остался&nbsp;час.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7     Cm </span>
-<span class="txt"> Почти&nbsp;забавен&nbsp;их&nbsp;задор&nbsp;в&nbsp;преддверьи&nbsp;тьмы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab     Cm   G7 </span>
-<span class="txt"> И&nbsp;через&nbsp;шестьдесят&nbsp;минут&nbsp;они&nbsp;уснут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7     Fm </span>
-<span class="txt"> и&nbsp;завтра&nbsp;не&nbsp;воскреснут,&nbsp;не&nbsp;то&nbsp;что&nbsp;мы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Adim Cm </span>
+<span class="line"><span class="txt"> Их&nbsp;комариный&nbsp;век&nbsp;угас,&nbsp;остался&nbsp;час.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7     Cm </span></span>
+<span class="line"><span class="txt"> Почти&nbsp;забавен&nbsp;их&nbsp;задор&nbsp;в&nbsp;преддверьи&nbsp;тьмы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab     Cm   G7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;через&nbsp;шестьдесят&nbsp;минут&nbsp;они&nbsp;уснут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7     Fm </span></span>
+<span class="line"><span class="txt"> и&nbsp;завтра&nbsp;не&nbsp;воскреснут,&nbsp;не&nbsp;то&nbsp;что&nbsp;мы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Adim Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;кто&nbsp;на&nbsp;трюки&nbsp;слаб&nbsp;-&nbsp;законы&nbsp;выяснит&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     B </span>
-<span class="txt"> и&nbsp;уловивши&nbsp;луч,&nbsp;его&nbsp;расширит&nbsp;и&nbsp;продлит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm     Ab </span>
-<span class="txt"> чтобы&nbsp;когда&nbsp;потоп&nbsp;светила&nbsp;замкнёт&nbsp;и&nbsp;вытеснит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Gm </span>
-<span class="txt"> не&nbsp;бормотать&nbsp;опять,&nbsp;что&nbsp;оптика&nbsp;барахлит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7     Gm </span>
+<span class="line"><span class="txt"> А&nbsp;кто&nbsp;на&nbsp;трюки&nbsp;слаб&nbsp;-&nbsp;законы&nbsp;выяснит&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     B </span></span>
+<span class="line"><span class="txt"> и&nbsp;уловивши&nbsp;луч,&nbsp;его&nbsp;расширит&nbsp;и&nbsp;продлит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm     Ab </span></span>
+<span class="line"><span class="txt"> чтобы&nbsp;когда&nbsp;потоп&nbsp;светила&nbsp;замкнёт&nbsp;и&nbsp;вытеснит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Gm </span></span>
+<span class="line"><span class="txt"> не&nbsp;бормотать&nbsp;опять,&nbsp;что&nbsp;оптика&nbsp;барахлит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7     Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Купил&nbsp;учебник&nbsp;в&nbsp;двух&nbsp;томах,&nbsp;азам&nbsp;учусь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7     Cm </span>
-<span class="txt"> Успехи&nbsp;есть,&nbsp;хотя&nbsp;прочёл&nbsp;лишь&nbsp;первый&nbsp;том.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab     Cm   G7 </span>
-<span class="txt"> Ночами&nbsp;обхожусь&nbsp;без&nbsp;лампы,&nbsp;сам&nbsp;свечусь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7     Fm </span>
-<span class="txt"> и&nbsp;то&nbsp;ли&nbsp;еще&nbsp;будет&nbsp;потом,&nbsp;потом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Adim Cm </span>
+<span class="line"><span class="txt"> Купил&nbsp;учебник&nbsp;в&nbsp;двух&nbsp;томах,&nbsp;азам&nbsp;учусь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7     Cm </span></span>
+<span class="line"><span class="txt"> Успехи&nbsp;есть,&nbsp;хотя&nbsp;прочёл&nbsp;лишь&nbsp;первый&nbsp;том.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab     Cm   G7 </span></span>
+<span class="line"><span class="txt"> Ночами&nbsp;обхожусь&nbsp;без&nbsp;лампы,&nbsp;сам&nbsp;свечусь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7     Fm </span></span>
+<span class="line"><span class="txt"> и&nbsp;то&nbsp;ли&nbsp;еще&nbsp;будет&nbsp;потом,&nbsp;потом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm     Adim Cm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2019</span>
-
+<pre><span class="year">2019</span>
 
 </pre>
+
 
                 </div>
         </div>

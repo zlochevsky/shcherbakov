@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,47 +433,44 @@ span.c {
 data-key="D"><span class="txt"> ГОРЕСТНЫЙ&nbsp;РОМАНС&nbsp;I </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Несчитанные&nbsp;дни,&nbsp;немыслимые&nbsp;дали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Em A7  G  D </span>
-<span class="txt"> остались&nbsp;позади,&nbsp;а&nbsp;край&nbsp;все&nbsp;непочат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em A7  D </span>
-<span class="txt"> Как&nbsp;много&nbsp;мы&nbsp;сожгли,&nbsp;как&nbsp;мало&nbsp;мы&nbsp;создали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 Dm </span>
-<span class="txt"> по&nbsp;милости&nbsp;людей,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 Dm </span>
-<span class="txt"> Как&nbsp;много&nbsp;мы&nbsp;сожгли,&nbsp;как&nbsp;мало&nbsp;мы&nbsp;создали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 B7 Dm </span>
-<span class="txt"> по&nbsp;милости&nbsp;людей,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 D </span>
+<span class="line"><span class="txt"> Несчитанные&nbsp;дни,&nbsp;немыслимые&nbsp;дали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Em A7  G  D </span></span>
+<span class="line"><span class="txt"> остались&nbsp;позади,&nbsp;а&nbsp;край&nbsp;все&nbsp;непочат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em A7  D </span></span>
+<span class="line"><span class="txt"> Как&nbsp;много&nbsp;мы&nbsp;сожгли,&nbsp;как&nbsp;мало&nbsp;мы&nbsp;создали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 Dm </span></span>
+<span class="line"><span class="txt"> по&nbsp;милости&nbsp;людей,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 Dm </span></span>
+<span class="line"><span class="txt"> Как&nbsp;много&nbsp;мы&nbsp;сожгли,&nbsp;как&nbsp;мало&nbsp;мы&nbsp;создали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 B7 Dm </span></span>
+<span class="line"><span class="txt"> по&nbsp;милости&nbsp;людей,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Давно&nbsp;известны&nbsp;нам&nbsp;все&nbsp;омуты&nbsp;и&nbsp;мели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Em A7  G  D </span>
-<span class="txt"> Иных&nbsp;снесло&nbsp;на&nbsp;дно,&nbsp;а&nbsp;нас&nbsp;всё&nbsp;волны&nbsp;мчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em A7  D </span>
-<span class="txt"> Как&nbsp;много&nbsp;мы&nbsp;могли,&nbsp;как&nbsp;мало&nbsp;мы&nbsp;сумели!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 Dm </span>
-<span class="txt"> И&nbsp;всё&nbsp;из-за&nbsp;людей,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 Dm </span>
-<span class="txt"> Как&nbsp;много&nbsp;мы&nbsp;могли,&nbsp;как&nbsp;мало&nbsp;мы&nbsp;сумели!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 B7 Dm </span>
-<span class="txt"> И&nbsp;всё&nbsp;из-за&nbsp;людей,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 D </span>
+<span class="line"><span class="txt"> Давно&nbsp;известны&nbsp;нам&nbsp;все&nbsp;омуты&nbsp;и&nbsp;мели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Em A7  G  D </span></span>
+<span class="line"><span class="txt"> Иных&nbsp;снесло&nbsp;на&nbsp;дно,&nbsp;а&nbsp;нас&nbsp;всё&nbsp;волны&nbsp;мчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em A7  D </span></span>
+<span class="line"><span class="txt"> Как&nbsp;много&nbsp;мы&nbsp;могли,&nbsp;как&nbsp;мало&nbsp;мы&nbsp;сумели!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;всё&nbsp;из-за&nbsp;людей,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 Dm </span></span>
+<span class="line"><span class="txt"> Как&nbsp;много&nbsp;мы&nbsp;могли,&nbsp;как&nbsp;мало&nbsp;мы&nbsp;сумели!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 B7 Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;всё&nbsp;из-за&nbsp;людей,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> О,&nbsp;как&nbsp;прекрасен&nbsp;бой!&nbsp;О,&nbsp;как&nbsp;прекрасно&nbsp;рвенье!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Em A7  G  D </span>
-<span class="txt"> Вот&nbsp;только&nbsp;перемен&nbsp;не&nbsp;видится&nbsp;пока.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em A7  D </span>
-<span class="txt"> Всё&nbsp;так&nbsp;же&nbsp;тяжелы&nbsp;судьбы&nbsp;прикосновенья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 Dm </span>
-<span class="txt"> И&nbsp;смерть&nbsp;недалека,&nbsp;и&nbsp;бьёт&nbsp;наверняка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 Dm </span>
-<span class="txt"> Всё&nbsp;так&nbsp;же&nbsp;тяжелы&nbsp;судьбы&nbsp;прикосновенья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 B7 Dm </span>
-<span class="txt"> И&nbsp;смерть&nbsp;недалека,&nbsp;и&nbsp;бьёт&nbsp;наверняка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 D </span>
-<span class="txt">  </span>
- <br />
-<span class="txt">  </span>
- <br />
-<span class="txt"> Но&nbsp;слишком&nbsp;не&nbsp;грусти&nbsp;и&nbsp;мучайся&nbsp;не&nbsp;очень,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Em A7  G  D </span>
-<span class="txt"> пусть&nbsp;горьких&nbsp;дум&nbsp;следы&nbsp;чела&nbsp;не&nbsp;омрачат,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em A7  D </span>
-<span class="txt"> поскольку&nbsp;в&nbsp;трудный&nbsp;час&nbsp;всегда&nbsp;найдётся,&nbsp;впрочем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 Dm </span>
-<span class="txt"> нам&nbsp;место&nbsp;среди&nbsp;тех,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 Dm </span>
-<span class="txt"> Поскольку&nbsp;в&nbsp;трудный&nbsp;час&nbsp;всегда&nbsp;найдётся,&nbsp;впрочем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 B7 Dm </span>
-<span class="txt"> нам&nbsp;место&nbsp;среди&nbsp;тех,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 D </span>
+<span class="line"><span class="txt"> О,&nbsp;как&nbsp;прекрасен&nbsp;бой!&nbsp;О,&nbsp;как&nbsp;прекрасно&nbsp;рвенье!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Em A7  G  D </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;только&nbsp;перемен&nbsp;не&nbsp;видится&nbsp;пока.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em A7  D </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;так&nbsp;же&nbsp;тяжелы&nbsp;судьбы&nbsp;прикосновенья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;смерть&nbsp;недалека,&nbsp;и&nbsp;бьёт&nbsp;наверняка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 Dm </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;так&nbsp;же&nbsp;тяжелы&nbsp;судьбы&nbsp;прикосновенья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 B7 Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;смерть&nbsp;недалека,&nbsp;и&nbsp;бьёт&nbsp;наверняка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 D </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
  <br />
+<span class="line"><span class="txt"> Но&nbsp;слишком&nbsp;не&nbsp;грусти&nbsp;и&nbsp;мучайся&nbsp;не&nbsp;очень,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Em A7  G  D </span></span>
+<span class="line"><span class="txt"> пусть&nbsp;горьких&nbsp;дум&nbsp;следы&nbsp;чела&nbsp;не&nbsp;омрачат,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em A7  D </span></span>
+<span class="line"><span class="txt"> поскольку&nbsp;в&nbsp;трудный&nbsp;час&nbsp;всегда&nbsp;найдётся,&nbsp;впрочем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 Dm </span></span>
+<span class="line"><span class="txt"> нам&nbsp;место&nbsp;среди&nbsp;тех,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 Dm </span></span>
+<span class="line"><span class="txt"> Поскольку&nbsp;в&nbsp;трудный&nbsp;час&nbsp;всегда&nbsp;найдётся,&nbsp;впрочем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm Gm6 B7 Dm </span></span>
+<span class="line"><span class="txt"> нам&nbsp;место&nbsp;среди&nbsp;тех,&nbsp;которые&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 A7 D </span></span>
+<span class="txt">  </span>
  <br />
-
+<span class="txt">  </span>
+ <br />
 </div>
-<pre>
-    <span class="year">1983</span>
+<pre><span class="year">1983</span>
 
 |----2---2---|----2---2---|----1-------|1-------0---|----2---2---|
 |----3---3---|----3---3---|----2-------|2-------2---|----3---3---|
@@ -473,8 +478,8 @@ data-key="D"><span class="txt"> ГОРЕСТНЫЙ&nbsp;РОМАНС&nbsp;I </sp
 |0-----------|0-----------|------------|------------|0-----------|
 |------------|------------|0-----------|------------|------------|
 |------------|------------|------------|------------|------------|
-
 </pre>
+
 
                 </div>
         </div>

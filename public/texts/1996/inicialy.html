@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,63 +423,59 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">ИНИЦИАЛЫ</span>
+data-key="Dm"><h1>ИНИЦИАЛЫ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Аменхотеп,&nbsp;ты&nbsp;помнишь&nbsp;тот&nbsp;мотив?&nbsp;Его&nbsp;ты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span>
-<span class="txt"> сочинив,&nbsp;немедленно&nbsp;надул&nbsp;бока&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span>
-<span class="txt"> и&nbsp;мне&nbsp;напел.&nbsp;А&nbsp;я,&nbsp;не&nbsp;подавив&nbsp;зевоты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6   Dm  B </span>
-<span class="txt"> промолчал.&nbsp;Потом&nbsp;прошли&nbsp;века,&nbsp;века...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7/Ab Dm  A7 </span>
+<span class="line"><span class="txt"> Аменхотеп,&nbsp;ты&nbsp;помнишь&nbsp;тот&nbsp;мотив?&nbsp;Его&nbsp;ты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span></span>
+<span class="line"><span class="txt"> сочинив,&nbsp;немедленно&nbsp;надул&nbsp;бока&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span></span>
+<span class="line"><span class="txt"> и&nbsp;мне&nbsp;напел.&nbsp;А&nbsp;я,&nbsp;не&nbsp;подавив&nbsp;зевоты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6   Dm  B </span></span>
+<span class="line"><span class="txt"> промолчал.&nbsp;Потом&nbsp;прошли&nbsp;века,&nbsp;века...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7/Ab Dm  A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вчера&nbsp;в&nbsp;концерте&nbsp;слышал&nbsp;я,&nbsp;как&nbsp;те&nbsp;же&nbsp;ноты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     Am  Ebdim </span>
-<span class="txt"> между&nbsp;пятым&nbsp;скерцо&nbsp;и&nbsp;седьмым,&nbsp;пока&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm  C </span>
-<span class="txt"> переводили&nbsp;дух&nbsp;корнеты&nbsp;и&nbsp;фаготы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     D7  Gm </span>
-<span class="txt"> три&nbsp;альта&nbsp;тянули&nbsp;в&nbsp;три&nbsp;смычка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     B  Gm6 </span>
-<span class="txt"> Мои&nbsp;приветы.&nbsp;Чао.&nbsp;ТЧК.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     Dm </span>
+<span class="line"><span class="txt"> Вчера&nbsp;в&nbsp;концерте&nbsp;слышал&nbsp;я,&nbsp;как&nbsp;те&nbsp;же&nbsp;ноты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     Am  Ebdim </span></span>
+<span class="line"><span class="txt"> между&nbsp;пятым&nbsp;скерцо&nbsp;и&nbsp;седьмым,&nbsp;пока&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm  C </span></span>
+<span class="line"><span class="txt"> переводили&nbsp;дух&nbsp;корнеты&nbsp;и&nbsp;фаготы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     D7  Gm </span></span>
+<span class="line"><span class="txt"> три&nbsp;альта&nbsp;тянули&nbsp;в&nbsp;три&nbsp;смычка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     B  Gm6 </span></span>
+<span class="line"><span class="txt"> Мои&nbsp;приветы.&nbsp;Чао.&nbsp;ТЧК.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ассаргадон,&nbsp;ты&nbsp;помнишь,&nbsp;как&nbsp;обломок&nbsp;синей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span>
-<span class="txt"> глины&nbsp;ненароком&nbsp;поднял&nbsp;я&nbsp;с&nbsp;земли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span>
-<span class="txt"> а&nbsp;ты,&nbsp;вино&nbsp;цедя&nbsp;и&nbsp;заедая&nbsp;дыней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6   Dm  B </span>
-<span class="txt"> промолчал&nbsp;тогда?&nbsp;Затем&nbsp;века&nbsp;прошли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7/Ab Dm  A7 </span>
+<span class="line"><span class="txt"> Ассаргадон,&nbsp;ты&nbsp;помнишь,&nbsp;как&nbsp;обломок&nbsp;синей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span></span>
+<span class="line"><span class="txt"> глины&nbsp;ненароком&nbsp;поднял&nbsp;я&nbsp;с&nbsp;земли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span></span>
+<span class="line"><span class="txt"> а&nbsp;ты,&nbsp;вино&nbsp;цедя&nbsp;и&nbsp;заедая&nbsp;дыней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6   Dm  B </span></span>
+<span class="line"><span class="txt"> промолчал&nbsp;тогда?&nbsp;Затем&nbsp;века&nbsp;прошли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7/Ab Dm  A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вчера&nbsp;я&nbsp;видел&nbsp;сеть&nbsp;узкоколейных&nbsp;линий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     Am  Ebdim </span>
-<span class="txt"> по&nbsp;каким&nbsp;ту&nbsp;глину&nbsp;поезда&nbsp;везли&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm  C </span>
-<span class="txt"> туда,&nbsp;где&nbsp;из&nbsp;неё,&nbsp;по&nbsp;слухам,&nbsp;алюминий&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     D7  Gm </span>
-<span class="txt"> извлекают&nbsp;нынче.&nbsp;Веришь&nbsp;ли?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     B  Gm6 </span>
+<span class="line"><span class="txt"> Вчера&nbsp;я&nbsp;видел&nbsp;сеть&nbsp;узкоколейных&nbsp;линий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     Am  Ebdim </span></span>
+<span class="line"><span class="txt"> по&nbsp;каким&nbsp;ту&nbsp;глину&nbsp;поезда&nbsp;везли&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm  C </span></span>
+<span class="line"><span class="txt"> туда,&nbsp;где&nbsp;из&nbsp;неё,&nbsp;по&nbsp;слухам,&nbsp;алюминий&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     D7  Gm </span></span>
+<span class="line"><span class="txt"> извлекают&nbsp;нынче.&nbsp;Веришь&nbsp;ли?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     B  Gm6 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вот&nbsp;миномёт.&nbsp;Не&nbsp;веришь&nbsp;-&nbsp;застрели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     Dm </span>
+<span class="line"><span class="txt"> Вот&nbsp;миномёт.&nbsp;Не&nbsp;веришь&nbsp;-&nbsp;застрели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Анаксимандр,&nbsp;ты&nbsp;помнишь,&nbsp;как&nbsp;подобный&nbsp;чаше&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span>
-<span class="txt"> водоём&nbsp;мы&nbsp;вырыли&nbsp;с&nbsp;тобой&nbsp;вдвоём?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span>
-<span class="txt"> Века,&nbsp;века&nbsp;потом&nbsp;вода&nbsp;мертвей&nbsp;гуаши&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6   Dm  B </span>
-<span class="txt"> в&nbsp;нём&nbsp;стояла...&nbsp;Небыль,&nbsp;я&nbsp;-&nbsp;фантом.&nbsp;Приём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7/Ab Dm  A7 </span>
+<span class="line"><span class="txt"> Анаксимандр,&nbsp;ты&nbsp;помнишь,&nbsp;как&nbsp;подобный&nbsp;чаше&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span></span>
+<span class="line"><span class="txt"> водоём&nbsp;мы&nbsp;вырыли&nbsp;с&nbsp;тобой&nbsp;вдвоём?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span></span>
+<span class="line"><span class="txt"> Века,&nbsp;века&nbsp;потом&nbsp;вода&nbsp;мертвей&nbsp;гуаши&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6   Dm  B </span></span>
+<span class="line"><span class="txt"> в&nbsp;нём&nbsp;стояла...&nbsp;Небыль,&nbsp;я&nbsp;-&nbsp;фантом.&nbsp;Приём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7/Ab Dm  A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вчера&nbsp;я&nbsp;видел,&nbsp;как,&nbsp;ночной&nbsp;русалки&nbsp;краше,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     Am  Ebdim </span>
-<span class="txt"> по&nbsp;ручью,&nbsp;из&nbsp;выдумки&nbsp;ловца&nbsp;живьём,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm  C </span>
-<span class="txt"> на&nbsp;плавнике&nbsp;неся&nbsp;инициалы&nbsp;наши&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     D7  Gm </span>
-<span class="txt"> под&nbsp;табличкой&nbsp;"Справок&nbsp;не&nbsp;даём",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     B  Gm6 </span>
-<span class="txt"> большая&nbsp;рыба&nbsp;входит&nbsp;в&nbsp;водоём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     Dm </span>
+<span class="line"><span class="txt"> Вчера&nbsp;я&nbsp;видел,&nbsp;как,&nbsp;ночной&nbsp;русалки&nbsp;краше,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     Am  Ebdim </span></span>
+<span class="line"><span class="txt"> по&nbsp;ручью,&nbsp;из&nbsp;выдумки&nbsp;ловца&nbsp;живьём,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm  C </span></span>
+<span class="line"><span class="txt"> на&nbsp;плавнике&nbsp;неся&nbsp;инициалы&nbsp;наши&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F     D7  Gm </span></span>
+<span class="line"><span class="txt"> под&nbsp;табличкой&nbsp;"Справок&nbsp;не&nbsp;даём",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     B  Gm6 </span></span>
+<span class="line"><span class="txt"> большая&nbsp;рыба&nbsp;входит&nbsp;в&nbsp;водоём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E7  A7     Dm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1996</span>
+<pre><span class="year">1996</span>
 
 Вступление и проигрыш:
 
@@ -483,8 +487,8 @@ D--)-5-------)-7-------)-7-------------8--7---
 A------------(-5-------(-7--------------------
 E----------------------)-5--------------------
    (таблатура В.Медведева)
-
 </pre>
+
 
                 </div>
         </div>

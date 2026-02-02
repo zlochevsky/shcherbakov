@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,64 +423,61 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">МОСКВА - СУХУМИ</span>
+data-key="Hm"><h1>МОСКВА - СУХУМИ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Москва&nbsp;-&nbsp;Сухуми.&nbsp;За&nbsp;полцены&nbsp;билет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span>
-<span class="txt"> Я&nbsp;еду&nbsp;к&nbsp;морю.&nbsp;Мне&nbsp;девятнадцать&nbsp;лет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span>
-<span class="txt"> А&nbsp;за&nbsp;окном&nbsp;мелькает&nbsp;жизнь&nbsp;моя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
-<span class="txt"> Но&nbsp;молод&nbsp;я.&nbsp;И&nbsp;не&nbsp;смотрю&nbsp;ей&nbsp;вслед.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm F# Hm </span>
-<span class="txt"> Земля&nbsp;уставлена&nbsp;помпезными&nbsp;колоссами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm </span>
-<span class="txt"> Гербы&nbsp;красуются&nbsp;едва&nbsp;ли&nbsp;не&nbsp;на&nbsp;всех&nbsp;воротах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   D  H7 </span>
-<span class="txt"> Локомотив&nbsp;гремит&nbsp;железными&nbsp;колёсами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm </span>
-<span class="txt"> И&nbsp;рельсы&nbsp;не&nbsp;кончаются.&nbsp;И&nbsp;шпалы&nbsp;на&nbsp;местах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm F# Hm </span>
+<span class="line"><span class="txt"> Москва&nbsp;-&nbsp;Сухуми.&nbsp;За&nbsp;полцены&nbsp;билет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;еду&nbsp;к&nbsp;морю.&nbsp;Мне&nbsp;девятнадцать&nbsp;лет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span></span>
+<span class="line"><span class="txt"> А&nbsp;за&nbsp;окном&nbsp;мелькает&nbsp;жизнь&nbsp;моя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
+<span class="line"><span class="txt"> Но&nbsp;молод&nbsp;я.&nbsp;И&nbsp;не&nbsp;смотрю&nbsp;ей&nbsp;вслед.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm F# Hm </span></span>
+<span class="line"><span class="txt"> Земля&nbsp;уставлена&nbsp;помпезными&nbsp;колоссами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm </span></span>
+<span class="line"><span class="txt"> Гербы&nbsp;красуются&nbsp;едва&nbsp;ли&nbsp;не&nbsp;на&nbsp;всех&nbsp;воротах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   D  H7 </span></span>
+<span class="line"><span class="txt"> Локомотив&nbsp;гремит&nbsp;железными&nbsp;колёсами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm </span></span>
+<span class="line"><span class="txt"> И&nbsp;рельсы&nbsp;не&nbsp;кончаются.&nbsp;И&nbsp;шпалы&nbsp;на&nbsp;местах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Навстречу&nbsp;с&nbsp;юга,&nbsp;крича&nbsp;"пора!&nbsp;пора!",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span>
-<span class="txt"> летят&nbsp;составы&nbsp;с&nbsp;утра&nbsp;и&nbsp;до&nbsp;утра.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span>
-<span class="txt"> Туда,&nbsp;туда,&nbsp;где&nbsp;холод&nbsp;и&nbsp;простуда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
-<span class="txt"> Туда,&nbsp;откуда&nbsp;я&nbsp;укатил&nbsp;вчера.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm F# Hm </span>
-<span class="txt"> А&nbsp;нынче&nbsp;ждут&nbsp;меня&nbsp;лимоны&nbsp;с&nbsp;абрикосами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm </span>
-<span class="txt"> прибой&nbsp;неслыханный&nbsp;и&nbsp;новый&nbsp;горизонт&nbsp;вдалеке.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   D  H7 </span>
-<span class="txt"> Локомотив&nbsp;гремит&nbsp;железными&nbsp;колёсами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm </span>
-<span class="txt"> Как&nbsp;будто&nbsp;говорит&nbsp;со&nbsp;мной&nbsp;на&nbsp;новом&nbsp;языке.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm F# Hm </span>
+<span class="line"><span class="txt"> Навстречу&nbsp;с&nbsp;юга,&nbsp;крича&nbsp;"пора!&nbsp;пора!",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span></span>
+<span class="line"><span class="txt"> летят&nbsp;составы&nbsp;с&nbsp;утра&nbsp;и&nbsp;до&nbsp;утра.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span></span>
+<span class="line"><span class="txt"> Туда,&nbsp;туда,&nbsp;где&nbsp;холод&nbsp;и&nbsp;простуда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
+<span class="line"><span class="txt"> Туда,&nbsp;откуда&nbsp;я&nbsp;укатил&nbsp;вчера.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm F# Hm </span></span>
+<span class="line"><span class="txt"> А&nbsp;нынче&nbsp;ждут&nbsp;меня&nbsp;лимоны&nbsp;с&nbsp;абрикосами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm </span></span>
+<span class="line"><span class="txt"> прибой&nbsp;неслыханный&nbsp;и&nbsp;новый&nbsp;горизонт&nbsp;вдалеке.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   D  H7 </span></span>
+<span class="line"><span class="txt"> Локомотив&nbsp;гремит&nbsp;железными&nbsp;колёсами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm </span></span>
+<span class="line"><span class="txt"> Как&nbsp;будто&nbsp;говорит&nbsp;со&nbsp;мной&nbsp;на&nbsp;новом&nbsp;языке.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;еду&nbsp;к&nbsp;морю.&nbsp;В&nbsp;окно&nbsp;видна&nbsp;луна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span>
-<span class="txt"> На&nbsp;верхней&nbsp;полке&nbsp;лежу,&nbsp;не&nbsp;зная&nbsp;сна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span>
-<span class="txt"> А&nbsp;между&nbsp;тем&nbsp;проходит&nbsp;жизнь&nbsp;моя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
-<span class="txt"> Но&nbsp;жизнь&nbsp;моя&nbsp;-&nbsp;кому&nbsp;важна&nbsp;она?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm F# Hm </span>
-<span class="txt"> С&nbsp;лотков&nbsp;на&nbsp;станциях&nbsp;торгуют&nbsp;папиросами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm </span>
-<span class="txt"> Таблички&nbsp;с&nbsp;буквами&nbsp;над&nbsp;кассами&nbsp;висят:&nbsp;перерыв.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   D  H7 </span>
-<span class="txt"> Локомотив&nbsp;гремит&nbsp;железными&nbsp;колёсами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm </span>
-<span class="txt"> Железными&nbsp;колёсами&nbsp;гремит&nbsp;локомотив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm F# Hm </span>
+<span class="line"><span class="txt"> Я&nbsp;еду&nbsp;к&nbsp;морю.&nbsp;В&nbsp;окно&nbsp;видна&nbsp;луна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span></span>
+<span class="line"><span class="txt"> На&nbsp;верхней&nbsp;полке&nbsp;лежу,&nbsp;не&nbsp;зная&nbsp;сна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span></span>
+<span class="line"><span class="txt"> А&nbsp;между&nbsp;тем&nbsp;проходит&nbsp;жизнь&nbsp;моя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
+<span class="line"><span class="txt"> Но&nbsp;жизнь&nbsp;моя&nbsp;-&nbsp;кому&nbsp;важна&nbsp;она?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm F# Hm </span></span>
+<span class="line"><span class="txt"> С&nbsp;лотков&nbsp;на&nbsp;станциях&nbsp;торгуют&nbsp;папиросами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm </span></span>
+<span class="line"><span class="txt"> Таблички&nbsp;с&nbsp;буквами&nbsp;над&nbsp;кассами&nbsp;висят:&nbsp;перерыв.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   D  H7 </span></span>
+<span class="line"><span class="txt"> Локомотив&nbsp;гремит&nbsp;железными&nbsp;колёсами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm </span></span>
+<span class="line"><span class="txt"> Железными&nbsp;колёсами&nbsp;гремит&nbsp;локомотив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;плацкартном&nbsp;людно.&nbsp;Опустошён&nbsp;буфет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span>
-<span class="txt"> Все&nbsp;едут&nbsp;к&nbsp;морю.&nbsp;Не&nbsp;только&nbsp;я,&nbsp;о&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span>
-<span class="txt"> Все&nbsp;как&nbsp;один,&nbsp;в&nbsp;десятый&nbsp;раз&nbsp;иные.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
-<span class="txt"> А&nbsp;я&nbsp;впервые.&nbsp;Мне&nbsp;девятнадцать&nbsp;лет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm F# Hm </span>
-<span class="txt"> Вагон&nbsp;потрёпанный.&nbsp;Лежанки&nbsp;с&nbsp;перекосами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm </span>
-<span class="txt"> Днём&nbsp;кое-как&nbsp;ещё,&nbsp;а&nbsp;ночью&nbsp;-&nbsp;ни&nbsp;воды,&nbsp;ни&nbsp;огня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   D  H7 </span>
-<span class="txt"> Локомотив&nbsp;гремит&nbsp;железными&nbsp;колёсами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm </span>
-<span class="txt"> И&nbsp;море&nbsp;надвигается&nbsp;из&nbsp;мрака&nbsp;на&nbsp;меня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm F# Hm </span>
+<span class="line"><span class="txt"> В&nbsp;плацкартном&nbsp;людно.&nbsp;Опустошён&nbsp;буфет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span></span>
+<span class="line"><span class="txt"> Все&nbsp;едут&nbsp;к&nbsp;морю.&nbsp;Не&nbsp;только&nbsp;я,&nbsp;о&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#  Hm </span></span>
+<span class="line"><span class="txt"> Все&nbsp;как&nbsp;один,&nbsp;в&nbsp;десятый&nbsp;раз&nbsp;иные.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;впервые.&nbsp;Мне&nbsp;девятнадцать&nbsp;лет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm F# Hm </span></span>
+<span class="line"><span class="txt"> Вагон&nbsp;потрёпанный.&nbsp;Лежанки&nbsp;с&nbsp;перекосами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm </span></span>
+<span class="line"><span class="txt"> Днём&nbsp;кое-как&nbsp;ещё,&nbsp;а&nbsp;ночью&nbsp;-&nbsp;ни&nbsp;воды,&nbsp;ни&nbsp;огня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   D  H7 </span></span>
+<span class="line"><span class="txt"> Локомотив&nbsp;гремит&nbsp;железными&nbsp;колёсами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm </span></span>
+<span class="line"><span class="txt"> И&nbsp;море&nbsp;надвигается&nbsp;из&nbsp;мрака&nbsp;на&nbsp;меня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm F# Hm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2001</span>
-
+<pre><span class="year">2001</span>
 
 </pre>
+
 
                 </div>
         </div>

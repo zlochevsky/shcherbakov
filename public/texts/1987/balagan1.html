@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,46 +433,44 @@ span.c {
 data-key="Em"><span class="txt"> БАЛАГАН&nbsp;I </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;одних&nbsp;садах&nbsp;цветёт&nbsp;миндаль,&nbsp;в&nbsp;других&nbsp;метёт&nbsp;метель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span>
-<span class="txt"> В&nbsp;одних&nbsp;краях&nbsp;ещё&nbsp;февраль,&nbsp;в&nbsp;других&nbsp;-&nbsp;уже&nbsp;апрель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 Em  h c h </span>
-<span class="txt"> Проходит&nbsp;время,&nbsp;вечный&nbsp;счёт:&nbsp;год&nbsp;за&nbsp;год,&nbsp;век&nbsp;за&nbsp;век...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span>
-<span class="txt"> Во&nbsp;всём&nbsp;-&nbsp;его&nbsp;неспешный&nbsp;ход,&nbsp;его&nbsp;кромешный&nbsp;бег.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 A </span>
-<span class="txt"> В&nbsp;году&nbsp;на&nbsp;радость&nbsp;и&nbsp;печаль&nbsp;по&nbsp;двадцать&nbsp;пять&nbsp;недель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> Мне&nbsp;двадцать&nbsp;пять&nbsp;недель&nbsp;февраль,&nbsp;и&nbsp;двадцать&nbsp;пять&nbsp;-&nbsp;апрель.&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> По&nbsp;двадцать&nbsp;пять&nbsp;недель&nbsp;в&nbsp;туман&nbsp;уходит&nbsp;счёт&nbsp;векам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Em G </span>
-<span class="txt"> Летит&nbsp;мой&nbsp;звонкий&nbsp;балаган&nbsp;куда-то&nbsp;к&nbsp;облакам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  Cm H7 </span>
+<span class="line"><span class="txt"> В&nbsp;одних&nbsp;садах&nbsp;цветёт&nbsp;миндаль,&nbsp;в&nbsp;других&nbsp;метёт&nbsp;метель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span></span>
+<span class="line"><span class="txt"> В&nbsp;одних&nbsp;краях&nbsp;ещё&nbsp;февраль,&nbsp;в&nbsp;других&nbsp;-&nbsp;уже&nbsp;апрель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 Em  h c h </span></span>
+<span class="line"><span class="txt"> Проходит&nbsp;время,&nbsp;вечный&nbsp;счёт:&nbsp;год&nbsp;за&nbsp;год,&nbsp;век&nbsp;за&nbsp;век...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span></span>
+<span class="line"><span class="txt"> Во&nbsp;всём&nbsp;-&nbsp;его&nbsp;неспешный&nbsp;ход,&nbsp;его&nbsp;кромешный&nbsp;бег.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 A </span></span>
+<span class="line"><span class="txt"> В&nbsp;году&nbsp;на&nbsp;радость&nbsp;и&nbsp;печаль&nbsp;по&nbsp;двадцать&nbsp;пять&nbsp;недель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> Мне&nbsp;двадцать&nbsp;пять&nbsp;недель&nbsp;февраль,&nbsp;и&nbsp;двадцать&nbsp;пять&nbsp;-&nbsp;апрель.&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> По&nbsp;двадцать&nbsp;пять&nbsp;недель&nbsp;в&nbsp;туман&nbsp;уходит&nbsp;счёт&nbsp;векам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Em G </span></span>
+<span class="line"><span class="txt"> Летит&nbsp;мой&nbsp;звонкий&nbsp;балаган&nbsp;куда-то&nbsp;к&nbsp;облакам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  Cm H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Летит&nbsp;и&nbsp;в&nbsp;холод,&nbsp;и&nbsp;в&nbsp;жару,&nbsp;и&nbsp;в&nbsp;гром,&nbsp;и&nbsp;в&nbsp;тишину.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span>
-<span class="txt"> А&nbsp;я&nbsp;не&nbsp;знаю,&nbsp;как&nbsp;живу,&nbsp;не&nbsp;знаю,&nbsp;чем&nbsp;живу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 Em  h c h </span>
-<span class="txt"> Не&nbsp;понимаю,&nbsp;как&nbsp;творю,&nbsp;не&nbsp;знаю,&nbsp;что&nbsp;творю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span>
-<span class="txt"> Я&nbsp;только&nbsp;знаю,&nbsp;что&nbsp;горю&nbsp;и,&nbsp;видимо,&nbsp;сгорю...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 A </span>
-<span class="txt"> В&nbsp;одних&nbsp;краях&nbsp;-&nbsp;рассветный&nbsp;хлад,&nbsp;в&nbsp;других&nbsp;-&nbsp;закатный&nbsp;чад.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> В&nbsp;одних&nbsp;домах&nbsp;ещё&nbsp;не&nbsp;спят,&nbsp;в&nbsp;других&nbsp;-&nbsp;уже&nbsp;не&nbsp;спят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> То&nbsp;здесь,&nbsp;то&nbsp;там&nbsp;гремит&nbsp;рояль,&nbsp;гудит&nbsp;виолончель...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Em G </span>
-<span class="txt"> И&nbsp;двадцать&nbsp;пять&nbsp;недель&nbsp;февраль,&nbsp;и&nbsp;двадцать&nbsp;пять&nbsp;-&nbsp;апрель.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  Cm H7 </span>
+<span class="line"><span class="txt"> Летит&nbsp;и&nbsp;в&nbsp;холод,&nbsp;и&nbsp;в&nbsp;жару,&nbsp;и&nbsp;в&nbsp;гром,&nbsp;и&nbsp;в&nbsp;тишину.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span></span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;не&nbsp;знаю,&nbsp;как&nbsp;живу,&nbsp;не&nbsp;знаю,&nbsp;чем&nbsp;живу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 Em  h c h </span></span>
+<span class="line"><span class="txt"> Не&nbsp;понимаю,&nbsp;как&nbsp;творю,&nbsp;не&nbsp;знаю,&nbsp;что&nbsp;творю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span></span>
+<span class="line"><span class="txt"> Я&nbsp;только&nbsp;знаю,&nbsp;что&nbsp;горю&nbsp;и,&nbsp;видимо,&nbsp;сгорю...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 A </span></span>
+<span class="line"><span class="txt"> В&nbsp;одних&nbsp;краях&nbsp;-&nbsp;рассветный&nbsp;хлад,&nbsp;в&nbsp;других&nbsp;-&nbsp;закатный&nbsp;чад.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> В&nbsp;одних&nbsp;домах&nbsp;ещё&nbsp;не&nbsp;спят,&nbsp;в&nbsp;других&nbsp;-&nbsp;уже&nbsp;не&nbsp;спят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> То&nbsp;здесь,&nbsp;то&nbsp;там&nbsp;гремит&nbsp;рояль,&nbsp;гудит&nbsp;виолончель...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Em G </span></span>
+<span class="line"><span class="txt"> И&nbsp;двадцать&nbsp;пять&nbsp;недель&nbsp;февраль,&nbsp;и&nbsp;двадцать&nbsp;пять&nbsp;-&nbsp;апрель.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  Cm H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вели&nbsp;мне,&nbsp;Боже,&nbsp;всё&nbsp;стерпеть,&nbsp;но&nbsp;сердцу&nbsp;-&nbsp;не&nbsp;вели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span>
-<span class="txt"> Оно&nbsp;хранит&nbsp;уже&nbsp;теперь&nbsp;все&nbsp;горести&nbsp;Земли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 Em  h c h </span>
-<span class="txt"> И&nbsp;разорваться&nbsp;может&nbsp;враз,&nbsp;и&nbsp;разлететься&nbsp;врозь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span>
-<span class="txt"> Оно&nbsp;уже&nbsp;теперь,&nbsp;сейчас&nbsp;-&nbsp;почти&nbsp;разорвалось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 A </span>
-<span class="txt"> Мой&nbsp;долгий&nbsp;путь,&nbsp;мой&nbsp;дальний&nbsp;дом,&nbsp;великая&nbsp;река&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> моя&nbsp;дорога!..&nbsp;И&nbsp;кругом&nbsp;-&nbsp;одни&nbsp;лишь&nbsp;облака.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> Такая&nbsp;мгла,&nbsp;такая&nbsp;даль,&nbsp;такая&nbsp;карусель...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Em G </span>
-<span class="txt"> И&nbsp;двадцать&nbsp;пять&nbsp;недель&nbsp;февраль,&nbsp;и&nbsp;двадцать&nbsp;пять&nbsp;-&nbsp;апрель.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  Cm H7 </span>
+<span class="line"><span class="txt"> Вели&nbsp;мне,&nbsp;Боже,&nbsp;всё&nbsp;стерпеть,&nbsp;но&nbsp;сердцу&nbsp;-&nbsp;не&nbsp;вели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span></span>
+<span class="line"><span class="txt"> Оно&nbsp;хранит&nbsp;уже&nbsp;теперь&nbsp;все&nbsp;горести&nbsp;Земли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 Em  h c h </span></span>
+<span class="line"><span class="txt"> И&nbsp;разорваться&nbsp;может&nbsp;враз,&nbsp;и&nbsp;разлететься&nbsp;врозь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span></span>
+<span class="line"><span class="txt"> Оно&nbsp;уже&nbsp;теперь,&nbsp;сейчас&nbsp;-&nbsp;почти&nbsp;разорвалось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em D7 A </span></span>
+<span class="line"><span class="txt"> Мой&nbsp;долгий&nbsp;путь,&nbsp;мой&nbsp;дальний&nbsp;дом,&nbsp;великая&nbsp;река&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> моя&nbsp;дорога!..&nbsp;И&nbsp;кругом&nbsp;-&nbsp;одни&nbsp;лишь&nbsp;облака.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> Такая&nbsp;мгла,&nbsp;такая&nbsp;даль,&nbsp;такая&nbsp;карусель...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  Em G </span></span>
+<span class="line"><span class="txt"> И&nbsp;двадцать&nbsp;пять&nbsp;недель&nbsp;февраль,&nbsp;и&nbsp;двадцать&nbsp;пять&nbsp;-&nbsp;апрель.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C  Cm H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;сквозь&nbsp;томительный&nbsp;дурман&nbsp;по&nbsp;зыбким&nbsp;берегам&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span>
-<span class="txt"> Летит&nbsp;мой&nbsp;звонкий&nbsp;балаган&nbsp;куда-то&nbsp;к&nbsp;облакам...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em D7 Am </span>
+<span class="line"><span class="txt"> И&nbsp;сквозь&nbsp;томительный&nbsp;дурман&nbsp;по&nbsp;зыбким&nbsp;берегам&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G  D7 Am </span></span>
+<span class="line"><span class="txt"> Летит&nbsp;мой&nbsp;звонкий&nbsp;балаган&nbsp;куда-то&nbsp;к&nbsp;облакам...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em D7 Am </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1986</span>-<span class="year">1987</span>
-
+<pre><span class="year">1986</span>-<span class="year">1987</span>
 </pre>
+
 
                 </div>
         </div>

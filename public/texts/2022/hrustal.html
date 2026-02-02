@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,81 +423,79 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="F#m"><span class="sng-title">ХРУСТАЛЬ</span>
+data-key="F#m"><h1>ХРУСТАЛЬ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a a x4 </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a a x4 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всё&nbsp;ещё&nbsp;праздника&nbsp;ждёшь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim </span>
-<span class="txt"> Значит,&nbsp;не&nbsp;взрослый.&nbsp;Хоть&nbsp;и&nbsp;похож.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim C#m </span>
-<span class="txt"> Значит,&nbsp;как&nbsp;надлежит,&nbsp;вникни&nbsp;и&nbsp;помни&nbsp;впредь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A(V) C#m A(V) G#m G# </span>
-<span class="txt"> От&nbsp;появленья&nbsp;на&nbsp;свет&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m Fdim </span>
-<span class="txt"> у&nbsp;населенья&nbsp;праздников&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7(II) F#m </span>
-<span class="txt"> Очень&nbsp;оно&nbsp;спешит&nbsp;-&nbsp;чтобы&nbsp;опять&nbsp;успеть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A C#m A(V) C# C#/F </span>
+<span class="line"><span class="txt"> Всё&nbsp;ещё&nbsp;праздника&nbsp;ждёшь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim </span></span>
+<span class="line"><span class="txt"> Значит,&nbsp;не&nbsp;взрослый.&nbsp;Хоть&nbsp;и&nbsp;похож.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim C#m </span></span>
+<span class="line"><span class="txt"> Значит,&nbsp;как&nbsp;надлежит,&nbsp;вникни&nbsp;и&nbsp;помни&nbsp;впредь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A(V) C#m A(V) G#m G# </span></span>
+<span class="line"><span class="txt"> От&nbsp;появленья&nbsp;на&nbsp;свет&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m Fdim </span></span>
+<span class="line"><span class="txt"> у&nbsp;населенья&nbsp;праздников&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7(II) F#m </span></span>
+<span class="line"><span class="txt"> Очень&nbsp;оно&nbsp;спешит&nbsp;-&nbsp;чтобы&nbsp;опять&nbsp;успеть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A C#m A(V) C# C#/F </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Хочет&nbsp;оно&nbsp;создать&nbsp;нечто&nbsp;из&nbsp;ничего.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span>
-<span class="txt"> Но&nbsp;времена&nbsp;опять&nbsp;трудные&nbsp;у&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span>
-<span class="txt"> Мало&nbsp;ему&nbsp;дано.&nbsp;Многого&nbsp;зуб&nbsp;неймёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span>
-<span class="txt"> И&nbsp;потому&nbsp;оно&nbsp;плохо&nbsp;себя&nbsp;ведёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span>
+<span class="line"><span class="txt"> Хочет&nbsp;оно&nbsp;создать&nbsp;нечто&nbsp;из&nbsp;ничего.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span></span>
+<span class="line"><span class="txt"> Но&nbsp;времена&nbsp;опять&nbsp;трудные&nbsp;у&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span></span>
+<span class="line"><span class="txt"> Мало&nbsp;ему&nbsp;дано.&nbsp;Многого&nbsp;зуб&nbsp;неймёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span></span>
+<span class="line"><span class="txt"> И&nbsp;потому&nbsp;оно&nbsp;плохо&nbsp;себя&nbsp;ведёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> С&nbsp;воздуха,&nbsp;из&nbsp;облаков,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim </span>
-<span class="txt"> аэроснимок&nbsp;будет&nbsp;таков.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim C#m </span>
-<span class="txt"> Море,&nbsp;не&nbsp;то&nbsp;река.&nbsp;Берег,&nbsp;тире&nbsp;песок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A(V) C#m A(V) G#m G# </span>
-<span class="txt"> Около&nbsp;самой&nbsp;волны&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m Fdim </span>
-<span class="txt"> вечные&nbsp;дети&nbsp;обречены&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7(II) F#m </span>
-<span class="txt"> выстроить&nbsp;из&nbsp;песка&nbsp;замок,&nbsp;не&nbsp;то&nbsp;чертог.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A C#m A(V) C# C#/F </span>
+<span class="line"><span class="txt"> С&nbsp;воздуха,&nbsp;из&nbsp;облаков,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim </span></span>
+<span class="line"><span class="txt"> аэроснимок&nbsp;будет&nbsp;таков.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim C#m </span></span>
+<span class="line"><span class="txt"> Море,&nbsp;не&nbsp;то&nbsp;река.&nbsp;Берег,&nbsp;тире&nbsp;песок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A(V) C#m A(V) G#m G# </span></span>
+<span class="line"><span class="txt"> Около&nbsp;самой&nbsp;волны&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m Fdim </span></span>
+<span class="line"><span class="txt"> вечные&nbsp;дети&nbsp;обречены&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7(II) F#m </span></span>
+<span class="line"><span class="txt"> выстроить&nbsp;из&nbsp;песка&nbsp;замок,&nbsp;не&nbsp;то&nbsp;чертог.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A C#m A(V) C# C#/F </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;о&nbsp;чем&nbsp;тосковать,&nbsp;выстроил&nbsp;-&nbsp;и&nbsp;владей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span>
-<span class="txt"> Но&nbsp;времена&nbsp;опять&nbsp;трудные&nbsp;у&nbsp;детей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span>
-<span class="txt"> С&nbsp;морем&nbsp;у&nbsp;них&nbsp;вражда.&nbsp;Почву&nbsp;они&nbsp;крадут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span>
-<span class="txt"> И&nbsp;вообще&nbsp;всегда&nbsp;плохо&nbsp;себя&nbsp;ведут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span>
+<span class="line"><span class="txt"> Не&nbsp;о&nbsp;чем&nbsp;тосковать,&nbsp;выстроил&nbsp;-&nbsp;и&nbsp;владей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span></span>
+<span class="line"><span class="txt"> Но&nbsp;времена&nbsp;опять&nbsp;трудные&nbsp;у&nbsp;детей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span></span>
+<span class="line"><span class="txt"> С&nbsp;морем&nbsp;у&nbsp;них&nbsp;вражда.&nbsp;Почву&nbsp;они&nbsp;крадут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span></span>
+<span class="line"><span class="txt"> И&nbsp;вообще&nbsp;всегда&nbsp;плохо&nbsp;себя&nbsp;ведут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> День&nbsp;убывает&nbsp;за&nbsp;днём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim </span>
-<span class="txt"> Небо&nbsp;пылает&nbsp;чёрным&nbsp;огнём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim C#m </span>
-<span class="txt"> Еле&nbsp;гудок&nbsp;отпел&nbsp;-&nbsp;тут&nbsp;же&nbsp;другой&nbsp;завыл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A(V) C#m A(V) G#m G# </span>
-<span class="txt"> Лишь&nbsp;бы&nbsp;хватило&nbsp;песка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m Fdim </span>
-<span class="txt"> Хоть&nbsp;на&nbsp;сегодня,&nbsp;лишь&nbsp;бы&nbsp;пока.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7(II) F#m </span>
-<span class="txt"> Раньше&nbsp;ты&nbsp;так&nbsp;умел.&nbsp;После&nbsp;почти&nbsp;забыл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A C#m A(V) C# C#/F </span>
+<span class="line"><span class="txt"> День&nbsp;убывает&nbsp;за&nbsp;днём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim </span></span>
+<span class="line"><span class="txt"> Небо&nbsp;пылает&nbsp;чёрным&nbsp;огнём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim C#m </span></span>
+<span class="line"><span class="txt"> Еле&nbsp;гудок&nbsp;отпел&nbsp;-&nbsp;тут&nbsp;же&nbsp;другой&nbsp;завыл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A(V) C#m A(V) G#m G# </span></span>
+<span class="line"><span class="txt"> Лишь&nbsp;бы&nbsp;хватило&nbsp;песка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m Fdim </span></span>
+<span class="line"><span class="txt"> Хоть&nbsp;на&nbsp;сегодня,&nbsp;лишь&nbsp;бы&nbsp;пока.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7(II) F#m </span></span>
+<span class="line"><span class="txt"> Раньше&nbsp;ты&nbsp;так&nbsp;умел.&nbsp;После&nbsp;почти&nbsp;забыл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A C#m A(V) C# C#/F </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;не&nbsp;забыл&nbsp;того,&nbsp;как&nbsp;по&nbsp;ничьей&nbsp;вине&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span>
-<span class="txt"> замок&nbsp;из&nbsp;ничего&nbsp;был&nbsp;обречён&nbsp;волне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span>
-<span class="txt"> Как&nbsp;завершал&nbsp;прилив&nbsp;свой&nbsp;ритуальный&nbsp;плеск,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span>
-<span class="txt"> а&nbsp;на&nbsp;песке,&nbsp;остыв,&nbsp;таял&nbsp;зеркальный&nbsp;блеск.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span>
+<span class="line"><span class="txt"> Но&nbsp;не&nbsp;забыл&nbsp;того,&nbsp;как&nbsp;по&nbsp;ничьей&nbsp;вине&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span></span>
+<span class="line"><span class="txt"> замок&nbsp;из&nbsp;ничего&nbsp;был&nbsp;обречён&nbsp;волне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span></span>
+<span class="line"><span class="txt"> Как&nbsp;завершал&nbsp;прилив&nbsp;свой&nbsp;ритуальный&nbsp;плеск,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span></span>
+<span class="line"><span class="txt"> а&nbsp;на&nbsp;песке,&nbsp;остыв,&nbsp;таял&nbsp;зеркальный&nbsp;блеск.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Значит,&nbsp;не&nbsp;напрочь&nbsp;отвык.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim </span>
-<span class="txt"> Всё&nbsp;же&nbsp;не&nbsp;вырос.&nbsp;Хоть&nbsp;и&nbsp;старик.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim C#m </span>
-<span class="txt"> Строить&nbsp;опять&nbsp;не&nbsp;лень&nbsp;крышу&nbsp;и&nbsp;мезонин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A(V) C#m A(V) G#m G# </span>
-<span class="txt"> Лучше&nbsp;ты&nbsp;мимо&nbsp;шагай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m Fdim </span>
-<span class="txt"> Даже&nbsp;не&nbsp;трогай,&nbsp;не&nbsp;помогай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7(II) F#m </span>
-<span class="txt"> Еле&nbsp;закончен&nbsp;день&nbsp;-&nbsp;тут&nbsp;же&nbsp;другой&nbsp;за&nbsp;ним.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A C#m A(V) C# C#/F </span>
+<span class="line"><span class="txt"> Значит,&nbsp;не&nbsp;напрочь&nbsp;отвык.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;же&nbsp;не&nbsp;вырос.&nbsp;Хоть&nbsp;и&nbsp;старик.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m D#dim C#m </span></span>
+<span class="line"><span class="txt"> Строить&nbsp;опять&nbsp;не&nbsp;лень&nbsp;крышу&nbsp;и&nbsp;мезонин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A(V) C#m A(V) G#m G# </span></span>
+<span class="line"><span class="txt"> Лучше&nbsp;ты&nbsp;мимо&nbsp;шагай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m Fdim </span></span>
+<span class="line"><span class="txt"> Даже&nbsp;не&nbsp;трогай,&nbsp;не&nbsp;помогай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7(II) F#m </span></span>
+<span class="line"><span class="txt"> Еле&nbsp;закончен&nbsp;день&nbsp;-&nbsp;тут&nbsp;же&nbsp;другой&nbsp;за&nbsp;ним.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A C#m A(V) C# C#/F </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Утром&nbsp;нельзя&nbsp;проспать.&nbsp;Надо&nbsp;успеть&nbsp;к&nbsp;шести&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span>
-<span class="txt"> и&nbsp;дотемна&nbsp;опять&nbsp;плохо&nbsp;себя&nbsp;вести.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span>
-<span class="txt"> Знаю&nbsp;-&nbsp;беда,&nbsp;тоска.&nbsp;Осатанел,&nbsp;устал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span>
-<span class="txt"> Но&nbsp;не&nbsp;топчи&nbsp;песка.&nbsp;Это&nbsp;почти&nbsp;хрусталь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span>
+<span class="line"><span class="txt"> Утром&nbsp;нельзя&nbsp;проспать.&nbsp;Надо&nbsp;успеть&nbsp;к&nbsp;шести&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span></span>
+<span class="line"><span class="txt"> и&nbsp;дотемна&nbsp;опять&nbsp;плохо&nbsp;себя&nbsp;вести.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span></span>
+<span class="line"><span class="txt"> Знаю&nbsp;-&nbsp;беда,&nbsp;тоска.&nbsp;Осатанел,&nbsp;устал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/f# a c# F#m/f# a c# </span></span>
+<span class="line"><span class="txt"> Но&nbsp;не&nbsp;топчи&nbsp;песка.&nbsp;Это&nbsp;почти&nbsp;хрусталь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/d a a Hm C#7(II) F#m </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">2022</span>
-
+<pre><span class="year">2022</span>
 </pre>
+
 
                 </div>
         </div>

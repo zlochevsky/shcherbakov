@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,66 +423,64 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">ВОЛХОНКА</span>
+data-key="Dm"><h1>ВОЛХОНКА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Душа&nbsp;в&nbsp;ухабах,&nbsp;денег&nbsp;ни&nbsp;гроша,&nbsp;в&nbsp;мозгу&nbsp;помехи&nbsp;и&nbsp;морзянка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span>
-<span class="txt"> А&nbsp;по&nbsp;Волхонке&nbsp;марсианка&nbsp;проходит&nbsp;мимо&nbsp;не&nbsp;спеша.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span>
-<span class="txt"> Её&nbsp;осанка&nbsp;вся&nbsp;как&nbsp;нервный&nbsp;тик,&nbsp;её&nbsp;глаза&nbsp;как&nbsp;две&nbsp;напасти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span>
-<span class="txt"> При&nbsp;ней&nbsp;болонка&nbsp;лунной&nbsp;масти&nbsp;и&nbsp;зонтик&nbsp;цвета&nbsp;электрик.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Танцует-пляшет&nbsp;зонтик&nbsp;за&nbsp;плечом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dm&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Gm/E Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Каблук&nbsp;подбит&nbsp;подковкой&nbsp;звонкой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;тучи&nbsp;реют&nbsp;над&nbsp;Волхонкой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;марсианке&nbsp;нипочём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
+<span class="line"><span class="txt"> Душа&nbsp;в&nbsp;ухабах,&nbsp;денег&nbsp;ни&nbsp;гроша,&nbsp;в&nbsp;мозгу&nbsp;помехи&nbsp;и&nbsp;морзянка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span></span>
+<span class="line"><span class="txt"> А&nbsp;по&nbsp;Волхонке&nbsp;марсианка&nbsp;проходит&nbsp;мимо&nbsp;не&nbsp;спеша.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span></span>
+<span class="line"><span class="txt"> Её&nbsp;осанка&nbsp;вся&nbsp;как&nbsp;нервный&nbsp;тик,&nbsp;её&nbsp;глаза&nbsp;как&nbsp;две&nbsp;напасти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span></span>
+<span class="line"><span class="txt"> При&nbsp;ней&nbsp;болонка&nbsp;лунной&nbsp;масти&nbsp;и&nbsp;зонтик&nbsp;цвета&nbsp;электрик.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Танцует-пляшет&nbsp;зонтик&nbsp;за&nbsp;плечом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dm&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Gm/E Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Каблук&nbsp;подбит&nbsp;подковкой&nbsp;звонкой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;тучи&nbsp;реют&nbsp;над&nbsp;Волхонкой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;марсианке&nbsp;нипочём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Туда,&nbsp;где&nbsp;раньше&nbsp;был&nbsp;бассейн&nbsp;"Москва",&nbsp;она&nbsp;не&nbsp;смотрит&nbsp;и&nbsp;не&nbsp;слышит, </span><span class="ch"> Dm   D7   Gm </span>
-<span class="txt"> как&nbsp;всё&nbsp;вослед&nbsp;ей&nbsp;тяжко&nbsp;дышит.&nbsp;Включая&nbsp;дышащих&nbsp;едва.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span>
-<span class="txt"> Бушует&nbsp;ливень,&nbsp;мокнет&nbsp;стар&nbsp;и&nbsp;млад.&nbsp;С&nbsp;неё&nbsp;одной&nbsp;вода&nbsp;как&nbsp;с&nbsp;гуся.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span>
-<span class="txt"> Пойду&nbsp;в&nbsp;монахи&nbsp;постригуся.&nbsp;Не&nbsp;то&nbsp;влюблюся&nbsp;в&nbsp;этот&nbsp;ад.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;Марсе&nbsp;жизни&nbsp;нет&nbsp;и&nbsp;счастья&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dm&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Gm/E Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;если&nbsp;есть&nbsp;покой&nbsp;и&nbsp;воля,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;то&nbsp;для&nbsp;чего&nbsp;я,&nbsp;чуть&nbsp;не&nbsp;воя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;таращусь&nbsp;тоже&nbsp;ей&nbsp;вослед?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
+<span class="line"><span class="txt"> Туда,&nbsp;где&nbsp;раньше&nbsp;был&nbsp;бассейн&nbsp;"Москва",&nbsp;она&nbsp;не&nbsp;смотрит&nbsp;и&nbsp;не&nbsp;слышит, </span><span class="ch"> Dm   D7   Gm </span></span>
+<span class="line"><span class="txt"> как&nbsp;всё&nbsp;вослед&nbsp;ей&nbsp;тяжко&nbsp;дышит.&nbsp;Включая&nbsp;дышащих&nbsp;едва.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span></span>
+<span class="line"><span class="txt"> Бушует&nbsp;ливень,&nbsp;мокнет&nbsp;стар&nbsp;и&nbsp;млад.&nbsp;С&nbsp;неё&nbsp;одной&nbsp;вода&nbsp;как&nbsp;с&nbsp;гуся.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span></span>
+<span class="line"><span class="txt"> Пойду&nbsp;в&nbsp;монахи&nbsp;постригуся.&nbsp;Не&nbsp;то&nbsp;влюблюся&nbsp;в&nbsp;этот&nbsp;ад.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;Марсе&nbsp;жизни&nbsp;нет&nbsp;и&nbsp;счастья&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dm&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Gm/E Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;если&nbsp;есть&nbsp;покой&nbsp;и&nbsp;воля,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;то&nbsp;для&nbsp;чего&nbsp;я,&nbsp;чуть&nbsp;не&nbsp;воя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;таращусь&nbsp;тоже&nbsp;ей&nbsp;вослед?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
 <span class="txt">  </span>
-<span class="txt"> Махнуть&nbsp;бы&nbsp;двести,&nbsp;крылья&nbsp;обрести&nbsp;и&nbsp;полететь&nbsp;за&nbsp;ней,&nbsp;курлыча.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span>
-<span class="txt"> Спасти&nbsp;себя&nbsp;от&nbsp;паралича,&nbsp;неотвратимого&nbsp;почти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span>
-<span class="txt"> Но&nbsp;ни&nbsp;гроша,&nbsp;ни&nbsp;спирта,&nbsp;вот&nbsp;беда.&nbsp;И&nbsp;как&nbsp;взлетишь,&nbsp;когда&nbsp;не&nbsp;птица?&nbsp; </span><span class="ch"> Dm   D7   Gm </span>
-<span class="txt"> Пойти&nbsp;в&nbsp;бассейне&nbsp;утопиться?&nbsp;Так&nbsp;он&nbsp;закопан&nbsp;навсегда!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Сидел&nbsp;бы&nbsp;дома,&nbsp;ел&nbsp;бы&nbsp;свой&nbsp;творог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dm&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Gm/E Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;с&nbsp;самим&nbsp;собой&nbsp;играл&nbsp;бы&nbsp;в&nbsp;нарды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;дёрнул&nbsp;чёрт&nbsp;за&nbsp;бакенбарды&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;на&nbsp;Волхонку&nbsp;отволок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> Зачем&nbsp;не&nbsp;форвард&nbsp;я&nbsp;из&nbsp;ЦСКА?&nbsp;Зачем&nbsp;родился&nbsp;не&nbsp;в&nbsp;Гонконге?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span>
-<span class="txt"> Идёт&nbsp;вакханка&nbsp;по&nbsp;Волхонке.&nbsp;Уже&nbsp;Остоженка&nbsp;близка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span>
-<span class="txt"> Вон&nbsp;Юго-Запад&nbsp;с&nbsp;горки&nbsp;подмигнул,&nbsp;Gaudeamus,&nbsp;alma&nbsp;mater,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span>
-<span class="txt"> где&nbsp;столько&nbsp;раз,&nbsp;ища&nbsp;фарватер,&nbsp;я&nbsp;заблуждался&nbsp;и&nbsp;тонул...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;каблучок&nbsp;подковкой&nbsp;-&nbsp;звяк-звяк-звяк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dm&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Gm/E Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Волхонка&nbsp;в&nbsp;двух&nbsp;вершках&nbsp;от&nbsp;ада.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Болонка&nbsp;держится&nbsp;как&nbsp;надо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;марсианка&nbsp;ещё&nbsp;как!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
+<span class="line"><span class="txt"> Махнуть&nbsp;бы&nbsp;двести,&nbsp;крылья&nbsp;обрести&nbsp;и&nbsp;полететь&nbsp;за&nbsp;ней,&nbsp;курлыча.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span></span>
+<span class="line"><span class="txt"> Спасти&nbsp;себя&nbsp;от&nbsp;паралича,&nbsp;неотвратимого&nbsp;почти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span></span>
+<span class="line"><span class="txt"> Но&nbsp;ни&nbsp;гроша,&nbsp;ни&nbsp;спирта,&nbsp;вот&nbsp;беда.&nbsp;И&nbsp;как&nbsp;взлетишь,&nbsp;когда&nbsp;не&nbsp;птица?&nbsp; </span><span class="ch"> Dm   D7   Gm </span></span>
+<span class="line"><span class="txt"> Пойти&nbsp;в&nbsp;бассейне&nbsp;утопиться?&nbsp;Так&nbsp;он&nbsp;закопан&nbsp;навсегда!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Сидел&nbsp;бы&nbsp;дома,&nbsp;ел&nbsp;бы&nbsp;свой&nbsp;творог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dm&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Gm/E Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;с&nbsp;самим&nbsp;собой&nbsp;играл&nbsp;бы&nbsp;в&nbsp;нарды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;дёрнул&nbsp;чёрт&nbsp;за&nbsp;бакенбарды&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;на&nbsp;Волхонку&nbsp;отволок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Одна&nbsp;надежда,&nbsp;что&nbsp;вот-вот&nbsp;с&nbsp;высот,&nbsp;разрезав&nbsp;чёрный&nbsp;свод&nbsp;небесный,&nbsp; </span><span class="ch"> Dm   D7   Gm </span>
-<span class="txt"> в&nbsp;неё&nbsp;ударит&nbsp;свет&nbsp;отвесный.&nbsp;И&nbsp;содрогнётся&nbsp;чёрный&nbsp;свод.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span>
-<span class="txt"> Вот-вот.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
+<span class="line"><span class="txt"> Зачем&nbsp;не&nbsp;форвард&nbsp;я&nbsp;из&nbsp;ЦСКА?&nbsp;Зачем&nbsp;родился&nbsp;не&nbsp;в&nbsp;Гонконге?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span></span>
+<span class="line"><span class="txt"> Идёт&nbsp;вакханка&nbsp;по&nbsp;Волхонке.&nbsp;Уже&nbsp;Остоженка&nbsp;близка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span></span>
+<span class="line"><span class="txt"> Вон&nbsp;Юго-Запад&nbsp;с&nbsp;горки&nbsp;подмигнул,&nbsp;Gaudeamus,&nbsp;alma&nbsp;mater,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   D7   Gm </span></span>
+<span class="line"><span class="txt"> где&nbsp;столько&nbsp;раз,&nbsp;ища&nbsp;фарватер,&nbsp;я&nbsp;заблуждался&nbsp;и&nbsp;тонул...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;каблучок&nbsp;подковкой&nbsp;-&nbsp;звяк-звяк-звяк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dm&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    Gm/E Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Волхонка&nbsp;в&nbsp;двух&nbsp;вершках&nbsp;от&nbsp;ада.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Болонка&nbsp;держится&nbsp;как&nbsp;надо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;марсианка&nbsp;ещё&nbsp;как!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
 <span class="txt">  </span>
  <br />
-
+<span class="line"><span class="txt"> Одна&nbsp;надежда,&nbsp;что&nbsp;вот-вот&nbsp;с&nbsp;высот,&nbsp;разрезав&nbsp;чёрный&nbsp;свод&nbsp;небесный,&nbsp; </span><span class="ch"> Dm   D7   Gm </span></span>
+<span class="line"><span class="txt"> в&nbsp;неё&nbsp;ударит&nbsp;свет&nbsp;отвесный.&nbsp;И&nbsp;содрогнётся&nbsp;чёрный&nbsp;свод.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/E Dm   A7 </span></span>
+<span class="line"><span class="txt"> Вот-вот.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="txt">  </span>
+ <br />
 </div>
-<pre>
-    <span class="year">2001</span>
-
+<pre><span class="year">2001</span>
 </pre>
+
 
                 </div>
         </div>

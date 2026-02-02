@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,30 +423,30 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="D"><span class="sng-title">Скрипач и конка</span>
+data-key="D"><h1>Скрипач и конка</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Когда&nbsp;не&nbsp;долг&nbsp;бы&nbsp;владеть&nbsp;собою,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D B7 D B7 D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;я&nbsp;выл&nbsp;как&nbsp;волк&nbsp;бы.&nbsp;Но&nbsp;я&nbsp;не&nbsp;вою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Dm A7 D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Собой&nbsp;владею.&nbsp;Даже&nbsp;не&nbsp;лаю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D B7 D B7 D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Хоть&nbsp;и&nbsp;умею,&nbsp;да&nbsp;не&nbsp;желаю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Dm A7 Dm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Когда&nbsp;не&nbsp;долг&nbsp;бы&nbsp;владеть&nbsp;собою,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D B7 D B7 D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;я&nbsp;выл&nbsp;как&nbsp;волк&nbsp;бы.&nbsp;Но&nbsp;я&nbsp;не&nbsp;вою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Dm A7 D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Собой&nbsp;владею.&nbsp;Даже&nbsp;не&nbsp;лаю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D B7 D B7 D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Хоть&nbsp;и&nbsp;умею,&nbsp;да&nbsp;не&nbsp;желаю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Dm A7 Dm </span></span>
 <span class="txt">  </span>
-<span class="txt"> Допустим,&nbsp;осень.&nbsp;Век&nbsp;девятнадцатый&nbsp;кончается,&nbsp;кряхтя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span>
-<span class="txt"> Во&nbsp;вторник,&nbsp;в&nbsp;восемь&nbsp;-&nbsp;проспект&nbsp;шумит&nbsp;как&nbsp;неразумное&nbsp;дитя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7 Dm </span>
-<span class="txt"> И&nbsp;некий&nbsp;некто,&nbsp;достатка&nbsp;явно&nbsp;небольшого&nbsp;господин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Cm/A D7 Cm/A D7/F# Gm </span>
-<span class="txt"> в&nbsp;конце&nbsp;проспекта&nbsp;сидит&nbsp;со&nbsp;скрипкой&nbsp;на&nbsp;скамейке,&nbsp;сам&nbsp;один.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7 D </span>
+<span class="line"><span class="txt"> Допустим,&nbsp;осень.&nbsp;Век&nbsp;девятнадцатый&nbsp;кончается,&nbsp;кряхтя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span></span>
+<span class="line"><span class="txt"> Во&nbsp;вторник,&nbsp;в&nbsp;восемь&nbsp;-&nbsp;проспект&nbsp;шумит&nbsp;как&nbsp;неразумное&nbsp;дитя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7 Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;некий&nbsp;некто,&nbsp;достатка&nbsp;явно&nbsp;небольшого&nbsp;господин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Cm/A D7 Cm/A D7/F# Gm </span></span>
+<span class="line"><span class="txt"> в&nbsp;конце&nbsp;проспекта&nbsp;сидит&nbsp;со&nbsp;скрипкой&nbsp;на&nbsp;скамейке,&nbsp;сам&nbsp;один.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7 D </span></span>
 <span class="txt">  </span>
-<span class="txt"> Напряг&nbsp;он&nbsp;руки,&nbsp;но&nbsp;не&nbsp;играет, </span>
-<span class="txt"> а&nbsp;словно&nbsp;звуки&nbsp;перебирает. </span>
-<span class="txt"> Одет&nbsp;не&nbsp;очень,&nbsp;скорей&nbsp;по&nbsp;лету. </span>
-<span class="txt"> Но&nbsp;шляпы,&nbsp;впрочем,&nbsp;с&nbsp;ним&nbsp;рядом&nbsp;нету. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Напряг&nbsp;он&nbsp;руки,&nbsp;но&nbsp;не&nbsp;играет, </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;словно&nbsp;звуки&nbsp;перебирает. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Одет&nbsp;не&nbsp;очень,&nbsp;скорей&nbsp;по&nbsp;лету. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;шляпы,&nbsp;впрочем,&nbsp;с&nbsp;ним&nbsp;рядом&nbsp;нету. </span>
 <span class="txt">  </span>
 <span class="txt"> Меж&nbsp;тем&nbsp;всё&nbsp;туже&nbsp;сжимает&nbsp;сумрак&nbsp;не&nbsp;дожатое&nbsp;к&nbsp;восьми. </span>
 <span class="txt"> И&nbsp;рельсы&nbsp;тут&nbsp;же.&nbsp;Но&nbsp;не&nbsp;трамвай&nbsp;по&nbsp;ним,&nbsp;а&nbsp;конка&nbsp;с&nbsp;лошадьми. </span>
@@ -446,10 +454,10 @@ data-key="D"><span class="sng-title">Скрипач и конка</span>
 <span class="txt"> И&nbsp;вдруг&nbsp;-&nbsp;виденье&nbsp;сигналит&nbsp;веером&nbsp;из&nbsp;сумрака&nbsp;ему. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;кудрях&nbsp;заколка.&nbsp;Запястья&nbsp;тонки. </span>
-<span class="txt"> То&nbsp;-&nbsp;незнакомка&nbsp;в&nbsp;окошке&nbsp;конки. </span>
-<span class="txt"> Глядит&nbsp;кокетка&nbsp;туда,&nbsp;где&nbsp;скрипка. </span>
-<span class="txt"> И,&nbsp;как&nbsp;монетка,&nbsp;летит&nbsp;улыбка. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;кудрях&nbsp;заколка.&nbsp;Запястья&nbsp;тонки. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;То&nbsp;-&nbsp;незнакомка&nbsp;в&nbsp;окошке&nbsp;конки. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Глядит&nbsp;кокетка&nbsp;туда,&nbsp;где&nbsp;скрипка. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И,&nbsp;как&nbsp;монетка,&nbsp;летит&nbsp;улыбка. </span>
 <span class="txt">  </span>
 <span class="txt"> И&nbsp;чуть&nbsp;не&nbsp;плача&nbsp;бедняк&nbsp;бежит&nbsp;за&nbsp;незнакомкой&nbsp;завитой: </span>
 <span class="txt"> а&nbsp;вдруг&nbsp;удача?&nbsp;А&nbsp;вдруг&nbsp;тот&nbsp;самый&nbsp;неразменный&nbsp;золотой?.. </span>
@@ -457,38 +465,32 @@ data-key="D"><span class="sng-title">Скрипач и конка</span>
 <span class="txt"> на&nbsp;этот&nbsp;медный,&nbsp;на&nbsp;виды&nbsp;видевший&nbsp;зелёный&nbsp;этот&nbsp;грош? </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Признать&nbsp;фиаско.&nbsp;В&nbsp;чулан&nbsp;забиться. </span>
-<span class="txt"> Поскольку&nbsp;сказка&nbsp;не&nbsp;может&nbsp;сбыться. </span>
-<span class="txt"> Но&nbsp;сердце&nbsp;тает,&nbsp;сомненье&nbsp;гложет: </span>
-<span class="txt"> никто&nbsp;ж&nbsp;не&nbsp;знает,&nbsp;может&nbsp;и&nbsp;может... </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Признать&nbsp;фиаско.&nbsp;В&nbsp;чулан&nbsp;забиться. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Поскольку&nbsp;сказка&nbsp;не&nbsp;может&nbsp;сбыться. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;сердце&nbsp;тает,&nbsp;сомненье&nbsp;гложет: </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;никто&nbsp;ж&nbsp;не&nbsp;знает,&nbsp;может&nbsp;и&nbsp;может... </span>
 <span class="txt">  </span>
 <span class="txt"> Какая&nbsp;мука!&nbsp;Бывало,&nbsp;счастию&nbsp;кричишь:&nbsp;останься,&nbsp;эй! </span>
 <span class="txt"> В&nbsp;ответ&nbsp;ни&nbsp;звука.&nbsp;И&nbsp;только&nbsp;искры&nbsp;от&nbsp;залётных&nbsp;лошадей. </span>
 <span class="txt"> Вдогонку&nbsp;мямлишь:&nbsp;при&nbsp;чём&nbsp;тут&nbsp;веер,&nbsp;дескать,&nbsp;осень&nbsp;на&nbsp;дворе! </span>
 <span class="txt"> А&nbsp;сам&nbsp;-&nbsp;упрям&nbsp;лишь.&nbsp;Но&nbsp;неудачлив&nbsp;и&nbsp;одет&nbsp;не&nbsp;по&nbsp;поре. </span>
 <span class="txt">  </span>
-<span class="txt"> Заснул&nbsp;богато.&nbsp;Очнулся&nbsp;бедно. </span>
-<span class="txt"> Былое&nbsp;злато&nbsp;померкло&nbsp;медно. </span>
-<span class="txt"> Удач&nbsp;не&nbsp;стало.&nbsp;Гроши,&nbsp;алтыны. </span>
-<span class="txt"> Была&nbsp;мечта-а&nbsp;-&nbsp;и&nbsp;нет&nbsp;мечты-ы. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Заснул&nbsp;богато.&nbsp;Очнулся&nbsp;бедно. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Былое&nbsp;злато&nbsp;померкло&nbsp;медно. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Удач&nbsp;не&nbsp;стало.&nbsp;Гроши,&nbsp;алтыны. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Была&nbsp;мечта-а&nbsp;-&nbsp;и&nbsp;нет&nbsp;мечты-ы. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Какая&nbsp;мука!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7 Dm </span>
-<span class="txt"> Но&nbsp;сердце&nbsp;тает&nbsp;-&nbsp;и,&nbsp;с&nbsp;кем&nbsp;неведомо&nbsp;печалями&nbsp;делясь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Cm D7 Cm/A D7/F# Gm </span>
-<span class="txt"> скрипач&nbsp;играет.&nbsp;Виденья&nbsp;схлынули,&nbsp;музыка&nbsp;удалась.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7 D </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Какая&nbsp;мука!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7 Dm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;сердце&nbsp;тает&nbsp;-&nbsp;и,&nbsp;с&nbsp;кем&nbsp;неведомо&nbsp;печалями&nbsp;делясь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Cm D7 Cm/A D7/F# Gm </span></span>
+<span class="line"><span class="txt"> скрипач&nbsp;играет.&nbsp;Виденья&nbsp;схлынули,&nbsp;музыка&nbsp;удалась.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7 D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D B7 D B7 D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm A7 D </span>
- <br />
- <br />
- <br />
- <br />
-
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D B7 D B7 D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm A7 D </span></span>
 </div>
 <pre>
-    
 <span class="year">2005</span>                                                          Нотировка по исполнению <span class="year">2012</span> года.
  Cm/A
     I
@@ -501,8 +503,8 @@ x|---|
 
 
 
-
 </pre>
+
 
                 </div>
         </div>

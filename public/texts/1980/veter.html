@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,34 +433,31 @@ span.c {
 data-key="Am"><span class="txt"> ВЕТЕР </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ковыляет&nbsp;по&nbsp;курганам&nbsp;колымага&nbsp;за&nbsp;конём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm    E7   Am </span>
-<span class="txt"> Это&nbsp;я&nbsp;и&nbsp;Себастьяно&nbsp;ящик&nbsp;золота&nbsp;везём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span>
-<span class="txt"> Заунывно&nbsp;ветер&nbsp;свищет,&nbsp;в&nbsp;трубке&nbsp;тлеет&nbsp;уголёк,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span>
-<span class="txt"> веселей&nbsp;смотри,&nbsp;дружище,&nbsp;путь&nbsp;неблизок,&nbsp;кров&nbsp;далёк...&nbsp; </span><span class="ch"> Am   F     C    Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E7    Am   E7   Am </span>
-<span class="txt"> Ковыляют&nbsp;по&nbsp;курганам&nbsp;двое&nbsp;путников&nbsp;пешком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm    E7   Am </span>
-<span class="txt"> Это&nbsp;я&nbsp;и&nbsp;Себастьяно&nbsp;ящик&nbsp;золота&nbsp;несём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span>
-<span class="txt"> Мы&nbsp;лошадку&nbsp;схоронили,&nbsp;колымагу&nbsp;мы&nbsp;сожгли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span>
-<span class="txt"> шестьдесят&nbsp;четыре&nbsp;мили&nbsp;до&nbsp;жилья&nbsp;мы&nbsp;не&nbsp;дошли...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F     C    Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E7    Am   E7   Am </span>
-<span class="txt"> Ковыляет&nbsp;по&nbsp;курганам&nbsp;путник&nbsp;с&nbsp;грузом&nbsp;на&nbsp;весу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm    E7   Am </span>
-<span class="txt"> Это&nbsp;я&nbsp;без&nbsp;Себастьяно&nbsp;ящик&nbsp;золота&nbsp;несу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span>
-<span class="txt"> Себастьяно&nbsp;из&nbsp;оврага&nbsp;просто&nbsp;выбраться&nbsp;не&nbsp;смог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span>
-<span class="txt"> а&nbsp;моих&nbsp;следов&nbsp;зигзаги&nbsp;заметает&nbsp;ветерок...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F     C    Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E7    Am   E7   Am </span>
-<span class="txt"> Ветер&nbsp;горький,&nbsp;запах&nbsp;пресный,&nbsp;солнце&nbsp;пыльное&nbsp;дрожит,&nbsp;&nbsp; </span><span class="ch"> Am   Dm    E7   Am </span>
-<span class="txt"> а&nbsp;среди&nbsp;каньонов&nbsp;тесных&nbsp;ящик&nbsp;золота&nbsp;лежит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span>
-<span class="txt"> А&nbsp;моих&nbsp;и&nbsp;Себастьяно&nbsp;вам&nbsp;костей&nbsp;не&nbsp;отыскать,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span>
-<span class="txt"> наши&nbsp;души&nbsp;по&nbsp;курганам&nbsp;будут&nbsp;вечно&nbsp;ковылять...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F     C    Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E7    Am   E7   Am </span>
- <br />
-
+<span class="line"><span class="txt"> Ковыляет&nbsp;по&nbsp;курганам&nbsp;колымага&nbsp;за&nbsp;конём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm    E7   Am </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я&nbsp;и&nbsp;Себастьяно&nbsp;ящик&nbsp;золота&nbsp;везём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span></span>
+<span class="line"><span class="txt"> Заунывно&nbsp;ветер&nbsp;свищет,&nbsp;в&nbsp;трубке&nbsp;тлеет&nbsp;уголёк,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span></span>
+<span class="line"><span class="txt"> веселей&nbsp;смотри,&nbsp;дружище,&nbsp;путь&nbsp;неблизок,&nbsp;кров&nbsp;далёк...&nbsp; </span><span class="ch"> Am   F     C    Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E7    Am   E7   Am </span></span>
+<span class="line"><span class="txt"> Ковыляют&nbsp;по&nbsp;курганам&nbsp;двое&nbsp;путников&nbsp;пешком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm    E7   Am </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я&nbsp;и&nbsp;Себастьяно&nbsp;ящик&nbsp;золота&nbsp;несём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;лошадку&nbsp;схоронили,&nbsp;колымагу&nbsp;мы&nbsp;сожгли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span></span>
+<span class="line"><span class="txt"> шестьдесят&nbsp;четыре&nbsp;мили&nbsp;до&nbsp;жилья&nbsp;мы&nbsp;не&nbsp;дошли...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F     C    Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E7    Am   E7   Am </span></span>
+<span class="line"><span class="txt"> Ковыляет&nbsp;по&nbsp;курганам&nbsp;путник&nbsp;с&nbsp;грузом&nbsp;на&nbsp;весу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm    E7   Am </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я&nbsp;без&nbsp;Себастьяно&nbsp;ящик&nbsp;золота&nbsp;несу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span></span>
+<span class="line"><span class="txt"> Себастьяно&nbsp;из&nbsp;оврага&nbsp;просто&nbsp;выбраться&nbsp;не&nbsp;смог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span></span>
+<span class="line"><span class="txt"> а&nbsp;моих&nbsp;следов&nbsp;зигзаги&nbsp;заметает&nbsp;ветерок...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F     C    Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E7    Am   E7   Am </span></span>
+<span class="line"><span class="txt"> Ветер&nbsp;горький,&nbsp;запах&nbsp;пресный,&nbsp;солнце&nbsp;пыльное&nbsp;дрожит,&nbsp;&nbsp; </span><span class="ch"> Am   Dm    E7   Am </span></span>
+<span class="line"><span class="txt"> а&nbsp;среди&nbsp;каньонов&nbsp;тесных&nbsp;ящик&nbsp;золота&nbsp;лежит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span></span>
+<span class="line"><span class="txt"> А&nbsp;моих&nbsp;и&nbsp;Себастьяно&nbsp;вам&nbsp;костей&nbsp;не&nbsp;отыскать,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    F     C    Dm </span></span>
+<span class="line"><span class="txt"> наши&nbsp;души&nbsp;по&nbsp;курганам&nbsp;будут&nbsp;вечно&nbsp;ковылять...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F     C    Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E7    Am   E7   Am </span></span>
 </div>
-<pre>
-    <<span class="year">1980</span>>
-
+<pre><<span class="year">1980</span>>
 
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,68 +423,66 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">ДОРОГА</span>
+data-key="Em"><h1>ДОРОГА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Далёко&nbsp;до&nbsp;срока,&nbsp;до&nbsp;края&nbsp;далёко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span>
-<span class="txt"> Налево&nbsp;-&nbsp;дорога,&nbsp;направо&nbsp;-&nbsp;дорога.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 </span>
-<span class="txt"> Чего&nbsp;ж&nbsp;ты&nbsp;хлопочешь,&nbsp;страдаешь,&nbsp;рыдаешь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am6 Em </span>
-<span class="txt"> Иди&nbsp;куда&nbsp;хочешь&nbsp;и&nbsp;делай&nbsp;как&nbsp;знаешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span>
-<span class="txt"> Налево&nbsp;-&nbsp;посевы,&nbsp;направо&nbsp;-&nbsp;дубрава.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am E7 </span>
-<span class="txt"> Иди&nbsp;себе&nbsp;влево,&nbsp;ступай&nbsp;себе&nbsp;вправо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 Am </span>
-<span class="txt"> Гляди,&nbsp;куда&nbsp;люди,&nbsp;и&nbsp;двигай&nbsp;туда&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm Am </span>
-<span class="txt"> Всевышний&nbsp;рассудит...&nbsp;А&nbsp;я&nbsp;пойду&nbsp;дальше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
+<span class="line"><span class="txt"> Далёко&nbsp;до&nbsp;срока,&nbsp;до&nbsp;края&nbsp;далёко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span></span>
+<span class="line"><span class="txt"> Налево&nbsp;-&nbsp;дорога,&nbsp;направо&nbsp;-&nbsp;дорога.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 </span></span>
+<span class="line"><span class="txt"> Чего&nbsp;ж&nbsp;ты&nbsp;хлопочешь,&nbsp;страдаешь,&nbsp;рыдаешь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am6 Em </span></span>
+<span class="line"><span class="txt"> Иди&nbsp;куда&nbsp;хочешь&nbsp;и&nbsp;делай&nbsp;как&nbsp;знаешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span></span>
+<span class="line"><span class="txt"> Налево&nbsp;-&nbsp;посевы,&nbsp;направо&nbsp;-&nbsp;дубрава.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am E7 </span></span>
+<span class="line"><span class="txt"> Иди&nbsp;себе&nbsp;влево,&nbsp;ступай&nbsp;себе&nbsp;вправо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 Am </span></span>
+<span class="line"><span class="txt"> Гляди,&nbsp;куда&nbsp;люди,&nbsp;и&nbsp;двигай&nbsp;туда&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm Am </span></span>
+<span class="line"><span class="txt"> Всевышний&nbsp;рассудит...&nbsp;А&nbsp;я&nbsp;пойду&nbsp;дальше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;я&nbsp;пойду&nbsp;прямо,&nbsp;ни&nbsp;влево,&nbsp;ни&nbsp;вправо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span>
-<span class="txt"> Налево&nbsp;всё&nbsp;-&nbsp;яма,&nbsp;направо&nbsp;-&nbsp;канава.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 </span>
-<span class="txt"> Кати&nbsp;в&nbsp;свою&nbsp;яму,&nbsp;лети&nbsp;к&nbsp;своей&nbsp;Даше,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am6 Em </span>
-<span class="txt"> крути&nbsp;свою&nbsp;драму...&nbsp;А&nbsp;я&nbsp;пойду&nbsp;дальше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span>
-<span class="txt"> А&nbsp;дальше&nbsp;всё&nbsp;-&nbsp;ветры,&nbsp;обвалы,&nbsp;откосы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am E7 </span>
-<span class="txt"> и&nbsp;снова&nbsp;ответы,&nbsp;и&nbsp;снова&nbsp;вопросы:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 Am </span>
-<span class="txt"> о&nbsp;боли&nbsp;и&nbsp;страсти,&nbsp;о&nbsp;тьме&nbsp;и&nbsp;о&nbsp;свете,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm Am </span>
-<span class="txt"> о&nbsp;горе&nbsp;и&nbsp;счастье,&nbsp;о&nbsp;жизни&nbsp;и&nbsp;смерти...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;пойду&nbsp;прямо,&nbsp;ни&nbsp;влево,&nbsp;ни&nbsp;вправо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span></span>
+<span class="line"><span class="txt"> Налево&nbsp;всё&nbsp;-&nbsp;яма,&nbsp;направо&nbsp;-&nbsp;канава.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 </span></span>
+<span class="line"><span class="txt"> Кати&nbsp;в&nbsp;свою&nbsp;яму,&nbsp;лети&nbsp;к&nbsp;своей&nbsp;Даше,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am6 Em </span></span>
+<span class="line"><span class="txt"> крути&nbsp;свою&nbsp;драму...&nbsp;А&nbsp;я&nbsp;пойду&nbsp;дальше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;дальше&nbsp;всё&nbsp;-&nbsp;ветры,&nbsp;обвалы,&nbsp;откосы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am E7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;снова&nbsp;ответы,&nbsp;и&nbsp;снова&nbsp;вопросы:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 Am </span></span>
+<span class="line"><span class="txt"> о&nbsp;боли&nbsp;и&nbsp;страсти,&nbsp;о&nbsp;тьме&nbsp;и&nbsp;о&nbsp;свете,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm Am </span></span>
+<span class="line"><span class="txt"> о&nbsp;горе&nbsp;и&nbsp;счастье,&nbsp;о&nbsp;жизни&nbsp;и&nbsp;смерти...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;слева&nbsp;и&nbsp;справа,&nbsp;в&nbsp;канаве&nbsp;и&nbsp;в&nbsp;яме,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span>
-<span class="txt"> и&nbsp;деньги,&nbsp;и&nbsp;слава,&nbsp;и&nbsp;счастье&nbsp;горстями,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 </span>
-<span class="txt"> полы&nbsp;пахнут&nbsp;краской,&nbsp;а&nbsp;потолки&nbsp;-&nbsp;мелом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am6 Em </span>
-<span class="txt"> и&nbsp;песня,&nbsp;и&nbsp;сказка,&nbsp;и&nbsp;женщина&nbsp;в&nbsp;белом...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span>
-<span class="txt"> Тебе&nbsp;меня&nbsp;жалко?&nbsp;Так&nbsp;мне&nbsp;ещё&nbsp;жальше!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am E7 </span>
-<span class="txt"> Но,&nbsp;шатко&nbsp;и&nbsp;валко,&nbsp;а&nbsp;я&nbsp;пойду&nbsp;дальше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 Am </span>
-<span class="txt"> И&nbsp;зависть&nbsp;не&nbsp;гложет,&nbsp;и&nbsp;нет&nbsp;во&nbsp;мне&nbsp;злости.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm Am </span>
-<span class="txt"> Я&nbsp;даже,&nbsp;быть&nbsp;может,&nbsp;зайду&nbsp;к&nbsp;тебе&nbsp;в&nbsp;гости.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
+<span class="line"><span class="txt"> А&nbsp;слева&nbsp;и&nbsp;справа,&nbsp;в&nbsp;канаве&nbsp;и&nbsp;в&nbsp;яме,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;деньги,&nbsp;и&nbsp;слава,&nbsp;и&nbsp;счастье&nbsp;горстями,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 </span></span>
+<span class="line"><span class="txt"> полы&nbsp;пахнут&nbsp;краской,&nbsp;а&nbsp;потолки&nbsp;-&nbsp;мелом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am6 Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;песня,&nbsp;и&nbsp;сказка,&nbsp;и&nbsp;женщина&nbsp;в&nbsp;белом...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span></span>
+<span class="line"><span class="txt"> Тебе&nbsp;меня&nbsp;жалко?&nbsp;Так&nbsp;мне&nbsp;ещё&nbsp;жальше!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am E7 </span></span>
+<span class="line"><span class="txt"> Но,&nbsp;шатко&nbsp;и&nbsp;валко,&nbsp;а&nbsp;я&nbsp;пойду&nbsp;дальше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;зависть&nbsp;не&nbsp;гложет,&nbsp;и&nbsp;нет&nbsp;во&nbsp;мне&nbsp;злости.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm Am </span></span>
+<span class="line"><span class="txt"> Я&nbsp;даже,&nbsp;быть&nbsp;может,&nbsp;зайду&nbsp;к&nbsp;тебе&nbsp;в&nbsp;гости.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Зайду&nbsp;не&nbsp;за&nbsp;делом,&nbsp;и&nbsp;мы&nbsp;поскучаем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span>
-<span class="txt"> и&nbsp;женщина&nbsp;в&nbsp;белом&nbsp;одарит&nbsp;нас&nbsp;чаем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 </span>
-<span class="txt"> мы&nbsp;трубки&nbsp;раскурим,&nbsp;отведаем&nbsp;снеди&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am6 Em </span>
-<span class="txt"> и&nbsp;всласть&nbsp;потолкуем&nbsp;о&nbsp;жизни&nbsp;и&nbsp;смерти...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span>
-<span class="txt"> А&nbsp;утром,&nbsp;чуть&nbsp;выйдешь,&nbsp;чуть&nbsp;выглянешь&nbsp;даже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am E7 </span>
-<span class="txt"> в&nbsp;тумане&nbsp;увидишь,&nbsp;как&nbsp;я&nbsp;иду&nbsp;дальше,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 Am </span>
-<span class="txt"> походкою&nbsp;твердой&nbsp;шагаю&nbsp;по&nbsp;хляби,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm Am </span>
-<span class="txt"> и&nbsp;весь&nbsp;такой&nbsp;гордый,&nbsp;и&nbsp;весь&nbsp;такой&nbsp;в&nbsp;шляпе...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
+<span class="line"><span class="txt"> Зайду&nbsp;не&nbsp;за&nbsp;делом,&nbsp;и&nbsp;мы&nbsp;поскучаем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;женщина&nbsp;в&nbsp;белом&nbsp;одарит&nbsp;нас&nbsp;чаем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 </span></span>
+<span class="line"><span class="txt"> мы&nbsp;трубки&nbsp;раскурим,&nbsp;отведаем&nbsp;снеди&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am6 Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;всласть&nbsp;потолкуем&nbsp;о&nbsp;жизни&nbsp;и&nbsp;смерти...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;утром,&nbsp;чуть&nbsp;выйдешь,&nbsp;чуть&nbsp;выглянешь&nbsp;даже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am E7 </span></span>
+<span class="line"><span class="txt"> в&nbsp;тумане&nbsp;увидишь,&nbsp;как&nbsp;я&nbsp;иду&nbsp;дальше,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E9 Am </span></span>
+<span class="line"><span class="txt"> походкою&nbsp;твердой&nbsp;шагаю&nbsp;по&nbsp;хляби,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;весь&nbsp;такой&nbsp;гордый,&nbsp;и&nbsp;весь&nbsp;такой&nbsp;в&nbsp;шляпе...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;дальше&nbsp;всё&nbsp;-&nbsp;ветры,&nbsp;обвалы,&nbsp;откосы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span>
-<span class="txt"> всё&nbsp;глуше&nbsp;ответы,&nbsp;всё&nbsp;выше&nbsp;вопросы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 </span>
-<span class="txt"> Всё&nbsp;тьмою&nbsp;объято...&nbsp;Но,&nbsp;Господи&nbsp;Боже!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am6 Em </span>
-<span class="txt"> Ведь&nbsp;если&nbsp;не&nbsp;я-то,&nbsp;то&nbsp;кто&nbsp;же,&nbsp;то&nbsp;кто&nbsp;же?..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span>
+<span class="line"><span class="txt"> А&nbsp;дальше&nbsp;всё&nbsp;-&nbsp;ветры,&nbsp;обвалы,&nbsp;откосы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span></span>
+<span class="line"><span class="txt"> всё&nbsp;глуше&nbsp;ответы,&nbsp;всё&nbsp;выше&nbsp;вопросы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;тьмою&nbsp;объято...&nbsp;Но,&nbsp;Господи&nbsp;Боже!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am6 Em </span></span>
+<span class="line"><span class="txt"> Ведь&nbsp;если&nbsp;не&nbsp;я-то,&nbsp;то&nbsp;кто&nbsp;же,&nbsp;то&nbsp;кто&nbsp;же?..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

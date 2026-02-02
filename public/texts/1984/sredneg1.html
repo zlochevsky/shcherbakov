@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,49 +433,47 @@ span.c {
 data-key="Em"><span class="txt"> ПЕСНЯ&nbsp;СРЕДНЕГО&nbsp;ЧЕЛОВЕКА&nbsp;I </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;точно&nbsp;знаю,&nbsp;что&nbsp;значит&nbsp;масса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   E7   Am   Em </span>
-<span class="txt"> и&nbsp;вечно&nbsp;буду&nbsp;одним&nbsp;из&nbsp;масс.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   Em </span>
-<span class="txt"> Вот&nbsp;я&nbsp;живу&nbsp;на&nbsp;проспекте&nbsp;Маркса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am   Em </span>
-<span class="txt"> но&nbsp;что&nbsp;в&nbsp;том&nbsp;счастья,&nbsp;раз&nbsp;я&nbsp;не&nbsp;Маркс?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Не&nbsp;быть&nbsp;мне&nbsp;первым,&nbsp;не&nbsp;быть&nbsp;последним,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;не&nbsp;быть&nbsp;мне&nbsp;видным,&nbsp;так&nbsp;что&nbsp;с&nbsp;того!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    F#   H7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;вечно&nbsp;буду&nbsp;обычным&nbsp;средним,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;мне&nbsp;не&nbsp;важно&nbsp;-&nbsp;среди&nbsp;кого!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;мне&nbsp;не&nbsp;важно&nbsp;-&nbsp;среди&nbsp;кого!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Em   E7 </span>
+<span class="line"><span class="txt"> Я&nbsp;точно&nbsp;знаю,&nbsp;что&nbsp;значит&nbsp;масса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   E7   Am   Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;вечно&nbsp;буду&nbsp;одним&nbsp;из&nbsp;масс.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   Em </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;я&nbsp;живу&nbsp;на&nbsp;проспекте&nbsp;Маркса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am   Em </span></span>
+<span class="line"><span class="txt"> но&nbsp;что&nbsp;в&nbsp;том&nbsp;счастья,&nbsp;раз&nbsp;я&nbsp;не&nbsp;Маркс?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Не&nbsp;быть&nbsp;мне&nbsp;первым,&nbsp;не&nbsp;быть&nbsp;последним,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;не&nbsp;быть&nbsp;мне&nbsp;видным,&nbsp;так&nbsp;что&nbsp;с&nbsp;того!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    F#   H7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;вечно&nbsp;буду&nbsp;обычным&nbsp;средним,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;мне&nbsp;не&nbsp;важно&nbsp;-&nbsp;среди&nbsp;кого!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;мне&nbsp;не&nbsp;важно&nbsp;-&nbsp;среди&nbsp;кого!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Em   E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;утром&nbsp;выйду,&nbsp;возьму&nbsp;машину,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span>
-<span class="txt"> в&nbsp;кабину&nbsp;сяду,&nbsp;толкну&nbsp;рычаг&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   Em </span>
-<span class="txt"> и&nbsp;еду&nbsp;прямо&nbsp;на&nbsp;середину,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am   Em </span>
-<span class="txt"> а&nbsp;с&nbsp;середины&nbsp;меня&nbsp;никак!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Пускай&nbsp;все&nbsp;сволочи&nbsp;и&nbsp;балбесы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;глумятся&nbsp;радостно&nbsp;надо&nbsp;мной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    F#   H7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Да,&nbsp;я&nbsp;не&nbsp;доктор&nbsp;и&nbsp;не&nbsp;профессор,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;нет,&nbsp;я&nbsp;не&nbsp;Байрон&nbsp;и&nbsp;не&nbsp;другой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Нет,&nbsp;я&nbsp;не&nbsp;Байрон&nbsp;и&nbsp;не&nbsp;другой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Em   E7 </span>
+<span class="line"><span class="txt"> Я&nbsp;утром&nbsp;выйду,&nbsp;возьму&nbsp;машину,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span></span>
+<span class="line"><span class="txt"> в&nbsp;кабину&nbsp;сяду,&nbsp;толкну&nbsp;рычаг&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;еду&nbsp;прямо&nbsp;на&nbsp;середину,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am   Em </span></span>
+<span class="line"><span class="txt"> а&nbsp;с&nbsp;середины&nbsp;меня&nbsp;никак!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Пускай&nbsp;все&nbsp;сволочи&nbsp;и&nbsp;балбесы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;глумятся&nbsp;радостно&nbsp;надо&nbsp;мной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    F#   H7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Да,&nbsp;я&nbsp;не&nbsp;доктор&nbsp;и&nbsp;не&nbsp;профессор,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;нет,&nbsp;я&nbsp;не&nbsp;Байрон&nbsp;и&nbsp;не&nbsp;другой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Нет,&nbsp;я&nbsp;не&nbsp;Байрон&nbsp;и&nbsp;не&nbsp;другой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Em   E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пусть&nbsp;эти&nbsp;крысы&nbsp;с&nbsp;высокой&nbsp;крыши&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span>
-<span class="txt"> плюют&nbsp;в&nbsp;меня,&nbsp;я&nbsp;стерплю&nbsp;хоть&nbsp;как.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   Em </span>
-<span class="txt"> Я&nbsp;им&nbsp;не&nbsp;лысый,&nbsp;я&nbsp;им&nbsp;не&nbsp;рыжий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am   Em </span>
-<span class="txt"> я&nbsp;им&nbsp;не&nbsp;в&nbsp;шляпе&nbsp;и&nbsp;не&nbsp;в&nbsp;очках.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Все&nbsp;где-то&nbsp;с&nbsp;краю,&nbsp;а&nbsp;я&nbsp;вот&nbsp;-&nbsp;между,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;совсем&nbsp;простой&nbsp;и&nbsp;один&nbsp;совсем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    F#   H7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ни&nbsp;на&nbsp;кого&nbsp;никакой&nbsp;надежды,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;зато&nbsp;ответа&nbsp;-&nbsp;ни&nbsp;перед&nbsp;кем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Em </span>
-<span class="txt"> Зато&nbsp;ни&nbsp;с&nbsp;кем&nbsp;не&nbsp;делю&nbsp;награды&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   A    Cm </span>
-<span class="txt"> и&nbsp;все&nbsp;затраты&nbsp;терплю&nbsp;вполне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    F#   H </span>
-<span class="txt"> И&nbsp;мой&nbsp;красивый&nbsp;рефрижератор&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span>
-<span class="txt"> летит&nbsp;туда,&nbsp;куда&nbsp;надо&nbsp;мне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Em </span>
-<span class="txt"> куда&nbsp;надо&nbsp;мне,&nbsp;куда&nbsp;надо&nbsp;мне...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   H7   Em </span>
+<span class="line"><span class="txt"> Пусть&nbsp;эти&nbsp;крысы&nbsp;с&nbsp;высокой&nbsp;крыши&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em </span></span>
+<span class="line"><span class="txt"> плюют&nbsp;в&nbsp;меня,&nbsp;я&nbsp;стерплю&nbsp;хоть&nbsp;как.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   Em </span></span>
+<span class="line"><span class="txt"> Я&nbsp;им&nbsp;не&nbsp;лысый,&nbsp;я&nbsp;им&nbsp;не&nbsp;рыжий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am   Em </span></span>
+<span class="line"><span class="txt"> я&nbsp;им&nbsp;не&nbsp;в&nbsp;шляпе&nbsp;и&nbsp;не&nbsp;в&nbsp;очках.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    D7   E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Все&nbsp;где-то&nbsp;с&nbsp;краю,&nbsp;а&nbsp;я&nbsp;вот&nbsp;-&nbsp;между,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;совсем&nbsp;простой&nbsp;и&nbsp;один&nbsp;совсем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    F#   H7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ни&nbsp;на&nbsp;кого&nbsp;никакой&nbsp;надежды,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;зато&nbsp;ответа&nbsp;-&nbsp;ни&nbsp;перед&nbsp;кем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Em </span></span>
+<span class="line"><span class="txt"> Зато&nbsp;ни&nbsp;с&nbsp;кем&nbsp;не&nbsp;делю&nbsp;награды&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   A    Cm </span></span>
+<span class="line"><span class="txt"> и&nbsp;все&nbsp;затраты&nbsp;терплю&nbsp;вполне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    F#   H </span></span>
+<span class="line"><span class="txt"> И&nbsp;мой&nbsp;красивый&nbsp;рефрижератор&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span></span>
+<span class="line"><span class="txt"> летит&nbsp;туда,&nbsp;куда&nbsp;надо&nbsp;мне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Em </span></span>
+<span class="line"><span class="txt"> куда&nbsp;надо&nbsp;мне,&nbsp;куда&nbsp;надо&nbsp;мне...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   H7   Em </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1984</span>
-
+<pre><span class="year">1984</span>
 </pre>
+
 
                 </div>
         </div>

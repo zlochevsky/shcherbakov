@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,52 +423,47 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ВИШНЁВОЕ ВАРЕНЬЕ</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Am&nbsp; </span><span class="ch"> Dm  E7 Am F F6 E7 </span>
-<span class="txt"> Теперь&nbsp;на&nbsp;пристани&nbsp;толпа&nbsp;и&nbsp;гомонит,&nbsp;и&nbsp;рукоплещет:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span>
-<span class="txt"> из&nbsp;дальних&nbsp;стран&nbsp;пришёл&nbsp;корабль,&nbsp;его&nbsp;весь&nbsp;город&nbsp;ожидал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 Am </span>
-<span class="txt"> Горит&nbsp;восторгом&nbsp;каждый&nbsp;лик,&nbsp;и&nbsp;каждый&nbsp;взор&nbsp;восторгом&nbsp;блещет.&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span>
-<span class="txt"> Гремит&nbsp;салют,&nbsp;вздыхает&nbsp;трап,&nbsp;матросы&nbsp;сходят&nbsp;на&nbsp;причал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 A </span>
-<span class="txt"> Сиянье&nbsp;славы&nbsp;их&nbsp;слепит,&nbsp;их&nbsp;будоражит&nbsp;звон&nbsp;регалий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Am F  Adim F7 </span>
-<span class="txt"> у&nbsp;них&nbsp;давно&nbsp;уже&nbsp;готов&nbsp;ошеломляющий&nbsp;рассказ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span>
-<span class="txt"> как&nbsp;не&nbsp;щадили&nbsp;живота,&nbsp;и&nbsp;свято&nbsp;честь&nbsp;оберегали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm Dm6     Am </span>
-<span class="txt"> и&nbsp;всё&nbsp;прошли,&nbsp;и&nbsp;превзошли,&nbsp;и&nbsp;осознали&nbsp;лучше&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 E7 Am </span>
+data-key="Am"><h1>ВИШНЁВОЕ ВАРЕНЬЕ</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Am&nbsp; </span><span class="ch"> Dm  E7 Am F F6 E7 </span></span>
+<span class="line"><span class="txt"> Теперь&nbsp;на&nbsp;пристани&nbsp;толпа&nbsp;и&nbsp;гомонит,&nbsp;и&nbsp;рукоплещет:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span></span>
+<span class="line"><span class="txt"> из&nbsp;дальних&nbsp;стран&nbsp;пришёл&nbsp;корабль,&nbsp;его&nbsp;весь&nbsp;город&nbsp;ожидал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 Am </span></span>
+<span class="line"><span class="txt"> Горит&nbsp;восторгом&nbsp;каждый&nbsp;лик,&nbsp;и&nbsp;каждый&nbsp;взор&nbsp;восторгом&nbsp;блещет.&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span></span>
+<span class="line"><span class="txt"> Гремит&nbsp;салют,&nbsp;вздыхает&nbsp;трап,&nbsp;матросы&nbsp;сходят&nbsp;на&nbsp;причал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 A </span></span>
+<span class="line"><span class="txt"> Сиянье&nbsp;славы&nbsp;их&nbsp;слепит,&nbsp;их&nbsp;будоражит&nbsp;звон&nbsp;регалий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Am F  Adim F7 </span></span>
+<span class="line"><span class="txt"> у&nbsp;них&nbsp;давно&nbsp;уже&nbsp;готов&nbsp;ошеломляющий&nbsp;рассказ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span></span>
+<span class="line"><span class="txt"> как&nbsp;не&nbsp;щадили&nbsp;живота,&nbsp;и&nbsp;свято&nbsp;честь&nbsp;оберегали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm Dm6     Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;всё&nbsp;прошли,&nbsp;и&nbsp;превзошли,&nbsp;и&nbsp;осознали&nbsp;лучше&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ты&nbsp;знаешь,&nbsp;я&nbsp;не&nbsp;утерплю,&nbsp;я&nbsp;побегу&nbsp;полюбоваться,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span>
-<span class="txt"> я&nbsp;ненадолго&nbsp;пропаду,&nbsp;я&nbsp;попаду&nbsp;на&nbsp;торжество.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 Am </span>
-<span class="txt"> Ну&nbsp;сколько&nbsp;можно&nbsp;день&nbsp;и&nbsp;ночь&nbsp;с&nbsp;тобою&nbsp;рядом&nbsp;оставаться&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span>
-<span class="txt"> и&nbsp;любоваться&nbsp;день&nbsp;и&nbsp;ночь&nbsp;тобой&nbsp;√&nbsp;и&nbsp;больше&nbsp;ничего!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 A </span>
-<span class="txt"> Ведь&nbsp;мы&nbsp;от&nbsp;моря&nbsp;в&nbsp;двух&nbsp;шагах,&nbsp;и&nbsp;шум&nbsp;толпы&nbsp;так&nbsp;ясно&nbsp;слышен.&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Am F  Adim F7 </span>
-<span class="txt"> Я&nbsp;различаю&nbsp;рокот&nbsp;вод,&nbsp;я&nbsp;внемлю&nbsp;пушечной&nbsp;пальбе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span>
-<span class="txt"> А&nbsp;ты&nbsp;смеёшься&nbsp;надо&nbsp;мной,&nbsp;ты&nbsp;ешь&nbsp;варение&nbsp;из&nbsp;вишен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm Dm6     Am </span>
-<span class="txt"> и&nbsp;мне&nbsp;не&nbsp;веришь&nbsp;ни&nbsp;на&nbsp;грош,&nbsp;и&nbsp;я&nbsp;не&nbsp;верю&nbsp;сам&nbsp;себе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 E7 Am </span>
+<span class="line"><span class="txt"> Ты&nbsp;знаешь,&nbsp;я&nbsp;не&nbsp;утерплю,&nbsp;я&nbsp;побегу&nbsp;полюбоваться,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span></span>
+<span class="line"><span class="txt"> я&nbsp;ненадолго&nbsp;пропаду,&nbsp;я&nbsp;попаду&nbsp;на&nbsp;торжество.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 Am </span></span>
+<span class="line"><span class="txt"> Ну&nbsp;сколько&nbsp;можно&nbsp;день&nbsp;и&nbsp;ночь&nbsp;с&nbsp;тобою&nbsp;рядом&nbsp;оставаться&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;любоваться&nbsp;день&nbsp;и&nbsp;ночь&nbsp;тобой&nbsp;√&nbsp;и&nbsp;больше&nbsp;ничего!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 A </span></span>
+<span class="line"><span class="txt"> Ведь&nbsp;мы&nbsp;от&nbsp;моря&nbsp;в&nbsp;двух&nbsp;шагах,&nbsp;и&nbsp;шум&nbsp;толпы&nbsp;так&nbsp;ясно&nbsp;слышен.&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Am F  Adim F7 </span></span>
+<span class="line"><span class="txt"> Я&nbsp;различаю&nbsp;рокот&nbsp;вод,&nbsp;я&nbsp;внемлю&nbsp;пушечной&nbsp;пальбе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span></span>
+<span class="line"><span class="txt"> А&nbsp;ты&nbsp;смеёшься&nbsp;надо&nbsp;мной,&nbsp;ты&nbsp;ешь&nbsp;варение&nbsp;из&nbsp;вишен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm Dm6     Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;мне&nbsp;не&nbsp;веришь&nbsp;ни&nbsp;на&nbsp;грош,&nbsp;и&nbsp;я&nbsp;не&nbsp;верю&nbsp;сам&nbsp;себе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вот&nbsp;так&nbsp;идёт&nbsp;за&nbsp;годом&nbsp;год,&nbsp;вокруг&nbsp;царит&nbsp;столпотворенье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span>
-<span class="txt"> и&nbsp;век&nbsp;за&nbsp;веком&nbsp;растворён&nbsp;в&nbsp;водовороте&nbsp;суеты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 Am </span>
-<span class="txt"> А&nbsp;ты&nbsp;ужасно&nbsp;занята,&nbsp;ты&nbsp;ешь&nbsp;вишнёвое&nbsp;варенье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span>
-<span class="txt"> и&nbsp;на&nbsp;земле&nbsp;его&nbsp;никто&nbsp;не&nbsp;ест&nbsp;красивее,&nbsp;чем&nbsp;ты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 A </span>
-<span class="txt"> Изгиб&nbsp;божественной&nbsp;руки&nbsp;всегда&nbsp;один&nbsp;и&nbsp;вечно&nbsp;новый,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Am F  Adim F7 </span>
-<span class="txt"> и&nbsp;в&nbsp;ложке&nbsp;ягодка&nbsp;блестит,&nbsp;недонесённая&nbsp;до&nbsp;рта...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span>
-<span class="txt"> Не&nbsp;кровь,&nbsp;не&nbsp;слёзы,&nbsp;не&nbsp;вино&nbsp;√&nbsp;всего&nbsp;лишь&nbsp;только&nbsp;сок&nbsp;вишнёвый. </span><span class="ch"> A7  Dm Dm6     Am </span>
-<span class="txt"> Но&nbsp;не&nbsp;уйти&nbsp;мне&nbsp;от&nbsp;тебя&nbsp;и&nbsp;никуда&nbsp;и&nbsp;никогда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 E7 Am </span>
+<span class="line"><span class="txt"> Вот&nbsp;так&nbsp;идёт&nbsp;за&nbsp;годом&nbsp;год,&nbsp;вокруг&nbsp;царит&nbsp;столпотворенье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;век&nbsp;за&nbsp;веком&nbsp;растворён&nbsp;в&nbsp;водовороте&nbsp;суеты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 Am </span></span>
+<span class="line"><span class="txt"> А&nbsp;ты&nbsp;ужасно&nbsp;занята,&nbsp;ты&nbsp;ешь&nbsp;вишнёвое&nbsp;варенье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E7 A7 Dm   Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;на&nbsp;земле&nbsp;его&nbsp;никто&nbsp;не&nbsp;ест&nbsp;красивее,&nbsp;чем&nbsp;ты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am E7 A </span></span>
+<span class="line"><span class="txt"> Изгиб&nbsp;божественной&nbsp;руки&nbsp;всегда&nbsp;один&nbsp;и&nbsp;вечно&nbsp;новый,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Am F  Adim F7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;в&nbsp;ложке&nbsp;ягодка&nbsp;блестит,&nbsp;недонесённая&nbsp;до&nbsp;рта...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span></span>
+<span class="line"><span class="txt"> Не&nbsp;кровь,&nbsp;не&nbsp;слёзы,&nbsp;не&nbsp;вино&nbsp;√&nbsp;всего&nbsp;лишь&nbsp;только&nbsp;сок&nbsp;вишнёвый. </span><span class="ch"> A7  Dm Dm6     Am </span></span>
+<span class="line"><span class="txt"> Но&nbsp;не&nbsp;уйти&nbsp;мне&nbsp;от&nbsp;тебя&nbsp;и&nbsp;никуда&nbsp;и&nbsp;никогда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 E7 Am </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1984</span>
+<pre><span class="year">1984</span>
 
   Сиянье славы...              ре- галий             У них давно уже го-
  D7      Am       F       Adim             F7
@@ -488,8 +491,8 @@ data-key="Am"><span class="sng-title">ВИШНЁВОЕ ВАРЕНЬЕ</span>
 |----------------|----------------|
 |0-------0-------|----------------|
 |----0-------0-1-|2---------------|
-
 </pre>
+
 
                 </div>
         </div>

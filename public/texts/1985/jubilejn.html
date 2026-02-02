@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,54 +423,52 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Cm"><span class="sng-title">ЮБИЛЕЙНАЯ</span>
+data-key="Cm"><h1>ЮБИЛЕЙНАЯ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;нас&nbsp;ещё&nbsp;осудят,&nbsp;а&nbsp;мы&nbsp;ещё&nbsp;ответим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      F   Fm </span>
-<span class="txt"> а&nbsp;нас&nbsp;ещё&nbsp;потреплют,&nbsp;а&nbsp;мы&nbsp;ряды&nbsp;сомкнём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   D7  Fm  G7   C </span>
-<span class="txt"> А&nbsp;нынче&nbsp;годовщина,&nbsp;и&nbsp;мы&nbsp;её&nbsp;отметим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Abm     Eb </span>
-<span class="txt"> Не&nbsp;правда&nbsp;ли,&nbsp;как&nbsp;странно,&nbsp;как&nbsp;долго&nbsp;мы&nbsp;живём?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7  D7 </span>
-<span class="txt"> Мы&nbsp;так&nbsp;надёжно&nbsp;помним&nbsp;мотив,&nbsp;нам&nbsp;данный&nbsp;Богом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Bm      F </span>
-<span class="txt"> мы&nbsp;так&nbsp;легки&nbsp;в&nbsp;движеньях&nbsp;-&nbsp;взлетим,&nbsp;того&nbsp;гляди.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am  D7  G7 </span>
-<span class="txt"> Мы&nbsp;так&nbsp;неспешно&nbsp;ходим&nbsp;по&nbsp;нынешним&nbsp;дорогам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   Em  Gm  A7 </span>
-<span class="txt"> как&nbsp;будто&nbsp;не&nbsp;мгновенье,&nbsp;но&nbsp;вечность&nbsp;впереди.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  F   E7  Am </span>
+<span class="line"><span class="txt"> А&nbsp;нас&nbsp;ещё&nbsp;осудят,&nbsp;а&nbsp;мы&nbsp;ещё&nbsp;ответим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      F   Fm </span></span>
+<span class="line"><span class="txt"> а&nbsp;нас&nbsp;ещё&nbsp;потреплют,&nbsp;а&nbsp;мы&nbsp;ряды&nbsp;сомкнём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   D7  Fm  G7   C </span></span>
+<span class="line"><span class="txt"> А&nbsp;нынче&nbsp;годовщина,&nbsp;и&nbsp;мы&nbsp;её&nbsp;отметим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Abm     Eb </span></span>
+<span class="line"><span class="txt"> Не&nbsp;правда&nbsp;ли,&nbsp;как&nbsp;странно,&nbsp;как&nbsp;долго&nbsp;мы&nbsp;живём?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7  D7 </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;так&nbsp;надёжно&nbsp;помним&nbsp;мотив,&nbsp;нам&nbsp;данный&nbsp;Богом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Bm      F </span></span>
+<span class="line"><span class="txt"> мы&nbsp;так&nbsp;легки&nbsp;в&nbsp;движеньях&nbsp;-&nbsp;взлетим,&nbsp;того&nbsp;гляди.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am  D7  G7 </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;так&nbsp;неспешно&nbsp;ходим&nbsp;по&nbsp;нынешним&nbsp;дорогам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   Em  Gm  A7 </span></span>
+<span class="line"><span class="txt"> как&nbsp;будто&nbsp;не&nbsp;мгновенье,&nbsp;но&nbsp;вечность&nbsp;впереди.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  F   E7  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Какие&nbsp;наши&nbsp;годы&nbsp;-&nbsp;такие&nbsp;наши&nbsp;песни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      F   Fm </span>
-<span class="txt"> А&nbsp;всё,&nbsp;что&nbsp;с&nbsp;нами&nbsp;было,&nbsp;забудется&nbsp;легко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   D7  Fm  G7   C </span>
-<span class="txt"> А&nbsp;всё,&nbsp;что&nbsp;с&nbsp;нами&nbsp;будет,&nbsp;начертано&nbsp;на&nbsp;перстне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Abm     Eb </span>
-<span class="txt"> а&nbsp;перстень&nbsp;брошен&nbsp;в&nbsp;море,&nbsp;а&nbsp;море&nbsp;велико.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7  D7 </span>
-<span class="txt"> А&nbsp;море&nbsp;необъятно,&nbsp;над&nbsp;морем&nbsp;небо&nbsp;звёздно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Bm      F </span>
-<span class="txt"> за&nbsp;морем&nbsp;дальний&nbsp;берег,&nbsp;над&nbsp;берегом&nbsp;покой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am  D7  G7 </span>
-<span class="txt"> И&nbsp;море&nbsp;дремлет&nbsp;чутко,&nbsp;и&nbsp;море&nbsp;дышит&nbsp;грозно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   Em  Gm  A7 </span>
-<span class="txt"> и&nbsp;шум&nbsp;его&nbsp;дыханья&nbsp;нам&nbsp;слышится&nbsp;порой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  F   E7  Am </span>
+<span class="line"><span class="txt"> Какие&nbsp;наши&nbsp;годы&nbsp;-&nbsp;такие&nbsp;наши&nbsp;песни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      F   Fm </span></span>
+<span class="line"><span class="txt"> А&nbsp;всё,&nbsp;что&nbsp;с&nbsp;нами&nbsp;было,&nbsp;забудется&nbsp;легко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   D7  Fm  G7   C </span></span>
+<span class="line"><span class="txt"> А&nbsp;всё,&nbsp;что&nbsp;с&nbsp;нами&nbsp;будет,&nbsp;начертано&nbsp;на&nbsp;перстне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Abm     Eb </span></span>
+<span class="line"><span class="txt"> а&nbsp;перстень&nbsp;брошен&nbsp;в&nbsp;море,&nbsp;а&nbsp;море&nbsp;велико.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7  D7 </span></span>
+<span class="line"><span class="txt"> А&nbsp;море&nbsp;необъятно,&nbsp;над&nbsp;морем&nbsp;небо&nbsp;звёздно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Bm      F </span></span>
+<span class="line"><span class="txt"> за&nbsp;морем&nbsp;дальний&nbsp;берег,&nbsp;над&nbsp;берегом&nbsp;покой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am  D7  G7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;море&nbsp;дремлет&nbsp;чутко,&nbsp;и&nbsp;море&nbsp;дышит&nbsp;грозно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   Em  Gm  A7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;шум&nbsp;его&nbsp;дыханья&nbsp;нам&nbsp;слышится&nbsp;порой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  F   E7  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мужайтесь&nbsp;же,&nbsp;о&nbsp;братья,&nbsp;исполнившись&nbsp;усердья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      F   Fm </span>
-<span class="txt"> творите,&nbsp;что&nbsp;хотите,&nbsp;покуда&nbsp;хватит&nbsp;дня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   D7  Fm  G7   C </span>
-<span class="txt"> А&nbsp;длительного&nbsp;счастья,&nbsp;покоя&nbsp;и&nbsp;бессмертья&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Abm     Eb </span>
-<span class="txt"> я&nbsp;дал&nbsp;бы&nbsp;вам&nbsp;с&nbsp;лихвою,&nbsp;да&nbsp;нету&nbsp;у&nbsp;меня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7  D7 </span>
-<span class="txt"> Ещё&nbsp;не&nbsp;раз&nbsp;эпоха&nbsp;то&nbsp;радостью,&nbsp;то&nbsp;болью&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Bm      F </span>
-<span class="txt"> наполнит&nbsp;наши&nbsp;струны&nbsp;и&nbsp;наши&nbsp;голоса.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am  D7  G7 </span>
-<span class="txt"> И&nbsp;будем&nbsp;мы&nbsp;друг&nbsp;друга&nbsp;дарить&nbsp;своей&nbsp;любовью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   Em  Gm  A7 </span>
-<span class="txt"> пока&nbsp;своей&nbsp;любовью&nbsp;нас&nbsp;дарят&nbsp;небеса.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  F   E7  Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Ebm Hm  F#m </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Am  Dm6 Am   Dm6  A </span>
+<span class="line"><span class="txt"> Мужайтесь&nbsp;же,&nbsp;о&nbsp;братья,&nbsp;исполнившись&nbsp;усердья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      F   Fm </span></span>
+<span class="line"><span class="txt"> творите,&nbsp;что&nbsp;хотите,&nbsp;покуда&nbsp;хватит&nbsp;дня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   D7  Fm  G7   C </span></span>
+<span class="line"><span class="txt"> А&nbsp;длительного&nbsp;счастья,&nbsp;покоя&nbsp;и&nbsp;бессмертья&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Abm     Eb </span></span>
+<span class="line"><span class="txt"> я&nbsp;дал&nbsp;бы&nbsp;вам&nbsp;с&nbsp;лихвою,&nbsp;да&nbsp;нету&nbsp;у&nbsp;меня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm  A7  D7 </span></span>
+<span class="line"><span class="txt"> Ещё&nbsp;не&nbsp;раз&nbsp;эпоха&nbsp;то&nbsp;радостью,&nbsp;то&nbsp;болью&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Bm      F </span></span>
+<span class="line"><span class="txt"> наполнит&nbsp;наши&nbsp;струны&nbsp;и&nbsp;наши&nbsp;голоса.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am  D7  G7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;будем&nbsp;мы&nbsp;друг&nbsp;друга&nbsp;дарить&nbsp;своей&nbsp;любовью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   Em  Gm  A7 </span></span>
+<span class="line"><span class="txt"> пока&nbsp;своей&nbsp;любовью&nbsp;нас&nbsp;дарят&nbsp;небеса.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  F   E7  Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Ebm Hm  F#m </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Am  Dm6 Am   Dm6  A </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

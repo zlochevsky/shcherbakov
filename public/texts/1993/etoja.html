@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,59 +433,56 @@ span.c {
 data-key="C"><span class="txt"> ЭТО&nbsp;Я </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Это&nbsp;я,&nbsp;а&nbsp;не&nbsp;ты,&nbsp;соглядатай,&nbsp;и&nbsp;не&nbsp;прочий&nbsp;какой-либо&nbsp;вне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;а&nbsp;не&nbsp;всякий&nbsp;десятый,&nbsp;не&nbsp;оно,&nbsp;не&nbsp;они,&nbsp;не&nbsp;оне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span>
-<span class="txt"> Это&nbsp;я&nbsp;-&nbsp;извлечённый&nbsp;из&nbsp;колбы&nbsp;на&nbsp;манер&nbsp;неваляшки&nbsp;без&nbsp;рук,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span>
-<span class="txt"> без&nbsp;ног&nbsp;- </span>
-<span class="txt"> экспонат,&nbsp;означающий&nbsp;сколь&nbsp;бы&nbsp;не&nbsp;волшебный,&nbsp;а&nbsp;всё&nbsp;же&nbsp;лишь&nbsp;звук.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Edim  Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Или,&nbsp;максимум,&nbsp;слог.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;кто&nbsp;пяти&nbsp;континентов&nbsp;не&nbsp;видал,&nbsp;ибо&nbsp;жил&nbsp;на&nbsp;шестом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;кто&nbsp;своих&nbsp;документов&nbsp;не&nbsp;читал&nbsp;ни&nbsp;досель,&nbsp;ни&nbsp;потом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;кто&nbsp;в&nbsp;шагу&nbsp;от&nbsp;поживы&nbsp;оступался,&nbsp;хотя&nbsp;норовил&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span>
-<span class="txt"> след&nbsp;в&nbsp;след, </span>
-<span class="txt"> почему-то&nbsp;боясь&nbsp;перспективы&nbsp;оказаться&nbsp;резвее,&nbsp;чем&nbsp;был.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Почему&nbsp;бы&nbsp;и&nbsp;нет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;на&nbsp;размер&nbsp;ли,&nbsp;на&nbsp;вес&nbsp;ли,&nbsp;всё&nbsp;равно,&nbsp;не&nbsp;они,&nbsp;не&nbsp;оно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span>
-<span class="txt"> Даже&nbsp;если&nbsp;не&nbsp;я,&nbsp;даже&nbsp;если&nbsp;и&nbsp;никто&nbsp;-&nbsp;всё&nbsp;равно,&nbsp;всё&nbsp;равно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;из&nbsp;кюветов&nbsp;обычно&nbsp;выбиравшийся&nbsp;жив&nbsp;а&nbsp;не&nbsp;мертв,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span>
-<span class="txt"> но&nbsp;тих. </span>
-<span class="txt"> А&nbsp;потом&nbsp;заявлявший&nbsp;публично,&nbsp;что&nbsp;искусство&nbsp;не&nbsp;требует&nbsp;жертв,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;никогда,&nbsp;никаких.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> Это&nbsp;мной&nbsp;бюрократ&nbsp;тупорылый&nbsp;помыкал&nbsp;от&nbsp;звонка&nbsp;до&nbsp;звонка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span>
-<span class="txt"> Это&nbsp;мне&nbsp;серафим&nbsp;шестикрылый&nbsp;жала&nbsp;не&nbsp;дал,&nbsp;лишив&nbsp;языка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span>
-<span class="txt"> Это&nbsp;мой&nbsp;разностопник&nbsp;ругая,&nbsp;огорчался&nbsp;ценитель&nbsp;(что&nbsp;юн,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span>
-<span class="txt"> что&nbsp;сед), </span>
-<span class="txt"> неподъёмным&nbsp;его&nbsp;полагая&nbsp;для&nbsp;семи&nbsp;синтетических&nbsp;струн.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Почему&nbsp;бы&nbsp;и&nbsp;нет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;слёзы&nbsp;ливший&nbsp;с&nbsp;не&nbsp;меньшей&nbsp;частотой,&nbsp;чем&nbsp;кричавшие&nbsp;"пли!"&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;ста&nbsp;друзей&nbsp;не&nbsp;имевший;&nbsp;уж&nbsp;не&nbsp;знаю,&nbsp;при&nbsp;чём&nbsp;тут&nbsp;рубли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;избегавший&nbsp;обмана,&nbsp;испытуя&nbsp;презренный&nbsp;металл&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span>
-<span class="txt"> на&nbsp;зуб. </span>
-<span class="txt"> Это&nbsp;я,&nbsp;отрицавший&nbsp;тирана&nbsp;не&nbsp;за&nbsp;то,&nbsp;что&nbsp;он&nbsp;зверь&nbsp;и&nbsp;вандал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;за&nbsp;то,&nbsp;что&nbsp;он&nbsp;глуп.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> Это&nbsp;звон&nbsp;хрусталя&nbsp;и&nbsp;алтына,&nbsp;это&nbsp;радуга&nbsp;ртути&nbsp;и&nbsp;льда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span>
-<span class="txt"> Экспонат,&nbsp;эшафот,&nbsp;гильотина,&nbsp;то&nbsp;есть&nbsp;нет,&nbsp;то&nbsp;есть&nbsp;да,&nbsp;то&nbsp;есть&nbsp;да.&nbsp; </span><span class="ch"> C  Am6 F7 C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;на&nbsp;стене&nbsp;Валтасара&nbsp;нацарапавший&nbsp;только&nbsp;что&nbsp;весь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span>
-<span class="txt"> сей&nbsp;бред. </span>
-<span class="txt"> А&nbsp;спасётся&nbsp;ль&nbsp;затем&nbsp;от&nbsp;пожара&nbsp;эта&nbsp;рукопись,&nbsp;право,&nbsp;Бог&nbsp;весть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Почему&nbsp;бы&nbsp;и&nbsp;нет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> Это&nbsp;я,&nbsp;чьи&nbsp;упрямые&nbsp;губы&nbsp;всё&nbsp;никак&nbsp;не&nbsp;закончат&nbsp;куплет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span>
-<span class="txt"> Почему&nbsp;бы&nbsp;и&nbsp;нет,&nbsp;почему&nbsp;бы,&nbsp;почему,&nbsp;почему&nbsp;бы&nbsp;и&nbsp;нет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;а&nbsp;не&nbsp;ты,&nbsp;соглядатай,&nbsp;и&nbsp;не&nbsp;прочий&nbsp;какой-либо&nbsp;вне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;а&nbsp;не&nbsp;всякий&nbsp;десятый,&nbsp;не&nbsp;оно,&nbsp;не&nbsp;они,&nbsp;не&nbsp;оне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я&nbsp;-&nbsp;извлечённый&nbsp;из&nbsp;колбы&nbsp;на&nbsp;манер&nbsp;неваляшки&nbsp;без&nbsp;рук,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;без&nbsp;ног&nbsp;- </span>
+<span class="line"><span class="txt"> экспонат,&nbsp;означающий&nbsp;сколь&nbsp;бы&nbsp;не&nbsp;волшебный,&nbsp;а&nbsp;всё&nbsp;же&nbsp;лишь&nbsp;звук.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Edim  Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Или,&nbsp;максимум,&nbsp;слог.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;кто&nbsp;пяти&nbsp;континентов&nbsp;не&nbsp;видал,&nbsp;ибо&nbsp;жил&nbsp;на&nbsp;шестом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;кто&nbsp;своих&nbsp;документов&nbsp;не&nbsp;читал&nbsp;ни&nbsp;досель,&nbsp;ни&nbsp;потом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;кто&nbsp;в&nbsp;шагу&nbsp;от&nbsp;поживы&nbsp;оступался,&nbsp;хотя&nbsp;норовил&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;след&nbsp;в&nbsp;след, </span>
+<span class="line"><span class="txt"> почему-то&nbsp;боясь&nbsp;перспективы&nbsp;оказаться&nbsp;резвее,&nbsp;чем&nbsp;был.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Почему&nbsp;бы&nbsp;и&nbsp;нет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;на&nbsp;размер&nbsp;ли,&nbsp;на&nbsp;вес&nbsp;ли,&nbsp;всё&nbsp;равно,&nbsp;не&nbsp;они,&nbsp;не&nbsp;оно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span></span>
+<span class="line"><span class="txt"> Даже&nbsp;если&nbsp;не&nbsp;я,&nbsp;даже&nbsp;если&nbsp;и&nbsp;никто&nbsp;-&nbsp;всё&nbsp;равно,&nbsp;всё&nbsp;равно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;из&nbsp;кюветов&nbsp;обычно&nbsp;выбиравшийся&nbsp;жив&nbsp;а&nbsp;не&nbsp;мертв,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;но&nbsp;тих. </span>
+<span class="line"><span class="txt"> А&nbsp;потом&nbsp;заявлявший&nbsp;публично,&nbsp;что&nbsp;искусство&nbsp;не&nbsp;требует&nbsp;жертв,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;никогда,&nbsp;никаких.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;мной&nbsp;бюрократ&nbsp;тупорылый&nbsp;помыкал&nbsp;от&nbsp;звонка&nbsp;до&nbsp;звонка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;мне&nbsp;серафим&nbsp;шестикрылый&nbsp;жала&nbsp;не&nbsp;дал,&nbsp;лишив&nbsp;языка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6/C F7+/C C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;мой&nbsp;разностопник&nbsp;ругая,&nbsp;огорчался&nbsp;ценитель&nbsp;(что&nbsp;юн,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;что&nbsp;сед), </span>
+<span class="line"><span class="txt"> неподъёмным&nbsp;его&nbsp;полагая&nbsp;для&nbsp;семи&nbsp;синтетических&nbsp;струн.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim        Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Почему&nbsp;бы&nbsp;и&nbsp;нет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;слёзы&nbsp;ливший&nbsp;с&nbsp;не&nbsp;меньшей&nbsp;частотой,&nbsp;чем&nbsp;кричавшие&nbsp;"пли!"&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;ста&nbsp;друзей&nbsp;не&nbsp;имевший;&nbsp;уж&nbsp;не&nbsp;знаю,&nbsp;при&nbsp;чём&nbsp;тут&nbsp;рубли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;избегавший&nbsp;обмана,&nbsp;испытуя&nbsp;презренный&nbsp;металл&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;на&nbsp;зуб. </span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;отрицавший&nbsp;тирана&nbsp;не&nbsp;за&nbsp;то,&nbsp;что&nbsp;он&nbsp;зверь&nbsp;и&nbsp;вандал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;за&nbsp;то,&nbsp;что&nbsp;он&nbsp;глуп.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;звон&nbsp;хрусталя&nbsp;и&nbsp;алтына,&nbsp;это&nbsp;радуга&nbsp;ртути&nbsp;и&nbsp;льда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span></span>
+<span class="line"><span class="txt"> Экспонат,&nbsp;эшафот,&nbsp;гильотина,&nbsp;то&nbsp;есть&nbsp;нет,&nbsp;то&nbsp;есть&nbsp;да,&nbsp;то&nbsp;есть&nbsp;да.&nbsp; </span><span class="ch"> C  Am6 F7 C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;на&nbsp;стене&nbsp;Валтасара&nbsp;нацарапавший&nbsp;только&nbsp;что&nbsp;весь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;сей&nbsp;бред. </span>
+<span class="line"><span class="txt"> А&nbsp;спасётся&nbsp;ль&nbsp;затем&nbsp;от&nbsp;пожара&nbsp;эта&nbsp;рукопись,&nbsp;право,&nbsp;Бог&nbsp;весть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Почему&nbsp;бы&nbsp;и&nbsp;нет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Edim   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> Это&nbsp;я,&nbsp;чьи&nbsp;упрямые&nbsp;губы&nbsp;всё&nbsp;никак&nbsp;не&nbsp;закончат&nbsp;куплет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span></span>
+<span class="line"><span class="txt"> Почему&nbsp;бы&nbsp;и&nbsp;нет,&nbsp;почему&nbsp;бы,&nbsp;почему,&nbsp;почему&nbsp;бы&nbsp;и&nbsp;нет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Am6 F7 C </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1993</span>
-
+<pre><span class="year">1993</span>
 
 </pre>
+
 
                 </div>
         </div>

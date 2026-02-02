@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,85 +423,82 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="F#m"><span class="sng-title">Конец 2-й части</span>
+data-key="F#m"><h1>Конец 2-й части</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Когда&nbsp;меня&nbsp;разжалуют,&nbsp;объявят&nbsp;несуразностью&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m </span>
-<span class="txt"> и&nbsp;выметут&nbsp;за&nbsp;дверь&nbsp;железным&nbsp;помелом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span>
-<span class="txt"> когда&nbsp;не&nbsp;только&nbsp;умственно,&nbsp;но&nbsp;всею&nbsp;прямо&nbsp;плотию,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m </span>
-<span class="txt"> всей&nbsp;кожею&nbsp;своей&nbsp;постигну&nbsp;я&nbsp;беду,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span>
-<span class="txt"> тогда&nbsp;за&nbsp;утешением&nbsp;я&nbsp;не&nbsp;пойду&nbsp;к&nbsp;счастливому.&nbsp;Я&nbsp;к&nbsp;честному&nbsp;пойду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m Hm A Hm6/G# F#m H F#m </span>
+<span class="line"><span class="txt"> Когда&nbsp;меня&nbsp;разжалуют,&nbsp;объявят&nbsp;несуразностью&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m </span></span>
+<span class="line"><span class="txt"> и&nbsp;выметут&nbsp;за&nbsp;дверь&nbsp;железным&nbsp;помелом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span></span>
+<span class="line"><span class="txt"> когда&nbsp;не&nbsp;только&nbsp;умственно,&nbsp;но&nbsp;всею&nbsp;прямо&nbsp;плотию,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m </span></span>
+<span class="line"><span class="txt"> всей&nbsp;кожею&nbsp;своей&nbsp;постигну&nbsp;я&nbsp;беду,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span></span>
+<span class="line"><span class="txt"> тогда&nbsp;за&nbsp;утешением&nbsp;я&nbsp;не&nbsp;пойду&nbsp;к&nbsp;счастливому.&nbsp;Я&nbsp;к&nbsp;честному&nbsp;пойду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m Hm A Hm6/G# F#m H F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Счастливый&nbsp;-&nbsp;это&nbsp;фикция,&nbsp;он&nbsp;это&nbsp;только&nbsp;временно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m... </span>
+<span class="line"><span class="txt"> Счастливый&nbsp;-&nbsp;это&nbsp;фикция,&nbsp;он&nbsp;это&nbsp;только&nbsp;временно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m... </span></span>
 <span class="txt"> не&nbsp;век&nbsp;ему&nbsp;на&nbsp;смак&nbsp;отдельное&nbsp;меню. </span>
 <span class="txt"> Сегодня&nbsp;он&nbsp;блаженствует,&nbsp;а&nbsp;завтра&nbsp;революция </span>
 <span class="txt"> лишит&nbsp;его&nbsp;всего,&nbsp;что&nbsp;нажил&nbsp;он&nbsp;горбом. </span>
-<span class="txt"> Прощай,&nbsp;с&nbsp;довеском&nbsp;порция&nbsp;и&nbsp;с&nbsp;пряностию&nbsp;специя,&nbsp;и&nbsp;с&nbsp;трюфелем-грибом!&nbsp;&nbsp;&nbsp; </span><span class="ch">                              --Am </span>
+<span class="line"><span class="txt"> Прощай,&nbsp;с&nbsp;довеском&nbsp;порция&nbsp;и&nbsp;с&nbsp;пряностию&nbsp;специя,&nbsp;и&nbsp;с&nbsp;трюфелем-грибом!&nbsp;&nbsp;&nbsp; </span><span class="ch">                              --Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;всё&nbsp;удача&nbsp;веером:&nbsp;бывает,&nbsp;что&nbsp;и&nbsp;профилем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7 </span>
-<span class="txt"> Недолго&nbsp;молодцу&nbsp;в&nbsp;лампасах&nbsp;щеголять.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> Сегодня&nbsp;он&nbsp;командует,&nbsp;а&nbsp;завтра&nbsp;интервенция&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  </span>
-<span class="txt"> прижмёт&nbsp;его&nbsp;к&nbsp;земле&nbsp;печатию&nbsp;с&nbsp;гербом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am </span>
-<span class="txt"> А&nbsp;следом&nbsp;инквизиция,&nbsp;так&nbsp;та&nbsp;ещё&nbsp;и&nbsp;плетию,&nbsp;и&nbsp;молотом-серпом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Dm C Dm6/H Am D7/F# Am </span>
+<span class="line"><span class="txt"> Не&nbsp;всё&nbsp;удача&nbsp;веером:&nbsp;бывает,&nbsp;что&nbsp;и&nbsp;профилем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A A7 </span></span>
+<span class="line"><span class="txt"> Недолго&nbsp;молодцу&nbsp;в&nbsp;лампасах&nbsp;щеголять.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> Сегодня&nbsp;он&nbsp;командует,&nbsp;а&nbsp;завтра&nbsp;интервенция&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  </span></span>
+<span class="line"><span class="txt"> прижмёт&nbsp;его&nbsp;к&nbsp;земле&nbsp;печатию&nbsp;с&nbsp;гербом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am </span></span>
+<span class="line"><span class="txt"> А&nbsp;следом&nbsp;инквизиция,&nbsp;так&nbsp;та&nbsp;ещё&nbsp;и&nbsp;плетию,&nbsp;и&nbsp;молотом-серпом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Dm C Dm6/H Am D7/F# Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пр.:&nbsp;┌&nbsp; </span><span class="ch"> 4e e  f  e c  d  e e  f  e e  d ┐ </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; </span><span class="ch"> 5c c  d  c c  h  c c  d  c c  b ┘ </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пр.:&nbsp;┌&nbsp; </span><span class="ch"> 4e e  f  e c  d  e e  f  e e  d ┐ </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; </span><span class="ch"> 5c c  d  c c  h  c c  d  c c  b ┘ </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am                            F#m<- </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am                            F#m<- </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;нужно&nbsp;мне&nbsp;счастливого&nbsp;с&nbsp;его&nbsp;опасным&nbsp;золотом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m... </span>
+<span class="line"><span class="txt"> Не&nbsp;нужно&nbsp;мне&nbsp;счастливого&nbsp;с&nbsp;его&nbsp;опасным&nbsp;золотом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m... </span></span>
 <span class="txt"> в&nbsp;товарищи-друзья,&nbsp;я&nbsp;к&nbsp;честному&nbsp;пойду. </span>
 <span class="txt"> Когда&nbsp;меня&nbsp;разжалуют&nbsp;и&nbsp;отовсюду&nbsp;выгонят, </span>
 <span class="txt"> на&nbsp;чёрных&nbsp;прокатив&nbsp;со&nbsp;свистом-ветерком,&nbsp;- </span>
-<span class="txt"> я&nbsp;не&nbsp;пойду&nbsp;к&nbsp;счастливому:&nbsp;он&nbsp;тот,&nbsp;над&nbsp;кем&nbsp;заклятие&nbsp;и&nbsp;колокол&nbsp;по&nbsp;ком.&nbsp;&nbsp;&nbsp; </span><span class="ch">                              --Gm </span>
+<span class="line"><span class="txt"> я&nbsp;не&nbsp;пойду&nbsp;к&nbsp;счастливому:&nbsp;он&nbsp;тот,&nbsp;над&nbsp;кем&nbsp;заклятие&nbsp;и&nbsp;колокол&nbsp;по&nbsp;ком.&nbsp;&nbsp;&nbsp; </span><span class="ch">                              --Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;с&nbsp;честным&nbsp;что&nbsp;ты&nbsp;сделаешь?&nbsp;Он&nbsp;век&nbsp;живет&nbsp;под&nbsp;яблоней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  </span>
-<span class="txt"> и&nbsp;падалицу&nbsp;ест&nbsp;он&nbsp;вечером&nbsp;и&nbsp;днём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm </span>
-<span class="txt"> Когда&nbsp;по&nbsp;всем&nbsp;позициям&nbsp;останусь&nbsp;я&nbsp;без&nbsp;бонуса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> к&nbsp;чему&nbsp;бы&nbsp;что&nbsp;ни&nbsp;шло&nbsp;-&nbsp;я&nbsp;к&nbsp;честному&nbsp;пойду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm </span>
-<span class="txt"> Когда,&nbsp;достигнув&nbsp;градуса,&nbsp;вода&nbsp;вернётся&nbsp;в&nbsp;облако,&nbsp;а&nbsp;золото&nbsp;-&nbsp;в&nbsp;руду.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Cm B Cm/A Gm C Gm         --Gm </span>
+<span class="line"><span class="txt"> А&nbsp;с&nbsp;честным&nbsp;что&nbsp;ты&nbsp;сделаешь?&nbsp;Он&nbsp;век&nbsp;живет&nbsp;под&nbsp;яблоней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  </span></span>
+<span class="line"><span class="txt"> и&nbsp;падалицу&nbsp;ест&nbsp;он&nbsp;вечером&nbsp;и&nbsp;днём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm </span></span>
+<span class="line"><span class="txt"> Когда&nbsp;по&nbsp;всем&nbsp;позициям&nbsp;останусь&nbsp;я&nbsp;без&nbsp;бонуса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> к&nbsp;чему&nbsp;бы&nbsp;что&nbsp;ни&nbsp;шло&nbsp;-&nbsp;я&nbsp;к&nbsp;честному&nbsp;пойду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm </span></span>
+<span class="line"><span class="txt"> Когда,&nbsp;достигнув&nbsp;градуса,&nbsp;вода&nbsp;вернётся&nbsp;в&nbsp;облако,&nbsp;а&nbsp;золото&nbsp;-&nbsp;в&nbsp;руду.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Cm B Cm/A Gm C Gm         --Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Недолго&nbsp;будет&nbsp;ласкова&nbsp;традиция&nbsp;кредитная:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m </span>
-<span class="txt"> бери,&nbsp;мол,&nbsp;не&nbsp;робей,&nbsp;сочтёмся,&nbsp;чай,&nbsp;свои...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span>
-<span class="txt"> Когда&nbsp;по&nbsp;всем&nbsp;позициям&nbsp;я&nbsp;рухну&nbsp;ниже&nbsp;минуса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m </span>
-<span class="txt"> я&nbsp;к&nbsp;честному&nbsp;пойду.&nbsp;Хоть&nbsp;лично&nbsp;не&nbsp;знаком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span>
-<span class="txt"> Направлюсь&nbsp;по&nbsp;наитию,&nbsp;без&nbsp;адреса,&nbsp;без&nbsp;компаса,&nbsp;по&nbsp;камушкам&nbsp;пешком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm C#m H C#m/A# G#m C#7/E# G#m  </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                              --Am </span>
-<span class="txt"> А&nbsp;камушки&nbsp;колеблются,&nbsp;столетие&nbsp;кончается,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  </span>
-<span class="txt"> полнеба&nbsp;заслонил&nbsp;рекламный&nbsp;дирижабль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am </span>
-<span class="txt"> Светила&nbsp;светят&nbsp;нехотя,&nbsp;просторы&nbsp;пахнут&nbsp;севером,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> зима&nbsp;из-за&nbsp;угла,&nbsp;как&nbsp;в&nbsp;цирке:&nbsp;здравствуй,&nbsp;Бом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am </span>
-<span class="txt"> И&nbsp;счёт&nbsp;в&nbsp;почтовом&nbsp;ящике,&nbsp;такая&nbsp;сумма&nbsp;прописью,&nbsp;что&nbsp;волосы&nbsp;дыбом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Dm C Dm6/H Am Am/F# Am/F Am/E </span>
+<span class="line"><span class="txt"> Недолго&nbsp;будет&nbsp;ласкова&nbsp;традиция&nbsp;кредитная:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m </span></span>
+<span class="line"><span class="txt"> бери,&nbsp;мол,&nbsp;не&nbsp;робей,&nbsp;сочтёмся,&nbsp;чай,&nbsp;свои...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span></span>
+<span class="line"><span class="txt"> Когда&nbsp;по&nbsp;всем&nbsp;позициям&nbsp;я&nbsp;рухну&nbsp;ниже&nbsp;минуса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m </span></span>
+<span class="line"><span class="txt"> я&nbsp;к&nbsp;честному&nbsp;пойду.&nbsp;Хоть&nbsp;лично&nbsp;не&nbsp;знаком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span></span>
+<span class="line"><span class="txt"> Направлюсь&nbsp;по&nbsp;наитию,&nbsp;без&nbsp;адреса,&nbsp;без&nbsp;компаса,&nbsp;по&nbsp;камушкам&nbsp;пешком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm C#m H C#m/A# G#m C#7/E# G#m  </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                              --Am </span></span>
+<span class="line"><span class="txt"> А&nbsp;камушки&nbsp;колеблются,&nbsp;столетие&nbsp;кончается,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  </span></span>
+<span class="line"><span class="txt"> полнеба&nbsp;заслонил&nbsp;рекламный&nbsp;дирижабль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am </span></span>
+<span class="line"><span class="txt"> Светила&nbsp;светят&nbsp;нехотя,&nbsp;просторы&nbsp;пахнут&nbsp;севером,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> зима&nbsp;из-за&nbsp;угла,&nbsp;как&nbsp;в&nbsp;цирке:&nbsp;здравствуй,&nbsp;Бом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;счёт&nbsp;в&nbsp;почтовом&nbsp;ящике,&nbsp;такая&nbsp;сумма&nbsp;прописью,&nbsp;что&nbsp;волосы&nbsp;дыбом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Dm C Dm6/H Am Am/F# Am/F Am/E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пам-пам-ба-ри-бо-бом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/D# Am/D Am/C Am/H  </span>
+<span class="line"><span class="txt"> Пам-пам-ба-ри-бо-бом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/D# Am/D Am/C Am/H  </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-                                                              fin. (= пр.)
+<pre>                                                          fin. (= пр.)
 <span class="year">2011</span>
                                                                        Условная нотировка по исполнению
                                                                        <span class="year">2012</span> года.
 
-
 </pre>
+
 
                 </div>
         </div>

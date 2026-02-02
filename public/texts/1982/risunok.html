@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,58 +423,56 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="C"><span class="sng-title">РИСУНОК</span>
+data-key="C"><h1>РИСУНОК</h1>
 <span class="txt"> (детская&nbsp;песенка) </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> На&nbsp;холсте&nbsp;рисунок,&nbsp;сделанный&nbsp;углём:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Fm C </span>
-<span class="txt"> за&nbsp;рекой&nbsp;поляна,&nbsp;на&nbsp;поляне&nbsp;дом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span>
-<span class="txt"> в&nbsp;доме&nbsp;окна&nbsp;настежь,&nbsp;над&nbsp;рекой&nbsp;закат,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C </span>
-<span class="txt"> на&nbsp;столе&nbsp;приёмник,&nbsp;а&nbsp;в&nbsp;нём&nbsp;музыка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  C  G  C </span>
-<span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G  C </span>
+<span class="line"><span class="txt"> На&nbsp;холсте&nbsp;рисунок,&nbsp;сделанный&nbsp;углём:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Fm C </span></span>
+<span class="line"><span class="txt"> за&nbsp;рекой&nbsp;поляна,&nbsp;на&nbsp;поляне&nbsp;дом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span></span>
+<span class="line"><span class="txt"> в&nbsp;доме&nbsp;окна&nbsp;настежь,&nbsp;над&nbsp;рекой&nbsp;закат,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C </span></span>
+<span class="line"><span class="txt"> на&nbsp;столе&nbsp;приёмник,&nbsp;а&nbsp;в&nbsp;нём&nbsp;музыка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  C  G  C </span></span>
+<span class="line"><span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G  C </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всё&nbsp;опрятно&nbsp;в&nbsp;доме,&nbsp;и&nbsp;полы&nbsp;чисты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Fm C </span>
-<span class="txt"> вазочки&nbsp;на&nbsp;окнах,&nbsp;в&nbsp;вазочках&nbsp;цветы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span>
-<span class="txt"> Что&nbsp;же&nbsp;нам&nbsp;бояться&nbsp;злого&nbsp;языка?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C </span>
-<span class="txt"> На&nbsp;столе&nbsp;приёмник,&nbsp;а&nbsp;в&nbsp;нём&nbsp;-&nbsp;музыка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  C  G  C </span>
-<span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G  C </span>
+<span class="line"><span class="txt"> Всё&nbsp;опрятно&nbsp;в&nbsp;доме,&nbsp;и&nbsp;полы&nbsp;чисты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Fm C </span></span>
+<span class="line"><span class="txt"> вазочки&nbsp;на&nbsp;окнах,&nbsp;в&nbsp;вазочках&nbsp;цветы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span></span>
+<span class="line"><span class="txt"> Что&nbsp;же&nbsp;нам&nbsp;бояться&nbsp;злого&nbsp;языка?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C </span></span>
+<span class="line"><span class="txt"> На&nbsp;столе&nbsp;приёмник,&nbsp;а&nbsp;в&nbsp;нём&nbsp;-&nbsp;музыка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  C  G  C </span></span>
+<span class="line"><span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G  C </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Музыку&nbsp;заслышав,&nbsp;расцветёт&nbsp;любой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Fm C </span>
-<span class="txt"> В&nbsp;музыке&nbsp;надежда,&nbsp;в&nbsp;музыке&nbsp;любовь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span>
-<span class="txt"> В&nbsp;ней&nbsp;мурлычет&nbsp;нежность,&nbsp;доброта&nbsp;поёт,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C </span>
-<span class="txt"> всё,&nbsp;чего&nbsp;нам&nbsp;в&nbsp;доме&nbsp;так&nbsp;недостаёт...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  C  G  Am </span>
-<span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G  C </span>
+<span class="line"><span class="txt"> Музыку&nbsp;заслышав,&nbsp;расцветёт&nbsp;любой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Fm C </span></span>
+<span class="line"><span class="txt"> В&nbsp;музыке&nbsp;надежда,&nbsp;в&nbsp;музыке&nbsp;любовь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span></span>
+<span class="line"><span class="txt"> В&nbsp;ней&nbsp;мурлычет&nbsp;нежность,&nbsp;доброта&nbsp;поёт,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C </span></span>
+<span class="line"><span class="txt"> всё,&nbsp;чего&nbsp;нам&nbsp;в&nbsp;доме&nbsp;так&nbsp;недостаёт...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  C  G  Am </span></span>
+<span class="line"><span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G  C </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Нет&nbsp;у&nbsp;нас&nbsp;надежды,&nbsp;нету&nbsp;доброты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm C </span>
-<span class="txt"> Зато&nbsp;много&nbsp;денег,&nbsp;и&nbsp;полы&nbsp;чисты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span>
-<span class="txt"> И&nbsp;амбар&nbsp;с&nbsp;приданым,&nbsp;вверенный&nbsp;замку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C </span>
-<span class="txt"> А&nbsp;любви&nbsp;захочешь&nbsp;-&nbsp;слушай&nbsp;музыку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  C  G  C </span>
-<span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G  C </span>
+<span class="line"><span class="txt"> Нет&nbsp;у&nbsp;нас&nbsp;надежды,&nbsp;нету&nbsp;доброты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm C </span></span>
+<span class="line"><span class="txt"> Зато&nbsp;много&nbsp;денег,&nbsp;и&nbsp;полы&nbsp;чисты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span></span>
+<span class="line"><span class="txt"> И&nbsp;амбар&nbsp;с&nbsp;приданым,&nbsp;вверенный&nbsp;замку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C </span></span>
+<span class="line"><span class="txt"> А&nbsp;любви&nbsp;захочешь&nbsp;-&nbsp;слушай&nbsp;музыку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  C  G  C </span></span>
+<span class="line"><span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G  C </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Музыка&nbsp;бесплатно&nbsp;и&nbsp;не&nbsp;на&nbsp;замке.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Fm C </span>
-<span class="txt"> Чего&nbsp;нету&nbsp;в&nbsp;доме&nbsp;-&nbsp;всё&nbsp;есть&nbsp;в&nbsp;музыке.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span>
-<span class="txt"> Вот&nbsp;и&nbsp;слава&nbsp;богу,&nbsp;вот&nbsp;и&nbsp;хорошо...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C </span>
-<span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  C  G  C </span>
-<span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G  C </span>
+<span class="line"><span class="txt"> Музыка&nbsp;бесплатно&nbsp;и&nbsp;не&nbsp;на&nbsp;замке.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Fm C </span></span>
+<span class="line"><span class="txt"> Чего&nbsp;нету&nbsp;в&nbsp;доме&nbsp;-&nbsp;всё&nbsp;есть&nbsp;в&nbsp;музыке.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;и&nbsp;слава&nbsp;богу,&nbsp;вот&nbsp;и&nbsp;хорошо...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C </span></span>
+<span class="line"><span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  C  G  C </span></span>
+<span class="line"><span class="txt"> Ла-ла-ла-ла,&nbsp;ла-ла,&nbsp;ла-ла,&nbsp;ла-ла-ла!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G  C </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1982</span>
-
+<pre><span class="year">1982</span>
 </pre>
+
 
                 </div>
         </div>

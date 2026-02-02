@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,53 +423,51 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">КОРАБЛИК</span>
+data-key="Em"><h1>КОРАБЛИК</h1>
 <span class="txt"> (студенческая&nbsp;прощальная) </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кончался&nbsp;август,&nbsp;был&nbsp;туман,&nbsp;неслась&nbsp;Галактика.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span>
-<span class="txt"> По&nbsp;речке&nbsp;плыл&nbsp;катамаран,&nbsp;кончалась&nbsp;практика.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span>
-<span class="txt"> А&nbsp;мы&nbsp;навстречу&nbsp;по&nbsp;реке&nbsp;шли&nbsp;на&nbsp;кораблике&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am   Am6         Em </span>
-<span class="txt"> и&nbsp;рассуждали&nbsp;о&nbsp;грехе&nbsp;и&nbsp;о&nbsp;гидравлике.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span>
-<span class="txt"> Сердечный&nbsp;гам,&nbsp;словесный&nbsp;хлам,&nbsp;ни&nbsp;слова&nbsp;в&nbsp;простоте.&nbsp;&nbsp; </span><span class="ch"> G     E7   A </span>
-<span class="txt"> С&nbsp;катамарана&nbsp;люди&nbsp;нам&nbsp;кричали:&nbsp;"Здравствуйте!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   H7   Em      E7 </span>
-<span class="txt"> Дай&nbsp;Бог&nbsp;вам&nbsp;счастья&nbsp;или&nbsp;чуда&nbsp;за&nbsp;скитания!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Am6  Em </span>
-<span class="txt"> Но&nbsp;вы&nbsp;туда,&nbsp;а&nbsp;мы&nbsp;оттуда.&nbsp;До&nbsp;свидания.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span>
+<span class="line"><span class="txt"> Кончался&nbsp;август,&nbsp;был&nbsp;туман,&nbsp;неслась&nbsp;Галактика.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span></span>
+<span class="line"><span class="txt"> По&nbsp;речке&nbsp;плыл&nbsp;катамаран,&nbsp;кончалась&nbsp;практика.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;мы&nbsp;навстречу&nbsp;по&nbsp;реке&nbsp;шли&nbsp;на&nbsp;кораблике&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am   Am6         Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;рассуждали&nbsp;о&nbsp;грехе&nbsp;и&nbsp;о&nbsp;гидравлике.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span></span>
+<span class="line"><span class="txt"> Сердечный&nbsp;гам,&nbsp;словесный&nbsp;хлам,&nbsp;ни&nbsp;слова&nbsp;в&nbsp;простоте.&nbsp;&nbsp; </span><span class="ch"> G     E7   A </span></span>
+<span class="line"><span class="txt"> С&nbsp;катамарана&nbsp;люди&nbsp;нам&nbsp;кричали:&nbsp;"Здравствуйте!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   H7   Em      E7 </span></span>
+<span class="line"><span class="txt"> Дай&nbsp;Бог&nbsp;вам&nbsp;счастья&nbsp;или&nbsp;чуда&nbsp;за&nbsp;скитания!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Am6  Em </span></span>
+<span class="line"><span class="txt"> Но&nbsp;вы&nbsp;туда,&nbsp;а&nbsp;мы&nbsp;оттуда.&nbsp;До&nbsp;свидания.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Добра&nbsp;пора,&nbsp;туман&nbsp;-&nbsp;труха,&nbsp;вода&nbsp;мудра&nbsp;в&nbsp;реке.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span>
-<span class="txt"> А&nbsp;что&nbsp;мы&nbsp;смыслили&nbsp;в&nbsp;грехах,&nbsp;а&nbsp;что&nbsp;в&nbsp;гидравлике?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span>
-<span class="txt"> Да,&nbsp;ни&nbsp;словечка&nbsp;в&nbsp;простоте,&nbsp;моя&nbsp;прекрасная!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am   Am6         Em </span>
-<span class="txt"> Какая&nbsp;чушь,&nbsp;зато&nbsp;хоть&nbsp;тема&nbsp;безопасная.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span>
-<span class="txt"> Мы&nbsp;всё&nbsp;поймём,&nbsp;мы&nbsp;обойдём&nbsp;и&nbsp;впредь&nbsp;условимся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     E7   A </span>
-<span class="txt"> Не&nbsp;то&nbsp;за&nbsp;старое&nbsp;начнём&nbsp;-&nbsp;не&nbsp;остановимся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   H7   Em      E7 </span>
-<span class="txt"> Грехи&nbsp;-&nbsp;как&nbsp;камни&nbsp;из&nbsp;реки,&nbsp;сосёт&nbsp;под&nbsp;ложечкой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Am6  Em </span>
-<span class="txt"> Не&nbsp;отпускай&nbsp;мне&nbsp;все&nbsp;грехи,&nbsp;оставь&nbsp;немножечко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span>
+<span class="line"><span class="txt"> Добра&nbsp;пора,&nbsp;туман&nbsp;-&nbsp;труха,&nbsp;вода&nbsp;мудра&nbsp;в&nbsp;реке.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;что&nbsp;мы&nbsp;смыслили&nbsp;в&nbsp;грехах,&nbsp;а&nbsp;что&nbsp;в&nbsp;гидравлике?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span></span>
+<span class="line"><span class="txt"> Да,&nbsp;ни&nbsp;словечка&nbsp;в&nbsp;простоте,&nbsp;моя&nbsp;прекрасная!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am   Am6         Em </span></span>
+<span class="line"><span class="txt"> Какая&nbsp;чушь,&nbsp;зато&nbsp;хоть&nbsp;тема&nbsp;безопасная.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;всё&nbsp;поймём,&nbsp;мы&nbsp;обойдём&nbsp;и&nbsp;впредь&nbsp;условимся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     E7   A </span></span>
+<span class="line"><span class="txt"> Не&nbsp;то&nbsp;за&nbsp;старое&nbsp;начнём&nbsp;-&nbsp;не&nbsp;остановимся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   H7   Em      E7 </span></span>
+<span class="line"><span class="txt"> Грехи&nbsp;-&nbsp;как&nbsp;камни&nbsp;из&nbsp;реки,&nbsp;сосёт&nbsp;под&nbsp;ложечкой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Am6  Em </span></span>
+<span class="line"><span class="txt"> Не&nbsp;отпускай&nbsp;мне&nbsp;все&nbsp;грехи,&nbsp;оставь&nbsp;немножечко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Дал&nbsp;течь&nbsp;кораблик,&nbsp;стал&nbsp;тонуть,&nbsp;стоял&nbsp;и&nbsp;протекал.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span>
-<span class="txt"> Мы&nbsp;все&nbsp;спасались&nbsp;как-нибудь,&nbsp;кончалась&nbsp;практика.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span>
-<span class="txt"> Я&nbsp;ж&nbsp;отпустил&nbsp;синицу&nbsp;вновь,&nbsp;ловя&nbsp;журавлика.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am   Am6         Em </span>
-<span class="txt"> Вот&nbsp;весь&nbsp;и&nbsp;грех,&nbsp;и&nbsp;вся&nbsp;любовь,&nbsp;и&nbsp;вся&nbsp;гидравлика.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span>
-<span class="txt"> Зачем,&nbsp;чего&nbsp;там&nbsp;объяснять!..&nbsp;давно&nbsp;всё&nbsp;понято.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     E7   A </span>
-<span class="txt"> И&nbsp;неудобно&nbsp;как-то&nbsp;ждать,&nbsp;когда&nbsp;прогонят-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   H7   Em      E7 </span>
-<span class="txt"> Тони,&nbsp;корабль,&nbsp;лети,&nbsp;журавль,&nbsp;а&nbsp;мы&nbsp;бескрылые.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Am6  Em </span>
-<span class="txt"> Сокрой,&nbsp;туман,&nbsp;катамаран,&nbsp;прощайте,&nbsp;милые!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span>
+<span class="line"><span class="txt"> Дал&nbsp;течь&nbsp;кораблик,&nbsp;стал&nbsp;тонуть,&nbsp;стоял&nbsp;и&nbsp;протекал.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;все&nbsp;спасались&nbsp;как-нибудь,&nbsp;кончалась&nbsp;практика.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    Am6  C7      H7  Em </span></span>
+<span class="line"><span class="txt"> Я&nbsp;ж&nbsp;отпустил&nbsp;синицу&nbsp;вновь,&nbsp;ловя&nbsp;журавлика.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am   Am6         Em </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;весь&nbsp;и&nbsp;грех,&nbsp;и&nbsp;вся&nbsp;любовь,&nbsp;и&nbsp;вся&nbsp;гидравлика.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span></span>
+<span class="line"><span class="txt"> Зачем,&nbsp;чего&nbsp;там&nbsp;объяснять!..&nbsp;давно&nbsp;всё&nbsp;понято.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     E7   A </span></span>
+<span class="line"><span class="txt"> И&nbsp;неудобно&nbsp;как-то&nbsp;ждать,&nbsp;когда&nbsp;прогонят-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   H7   Em      E7 </span></span>
+<span class="line"><span class="txt"> Тони,&nbsp;корабль,&nbsp;лети,&nbsp;журавль,&nbsp;а&nbsp;мы&nbsp;бескрылые.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Am6  Em </span></span>
+<span class="line"><span class="txt"> Сокрой,&nbsp;туман,&nbsp;катамаран,&nbsp;прощайте,&nbsp;милые!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim  A    Am  C   H7  Em </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1982</span>
-
+<pre><span class="year">1982</span>
 </pre>
+
 
                 </div>
         </div>

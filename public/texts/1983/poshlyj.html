@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,74 +423,72 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Gm"><span class="sng-title">ПОШЛЫЙ РОМАНС</span>
+data-key="Gm"><h1>ПОШЛЫЙ РОМАНС</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Наклоняясь&nbsp;к&nbsp;изголовью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D  D7  Gm    Dm </span>
-<span class="txt"> обратись&nbsp;ко&nbsp;мне&nbsp;лицом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  Dm </span>
-<span class="txt"> Обменяемся&nbsp;любовью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  Dm </span>
-<span class="txt"> перекинемся&nbsp;словцом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  D </span>
+<span class="line"><span class="txt"> Наклоняясь&nbsp;к&nbsp;изголовью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D  D7  Gm    Dm </span></span>
+<span class="line"><span class="txt"> обратись&nbsp;ко&nbsp;мне&nbsp;лицом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  Dm </span></span>
+<span class="line"><span class="txt"> Обменяемся&nbsp;любовью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  Dm </span></span>
+<span class="line"><span class="txt"> перекинемся&nbsp;словцом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Счастья&nbsp;маленький&nbsp;обрывок&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Cm  D7 </span>
-<span class="txt"> улетит,&nbsp;как&nbsp;пять&nbsp;минут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  D7    Gm </span>
-<span class="txt"> У&nbsp;судьбы&nbsp;на&nbsp;мой&nbsp;загривок&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  B     Gm </span>
-<span class="txt"> вечно&nbsp;сыщется&nbsp;хомут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  A7    D </span>
+<span class="line"><span class="txt"> Счастья&nbsp;маленький&nbsp;обрывок&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Cm  D7 </span></span>
+<span class="line"><span class="txt"> улетит,&nbsp;как&nbsp;пять&nbsp;минут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  D7    Gm </span></span>
+<span class="line"><span class="txt"> У&nbsp;судьбы&nbsp;на&nbsp;мой&nbsp;загривок&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  B     Gm </span></span>
+<span class="line"><span class="txt"> вечно&nbsp;сыщется&nbsp;хомут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  A7    D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> У&nbsp;меня&nbsp;судьба&nbsp;не&nbsp;злая,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> h a  D   Gdim  D </span>
-<span class="txt"> только&nbsp;глупая,&nbsp;хоть&nbsp;плачь!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7  Em </span>
-<span class="txt"> Всё&nbsp;летит&nbsp;куда&nbsp;не&nbsp;зная,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  Gm    D </span>
-<span class="txt"> а&nbsp;я&nbsp;вслед&nbsp;за&nbsp;нею&nbsp;вскачь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em  A7    D  D7 </span>
+<span class="line"><span class="txt"> У&nbsp;меня&nbsp;судьба&nbsp;не&nbsp;злая,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> h a  D   Gdim  D </span></span>
+<span class="line"><span class="txt"> только&nbsp;глупая,&nbsp;хоть&nbsp;плачь!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7  Em </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;летит&nbsp;куда&nbsp;не&nbsp;зная,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  Gm    D </span></span>
+<span class="line"><span class="txt"> а&nbsp;я&nbsp;вслед&nbsp;за&nbsp;нею&nbsp;вскачь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em  A7    D  D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Без&nbsp;дороги,&nbsp;как&nbsp;умею,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  Dm </span>
-<span class="txt"> по&nbsp;болотам&nbsp;хлюпаю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  Dm </span>
-<span class="txt"> А&nbsp;роптать&nbsp;никак&nbsp;не&nbsp;смею&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  Dm </span>
-<span class="txt"> на&nbsp;неё,&nbsp;на&nbsp;глупую.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  D </span>
+<span class="line"><span class="txt"> Без&nbsp;дороги,&nbsp;как&nbsp;умею,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  Dm </span></span>
+<span class="line"><span class="txt"> по&nbsp;болотам&nbsp;хлюпаю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  Dm </span></span>
+<span class="line"><span class="txt"> А&nbsp;роптать&nbsp;никак&nbsp;не&nbsp;смею&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  Dm </span></span>
+<span class="line"><span class="txt"> на&nbsp;неё,&nbsp;на&nbsp;глупую.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;она,&nbsp;небось,&nbsp;не&nbsp;вправе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Cm  D7 </span>
-<span class="txt"> обижаться&nbsp;на&nbsp;меня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  D7    Gm </span>
-<span class="txt"> Я&nbsp;ж&nbsp;ведь&nbsp;ей&nbsp;служу,&nbsp;шалаве,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm6 Dm    B  Gm </span>
-<span class="txt"> лучше&nbsp;доброго&nbsp;коня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  A7 </span>
-<span class="txt"> Я&nbsp;ж&nbsp;ведь&nbsp;ей&nbsp;служу,&nbsp;шалаве,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7  Gm    Gm6 </span>
-<span class="txt"> лучше&nbsp;доброго&nbsp;коня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  A7    D </span>
+<span class="line"><span class="txt"> И&nbsp;она,&nbsp;небось,&nbsp;не&nbsp;вправе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Cm  D7 </span></span>
+<span class="line"><span class="txt"> обижаться&nbsp;на&nbsp;меня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  D7    Gm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;ж&nbsp;ведь&nbsp;ей&nbsp;служу,&nbsp;шалаве,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm6 Dm    B  Gm </span></span>
+<span class="line"><span class="txt"> лучше&nbsp;доброго&nbsp;коня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  A7 </span></span>
+<span class="line"><span class="txt"> Я&nbsp;ж&nbsp;ведь&nbsp;ей&nbsp;служу,&nbsp;шалаве,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7  Gm    Gm6 </span></span>
+<span class="line"><span class="txt"> лучше&nbsp;доброго&nbsp;коня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  A7    D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всю-то&nbsp;жизнь&nbsp;за&nbsp;ней,&nbsp;как&nbsp;мерин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> h a  D   Gdim  D </span>
-<span class="txt"> на&nbsp;веревочке&nbsp;хожу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7  Em </span>
-<span class="txt"> И&nbsp;покорен&nbsp;я,&nbsp;и&nbsp;верен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  Gm    D </span>
-<span class="txt"> мне&nbsp;бы&nbsp;плакать,&nbsp;а&nbsp;я&nbsp;ржу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em  A7    D  D7 </span>
+<span class="line"><span class="txt"> Всю-то&nbsp;жизнь&nbsp;за&nbsp;ней,&nbsp;как&nbsp;мерин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> h a  D   Gdim  D </span></span>
+<span class="line"><span class="txt"> на&nbsp;веревочке&nbsp;хожу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7  Em </span></span>
+<span class="line"><span class="txt"> И&nbsp;покорен&nbsp;я,&nbsp;и&nbsp;верен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  Gm    D </span></span>
+<span class="line"><span class="txt"> мне&nbsp;бы&nbsp;плакать,&nbsp;а&nbsp;я&nbsp;ржу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em  A7    D  D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;прошу&nbsp;награды&nbsp;лишней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  Dm </span>
-<span class="txt"> не&nbsp;страшусь&nbsp;никоих&nbsp;мук.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  Dm </span>
-<span class="txt"> Мне&nbsp;бы&nbsp;только&nbsp;хвост&nbsp;подлиньше,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  Dm </span>
-<span class="txt"> отмахаться&nbsp;чтоб&nbsp;от&nbsp;мух.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  D </span>
+<span class="line"><span class="txt"> Не&nbsp;прошу&nbsp;награды&nbsp;лишней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  Dm </span></span>
+<span class="line"><span class="txt"> не&nbsp;страшусь&nbsp;никоих&nbsp;мук.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  Dm </span></span>
+<span class="line"><span class="txt"> Мне&nbsp;бы&nbsp;только&nbsp;хвост&nbsp;подлиньше,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  Dm </span></span>
+<span class="line"><span class="txt"> отмахаться&nbsp;чтоб&nbsp;от&nbsp;мух.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7  D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Да&nbsp;сберечься&nbsp;б&nbsp;в&nbsp;волчьем&nbsp;поле&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Cm  D7 </span>
-<span class="txt"> от&nbsp;клыков&nbsp;и&nbsp;от&nbsp;когтей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  D7    Gm </span>
-<span class="txt"> да&nbsp;овса&nbsp;бы&nbsp;чуть&nbsp;поболе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm6 Dm    B  Gm </span>
-<span class="txt"> да&nbsp;поменее&nbsp;плетей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  A7 </span>
-<span class="txt"> Да&nbsp;овса&nbsp;бы&nbsp;чуть&nbsp;поболе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7  Gm    Gm6 </span>
-<span class="txt"> да&nbsp;поменее&nbsp;плетей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  A7    D </span>
+<span class="line"><span class="txt"> Да&nbsp;сберечься&nbsp;б&nbsp;в&nbsp;волчьем&nbsp;поле&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Cm  D7 </span></span>
+<span class="line"><span class="txt"> от&nbsp;клыков&nbsp;и&nbsp;от&nbsp;когтей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm  D7    Gm </span></span>
+<span class="line"><span class="txt"> да&nbsp;овса&nbsp;бы&nbsp;чуть&nbsp;поболе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm6 Dm    B  Gm </span></span>
+<span class="line"><span class="txt"> да&nbsp;поменее&nbsp;плетей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  A7 </span></span>
+<span class="line"><span class="txt"> Да&nbsp;овса&nbsp;бы&nbsp;чуть&nbsp;поболе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7  Gm    Gm6 </span></span>
+<span class="line"><span class="txt"> да&nbsp;поменее&nbsp;плетей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm  A7    D </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1983</span>
-
+<pre><span class="year">1983</span>
 </pre>
+
 
                 </div>
         </div>

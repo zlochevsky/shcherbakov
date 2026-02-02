@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -423,39 +431,35 @@ span.c {
 
                     <div class="song"
 data-key="Cm"><span class="txt"> *&nbsp;*&nbsp;* </span>
-<span class="txt"> Cold&nbsp;turkey&nbsp;has&nbsp;got&nbsp;me&nbsp;on&nbsp;the&nbsp;run. </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm Cm Fm  Cm   G </span>
-<span class="txt"> Века&nbsp;плывут,&nbsp;подобно&nbsp;китам,&nbsp;в&nbsp;своей&nbsp;среде&nbsp;молчаливой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm G  Cm Em  C Fm </span>
-<span class="txt"> Их&nbsp;ровный&nbsp;путь&nbsp;уныл,&nbsp;как&nbsp;и&nbsp;мой.&nbsp;Но&nbsp;мой&nbsp;-&nbsp;имеет&nbsp;предел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7 D# C# Cm  G G# C7 </span>
-<span class="txt"> Волна&nbsp;идёт&nbsp;за&nbsp;мной&nbsp;по&nbsp;пятам,&nbsp;дымясь&nbsp;и&nbsp;прядая&nbsp;гривой:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    Cm D7  G G# C7 </span>
-<span class="txt"> ей&nbsp;дух&nbsp;недобрый,&nbsp;бес&nbsp;водяной,&nbsp;смутить&nbsp;меня&nbsp;повелел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G# Dm7   G  Fm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm Cm G </span>
-<span class="txt"> Мне&nbsp;страх&nbsp;неведом,&nbsp;но&nbsp;такова&nbsp;волны&nbsp;холодная&nbsp;злоба&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm G  Cm Em  C Fm </span>
-<span class="txt"> томит&nbsp;и&nbsp;давит,&nbsp;мыслью&nbsp;одной&nbsp;чертя&nbsp;узор&nbsp;по&nbsp;челу:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7 D# C# Cm  G G# C7 </span>
-<span class="txt"> избегнет&nbsp;ли&nbsp;моя&nbsp;голова&nbsp;её&nbsp;огромного&nbsp;зоба?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    Cm D7  G G# C7 </span>
-<span class="txt"> И&nbsp;если&nbsp;да&nbsp;-&nbsp;какою&nbsp;ценой?&nbsp;А&nbsp;если&nbsp;нет&nbsp;-&nbsp;почему?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G# Dm7   G  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> Устанет&nbsp;ждать&nbsp;невеста&nbsp;меня,&nbsp;но&nbsp;траура&nbsp;не&nbsp;наденет;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  Dm F#m   D  Gm </span>
-<span class="txt"> сосед-богач&nbsp;повадится&nbsp;к&nbsp;ней,&nbsp;она&nbsp;не&nbsp;будет&nbsp;горда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7 F  Eb Dm  A B  D7 </span>
-<span class="txt"> И&nbsp;к&nbsp;марту&nbsp;их&nbsp;помолвит&nbsp;родня,&nbsp;а&nbsp;после&nbsp;Пасхи&nbsp;поженит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm    Dm E7  A B  D7 </span>
-<span class="txt"> И&nbsp;тем&nbsp;черней&nbsp;над&nbsp;жизнью&nbsp;моей&nbsp;волна&nbsp;сомкнётся&nbsp;тогда...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm B  Em7 A Dm H7 </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cold&nbsp;turkey&nbsp;has&nbsp;got&nbsp;me&nbsp;on&nbsp;the&nbsp;run. </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm Cm Fm  Cm   G </span></span>
+<span class="line"><span class="txt"> Века&nbsp;плывут,&nbsp;подобно&nbsp;китам,&nbsp;в&nbsp;своей&nbsp;среде&nbsp;молчаливой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm G  Cm Em  C Fm </span></span>
+<span class="line"><span class="txt"> Их&nbsp;ровный&nbsp;путь&nbsp;уныл,&nbsp;как&nbsp;и&nbsp;мой.&nbsp;Но&nbsp;мой&nbsp;-&nbsp;имеет&nbsp;предел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7 D# C# Cm  G G# C7 </span></span>
+<span class="line"><span class="txt"> Волна&nbsp;идёт&nbsp;за&nbsp;мной&nbsp;по&nbsp;пятам,&nbsp;дымясь&nbsp;и&nbsp;прядая&nbsp;гривой:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    Cm D7  G G# C7 </span></span>
+<span class="line"><span class="txt"> ей&nbsp;дух&nbsp;недобрый,&nbsp;бес&nbsp;водяной,&nbsp;смутить&nbsp;меня&nbsp;повелел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G# Dm7   G  Fm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm Cm G </span></span>
+<span class="line"><span class="txt"> Мне&nbsp;страх&nbsp;неведом,&nbsp;но&nbsp;такова&nbsp;волны&nbsp;холодная&nbsp;злоба&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm G  Cm Em  C Fm </span></span>
+<span class="line"><span class="txt"> томит&nbsp;и&nbsp;давит,&nbsp;мыслью&nbsp;одной&nbsp;чертя&nbsp;узор&nbsp;по&nbsp;челу:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7 D# C# Cm  G G# C7 </span></span>
+<span class="line"><span class="txt"> избегнет&nbsp;ли&nbsp;моя&nbsp;голова&nbsp;её&nbsp;огромного&nbsp;зоба?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    Cm D7  G G# C7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;если&nbsp;да&nbsp;-&nbsp;какою&nbsp;ценой?&nbsp;А&nbsp;если&nbsp;нет&nbsp;-&nbsp;почему?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm G# Dm7   G  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> Устанет&nbsp;ждать&nbsp;невеста&nbsp;меня,&nbsp;но&nbsp;траура&nbsp;не&nbsp;наденет;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  Dm F#m   D  Gm </span></span>
+<span class="line"><span class="txt"> сосед-богач&nbsp;повадится&nbsp;к&nbsp;ней,&nbsp;она&nbsp;не&nbsp;будет&nbsp;горда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7 F  Eb Dm  A B  D7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;к&nbsp;марту&nbsp;их&nbsp;помолвит&nbsp;родня,&nbsp;а&nbsp;после&nbsp;Пасхи&nbsp;поженит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm    Dm E7  A B  D7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;тем&nbsp;черней&nbsp;над&nbsp;жизнью&nbsp;моей&nbsp;волна&nbsp;сомкнётся&nbsp;тогда...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm B  Em7 A Dm H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Недобрый&nbsp;дух!&nbsp;Изыди&nbsp;из&nbsp;мглы!&nbsp;Явись,&nbsp;как&nbsp;есть,&nbsp;предо&nbsp;мною!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H  Em G#m E Am </span>
-<span class="txt"> Хочу,&nbsp;пока&nbsp;не&nbsp;скрылась&nbsp;луна,&nbsp;узнать,&nbsp;каков&nbsp;ты&nbsp;на&nbsp;вид.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G  F  Em  H C  E7 </span>
-<span class="txt"> Взгляну&nbsp;ль&nbsp;-&nbsp;и&nbsp;стану&nbsp;горстью&nbsp;золы,&nbsp;иль&nbsp;вовсе&nbsp;глаз&nbsp;не&nbsp;открою?&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em F#7 H C  E7 </span>
-<span class="txt"> Понравлюсь&nbsp;ли&nbsp;тебе,&nbsp;Сатана,&nbsp;иль&nbsp;Бог&nbsp;меня&nbsp;сохранит?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em C  F#m7  H  Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em H7       Em </span>
- <br />
- <br />
-
+<span class="line"><span class="txt"> Недобрый&nbsp;дух!&nbsp;Изыди&nbsp;из&nbsp;мглы!&nbsp;Явись,&nbsp;как&nbsp;есть,&nbsp;предо&nbsp;мною!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H  Em G#m E Am </span></span>
+<span class="line"><span class="txt"> Хочу,&nbsp;пока&nbsp;не&nbsp;скрылась&nbsp;луна,&nbsp;узнать,&nbsp;каков&nbsp;ты&nbsp;на&nbsp;вид.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G  F  Em  H C  E7 </span></span>
+<span class="line"><span class="txt"> Взгляну&nbsp;ль&nbsp;-&nbsp;и&nbsp;стану&nbsp;горстью&nbsp;золы,&nbsp;иль&nbsp;вовсе&nbsp;глаз&nbsp;не&nbsp;открою?&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em F#7 H C  E7 </span></span>
+<span class="line"><span class="txt"> Понравлюсь&nbsp;ли&nbsp;тебе,&nbsp;Сатана,&nbsp;иль&nbsp;Бог&nbsp;меня&nbsp;сохранит?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em C  F#m7  H  Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am Em H7       Em </span></span>
 </div>
-<pre>
-    <span class="year">1990</span>
-
+<pre><span class="year">1990</span>
 
 
 </pre>
+
 
                 </div>
         </div>

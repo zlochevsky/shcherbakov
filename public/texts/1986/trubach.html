@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,62 +423,60 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ТРУБАЧ</span>
+data-key="Am"><h1>ТРУБАЧ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> -&nbsp;Ах,&nbsp;ну&nbsp;почему&nbsp;наши&nbsp;дела&nbsp;так&nbsp;унылы?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Е </span>
-<span class="txt"> Как&nbsp;вольно&nbsp;дышать&nbsp;мы&nbsp;бы&nbsp;с&nbsp;тобою&nbsp;могли!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      F    Е   Am </span>
-<span class="txt"> Но&nbsp;-&nbsp;где-то&nbsp;опять&nbsp;некие&nbsp;грозные&nbsp;силы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7       Dm </span>
-<span class="txt"> бьют&nbsp;по&nbsp;небесам&nbsp;из&nbsp;артиллерий&nbsp;Земли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Е   A7 </span>
+<span class="line"><span class="txt"> -&nbsp;Ах,&nbsp;ну&nbsp;почему&nbsp;наши&nbsp;дела&nbsp;так&nbsp;унылы?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Е </span></span>
+<span class="line"><span class="txt"> Как&nbsp;вольно&nbsp;дышать&nbsp;мы&nbsp;бы&nbsp;с&nbsp;тобою&nbsp;могли!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      F    Е   Am </span></span>
+<span class="line"><span class="txt"> Но&nbsp;-&nbsp;где-то&nbsp;опять&nbsp;некие&nbsp;грозные&nbsp;силы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7       Dm </span></span>
+<span class="line"><span class="txt"> бьют&nbsp;по&nbsp;небесам&nbsp;из&nbsp;артиллерий&nbsp;Земли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Е   A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> -&nbsp;Да,&nbsp;может,&nbsp;и&nbsp;так,&nbsp;но&nbsp;торопиться&nbsp;не&nbsp;надо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7 </span>
-<span class="txt"> Что&nbsp;ни&nbsp;говори,&nbsp;неба&nbsp;не&nbsp;ранишь&nbsp;мечом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      В    A7  Dm </span>
-<span class="txt"> Как&nbsp;ни&nbsp;голосит,&nbsp;как&nbsp;ни&nbsp;ревёт&nbsp;канонада,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7       Gm </span>
-<span class="txt"> тут&nbsp;-&nbsp;сколько&nbsp;ни&nbsp;бей,&nbsp;всё&nbsp;небесам&nbsp;нипочём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm6  Dm  A7  Dm (E7) </span>
+<span class="line"><span class="txt"> -&nbsp;Да,&nbsp;может,&nbsp;и&nbsp;так,&nbsp;но&nbsp;торопиться&nbsp;не&nbsp;надо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7 </span></span>
+<span class="line"><span class="txt"> Что&nbsp;ни&nbsp;говори,&nbsp;неба&nbsp;не&nbsp;ранишь&nbsp;мечом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      В    A7  Dm </span></span>
+<span class="line"><span class="txt"> Как&nbsp;ни&nbsp;голосит,&nbsp;как&nbsp;ни&nbsp;ревёт&nbsp;канонада,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7       Gm </span></span>
+<span class="line"><span class="txt"> тут&nbsp;-&nbsp;сколько&nbsp;ни&nbsp;бей,&nbsp;всё&nbsp;небесам&nbsp;нипочём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm6  Dm  A7  Dm (E7) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> -&nbsp;Ах,&nbsp;я&nbsp;бы&nbsp;не&nbsp;клял&nbsp;этот&nbsp;удел&nbsp;окаянный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Е </span>
-<span class="txt"> но&nbsp;-&nbsp;ты&nbsp;посмотри,&nbsp;как&nbsp;выезжает&nbsp;на&nbsp;плац&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      F    Е   Am </span>
-<span class="txt"> он,&nbsp;наш&nbsp;командир,&nbsp;наш&nbsp;генерал&nbsp;безымянный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7       Dm </span>
-<span class="txt"> ах,&nbsp;этот&nbsp;палач,&nbsp;этот&nbsp;подлец&nbsp;и&nbsp;паяц!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Е   A7 </span>
+<span class="line"><span class="txt"> -&nbsp;Ах,&nbsp;я&nbsp;бы&nbsp;не&nbsp;клял&nbsp;этот&nbsp;удел&nbsp;окаянный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Е </span></span>
+<span class="line"><span class="txt"> но&nbsp;-&nbsp;ты&nbsp;посмотри,&nbsp;как&nbsp;выезжает&nbsp;на&nbsp;плац&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      F    Е   Am </span></span>
+<span class="line"><span class="txt"> он,&nbsp;наш&nbsp;командир,&nbsp;наш&nbsp;генерал&nbsp;безымянный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7       Dm </span></span>
+<span class="line"><span class="txt"> ах,&nbsp;этот&nbsp;палач,&nbsp;этот&nbsp;подлец&nbsp;и&nbsp;паяц!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Е   A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> -&nbsp;Брось!&nbsp;Он&nbsp;ни&nbsp;хулы,&nbsp;ни&nbsp;похвалы&nbsp;не&nbsp;достоин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7 </span>
-<span class="txt"> Да,&nbsp;он&nbsp;на&nbsp;коне,&nbsp;только&nbsp;не&nbsp;стоит&nbsp;спешить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      В    A7  Dm </span>
-<span class="txt"> Он&nbsp;не&nbsp;Бонапарт,&nbsp;он&nbsp;даже&nbsp;вовсе&nbsp;не&nbsp;воин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7       Gm </span>
-<span class="txt"> он&nbsp;-&nbsp;лишь&nbsp;человек,&nbsp;что&nbsp;же&nbsp;он&nbsp;волен&nbsp;решить?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm6  Dm  A7  Dm (E7) </span>
+<span class="line"><span class="txt"> -&nbsp;Брось!&nbsp;Он&nbsp;ни&nbsp;хулы,&nbsp;ни&nbsp;похвалы&nbsp;не&nbsp;достоин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7 </span></span>
+<span class="line"><span class="txt"> Да,&nbsp;он&nbsp;на&nbsp;коне,&nbsp;только&nbsp;не&nbsp;стоит&nbsp;спешить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      В    A7  Dm </span></span>
+<span class="line"><span class="txt"> Он&nbsp;не&nbsp;Бонапарт,&nbsp;он&nbsp;даже&nbsp;вовсе&nbsp;не&nbsp;воин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7       Gm </span></span>
+<span class="line"><span class="txt"> он&nbsp;-&nbsp;лишь&nbsp;человек,&nbsp;что&nbsp;же&nbsp;он&nbsp;волен&nbsp;решить?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm6  Dm  A7  Dm (E7) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> -&nbsp;Но&nbsp;-&nbsp;вот&nbsp;и&nbsp;опять&nbsp;слёз&nbsp;наших&nbsp;ветер&nbsp;не&nbsp;вытер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Е </span>
-<span class="txt"> Мы&nbsp;побеждены,&nbsp;мой&nbsp;одинокий&nbsp;трубач!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      F    Е   Am </span>
-<span class="txt"> Ты&nbsp;ж&nbsp;невозмутим,&nbsp;ты&nbsp;горделив,&nbsp;как&nbsp;Юпитер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7       Dm </span>
-<span class="txt"> Что&nbsp;тешит&nbsp;тебя&nbsp;в&nbsp;этом&nbsp;дыму&nbsp;неудач?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Е   A7 </span>
+<span class="line"><span class="txt"> -&nbsp;Но&nbsp;-&nbsp;вот&nbsp;и&nbsp;опять&nbsp;слёз&nbsp;наших&nbsp;ветер&nbsp;не&nbsp;вытер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Е </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;побеждены,&nbsp;мой&nbsp;одинокий&nbsp;трубач!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      F    Е   Am </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;ж&nbsp;невозмутим,&nbsp;ты&nbsp;горделив,&nbsp;как&nbsp;Юпитер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      A7       Dm </span></span>
+<span class="line"><span class="txt"> Что&nbsp;тешит&nbsp;тебя&nbsp;в&nbsp;этом&nbsp;дыму&nbsp;неудач?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   Е   A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> -&nbsp;Я&nbsp;здесь&nbsp;никакой&nbsp;неудачи&nbsp;не&nbsp;вижу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7 </span>
-<span class="txt"> Будь&nbsp;хоть&nbsp;трубачом,&nbsp;хоть&nbsp;Бонапартом&nbsp;зовись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      В    A7  Dm </span>
-<span class="txt"> Я&nbsp;ни&nbsp;от&nbsp;чего,&nbsp;ни&nbsp;от&nbsp;кого&nbsp;не&nbsp;завишу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7       Gm </span>
-<span class="txt"> Встань,&nbsp;делай&nbsp;как&nbsp;я,&nbsp;ни&nbsp;от&nbsp;кого&nbsp;не&nbsp;завись!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm6  Dm  A7  Dm (H7) </span>
-<span class="txt"> И,&nbsp;что&nbsp;бы&nbsp;ни&nbsp;плёл,&nbsp;куда&nbsp;бы&nbsp;ни&nbsp;вёл&nbsp;воевода,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7 </span>
-<span class="txt"> жди,&nbsp;сколько&nbsp;воды,&nbsp;сколько&nbsp;беды&nbsp;утечёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C    H7  Em </span>
-<span class="txt"> Знай,&nbsp;всё&nbsp;победят&nbsp;только&nbsp;лишь&nbsp;честь&nbsp;и&nbsp;свобода,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      E7       Am </span>
-<span class="txt"> да,&nbsp;только&nbsp;они,&nbsp;всё&nbsp;остальное&nbsp;-&nbsp;не&nbsp;в&nbsp;счёт...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am6  Em  H7  Em </span>
+<span class="line"><span class="txt"> -&nbsp;Я&nbsp;здесь&nbsp;никакой&nbsp;неудачи&nbsp;не&nbsp;вижу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7 </span></span>
+<span class="line"><span class="txt"> Будь&nbsp;хоть&nbsp;трубачом,&nbsp;хоть&nbsp;Бонапартом&nbsp;зовись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      В    A7  Dm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;ни&nbsp;от&nbsp;чего,&nbsp;ни&nbsp;от&nbsp;кого&nbsp;не&nbsp;завишу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      D7       Gm </span></span>
+<span class="line"><span class="txt"> Встань,&nbsp;делай&nbsp;как&nbsp;я,&nbsp;ни&nbsp;от&nbsp;кого&nbsp;не&nbsp;завись!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm6  Dm  A7  Dm (H7) </span></span>
+<span class="line"><span class="txt"> И,&nbsp;что&nbsp;бы&nbsp;ни&nbsp;плёл,&nbsp;куда&nbsp;бы&nbsp;ни&nbsp;вёл&nbsp;воевода,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7 </span></span>
+<span class="line"><span class="txt"> жди,&nbsp;сколько&nbsp;воды,&nbsp;сколько&nbsp;беды&nbsp;утечёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C    H7  Em </span></span>
+<span class="line"><span class="txt"> Знай,&nbsp;всё&nbsp;победят&nbsp;только&nbsp;лишь&nbsp;честь&nbsp;и&nbsp;свобода,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      E7       Am </span></span>
+<span class="line"><span class="txt"> да,&nbsp;только&nbsp;они,&nbsp;всё&nbsp;остальное&nbsp;-&nbsp;не&nbsp;в&nbsp;счёт...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am6  Em  H7  Em </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1986</span>
-
+<pre><span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,42 +433,36 @@ span.c {
 data-key="Dm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ой,&nbsp;да&nbsp;что&nbsp;ж&nbsp;это&nbsp;такое,&nbsp;неумелое&nbsp;житьё!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm6 E   E7 </span>
-<span class="txt"> Это&nbsp;горе&nbsp;вековое,&nbsp;не&nbsp;твоё&nbsp;и&nbsp;не&nbsp;моё,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   A7  Dm  Dm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;это&nbsp;наше&nbsp;и&nbsp;не&nbsp;наше&nbsp;-&nbsp;эта&nbsp;кража,&nbsp;этот&nbsp;срам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Dm6 E E7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ты&nbsp;-&nbsp;невыпитая&nbsp;чаша,&nbsp;то&nbsp;ли&nbsp;яд,&nbsp;то&nbsp;ли&nbsp;бальзам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   A7  Dm  D7 </span>
-<span class="txt"> Этим&nbsp;горестным&nbsp;союзом&nbsp;сбит&nbsp;порядок,&nbsp;смят&nbsp;уклад.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Gm6 D7 </span>
-<span class="txt"> То&nbsp;ли&nbsp;мы&nbsp;мешаем&nbsp;узам,&nbsp;то&nbsp;ли&nbsp;узы&nbsp;нам&nbsp;вредят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   G7  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;То&nbsp;ли&nbsp;муж&nbsp;-&nbsp;дурак,&nbsp;сановник&nbsp;-&nbsp;всё&nbsp;же&nbsp;понял,&nbsp;что&nbsp;и&nbsp;как,&nbsp;-&nbsp; </span><span class="ch"> Cm  Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;то&nbsp;ли&nbsp;я&nbsp;-&nbsp;чудак,&nbsp;любовник&nbsp;-&nbsp;слишком&nbsp;искренний&nbsp;чудак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 D7 Gm </span>
-<span class="txt"> Ты&nbsp;не&nbsp;выдержишь&nbsp;-&nbsp;умрёшь&nbsp;ты,&nbsp;дале&nbsp;некуда&nbsp;играть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm Dm6  Am </span>
-<span class="txt"> Он&nbsp;ведь&nbsp;спросит:&nbsp;что,&nbsp;мол,&nbsp;врёшь-то?&nbsp;И&nbsp;не&nbsp;сможешь&nbsp;ты&nbsp;соврать.&nbsp; </span><span class="ch"> A   A7 Dm   Dm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;доносчик&nbsp;-&nbsp;паж&nbsp;из&nbsp;свиты&nbsp;-&nbsp;улыбнётся,&nbsp;скажет&nbsp;лишь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  F    Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;что&nbsp;враньём&nbsp;мы&nbsp;всё&nbsp;покрыты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;не&nbsp;соврёшь&nbsp;-&nbsp;не&nbsp;совратишь...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G E7 C E7 Am A7 </span>
-<span class="txt"> Не&nbsp;при&nbsp;чём&nbsp;тут,&nbsp;знаешь,&nbsp;узы,&nbsp;слишком&nbsp;мним&nbsp;их&nbsp;горький&nbsp;дым.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm6 E   E7 </span>
-<span class="txt"> Это&nbsp;нам&nbsp;мешают&nbsp;музы,&nbsp;или&nbsp;мы&nbsp;мешаем&nbsp;им,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   A7  Dm  Dm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чашу&nbsp;кто-нибудь&nbsp;пригубит,&nbsp;в&nbsp;ней&nbsp;окажется&nbsp;вино.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Dm6 E E7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чудаков&nbsp;нигде&nbsp;не&nbsp;любят,&nbsp;дураков&nbsp;везде&nbsp;полно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   A7  Dm  D7 </span>
-<span class="txt"> Будет&nbsp;всё,&nbsp;как&nbsp;ты&nbsp;захочешь,&nbsp;будет&nbsp;тяжко&nbsp;-&nbsp;быть&nbsp;тому,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Gm6 D7 </span>
-<span class="txt"> но&nbsp;судьбу,&nbsp;что&nbsp;ты&nbsp;мне&nbsp;прочишь,&nbsp;я,&nbsp;должно&nbsp;быть,&nbsp;не&nbsp;приму.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   G7  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ты&nbsp;останешься&nbsp;при&nbsp;муже,&nbsp;это&nbsp;каторга&nbsp;-&nbsp;пусть&nbsp;так,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;но&nbsp;чудак,&nbsp;ей-богу,&nbsp;хуже,&nbsp;много&nbsp;хуже,&nbsp;чем&nbsp;дурак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 D7 Gm </span>
-<span class="txt"> Шлейф&nbsp;подымут&nbsp;и&nbsp;разгладят,&nbsp;слёзы&nbsp;вытрут,&nbsp;грех&nbsp;скостят,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm Dm6  Am </span>
-<span class="txt"> музу&nbsp;накрепко&nbsp;отвадят,&nbsp;узы&nbsp;заново&nbsp;срастят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   A7 Dm   Dm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И,&nbsp;ступая&nbsp;этой&nbsp;твердью,&nbsp;расцветёт&nbsp;судьба&nbsp;твоя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  F    Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;умрёшь&nbsp;ты&nbsp;странной&nbsp;смертью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;тот&nbsp;же&nbsp;час,&nbsp;когда&nbsp;и&nbsp;я.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G E7 C E7 Am A7 </span>
+<span class="line"><span class="txt"> Ой,&nbsp;да&nbsp;что&nbsp;ж&nbsp;это&nbsp;такое,&nbsp;неумелое&nbsp;житьё!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm6 E   E7 </span></span>
+<span class="line"><span class="txt"> Это&nbsp;горе&nbsp;вековое,&nbsp;не&nbsp;твоё&nbsp;и&nbsp;не&nbsp;моё,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   A7  Dm  Dm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;это&nbsp;наше&nbsp;и&nbsp;не&nbsp;наше&nbsp;-&nbsp;эта&nbsp;кража,&nbsp;этот&nbsp;срам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Dm6 E E7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ты&nbsp;-&nbsp;невыпитая&nbsp;чаша,&nbsp;то&nbsp;ли&nbsp;яд,&nbsp;то&nbsp;ли&nbsp;бальзам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   A7  Dm  D7 </span></span>
+<span class="line"><span class="txt"> Этим&nbsp;горестным&nbsp;союзом&nbsp;сбит&nbsp;порядок,&nbsp;смят&nbsp;уклад.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Gm6 D7 </span></span>
+<span class="line"><span class="txt"> То&nbsp;ли&nbsp;мы&nbsp;мешаем&nbsp;узам,&nbsp;то&nbsp;ли&nbsp;узы&nbsp;нам&nbsp;вредят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   G7  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;То&nbsp;ли&nbsp;муж&nbsp;-&nbsp;дурак,&nbsp;сановник&nbsp;-&nbsp;всё&nbsp;же&nbsp;понял,&nbsp;что&nbsp;и&nbsp;как,&nbsp;-&nbsp; </span><span class="ch"> Cm  Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;то&nbsp;ли&nbsp;я&nbsp;-&nbsp;чудак,&nbsp;любовник&nbsp;-&nbsp;слишком&nbsp;искренний&nbsp;чудак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 D7 Gm </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;не&nbsp;выдержишь&nbsp;-&nbsp;умрёшь&nbsp;ты,&nbsp;дале&nbsp;некуда&nbsp;играть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm Dm6  Am </span></span>
+<span class="line"><span class="txt"> Он&nbsp;ведь&nbsp;спросит:&nbsp;что,&nbsp;мол,&nbsp;врёшь-то?&nbsp;И&nbsp;не&nbsp;сможешь&nbsp;ты&nbsp;соврать.&nbsp; </span><span class="ch"> A   A7 Dm   Dm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;доносчик&nbsp;-&nbsp;паж&nbsp;из&nbsp;свиты&nbsp;-&nbsp;улыбнётся,&nbsp;скажет&nbsp;лишь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  F    Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;что&nbsp;враньём&nbsp;мы&nbsp;всё&nbsp;покрыты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;не&nbsp;соврёшь&nbsp;-&nbsp;не&nbsp;совратишь...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G E7 C E7 Am A7 </span></span>
+<span class="line"><span class="txt"> Не&nbsp;при&nbsp;чём&nbsp;тут,&nbsp;знаешь,&nbsp;узы,&nbsp;слишком&nbsp;мним&nbsp;их&nbsp;горький&nbsp;дым.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm6 E   E7 </span></span>
+<span class="line"><span class="txt"> Это&nbsp;нам&nbsp;мешают&nbsp;музы,&nbsp;или&nbsp;мы&nbsp;мешаем&nbsp;им,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   A7  Dm  Dm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чашу&nbsp;кто-нибудь&nbsp;пригубит,&nbsp;в&nbsp;ней&nbsp;окажется&nbsp;вино.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  Dm6 E E7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чудаков&nbsp;нигде&nbsp;не&nbsp;любят,&nbsp;дураков&nbsp;везде&nbsp;полно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   A7  Dm  D7 </span></span>
+<span class="line"><span class="txt"> Будет&nbsp;всё,&nbsp;как&nbsp;ты&nbsp;захочешь,&nbsp;будет&nbsp;тяжко&nbsp;-&nbsp;быть&nbsp;тому,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Gm6 D7 </span></span>
+<span class="line"><span class="txt"> но&nbsp;судьбу,&nbsp;что&nbsp;ты&nbsp;мне&nbsp;прочишь,&nbsp;я,&nbsp;должно&nbsp;быть,&nbsp;не&nbsp;приму.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   G7  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ты&nbsp;останешься&nbsp;при&nbsp;муже,&nbsp;это&nbsp;каторга&nbsp;-&nbsp;пусть&nbsp;так,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;но&nbsp;чудак,&nbsp;ей-богу,&nbsp;хуже,&nbsp;много&nbsp;хуже,&nbsp;чем&nbsp;дурак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 D7 Gm </span></span>
+<span class="line"><span class="txt"> Шлейф&nbsp;подымут&nbsp;и&nbsp;разгладят,&nbsp;слёзы&nbsp;вытрут,&nbsp;грех&nbsp;скостят,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm Dm6  Am </span></span>
+<span class="line"><span class="txt"> музу&nbsp;накрепко&nbsp;отвадят,&nbsp;узы&nbsp;заново&nbsp;срастят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   A7 Dm   Dm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И,&nbsp;ступая&nbsp;этой&nbsp;твердью,&nbsp;расцветёт&nbsp;судьба&nbsp;твоя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  F    Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;умрёшь&nbsp;ты&nbsp;странной&nbsp;смертью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;тот&nbsp;же&nbsp;час,&nbsp;когда&nbsp;и&nbsp;я.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G E7 C E7 Am A7 </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1982</span>
+<pre><span class="year">1982</span>
 
 Окончание
 
@@ -482,8 +484,8 @@ g|2---1---2-------|
 d|--------2-------|
 a|----2---0-------|
 f|0---------------|
-
 </pre>
+
 
                 </div>
         </div>

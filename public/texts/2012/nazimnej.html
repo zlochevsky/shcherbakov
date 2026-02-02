@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,63 +423,61 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">НА ЗИМНЕЙ АВЕНЮ</span>
+data-key="Am"><h1>НА ЗИМНЕЙ АВЕНЮ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Далёк&nbsp;небесный&nbsp;суд.&nbsp;Но&nbsp;близок&nbsp;суд&nbsp;земной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Em </span>
-<span class="txt"> Он&nbsp;свой&nbsp;пристрастный&nbsp;кнут&nbsp;заносит&nbsp;надо&nbsp;мной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Gm </span>
-<span class="txt"> Грустны&nbsp;мои&nbsp;дела.&nbsp;Но&nbsp;что&nbsp;я&nbsp;изменю?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7  Gm   Dm </span>
-<span class="txt"> Уже&nbsp;повисла&nbsp;мгла&nbsp;над&nbsp;зимней&nbsp;авеню.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm  A7   D7 </span>
-<span class="txt"> И&nbsp;зыбкий&nbsp;дымный&nbsp;смог&nbsp;течёт&nbsp;по&nbsp;небесам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Hm </span>
-<span class="txt"> как&nbsp;липкий&nbsp;дынный&nbsp;сок&nbsp;по&nbsp;выцветшим&nbsp;усам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Dm </span>
-<span class="txt"> И&nbsp;бьётся&nbsp;о&nbsp;причал&nbsp;морозная&nbsp;вода,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E   F    Dm </span>
-<span class="txt"> и&nbsp;бьётся&nbsp;в&nbsp;ней&nbsp;печаль,&nbsp;как&nbsp;в&nbsp;слове&nbsp;"никогда".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am  F    E7 </span>
+<span class="line"><span class="txt"> Далёк&nbsp;небесный&nbsp;суд.&nbsp;Но&nbsp;близок&nbsp;суд&nbsp;земной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Em </span></span>
+<span class="line"><span class="txt"> Он&nbsp;свой&nbsp;пристрастный&nbsp;кнут&nbsp;заносит&nbsp;надо&nbsp;мной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Gm </span></span>
+<span class="line"><span class="txt"> Грустны&nbsp;мои&nbsp;дела.&nbsp;Но&nbsp;что&nbsp;я&nbsp;изменю?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7  Gm   Dm </span></span>
+<span class="line"><span class="txt"> Уже&nbsp;повисла&nbsp;мгла&nbsp;над&nbsp;зимней&nbsp;авеню.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm  A7   D7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;зыбкий&nbsp;дымный&nbsp;смог&nbsp;течёт&nbsp;по&nbsp;небесам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Hm </span></span>
+<span class="line"><span class="txt"> как&nbsp;липкий&nbsp;дынный&nbsp;сок&nbsp;по&nbsp;выцветшим&nbsp;усам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;бьётся&nbsp;о&nbsp;причал&nbsp;морозная&nbsp;вода,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E   F    Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;бьётся&nbsp;в&nbsp;ней&nbsp;печаль,&nbsp;как&nbsp;в&nbsp;слове&nbsp;"никогда".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am  F    E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;в&nbsp;джунглях&nbsp;злачных&nbsp;недр,&nbsp;в&nbsp;дыму&nbsp;азартных&nbsp;игр,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Em </span>
-<span class="txt"> крупье&nbsp;-&nbsp;поджарый&nbsp;негр&nbsp;-&nbsp;сопит,&nbsp;как&nbsp;старый&nbsp;тигр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Gm </span>
-<span class="txt"> И&nbsp;тёплый&nbsp;жёлтый&nbsp;франк,&nbsp;похожий&nbsp;на&nbsp;зерно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7  Gm   Dm </span>
-<span class="txt"> седой&nbsp;столичный&nbsp;франт&nbsp;бросает&nbsp;на&nbsp;"зеро"...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm  A7   D7 </span>
-<span class="txt"> Не&nbsp;случай,&nbsp;не&nbsp;сюжет&nbsp;-&nbsp;фрагмент&nbsp;мирской&nbsp;возни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Hm </span>
-<span class="txt"> А&nbsp;всё&nbsp;же,&nbsp;глянешь&nbsp;вслед&nbsp;-&nbsp;красиво,&nbsp;чёрт&nbsp;возьми!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Dm </span>
-<span class="txt"> Летит&nbsp;монетка&nbsp;вдаль,&nbsp;звенит,&nbsp;как&nbsp;гонг&nbsp;суда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E   F    Dm </span>
-<span class="txt"> и&nbsp;вновь&nbsp;слышна&nbsp;печаль,&nbsp;как&nbsp;в&nbsp;слове&nbsp;"никогда".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am  F    E7 </span>
+<span class="line"><span class="txt"> А&nbsp;в&nbsp;джунглях&nbsp;злачных&nbsp;недр,&nbsp;в&nbsp;дыму&nbsp;азартных&nbsp;игр,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Em </span></span>
+<span class="line"><span class="txt"> крупье&nbsp;-&nbsp;поджарый&nbsp;негр&nbsp;-&nbsp;сопит,&nbsp;как&nbsp;старый&nbsp;тигр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Gm </span></span>
+<span class="line"><span class="txt"> И&nbsp;тёплый&nbsp;жёлтый&nbsp;франк,&nbsp;похожий&nbsp;на&nbsp;зерно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7  Gm   Dm </span></span>
+<span class="line"><span class="txt"> седой&nbsp;столичный&nbsp;франт&nbsp;бросает&nbsp;на&nbsp;"зеро"...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm  A7   D7 </span></span>
+<span class="line"><span class="txt"> Не&nbsp;случай,&nbsp;не&nbsp;сюжет&nbsp;-&nbsp;фрагмент&nbsp;мирской&nbsp;возни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Hm </span></span>
+<span class="line"><span class="txt"> А&nbsp;всё&nbsp;же,&nbsp;глянешь&nbsp;вслед&nbsp;-&nbsp;красиво,&nbsp;чёрт&nbsp;возьми!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Dm </span></span>
+<span class="line"><span class="txt"> Летит&nbsp;монетка&nbsp;вдаль,&nbsp;звенит,&nbsp;как&nbsp;гонг&nbsp;суда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E   F    Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;вновь&nbsp;слышна&nbsp;печаль,&nbsp;как&nbsp;в&nbsp;слове&nbsp;"никогда".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am  F    E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Высок&nbsp;небесный&nbsp;суд.&nbsp;Но&nbsp;низок&nbsp;суд&nbsp;земной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Em </span>
-<span class="txt"> И&nbsp;вновь&nbsp;присяжный&nbsp;шут&nbsp;глумится&nbsp;надо&nbsp;мной:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Gm </span>
-<span class="txt"> -&nbsp;Оставьте&nbsp;ваш&nbsp;прононс,&nbsp;покиньте&nbsp;ваш&nbsp;Парнас,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7  Gm   Dm </span>
-<span class="txt"> забудьте&nbsp;ваш&nbsp;прогноз,&nbsp;всё&nbsp;это&nbsp;не&nbsp;про&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm  A7   D7 </span>
-<span class="txt"> Фантазий&nbsp;ваших&nbsp;прыть&nbsp;ни&nbsp;к&nbsp;чёрту&nbsp;не&nbsp;годна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Hm </span>
-<span class="txt"> Извольте&nbsp;объяснить,&nbsp;причём&nbsp;тут&nbsp;"никогда"!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Dm </span>
-<span class="txt"> Пускай&nbsp;не&nbsp;месть,&nbsp;не&nbsp;лесть,&nbsp;но&nbsp;что-то&nbsp;в&nbsp;этом&nbsp;есть?&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E   F    Dm </span>
-<span class="txt"> -&nbsp;Конечно,&nbsp;ваша&nbsp;честь,&nbsp;бесспорно,&nbsp;ваша&nbsp;честь...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am  F    E7 </span>
+<span class="line"><span class="txt"> Высок&nbsp;небесный&nbsp;суд.&nbsp;Но&nbsp;низок&nbsp;суд&nbsp;земной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Em </span></span>
+<span class="line"><span class="txt"> И&nbsp;вновь&nbsp;присяжный&nbsp;шут&nbsp;глумится&nbsp;надо&nbsp;мной:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Gm </span></span>
+<span class="line"><span class="txt"> -&nbsp;Оставьте&nbsp;ваш&nbsp;прононс,&nbsp;покиньте&nbsp;ваш&nbsp;Парнас,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7  Gm   Dm </span></span>
+<span class="line"><span class="txt"> забудьте&nbsp;ваш&nbsp;прогноз,&nbsp;всё&nbsp;это&nbsp;не&nbsp;про&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm  A7   D7 </span></span>
+<span class="line"><span class="txt"> Фантазий&nbsp;ваших&nbsp;прыть&nbsp;ни&nbsp;к&nbsp;чёрту&nbsp;не&nbsp;годна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Hm </span></span>
+<span class="line"><span class="txt"> Извольте&nbsp;объяснить,&nbsp;причём&nbsp;тут&nbsp;"никогда"!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Dm </span></span>
+<span class="line"><span class="txt"> Пускай&nbsp;не&nbsp;месть,&nbsp;не&nbsp;лесть,&nbsp;но&nbsp;что-то&nbsp;в&nbsp;этом&nbsp;есть?&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E   F    Dm </span></span>
+<span class="line"><span class="txt"> -&nbsp;Конечно,&nbsp;ваша&nbsp;честь,&nbsp;бесспорно,&nbsp;ваша&nbsp;честь...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am  F    E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;символ&nbsp;высших&nbsp;правд&nbsp;поставлен&nbsp;на&nbsp;"зеро".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Em </span>
-<span class="txt"> Уже&nbsp;заезжий&nbsp;франт&nbsp;оставил&nbsp;казино.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Gm </span>
-<span class="txt"> Уймите&nbsp;вашу&nbsp;стать,&nbsp;умерьте&nbsp;вашу&nbsp;спесь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7  Gm   Dm </span>
-<span class="txt"> Вот-вот&nbsp;начнет&nbsp;светать,&nbsp;мы&nbsp;можем&nbsp;не&nbsp;успеть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm  A7   D7 </span>
-<span class="txt"> Последний&nbsp;ровно&nbsp;в&nbsp;шесть&nbsp;закроется&nbsp;кабак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Hm </span>
-<span class="txt"> Спешите,&nbsp;ваша&nbsp;честь!&nbsp;Снимите&nbsp;ваш&nbsp;колпак!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Dm </span>
-<span class="txt"> На&nbsp;зимней&nbsp;авеню,&nbsp;средь&nbsp;сумрака&nbsp;и&nbsp;льда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E   F    Dm </span>
-<span class="txt"> я&nbsp;сам&nbsp;вам&nbsp;объясню,&nbsp;что&nbsp;значит&nbsp;"никогда"...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am  F    E7 </span>
-<span class="txt"> Что&nbsp;значит&nbsp;"никогда"...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span>
+<span class="line"><span class="txt"> Но&nbsp;символ&nbsp;высших&nbsp;правд&nbsp;поставлен&nbsp;на&nbsp;"зеро".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Em </span></span>
+<span class="line"><span class="txt"> Уже&nbsp;заезжий&nbsp;франт&nbsp;оставил&nbsp;казино.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am       Gm </span></span>
+<span class="line"><span class="txt"> Уймите&nbsp;вашу&nbsp;стать,&nbsp;умерьте&nbsp;вашу&nbsp;спесь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   D7  Gm   Dm </span></span>
+<span class="line"><span class="txt"> Вот-вот&nbsp;начнет&nbsp;светать,&nbsp;мы&nbsp;можем&nbsp;не&nbsp;успеть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb   Dm  A7   D7 </span></span>
+<span class="line"><span class="txt"> Последний&nbsp;ровно&nbsp;в&nbsp;шесть&nbsp;закроется&nbsp;кабак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Hm </span></span>
+<span class="line"><span class="txt"> Спешите,&nbsp;ваша&nbsp;честь!&nbsp;Снимите&nbsp;ваш&nbsp;колпак!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm       Dm </span></span>
+<span class="line"><span class="txt"> На&nbsp;зимней&nbsp;авеню,&nbsp;средь&nbsp;сумрака&nbsp;и&nbsp;льда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   E   F    Dm </span></span>
+<span class="line"><span class="txt"> я&nbsp;сам&nbsp;вам&nbsp;объясню,&nbsp;что&nbsp;значит&nbsp;"никогда"...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B    Am  F    E7 </span></span>
+<span class="line"><span class="txt"> Что&nbsp;значит&nbsp;"никогда"...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1987</span>
-
+<pre><span class="year">1987</span>
 </pre>
+
 
                 </div>
         </div>

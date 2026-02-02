@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -423,50 +431,47 @@ span.c {
 
                     <div class="song"
 data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a\d Dm  e\a  Am E7/G# Am </span>
-<span class="txt"> Однажды&nbsp;думал-думал&nbsp;и&nbsp;придумал&nbsp;я&nbsp;куплет&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7    Dm </span>
-<span class="txt"> о&nbsp;том,&nbsp;что&nbsp;несмотря&nbsp;на&nbsp;окружающую&nbsp;тьму,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span>
-<span class="txt"> стремимся&nbsp;тем&nbsp;не&nbsp;менее&nbsp;мы&nbsp;вырваться&nbsp;на&nbsp;свет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> и&nbsp;даже&nbsp;зрим&nbsp;его,&nbsp;и&nbsp;даже&nbsp;движемся&nbsp;к&nbsp;нему!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> Придумал&nbsp;-&nbsp;и&nbsp;почувствовал,&nbsp;что&nbsp;стали&nbsp;мне&nbsp;милей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 (a b a g f e d c# b b b a) </span>
-<span class="txt"> и&nbsp;воды&nbsp;Днепрогэса,&nbsp;и&nbsp;Турксиба&nbsp;саксаул,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 (a b a g f e d c# b b b a) </span>
-<span class="txt"> и&nbsp;девушка&nbsp;с&nbsp;серпом,&nbsp;и&nbsp;парень&nbsp;с&nbsp;молотом&nbsp;при&nbsp;ней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  A </span>
-<span class="txt"> и&nbsp;вечный&nbsp;бой&nbsp;курантов,&nbsp;и&nbsp;почётный&nbsp;караул...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A  A7 </span>
-<span class="txt"> (И&nbsp;вечный&nbsp;бой,&nbsp;и&nbsp;саксаул,&nbsp;и&nbsp;караул,&nbsp;караул...)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E  Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a\d Dm  e\a  Am E7/G# Am </span></span>
+<span class="line"><span class="txt"> Однажды&nbsp;думал-думал&nbsp;и&nbsp;придумал&nbsp;я&nbsp;куплет&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7    Dm </span></span>
+<span class="line"><span class="txt"> о&nbsp;том,&nbsp;что&nbsp;несмотря&nbsp;на&nbsp;окружающую&nbsp;тьму,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span></span>
+<span class="line"><span class="txt"> стремимся&nbsp;тем&nbsp;не&nbsp;менее&nbsp;мы&nbsp;вырваться&nbsp;на&nbsp;свет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;даже&nbsp;зрим&nbsp;его,&nbsp;и&nbsp;даже&nbsp;движемся&nbsp;к&nbsp;нему!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Придумал&nbsp;-&nbsp;и&nbsp;почувствовал,&nbsp;что&nbsp;стали&nbsp;мне&nbsp;милей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 (a b a g f e d c# b b b a) </span></span>
+<span class="line"><span class="txt"> и&nbsp;воды&nbsp;Днепрогэса,&nbsp;и&nbsp;Турксиба&nbsp;саксаул,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 (a b a g f e d c# b b b a) </span></span>
+<span class="line"><span class="txt"> и&nbsp;девушка&nbsp;с&nbsp;серпом,&nbsp;и&nbsp;парень&nbsp;с&nbsp;молотом&nbsp;при&nbsp;ней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  A </span></span>
+<span class="line"><span class="txt"> и&nbsp;вечный&nbsp;бой&nbsp;курантов,&nbsp;и&nbsp;почётный&nbsp;караул...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A  A7 </span></span>
+<span class="line"><span class="txt"> (И&nbsp;вечный&nbsp;бой,&nbsp;и&nbsp;саксаул,&nbsp;и&nbsp;караул,&nbsp;караул...)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;вдруг&nbsp;мне&nbsp;показалось,&nbsp;что&nbsp;куплет&nbsp;мой&nbsp;-&nbsp;сущий&nbsp;бред,&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7    Dm </span>
-<span class="txt"> и&nbsp;глянул&nbsp;я&nbsp;в&nbsp;блокнот,&nbsp;не&nbsp;понимая&nbsp;ничего.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span>
-<span class="txt"> Мы&nbsp;движемся&nbsp;на&nbsp;свет&nbsp;-&nbsp;слова&nbsp;верны,&nbsp;а&nbsp;смысла&nbsp;нет!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> Нет,&nbsp;что-то&nbsp;здесь&nbsp;пропущено&nbsp;и&nbsp;не&nbsp;уточнено.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> И&nbsp;словно&nbsp;в&nbsp;тёмный&nbsp;ад&nbsp;свалился&nbsp;я&nbsp;из&nbsp;райских&nbsp;кущ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> в&nbsp;душе&nbsp;зашевелились&nbsp;кошки,&nbsp;на&nbsp;сердце&nbsp;-&nbsp;змея...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> И&nbsp;пал&nbsp;я&nbsp;ниц,&nbsp;моля&nbsp;Того,&nbsp;Кто&nbsp;Благ&nbsp;и&nbsp;Всемогущ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  A </span>
-<span class="txt"> открыть,&nbsp;в&nbsp;чём&nbsp;я&nbsp;не&nbsp;прав,&nbsp;-&nbsp;иль&nbsp;вынуть&nbsp;душу&nbsp;из&nbsp;меня!&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A  A7 </span>
-<span class="txt"> (А&nbsp;то&nbsp;в&nbsp;ней&nbsp;кошки,&nbsp;кошки...&nbsp;на&nbsp;сердце&nbsp;-&nbsp;змея,&nbsp;змея...)&nbsp;&nbsp; </span><span class="ch"> Dm  E  Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> В&nbsp;конце&nbsp;концов&nbsp;явился&nbsp;мне&nbsp;спасительный&nbsp;ответ&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7    Dm </span>
-<span class="txt"> и,&nbsp;сам&nbsp;не&nbsp;свой&nbsp;от&nbsp;радости,&nbsp;я&nbsp;вновь&nbsp;полез&nbsp;в&nbsp;блокнот,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span>
-<span class="txt"> нашарил&nbsp;там&nbsp;строку,&nbsp;где&nbsp;"все&nbsp;мы&nbsp;движемся&nbsp;на&nbsp;свет",&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> и&nbsp;перед&nbsp;словом&nbsp;"свет"&nbsp;с&nbsp;размаху&nbsp;вставил&nbsp;слово&nbsp;"тот"!&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> И&nbsp;снова&nbsp;стали&nbsp;милы&nbsp;мне&nbsp;и&nbsp;НЭП,&nbsp;и&nbsp;ГОЭЛРО,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> и&nbsp;караульной&nbsp;службы&nbsp;развесёлое&nbsp;"ать-два",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> и&nbsp;молот&nbsp;Работяги,&nbsp;и&nbsp;Колхозницы&nbsp;бедро,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  A </span>
-<span class="txt"> и&nbsp;вся&nbsp;такая&nbsp;красная-прекрасная&nbsp;Москва...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A  A7 </span>
-<span class="txt"> (Такая&nbsp;красная-прекрасная&nbsp;Москва,&nbsp;Москва...)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E  Am </span>
+<span class="line"><span class="txt"> Но&nbsp;вдруг&nbsp;мне&nbsp;показалось,&nbsp;что&nbsp;куплет&nbsp;мой&nbsp;-&nbsp;сущий&nbsp;бред,&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7    Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;глянул&nbsp;я&nbsp;в&nbsp;блокнот,&nbsp;не&nbsp;понимая&nbsp;ничего.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;движемся&nbsp;на&nbsp;свет&nbsp;-&nbsp;слова&nbsp;верны,&nbsp;а&nbsp;смысла&nbsp;нет!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> Нет,&nbsp;что-то&nbsp;здесь&nbsp;пропущено&nbsp;и&nbsp;не&nbsp;уточнено.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> И&nbsp;словно&nbsp;в&nbsp;тёмный&nbsp;ад&nbsp;свалился&nbsp;я&nbsp;из&nbsp;райских&nbsp;кущ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> в&nbsp;душе&nbsp;зашевелились&nbsp;кошки,&nbsp;на&nbsp;сердце&nbsp;-&nbsp;змея...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;пал&nbsp;я&nbsp;ниц,&nbsp;моля&nbsp;Того,&nbsp;Кто&nbsp;Благ&nbsp;и&nbsp;Всемогущ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  A </span></span>
+<span class="line"><span class="txt"> открыть,&nbsp;в&nbsp;чём&nbsp;я&nbsp;не&nbsp;прав,&nbsp;-&nbsp;иль&nbsp;вынуть&nbsp;душу&nbsp;из&nbsp;меня!&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A  A7 </span></span>
+<span class="line"><span class="txt"> (А&nbsp;то&nbsp;в&nbsp;ней&nbsp;кошки,&nbsp;кошки...&nbsp;на&nbsp;сердце&nbsp;-&nbsp;змея,&nbsp;змея...)&nbsp;&nbsp; </span><span class="ch"> Dm  E  Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> В&nbsp;конце&nbsp;концов&nbsp;явился&nbsp;мне&nbsp;спасительный&nbsp;ответ&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7    Dm </span></span>
+<span class="line"><span class="txt"> и,&nbsp;сам&nbsp;не&nbsp;свой&nbsp;от&nbsp;радости,&nbsp;я&nbsp;вновь&nbsp;полез&nbsp;в&nbsp;блокнот,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span></span>
+<span class="line"><span class="txt"> нашарил&nbsp;там&nbsp;строку,&nbsp;где&nbsp;"все&nbsp;мы&nbsp;движемся&nbsp;на&nbsp;свет",&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;перед&nbsp;словом&nbsp;"свет"&nbsp;с&nbsp;размаху&nbsp;вставил&nbsp;слово&nbsp;"тот"!&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B  Dm6/H E  Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> И&nbsp;снова&nbsp;стали&nbsp;милы&nbsp;мне&nbsp;и&nbsp;НЭП,&nbsp;и&nbsp;ГОЭЛРО,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;караульной&nbsp;службы&nbsp;развесёлое&nbsp;"ать-два",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;молот&nbsp;Работяги,&nbsp;и&nbsp;Колхозницы&nbsp;бедро,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  A </span></span>
+<span class="line"><span class="txt"> и&nbsp;вся&nbsp;такая&nbsp;красная-прекрасная&nbsp;Москва...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A  A7 </span></span>
+<span class="line"><span class="txt"> (Такая&nbsp;красная-прекрасная&nbsp;Москва,&nbsp;Москва...)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E  Am </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1991</span>
-
+<pre><span class="year">1991</span>
 
 </pre>
+
 
                 </div>
         </div>

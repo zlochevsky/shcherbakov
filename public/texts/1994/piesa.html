@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,68 +423,64 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ПЬЕСА</span>
+data-key="Am"><h1>ПЬЕСА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> ...снова&nbsp;она&nbsp;и&nbsp;он.&nbsp;Серый&nbsp;как&nbsp;мир&nbsp;сюжет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Можно&nbsp;не&nbsp;продолжать.&nbsp;Киев,&nbsp;январь,&nbsp;любовь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Свадебный&nbsp;марш,&nbsp;цветы.&nbsp;Утренний&nbsp;сладкий&nbsp;лепет.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> Верю,&nbsp;ты&nbsp;будешь&nbsp;долгим,&nbsp;счастье&nbsp;моё!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    E7 </span>
+<span class="line"><span class="txt"> ...снова&nbsp;она&nbsp;и&nbsp;он.&nbsp;Серый&nbsp;как&nbsp;мир&nbsp;сюжет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Можно&nbsp;не&nbsp;продолжать.&nbsp;Киев,&nbsp;январь,&nbsp;любовь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Свадебный&nbsp;марш,&nbsp;цветы.&nbsp;Утренний&nbsp;сладкий&nbsp;лепет.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> Верю,&nbsp;ты&nbsp;будешь&nbsp;долгим,&nbsp;счастье&nbsp;моё!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Потом&nbsp;он&nbsp;уехал.&nbsp;Куда-то&nbsp;считать&nbsp;вулканы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span>
-<span class="txt"> Сказал,&nbsp;что&nbsp;до&nbsp;марта.&nbsp;Вышло&nbsp;до&nbsp;сентября.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7  Am </span>
-<span class="txt"> Никто&nbsp;не&nbsp;ответит,&nbsp;никто&nbsp;угадать&nbsp;не&nbsp;сможет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span>
-<span class="txt"> чем&nbsp;эти&nbsp;недели&nbsp;жила&nbsp;она,&nbsp;как&nbsp;смотрелась...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7 </span>
+<span class="line"><span class="txt"> Потом&nbsp;он&nbsp;уехал.&nbsp;Куда-то&nbsp;считать&nbsp;вулканы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span></span>
+<span class="line"><span class="txt"> Сказал,&nbsp;что&nbsp;до&nbsp;марта.&nbsp;Вышло&nbsp;до&nbsp;сентября.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7  Am </span></span>
+<span class="line"><span class="txt"> Никто&nbsp;не&nbsp;ответит,&nbsp;никто&nbsp;угадать&nbsp;не&nbsp;сможет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span></span>
+<span class="line"><span class="txt"> чем&nbsp;эти&nbsp;недели&nbsp;жила&nbsp;она,&nbsp;как&nbsp;смотрелась...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Надо&nbsp;бросать&nbsp;перо.&nbsp;Нечего&nbsp;зря&nbsp;скрипеть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Те&nbsp;же&nbsp;она&nbsp;и&nbsp;он.&nbsp;Где&nbsp;бы&nbsp;найти&nbsp;других?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Та&nbsp;же&nbsp;в&nbsp;глазах&nbsp;мольба.&nbsp;Тот&nbsp;же&nbsp;припев&nbsp;под&nbsp;утро.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> Верю,&nbsp;ты&nbsp;будешь&nbsp;долгим,&nbsp;счастье&nbsp;моё!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    E7 </span>
+<span class="line"><span class="txt"> Надо&nbsp;бросать&nbsp;перо.&nbsp;Нечего&nbsp;зря&nbsp;скрипеть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Те&nbsp;же&nbsp;она&nbsp;и&nbsp;он.&nbsp;Где&nbsp;бы&nbsp;найти&nbsp;других?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Та&nbsp;же&nbsp;в&nbsp;глазах&nbsp;мольба.&nbsp;Тот&nbsp;же&nbsp;припев&nbsp;под&nbsp;утро.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> Верю,&nbsp;ты&nbsp;будешь&nbsp;долгим,&nbsp;счастье&nbsp;моё!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Потом&nbsp;он&nbsp;уехал.&nbsp;Индейцев&nbsp;спасать&nbsp;каких-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span>
-<span class="txt"> Ни&nbsp;много,&nbsp;ни&nbsp;мало&nbsp;-&nbsp;на&nbsp;год.&nbsp;Или&nbsp;на&nbsp;полтора.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7  Am </span>
-<span class="txt"> Никто&nbsp;не&nbsp;опишет,&nbsp;никто&nbsp;никогда&nbsp;не&nbsp;скажет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span>
-<span class="txt"> зачем&nbsp;миновали&nbsp;дни&nbsp;её&nbsp;эти,&nbsp;в&nbsp;какую&nbsp;пропасть...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7 </span>
+<span class="line"><span class="txt"> Потом&nbsp;он&nbsp;уехал.&nbsp;Индейцев&nbsp;спасать&nbsp;каких-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span></span>
+<span class="line"><span class="txt"> Ни&nbsp;много,&nbsp;ни&nbsp;мало&nbsp;-&nbsp;на&nbsp;год.&nbsp;Или&nbsp;на&nbsp;полтора.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7  Am </span></span>
+<span class="line"><span class="txt"> Никто&nbsp;не&nbsp;опишет,&nbsp;никто&nbsp;никогда&nbsp;не&nbsp;скажет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span></span>
+<span class="line"><span class="txt"> зачем&nbsp;миновали&nbsp;дни&nbsp;её&nbsp;эти,&nbsp;в&nbsp;какую&nbsp;пропасть...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Надо&nbsp;менять&nbsp;глаза.&nbsp;Всюду&nbsp;она&nbsp;и&nbsp;он,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> ветхие,&nbsp;как&nbsp;Сатурн.&nbsp;Снова&nbsp;висит&nbsp;рассвет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Снова&nbsp;почти&nbsp;чужой,&nbsp;еле&nbsp;знакомый&nbsp;голос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> Верю,&nbsp;не&nbsp;верю,&nbsp;здравствуй,&nbsp;счастье&nbsp;моё!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    E7 </span>
+<span class="line"><span class="txt"> Надо&nbsp;менять&nbsp;глаза.&nbsp;Всюду&nbsp;она&nbsp;и&nbsp;он,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> ветхие,&nbsp;как&nbsp;Сатурн.&nbsp;Снова&nbsp;висит&nbsp;рассвет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Снова&nbsp;почти&nbsp;чужой,&nbsp;еле&nbsp;знакомый&nbsp;голос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> Верю,&nbsp;не&nbsp;верю,&nbsp;здравствуй,&nbsp;счастье&nbsp;моё!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Потом&nbsp;он&nbsp;уехал.&nbsp;Искать&nbsp;Атлантиду,&nbsp;что&nbsp;ли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span>
-<span class="txt"> На&nbsp;целую&nbsp;вечность&nbsp;-&nbsp;и&nbsp;ещё&nbsp;на&nbsp;один&nbsp;день.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7  Am </span>
-<span class="txt"> Её&nbsp;не&nbsp;допросишь,&nbsp;она&nbsp;и&nbsp;сама&nbsp;не&nbsp;знает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span>
-<span class="txt"> во&nbsp;что&nbsp;обошлись&nbsp;ей&nbsp;часы&nbsp;эти&nbsp;все,&nbsp;минуты...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7 </span>
+<span class="line"><span class="txt"> Потом&nbsp;он&nbsp;уехал.&nbsp;Искать&nbsp;Атлантиду,&nbsp;что&nbsp;ли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span></span>
+<span class="line"><span class="txt"> На&nbsp;целую&nbsp;вечность&nbsp;-&nbsp;и&nbsp;ещё&nbsp;на&nbsp;один&nbsp;день.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7  Am </span></span>
+<span class="line"><span class="txt"> Её&nbsp;не&nbsp;допросишь,&nbsp;она&nbsp;и&nbsp;сама&nbsp;не&nbsp;знает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm   Am     Dm </span></span>
+<span class="line"><span class="txt"> во&nbsp;что&nbsp;обошлись&nbsp;ей&nbsp;часы&nbsp;эти&nbsp;все,&nbsp;минуты...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7   D7/F#  F   E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Надо&nbsp;уйти&nbsp;в&nbsp;толпу.&nbsp;И&nbsp;затеряться&nbsp;там.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Хватит&nbsp;стращать&nbsp;людей&nbsp;мраком&nbsp;монастыря.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Здесь&nbsp;не&nbsp;монахов&nbsp;нет.&nbsp;Всяк&nbsp;подчинён&nbsp;уставу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> Веришь,&nbsp;не&nbsp;веришь,&nbsp;бедствуй,&nbsp;пой,&nbsp;уповай...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    E7 </span>
+<span class="line"><span class="txt"> Надо&nbsp;уйти&nbsp;в&nbsp;толпу.&nbsp;И&nbsp;затеряться&nbsp;там.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Хватит&nbsp;стращать&nbsp;людей&nbsp;мраком&nbsp;монастыря.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Здесь&nbsp;не&nbsp;монахов&nbsp;нет.&nbsp;Всяк&nbsp;подчинён&nbsp;уставу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> Веришь,&nbsp;не&nbsp;веришь,&nbsp;бедствуй,&nbsp;пой,&nbsp;уповай...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B    E7 </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1994</span>
-
+<pre><span class="year">1994</span>
 
 
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,20 +423,20 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Gm"><span class="sng-title">До поезда</span>
+data-key="Gm"><h1>До поезда</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> До&nbsp;поезда&nbsp;ещё&nbsp;минута.&nbsp;Ещё&nbsp;минута&nbsp;-&nbsp;и&nbsp;прощай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm D7/F# Gm G Cm </span>
-<span class="txt"> В&nbsp;кармане&nbsp;дребезжит&nbsp;валюта.&nbsp;Отдашь&nbsp;проводнику&nbsp;за&nbsp;чай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Cm/A Gm Eb/Db Cm D7/F# Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> Как&nbsp;волны&nbsp;люди&nbsp;все&nbsp;и&nbsp;вещи:&nbsp;с&nbsp;какой&nbsp;ни&nbsp;глянешь&nbsp;стороны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm... </span>
+<span class="line"><span class="txt"> До&nbsp;поезда&nbsp;ещё&nbsp;минута.&nbsp;Ещё&nbsp;минута&nbsp;-&nbsp;и&nbsp;прощай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm D7/F# Gm G Cm </span></span>
+<span class="line"><span class="txt"> В&nbsp;кармане&nbsp;дребезжит&nbsp;валюта.&nbsp;Отдашь&nbsp;проводнику&nbsp;за&nbsp;чай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Cm/A Gm Eb/Db Cm D7/F# Gm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Как&nbsp;волны&nbsp;люди&nbsp;все&nbsp;и&nbsp;вещи:&nbsp;с&nbsp;какой&nbsp;ни&nbsp;глянешь&nbsp;стороны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm... </span></span>
 <span class="txt"> одна&nbsp;волна&nbsp;другой&nbsp;не&nbsp;хлеще.&nbsp;Со&nbsp;всех&nbsp;они&nbsp;сторон&nbsp;равны. </span>
 <span class="txt">  </span>
  <br />
@@ -448,19 +456,16 @@ data-key="Gm"><span class="sng-title">До поезда</span>
 <span class="txt"> Куда&nbsp;ты&nbsp;от&nbsp;всего&nbsp;уедешь,&nbsp;когда&nbsp;оно&nbsp;со&nbsp;всех&nbsp;сторон? </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> До&nbsp;поезда&nbsp;ещё&nbsp;минута.&nbsp;Не&nbsp;поздно&nbsp;поменять&nbsp;билет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm... </span>
-<span class="txt"> Но&nbsp;запах&nbsp;дыма&nbsp;и&nbsp;мазута&nbsp;давно&nbsp;уже&nbsp;объял&nbsp;весь&nbsp;свет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Cm/A Gm Eb/Db Cm D7/F# G </span>
-<span class="txt"> И&nbsp;ветры&nbsp;завывают&nbsp;люто.&nbsp;И&nbsp;от&nbsp;судеб&nbsp;защиты&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Cm/A Gm Eb/Db Cm D7/F# Gm </span>
+<span class="line"><span class="txt"> До&nbsp;поезда&nbsp;ещё&nbsp;минута.&nbsp;Не&nbsp;поздно&nbsp;поменять&nbsp;билет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm... </span></span>
+<span class="line"><span class="txt"> Но&nbsp;запах&nbsp;дыма&nbsp;и&nbsp;мазута&nbsp;давно&nbsp;уже&nbsp;объял&nbsp;весь&nbsp;свет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Cm/A Gm Eb/Db Cm D7/F# G </span></span>
+<span class="line"><span class="txt"> И&nbsp;ветры&nbsp;завывают&nbsp;люто.&nbsp;И&nbsp;от&nbsp;судеб&nbsp;защиты&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Cm/A Gm Eb/Db Cm D7/F# Gm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2004</span>                                                      Условная нотировка по исполнению <span class="year">2004</span> года.
-
+<pre><span class="year">2004</span>                                                      Условная нотировка по исполнению <span class="year">2004</span> года.
 
 </pre>
+
 
                 </div>
         </div>

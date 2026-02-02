@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,73 +423,71 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">БУТАФОР</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  F#dim Em/(E-D-C#) Hm/(F#-F#-F#) </span>
-<span class="txt"> Где&nbsp;служит,&nbsp;не&nbsp;разглашал.&nbsp;А&nbsp;если&nbsp;спрашивали&nbsp;в&nbsp;упор,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span>
-<span class="txt"> тружусь,&nbsp;говорил,&nbsp;в&nbsp;театре&nbsp;для&nbsp;юных&nbsp;зрителей,&nbsp;бутафор.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
-<span class="txt"> Не&nbsp;верил&nbsp;ему&nbsp;никто,&nbsp;а&nbsp;он&nbsp;никого&nbsp;и&nbsp;не&nbsp;уверял.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span>
-<span class="txt"> Вставал&nbsp;и&nbsp;шагал&nbsp;на&nbsp;службу,&nbsp;где,&nbsp;кстати,&nbsp;тоже&nbsp;всё&nbsp;время&nbsp;врал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> На&nbsp;службе&nbsp;и&nbsp;полагалось&nbsp;врать,&nbsp;но&nbsp;он&nbsp;превышал&nbsp;лимит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  Fdim </span>
-<span class="txt"> На&nbsp;сто&nbsp;рублей&nbsp;нагеройствует,&nbsp;на&nbsp;тысячу&nbsp;сочинит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m  A# </span>
-<span class="txt"> Опасностями&nbsp;манкировал,&nbsp;увечьями&nbsp;обрастал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H  G#m </span>
-<span class="txt"> Придуманными&nbsp;—&nbsp;покуда&nbsp;и&nbsp;в&nbsp;самом&nbsp;деле&nbsp;не&nbsp;схлопотал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m  Bm  D#m </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Коснулся-таки&nbsp;интимных&nbsp;чьих-то&nbsp;струн&nbsp;или&nbsp;круглых&nbsp;сумм&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span>
-<span class="txt"> и&nbsp;девять&nbsp;грамм&nbsp;отшибли&nbsp;ему&nbsp;его&nbsp;бутафорский&nbsp;ум.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
-<span class="txt"> Как&nbsp;если&nbsp;бы&nbsp;напоказ,&nbsp;для&nbsp;юных&nbsp;зрителей&nbsp;всех&nbsp;времён,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span>
-<span class="txt"> с&nbsp;размаху&nbsp;по&nbsp;голове&nbsp;отметил&nbsp;шельму&nbsp;бог&nbsp;Аполлон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Сам&nbsp;ли&nbsp;бог&nbsp;его&nbsp;проучил,&nbsp;посланцам&nbsp;ли&nbsp;поручил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  D7/F# </span>
-<span class="txt"> но&nbsp;шельма&nbsp;голову&nbsp;долго&nbsp;лечил,&nbsp;да&nbsp;так&nbsp;и&nbsp;не&nbsp;долечил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C# </span>
-<span class="txt"> Сильно&nbsp;сдал,&nbsp;ушёл&nbsp;с&nbsp;пониженьем&nbsp;из&nbsp;отдела&nbsp;в&nbsp;отдел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm  G </span>
-<span class="txt"> Наконец&nbsp;—&nbsp;отовсюду&nbsp;вычеркнули.&nbsp;Утомил,&nbsp;надоел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C7 Fm  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
-<span class="txt"> Такого-то&nbsp;октября-ноября...&nbsp;не&nbsp;важно,&nbsp;какого&nbsp;«бря»,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span>
-<span class="txt"> поздравили&nbsp;пострадавшего&nbsp;—&nbsp;и&nbsp;сбросили&nbsp;с&nbsp;корабля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
-<span class="txt"> Но&nbsp;максимум&nbsp;через&nbsp;месяц,&nbsp;приблизительно,&nbsp;минус-плюс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span>
-<span class="txt"> на&nbsp;среднюю&nbsp;ставку&nbsp;взяли&nbsp;его&nbsp;—&nbsp;действительно&nbsp;в&nbsp;детский&nbsp;тюз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Уж&nbsp;ладно,&nbsp;не&nbsp;в&nbsp;бутафоры,&nbsp;хоть&nbsp;в&nbsp;помощники,&nbsp;гран-мерси.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  Fdim </span>
-<span class="txt"> Обидными&nbsp;не&nbsp;казались&nbsp;ему&nbsp;слова&nbsp;«подай-принеси».&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m  A# </span>
-<span class="txt"> Геройство,&nbsp;понятно,&nbsp;побоку.&nbsp;И&nbsp;заработки&nbsp;не&nbsp;те.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H  G#m </span>
-<span class="txt"> Но&nbsp;к&nbsp;новой&nbsp;службе&nbsp;он&nbsp;прикипел&nbsp;во&nbsp;всей&nbsp;её&nbsp;полноте.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m  Bm  D#m </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Особенно&nbsp;полюбил&nbsp;—&nbsp;тайком,&nbsp;когда&nbsp;отзвенят&nbsp;звонки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span>
-<span class="txt"> пред&nbsp;зеркалом&nbsp;примерять&nbsp;и&nbsp;клеить&nbsp;бороды-парики.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
-<span class="txt"> Заимствовал&nbsp;маскировку&nbsp;он&nbsp;на&nbsp;складе&nbsp;и&nbsp;в&nbsp;мастерской.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span>
-<span class="txt"> Сперва&nbsp;кое-как&nbsp;отваживали,&nbsp;потом&nbsp;махнули&nbsp;рукой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Ну,&nbsp;приклеит,&nbsp;ну,&nbsp;позабудет&nbsp;снять,&nbsp;невеликий&nbsp;стыд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  D7/F# </span>
-<span class="txt"> В&nbsp;метро&nbsp;париком&nbsp;напудренным&nbsp;сограждан&nbsp;развеселит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C# </span>
-<span class="txt"> В&nbsp;дом&nbsp;родной&nbsp;в&nbsp;седой&nbsp;бороде&nbsp;придёт,&nbsp;откроет,&nbsp;войдёт&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm  G </span>
-<span class="txt"> малыши&nbsp;подбегут,&nbsp;обрадуются:&nbsp;Новый&nbsp;год!&nbsp;Новый&nbsp;год!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C7 Fm  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span>
-<span class="txt"> Все&nbsp;рады,&nbsp;а&nbsp;мне&nbsp;тоскливо,&nbsp;и&nbsp;на&nbsp;душе&nbsp;леденящий&nbsp;след.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span>
-<span class="txt"> Живёшь&nbsp;вот&nbsp;так&nbsp;и&nbsp;не&nbsp;знаешь,&nbsp;где&nbsp;анекдот,&nbsp;а&nbsp;где&nbsp;уже&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
-<span class="txt"> И&nbsp;дело&nbsp;даже&nbsp;не&nbsp;в&nbsp;заработке,&nbsp;тем&nbsp;паче&nbsp;—&nbsp;не&nbsp;в&nbsp;бороде,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span>
-<span class="txt"> а&nbsp;в&nbsp;том,&nbsp;что&nbsp;вот&nbsp;так&nbsp;живёшь&nbsp;и&nbsp;не&nbsp;знаешь,&nbsp;где...&nbsp;и&nbsp;не&nbsp;знаешь,&nbsp;где.&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span>
-<span class="txt"> &nbsp; </span>
+data-key="Hm"><h1>БУТАФОР</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  F#dim Em/(E-D-C#) Hm/(F#-F#-F#) </span></span>
+<span class="line"><span class="txt"> Где&nbsp;служит,&nbsp;не&nbsp;разглашал.&nbsp;А&nbsp;если&nbsp;спрашивали&nbsp;в&nbsp;упор,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span></span>
+<span class="line"><span class="txt"> тружусь,&nbsp;говорил,&nbsp;в&nbsp;театре&nbsp;для&nbsp;юных&nbsp;зрителей,&nbsp;бутафор.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
+<span class="line"><span class="txt"> Не&nbsp;верил&nbsp;ему&nbsp;никто,&nbsp;а&nbsp;он&nbsp;никого&nbsp;и&nbsp;не&nbsp;уверял.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span></span>
+<span class="line"><span class="txt"> Вставал&nbsp;и&nbsp;шагал&nbsp;на&nbsp;службу,&nbsp;где,&nbsp;кстати,&nbsp;тоже&nbsp;всё&nbsp;время&nbsp;врал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> На&nbsp;службе&nbsp;и&nbsp;полагалось&nbsp;врать,&nbsp;но&nbsp;он&nbsp;превышал&nbsp;лимит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  Fdim </span></span>
+<span class="line"><span class="txt"> На&nbsp;сто&nbsp;рублей&nbsp;нагеройствует,&nbsp;на&nbsp;тысячу&nbsp;сочинит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m  A# </span></span>
+<span class="line"><span class="txt"> Опасностями&nbsp;манкировал,&nbsp;увечьями&nbsp;обрастал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H  G#m </span></span>
+<span class="line"><span class="txt"> Придуманными&nbsp;—&nbsp;покуда&nbsp;и&nbsp;в&nbsp;самом&nbsp;деле&nbsp;не&nbsp;схлопотал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m  Bm  D#m </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Коснулся-таки&nbsp;интимных&nbsp;чьих-то&nbsp;струн&nbsp;или&nbsp;круглых&nbsp;сумм&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;девять&nbsp;грамм&nbsp;отшибли&nbsp;ему&nbsp;его&nbsp;бутафорский&nbsp;ум.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
+<span class="line"><span class="txt"> Как&nbsp;если&nbsp;бы&nbsp;напоказ,&nbsp;для&nbsp;юных&nbsp;зрителей&nbsp;всех&nbsp;времён,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span></span>
+<span class="line"><span class="txt"> с&nbsp;размаху&nbsp;по&nbsp;голове&nbsp;отметил&nbsp;шельму&nbsp;бог&nbsp;Аполлон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Сам&nbsp;ли&nbsp;бог&nbsp;его&nbsp;проучил,&nbsp;посланцам&nbsp;ли&nbsp;поручил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  D7/F# </span></span>
+<span class="line"><span class="txt"> но&nbsp;шельма&nbsp;голову&nbsp;долго&nbsp;лечил,&nbsp;да&nbsp;так&nbsp;и&nbsp;не&nbsp;долечил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C# </span></span>
+<span class="line"><span class="txt"> Сильно&nbsp;сдал,&nbsp;ушёл&nbsp;с&nbsp;пониженьем&nbsp;из&nbsp;отдела&nbsp;в&nbsp;отдел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm  G </span></span>
+<span class="line"><span class="txt"> Наконец&nbsp;—&nbsp;отовсюду&nbsp;вычеркнули.&nbsp;Утомил,&nbsp;надоел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C7 Fm  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
+<span class="line"><span class="txt"> Такого-то&nbsp;октября-ноября...&nbsp;не&nbsp;важно,&nbsp;какого&nbsp;«бря»,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span></span>
+<span class="line"><span class="txt"> поздравили&nbsp;пострадавшего&nbsp;—&nbsp;и&nbsp;сбросили&nbsp;с&nbsp;корабля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;максимум&nbsp;через&nbsp;месяц,&nbsp;приблизительно,&nbsp;минус-плюс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span></span>
+<span class="line"><span class="txt"> на&nbsp;среднюю&nbsp;ставку&nbsp;взяли&nbsp;его&nbsp;—&nbsp;действительно&nbsp;в&nbsp;детский&nbsp;тюз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Уж&nbsp;ладно,&nbsp;не&nbsp;в&nbsp;бутафоры,&nbsp;хоть&nbsp;в&nbsp;помощники,&nbsp;гран-мерси.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  Fdim </span></span>
+<span class="line"><span class="txt"> Обидными&nbsp;не&nbsp;казались&nbsp;ему&nbsp;слова&nbsp;«подай-принеси».&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m  A# </span></span>
+<span class="line"><span class="txt"> Геройство,&nbsp;понятно,&nbsp;побоку.&nbsp;И&nbsp;заработки&nbsp;не&nbsp;те.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H  G#m </span></span>
+<span class="line"><span class="txt"> Но&nbsp;к&nbsp;новой&nbsp;службе&nbsp;он&nbsp;прикипел&nbsp;во&nbsp;всей&nbsp;её&nbsp;полноте.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m  Bm  D#m </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Особенно&nbsp;полюбил&nbsp;—&nbsp;тайком,&nbsp;когда&nbsp;отзвенят&nbsp;звонки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span></span>
+<span class="line"><span class="txt"> пред&nbsp;зеркалом&nbsp;примерять&nbsp;и&nbsp;клеить&nbsp;бороды-парики.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
+<span class="line"><span class="txt"> Заимствовал&nbsp;маскировку&nbsp;он&nbsp;на&nbsp;складе&nbsp;и&nbsp;в&nbsp;мастерской.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span></span>
+<span class="line"><span class="txt"> Сперва&nbsp;кое-как&nbsp;отваживали,&nbsp;потом&nbsp;махнули&nbsp;рукой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Ну,&nbsp;приклеит,&nbsp;ну,&nbsp;позабудет&nbsp;снять,&nbsp;невеликий&nbsp;стыд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  D7/F# </span></span>
+<span class="line"><span class="txt"> В&nbsp;метро&nbsp;париком&nbsp;напудренным&nbsp;сограждан&nbsp;развеселит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C# </span></span>
+<span class="line"><span class="txt"> В&nbsp;дом&nbsp;родной&nbsp;в&nbsp;седой&nbsp;бороде&nbsp;придёт,&nbsp;откроет,&nbsp;войдёт&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm  G </span></span>
+<span class="line"><span class="txt"> малыши&nbsp;подбегут,&nbsp;обрадуются:&nbsp;Новый&nbsp;год!&nbsp;Новый&nbsp;год!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C7 Fm  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F# </span></span>
+<span class="line"><span class="txt"> Все&nbsp;рады,&nbsp;а&nbsp;мне&nbsp;тоскливо,&nbsp;и&nbsp;на&nbsp;душе&nbsp;леденящий&nbsp;след.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span></span>
+<span class="line"><span class="txt"> Живёшь&nbsp;вот&nbsp;так&nbsp;и&nbsp;не&nbsp;знаешь,&nbsp;где&nbsp;анекдот,&nbsp;а&nbsp;где&nbsp;уже&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
+<span class="line"><span class="txt"> И&nbsp;дело&nbsp;даже&nbsp;не&nbsp;в&nbsp;заработке,&nbsp;тем&nbsp;паче&nbsp;—&nbsp;не&nbsp;в&nbsp;бороде,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em </span></span>
+<span class="line"><span class="txt"> а&nbsp;в&nbsp;том,&nbsp;что&nbsp;вот&nbsp;так&nbsp;живёшь&nbsp;и&nbsp;не&nbsp;знаешь,&nbsp;где...&nbsp;и&nbsp;не&nbsp;знаешь,&nbsp;где.&nbsp;&nbsp; </span><span class="ch"> Em  F#  Hm </span></span>
+<span class="txt">  </span>
 	 <br />
-<span class="txt"> Живешь&nbsp;-&nbsp;и&nbsp;не&nbsp;знаешь&nbsp;где!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7/G# G Hm F#m Hm </span>
+<span class="line"><span class="txt"> Живешь&nbsp;-&nbsp;и&nbsp;не&nbsp;знаешь&nbsp;где!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7/G# G Hm F#m Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> басы A-G#  G#-G E F#   F#-F#  Hm </span>
-<span class="txt"> &nbsp; </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> басы A-G#  G#-G E F#   F#-F#  Hm </span></span>
+<span class="txt">  </span>
 	 <br />
-
 </div>
-<pre>
-    <span class="year">2022</span>
-
+<pre><span class="year">2022</span>
 </pre>
+
 
                 </div>
         </div>

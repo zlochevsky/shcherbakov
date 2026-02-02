@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -423,81 +431,77 @@ span.c {
 
                     <div class="song"
 data-key="D"><span class="txt"> *&nbsp;*&nbsp;* </span>
-<span class="txt"> Отчего&nbsp;в&nbsp;России&nbsp;мало&nbsp;авторских&nbsp;талантов? </span>
-<span class="txt"> Карамзин </span>
-<span class="txt"> 1 </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Отчего&nbsp;в&nbsp;России&nbsp;мало&nbsp;авторских&nbsp;талантов? </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Карамзин </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;1 </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мой&nbsp;несчастный&nbsp;друг,&nbsp;господин&nbsp;Н.Н.,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span>
-<span class="txt"> не&nbsp;попасть&nbsp;тебе&nbsp;на&nbsp;скрижаль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7 Hm </span>
-<span class="txt"> Пролетит&nbsp;твой&nbsp;век,&nbsp;и&nbsp;забвенья&nbsp;тлен&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span>
-<span class="txt"> поглотит&nbsp;тебя,&nbsp;как&nbsp;ни&nbsp;жаль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7     Hm </span>
+<span class="line"><span class="txt"> Мой&nbsp;несчастный&nbsp;друг,&nbsp;господин&nbsp;Н.Н.,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;попасть&nbsp;тебе&nbsp;на&nbsp;скрижаль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7 Hm </span></span>
+<span class="line"><span class="txt"> Пролетит&nbsp;твой&nbsp;век,&nbsp;и&nbsp;забвенья&nbsp;тлен&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span></span>
+<span class="line"><span class="txt"> поглотит&nbsp;тебя,&nbsp;как&nbsp;ни&nbsp;жаль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7     Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;возник&nbsp;в&nbsp;тебе&nbsp;ни&nbsp;второй&nbsp;Вольтер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span>
-<span class="txt"> ни&nbsp;тем&nbsp;более,&nbsp;Робеспьер...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span>
-<span class="txt"> А&nbsp;служил&nbsp;бы&nbsp;ты&nbsp;в&nbsp;юнкерах,&nbsp;мон&nbsp;шер,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span>
-<span class="txt"> офицер&nbsp;бы&nbsp;стал,&nbsp;например.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span>
+<span class="line"><span class="txt"> Не&nbsp;возник&nbsp;в&nbsp;тебе&nbsp;ни&nbsp;второй&nbsp;Вольтер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span></span>
+<span class="line"><span class="txt"> ни&nbsp;тем&nbsp;более,&nbsp;Робеспьер...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span></span>
+<span class="line"><span class="txt"> А&nbsp;служил&nbsp;бы&nbsp;ты&nbsp;в&nbsp;юнкерах,&nbsp;мон&nbsp;шер,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span></span>
+<span class="line"><span class="txt"> офицер&nbsp;бы&nbsp;стал,&nbsp;например.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;тайном&nbsp;обществе&nbsp;словеса&nbsp;бы&nbsp;плёл&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span>
-<span class="txt"> о&nbsp;монархии&nbsp;и&nbsp;добре.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7 Hm </span>
-<span class="txt"> Ну&nbsp;а&nbsp;там&nbsp;-&nbsp;как&nbsp;знать?&nbsp;-&nbsp;и&nbsp;войска&nbsp;бы&nbsp;вёл&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span>
-<span class="txt"> на&nbsp;Сенатскую,&nbsp;в&nbsp;декабре.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7     Hm </span>
+<span class="line"><span class="txt"> В&nbsp;тайном&nbsp;обществе&nbsp;словеса&nbsp;бы&nbsp;плёл&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span></span>
+<span class="line"><span class="txt"> о&nbsp;монархии&nbsp;и&nbsp;добре.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7 Hm </span></span>
+<span class="line"><span class="txt"> Ну&nbsp;а&nbsp;там&nbsp;-&nbsp;как&nbsp;знать?&nbsp;-&nbsp;и&nbsp;войска&nbsp;бы&nbsp;вёл&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span></span>
+<span class="line"><span class="txt"> на&nbsp;Сенатскую,&nbsp;в&nbsp;декабре.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7     Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Проявил&nbsp;бы&nbsp;пыл,&nbsp;за&nbsp;других&nbsp;скорбя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span>
-<span class="txt"> доказал&nbsp;бы,&nbsp;что&nbsp;гражданин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span>
-<span class="txt"> И&nbsp;тотчас&nbsp;же&nbsp;враз&nbsp;-&nbsp;под&nbsp;арест&nbsp;тебя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span>
-<span class="txt"> в&nbsp;каземат&nbsp;тебя,&nbsp;в&nbsp;равелин!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span>
+<span class="line"><span class="txt"> Проявил&nbsp;бы&nbsp;пыл,&nbsp;за&nbsp;других&nbsp;скорбя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span></span>
+<span class="line"><span class="txt"> доказал&nbsp;бы,&nbsp;что&nbsp;гражданин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span></span>
+<span class="line"><span class="txt"> И&nbsp;тотчас&nbsp;же&nbsp;враз&nbsp;-&nbsp;под&nbsp;арест&nbsp;тебя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span></span>
+<span class="line"><span class="txt"> в&nbsp;каземат&nbsp;тебя,&nbsp;в&nbsp;равелин!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;тюрьма&nbsp;-&nbsp;не&nbsp;рай,&nbsp;и&nbsp;Сибирь&nbsp;-&nbsp;не&nbsp;мёд,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span>
-<span class="txt"> но&nbsp;зато&nbsp;почёт&nbsp;меж&nbsp;людьми,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7 Hm </span>
-<span class="txt"> что&nbsp;и&nbsp;век&nbsp;живёт,&nbsp;и&nbsp;другой&nbsp;не&nbsp;мрёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span>
-<span class="txt"> Не&nbsp;в&nbsp;дворянстве&nbsp;суть,&nbsp;ты&nbsp;пойми.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7     Hm </span>
+<span class="line"><span class="txt"> И&nbsp;тюрьма&nbsp;-&nbsp;не&nbsp;рай,&nbsp;и&nbsp;Сибирь&nbsp;-&nbsp;не&nbsp;мёд,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span></span>
+<span class="line"><span class="txt"> но&nbsp;зато&nbsp;почёт&nbsp;меж&nbsp;людьми,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7 Hm </span></span>
+<span class="line"><span class="txt"> что&nbsp;и&nbsp;век&nbsp;живёт,&nbsp;и&nbsp;другой&nbsp;не&nbsp;мрёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span></span>
+<span class="line"><span class="txt"> Не&nbsp;в&nbsp;дворянстве&nbsp;суть,&nbsp;ты&nbsp;пойми.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7     Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;мужик&nbsp;иной,&nbsp;хоть&nbsp;и&nbsp;вечный&nbsp;раб,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span>
-<span class="txt"> хоть&nbsp;и&nbsp;глуп&nbsp;и&nbsp;слаб,&nbsp;хоть&nbsp;и&nbsp;вор,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span>
-<span class="txt"> А&nbsp;глядишь,&nbsp;восстал,&nbsp;да&nbsp;и&nbsp;стал&nbsp;-&nbsp;сатрап!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span>
-<span class="txt"> Косолап&nbsp;кацап,&nbsp;но&nbsp;хитёр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span>
+<span class="line"><span class="txt"> И&nbsp;мужик&nbsp;иной,&nbsp;хоть&nbsp;и&nbsp;вечный&nbsp;раб,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span></span>
+<span class="line"><span class="txt"> хоть&nbsp;и&nbsp;глуп&nbsp;и&nbsp;слаб,&nbsp;хоть&nbsp;и&nbsp;вор,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span></span>
+<span class="line"><span class="txt"> А&nbsp;глядишь,&nbsp;восстал,&nbsp;да&nbsp;и&nbsp;стал&nbsp;-&nbsp;сатрап!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span></span>
+<span class="line"><span class="txt"> Косолап&nbsp;кацап,&nbsp;но&nbsp;хитёр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;казнят&nbsp;его,&nbsp;и&nbsp;ведут&nbsp;в&nbsp;острог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span>
-<span class="txt"> и&nbsp;в&nbsp;клочки&nbsp;его,&nbsp;и&nbsp;в&nbsp;кнуты...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7 Hm </span>
-<span class="txt"> Но&nbsp;и&nbsp;он&nbsp;герой!&nbsp;Только&nbsp;ты&nbsp;не&nbsp;смог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span>
-<span class="txt"> только&nbsp;ты&nbsp;один,&nbsp;только&nbsp;ты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7     Hm </span>
+<span class="line"><span class="txt"> И&nbsp;казнят&nbsp;его,&nbsp;и&nbsp;ведут&nbsp;в&nbsp;острог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;в&nbsp;клочки&nbsp;его,&nbsp;и&nbsp;в&nbsp;кнуты...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7 Hm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;и&nbsp;он&nbsp;герой!&nbsp;Только&nbsp;ты&nbsp;не&nbsp;смог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span></span>
+<span class="line"><span class="txt"> только&nbsp;ты&nbsp;один,&nbsp;только&nbsp;ты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7     Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;свергал&nbsp;столпов,&nbsp;не&nbsp;крушил&nbsp;кладбищ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span>
-<span class="txt"> мимо&nbsp;войн&nbsp;прошёл,&nbsp;не&nbsp;задет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span>
-<span class="txt"> Проиграл&nbsp;бы&nbsp;хоть,&nbsp;что&nbsp;ли,&nbsp;двести&nbsp;тыщ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span>
-<span class="txt"> государственных,&nbsp;-&nbsp;так&nbsp;ведь&nbsp;нет!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span>
+<span class="line"><span class="txt"> Не&nbsp;свергал&nbsp;столпов,&nbsp;не&nbsp;крушил&nbsp;кладбищ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span></span>
+<span class="line"><span class="txt"> мимо&nbsp;войн&nbsp;прошёл,&nbsp;не&nbsp;задет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span></span>
+<span class="line"><span class="txt"> Проиграл&nbsp;бы&nbsp;хоть,&nbsp;что&nbsp;ли,&nbsp;двести&nbsp;тыщ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span></span>
+<span class="line"><span class="txt"> государственных,&nbsp;-&nbsp;так&nbsp;ведь&nbsp;нет!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;потомок&nbsp;твой,&nbsp;жизнь&nbsp;отдав&nbsp;борьбе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span>
-<span class="txt"> образцом&nbsp;тебя&nbsp;не&nbsp;сочтёт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7 Hm </span>
-<span class="txt"> И&nbsp;поэт&nbsp;иных&nbsp;предпочтёт&nbsp;тебе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span>
-<span class="txt"> и&nbsp;историк&nbsp;пренебрежёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7     Hm </span>
+<span class="line"><span class="txt"> И&nbsp;потомок&nbsp;твой,&nbsp;жизнь&nbsp;отдав&nbsp;борьбе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span></span>
+<span class="line"><span class="txt"> образцом&nbsp;тебя&nbsp;не&nbsp;сочтёт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7 Hm </span></span>
+<span class="line"><span class="txt"> И&nbsp;поэт&nbsp;иных&nbsp;предпочтёт&nbsp;тебе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G   D   Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;историк&nbsp;пренебрежёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     F#7     Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Разгребать&nbsp;никто&nbsp;не&nbsp;пойдёт&nbsp;руин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span>
-<span class="txt"> в&nbsp;коих&nbsp;ты&nbsp;исчез&nbsp;без&nbsp;следа.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span>
-<span class="txt"> Только&nbsp;я&nbsp;один,&nbsp;как&nbsp;всегда,&nbsp;один,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span>
-<span class="txt"> только&nbsp;я&nbsp;один,&nbsp;как&nbsp;всегда...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span>
+<span class="line"><span class="txt"> Разгребать&nbsp;никто&nbsp;не&nbsp;пойдёт&nbsp;руин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span></span>
+<span class="line"><span class="txt"> в&nbsp;коих&nbsp;ты&nbsp;исчез&nbsp;без&nbsp;следа.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span></span>
+<span class="line"><span class="txt"> Только&nbsp;я&nbsp;один,&nbsp;как&nbsp;всегда,&nbsp;один,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Hm </span></span>
+<span class="line"><span class="txt"> только&nbsp;я&nbsp;один,&nbsp;как&nbsp;всегда...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7    Hm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1989</span>
-
+<pre><span class="year">1989</span>
 
 
 </pre>
+
 
                 </div>
         </div>

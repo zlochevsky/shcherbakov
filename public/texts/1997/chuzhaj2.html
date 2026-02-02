@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,33 +423,33 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ЧУЖАЯ МУЗЫКА 2</span>
+data-key="Am"><h1>ЧУЖАЯ МУЗЫКА 2</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всё&nbsp;сбылось,&nbsp;кроме&nbsp;двух&nbsp;там,&nbsp;трёх,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> четырёх&nbsp;больших&nbsp;кутежей.&nbsp;Оно&nbsp;бы&nbsp;и&nbsp;ладно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  E   A7  Dm </span>
-<span class="txt"> Досада&nbsp;не&nbsp;в&nbsp;том.&nbsp;Досада&nbsp;смотреть&nbsp;и&nbsp;видеть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E </span>
-<span class="txt"> как&nbsp;-&nbsp;блестящ,&nbsp;серебрист,&nbsp;как&nbsp;Вера&nbsp;Холодная&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span>
-<span class="txt"> или&nbsp;там&nbsp;кто&nbsp;-&nbsp;прошёл,&nbsp;не&nbsp;вернётся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A7  Dm </span>
-<span class="txt"> Ну&nbsp;да,&nbsp;человек.&nbsp;Или&nbsp;закат,&nbsp;не&nbsp;знаю...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E </span>
+<span class="line"><span class="txt"> Всё&nbsp;сбылось,&nbsp;кроме&nbsp;двух&nbsp;там,&nbsp;трёх,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> четырёх&nbsp;больших&nbsp;кутежей.&nbsp;Оно&nbsp;бы&nbsp;и&nbsp;ладно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  E   A7  Dm </span></span>
+<span class="line"><span class="txt"> Досада&nbsp;не&nbsp;в&nbsp;том.&nbsp;Досада&nbsp;смотреть&nbsp;и&nbsp;видеть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E </span></span>
+<span class="line"><span class="txt"> как&nbsp;-&nbsp;блестящ,&nbsp;серебрист,&nbsp;как&nbsp;Вера&nbsp;Холодная&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span></span>
+<span class="line"><span class="txt"> или&nbsp;там&nbsp;кто&nbsp;-&nbsp;прошёл,&nbsp;не&nbsp;вернётся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A7  Dm </span></span>
+<span class="line"><span class="txt"> Ну&nbsp;да,&nbsp;человек.&nbsp;Или&nbsp;закат,&nbsp;не&nbsp;знаю...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;Альпах&nbsp;был,&nbsp;в&nbsp;Алабаме&nbsp;был,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> в&nbsp;Аргентине,&nbsp;в&nbsp;Арктике&nbsp;-&nbsp;был.&nbsp;В&nbsp;Венеции&nbsp;-&nbsp;не&nbsp;был.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  G   C7  Fm </span>
-<span class="txt"> Такая&nbsp;беда.&nbsp;Дивный,&nbsp;должно&nbsp;быть,&nbsp;город.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  G </span>
-<span class="txt"> Мимо&nbsp;всюду&nbsp;сновал&nbsp;жандарм,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> ибо&nbsp;что&nbsp;он,&nbsp;если&nbsp;не&nbsp;я?&nbsp;Прискорбное&nbsp;сходство.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  G   C7  Fm </span>
-<span class="txt"> И&nbsp;тождество&nbsp;тож.&nbsp;Однако&nbsp;закат&nbsp;прискорбней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  G </span>
+<span class="line"><span class="txt"> В&nbsp;Альпах&nbsp;был,&nbsp;в&nbsp;Алабаме&nbsp;был,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> в&nbsp;Аргентине,&nbsp;в&nbsp;Арктике&nbsp;-&nbsp;был.&nbsp;В&nbsp;Венеции&nbsp;-&nbsp;не&nbsp;был.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  G   C7  Fm </span></span>
+<span class="line"><span class="txt"> Такая&nbsp;беда.&nbsp;Дивный,&nbsp;должно&nbsp;быть,&nbsp;город.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  G </span></span>
+<span class="line"><span class="txt"> Мимо&nbsp;всюду&nbsp;сновал&nbsp;жандарм,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> ибо&nbsp;что&nbsp;он,&nbsp;если&nbsp;не&nbsp;я?&nbsp;Прискорбное&nbsp;сходство.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  G   C7  Fm </span></span>
+<span class="line"><span class="txt"> И&nbsp;тождество&nbsp;тож.&nbsp;Однако&nbsp;закат&nbsp;прискорбней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всё&nbsp;сбылось,&nbsp;полюса&nbsp;сошлись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Всё&nbsp;сбылось,&nbsp;полюса&nbsp;сошлись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> Петербург&nbsp;и&nbsp;Москва&nbsp;срослись.&nbsp;Никто&nbsp;не&nbsp;заметил. </span>
 <span class="txt"> Досада&nbsp;опять.&nbsp;Но&nbsp;чем&nbsp;перебьёшь&nbsp;досаду? </span>
 <span class="txt"> Чем&nbsp;уймёшь&nbsp;ходока,&nbsp;коль&nbsp;скоро </span>
@@ -449,7 +457,7 @@ data-key="Am"><span class="sng-title">ЧУЖАЯ МУЗЫКА 2</span>
 <span class="txt"> Ходи,&nbsp;не&nbsp;ходи&nbsp;-&nbsp;пройти&nbsp;всё&nbsp;равно&nbsp;придётся. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Звёзды&nbsp;пали&nbsp;на&nbsp;землю.&nbsp;Жили,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm... </span>
+<span class="line"><span class="txt"> Звёзды&nbsp;пали&nbsp;на&nbsp;землю.&nbsp;Жили,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm... </span></span>
 <span class="txt"> умерли&nbsp;в&nbsp;Беверли&nbsp;Хиллз.&nbsp;Никто&nbsp;не&nbsp;заплакал. </span>
 <span class="txt"> Такая&nbsp;беда.&nbsp;Впрочем,&nbsp;беда&nbsp;ли?&nbsp;Или </span>
 <span class="txt"> деньги&nbsp;сжечь,&nbsp;содержанку&nbsp;прочь </span>
@@ -457,7 +465,7 @@ data-key="Am"><span class="sng-title">ЧУЖАЯ МУЗЫКА 2</span>
 <span class="txt"> Да&nbsp;сам&nbsp;не&nbsp;возьмусь&nbsp;-&nbsp;пускай&nbsp;персонаж&nbsp;дерзает. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ибо&nbsp;что&nbsp;он,&nbsp;если&nbsp;не&nbsp;я?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Ибо&nbsp;что&nbsp;он,&nbsp;если&nbsp;не&nbsp;я?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> Рисуешь&nbsp;вроде&nbsp;лицо,&nbsp;а&nbsp;это&nbsp;изнанка. </span>
 <span class="txt"> Турнир&nbsp;миновал.&nbsp;Я&nbsp;был&nbsp;не&nbsp;последний&nbsp;всадник. </span>
 <span class="txt"> Всех&nbsp;догнал.&nbsp;Виноват&nbsp;ни&nbsp;в&nbsp;чём. </span>
@@ -465,7 +473,7 @@ data-key="Am"><span class="sng-title">ЧУЖАЯ МУЗЫКА 2</span>
 <span class="txt"> Ещё&nbsp;повезло.&nbsp;Другой&nbsp;бы&nbsp;давно&nbsp;опешил. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мимо&nbsp;трезво&nbsp;скользит&nbsp;вода.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm... </span>
+<span class="line"><span class="txt"> Мимо&nbsp;трезво&nbsp;скользит&nbsp;вода.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm... </span></span>
 <span class="txt"> По&nbsp;воде&nbsp;ползёт&nbsp;грузовоз.&nbsp;Везёт&nbsp;клавикорды. </span>
 <span class="txt"> Полезная&nbsp;вещь.&nbsp;Удачно&nbsp;я&nbsp;глянул&nbsp;сверху. </span>
 <span class="txt"> Дюжий&nbsp;кормчий&nbsp;себе&nbsp;сидит </span>
@@ -473,23 +481,20 @@ data-key="Am"><span class="sng-title">ЧУЖАЯ МУЗЫКА 2</span>
 <span class="txt"> Добро&nbsp;не&nbsp;кистень.&nbsp;Молчу,&nbsp;подаюсь,&nbsp;темнею... </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кормчим&nbsp;был,&nbsp;"Голуазом"&nbsp;был,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Кормчим&nbsp;был,&nbsp;"Голуазом"&nbsp;был,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> грузовозом,&nbsp;кажется,&nbsp;был.&nbsp;Водой,&nbsp;всё&nbsp;же,&nbsp;не&nbsp;был. </span>
 <span class="txt"> Такая&nbsp;беда.&nbsp;Любите&nbsp;меня&nbsp;не&nbsp;слишком. </span>
 <span class="txt"> Что,&nbsp;Фортуна,&nbsp;сказать&nbsp;твоим </span>
 <span class="txt"> тенорам,&nbsp;когда&nbsp;запоют,&nbsp;коль&nbsp;скоро&nbsp;услышу? </span>
-<span class="txt"> А,&nbsp;вот&nbsp;и&nbsp;они.&nbsp;Скажи&nbsp;им&nbsp;сама,&nbsp;что&nbsp;хочешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  Am </span>
+<span class="line"><span class="txt"> А,&nbsp;вот&nbsp;и&nbsp;они.&nbsp;Скажи&nbsp;им&nbsp;сама,&nbsp;что&nbsp;хочешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  Am </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1997</span>                                                        Условная гармония по концертному
+<pre><span class="year">1997</span>                                                        Условная гармония по концертному
                                                             исполнению в декабре <span class="year">2009</span> г.
 
-
 </pre>
+
 
                 </div>
         </div>

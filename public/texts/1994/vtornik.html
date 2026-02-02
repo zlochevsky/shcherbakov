@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,63 +433,61 @@ span.c {
 data-key="A"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вторник,&nbsp;второе&nbsp;августа,&nbsp;время&nbsp;-&nbsp;десять&nbsp;без&nbsp;десяти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span>
-<span class="txt"> Лето&nbsp;в&nbsp;поре,&nbsp;однако&nbsp;сказать,&nbsp;что&nbsp;жарко,&nbsp;никак&nbsp;нельзя.&nbsp;Не&nbsp;жарко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
-<span class="txt"> Солнца&nbsp;не&nbsp;хватит&nbsp;даже&nbsp;и&nbsp;малый&nbsp;паводок&nbsp;извести.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span>
-<span class="txt"> Впрочем,&nbsp;откуда&nbsp;паводок?&nbsp;Ветер&nbsp;слаб,&nbsp;небо&nbsp;чисто.&nbsp;Суха&nbsp;лежанка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
+<span class="line"><span class="txt"> Вторник,&nbsp;второе&nbsp;августа,&nbsp;время&nbsp;-&nbsp;десять&nbsp;без&nbsp;десяти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span></span>
+<span class="line"><span class="txt"> Лето&nbsp;в&nbsp;поре,&nbsp;однако&nbsp;сказать,&nbsp;что&nbsp;жарко,&nbsp;никак&nbsp;нельзя.&nbsp;Не&nbsp;жарко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
+<span class="line"><span class="txt"> Солнца&nbsp;не&nbsp;хватит&nbsp;даже&nbsp;и&nbsp;малый&nbsp;паводок&nbsp;извести.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span></span>
+<span class="line"><span class="txt"> Впрочем,&nbsp;откуда&nbsp;паводок?&nbsp;Ветер&nbsp;слаб,&nbsp;небо&nbsp;чисто.&nbsp;Суха&nbsp;лежанка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;вчера&nbsp;фантазировал,&nbsp;и&nbsp;фантазия&nbsp;мне&nbsp;удалась.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Adim Dm6/A </span>
-<span class="txt"> Выдумал&nbsp;я,&nbsp;что&nbsp;лету&nbsp;как&nbsp;раз&nbsp;и&nbsp;следует&nbsp;быть&nbsp;вот&nbsp;таким,&nbsp;как&nbsp;это.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
-<span class="txt"> Дням&nbsp;его&nbsp;надлежит&nbsp;шелестеть&nbsp;прохладно,&nbsp;свободно&nbsp;длясь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 G#dim A7 Dm6/A </span>
-<span class="txt"> Тут,&nbsp;полагаю,&nbsp;ты&nbsp;возмутишься&nbsp;-&nbsp;мол,&nbsp;тоже&nbsp;мне,&nbsp;лето!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 E7 F7/A </span>
+<span class="line"><span class="txt"> Я&nbsp;вчера&nbsp;фантазировал,&nbsp;и&nbsp;фантазия&nbsp;мне&nbsp;удалась.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Adim Dm6/A </span></span>
+<span class="line"><span class="txt"> Выдумал&nbsp;я,&nbsp;что&nbsp;лету&nbsp;как&nbsp;раз&nbsp;и&nbsp;следует&nbsp;быть&nbsp;вот&nbsp;таким,&nbsp;как&nbsp;это.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
+<span class="line"><span class="txt"> Дням&nbsp;его&nbsp;надлежит&nbsp;шелестеть&nbsp;прохладно,&nbsp;свободно&nbsp;длясь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 G#dim A7 Dm6/A </span></span>
+<span class="line"><span class="txt"> Тут,&nbsp;полагаю,&nbsp;ты&nbsp;возмутишься&nbsp;-&nbsp;мол,&nbsp;тоже&nbsp;мне,&nbsp;лето!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 E7 F7/A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кроме&nbsp;того,&nbsp;я&nbsp;выдумал&nbsp;разнополых&nbsp;двух&nbsp;визави.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span>
-<span class="txt"> Скачут&nbsp;они&nbsp;по&nbsp;корту&nbsp;в&nbsp;одном&nbsp;белье&nbsp;и&nbsp;туда-сюда&nbsp;мечут&nbsp;мячик.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
-<span class="txt"> Эти&nbsp;самец&nbsp;и&nbsp;самка&nbsp;в&nbsp;прямом&nbsp;родстве&nbsp;с&nbsp;божеством&nbsp;любви,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span>
-<span class="txt"> даром,&nbsp;что&nbsp;он&nbsp;-&nbsp;кретин,&nbsp;а&nbsp;она&nbsp;-&nbsp;неряха,&nbsp;как&nbsp;сотни&nbsp;её&nbsp;землячек.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
+<span class="line"><span class="txt"> Кроме&nbsp;того,&nbsp;я&nbsp;выдумал&nbsp;разнополых&nbsp;двух&nbsp;визави.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span></span>
+<span class="line"><span class="txt"> Скачут&nbsp;они&nbsp;по&nbsp;корту&nbsp;в&nbsp;одном&nbsp;белье&nbsp;и&nbsp;туда-сюда&nbsp;мечут&nbsp;мячик.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
+<span class="line"><span class="txt"> Эти&nbsp;самец&nbsp;и&nbsp;самка&nbsp;в&nbsp;прямом&nbsp;родстве&nbsp;с&nbsp;божеством&nbsp;любви,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span></span>
+<span class="line"><span class="txt"> даром,&nbsp;что&nbsp;он&nbsp;-&nbsp;кретин,&nbsp;а&nbsp;она&nbsp;-&nbsp;неряха,&nbsp;как&nbsp;сотни&nbsp;её&nbsp;землячек.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Очень&nbsp;ему&nbsp;по&nbsp;нраву&nbsp;её&nbsp;четыре&nbsp;ноги&nbsp;и&nbsp;хвост.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Adim Dm6/A </span>
-<span class="txt"> Ей&nbsp;же&nbsp;в&nbsp;не&nbsp;меньшей&nbsp;степени&nbsp;импонируют&nbsp;бивни&nbsp;его&nbsp;и&nbsp;когти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
-<span class="txt"> "Ужас!"&nbsp;-&nbsp;воскликнешь&nbsp;ты,&nbsp;а&nbsp;по&nbsp;мне&nbsp;-&nbsp;так&nbsp;это&nbsp;потомки&nbsp;звёзд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 G#dim A7 Dm6/A </span>
-<span class="txt"> Глаз&nbsp;не&nbsp;свожу,&nbsp;слежу,&nbsp;всё&nbsp;ли&nbsp;там&nbsp;у&nbsp;них&nbsp;ладно&nbsp;на&nbsp;корте.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 E7 F7/A </span>
+<span class="line"><span class="txt"> Очень&nbsp;ему&nbsp;по&nbsp;нраву&nbsp;её&nbsp;четыре&nbsp;ноги&nbsp;и&nbsp;хвост.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Adim Dm6/A </span></span>
+<span class="line"><span class="txt"> Ей&nbsp;же&nbsp;в&nbsp;не&nbsp;меньшей&nbsp;степени&nbsp;импонируют&nbsp;бивни&nbsp;его&nbsp;и&nbsp;когти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
+<span class="line"><span class="txt"> "Ужас!"&nbsp;-&nbsp;воскликнешь&nbsp;ты,&nbsp;а&nbsp;по&nbsp;мне&nbsp;-&nbsp;так&nbsp;это&nbsp;потомки&nbsp;звёзд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 G#dim A7 Dm6/A </span></span>
+<span class="line"><span class="txt"> Глаз&nbsp;не&nbsp;свожу,&nbsp;слежу,&nbsp;всё&nbsp;ли&nbsp;там&nbsp;у&nbsp;них&nbsp;ладно&nbsp;на&nbsp;корте.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 E7 F7/A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вроде&nbsp;пока&nbsp;всё&nbsp;ладно&nbsp;-&nbsp;танцоры,&nbsp;музыка,&nbsp;верхний&nbsp;свет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span>
-<span class="txt"> Жаль&nbsp;вот,&nbsp;листва&nbsp;кругом&nbsp;чересчур&nbsp;жива:&nbsp;в&nbsp;натуральном&nbsp;искусство&nbsp;тонет.&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
-<span class="txt"> Из-за&nbsp;листвы-то&nbsp;зритель&nbsp;и&nbsp;не&nbsp;ликует,&nbsp;что&nbsp;нет,&nbsp;то&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span>
-<span class="txt"> Плачет&nbsp;и&nbsp;стонет&nbsp;он,&nbsp;не&nbsp;препятствуй,&nbsp;пусть,&nbsp;если&nbsp;хочет,&nbsp;плачет&nbsp;и&nbsp;стонет.&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
+<span class="line"><span class="txt"> Вроде&nbsp;пока&nbsp;всё&nbsp;ладно&nbsp;-&nbsp;танцоры,&nbsp;музыка,&nbsp;верхний&nbsp;свет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span></span>
+<span class="line"><span class="txt"> Жаль&nbsp;вот,&nbsp;листва&nbsp;кругом&nbsp;чересчур&nbsp;жива:&nbsp;в&nbsp;натуральном&nbsp;искусство&nbsp;тонет.&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
+<span class="line"><span class="txt"> Из-за&nbsp;листвы-то&nbsp;зритель&nbsp;и&nbsp;не&nbsp;ликует,&nbsp;что&nbsp;нет,&nbsp;то&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span></span>
+<span class="line"><span class="txt"> Плачет&nbsp;и&nbsp;стонет&nbsp;он,&nbsp;не&nbsp;препятствуй,&nbsp;пусть,&nbsp;если&nbsp;хочет,&nbsp;плачет&nbsp;и&nbsp;стонет.&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Многим&nbsp;ещё&nbsp;в&nbsp;новинку&nbsp;велеречивые&nbsp;позвонки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Adim Dm6/A </span>
-<span class="txt"> От&nbsp;болтовни&nbsp;запястий&nbsp;был&nbsp;и&nbsp;со&nbsp;мною&nbsp;когда-то&nbsp;спазм,&nbsp;весь&nbsp;вышел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
-<span class="txt"> Веруй,&nbsp;что&nbsp;есть&nbsp;в&nbsp;природе&nbsp;и&nbsp;кроме&nbsp;этого&nbsp;языки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 G#dim A7 Dm6/A </span>
-<span class="txt"> Спорить&nbsp;не&nbsp;буду,&nbsp;может&nbsp;и&nbsp;есть,&nbsp;не&nbsp;знаю,&nbsp;не&nbsp;слышал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 E7 F7/A </span>
+<span class="line"><span class="txt"> Многим&nbsp;ещё&nbsp;в&nbsp;новинку&nbsp;велеречивые&nbsp;позвонки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Adim Dm6/A </span></span>
+<span class="line"><span class="txt"> От&nbsp;болтовни&nbsp;запястий&nbsp;был&nbsp;и&nbsp;со&nbsp;мною&nbsp;когда-то&nbsp;спазм,&nbsp;весь&nbsp;вышел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
+<span class="line"><span class="txt"> Веруй,&nbsp;что&nbsp;есть&nbsp;в&nbsp;природе&nbsp;и&nbsp;кроме&nbsp;этого&nbsp;языки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 G#dim A7 Dm6/A </span></span>
+<span class="line"><span class="txt"> Спорить&nbsp;не&nbsp;буду,&nbsp;может&nbsp;и&nbsp;есть,&nbsp;не&nbsp;знаю,&nbsp;не&nbsp;слышал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 E7 F7/A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 F#dim Dm6/A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
 <span class="txt"> .&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;. </span>
-<span class="txt"> Хочешь&nbsp;обратно&nbsp;деньги?&nbsp;вот,&nbsp;изволь,&nbsp;получи&nbsp;с&nbsp;меня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Adim Dm6/A </span>
-<span class="txt"> Но&nbsp;не&nbsp;казни&nbsp;артиста&nbsp;за&nbsp;то,&nbsp;что&nbsp;он&nbsp;себе&nbsp;самому&nbsp;не&nbsp;равен.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span>
-<span class="txt"> Этот&nbsp;шмель&nbsp;не&nbsp;летит,&nbsp;он&nbsp;исполняет&nbsp;полёт&nbsp;шмеля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 G#dim A7 Dm6/A </span>
-<span class="txt"> Этот&nbsp;столетник&nbsp;дня&nbsp;не&nbsp;живёт,&nbsp;но&nbsp;тем&nbsp;и&nbsp;забавен.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 E7 F7/A </span>
+<span class="line"><span class="txt"> Хочешь&nbsp;обратно&nbsp;деньги?&nbsp;вот,&nbsp;изволь,&nbsp;получи&nbsp;с&nbsp;меня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Adim Dm6/A </span></span>
+<span class="line"><span class="txt"> Но&nbsp;не&nbsp;казни&nbsp;артиста&nbsp;за&nbsp;то,&nbsp;что&nbsp;он&nbsp;себе&nbsp;самому&nbsp;не&nbsp;равен.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 F7/A E7 </span></span>
+<span class="line"><span class="txt"> Этот&nbsp;шмель&nbsp;не&nbsp;летит,&nbsp;он&nbsp;исполняет&nbsp;полёт&nbsp;шмеля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 G#dim A7 Dm6/A </span></span>
+<span class="line"><span class="txt"> Этот&nbsp;столетник&nbsp;дня&nbsp;не&nbsp;живёт,&nbsp;но&nbsp;тем&nbsp;и&nbsp;забавен.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A6 E7 F7/A </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1994</span>
-
+<pre><span class="year">1994</span>
 </pre>
+
 
                 </div>
         </div>

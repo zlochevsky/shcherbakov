@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,138 +423,135 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">Я - ЭКЗОТИК</span>
+data-key="Dm"><h1>Я - ЭКЗОТИК</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;фланирую&nbsp;над&nbsp;миром&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
+<span class="line"><span class="txt"> Я&nbsp;фланирую&nbsp;над&nbsp;миром&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
 <span class="txt"> от&nbsp;квартиры&nbsp;до&nbsp;квартиры, </span>
-<span class="txt"> собираю&nbsp;сувениры&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;приятности&nbsp;ловлю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
+<span class="line"><span class="txt"> собираю&nbsp;сувениры&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;приятности&nbsp;ловлю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
 <span class="txt"> Я&nbsp;не&nbsp;слишком&nbsp;необычен, </span>
-<span class="txt"> я&nbsp;тактичен&nbsp;и&nbsp;приличен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span>
-<span class="txt"> но&nbsp;настрой&nbsp;мой&nbsp;экзотичен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;я&nbsp;экзотику&nbsp;люблю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span>
+<span class="line"><span class="txt"> я&nbsp;тактичен&nbsp;и&nbsp;приличен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span></span>
+<span class="line"><span class="txt"> но&nbsp;настрой&nbsp;мой&nbsp;экзотичен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;я&nbsp;экзотику&nbsp;люблю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Жизнь&nbsp;моя&nbsp;-&nbsp;сплошной&nbsp;наркотик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
-<span class="txt"> привередливым&nbsp;слыву,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span>
-<span class="txt"> потому&nbsp;что&nbsp;я&nbsp;-&nbsp;экзотик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> я&nbsp;романтикой&nbsp;живу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span>
+<span class="line"><span class="txt"> Жизнь&nbsp;моя&nbsp;-&nbsp;сплошной&nbsp;наркотик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
+<span class="line"><span class="txt"> привередливым&nbsp;слыву,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span></span>
+<span class="line"><span class="txt"> потому&nbsp;что&nbsp;я&nbsp;-&nbsp;экзотик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> я&nbsp;романтикой&nbsp;живу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> и&nbsp;мотаюсь,&nbsp;цел&nbsp;покуда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
+<span class="line"><span class="txt"> и&nbsp;мотаюсь,&nbsp;цел&nbsp;покуда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
 <span class="txt"> не&nbsp;чета&nbsp;снобАм-занудам, </span>
-<span class="txt"> прилечу&nbsp;из&nbsp;ниоткуда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;улетаю&nbsp;в&nbsp;никуда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
+<span class="line"><span class="txt"> прилечу&nbsp;из&nbsp;ниоткуда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;улетаю&nbsp;в&nbsp;никуда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
 <span class="txt"> сочиняю&nbsp;дальни&nbsp;страны&nbsp;- </span>
-<span class="txt"> там&nbsp;моря,&nbsp;там&nbsp;океаны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span>
-<span class="txt"> там&nbsp;богатство&nbsp;чистоганом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;безделья&nbsp;нет&nbsp;следа.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span>
+<span class="line"><span class="txt"> там&nbsp;моря,&nbsp;там&nbsp;океаны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span></span>
+<span class="line"><span class="txt"> там&nbsp;богатство&nbsp;чистоганом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;безделья&nbsp;нет&nbsp;следа.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Там&nbsp;экзальтированы&nbsp;речи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;котируются&nbsp;там&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;экзотические&nbsp;плечи&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;декольтированных&nbsp;дам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Там&nbsp;экзальтированы&nbsp;речи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;котируются&nbsp;там&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;экзотические&nbsp;плечи&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;декольтированных&nbsp;дам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сколько&nbsp;раз&nbsp;остерегали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
+<span class="line"><span class="txt"> Сколько&nbsp;раз&nbsp;остерегали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
 <span class="txt"> от&nbsp;загадок&nbsp;дальней&nbsp;дали, </span>
-<span class="txt"> сколько&nbsp;раз&nbsp;увещевали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;други&nbsp;светлые&nbsp;моя!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
+<span class="line"><span class="txt"> сколько&nbsp;раз&nbsp;увещевали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;други&nbsp;светлые&nbsp;моя!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
 <span class="txt"> Был&nbsp;один&nbsp;дружок&nbsp;флегматик, </span>
-<span class="txt"> был&nbsp;фанатик-математик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span>
-<span class="txt"> даже,&nbsp;помню,&nbsp;маразматик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;но&nbsp;экзотик&nbsp;-&nbsp;только&nbsp;я!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span>
+<span class="line"><span class="txt"> был&nbsp;фанатик-математик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span></span>
+<span class="line"><span class="txt"> даже,&nbsp;помню,&nbsp;маразматик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;но&nbsp;экзотик&nbsp;-&nbsp;только&nbsp;я!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;сказал&nbsp;я&nbsp;им:&nbsp;"Животик&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
-<span class="txt"> сами&nbsp;можете&nbsp;беречь&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span>
-<span class="txt"> я&nbsp;уеду,&nbsp;я&nbsp;-&nbsp;экзотик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> мне&nbsp;неважно,&nbsp;где&nbsp;прилечь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span>
+<span class="line"><span class="txt"> И&nbsp;сказал&nbsp;я&nbsp;им:&nbsp;"Животик&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
+<span class="line"><span class="txt"> сами&nbsp;можете&nbsp;беречь&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span></span>
+<span class="line"><span class="txt"> я&nbsp;уеду,&nbsp;я&nbsp;-&nbsp;экзотик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> мне&nbsp;неважно,&nbsp;где&nbsp;прилечь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Что&nbsp;у&nbsp;вас&nbsp;-&nbsp;балкон&nbsp;с&nbsp;цветами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
+<span class="line"><span class="txt"> Что&nbsp;у&nbsp;вас&nbsp;-&nbsp;балкон&nbsp;с&nbsp;цветами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
 <span class="txt"> дядя&nbsp;с&nbsp;грыжей,&nbsp;суп&nbsp;с&nbsp;грибами, </span>
-<span class="txt"> шурин&nbsp;с&nbsp;грязными&nbsp;носками&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Бог&nbsp;вас&nbsp;милуй&nbsp;и&nbsp;суди!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
+<span class="line"><span class="txt"> шурин&nbsp;с&nbsp;грязными&nbsp;носками&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Бог&nbsp;вас&nbsp;милуй&nbsp;и&nbsp;суди!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
 <span class="txt"> У&nbsp;меня&nbsp;же&nbsp;-&nbsp;континенты, </span>
-<span class="txt"> я&nbsp;плевал&nbsp;на&nbsp;все&nbsp;моменты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span>
-<span class="txt"> пусть&nbsp;горят&nbsp;люминесценты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> мне&nbsp;по&nbsp;всей&nbsp;длине&nbsp;пути."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span>
+<span class="line"><span class="txt"> я&nbsp;плевал&nbsp;на&nbsp;все&nbsp;моменты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span></span>
+<span class="line"><span class="txt"> пусть&nbsp;горят&nbsp;люминесценты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> мне&nbsp;по&nbsp;всей&nbsp;длине&nbsp;пути."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Подарил&nbsp;я&nbsp;милой&nbsp;зонтик&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
-<span class="txt"> и&nbsp;признался&nbsp;без&nbsp;стыда:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span>
-<span class="txt"> "Ты&nbsp;скучна&nbsp;мне,&nbsp;я&nbsp;-&nbsp;экзотик!"&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> и&nbsp;уехал&nbsp;в&nbsp;никуда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span>
+<span class="line"><span class="txt"> Подарил&nbsp;я&nbsp;милой&nbsp;зонтик&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
+<span class="line"><span class="txt"> и&nbsp;признался&nbsp;без&nbsp;стыда:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span></span>
+<span class="line"><span class="txt"> "Ты&nbsp;скучна&nbsp;мне,&nbsp;я&nbsp;-&nbsp;экзотик!"&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;уехал&nbsp;в&nbsp;никуда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;настолько&nbsp;мир&nbsp;обычен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
+<span class="line"><span class="txt"> Но&nbsp;настолько&nbsp;мир&nbsp;обычен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
 <span class="txt"> самому&nbsp;себе&nbsp;привычен, </span>
-<span class="txt"> что&nbsp;чрезмерно&nbsp;экзотичен&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> получаюсь&nbsp;я&nbsp;везде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
+<span class="line"><span class="txt"> что&nbsp;чрезмерно&nbsp;экзотичен&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> получаюсь&nbsp;я&nbsp;везде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Даже&nbsp;там,&nbsp;где&nbsp;открывали, </span>
-<span class="txt"> выпивали,&nbsp;зарывали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span>
-<span class="txt"> в&nbsp;ближней&nbsp;близи,&nbsp;дальней&nbsp;дали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> на&nbsp;земле&nbsp;и&nbsp;на&nbsp;воде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span>
+<span class="line"><span class="txt"> выпивали,&nbsp;зарывали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span></span>
+<span class="line"><span class="txt"> в&nbsp;ближней&nbsp;близи,&nbsp;дальней&nbsp;дали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> на&nbsp;земле&nbsp;и&nbsp;на&nbsp;воде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;когда&nbsp;случайный&nbsp;дротик&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
-<span class="txt"> просверлил&nbsp;во&nbsp;мне&nbsp;дыру,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span>
-<span class="txt"> понял&nbsp;я,&nbsp;что&nbsp;раз&nbsp;экзотик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span>
-<span class="txt"> личной&nbsp;смертью&nbsp;не&nbsp;помру.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span>
+<span class="line"><span class="txt"> И&nbsp;когда&nbsp;случайный&nbsp;дротик&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
+<span class="line"><span class="txt"> просверлил&nbsp;во&nbsp;мне&nbsp;дыру,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm </span></span>
+<span class="line"><span class="txt"> понял&nbsp;я,&nbsp;что&nbsp;раз&nbsp;экзотик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Dm </span></span>
+<span class="line"><span class="txt"> личной&nbsp;смертью&nbsp;не&nbsp;помру.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Слишком&nbsp;прёт&nbsp;мой&nbsp;облик&nbsp;вздорный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
+<span class="line"><span class="txt"> Слишком&nbsp;прёт&nbsp;мой&nbsp;облик&nbsp;вздорный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
 <span class="txt"> против&nbsp;касты&nbsp;непроворной&nbsp;- </span>
-<span class="txt"> а&nbsp;за&nbsp;это&nbsp;местью&nbsp;чёрной&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;платят&nbsp;сто&nbsp;веков&nbsp;подряд!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em </span>
+<span class="line"><span class="txt"> а&nbsp;за&nbsp;это&nbsp;местью&nbsp;чёрной&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;платят&nbsp;сто&nbsp;веков&nbsp;подряд!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em </span></span>
 <span class="txt"> Тут&nbsp;я&nbsp;понял,&nbsp;что&nbsp;попался, </span>
-<span class="txt"> и&nbsp;не&nbsp;то,&nbsp;чтоб&nbsp;испугался&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span>
-<span class="txt"> просто&nbsp;быстренько&nbsp;собрался&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;решил&nbsp;бежать&nbsp;назад.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
+<span class="line"><span class="txt"> и&nbsp;не&nbsp;то,&nbsp;чтоб&nbsp;испугался&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span></span>
+<span class="line"><span class="txt"> просто&nbsp;быстренько&nbsp;собрался&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;решил&nbsp;бежать&nbsp;назад.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;вернулся,&nbsp;я&nbsp;отбывший,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> передрягам&nbsp;нынче&nbsp;ша!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span>
-<span class="txt"> Я&nbsp;теперь&nbsp;экзотик&nbsp;бывший,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em </span>
-<span class="txt"> принимайте,&nbsp;кореша...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
+<span class="line"><span class="txt"> Я&nbsp;вернулся,&nbsp;я&nbsp;отбывший,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> передрягам&nbsp;нынче&nbsp;ша!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span></span>
+<span class="line"><span class="txt"> Я&nbsp;теперь&nbsp;экзотик&nbsp;бывший,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em </span></span>
+<span class="line"><span class="txt"> принимайте,&nbsp;кореша...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Только&nbsp;вдруг&nbsp;надежды&nbsp;сплыли:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
+<span class="line"><span class="txt"> Только&nbsp;вдруг&nbsp;надежды&nbsp;сплыли:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
 <span class="txt"> понял&nbsp;я&nbsp;-&nbsp;друзья&nbsp;забыли, </span>
-<span class="txt"> и&nbsp;любовь&nbsp;мою&nbsp;стащили,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;видно,&nbsp;замуж&nbsp;в&nbsp;тот&nbsp;же&nbsp;год.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Fm </span>
+<span class="line"><span class="txt"> и&nbsp;любовь&nbsp;мою&nbsp;стащили,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;видно,&nbsp;замуж&nbsp;в&nbsp;тот&nbsp;же&nbsp;год.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Fm </span></span>
 <span class="txt"> И&nbsp;с&nbsp;унынием&nbsp;подростка </span>
-<span class="txt"> я&nbsp;стою&nbsp;на&nbsp;перекрёстке,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F7  Bm </span>
-<span class="txt"> и&nbsp;летит&nbsp;моя&nbsp;причёска&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Fm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;в&nbsp;вихревой&nbsp;ветроворот.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7  Fm </span>
+<span class="line"><span class="txt"> я&nbsp;стою&nbsp;на&nbsp;перекрёстке,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F7  Bm </span></span>
+<span class="line"><span class="txt"> и&nbsp;летит&nbsp;моя&nbsp;причёска&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Fm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;в&nbsp;вихревой&nbsp;ветроворот.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7  Fm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Что&nbsp;мне&nbsp;делать?&nbsp;Строить&nbsp;ботик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G# </span>
-<span class="txt"> и&nbsp;обратно&nbsp;в&nbsp;никуда?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F7  Bm </span>
-<span class="txt"> Что&nbsp;ж,&nbsp;я&nbsp;уеду,&nbsp;я&nbsp;-&nbsp;экзотик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Fm </span>
-<span class="txt"> но&nbsp;теперь&nbsp;уж&nbsp;навсегда...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7  Fm </span>
+<span class="line"><span class="txt"> Что&nbsp;мне&nbsp;делать?&nbsp;Строить&nbsp;ботик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G# </span></span>
+<span class="line"><span class="txt"> и&nbsp;обратно&nbsp;в&nbsp;никуда?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F7  Bm </span></span>
+<span class="line"><span class="txt"> Что&nbsp;ж,&nbsp;я&nbsp;уеду,&nbsp;я&nbsp;-&nbsp;экзотик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Fm </span></span>
+<span class="line"><span class="txt"> но&nbsp;теперь&nbsp;уж&nbsp;навсегда...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7  Fm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <<span class="year">1980</span>>
-
+<pre><<span class="year">1980</span>>
 
 </pre>
+
 
                 </div>
         </div>

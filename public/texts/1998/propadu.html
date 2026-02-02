@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,66 +423,63 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">Флейтист</span>
+data-key="Em"><h1>Флейтист</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вст.&nbsp;(=&nbsp;пр.)&nbsp; </span><span class="ch"> Am6   Em    H7   Em    (H7) </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вст.&nbsp;(=&nbsp;пр.)&nbsp; </span><span class="ch"> Am6   Em    H7   Em    (H7) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пропаду&nbsp;ни&nbsp;за&nbsp;что.&nbsp;Семь&nbsp;бед&nbsp;один&nbsp;ответ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    E7    Am </span>
-<span class="txt"> Учиню&nbsp;потеху&nbsp;своего&nbsp;рода.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   H7    Em   H7 </span>
-<span class="txt"> Поутру&nbsp;проснётся&nbsp;-&nbsp;ой!&nbsp;-&nbsp;целый&nbsp;белый&nbsp;свет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    E7    Am </span>
-<span class="txt"> выглянет&nbsp;за&nbsp;ворота,&nbsp;а&nbsp;меня&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   Em    H7   Em </span>
+<span class="line"><span class="txt"> Пропаду&nbsp;ни&nbsp;за&nbsp;что.&nbsp;Семь&nbsp;бед&nbsp;один&nbsp;ответ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    E7    Am </span></span>
+<span class="line"><span class="txt"> Учиню&nbsp;потеху&nbsp;своего&nbsp;рода.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   H7    Em   H7 </span></span>
+<span class="line"><span class="txt"> Поутру&nbsp;проснётся&nbsp;-&nbsp;ой!&nbsp;-&nbsp;целый&nbsp;белый&nbsp;свет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    E7    Am </span></span>
+<span class="line"><span class="txt"> выглянет&nbsp;за&nbsp;ворота,&nbsp;а&nbsp;меня&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   Em    H7   Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;тебе,&nbsp;застолье,&nbsp;больше&nbsp;не&nbsp;тамада.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span>
+<span class="line"><span class="txt"> Я&nbsp;тебе,&nbsp;застолье,&nbsp;больше&nbsp;не&nbsp;тамада.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span></span>
 <span class="txt"> Поищи&nbsp;другого&nbsp;дурачка&nbsp;с&nbsp;бубном. </span>
 <span class="txt"> А&nbsp;где&nbsp;прежний&nbsp;с&nbsp;флейтой&nbsp;-&nbsp;на&nbsp;дне&nbsp;ли,&nbsp;где&nbsp;вода, </span>
 <span class="txt"> во&nbsp;сне&nbsp;ли&nbsp;непробудном,&nbsp;-&nbsp;что&nbsp;за&nbsp;нужда! </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пр.:&nbsp; </span><span class="ch"> Am6   Em    H7   Em    (H7) </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пр.:&nbsp; </span><span class="ch"> Am6   Em    H7   Em    (H7) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;очередь,&nbsp;туземцы!&nbsp;Чин&nbsp;чина&nbsp;почитай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span>
+<span class="line"><span class="txt"> В&nbsp;очередь,&nbsp;туземцы!&nbsp;Чин&nbsp;чина&nbsp;почитай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span></span>
 <span class="txt"> Подавай&nbsp;бумаги&nbsp;на&nbsp;замещенье. </span>
 <span class="txt"> С&nbsp;пользою&nbsp;приятность&nbsp;-&nbsp;ой!&nbsp;-&nbsp;в&nbsp;меру&nbsp;сочетай: </span>
-<span class="txt"> кой-где&nbsp;и&nbsp;угощенье&nbsp;вынь&nbsp;да&nbsp;подай...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   Em    H7   Em    --F#m </span>
+<span class="line"><span class="txt"> кой-где&nbsp;и&nbsp;угощенье&nbsp;вынь&nbsp;да&nbsp;подай...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6   Em    H7   Em    --F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пропаду&nbsp;ни&nbsp;за&nbsp;что.&nbsp;Век&nbsp;воли&nbsp;не&nbsp;видать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m   F#7   Hm </span>
-<span class="txt"> Подпишу&nbsp;не&nbsp;глядя.&nbsp;Первый&nbsp;раз,&nbsp;что&nbsp;ли?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm6   C#7   F#m  C#7 </span>
-<span class="txt"> Наблюдать&nbsp;ли&nbsp;недра,&nbsp;в&nbsp;облаке&nbsp;ли&nbsp;витать,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m   F#7   Hm </span>
-<span class="txt"> мне&nbsp;ль,&nbsp;перекатной&nbsp;голи,&nbsp;привыкать-стать?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm6   F#m   C#7  F#m </span>
+<span class="line"><span class="txt"> Пропаду&nbsp;ни&nbsp;за&nbsp;что.&nbsp;Век&nbsp;воли&nbsp;не&nbsp;видать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m   F#7   Hm </span></span>
+<span class="line"><span class="txt"> Подпишу&nbsp;не&nbsp;глядя.&nbsp;Первый&nbsp;раз,&nbsp;что&nbsp;ли?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm6   C#7   F#m  C#7 </span></span>
+<span class="line"><span class="txt"> Наблюдать&nbsp;ли&nbsp;недра,&nbsp;в&nbsp;облаке&nbsp;ли&nbsp;витать,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m   F#7   Hm </span></span>
+<span class="line"><span class="txt"> мне&nbsp;ль,&nbsp;перекатной&nbsp;голи,&nbsp;привыкать-стать?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm6   F#m   C#7  F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Фаэтон&nbsp;промчался.&nbsp;Пыль&nbsp;по&nbsp;полю&nbsp;летит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m... </span>
+<span class="line"><span class="txt"> Фаэтон&nbsp;промчался.&nbsp;Пыль&nbsp;по&nbsp;полю&nbsp;летит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m... </span></span>
 <span class="txt"> Это&nbsp;я&nbsp;отъехал&nbsp;на&nbsp;пикник&nbsp;чей-то. </span>
 <span class="txt"> Там&nbsp;кому-то&nbsp;скучно&nbsp;-&nbsp;ой!&nbsp;-&nbsp;вот&nbsp;он&nbsp;и&nbsp;кутит. </span>
 <span class="txt"> Он&nbsp;нас&nbsp;с&nbsp;тобою,&nbsp;флейта,&nbsp;озолотит. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пр.:&nbsp; </span><span class="ch"> Hm6   F#m   C#7  F#m </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пр.:&nbsp; </span><span class="ch"> Hm6   F#m   C#7  F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ок.:&nbsp; </span><span class="ch"> Hm(bass H, dhdhd) F#m(bass F#, c#ac#ac#) bis </span>
- <br />
-
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ок.:&nbsp; </span><span class="ch"> Hm(bass H, dhdhd) F#m(bass F#, c#ac#ac#) bis </span></span>
 </div>
-<pre>
-    <span class="year">1998</span>
+<pre><span class="year">1998</span>
                                                     Условная нотировка по записи <span class="year">2000</span> года
                                                     (диск <a href="../../Disks/deja.html">Deja</a>).
 
-
 </pre>
+
 
                 </div>
         </div>

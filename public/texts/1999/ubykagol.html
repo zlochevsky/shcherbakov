@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,8 +433,8 @@ span.c {
 data-key="Hm"><span class="txt"> ЭПИЛОГ </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> У&nbsp;быка&nbsp;голова&nbsp;крепка.&nbsp;У&nbsp;слона,&nbsp;говорят,&nbsp;умна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  A  bass A#  Hm     A  bass A#  Hm </span>
-<span class="txt"> А&nbsp;моя&nbsp;голова,&nbsp;как&nbsp;видно,&nbsp;никуда&nbsp;уже&nbsp;не&nbsp;годна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D Em Em6 Hm Em6 Hm/F# F# Hm </span>
+<span class="line"><span class="txt"> У&nbsp;быка&nbsp;голова&nbsp;крепка.&nbsp;У&nbsp;слона,&nbsp;говорят,&nbsp;умна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  A  bass A#  Hm     A  bass A#  Hm </span></span>
+<span class="line"><span class="txt"> А&nbsp;моя&nbsp;голова,&nbsp;как&nbsp;видно,&nbsp;никуда&nbsp;уже&nbsp;не&nbsp;годна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D Em Em6 Hm Em6 Hm/F# F# Hm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Сколь&nbsp;её&nbsp;ни&nbsp;сжимай,&nbsp;ни&nbsp;три,&nbsp;-&nbsp;тускло&nbsp;всё&nbsp;у&nbsp;неё&nbsp;внутри. </span>
@@ -437,15 +445,15 @@ data-key="Hm"><span class="txt"> ЭПИЛОГ </span>
 <span class="txt"> Ни&nbsp;на&nbsp;что&nbsp;голова&nbsp;не&nbsp;смотрит.&nbsp;Кроме&nbsp;ужина&nbsp;разве&nbsp;что. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Съев&nbsp;початок&nbsp;или&nbsp;кочан,&nbsp;проецируюсь&nbsp;на&nbsp;топчан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> --Cm </span>
+<span class="line"><span class="txt"> Съев&nbsp;початок&nbsp;или&nbsp;кочан,&nbsp;проецируюсь&nbsp;на&nbsp;топчан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> --Cm </span></span>
 <span class="txt"> И&nbsp;-&nbsp;катись&nbsp;под&nbsp;откос,&nbsp;карьера...&nbsp;Купидон,&nbsp;затворяй&nbsp;колчан. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Нужды&nbsp;нет,&nbsp;что&nbsp;не&nbsp;мыт&nbsp;паркет,&nbsp;что&nbsp;отчётный&nbsp;доклад&nbsp;-&nbsp;вот-вот,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> --C#m </span>
+<span class="line"><span class="txt"> Нужды&nbsp;нет,&nbsp;что&nbsp;не&nbsp;мыт&nbsp;паркет,&nbsp;что&nbsp;отчётный&nbsp;доклад&nbsp;-&nbsp;вот-вот,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> --C#m </span></span>
 <span class="txt"> что&nbsp;за&nbsp;стенкой&nbsp;хрипит&nbsp;пластинка&nbsp;-&nbsp;как&nbsp;шарманка,&nbsp;ни&nbsp;слов&nbsp;ни&nbsp;нот. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вот&nbsp;пойду&nbsp;в&nbsp;гастроном&nbsp;по&nbsp;льду&nbsp;покупать&nbsp;килограмм&nbsp;халвы,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> --Dm </span>
+<span class="line"><span class="txt"> Вот&nbsp;пойду&nbsp;в&nbsp;гастроном&nbsp;по&nbsp;льду&nbsp;покупать&nbsp;килограмм&nbsp;халвы,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> --Dm </span></span>
 <span class="txt"> так&nbsp;и&nbsp;быть,&nbsp;заверну&nbsp;в&nbsp;аптеку:&nbsp;нет&nbsp;ли&nbsp;средства&nbsp;от&nbsp;головы. </span>
 <span class="txt">  </span>
  <br />
@@ -453,11 +461,11 @@ data-key="Hm"><span class="txt"> ЭПИЛОГ </span>
 <span class="txt"> самых&nbsp;круглых&nbsp;своих&nbsp;таблеток.&nbsp;Либо&nbsp;петлю&nbsp;(одну)&nbsp;и&nbsp;крюк. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> На&nbsp;коне&nbsp;приезжай&nbsp;ко&nbsp;мне,&nbsp;из&nbsp;драмсекции&nbsp;Дед&nbsp;Мороз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> --Ebm </span>
+<span class="line"><span class="txt"> На&nbsp;коне&nbsp;приезжай&nbsp;ко&nbsp;мне,&nbsp;из&nbsp;драмсекции&nbsp;Дед&nbsp;Мороз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> --Ebm </span></span>
 <span class="txt"> Разбуди&nbsp;ты&nbsp;меня&nbsp;петардой,&nbsp;отведи&nbsp;от&nbsp;меня&nbsp;гипноз. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;вскочу&nbsp;да&nbsp;и&nbsp;укачу.&nbsp;Например,&nbsp;на&nbsp;Калимантан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> --Em </span>
+<span class="line"><span class="txt"> Я&nbsp;вскочу&nbsp;да&nbsp;и&nbsp;укачу.&nbsp;Например,&nbsp;на&nbsp;Калимантан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> --Em </span></span>
 <span class="txt"> Петь&nbsp;там&nbsp;стану&nbsp;в&nbsp;кафешантане,&nbsp;как&nbsp;какой-нибудь&nbsp;Ив&nbsp;Монтан... </span>
 <span class="txt">  </span>
  <br />
@@ -465,12 +473,8 @@ data-key="Hm"><span class="txt"> ЭПИЛОГ </span>
 <span class="txt"> И&nbsp;хрипит&nbsp;за&nbsp;стеной&nbsp;шарманка,&nbsp;спотыкаясь&nbsp;на&nbsp;каждом&nbsp;"фа". </span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
 <pre>
-    
 <span class="year">1999</span>
                                                                Нотировка по концерному исполнению.
 
@@ -480,8 +484,8 @@ data-key="Hm"><span class="txt"> ЭПИЛОГ </span>
                                                                (начинается в C#m, заканчивается в Fm),
                                                                после куплета "Нужды нет..." есть проигрыш,
                                                                наличествует отыгрыш в конце.
-
 </pre>
+
 
                 </div>
         </div>

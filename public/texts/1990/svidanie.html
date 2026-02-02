@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,72 +423,70 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">СВИДАНИЕ С ПОЛКОВНИКОМ</span>
+data-key="Am"><h1>СВИДАНИЕ С ПОЛКОВНИКОМ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Здравствуйте,&nbsp;полковник.&nbsp;Вы&nbsp;точны,&nbsp;как&nbsp;бес.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span>
-<span class="txt"> Вижу,&nbsp;мало&nbsp;спали&nbsp;и&nbsp;черны,&nbsp;как&nbsp;лес.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span>
-<span class="txt"> Что&nbsp;ж,&nbsp;располагайтесь&nbsp;без&nbsp;чинов,&nbsp;прошу&nbsp;вас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   Dm   Am </span>
-<span class="txt"> Запросто&nbsp;отстёгивайте&nbsp;свой&nbsp;протез.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am   E     Am </span>
+<span class="line"><span class="txt"> Здравствуйте,&nbsp;полковник.&nbsp;Вы&nbsp;точны,&nbsp;как&nbsp;бес.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span></span>
+<span class="line"><span class="txt"> Вижу,&nbsp;мало&nbsp;спали&nbsp;и&nbsp;черны,&nbsp;как&nbsp;лес.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span></span>
+<span class="line"><span class="txt"> Что&nbsp;ж,&nbsp;располагайтесь&nbsp;без&nbsp;чинов,&nbsp;прошу&nbsp;вас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   Dm   Am </span></span>
+<span class="line"><span class="txt"> Запросто&nbsp;отстёгивайте&nbsp;свой&nbsp;протез.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am   E     Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Трубка&nbsp;вас&nbsp;согреет,&nbsp;и&nbsp;вино&nbsp;взбодрит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span>
-<span class="txt"> Полон&nbsp;ваш&nbsp;бокал,&nbsp;и&nbsp;золотист&nbsp;на&nbsp;вид.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span>
-<span class="txt"> Пробуйте&nbsp;-&nbsp;напиток&nbsp;благородный,&nbsp;древний.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   Dm   Am </span>
-<span class="txt"> Это&nbsp;только&nbsp;кажется,&nbsp;что&nbsp;он&nbsp;горчит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am   E     Am </span>
+<span class="line"><span class="txt"> Трубка&nbsp;вас&nbsp;согреет,&nbsp;и&nbsp;вино&nbsp;взбодрит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span></span>
+<span class="line"><span class="txt"> Полон&nbsp;ваш&nbsp;бокал,&nbsp;и&nbsp;золотист&nbsp;на&nbsp;вид.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span></span>
+<span class="line"><span class="txt"> Пробуйте&nbsp;-&nbsp;напиток&nbsp;благородный,&nbsp;древний.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   Dm   Am </span></span>
+<span class="line"><span class="txt"> Это&nbsp;только&nbsp;кажется,&nbsp;что&nbsp;он&nbsp;горчит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am   E     Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Выпейте&nbsp;до&nbsp;дна,&nbsp;и&nbsp;перейдём&nbsp;к&nbsp;делам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span>
-<span class="txt"> Завтра&nbsp;наступление&nbsp;по&nbsp;всем&nbsp;фронтам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span>
-<span class="txt"> Жуткая,&nbsp;бесцельная&nbsp;резня&nbsp;и&nbsp;бойня&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   Gm   Dm </span>
-<span class="txt"> завтра&nbsp;суждена&nbsp;в&nbsp;числе&nbsp;других&nbsp;и&nbsp;вам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm   A     Dm </span>
+<span class="line"><span class="txt"> Выпейте&nbsp;до&nbsp;дна,&nbsp;и&nbsp;перейдём&nbsp;к&nbsp;делам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span></span>
+<span class="line"><span class="txt"> Завтра&nbsp;наступление&nbsp;по&nbsp;всем&nbsp;фронтам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span></span>
+<span class="line"><span class="txt"> Жуткая,&nbsp;бесцельная&nbsp;резня&nbsp;и&nbsp;бойня&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   Gm   Dm </span></span>
+<span class="line"><span class="txt"> завтра&nbsp;суждена&nbsp;в&nbsp;числе&nbsp;других&nbsp;и&nbsp;вам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm   A     Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Был&nbsp;вчера&nbsp;на&nbsp;штабе&nbsp;утверждён&nbsp;приказ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span>
-<span class="txt"> нынче&nbsp;он&nbsp;в&nbsp;деталях&nbsp;доведён&nbsp;до&nbsp;вас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span>
-<span class="txt"> Завтра&nbsp;вы&nbsp;прикажете&nbsp;-&nbsp;и&nbsp;цепь&nbsp;замкнётся:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   Dm   Am </span>
-<span class="txt"> взвод&nbsp;пойдёт&nbsp;в&nbsp;атаку&nbsp;и&nbsp;падёт&nbsp;за&nbsp;час.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am   E     Am </span>
+<span class="line"><span class="txt"> Был&nbsp;вчера&nbsp;на&nbsp;штабе&nbsp;утверждён&nbsp;приказ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span></span>
+<span class="line"><span class="txt"> нынче&nbsp;он&nbsp;в&nbsp;деталях&nbsp;доведён&nbsp;до&nbsp;вас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span></span>
+<span class="line"><span class="txt"> Завтра&nbsp;вы&nbsp;прикажете&nbsp;-&nbsp;и&nbsp;цепь&nbsp;замкнётся:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   Dm   Am </span></span>
+<span class="line"><span class="txt"> взвод&nbsp;пойдёт&nbsp;в&nbsp;атаку&nbsp;и&nbsp;падёт&nbsp;за&nbsp;час.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am   E     Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Тысяча&nbsp;смертей&nbsp;за&nbsp;шестьдесят&nbsp;минут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span>
-<span class="txt"> ради&nbsp;стратегических&nbsp;штабных&nbsp;причуд&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span>
-<span class="txt"> это,&nbsp;согласитесь,&nbsp;не&nbsp;смешно,&nbsp;полковник,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   Gm   Dm </span>
-<span class="txt"> или&nbsp;-&nbsp;по-английски&nbsp;говоря&nbsp;-&nbsp;not&nbsp;good.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm   A     Dm </span>
+<span class="line"><span class="txt"> Тысяча&nbsp;смертей&nbsp;за&nbsp;шестьдесят&nbsp;минут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span></span>
+<span class="line"><span class="txt"> ради&nbsp;стратегических&nbsp;штабных&nbsp;причуд&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span></span>
+<span class="line"><span class="txt"> это,&nbsp;согласитесь,&nbsp;не&nbsp;смешно,&nbsp;полковник,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   Gm   Dm </span></span>
+<span class="line"><span class="txt"> или&nbsp;-&nbsp;по-английски&nbsp;говоря&nbsp;-&nbsp;not&nbsp;good.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm   A     Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Следует&nbsp;из&nbsp;сказанного&nbsp;мной&nbsp;одно:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span>
-<span class="txt"> нужно&nbsp;из&nbsp;цепочки&nbsp;исключить&nbsp;звено.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span>
-<span class="txt"> Именно&nbsp;затем&nbsp;я&nbsp;и&nbsp;позвал&nbsp;вас,&nbsp;сударь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   Dm   Am </span>
-<span class="txt"> именно&nbsp;за&nbsp;этим&nbsp;отравил&nbsp;вино.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am   E     Am </span>
+<span class="line"><span class="txt"> Следует&nbsp;из&nbsp;сказанного&nbsp;мной&nbsp;одно:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span></span>
+<span class="line"><span class="txt"> нужно&nbsp;из&nbsp;цепочки&nbsp;исключить&nbsp;звено.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span></span>
+<span class="line"><span class="txt"> Именно&nbsp;затем&nbsp;я&nbsp;и&nbsp;позвал&nbsp;вас,&nbsp;сударь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   Dm   Am </span></span>
+<span class="line"><span class="txt"> именно&nbsp;за&nbsp;этим&nbsp;отравил&nbsp;вино.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am   E     Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Что&nbsp;предотвратил&nbsp;я,&nbsp;и&nbsp;чего&nbsp;не&nbsp;смог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span>
-<span class="txt"> чей&nbsp;расчёт&nbsp;простителен,&nbsp;и&nbsp;чей&nbsp;жесток&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span>
-<span class="txt"> мы&nbsp;обсудим&nbsp;после&nbsp;и&nbsp;не&nbsp;здесь.&nbsp;Прощайте,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   Gm   Dm </span>
-<span class="txt"> яд&nbsp;уже&nbsp;подействовал:&nbsp;зрачок&nbsp;широк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm   A     Dm </span>
+<span class="line"><span class="txt"> Что&nbsp;предотвратил&nbsp;я,&nbsp;и&nbsp;чего&nbsp;не&nbsp;смог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span></span>
+<span class="line"><span class="txt"> чей&nbsp;расчёт&nbsp;простителен,&nbsp;и&nbsp;чей&nbsp;жесток&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/C Dm/H </span></span>
+<span class="line"><span class="txt"> мы&nbsp;обсудим&nbsp;после&nbsp;и&nbsp;не&nbsp;здесь.&nbsp;Прощайте,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   Gm   Dm </span></span>
+<span class="line"><span class="txt"> яд&nbsp;уже&nbsp;подействовал:&nbsp;зрачок&nbsp;широк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm   A     Dm </span></span>
 <span class="txt">  </span>
-<span class="txt"> В&nbsp;путь,&nbsp;мой&nbsp;дорогой,&nbsp;не&nbsp;поминайте&nbsp;злом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span>
-<span class="txt"> Следующий&nbsp;гость&nbsp;уже&nbsp;стучится&nbsp;в&nbsp;дом:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span>
-<span class="txt"> встречу&nbsp;на&nbsp;сегодня&nbsp;я&nbsp;назначил&nbsp;многим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   Dm   Am </span>
-<span class="txt"> и&nbsp;не&nbsp;собираюсь&nbsp;прекращать&nbsp;приём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am   E     Am </span>
+<span class="line"><span class="txt"> В&nbsp;путь,&nbsp;мой&nbsp;дорогой,&nbsp;не&nbsp;поминайте&nbsp;злом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span></span>
+<span class="line"><span class="txt"> Следующий&nbsp;гость&nbsp;уже&nbsp;стучится&nbsp;в&nbsp;дом:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/G Am/F# </span></span>
+<span class="line"><span class="txt"> встречу&nbsp;на&nbsp;сегодня&nbsp;я&nbsp;назначил&nbsp;многим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A   Dm   Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;не&nbsp;собираюсь&nbsp;прекращать&nbsp;приём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 Am   E     Am </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1990</span>                                            
+<pre><span class="year">1990</span>                                            
                                                 
                                                 
                                                 
-
 </pre>
+
 
                 </div>
         </div>

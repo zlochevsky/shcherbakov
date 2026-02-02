@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,30 +433,28 @@ span.c {
 data-key="Hm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;чашу&nbsp;свою&nbsp;осушил&nbsp;до&nbsp;предела;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm    Em    Em6 </span>
-<span class="txt"> что&nbsp;было&nbsp;-&nbsp;истратил&nbsp;дотла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm    B     F#    Hm </span>
-<span class="txt"> Судьба&nbsp;подарила&nbsp;мне&nbsp;всё,&nbsp;что&nbsp;хотела,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   D     Em    C </span>
-<span class="txt"> и&nbsp;всё,&nbsp;что&nbsp;смогла,&nbsp;отняла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm    F#7   Hm    D7/A </span>
-<span class="txt"> Подобно&nbsp;реке&nbsp;я&nbsp;блистал&nbsp;на&nbsp;свободе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G     G/F#  Em    C </span>
-<span class="txt"> прекрасной&nbsp;мечтой&nbsp;обуян.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm/F# F#    G     Am6 </span>
-<span class="txt"> Мой&nbsp;путь&nbsp;состоялся,&nbsp;река&nbsp;на&nbsp;исходе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Em    G7/F# Hm/F# G       Em6 </span>
-<span class="txt"> и&nbsp;виден&nbsp;вдали&nbsp;океан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm/F# F#    G     H7/F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em    Em6   Hm/F# F# </span>
-<span class="txt"> Прости,&nbsp;моя&nbsp;радость,&nbsp;прости,&nbsp;моё&nbsp;счастье,&nbsp;&nbsp; </span><span class="ch">      Hm    Em    Em6 </span>
-<span class="txt"> ещё&nbsp;высоки&nbsp;небеса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm    B     F#    Hm </span>
-<span class="txt"> но&nbsp;там&nbsp;вдалеке,&nbsp;где&nbsp;клубится&nbsp;ненастье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   D     Em    C </span>
-<span class="txt"> чужие&nbsp;слышны&nbsp;голоса.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm    F#7   Hm    D7/A </span>
-<span class="txt"> Не&nbsp;плачь,&nbsp;Бог&nbsp;с&nbsp;тобою,&nbsp;оставь&nbsp;сожаленья&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G     G/F#  Em    C </span>
-<span class="txt"> о&nbsp;том,&nbsp;что&nbsp;исчезнет&nbsp;во&nbsp;мгле.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm/F# F#    G     Am6 </span>
-<span class="txt"> Пока&nbsp;не&nbsp;стемнело,&nbsp;хотя&nbsp;б&nbsp;на&nbsp;мгновенье&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Em    G7/F# Hm/F# G       Em6 </span>
-<span class="txt"> останься&nbsp;со&nbsp;мной&nbsp;на&nbsp;Земле.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm/F# F#    G     H7/F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em    Em6   Hm/F# F#      Hm </span>
-
+<span class="line"><span class="txt"> Я&nbsp;чашу&nbsp;свою&nbsp;осушил&nbsp;до&nbsp;предела;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm    Em    Em6 </span></span>
+<span class="line"><span class="txt"> что&nbsp;было&nbsp;-&nbsp;истратил&nbsp;дотла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm    B     F#    Hm </span></span>
+<span class="line"><span class="txt"> Судьба&nbsp;подарила&nbsp;мне&nbsp;всё,&nbsp;что&nbsp;хотела,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   D     Em    C </span></span>
+<span class="line"><span class="txt"> и&nbsp;всё,&nbsp;что&nbsp;смогла,&nbsp;отняла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm    F#7   Hm    D7/A </span></span>
+<span class="line"><span class="txt"> Подобно&nbsp;реке&nbsp;я&nbsp;блистал&nbsp;на&nbsp;свободе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G     G/F#  Em    C </span></span>
+<span class="line"><span class="txt"> прекрасной&nbsp;мечтой&nbsp;обуян.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm/F# F#    G     Am6 </span></span>
+<span class="line"><span class="txt"> Мой&nbsp;путь&nbsp;состоялся,&nbsp;река&nbsp;на&nbsp;исходе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Em    G7/F# Hm/F# G       Em6 </span></span>
+<span class="line"><span class="txt"> и&nbsp;виден&nbsp;вдали&nbsp;океан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm/F# F#    G     H7/F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em    Em6   Hm/F# F# </span></span>
+<span class="line"><span class="txt"> Прости,&nbsp;моя&nbsp;радость,&nbsp;прости,&nbsp;моё&nbsp;счастье,&nbsp;&nbsp; </span><span class="ch">      Hm    Em    Em6 </span></span>
+<span class="line"><span class="txt"> ещё&nbsp;высоки&nbsp;небеса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm    B     F#    Hm </span></span>
+<span class="line"><span class="txt"> но&nbsp;там&nbsp;вдалеке,&nbsp;где&nbsp;клубится&nbsp;ненастье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7   D     Em    C </span></span>
+<span class="line"><span class="txt"> чужие&nbsp;слышны&nbsp;голоса.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm    F#7   Hm    D7/A </span></span>
+<span class="line"><span class="txt"> Не&nbsp;плачь,&nbsp;Бог&nbsp;с&nbsp;тобою,&nbsp;оставь&nbsp;сожаленья&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      G     G/F#  Em    C </span></span>
+<span class="line"><span class="txt"> о&nbsp;том,&nbsp;что&nbsp;исчезнет&nbsp;во&nbsp;мгле.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm/F# F#    G     Am6 </span></span>
+<span class="line"><span class="txt"> Пока&nbsp;не&nbsp;стемнело,&nbsp;хотя&nbsp;б&nbsp;на&nbsp;мгновенье&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7   Em    G7/F# Hm/F# G       Em6 </span></span>
+<span class="line"><span class="txt"> останься&nbsp;со&nbsp;мной&nbsp;на&nbsp;Земле.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Hm/F# F#    G     H7/F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em    Em6   Hm/F# F#      Hm </span></span>
 </div>
-<pre>
-    <span class="year">1986</span>
-
+<pre><span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,38 +423,38 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">L'Homme a la Moto</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intro:&nbsp;(=&nbsp;пр.)&nbsp; </span><span class="ch"> Dm Dm11 Dm Dm9 Dm Dm11 Dm Dm9 Dm6 </span>
+data-key="Dm"><h1>L'Homme a la Moto</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intro:&nbsp;(=&nbsp;пр.)&nbsp; </span><span class="ch"> Dm Dm11 Dm Dm9 Dm Dm11 Dm Dm9 Dm6 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Заносчив&nbsp;был&nbsp;угонщик&nbsp;мотоциклов,&nbsp;виртуоз,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Eb7  </span>
-<span class="txt"> его&nbsp;не&nbsp;зря&nbsp;учили&nbsp;в&nbsp;колледже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A B7/D </span>
-<span class="txt"> Не&nbsp;спорь,&nbsp;бывало,&nbsp;с&nbsp;ним,&nbsp;когда&nbsp;погода&nbsp;хуже&nbsp;слёз&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Eb7 </span>
-<span class="txt"> и&nbsp;настроение&nbsp;такое&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm D Gm </span>
+<span class="line"><span class="txt"> Заносчив&nbsp;был&nbsp;угонщик&nbsp;мотоциклов,&nbsp;виртуоз,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Eb7  </span></span>
+<span class="line"><span class="txt"> его&nbsp;не&nbsp;зря&nbsp;учили&nbsp;в&nbsp;колледже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A B7/D </span></span>
+<span class="line"><span class="txt"> Не&nbsp;спорь,&nbsp;бывало,&nbsp;с&nbsp;ним,&nbsp;когда&nbsp;погода&nbsp;хуже&nbsp;слёз&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Eb7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;настроение&nbsp;такое&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm D Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Чины&nbsp;строптивому&nbsp;не&nbsp;указ&nbsp;и&nbsp;гости&nbsp;с&nbsp;музыкой&nbsp;нипочём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A </span>
-<span class="txt"> Сама&nbsp;природа&nbsp;нажать&nbsp;на&nbsp;газ&nbsp;велит&nbsp;ему,&nbsp;чуть&nbsp;что&nbsp;не&nbsp;по&nbsp;нём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B C </span>
-<span class="txt"> Он&nbsp;прерывает&nbsp;вальса&nbsp;тур,&nbsp;вытягивается&nbsp;как&nbsp;тетива&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D Gm Dm </span>
-<span class="txt"> и,&nbsp;взяв&nbsp;партнёршу&nbsp;за&nbsp;маникюр,&nbsp;такие&nbsp;ей&nbsp;говорит&nbsp;слова:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D Gm A B D7     --Gm </span>
+<span class="line"><span class="txt"> Чины&nbsp;строптивому&nbsp;не&nbsp;указ&nbsp;и&nbsp;гости&nbsp;с&nbsp;музыкой&nbsp;нипочём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A </span></span>
+<span class="line"><span class="txt"> Сама&nbsp;природа&nbsp;нажать&nbsp;на&nbsp;газ&nbsp;велит&nbsp;ему,&nbsp;чуть&nbsp;что&nbsp;не&nbsp;по&nbsp;нём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B C </span></span>
+<span class="line"><span class="txt"> Он&nbsp;прерывает&nbsp;вальса&nbsp;тур,&nbsp;вытягивается&nbsp;как&nbsp;тетива&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D Gm Dm </span></span>
+<span class="line"><span class="txt"> и,&nbsp;взяв&nbsp;партнёршу&nbsp;за&nbsp;маникюр,&nbsp;такие&nbsp;ей&nbsp;говорит&nbsp;слова:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D Gm A B D7     --Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> "Мадам,&nbsp;вы&nbsp;знаете&nbsp;мой&nbsp;серьёз.&nbsp;И&nbsp;пусть&nbsp;даже&nbsp;вам&nbsp;захочется&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Cm </span>
-<span class="txt"> иметь&nbsp;охапку&nbsp;лиловых&nbsp;роз&nbsp;не&nbsp;позже,&nbsp;чем&nbsp;через&nbsp;полчаса.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm A Gm </span>
-<span class="txt"> Я&nbsp;выполню,&nbsp;что&nbsp;прикажете.&nbsp;Но&nbsp;если&nbsp;ногти&nbsp;свои,&nbsp;мадам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm G Cm </span>
-<span class="txt"> ещё&nbsp;вы&nbsp;хоть&nbsp;раз&nbsp;намажете&nbsp;-&nbsp;ничто&nbsp;уже&nbsp;не&nbsp;поможет&nbsp;вам!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm6 Gm D Gm       Dm<- </span>
+<span class="line"><span class="txt"> "Мадам,&nbsp;вы&nbsp;знаете&nbsp;мой&nbsp;серьёз.&nbsp;И&nbsp;пусть&nbsp;даже&nbsp;вам&nbsp;захочется&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Cm </span></span>
+<span class="line"><span class="txt"> иметь&nbsp;охапку&nbsp;лиловых&nbsp;роз&nbsp;не&nbsp;позже,&nbsp;чем&nbsp;через&nbsp;полчаса.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm A Gm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;выполню,&nbsp;что&nbsp;прикажете.&nbsp;Но&nbsp;если&nbsp;ногти&nbsp;свои,&nbsp;мадам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm G Cm </span></span>
+<span class="line"><span class="txt"> ещё&nbsp;вы&nbsp;хоть&nbsp;раз&nbsp;намажете&nbsp;-&nbsp;ничто&nbsp;уже&nbsp;не&nbsp;поможет&nbsp;вам!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm6 Gm D Gm       Dm<- </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сказавши&nbsp;так&nbsp;и&nbsp;сделавши&nbsp;поклон&nbsp;-&nbsp;среди&nbsp;колонн&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span>
+<span class="line"><span class="txt"> Сказавши&nbsp;так&nbsp;и&nbsp;сделавши&nbsp;поклон&nbsp;-&nbsp;среди&nbsp;колонн&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span></span>
 <span class="txt"> застывшим&nbsp;молодцам&nbsp;и&nbsp;девицам, </span>
 <span class="txt"> выходит&nbsp;наш&nbsp;угонщик&nbsp;ровно&nbsp;вон,&nbsp;а&nbsp;выйдя&nbsp;вон&nbsp;- </span>
 <span class="txt"> берёт&nbsp;ближайший&nbsp;"харлей&nbsp;дэвидсон". </span>
@@ -455,19 +463,19 @@ data-key="Dm"><span class="sng-title">L'Homme a la Moto</span>
 <span class="txt"> Колодки&nbsp;вынув&nbsp;из-под&nbsp;колёс&nbsp;и&nbsp;пломбы&nbsp;перерубив&nbsp;сплеча, </span>
 <span class="txt"> чужую&nbsp;технику&nbsp;виртуоз&nbsp;приводит&nbsp;в&nbsp;действие&nbsp;без&nbsp;ключа. </span>
 <span class="txt"> Мотор&nbsp;искрит,&nbsp;подымая&nbsp;вой,&nbsp;подобно&nbsp;молниям&nbsp;и&nbsp;громам,&nbsp;- </span>
-<span class="txt"> и&nbsp;мчится&nbsp;с&nbsp;грохотом&nbsp;наш&nbsp;герой&nbsp;по&nbsp;всем&nbsp;семи&nbsp;городским&nbsp;холмам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 --Gm </span>
+<span class="line"><span class="txt"> и&nbsp;мчится&nbsp;с&nbsp;грохотом&nbsp;наш&nbsp;герой&nbsp;по&nbsp;всем&nbsp;семи&nbsp;городским&nbsp;холмам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 --Gm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Взлетает&nbsp;в&nbsp;гору&nbsp;он&nbsp;соколом,&nbsp;зигзаги&nbsp;чертит&nbsp;по&nbsp;гололёду, </span>
 <span class="txt"> огонь&nbsp;и&nbsp;холод&nbsp;в&nbsp;себе&nbsp;самом&nbsp;смешав,&nbsp;как&nbsp;греки&nbsp;вино&nbsp;и&nbsp;воду. </span>
 <span class="txt"> Несётся&nbsp;под&nbsp;гору&nbsp;он&nbsp;стремглав,&nbsp;стучит&nbsp;на&nbsp;выбоинах&nbsp;чечётку, </span>
-<span class="txt"> восторг&nbsp;и&nbsp;сумрак&nbsp;в&nbsp;себе&nbsp;смешав,&nbsp;как&nbsp;россияне&nbsp;вино&nbsp;и&nbsp;водку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                   Dm<- </span>
+<span class="line"><span class="txt"> восторг&nbsp;и&nbsp;сумрак&nbsp;в&nbsp;себе&nbsp;смешав,&nbsp;как&nbsp;россияне&nbsp;вино&nbsp;и&nbsp;водку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                   Dm<- </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> пр. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пр. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Когда&nbsp;же&nbsp;тормозит&nbsp;он,&nbsp;чтобы&nbsp;выкурить&nbsp;"косяк"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span>
+<span class="line"><span class="txt"> Когда&nbsp;же&nbsp;тормозит&nbsp;он,&nbsp;чтобы&nbsp;выкурить&nbsp;"косяк"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span></span>
 <span class="txt"> и&nbsp;приложиться&nbsp;ко&nbsp;флакончику,&nbsp;- </span>
 <span class="txt"> из&nbsp;воздуха&nbsp;является&nbsp;фургон&nbsp;о&nbsp;трёх&nbsp;осях </span>
 <span class="txt"> и&nbsp;прицепляется&nbsp;к&nbsp;угонщику. </span>
@@ -476,71 +484,68 @@ data-key="Dm"><span class="sng-title">L'Homme a la Moto</span>
 <span class="txt"> Снаружи&nbsp;смотрится&nbsp;не&nbsp;весьма,&nbsp;кибитка&nbsp;так&nbsp;себе,&nbsp;сорт&nbsp;второй. </span>
 <span class="txt"> Зато&nbsp;внутри,&nbsp;чума&nbsp;не&nbsp;чума,&nbsp;но&nbsp;пир&nbsp;на&nbsp;сорок&nbsp;персон&nbsp;горой. </span>
 <span class="txt"> Как&nbsp;будто&nbsp;конкурс&nbsp;на&nbsp;лучший&nbsp;тост&nbsp;увлёк&nbsp;и&nbsp;греков&nbsp;и&nbsp;россиян&nbsp;- </span>
-<span class="txt"> и&nbsp;тосты&nbsp;их&nbsp;достигают&nbsp;звёзд,&nbsp;к&nbsp;немалой&nbsp;радости&nbsp;марсиан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 --Gm </span>
+<span class="line"><span class="txt"> и&nbsp;тосты&nbsp;их&nbsp;достигают&nbsp;звёзд,&nbsp;к&nbsp;немалой&nbsp;радости&nbsp;марсиан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 --Gm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Готов&nbsp;к&nbsp;полёту&nbsp;фургон-фуршет,&nbsp;но&nbsp;постовым&nbsp;не&nbsp;видать&nbsp;улова. </span>
 <span class="txt"> Не&nbsp;потому&nbsp;что&nbsp;зелёный&nbsp;свет,&nbsp;а&nbsp;потому&nbsp;что&nbsp;нет&nbsp;никакого. </span>
 <span class="txt"> И&nbsp;рейс&nbsp;как&nbsp;будто&nbsp;не&nbsp;грузовой,&nbsp;кому&nbsp;-&nbsp;ухабы,&nbsp;кому&nbsp;-&nbsp;услады, </span>
-<span class="txt"> и&nbsp;до&nbsp;конечной&nbsp;от&nbsp;узловой&nbsp;-&nbsp;как&nbsp;до&nbsp;Московии&nbsp;от&nbsp;Эллады...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 --G#m    </span>
+<span class="line"><span class="txt"> и&nbsp;до&nbsp;конечной&nbsp;от&nbsp;узловой&nbsp;-&nbsp;как&nbsp;до&nbsp;Московии&nbsp;от&nbsp;Эллады...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 --G#m    </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Во&nbsp;славу&nbsp;кубка&nbsp;и&nbsp;мундштука&nbsp;-&nbsp;отрава&nbsp;пьётся,&nbsp;дымится&nbsp;зелье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m </span>
-<span class="txt"> Не&nbsp;потому&nbsp;что&nbsp;без&nbsp;них&nbsp;тоска,&nbsp;а&nbsp;потому&nbsp;что&nbsp;от&nbsp;них&nbsp;веселье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A# G#m </span>
-<span class="txt"> Пускай&nbsp;не&nbsp;раут,&nbsp;скорей&nbsp;дебош,&nbsp;ни&nbsp;протокола,&nbsp;ни&nbsp;фонограммы...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m G# C#m </span>
-<span class="txt"> Но&nbsp;кавалеры&nbsp;изящны&nbsp;сплошь,&nbsp;и&nbsp;дамы&nbsp;тоже...&nbsp;мечта,&nbsp;не&nbsp;дамы!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 G#m D# G#m   D#m<- </span>
+<span class="line"><span class="txt"> Во&nbsp;славу&nbsp;кубка&nbsp;и&nbsp;мундштука&nbsp;-&nbsp;отрава&nbsp;пьётся,&nbsp;дымится&nbsp;зелье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m </span></span>
+<span class="line"><span class="txt"> Не&nbsp;потому&nbsp;что&nbsp;без&nbsp;них&nbsp;тоска,&nbsp;а&nbsp;потому&nbsp;что&nbsp;от&nbsp;них&nbsp;веселье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m A# G#m </span></span>
+<span class="line"><span class="txt"> Пускай&nbsp;не&nbsp;раут,&nbsp;скорей&nbsp;дебош,&nbsp;ни&nbsp;протокола,&nbsp;ни&nbsp;фонограммы...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m G# C#m </span></span>
+<span class="line"><span class="txt"> Но&nbsp;кавалеры&nbsp;изящны&nbsp;сплошь,&nbsp;и&nbsp;дамы&nbsp;тоже...&nbsp;мечта,&nbsp;не&nbsp;дамы!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m6 G#m D# G#m   D#m<- </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Лишь&nbsp;две&nbsp;-&nbsp;ни&nbsp;то&nbsp;ни&nbsp;сё,&nbsp;из&nbsp;тех,&nbsp;что&nbsp;ночью&nbsp;не&nbsp;едят&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m E7 </span>
-<span class="txt"> и&nbsp;чтут&nbsp;порядок,&nbsp;как&nbsp;религию.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m A D#m </span>
-<span class="txt"> Они&nbsp;случайно&nbsp;здесь&nbsp;и&nbsp;веселиться&nbsp;не&nbsp;хотят,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m E7 </span>
-<span class="txt"> хотят&nbsp;в&nbsp;Эльзас&nbsp;и&nbsp;Лотарингию.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m D# G#m </span>
-<span class="txt"> Скулят:&nbsp;"А&nbsp;можно&nbsp;нам&nbsp;в&nbsp;Эльзас?"&nbsp;Нельзя-с.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m A# D#m      --Em </span>
+<span class="line"><span class="txt"> Лишь&nbsp;две&nbsp;-&nbsp;ни&nbsp;то&nbsp;ни&nbsp;сё,&nbsp;из&nbsp;тех,&nbsp;что&nbsp;ночью&nbsp;не&nbsp;едят&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m E7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;чтут&nbsp;порядок,&nbsp;как&nbsp;религию.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m A D#m </span></span>
+<span class="line"><span class="txt"> Они&nbsp;случайно&nbsp;здесь&nbsp;и&nbsp;веселиться&nbsp;не&nbsp;хотят,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m E7 </span></span>
+<span class="line"><span class="txt"> хотят&nbsp;в&nbsp;Эльзас&nbsp;и&nbsp;Лотарингию.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m D# G#m </span></span>
+<span class="line"><span class="txt"> Скулят:&nbsp;"А&nbsp;можно&nbsp;нам&nbsp;в&nbsp;Эльзас?"&nbsp;Нельзя-с.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m A# D#m      --Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> пр.: Em Em11 Em Em9 Em Em11 Em Em9 </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> пр.: Em Em11 Em Em9 Em Em11 Em Em9 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;сломишь&nbsp;виртуоза&nbsp;и&nbsp;к&nbsp;шаблону&nbsp;не&nbsp;сведёшь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em F7 </span>
-<span class="txt"> его&nbsp;не&nbsp;зря&nbsp;лечили&nbsp;в&nbsp;клинике.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C7/E  </span>
-<span class="txt"> "Приехали!&nbsp;-&nbsp;кричит.&nbsp;-&nbsp;Вали&nbsp;на&nbsp;волю,&nbsp;молодёжь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em F7 </span>
-<span class="txt"> гони&nbsp;прогонные&nbsp;полтинники!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7/G# Am </span>
+<span class="line"><span class="txt"> Не&nbsp;сломишь&nbsp;виртуоза&nbsp;и&nbsp;к&nbsp;шаблону&nbsp;не&nbsp;сведёшь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em F7 </span></span>
+<span class="line"><span class="txt"> его&nbsp;не&nbsp;зря&nbsp;лечили&nbsp;в&nbsp;клинике.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 C7/E  </span></span>
+<span class="line"><span class="txt"> "Приехали!&nbsp;-&nbsp;кричит.&nbsp;-&nbsp;Вали&nbsp;на&nbsp;волю,&nbsp;молодёжь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em F7 </span></span>
+<span class="line"><span class="txt"> гони&nbsp;прогонные&nbsp;полтинники!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7/G# Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Затем,&nbsp;столкнув&nbsp;балаган&nbsp;с&nbsp;холма,&nbsp;он&nbsp;деньги&nbsp;(счётом&nbsp;до&nbsp;сорока&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am H7 </span>
-<span class="txt"> монет)&nbsp;несёт,&nbsp;зима&nbsp;не&nbsp;зима,&nbsp;к&nbsp;воротам&nbsp;спящего&nbsp;цветника.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C D </span>
-<span class="txt"> Минуя&nbsp;диспуты&nbsp;о&nbsp;цене,&nbsp;вручает&nbsp;сторожу,&nbsp;что&nbsp;принёс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E Am Em </span>
-<span class="txt"> и&nbsp;требует:&nbsp;"Упакуйте&nbsp;мне&nbsp;вон&nbsp;ту&nbsp;охапку&nbsp;лиловых&nbsp;роз!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E Am H C E7     --Am </span>
+<span class="line"><span class="txt"> Затем,&nbsp;столкнув&nbsp;балаган&nbsp;с&nbsp;холма,&nbsp;он&nbsp;деньги&nbsp;(счётом&nbsp;до&nbsp;сорока&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am H7 </span></span>
+<span class="line"><span class="txt"> монет)&nbsp;несёт,&nbsp;зима&nbsp;не&nbsp;зима,&nbsp;к&nbsp;воротам&nbsp;спящего&nbsp;цветника.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C D </span></span>
+<span class="line"><span class="txt"> Минуя&nbsp;диспуты&nbsp;о&nbsp;цене,&nbsp;вручает&nbsp;сторожу,&nbsp;что&nbsp;принёс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E Am Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;требует:&nbsp;"Упакуйте&nbsp;мне&nbsp;вон&nbsp;ту&nbsp;охапку&nbsp;лиловых&nbsp;роз!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E Am H C E7     --Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> ...Какой&nbsp;длины&nbsp;ни&nbsp;задай&nbsp;полёт,&nbsp;обратный&nbsp;-&nbsp;кажется,&nbsp;что&nbsp;длиннее.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm </span>
-<span class="txt"> А&nbsp;тут&nbsp;и&nbsp;утро&nbsp;уже&nbsp;вот-вот,&nbsp;и&nbsp;утро&nbsp;вечера&nbsp;мудренее.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E Am </span>
-<span class="txt"> Герой&nbsp;в&nbsp;седле,&nbsp;и&nbsp;сухим&nbsp;огнём,&nbsp;который&nbsp;пепла&nbsp;не&nbsp;оставляет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A Dm </span>
-<span class="txt"> ещё&nbsp;горит&nbsp;ретивое&nbsp;в&nbsp;нём.&nbsp;Но&nbsp;догорает&nbsp;и&nbsp;остывает.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 F7     --Bm </span>
+<span class="line"><span class="txt"> ...Какой&nbsp;длины&nbsp;ни&nbsp;задай&nbsp;полёт,&nbsp;обратный&nbsp;-&nbsp;кажется,&nbsp;что&nbsp;длиннее.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm </span></span>
+<span class="line"><span class="txt"> А&nbsp;тут&nbsp;и&nbsp;утро&nbsp;уже&nbsp;вот-вот,&nbsp;и&nbsp;утро&nbsp;вечера&nbsp;мудренее.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E Am </span></span>
+<span class="line"><span class="txt"> Герой&nbsp;в&nbsp;седле,&nbsp;и&nbsp;сухим&nbsp;огнём,&nbsp;который&nbsp;пепла&nbsp;не&nbsp;оставляет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A Dm </span></span>
+<span class="line"><span class="txt"> ещё&nbsp;горит&nbsp;ретивое&nbsp;в&nbsp;нём.&nbsp;Но&nbsp;догорает&nbsp;и&nbsp;остывает.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 F7     --Bm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Уже,&nbsp;куда&nbsp;бы&nbsp;ни&nbsp;мчал&nbsp;его&nbsp;стальной&nbsp;дракон&nbsp;со&nbsp;стеклянным&nbsp;оком,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Ebm </span>
-<span class="txt"> повсюду&nbsp;кончилось&nbsp;торжество&nbsp;-&nbsp;и&nbsp;ничего,&nbsp;кроме&nbsp;чёрных&nbsp;окон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F Bm </span>
-<span class="txt"> И&nbsp;-&nbsp;сколь&nbsp;сердито&nbsp;бы&nbsp;наш&nbsp;пилот&nbsp;ни&nbsp;думал:&nbsp;"Мы,&nbsp;мол,&nbsp;ещё&nbsp;покажем!"&nbsp;-&nbsp; </span><span class="ch"> Bm B Ebm </span>
-<span class="txt"> он&nbsp;не&nbsp;парит&nbsp;уже,&nbsp;но&nbsp;плывёт.&nbsp;И&nbsp;доплывает&nbsp;вполне&nbsp;погасшим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm Bm F Bm </span>
+<span class="line"><span class="txt"> Уже,&nbsp;куда&nbsp;бы&nbsp;ни&nbsp;мчал&nbsp;его&nbsp;стальной&nbsp;дракон&nbsp;со&nbsp;стеклянным&nbsp;оком,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Ebm </span></span>
+<span class="line"><span class="txt"> повсюду&nbsp;кончилось&nbsp;торжество&nbsp;-&nbsp;и&nbsp;ничего,&nbsp;кроме&nbsp;чёрных&nbsp;окон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm F Bm </span></span>
+<span class="line"><span class="txt"> И&nbsp;-&nbsp;сколь&nbsp;сердито&nbsp;бы&nbsp;наш&nbsp;пилот&nbsp;ни&nbsp;думал:&nbsp;"Мы,&nbsp;мол,&nbsp;ещё&nbsp;покажем!"&nbsp;-&nbsp; </span><span class="ch"> Bm B Ebm </span></span>
+<span class="line"><span class="txt"> он&nbsp;не&nbsp;парит&nbsp;уже,&nbsp;но&nbsp;плывёт.&nbsp;И&nbsp;доплывает&nbsp;вполне&nbsp;погасшим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm Bm F Bm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Потом&nbsp;под&nbsp;окнами,&nbsp;пуст&nbsp;и&nbsp;вял,&nbsp;дымит&nbsp;он&nbsp;зельем&nbsp;и&nbsp;пьёт&nbsp;отраву.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm B Ebm Bm </span>
-<span class="txt"> Дракон&nbsp;становится,&nbsp;где&nbsp;стоял.&nbsp;Цветы&nbsp;лилово&nbsp;летят&nbsp;в&nbsp;канаву.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B Ebm Bm F Bm     Fm<- </span>
+<span class="line"><span class="txt"> Потом&nbsp;под&nbsp;окнами,&nbsp;пуст&nbsp;и&nbsp;вял,&nbsp;дымит&nbsp;он&nbsp;зельем&nbsp;и&nbsp;пьёт&nbsp;отраву.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm B Ebm Bm </span></span>
+<span class="line"><span class="txt"> Дракон&nbsp;становится,&nbsp;где&nbsp;стоял.&nbsp;Цветы&nbsp;лилово&nbsp;летят&nbsp;в&nbsp;канаву.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B Ebm Bm F Bm     Fm<- </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fin:&nbsp; </span><span class="ch"> Fm Fm11 Fm Fm9 Fm Fm11 Fm Fm9 (bis) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
- <br />
-
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fin:&nbsp; </span><span class="ch"> Fm Fm11 Fm Fm9 Fm Fm11 Fm Fm9 (bis) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
 </div>
-<pre>
-    <span class="year">2005</span>
+<pre><span class="year">2005</span>
                                                                    Условная гармония по исполнению <span class="year">2005</span> года
                                                                   (диск &#171;<a href="../../Disks/raycentr.html">Райцентр</a>&#187;).
 
-
 </pre>
+
 
                 </div>
         </div>

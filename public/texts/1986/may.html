@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,82 +423,80 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">МАЙ</span>
+data-key="Am"><h1>МАЙ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ах,&nbsp;я,&nbsp;точно&nbsp;тополь,&nbsp;рос,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am </span>
-<span class="txt"> и&nbsp;был&nbsp;неказист&nbsp;и&nbsp;прост,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm </span>
-<span class="txt"> клонился&nbsp;от&nbsp;бурь&nbsp;и&nbsp;гроз,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Fm6 A7 </span>
-<span class="txt"> в&nbsp;ветрах&nbsp;шелестел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm  Dm9   Dm </span>
-<span class="txt"> Порою&nbsp;желтел,&nbsp;линял,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am  E7/H </span>
-<span class="txt"> но&nbsp;снова&nbsp;листву&nbsp;менял,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F   Dm6 </span>
-<span class="txt"> и&nbsp;ливень,&nbsp;омыв&nbsp;меня,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   Am/E </span>
-<span class="txt"> на&nbsp;кроне&nbsp;моей&nbsp;блестел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E   Am </span>
+<span class="line"><span class="txt"> Ах,&nbsp;я,&nbsp;точно&nbsp;тополь,&nbsp;рос,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;был&nbsp;неказист&nbsp;и&nbsp;прост,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm </span></span>
+<span class="line"><span class="txt"> клонился&nbsp;от&nbsp;бурь&nbsp;и&nbsp;гроз,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Fm6 A7 </span></span>
+<span class="line"><span class="txt"> в&nbsp;ветрах&nbsp;шелестел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm  Dm9   Dm </span></span>
+<span class="line"><span class="txt"> Порою&nbsp;желтел,&nbsp;линял,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am  E7/H </span></span>
+<span class="line"><span class="txt"> но&nbsp;снова&nbsp;листву&nbsp;менял,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F   Dm6 </span></span>
+<span class="line"><span class="txt"> и&nbsp;ливень,&nbsp;омыв&nbsp;меня,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   Am/E </span></span>
+<span class="line"><span class="txt"> на&nbsp;кроне&nbsp;моей&nbsp;блестел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;образы&nbsp;чистых&nbsp;дум&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C   F     Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;сквозь&nbsp;мой&nbsp;многолистный&nbsp;шум&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7/A  Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;мне&nbsp;май&nbsp;напевал&nbsp;и&nbsp;цвёл,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm6 A7    B </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;лаская&nbsp;мой&nbsp;крепкий&nbsp;ствол.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  A7    Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Шли&nbsp;годы,&nbsp;дожди&nbsp;лились...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7    D7/F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;я&nbsp;всё&nbsp;тянулся&nbsp;ввысь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  Gm6/E   Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И,&nbsp;словно&nbsp;в&nbsp;тяжёлом&nbsp;сне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Ebm7   Dm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;мой&nbsp;мир&nbsp;открывался&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    A7   Dm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;образы&nbsp;чистых&nbsp;дум&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C   F     Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;сквозь&nbsp;мой&nbsp;многолистный&nbsp;шум&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7/A  Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;мне&nbsp;май&nbsp;напевал&nbsp;и&nbsp;цвёл,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm6 A7    B </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;лаская&nbsp;мой&nbsp;крепкий&nbsp;ствол.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  A7    Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Шли&nbsp;годы,&nbsp;дожди&nbsp;лились...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7    D7/F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;я&nbsp;всё&nbsp;тянулся&nbsp;ввысь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  Gm6/E   Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И,&nbsp;словно&nbsp;в&nbsp;тяжёлом&nbsp;сне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Ebm7   Dm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;мой&nbsp;мир&nbsp;открывался&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    A7   Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пока&nbsp;я&nbsp;не&nbsp;стал&nbsp;над&nbsp;ним,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am </span>
-<span class="txt"> он&nbsp;виделся&nbsp;мне&nbsp;цветным,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm </span>
-<span class="txt"> он&nbsp;плыл&nbsp;и&nbsp;мерцал,&nbsp;как&nbsp;дым,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Fm6 A7 </span>
-<span class="txt"> имел&nbsp;аромат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm  Dm9   Dm </span>
-<span class="txt"> Но,&nbsp;глянув&nbsp;из&nbsp;высших&nbsp;сфер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am  E7/H </span>
-<span class="txt"> узнал&nbsp;я,&nbsp;что&nbsp;мир&nbsp;мой&nbsp;сер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F   Dm6 </span>
-<span class="txt"> что&nbsp;он&nbsp;и&nbsp;не&nbsp;мир,&nbsp;а&nbsp;сквер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   Am/E </span>
-<span class="txt"> и&nbsp;беден&nbsp;его&nbsp;наряд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E   Am </span>
+<span class="line"><span class="txt"> Пока&nbsp;я&nbsp;не&nbsp;стал&nbsp;над&nbsp;ним,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am </span></span>
+<span class="line"><span class="txt"> он&nbsp;виделся&nbsp;мне&nbsp;цветным,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm </span></span>
+<span class="line"><span class="txt"> он&nbsp;плыл&nbsp;и&nbsp;мерцал,&nbsp;как&nbsp;дым,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Fm6 A7 </span></span>
+<span class="line"><span class="txt"> имел&nbsp;аромат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm  Dm9   Dm </span></span>
+<span class="line"><span class="txt"> Но,&nbsp;глянув&nbsp;из&nbsp;высших&nbsp;сфер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am  E7/H </span></span>
+<span class="line"><span class="txt"> узнал&nbsp;я,&nbsp;что&nbsp;мир&nbsp;мой&nbsp;сер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F   Dm6 </span></span>
+<span class="line"><span class="txt"> что&nbsp;он&nbsp;и&nbsp;не&nbsp;мир,&nbsp;а&nbsp;сквер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   Am/E </span></span>
+<span class="line"><span class="txt"> и&nbsp;беден&nbsp;его&nbsp;наряд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Вдали,&nbsp;погружён&nbsp;во&nbsp;мрак,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C   F     Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;угрюмый&nbsp;зиял&nbsp;овраг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7/A  Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;за&nbsp;ним&nbsp;невысокий&nbsp;склон,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm6 A7    B </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;на&nbsp;нём&nbsp;одинокий&nbsp;клён...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  A7    Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Затем&nbsp;наступал&nbsp;предел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7    D7/F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;мой&nbsp;взор&nbsp;уставал,&nbsp;слабел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  Gm6/E   Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;образы&nbsp;мрачных&nbsp;дум&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Ebm7   Dm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;всё&nbsp;чаще&nbsp;мне&nbsp;шли&nbsp;на&nbsp;ум.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    A7   Dm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Вдали,&nbsp;погружён&nbsp;во&nbsp;мрак,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C   F     Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;угрюмый&nbsp;зиял&nbsp;овраг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7/A  Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;за&nbsp;ним&nbsp;невысокий&nbsp;склон,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm6 A7    B </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;на&nbsp;нём&nbsp;одинокий&nbsp;клён...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  A7    Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Затем&nbsp;наступал&nbsp;предел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7    D7/F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;мой&nbsp;взор&nbsp;уставал,&nbsp;слабел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  Gm6/E   Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;образы&nbsp;мрачных&nbsp;дум&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Ebm7   Dm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;всё&nbsp;чаще&nbsp;мне&nbsp;шли&nbsp;на&nbsp;ум.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    A7   Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;их,&nbsp;точно&nbsp;в&nbsp;ночь&nbsp;листву,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am </span>
-<span class="txt"> швырял&nbsp;одиночеству,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm </span>
-<span class="txt"> и&nbsp;сыпалось&nbsp;прочь,&nbsp;сквозь&nbsp;тьму,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Fm6 A7 </span>
-<span class="txt"> смятенье&nbsp;моё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm  Dm9   Dm </span>
-<span class="txt"> И&nbsp;словно&nbsp;тоска&nbsp;сама,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am  E7/H </span>
-<span class="txt"> протяжно&nbsp;звенела&nbsp;тьма,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F   Dm6 </span>
-<span class="txt"> и&nbsp;слышалась&nbsp;в&nbsp;ней&nbsp;зима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   Am/E </span>
-<span class="txt"> и&nbsp;все&nbsp;холода&nbsp;её.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E   Am </span>
+<span class="line"><span class="txt"> Я&nbsp;их,&nbsp;точно&nbsp;в&nbsp;ночь&nbsp;листву,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am </span></span>
+<span class="line"><span class="txt"> швырял&nbsp;одиночеству,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm </span></span>
+<span class="line"><span class="txt"> и&nbsp;сыпалось&nbsp;прочь,&nbsp;сквозь&nbsp;тьму,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Fm6 A7 </span></span>
+<span class="line"><span class="txt"> смятенье&nbsp;моё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm  Dm9   Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;словно&nbsp;тоска&nbsp;сама,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am  E7/H </span></span>
+<span class="line"><span class="txt"> протяжно&nbsp;звенела&nbsp;тьма,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F   Dm6 </span></span>
+<span class="line"><span class="txt"> и&nbsp;слышалась&nbsp;в&nbsp;ней&nbsp;зима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   Am/E </span></span>
+<span class="line"><span class="txt"> и&nbsp;все&nbsp;холода&nbsp;её.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Должно&nbsp;быть,&nbsp;забавы&nbsp;для&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C   F     Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;меня&nbsp;родила&nbsp;земля,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7/A  Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и,&nbsp;корни&nbsp;зажав&nbsp;в&nbsp;горсти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm6 A7    B </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;велела&nbsp;расти,&nbsp;расти...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  A7    Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;я,&nbsp;точно&nbsp;тополь,&nbsp;рос,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7    D7/F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;высоко&nbsp;главу&nbsp;вознёс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  Gm6/E   Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;видел&nbsp;лишь&nbsp;мох,&nbsp;мох,&nbsp;мох...&nbsp;&nbsp; </span><span class="ch">    Ebm7   Dm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;медленно&nbsp;сох,&nbsp;сох,&nbsp;сох...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    A7   Dm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Должно&nbsp;быть,&nbsp;забавы&nbsp;для&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C   F     Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;меня&nbsp;родила&nbsp;земля,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7/A  Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и,&nbsp;корни&nbsp;зажав&nbsp;в&nbsp;горсти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm6 A7    B </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;велела&nbsp;расти,&nbsp;расти...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  A7    Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;я,&nbsp;точно&nbsp;тополь,&nbsp;рос,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B   D7    D7/F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;высоко&nbsp;главу&nbsp;вознёс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm  Gm6/E   Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;видел&nbsp;лишь&nbsp;мох,&nbsp;мох,&nbsp;мох...&nbsp;&nbsp; </span><span class="ch">    Ebm7   Dm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;медленно&nbsp;сох,&nbsp;сох,&nbsp;сох...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    A7   Dm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1981</span>, <span class="year">1986</span>
-
+<pre><span class="year">1981</span>, <span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

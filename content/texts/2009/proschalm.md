@@ -9,6 +9,6 @@
         "year": "2009",
         "name": "Тогда и там",
         "chordsStartAt": 43,
-        "textFinishAtLine": 64
+        "textFinishAtLine": 59
     }
 }

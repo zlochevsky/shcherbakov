@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,83 +423,79 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">КАПИТАН БРАВЫЙ</span>
+data-key="Am"><h1>КАПИТАН БРАВЫЙ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em H7 Em Am Em H7 Em </span>
-<span class="txt"> Всё&nbsp;куда-то&nbsp;рвался,&nbsp;дерзал,&nbsp;метался,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span>
-<span class="txt"> не&nbsp;укрощался,&nbsp;а&nbsp;укрощал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span>
-<span class="txt"> Долгие&nbsp;годы&nbsp;желал&nbsp;свободы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span>
-<span class="txt"> и&nbsp;упрощал&nbsp;себя,&nbsp;упрощал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span>
-<span class="txt"> А&nbsp;куда&nbsp;же&nbsp;проще?&nbsp;Кошелёчек&nbsp;тощий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span>
-<span class="txt"> барабан&nbsp;дырявый,&nbsp;висок&nbsp;седой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span>
-<span class="txt"> Не&nbsp;покрыт&nbsp;славой&nbsp;-&nbsp;левой-левой-правой&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span>
-<span class="txt"> капитан&nbsp;бравый,&nbsp;но&nbsp;отставной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em H7 Em Am Em H7 Em </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;куда-то&nbsp;рвался,&nbsp;дерзал,&nbsp;метался,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;укрощался,&nbsp;а&nbsp;укрощал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span></span>
+<span class="line"><span class="txt"> Долгие&nbsp;годы&nbsp;желал&nbsp;свободы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span></span>
+<span class="line"><span class="txt"> и&nbsp;упрощал&nbsp;себя,&nbsp;упрощал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span></span>
+<span class="line"><span class="txt"> А&nbsp;куда&nbsp;же&nbsp;проще?&nbsp;Кошелёчек&nbsp;тощий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span></span>
+<span class="line"><span class="txt"> барабан&nbsp;дырявый,&nbsp;висок&nbsp;седой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span></span>
+<span class="line"><span class="txt"> Не&nbsp;покрыт&nbsp;славой&nbsp;-&nbsp;левой-левой-правой&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span></span>
+<span class="line"><span class="txt"> капитан&nbsp;бравый,&nbsp;но&nbsp;отставной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;она&nbsp;была&nbsp;готова&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am          Em </span>
-<span class="txt"> за&nbsp;мной&nbsp;хоть&nbsp;на&nbsp;край&nbsp;света,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span>
-<span class="txt"> за&nbsp;мной&nbsp;хоть&nbsp;на&nbsp;край&nbsp;света,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am          Em </span>
-<span class="txt"> без&nbsp;лёгкого&nbsp;пути.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em    E7 </span>
-<span class="txt"> Да&nbsp;вот&nbsp;-&nbsp;мешала&nbsp;эта,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6         Em </span>
-<span class="txt"> ах,&nbsp;круглая&nbsp;планета,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span>
-<span class="txt"> где&nbsp;края&nbsp;света&nbsp;нету&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6         Em </span>
-<span class="txt"> и&nbsp;некуда&nbsp;идти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span>
+<span class="line"><span class="txt"> А&nbsp;она&nbsp;была&nbsp;готова&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am          Em </span></span>
+<span class="line"><span class="txt"> за&nbsp;мной&nbsp;хоть&nbsp;на&nbsp;край&nbsp;света,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span></span>
+<span class="line"><span class="txt"> за&nbsp;мной&nbsp;хоть&nbsp;на&nbsp;край&nbsp;света,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am          Em </span></span>
+<span class="line"><span class="txt"> без&nbsp;лёгкого&nbsp;пути.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em    E7 </span></span>
+<span class="line"><span class="txt"> Да&nbsp;вот&nbsp;-&nbsp;мешала&nbsp;эта,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6         Em </span></span>
+<span class="line"><span class="txt"> ах,&nbsp;круглая&nbsp;планета,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span></span>
+<span class="line"><span class="txt"> где&nbsp;края&nbsp;света&nbsp;нету&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6         Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;некуда&nbsp;идти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;ль&nbsp;не&nbsp;говорил&nbsp;ей:&nbsp;не&nbsp;жди,&nbsp;Мария!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span>
-<span class="txt"> Я&nbsp;ли&nbsp;не&nbsp;просил&nbsp;ее:&nbsp;позабудь!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span>
-<span class="txt"> А&nbsp;она&nbsp;смеялась,&nbsp;а&nbsp;ночь&nbsp;не&nbsp;кончалась.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span>
-<span class="txt"> И&nbsp;вечно&nbsp;оставалось&nbsp;что-нибудь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span>
-<span class="txt"> Нет,&nbsp;я&nbsp;не&nbsp;сильный,&nbsp;нет,&nbsp;я&nbsp;не&nbsp;храбрый,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span>
-<span class="txt"> нет,&nbsp;я&nbsp;не&nbsp;добрый,&nbsp;я&nbsp;очень&nbsp;злой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span>
-<span class="txt"> Не&nbsp;покрыт&nbsp;славой&nbsp;-&nbsp;левой-левой-правой&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span>
-<span class="txt"> капитан&nbsp;бравый,&nbsp;но&nbsp;отставной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span>
+<span class="line"><span class="txt"> Я&nbsp;ль&nbsp;не&nbsp;говорил&nbsp;ей:&nbsp;не&nbsp;жди,&nbsp;Мария!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span></span>
+<span class="line"><span class="txt"> Я&nbsp;ли&nbsp;не&nbsp;просил&nbsp;ее:&nbsp;позабудь!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span></span>
+<span class="line"><span class="txt"> А&nbsp;она&nbsp;смеялась,&nbsp;а&nbsp;ночь&nbsp;не&nbsp;кончалась.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span></span>
+<span class="line"><span class="txt"> И&nbsp;вечно&nbsp;оставалось&nbsp;что-нибудь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span></span>
+<span class="line"><span class="txt"> Нет,&nbsp;я&nbsp;не&nbsp;сильный,&nbsp;нет,&nbsp;я&nbsp;не&nbsp;храбрый,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span></span>
+<span class="line"><span class="txt"> нет,&nbsp;я&nbsp;не&nbsp;добрый,&nbsp;я&nbsp;очень&nbsp;злой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span></span>
+<span class="line"><span class="txt"> Не&nbsp;покрыт&nbsp;славой&nbsp;-&nbsp;левой-левой-правой&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span></span>
+<span class="line"><span class="txt"> капитан&nbsp;бравый,&nbsp;но&nbsp;отставной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;она&nbsp;была&nbsp;готова&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am          Em </span>
-<span class="txt"> за&nbsp;мной&nbsp;хоть&nbsp;на&nbsp;край&nbsp;света,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span>
-<span class="txt"> за&nbsp;мной&nbsp;хоть&nbsp;на&nbsp;край&nbsp;света,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am          Em </span>
-<span class="txt"> без&nbsp;лёгкого&nbsp;пути.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em    E7 </span>
-<span class="txt"> Да&nbsp;вот&nbsp;-&nbsp;мешала&nbsp;эта,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6         Em </span>
-<span class="txt"> ах,&nbsp;круглая&nbsp;планета,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span>
-<span class="txt"> где&nbsp;края&nbsp;света&nbsp;нету&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6         Em </span>
-<span class="txt"> и&nbsp;некуда&nbsp;идти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span>
+<span class="line"><span class="txt"> А&nbsp;она&nbsp;была&nbsp;готова&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am          Em </span></span>
+<span class="line"><span class="txt"> за&nbsp;мной&nbsp;хоть&nbsp;на&nbsp;край&nbsp;света,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span></span>
+<span class="line"><span class="txt"> за&nbsp;мной&nbsp;хоть&nbsp;на&nbsp;край&nbsp;света,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am          Em </span></span>
+<span class="line"><span class="txt"> без&nbsp;лёгкого&nbsp;пути.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em    E7 </span></span>
+<span class="line"><span class="txt"> Да&nbsp;вот&nbsp;-&nbsp;мешала&nbsp;эта,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6         Em </span></span>
+<span class="line"><span class="txt"> ах,&nbsp;круглая&nbsp;планета,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span></span>
+<span class="line"><span class="txt"> где&nbsp;края&nbsp;света&nbsp;нету&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6         Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;некуда&nbsp;идти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7          Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всё&nbsp;чего-то&nbsp;правил,&nbsp;по&nbsp;местам&nbsp;ставил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span>
-<span class="txt"> воспевал,&nbsp;славил,&nbsp;носил&nbsp;шинель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span>
-<span class="txt"> Бунт&nbsp;не&nbsp;возглавил,&nbsp;лёд&nbsp;не&nbsp;расплавил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span>
-<span class="txt"> назвал&nbsp;сына&nbsp;Павел,&nbsp;а&nbsp;дочь&nbsp;-&nbsp;Нинель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span>
-<span class="txt"> Эх,&nbsp;пилось&nbsp;бы,&nbsp;елось!&nbsp;И&nbsp;зачем&nbsp;мне&nbsp;смелость?&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span>
-<span class="txt"> А&nbsp;мундир&nbsp;с&nbsp;медалями&nbsp;-&nbsp;в&nbsp;нафталин!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span>
-<span class="txt"> Вовремя&nbsp;в&nbsp;дом&nbsp;влезть&nbsp;-&nbsp;вот&nbsp;моя&nbsp;доблесть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span>
-<span class="txt"> Клином&nbsp;клин,&nbsp;братцы,&nbsp;клином&nbsp;клин...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span>
+<span class="line"><span class="txt"> Всё&nbsp;чего-то&nbsp;правил,&nbsp;по&nbsp;местам&nbsp;ставил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span></span>
+<span class="line"><span class="txt"> воспевал,&nbsp;славил,&nbsp;носил&nbsp;шинель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span></span>
+<span class="line"><span class="txt"> Бунт&nbsp;не&nbsp;возглавил,&nbsp;лёд&nbsp;не&nbsp;расплавил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span></span>
+<span class="line"><span class="txt"> назвал&nbsp;сына&nbsp;Павел,&nbsp;а&nbsp;дочь&nbsp;-&nbsp;Нинель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span></span>
+<span class="line"><span class="txt"> Эх,&nbsp;пилось&nbsp;бы,&nbsp;елось!&nbsp;И&nbsp;зачем&nbsp;мне&nbsp;смелость?&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;мундир&nbsp;с&nbsp;медалями&nbsp;-&nbsp;в&nbsp;нафталин!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span></span>
+<span class="line"><span class="txt"> Вовремя&nbsp;в&nbsp;дом&nbsp;влезть&nbsp;-&nbsp;вот&nbsp;моя&nbsp;доблесть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span></span>
+<span class="line"><span class="txt"> Клином&nbsp;клин,&nbsp;братцы,&nbsp;клином&nbsp;клин...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Скучная&nbsp;повесть,&nbsp;тщедушная&nbsp;совесть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span>
-<span class="txt"> а&nbsp;что&nbsp;дальше&nbsp;-&nbsp;Бог&nbsp;весть,&nbsp;конец&nbsp;какой!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span>
-<span class="txt"> Не&nbsp;покрыт&nbsp;славой&nbsp;-&nbsp;левой-левой-правой&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span>
-<span class="txt"> капитан&nbsp;бравый,но&nbsp;отставной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span>
+<span class="line"><span class="txt"> Скучная&nbsp;повесть,&nbsp;тщедушная&nbsp;совесть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D7    G     Em </span></span>
+<span class="line"><span class="txt"> а&nbsp;что&nbsp;дальше&nbsp;-&nbsp;Бог&nbsp;весть,&nbsp;конец&nbsp;какой!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    H7    C     E7 </span></span>
+<span class="line"><span class="txt"> Не&nbsp;покрыт&nbsp;славой&nbsp;-&nbsp;левой-левой-правой&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    D7    G     F </span></span>
+<span class="line"><span class="txt"> капитан&nbsp;бравый,но&nbsp;отставной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7 </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1982</span>
-
+<pre><span class="year">1982</span>
 
 
 </pre>
+
 
                 </div>
         </div>

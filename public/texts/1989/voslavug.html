@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,30 +433,26 @@ span.c {
 data-key="Dm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Во&nbsp;славу&nbsp;Греции&nbsp;твоей&nbsp;и&nbsp;всех&nbsp;морей&nbsp;вокруг&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-<span class="txt"> десятикрылый&nbsp;наш&nbsp;корабль&nbsp;мы&nbsp;назовём&nbsp;"Арго".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span>
-<span class="txt"> Покинем&nbsp;здешние&nbsp;снега&nbsp;и&nbsp;поплывём&nbsp;на&nbsp;юг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#    Gm6 Dm </span>
-<span class="txt"> Я&nbsp;буду&nbsp;править&nbsp;кораблём.&nbsp;Ты&nbsp;будешь&nbsp;петь,&nbsp;Марго.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/D# D7  G  Gm  Dm </span>
+<span class="line"><span class="txt"> Во&nbsp;славу&nbsp;Греции&nbsp;твоей&nbsp;и&nbsp;всех&nbsp;морей&nbsp;вокруг&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="line"><span class="txt"> десятикрылый&nbsp;наш&nbsp;корабль&nbsp;мы&nbsp;назовём&nbsp;"Арго".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span></span>
+<span class="line"><span class="txt"> Покинем&nbsp;здешние&nbsp;снега&nbsp;и&nbsp;поплывём&nbsp;на&nbsp;юг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#    Gm6 Dm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;буду&nbsp;править&nbsp;кораблём.&nbsp;Ты&nbsp;будешь&nbsp;петь,&nbsp;Марго.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/D# D7  G  Gm  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> По&nbsp;дивным&nbsp;песенкам&nbsp;твоим,&nbsp;которым&nbsp;сто&nbsp;веков,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-<span class="txt"> по&nbsp;древним&nbsp;картам&nbsp;тех&nbsp;земель,&nbsp;где&nbsp;что&nbsp;ни&nbsp;шаг,&nbsp;то&nbsp;миф,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span>
-<span class="txt"> я,&nbsp;наконец-то&nbsp;изучу&nbsp;язык&nbsp;твоих&nbsp;богов,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#    Gm6 Dm </span>
-<span class="txt"> его&nbsp;хрустальные&nbsp;слова&nbsp;и&nbsp;золотой&nbsp;мотив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/D# D7  G  Gm  Dm </span>
+<span class="line"><span class="txt"> По&nbsp;дивным&nbsp;песенкам&nbsp;твоим,&nbsp;которым&nbsp;сто&nbsp;веков,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="line"><span class="txt"> по&nbsp;древним&nbsp;картам&nbsp;тех&nbsp;земель,&nbsp;где&nbsp;что&nbsp;ни&nbsp;шаг,&nbsp;то&nbsp;миф,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span></span>
+<span class="line"><span class="txt"> я,&nbsp;наконец-то&nbsp;изучу&nbsp;язык&nbsp;твоих&nbsp;богов,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#    Gm6 Dm </span></span>
+<span class="line"><span class="txt"> его&nbsp;хрустальные&nbsp;слова&nbsp;и&nbsp;золотой&nbsp;мотив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/D# D7  G  Gm  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вода,&nbsp;в&nbsp;которой,&nbsp;как&nbsp;тростник,&nbsp;архипелаг&nbsp;пророс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-<span class="txt"> блаженством&nbsp;нас&nbsp;не&nbsp;одарит,&nbsp;но&nbsp;не&nbsp;казнит&nbsp;зато.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span>
-<span class="txt"> Она&nbsp;без&nbsp;крови&nbsp;горяча&nbsp;и&nbsp;солона&nbsp;без&nbsp;слёз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#    Gm6 Dm </span>
-<span class="txt"> Ей&nbsp;не&nbsp;помеха&nbsp;наша&nbsp;жизнь,&nbsp;ей&nbsp;наша&nbsp;смерть&nbsp;-&nbsp;ничто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/D# D7  G  Gm  Dm </span>
+<span class="line"><span class="txt"> Вода,&nbsp;в&nbsp;которой,&nbsp;как&nbsp;тростник,&nbsp;архипелаг&nbsp;пророс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="line"><span class="txt"> блаженством&nbsp;нас&nbsp;не&nbsp;одарит,&nbsp;но&nbsp;не&nbsp;казнит&nbsp;зато.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7    Gm </span></span>
+<span class="line"><span class="txt"> Она&nbsp;без&nbsp;крови&nbsp;горяча&nbsp;и&nbsp;солона&nbsp;без&nbsp;слёз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#    Gm6 Dm </span></span>
+<span class="line"><span class="txt"> Ей&nbsp;не&nbsp;помеха&nbsp;наша&nbsp;жизнь,&nbsp;ей&nbsp;наша&nbsp;смерть&nbsp;-&nbsp;ничто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/D# D7  G  Gm  Dm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1989</span>
+<pre><span class="year">1989</span>
 
 |--1---1---1---1-|--5-------5-----|----------1---1-|---
 |--3---3---3---3-|------6-8---8-5-|6-----6---3---3-|---
@@ -457,8 +461,8 @@ data-key="Dm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 |------------0---|----------------|------------0---|---
 |----------------|----------------|----------------|---
 
-
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,99 +423,97 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ГОСТИНИЦА</span>
+data-key="Am"><h1>ГОСТИНИЦА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ни&nbsp;глотка&nbsp;спиртного,&nbsp;ни&nbsp;младой&nbsp;креолки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span>
-<span class="txt"> В&nbsp;кадке&nbsp;то&nbsp;ли&nbsp;пальма,&nbsp;то&nbsp;ли&nbsp;василёк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span>
-<span class="txt"> Утром&nbsp;встал,&nbsp;обулся.&nbsp;Снял&nbsp;сценарий&nbsp;с&nbsp;полки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span>
-<span class="txt"> Сел&nbsp;вносить&nbsp;поправки.&nbsp;Внёс,&nbsp;разулся,&nbsp;лёг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span>
+<span class="line"><span class="txt"> Ни&nbsp;глотка&nbsp;спиртного,&nbsp;ни&nbsp;младой&nbsp;креолки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span></span>
+<span class="line"><span class="txt"> В&nbsp;кадке&nbsp;то&nbsp;ли&nbsp;пальма,&nbsp;то&nbsp;ли&nbsp;василёк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span></span>
+<span class="line"><span class="txt"> Утром&nbsp;встал,&nbsp;обулся.&nbsp;Снял&nbsp;сценарий&nbsp;с&nbsp;полки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span></span>
+<span class="line"><span class="txt"> Сел&nbsp;вносить&nbsp;поправки.&nbsp;Внёс,&nbsp;разулся,&nbsp;лёг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Никаких&nbsp;событий,&nbsp;разве&nbsp;что&nbsp;посуда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span>
-<span class="txt"> треснет&nbsp;или&nbsp;мебель&nbsp;опрокинется.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A </span>
-<span class="txt"> Ни&nbsp;одной&nbsp;химеры.&nbsp;Ни&nbsp;ногой&nbsp;отсюда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span>
-<span class="txt"> Здесь&nbsp;любому&nbsp;угол,&nbsp;здесь&nbsp;гостиница.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A  Dm </span>
+<span class="line"><span class="txt"> Никаких&nbsp;событий,&nbsp;разве&nbsp;что&nbsp;посуда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span></span>
+<span class="line"><span class="txt"> треснет&nbsp;или&nbsp;мебель&nbsp;опрокинется.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A </span></span>
+<span class="line"><span class="txt"> Ни&nbsp;одной&nbsp;химеры.&nbsp;Ни&nbsp;ногой&nbsp;отсюда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span></span>
+<span class="line"><span class="txt"> Здесь&nbsp;любому&nbsp;угол,&nbsp;здесь&nbsp;гостиница.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Никакой&nbsp;богемы,&nbsp;ни&nbsp;на&nbsp;грош&nbsp;гордыни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стекла&nbsp;без&nbsp;диоптрий,&nbsp;буквы&nbsp;из&nbsp;газет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Никаких&nbsp;котурнов,&nbsp;никакой&nbsp;латыни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;общем,&nbsp;всё&nbsp;бы&nbsp;славно.&nbsp;Кабы&nbsp;не&nbsp;сосед.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Никакой&nbsp;богемы,&nbsp;ни&nbsp;на&nbsp;грош&nbsp;гордыни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стекла&nbsp;без&nbsp;диоптрий,&nbsp;буквы&nbsp;из&nbsp;газет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Никаких&nbsp;котурнов,&nbsp;никакой&nbsp;латыни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;общем,&nbsp;всё&nbsp;бы&nbsp;славно.&nbsp;Кабы&nbsp;не&nbsp;сосед.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Он&nbsp;американец,&nbsp;он&nbsp;из&nbsp;штата&nbsp;Юта,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span>
-<span class="txt"> он&nbsp;проездом,&nbsp;хочет&nbsp;город&nbsp;осмотреть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span>
-<span class="txt"> Вот&nbsp;ведь&nbsp;гусь&nbsp;мормонский!&nbsp;Что&nbsp;за&nbsp;чудо-юдо?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span>
-<span class="txt"> Ах&nbsp;ты,&nbsp;чёрт&nbsp;нерусский,&nbsp;чтоб&nbsp;тебе&nbsp;сгореть!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span>
+<span class="line"><span class="txt"> Он&nbsp;американец,&nbsp;он&nbsp;из&nbsp;штата&nbsp;Юта,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span></span>
+<span class="line"><span class="txt"> он&nbsp;проездом,&nbsp;хочет&nbsp;город&nbsp;осмотреть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;ведь&nbsp;гусь&nbsp;мормонский!&nbsp;Что&nbsp;за&nbsp;чудо-юдо?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span></span>
+<span class="line"><span class="txt"> Ах&nbsp;ты,&nbsp;чёрт&nbsp;нерусский,&nbsp;чтоб&nbsp;тебе&nbsp;сгореть!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Никогда&nbsp;туристы&nbsp;здесь&nbsp;вокруг&nbsp;не&nbsp;ходят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span>
-<span class="txt"> Глуп,&nbsp;кто&nbsp;местным&nbsp;нормам&nbsp;воспротивится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A </span>
-<span class="txt"> Никаких&nbsp;осмотров.&nbsp;Здесь&nbsp;слонов&nbsp;не&nbsp;водят&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span>
-<span class="txt"> и&nbsp;кунсткамер&nbsp;нету.&nbsp;Здесь&nbsp;гостиница.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A  Dm </span>
+<span class="line"><span class="txt"> Никогда&nbsp;туристы&nbsp;здесь&nbsp;вокруг&nbsp;не&nbsp;ходят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span></span>
+<span class="line"><span class="txt"> Глуп,&nbsp;кто&nbsp;местным&nbsp;нормам&nbsp;воспротивится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A </span></span>
+<span class="line"><span class="txt"> Никаких&nbsp;осмотров.&nbsp;Здесь&nbsp;слонов&nbsp;не&nbsp;водят&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;кунсткамер&nbsp;нету.&nbsp;Здесь&nbsp;гостиница.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чудный&nbsp;номер&nbsp;с&nbsp;видом&nbsp;на&nbsp;балкон&nbsp;с&nbsp;мангалом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Телевизор&nbsp;"Чайка",&nbsp;хоть&nbsp;весь&nbsp;день&nbsp;смотри.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Велико&nbsp;ли&nbsp;горе,&nbsp;что&nbsp;по&nbsp;всем&nbsp;каналам&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;матч&nbsp;Алжир&nbsp;-&nbsp;Марокко,&nbsp;счёт&nbsp;4:3...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чудный&nbsp;номер&nbsp;с&nbsp;видом&nbsp;на&nbsp;балкон&nbsp;с&nbsp;мангалом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Телевизор&nbsp;"Чайка",&nbsp;хоть&nbsp;весь&nbsp;день&nbsp;смотри.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Велико&nbsp;ли&nbsp;горе,&nbsp;что&nbsp;по&nbsp;всем&nbsp;каналам&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;матч&nbsp;Алжир&nbsp;-&nbsp;Марокко,&nbsp;счёт&nbsp;4:3...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Спрячь&nbsp;свой&nbsp;модный&nbsp;"Кодак",&nbsp;не&nbsp;стремись&nbsp;к&nbsp;объектам,&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span>
-<span class="txt"> предпочти&nbsp;на&nbsp;время&nbsp;стены&nbsp;пустырю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span>
-<span class="txt"> В&nbsp;Солт-Лейк-Сити&nbsp;скажешь,&nbsp;что&nbsp;была&nbsp;с&nbsp;дефектом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span>
-<span class="txt"> плёнка.&nbsp;Кстати,&nbsp;плёнку&nbsp;-&nbsp;вот,&nbsp;возьми,&nbsp;дарю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span>
+<span class="line"><span class="txt"> Спрячь&nbsp;свой&nbsp;модный&nbsp;"Кодак",&nbsp;не&nbsp;стремись&nbsp;к&nbsp;объектам,&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span></span>
+<span class="line"><span class="txt"> предпочти&nbsp;на&nbsp;время&nbsp;стены&nbsp;пустырю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span></span>
+<span class="line"><span class="txt"> В&nbsp;Солт-Лейк-Сити&nbsp;скажешь,&nbsp;что&nbsp;была&nbsp;с&nbsp;дефектом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span></span>
+<span class="line"><span class="txt"> плёнка.&nbsp;Кстати,&nbsp;плёнку&nbsp;-&nbsp;вот,&nbsp;возьми,&nbsp;дарю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Слейся&nbsp;с&nbsp;интерьером,&nbsp;в&nbsp;холлах&nbsp;пофланируй,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span>
-<span class="txt"> потолкайся&nbsp;в&nbsp;лифтах.&nbsp;Даже&nbsp;и&nbsp;застрянь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A </span>
-<span class="txt"> Но&nbsp;-&nbsp;химчистки&nbsp;бойся,&nbsp;не&nbsp;телефонируй&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span>
-<span class="txt"> и&nbsp;торговцам&nbsp;много&nbsp;не&nbsp;плати&nbsp;за&nbsp;дрянь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A  Dm </span>
+<span class="line"><span class="txt"> Слейся&nbsp;с&nbsp;интерьером,&nbsp;в&nbsp;холлах&nbsp;пофланируй,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span></span>
+<span class="line"><span class="txt"> потолкайся&nbsp;в&nbsp;лифтах.&nbsp;Даже&nbsp;и&nbsp;застрянь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A </span></span>
+<span class="line"><span class="txt"> Но&nbsp;-&nbsp;химчистки&nbsp;бойся,&nbsp;не&nbsp;телефонируй&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;торговцам&nbsp;много&nbsp;не&nbsp;плати&nbsp;за&nbsp;дрянь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;бар&nbsp;не&nbsp;суйся&nbsp;тоже:&nbsp;не&nbsp;убьют,&nbsp;так&nbsp;ранят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ночью&nbsp;снова,&nbsp;слышно,&nbsp;битва&nbsp;там&nbsp;была.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сам-то&nbsp;я&nbsp;не&nbsp;видел,&nbsp;я&nbsp;ночами&nbsp;занят,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;я&nbsp;хожу&nbsp;по&nbsp;крышам,&nbsp;я&nbsp;сомнамбула.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;бар&nbsp;не&nbsp;суйся&nbsp;тоже:&nbsp;не&nbsp;убьют,&nbsp;так&nbsp;ранят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ночью&nbsp;снова,&nbsp;слышно,&nbsp;битва&nbsp;там&nbsp;была.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сам-то&nbsp;я&nbsp;не&nbsp;видел,&nbsp;я&nbsp;ночами&nbsp;занят,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;я&nbsp;хожу&nbsp;по&nbsp;крышам,&nbsp;я&nbsp;сомнамбула.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Добрых&nbsp;двести&nbsp;тысяч&nbsp;марсов&nbsp;и&nbsp;сатурнов&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span>
-<span class="txt"> надо&nbsp;мной&nbsp;мигают&nbsp;и&nbsp;меняют&nbsp;масть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span>
-<span class="txt"> Никакой&nbsp;страховки,&nbsp;никаких&nbsp;котурнов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span>
-<span class="txt"> Я&nbsp;рискую&nbsp;очень,&nbsp;я&nbsp;могу&nbsp;упасть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span>
+<span class="line"><span class="txt"> Добрых&nbsp;двести&nbsp;тысяч&nbsp;марсов&nbsp;и&nbsp;сатурнов&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span></span>
+<span class="line"><span class="txt"> надо&nbsp;мной&nbsp;мигают&nbsp;и&nbsp;меняют&nbsp;масть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span></span>
+<span class="line"><span class="txt"> Никакой&nbsp;страховки,&nbsp;никаких&nbsp;котурнов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span></span>
+<span class="line"><span class="txt"> Я&nbsp;рискую&nbsp;очень,&nbsp;я&nbsp;могу&nbsp;упасть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;могу&nbsp;сорваться,&nbsp;повредить&nbsp;ключицу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span>
-<span class="txt"> не&nbsp;сберечь&nbsp;запястий,&nbsp;не&nbsp;спасти&nbsp;лица.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A </span>
-<span class="txt"> Кто&nbsp;придёт&nbsp;на&nbsp;помощь?&nbsp;Как&nbsp;найду&nbsp;больницу?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span>
-<span class="txt"> Здесь&nbsp;не&nbsp;Солт-Лейк-Сити,&nbsp;здесь&nbsp;гостиница.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A  Dm </span>
+<span class="line"><span class="txt"> Я&nbsp;могу&nbsp;сорваться,&nbsp;повредить&nbsp;ключицу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span></span>
+<span class="line"><span class="txt"> не&nbsp;сберечь&nbsp;запястий,&nbsp;не&nbsp;спасти&nbsp;лица.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A </span></span>
+<span class="line"><span class="txt"> Кто&nbsp;придёт&nbsp;на&nbsp;помощь?&nbsp;Как&nbsp;найду&nbsp;больницу?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A7  Dm A7 </span></span>
+<span class="line"><span class="txt"> Здесь&nbsp;не&nbsp;Солт-Лейк-Сити,&nbsp;здесь&nbsp;гостиница.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm6 Dm A  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ты&nbsp;над&nbsp;речкой&nbsp;Джордан&nbsp;будешь&nbsp;грызть&nbsp;цукаты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;будешь&nbsp;мять&nbsp;соцветья&nbsp;и&nbsp;лакать&nbsp;коньяк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;меня&nbsp;медбратья&nbsp;в&nbsp;дверь&nbsp;шестой&nbsp;палаты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;втащат&nbsp;на&nbsp;носилках,&nbsp;стукнув&nbsp;о&nbsp;косяк...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ты&nbsp;над&nbsp;речкой&nbsp;Джордан&nbsp;будешь&nbsp;грызть&nbsp;цукаты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;будешь&nbsp;мять&nbsp;соцветья&nbsp;и&nbsp;лакать&nbsp;коньяк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;меня&nbsp;медбратья&nbsp;в&nbsp;дверь&nbsp;шестой&nbsp;палаты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E   Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;втащат&nbsp;на&nbsp;носилках,&nbsp;стукнув&nbsp;о&nbsp;косяк...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span></span>
 <span class="txt">  </span>
-<span class="txt"> Нет!&nbsp;Растай,&nbsp;рассыпься.&nbsp;Сгинь,&nbsp;типаж&nbsp;заморский.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span>
-<span class="txt"> Ты&nbsp;мне&nbsp;сцену&nbsp;портишь,&nbsp;я&nbsp;тебя&nbsp;в&nbsp;огонь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span>
-<span class="txt"> Прочь,&nbsp;метраж&nbsp;сумбурный!&nbsp;Марш&nbsp;-&nbsp;под&nbsp;нож&nbsp;монтёрский!&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span>
-<span class="txt"> на&nbsp;верстак&nbsp;монтажный,&nbsp;плоский&nbsp;как&nbsp;ладонь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span>
+<span class="line"><span class="txt"> Нет!&nbsp;Растай,&nbsp;рассыпься.&nbsp;Сгинь,&nbsp;типаж&nbsp;заморский.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;мне&nbsp;сцену&nbsp;портишь,&nbsp;я&nbsp;тебя&nbsp;в&nbsp;огонь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E </span></span>
+<span class="line"><span class="txt"> Прочь,&nbsp;метраж&nbsp;сумбурный!&nbsp;Марш&nbsp;-&nbsp;под&nbsp;нож&nbsp;монтёрский!&nbsp;&nbsp; </span><span class="ch"> Am E7  Am E7 </span></span>
+<span class="line"><span class="txt"> на&nbsp;верстак&nbsp;монтажный,&nbsp;плоский&nbsp;как&nbsp;ладонь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm6 Am E  Am </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">2000</span>
-
+<pre><span class="year">2000</span>
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,62 +423,60 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">Конспект</span>
+data-key="Am"><h1>Конспект</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Тщетны&nbsp;были&nbsp;кровь&nbsp;и&nbsp;обида&nbsp;войн&nbsp;и&nbsp;оплеух.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F Am E </span>
-<span class="txt"> Чем&nbsp;ты&nbsp;ни&nbsp;лечи&nbsp;индивида&nbsp;—&nbsp;он&nbsp;неисправим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F A </span>
-<span class="txt"> Никак,&nbsp;отродясь&nbsp;и&nbsp;до&nbsp;веку,&nbsp;не&nbsp;признает&nbsp;он&nbsp;вслух,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm F7/Eb </span>
-<span class="txt"> что&nbsp;враг&nbsp;человек&nbsp;человеку,&nbsp;а&nbsp;не&nbsp;побратим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Am/F# Am/F E </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Вот&nbsp;он,&nbsp;имярек&nbsp;безымянный,&nbsp;мирный&nbsp;фарисей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E Am Am/F E </span>
-<span class="txt"> Врёт&nbsp;он,&nbsp;что&nbsp;отменно&nbsp;гуманный&nbsp;норов&nbsp;у&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E A7 </span>
-<span class="txt"> Ни&nbsp;в&nbsp;долг,&nbsp;ни&nbsp;по&nbsp;службе&nbsp;ему&nbsp;ты&nbsp;доверяться&nbsp;не&nbsp;смей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm F7/Eb </span>
-<span class="txt"> Он&nbsp;волк.&nbsp;И&nbsp;клыки&nbsp;его&nbsp;люты&nbsp;все&nbsp;до&nbsp;одного.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Am/F# F      --Bm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Клеит&nbsp;корпус&nbsp;он&nbsp;«кадиллаку»&nbsp;или&nbsp;«москвичу».&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Bm/Gb F Bm Bm/Gb F </span>
-<span class="txt"> Греет&nbsp;на&nbsp;обед&nbsp;кулебяку,&nbsp;либо&nbsp;чебурек.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Bm/Gb F B7 </span>
-<span class="txt"> Открыт,&nbsp;безоружен,&nbsp;умерен,&nbsp;даже&nbsp;кроток,&nbsp;но&nbsp;—&nbsp;чу!&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7 Ebm Gb7/E </span>
-<span class="txt"> хитрит,&nbsp;лепеча,&nbsp;что&nbsp;не&nbsp;зверь&nbsp;он,&nbsp;ибо&nbsp;человек.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Ebm Bm/G F#     --Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Счётом&nbsp;не&nbsp;учтешь&nbsp;и&nbsp;речами&nbsp;выразишь&nbsp;не&nbsp;в&nbsp;тон&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Hm/G F# Hm Hm/G F# </span>
-<span class="txt"> что&nbsp;там&nbsp;в&nbsp;человечьем&nbsp;ночами&nbsp;вертится&nbsp;уме.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Hm/G F# H7 </span>
-<span class="txt"> О&nbsp;чём&nbsp;говорит&nbsp;Заратустра&nbsp;с&nbsp;ним,&nbsp;пока&nbsp;лежит&nbsp;он&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em G7/F </span>
-<span class="txt"> ничком&nbsp;—&nbsp;и&nbsp;глаза&nbsp;его&nbsp;тускло&nbsp;светятся&nbsp;во&nbsp;тьме.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm/G# E        Am<-  </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Рядом&nbsp;—&nbsp;рода&nbsp;женского&nbsp;особь,&nbsp;тише&nbsp;тишины.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E Am Am/F E </span>
-<span class="txt"> Спрятан&nbsp;в&nbsp;золотистую&nbsp;россыпь&nbsp;ангельский&nbsp;овал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E A7 </span>
-<span class="txt"> Как&nbsp;шёлк&nbsp;её&nbsp;нежная&nbsp;кожа,&nbsp;радостны&nbsp;её&nbsp;сны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm F7/Eb </span>
-<span class="txt"> Но&nbsp;волк&nbsp;и&nbsp;она,&nbsp;она&nbsp;тоже,&nbsp;а&nbsp;не&nbsp;идеал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Am/F# F      --Bm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> О,&nbsp;жмых!&nbsp;Глинозём,&nbsp;обыватель...&nbsp;вечный&nbsp;середняк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Bm/Gb F Bm Bm/Gb F </span>
-<span class="txt"> Ложных&nbsp;аксиом&nbsp;обожатель,&nbsp;здравых&nbsp;оппонент.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Bm/Gb F B7 </span>
-<span class="txt"> Лассо&nbsp;имяреку&nbsp;на&nbsp;ворот&nbsp;или&nbsp;наградной&nbsp;знак,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7 Ebm Gb7/E </span>
-<span class="txt"> а&nbsp;всё&nbsp;печенег&nbsp;он&nbsp;и&nbsp;ворог,&nbsp;даже&nbsp;если&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Ebm Bm/G F#     --Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Битва&nbsp;за&nbsp;сарай&nbsp;и&nbsp;колодец&nbsp;кончилась&nbsp;врасплох.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Hm/G F# Hm Hm/G F# </span>
-<span class="txt"> «Три-два!»&nbsp;—&nbsp;объявил&nbsp;полководец,&nbsp;—&nbsp;«живо&nbsp;по&nbsp;домам!»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Hm/G F# H7  </span>
-<span class="txt"> И&nbsp;полк&nbsp;—&nbsp;ноги&nbsp;в&nbsp;руки&nbsp;и&nbsp;к&nbsp;дому,&nbsp;любо,&nbsp;братцы,&nbsp;эх!&nbsp;ох!..&nbsp;&nbsp; </span><span class="ch"> H7 Em G7/F </span>
-<span class="txt"> Но&nbsp;волк&nbsp;рядовой&nbsp;рядовому,&nbsp;как&nbsp;и&nbsp;атаман.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm/G# E        Am<- </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Схему&nbsp;мы&nbsp;наметили&nbsp;с&nbsp;вами,&nbsp;юные&nbsp;друзья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E Am Am/F E </span>
-<span class="txt"> Тему&nbsp;доработайте&nbsp;сами&nbsp;до&nbsp;наоборот.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E A7 </span>
-<span class="txt"> И,&nbsp;сняв&nbsp;оговор&nbsp;с&nbsp;имярека,&nbsp;укажите&nbsp;—&nbsp;в&nbsp;чём&nbsp;я&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm F7/Eb </span>
-<span class="txt"> неправ.&nbsp;А&nbsp;теперь&nbsp;дискотека.&nbsp;Новый&nbsp;всё&nbsp;же&nbsp;год.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Am/F# Am/F E Am </span>
-<span class="txt"> &nbsp; </span>
-
+<span class="line"><span class="txt"> Тщетны&nbsp;были&nbsp;кровь&nbsp;и&nbsp;обида&nbsp;войн&nbsp;и&nbsp;оплеух.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F Am E </span></span>
+<span class="line"><span class="txt"> Чем&nbsp;ты&nbsp;ни&nbsp;лечи&nbsp;индивида&nbsp;—&nbsp;он&nbsp;неисправим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F A </span></span>
+<span class="line"><span class="txt"> Никак,&nbsp;отродясь&nbsp;и&nbsp;до&nbsp;веку,&nbsp;не&nbsp;признает&nbsp;он&nbsp;вслух,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm F7/Eb </span></span>
+<span class="line"><span class="txt"> что&nbsp;враг&nbsp;человек&nbsp;человеку,&nbsp;а&nbsp;не&nbsp;побратим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Am/F# Am/F E </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Вот&nbsp;он,&nbsp;имярек&nbsp;безымянный,&nbsp;мирный&nbsp;фарисей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E Am Am/F E </span></span>
+<span class="line"><span class="txt"> Врёт&nbsp;он,&nbsp;что&nbsp;отменно&nbsp;гуманный&nbsp;норов&nbsp;у&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E A7 </span></span>
+<span class="line"><span class="txt"> Ни&nbsp;в&nbsp;долг,&nbsp;ни&nbsp;по&nbsp;службе&nbsp;ему&nbsp;ты&nbsp;доверяться&nbsp;не&nbsp;смей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm F7/Eb </span></span>
+<span class="line"><span class="txt"> Он&nbsp;волк.&nbsp;И&nbsp;клыки&nbsp;его&nbsp;люты&nbsp;все&nbsp;до&nbsp;одного.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Am/F# F      --Bm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Клеит&nbsp;корпус&nbsp;он&nbsp;«кадиллаку»&nbsp;или&nbsp;«москвичу».&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Bm/Gb F Bm Bm/Gb F </span></span>
+<span class="line"><span class="txt"> Греет&nbsp;на&nbsp;обед&nbsp;кулебяку,&nbsp;либо&nbsp;чебурек.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Bm/Gb F B7 </span></span>
+<span class="line"><span class="txt"> Открыт,&nbsp;безоружен,&nbsp;умерен,&nbsp;даже&nbsp;кроток,&nbsp;но&nbsp;—&nbsp;чу!&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7 Ebm Gb7/E </span></span>
+<span class="line"><span class="txt"> хитрит,&nbsp;лепеча,&nbsp;что&nbsp;не&nbsp;зверь&nbsp;он,&nbsp;ибо&nbsp;человек.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Ebm Bm/G F#     --Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Счётом&nbsp;не&nbsp;учтешь&nbsp;и&nbsp;речами&nbsp;выразишь&nbsp;не&nbsp;в&nbsp;тон&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Hm/G F# Hm Hm/G F# </span></span>
+<span class="line"><span class="txt"> что&nbsp;там&nbsp;в&nbsp;человечьем&nbsp;ночами&nbsp;вертится&nbsp;уме.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Hm/G F# H7 </span></span>
+<span class="line"><span class="txt"> О&nbsp;чём&nbsp;говорит&nbsp;Заратустра&nbsp;с&nbsp;ним,&nbsp;пока&nbsp;лежит&nbsp;он&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em G7/F </span></span>
+<span class="line"><span class="txt"> ничком&nbsp;—&nbsp;и&nbsp;глаза&nbsp;его&nbsp;тускло&nbsp;светятся&nbsp;во&nbsp;тьме.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm/G# E        Am<-  </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Рядом&nbsp;—&nbsp;рода&nbsp;женского&nbsp;особь,&nbsp;тише&nbsp;тишины.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E Am Am/F E </span></span>
+<span class="line"><span class="txt"> Спрятан&nbsp;в&nbsp;золотистую&nbsp;россыпь&nbsp;ангельский&nbsp;овал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E A7 </span></span>
+<span class="line"><span class="txt"> Как&nbsp;шёлк&nbsp;её&nbsp;нежная&nbsp;кожа,&nbsp;радостны&nbsp;её&nbsp;сны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm F7/Eb </span></span>
+<span class="line"><span class="txt"> Но&nbsp;волк&nbsp;и&nbsp;она,&nbsp;она&nbsp;тоже,&nbsp;а&nbsp;не&nbsp;идеал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Am/F# F      --Bm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> О,&nbsp;жмых!&nbsp;Глинозём,&nbsp;обыватель...&nbsp;вечный&nbsp;середняк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Bm/Gb F Bm Bm/Gb F </span></span>
+<span class="line"><span class="txt"> Ложных&nbsp;аксиом&nbsp;обожатель,&nbsp;здравых&nbsp;оппонент.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Bm/Gb F B7 </span></span>
+<span class="line"><span class="txt"> Лассо&nbsp;имяреку&nbsp;на&nbsp;ворот&nbsp;или&nbsp;наградной&nbsp;знак,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7 Ebm Gb7/E </span></span>
+<span class="line"><span class="txt"> а&nbsp;всё&nbsp;печенег&nbsp;он&nbsp;и&nbsp;ворог,&nbsp;даже&nbsp;если&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm Ebm Bm/G F#     --Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Битва&nbsp;за&nbsp;сарай&nbsp;и&nbsp;колодец&nbsp;кончилась&nbsp;врасплох.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Hm/G F# Hm Hm/G F# </span></span>
+<span class="line"><span class="txt"> «Три-два!»&nbsp;—&nbsp;объявил&nbsp;полководец,&nbsp;—&nbsp;«живо&nbsp;по&nbsp;домам!»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Hm/G F# H7  </span></span>
+<span class="line"><span class="txt"> И&nbsp;полк&nbsp;—&nbsp;ноги&nbsp;в&nbsp;руки&nbsp;и&nbsp;к&nbsp;дому,&nbsp;любо,&nbsp;братцы,&nbsp;эх!&nbsp;ох!..&nbsp;&nbsp; </span><span class="ch"> H7 Em G7/F </span></span>
+<span class="line"><span class="txt"> Но&nbsp;волк&nbsp;рядовой&nbsp;рядовому,&nbsp;как&nbsp;и&nbsp;атаман.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm/G# E        Am<- </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Схему&nbsp;мы&nbsp;наметили&nbsp;с&nbsp;вами,&nbsp;юные&nbsp;друзья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E Am Am/F E </span></span>
+<span class="line"><span class="txt"> Тему&nbsp;доработайте&nbsp;сами&nbsp;до&nbsp;наоборот.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Am/F E A7 </span></span>
+<span class="line"><span class="txt"> И,&nbsp;сняв&nbsp;оговор&nbsp;с&nbsp;имярека,&nbsp;укажите&nbsp;—&nbsp;в&nbsp;чём&nbsp;я&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm F7/Eb </span></span>
+<span class="line"><span class="txt"> неправ.&nbsp;А&nbsp;теперь&nbsp;дискотека.&nbsp;Новый&nbsp;всё&nbsp;же&nbsp;год.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Am/F# Am/F E Am </span></span>
+<span class="txt">  </span>
 </div>
-<pre>
-    <span class="year">2015</span>
-
+<pre><span class="year">2015</span>
 </pre>
+
 
                 </div>
         </div>

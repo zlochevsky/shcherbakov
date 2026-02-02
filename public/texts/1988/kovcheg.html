@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,56 +423,52 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="C#m"><span class="sng-title">КОВЧЕГ НЕУТОМИМЫЙ</span>
+data-key="C#m"><h1>КОВЧЕГ НЕУТОМИМЫЙ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Надежды&nbsp;прочь,&nbsp;сомнения&nbsp;долой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
-<span class="txt"> забыты&nbsp;и&nbsp;досада,&nbsp;и&nbsp;бравада.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#m </span>
-<span class="txt"> Граница&nbsp;между&nbsp;небом&nbsp;и&nbsp;водой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   F#m </span>
-<span class="txt"> уже&nbsp;неразличима,&nbsp;и&nbsp;не&nbsp;надо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  C#m </span>
-<span class="txt"> По-прежнему&nbsp;свободный&nbsp;свой&nbsp;разбег&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   E7 </span>
-<span class="txt"> сверяя&nbsp;с&nbsp;параллелью&nbsp;голубою,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7 F#m </span>
-<span class="txt"> плывёт&nbsp;неутомимый&nbsp;наш&nbsp;ковчег,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span>
-<span class="txt"> волнуемый&nbsp;лишь&nbsp;смертью&nbsp;и&nbsp;любовью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C#m </span>
+<span class="line"><span class="txt"> Надежды&nbsp;прочь,&nbsp;сомнения&nbsp;долой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
+<span class="line"><span class="txt"> забыты&nbsp;и&nbsp;досада,&nbsp;и&nbsp;бравада.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#m </span></span>
+<span class="line"><span class="txt"> Граница&nbsp;между&nbsp;небом&nbsp;и&nbsp;водой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   F#m </span></span>
+<span class="line"><span class="txt"> уже&nbsp;неразличима,&nbsp;и&nbsp;не&nbsp;надо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  C#m </span></span>
+<span class="line"><span class="txt"> По-прежнему&nbsp;свободный&nbsp;свой&nbsp;разбег&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   E7 </span></span>
+<span class="line"><span class="txt"> сверяя&nbsp;с&nbsp;параллелью&nbsp;голубою,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7 F#m </span></span>
+<span class="line"><span class="txt"> плывёт&nbsp;неутомимый&nbsp;наш&nbsp;ковчег,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span></span>
+<span class="line"><span class="txt"> волнуемый&nbsp;лишь&nbsp;смертью&nbsp;и&nbsp;любовью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Проблемы&nbsp;вечной&nbsp;-&nbsp;бысть&nbsp;или&nbsp;не&nbsp;бысть&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
-<span class="txt"> решенья&nbsp;мы&nbsp;не&nbsp;знаем&nbsp;и&nbsp;не&nbsp;скажем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#m </span>
-<span class="txt"> зато&nbsp;ни&nbsp;жажда&nbsp;славы,&nbsp;ни&nbsp;корысть&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   F#m </span>
-<span class="txt"> уже&nbsp;не&nbsp;овладеют&nbsp;экипажем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  C#m </span>
-<span class="txt"> И&nbsp;если&nbsp;мы&nbsp;несёмся&nbsp;через&nbsp;льды,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   E7 </span>
-<span class="txt"> не&nbsp;чувствуя&nbsp;ни&nbsp;холода,&nbsp;ни&nbsp;боли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7 F#m </span>
-<span class="txt"> то&nbsp;это&nbsp;всё&nbsp;ни&nbsp;для&nbsp;какой&nbsp;нужды,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span>
-<span class="txt"> а&nbsp;только&nbsp;ради&nbsp;смерти&nbsp;и&nbsp;любови.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C#m </span>
+<span class="line"><span class="txt"> Проблемы&nbsp;вечной&nbsp;-&nbsp;бысть&nbsp;или&nbsp;не&nbsp;бысть&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
+<span class="line"><span class="txt"> решенья&nbsp;мы&nbsp;не&nbsp;знаем&nbsp;и&nbsp;не&nbsp;скажем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#m </span></span>
+<span class="line"><span class="txt"> зато&nbsp;ни&nbsp;жажда&nbsp;славы,&nbsp;ни&nbsp;корысть&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   F#m </span></span>
+<span class="line"><span class="txt"> уже&nbsp;не&nbsp;овладеют&nbsp;экипажем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  C#m </span></span>
+<span class="line"><span class="txt"> И&nbsp;если&nbsp;мы&nbsp;несёмся&nbsp;через&nbsp;льды,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   E7 </span></span>
+<span class="line"><span class="txt"> не&nbsp;чувствуя&nbsp;ни&nbsp;холода,&nbsp;ни&nbsp;боли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7 F#m </span></span>
+<span class="line"><span class="txt"> то&nbsp;это&nbsp;всё&nbsp;ни&nbsp;для&nbsp;какой&nbsp;нужды,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span></span>
+<span class="line"><span class="txt"> а&nbsp;только&nbsp;ради&nbsp;смерти&nbsp;и&nbsp;любови.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Воистину&nbsp;ничем&nbsp;не&nbsp;дорожа&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
-<span class="txt"> за&nbsp;этим&nbsp;легкомысленным&nbsp;занятьем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#m </span>
-<span class="txt"> мы&nbsp;верим,&nbsp;что&nbsp;не&nbsp;будет&nbsp;платежа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   F#m </span>
-<span class="txt"> но&nbsp;если&nbsp;он&nbsp;и&nbsp;будет,&nbsp;мы&nbsp;заплатим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  C#m </span>
-<span class="txt"> Чего&nbsp;бояться&nbsp;нам&nbsp;-&nbsp;тюрьмы,&nbsp;тоски,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   E7 </span>
-<span class="txt"> ущерба&nbsp;очагу,&nbsp;вреда&nbsp;здоровью?..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7 F#m </span>
-<span class="txt"> Но&nbsp;это&nbsp;всё&nbsp;такие&nbsp;пустяки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span>
-<span class="txt"> в&nbsp;сравнении&nbsp;со&nbsp;смертью&nbsp;и&nbsp;любовью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C#m </span>
+<span class="line"><span class="txt"> Воистину&nbsp;ничем&nbsp;не&nbsp;дорожа&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
+<span class="line"><span class="txt"> за&nbsp;этим&nbsp;легкомысленным&nbsp;занятьем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#m </span></span>
+<span class="line"><span class="txt"> мы&nbsp;верим,&nbsp;что&nbsp;не&nbsp;будет&nbsp;платежа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   F#m </span></span>
+<span class="line"><span class="txt"> но&nbsp;если&nbsp;он&nbsp;и&nbsp;будет,&nbsp;мы&nbsp;заплатим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  C#m </span></span>
+<span class="line"><span class="txt"> Чего&nbsp;бояться&nbsp;нам&nbsp;-&nbsp;тюрьмы,&nbsp;тоски,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   E7 </span></span>
+<span class="line"><span class="txt"> ущерба&nbsp;очагу,&nbsp;вреда&nbsp;здоровью?..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7 F#m </span></span>
+<span class="line"><span class="txt"> Но&nbsp;это&nbsp;всё&nbsp;такие&nbsp;пустяки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span></span>
+<span class="line"><span class="txt"> в&nbsp;сравнении&nbsp;со&nbsp;смертью&nbsp;и&nbsp;любовью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C#m </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1988</span>
-
+<pre><span class="year">1988</span>
 
 
 </pre>
+
 
                 </div>
         </div>

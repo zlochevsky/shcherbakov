@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,62 +433,60 @@ span.c {
 data-key="Hm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вечно&nbsp;открытый&nbsp;Божьему&nbsp;гневу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span>
-<span class="txt"> шаг&nbsp;замедляю&nbsp;перед&nbsp;горой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span>
-<span class="txt"> Вижу,&nbsp;как&nbsp;дерзко&nbsp;движется&nbsp;к&nbsp;небу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span>
-<span class="txt"> лазальщик&nbsp;скальный&nbsp;-&nbsp;горный&nbsp;герой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span>
-<span class="txt"> Весь&nbsp;из&nbsp;отваги&nbsp;соткан&nbsp;и&nbsp;создан,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#7          </span>
-<span class="txt"> кажется&nbsp;снизу&nbsp;чёрным&nbsp;стрижом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H            </span>
-<span class="txt"> Там&nbsp;вверху&nbsp;строит&nbsp;он&nbsp;гнёзда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm           </span>
-<span class="txt"> там&nbsp;он&nbsp;царь,&nbsp;там&nbsp;его&nbsp;дом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#  Em  F#7  Hm  </span>
+<span class="line"><span class="txt"> Вечно&nbsp;открытый&nbsp;Божьему&nbsp;гневу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span></span>
+<span class="line"><span class="txt"> шаг&nbsp;замедляю&nbsp;перед&nbsp;горой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span></span>
+<span class="line"><span class="txt"> Вижу,&nbsp;как&nbsp;дерзко&nbsp;движется&nbsp;к&nbsp;небу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span></span>
+<span class="line"><span class="txt"> лазальщик&nbsp;скальный&nbsp;-&nbsp;горный&nbsp;герой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span></span>
+<span class="line"><span class="txt"> Весь&nbsp;из&nbsp;отваги&nbsp;соткан&nbsp;и&nbsp;создан,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#7          </span></span>
+<span class="line"><span class="txt"> кажется&nbsp;снизу&nbsp;чёрным&nbsp;стрижом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H            </span></span>
+<span class="line"><span class="txt"> Там&nbsp;вверху&nbsp;строит&nbsp;он&nbsp;гнёзда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm           </span></span>
+<span class="line"><span class="txt"> там&nbsp;он&nbsp;царь,&nbsp;там&nbsp;его&nbsp;дом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#  Em  F#7  Hm  </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Там&nbsp;на&nbsp;вершине&nbsp;смеет&nbsp;он&nbsp;править,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span>
-<span class="txt"> с&nbsp;гибельной&nbsp;высью&nbsp;дружит&nbsp;на&nbsp;"ты".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span>
-<span class="txt"> Мне&nbsp;ж&nbsp;у&nbsp;подножья&nbsp;жутко&nbsp;представить&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span>
-<span class="txt"> даже&nbsp;частицу&nbsp;той&nbsp;высоты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span>
-<span class="txt"> Как&nbsp;ни&nbsp;пытайся,&nbsp;сколько&nbsp;ни&nbsp;бейся,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#7          </span>
-<span class="txt"> не&nbsp;довезёт&nbsp;туда&nbsp;колесо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H            </span>
-<span class="txt"> Там&nbsp;уже&nbsp;нет&nbsp;поднебесья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm           </span>
-<span class="txt"> там&nbsp;над&nbsp;ним&nbsp;небо&nbsp;и&nbsp;всё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#  Em  F#7  Hm  </span>
+<span class="line"><span class="txt"> Там&nbsp;на&nbsp;вершине&nbsp;смеет&nbsp;он&nbsp;править,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span></span>
+<span class="line"><span class="txt"> с&nbsp;гибельной&nbsp;высью&nbsp;дружит&nbsp;на&nbsp;"ты".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span></span>
+<span class="line"><span class="txt"> Мне&nbsp;ж&nbsp;у&nbsp;подножья&nbsp;жутко&nbsp;представить&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span></span>
+<span class="line"><span class="txt"> даже&nbsp;частицу&nbsp;той&nbsp;высоты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span></span>
+<span class="line"><span class="txt"> Как&nbsp;ни&nbsp;пытайся,&nbsp;сколько&nbsp;ни&nbsp;бейся,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#7          </span></span>
+<span class="line"><span class="txt"> не&nbsp;довезёт&nbsp;туда&nbsp;колесо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H            </span></span>
+<span class="line"><span class="txt"> Там&nbsp;уже&nbsp;нет&nbsp;поднебесья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm           </span></span>
+<span class="line"><span class="txt"> там&nbsp;над&nbsp;ним&nbsp;небо&nbsp;и&nbsp;всё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#  Em  F#7  Hm  </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Стены&nbsp;отвесны,&nbsp;камни&nbsp;опасны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span>
-<span class="txt"> скалы&nbsp;надменны,&nbsp;вечен&nbsp;их&nbsp;лёд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span>
-<span class="txt"> Многие&nbsp;жертвы&nbsp;были&nbsp;напрасны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span>
-<span class="txt"> редкое&nbsp;семя&nbsp;тут&nbsp;прорастёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span>
-<span class="txt"> Сколько&nbsp;нецветших&nbsp;и&nbsp;непроросших&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#7          </span>
-<span class="txt"> горы&nbsp;убили&nbsp;здесь&nbsp;ни&nbsp;за&nbsp;грош...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H            </span>
-<span class="txt"> Что&nbsp;ж&nbsp;ты,&nbsp;стриж,&nbsp;не&nbsp;проклянёшь&nbsp;их,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm           </span>
-<span class="txt"> что&nbsp;ж&nbsp;ты&nbsp;им&nbsp;славу&nbsp;поёшь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#  Em  F#7  Hm  </span>
+<span class="line"><span class="txt"> Стены&nbsp;отвесны,&nbsp;камни&nbsp;опасны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span></span>
+<span class="line"><span class="txt"> скалы&nbsp;надменны,&nbsp;вечен&nbsp;их&nbsp;лёд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span></span>
+<span class="line"><span class="txt"> Многие&nbsp;жертвы&nbsp;были&nbsp;напрасны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span></span>
+<span class="line"><span class="txt"> редкое&nbsp;семя&nbsp;тут&nbsp;прорастёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span></span>
+<span class="line"><span class="txt"> Сколько&nbsp;нецветших&nbsp;и&nbsp;непроросших&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#7          </span></span>
+<span class="line"><span class="txt"> горы&nbsp;убили&nbsp;здесь&nbsp;ни&nbsp;за&nbsp;грош...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H            </span></span>
+<span class="line"><span class="txt"> Что&nbsp;ж&nbsp;ты,&nbsp;стриж,&nbsp;не&nbsp;проклянёшь&nbsp;их,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm           </span></span>
+<span class="line"><span class="txt"> что&nbsp;ж&nbsp;ты&nbsp;им&nbsp;славу&nbsp;поёшь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#  Em  F#7  Hm  </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Он&nbsp;отвечает,&nbsp;двигая&nbsp;бровью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span>
-<span class="txt"> словно&nbsp;мыслитель,&nbsp;лбом&nbsp;шевеля:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span>
-<span class="txt"> "Дымом&nbsp;и&nbsp;дёгтем,&nbsp;потом&nbsp;и&nbsp;кровью&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span>
-<span class="txt"> небо&nbsp;не&nbsp;пахнет,&nbsp;пахнет&nbsp;земля".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span>
-<span class="txt"> Я&nbsp;замолкаю,&nbsp;кто&nbsp;ж&nbsp;его&nbsp;знает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#7          </span>
-<span class="txt"> что&nbsp;на&nbsp;прощанье&nbsp;скажешь&nbsp;стрижу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H            </span>
-<span class="txt"> Он,&nbsp;как&nbsp;царь,&nbsp;в&nbsp;небо&nbsp;взлетает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm           </span>
-<span class="txt"> я,&nbsp;как&nbsp;раб,&nbsp;вдаль&nbsp;ухожу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#  Em  F#7  Hm  </span>
+<span class="line"><span class="txt"> Он&nbsp;отвечает,&nbsp;двигая&nbsp;бровью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span></span>
+<span class="line"><span class="txt"> словно&nbsp;мыслитель,&nbsp;лбом&nbsp;шевеля:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span></span>
+<span class="line"><span class="txt"> "Дымом&nbsp;и&nbsp;дёгтем,&nbsp;потом&nbsp;и&nbsp;кровью&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span></span>
+<span class="line"><span class="txt"> небо&nbsp;не&nbsp;пахнет,&nbsp;пахнет&nbsp;земля".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span></span>
+<span class="line"><span class="txt"> Я&nbsp;замолкаю,&nbsp;кто&nbsp;ж&nbsp;его&nbsp;знает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#7          </span></span>
+<span class="line"><span class="txt"> что&nbsp;на&nbsp;прощанье&nbsp;скажешь&nbsp;стрижу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H            </span></span>
+<span class="line"><span class="txt"> Он,&nbsp;как&nbsp;царь,&nbsp;в&nbsp;небо&nbsp;взлетает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm           </span></span>
+<span class="line"><span class="txt"> я,&nbsp;как&nbsp;раб,&nbsp;вдаль&nbsp;ухожу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#  Em  F#7  Hm  </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мир&nbsp;тебе,&nbsp;горец,&nbsp;вечно&nbsp;и&nbsp;ныне!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span>
-<span class="txt"> Шествуй&nbsp;к&nbsp;вершине,&nbsp;к&nbsp;небу&nbsp;стремись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span>
-<span class="txt"> Ты&nbsp;-&nbsp;по&nbsp;откосу,&nbsp;я&nbsp;-&nbsp;по&nbsp;равнине,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span>
-<span class="txt"> каждый,&nbsp;как&nbsp;может,&nbsp;движется&nbsp;ввысь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span>
-<span class="txt"> Я&nbsp;продолжаю&nbsp;слепо&nbsp;и&nbsp;немо&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#7          </span>
-<span class="txt"> путь&nbsp;по&nbsp;кровавой&nbsp;дымной&nbsp;земле.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H            </span>
-<span class="txt"> Но&nbsp;моё&nbsp;хмурое&nbsp;небо&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm           </span>
-<span class="txt"> что&nbsp;ни&nbsp;час&nbsp;ближе&nbsp;ко&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#  Em  F#7  Hm  </span>
+<span class="line"><span class="txt"> Мир&nbsp;тебе,&nbsp;горец,&nbsp;вечно&nbsp;и&nbsp;ныне!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span></span>
+<span class="line"><span class="txt"> Шествуй&nbsp;к&nbsp;вершине,&nbsp;к&nbsp;небу&nbsp;стремись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;-&nbsp;по&nbsp;откосу,&nbsp;я&nbsp;-&nbsp;по&nbsp;равнине,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#  F#7  H   </span></span>
+<span class="line"><span class="txt"> каждый,&nbsp;как&nbsp;может,&nbsp;движется&nbsp;ввысь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m C#   F#m </span></span>
+<span class="line"><span class="txt"> Я&nbsp;продолжаю&nbsp;слепо&nbsp;и&nbsp;немо&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F#7          </span></span>
+<span class="line"><span class="txt"> путь&nbsp;по&nbsp;кровавой&nbsp;дымной&nbsp;земле.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H            </span></span>
+<span class="line"><span class="txt"> Но&nbsp;моё&nbsp;хмурое&nbsp;небо&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm           </span></span>
+<span class="line"><span class="txt"> что&nbsp;ни&nbsp;час&nbsp;ближе&nbsp;ко&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#  Em  F#7  Hm  </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1987</span>
-
+<pre><span class="year">1987</span>
 </pre>
+
 
                 </div>
         </div>

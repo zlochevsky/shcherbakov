@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,48 +433,45 @@ span.c {
 data-key="Em"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Издалека&nbsp;вернувшись&nbsp;туда,&nbsp;где&nbsp;не&nbsp;был&nbsp;долго,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> взамен&nbsp;жилья&nbsp;и&nbsp;счастья,&nbsp;найду&nbsp;пустые&nbsp;стены.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> А&nbsp;в&nbsp;цветнике&nbsp;у&nbsp;дома&nbsp;за&nbsp;чугуном&nbsp;ажурным&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> увижу&nbsp;плоский&nbsp;камень,&nbsp;прочту&nbsp;на&nbsp;камне&nbsp;имя&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> и,&nbsp;прислонясь&nbsp;к&nbsp;решётке,&nbsp;произнесу&nbsp;в&nbsp;смятенье:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6   F# </span>
-<span class="txt"> "Ну,&nbsp;как&nbsp;же&nbsp;так,&nbsp;Мария?&nbsp;Я&nbsp;ожидал&nbsp;иного.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     Hm </span>
-<span class="txt"> Я&nbsp;думал,&nbsp;ты&nbsp;ещё&nbsp;раз&nbsp;спасёшь&nbsp;меня,&nbsp;как&nbsp;прежде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D# </span>
-<span class="txt"> Я&nbsp;был&nbsp;в&nbsp;тебе&nbsp;уверен.&nbsp;Я&nbsp;полагал,&nbsp;ты&nbsp;можешь&nbsp;всё..."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     D7  Em </span>
+<span class="line"><span class="txt"> Издалека&nbsp;вернувшись&nbsp;туда,&nbsp;где&nbsp;не&nbsp;был&nbsp;долго,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> взамен&nbsp;жилья&nbsp;и&nbsp;счастья,&nbsp;найду&nbsp;пустые&nbsp;стены.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;в&nbsp;цветнике&nbsp;у&nbsp;дома&nbsp;за&nbsp;чугуном&nbsp;ажурным&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> увижу&nbsp;плоский&nbsp;камень,&nbsp;прочту&nbsp;на&nbsp;камне&nbsp;имя&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> и,&nbsp;прислонясь&nbsp;к&nbsp;решётке,&nbsp;произнесу&nbsp;в&nbsp;смятенье:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6   F# </span></span>
+<span class="line"><span class="txt"> "Ну,&nbsp;как&nbsp;же&nbsp;так,&nbsp;Мария?&nbsp;Я&nbsp;ожидал&nbsp;иного.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     Hm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;думал,&nbsp;ты&nbsp;ещё&nbsp;раз&nbsp;спасёшь&nbsp;меня,&nbsp;как&nbsp;прежде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D# </span></span>
+<span class="line"><span class="txt"> Я&nbsp;был&nbsp;в&nbsp;тебе&nbsp;уверен.&nbsp;Я&nbsp;полагал,&nbsp;ты&nbsp;можешь&nbsp;всё..."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     D7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;шевельнётся&nbsp;камень,&nbsp;и&nbsp;покачнутся&nbsp;стебли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> И&nbsp;я&nbsp;услышу&nbsp;голос,&nbsp;который&nbsp;внятно&nbsp;молвит:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> "Меняй&nbsp;дорогу,&nbsp;путник.&nbsp;Ты&nbsp;был&nbsp;не&nbsp;прав,&nbsp;как&nbsp;видишь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> Я&nbsp;не&nbsp;богиня&nbsp;вовсе,&nbsp;и&nbsp;не&nbsp;колдунья&nbsp;даже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> хоть&nbsp;и&nbsp;могу&nbsp;такое,&nbsp;чего&nbsp;никто&nbsp;не&nbsp;может:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6   F# </span>
-<span class="txt"> могу&nbsp;не&nbsp;знать&nbsp;отрады,&nbsp;могу&nbsp;не&nbsp;быть&nbsp;любимой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     Hm </span>
-<span class="txt"> могу&nbsp;не&nbsp;ждать,&nbsp;не&nbsp;помнить,&nbsp;могу&nbsp;не&nbsp;петь,&nbsp;не&nbsp;плакать,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D# </span>
-<span class="txt"> могу&nbsp;не&nbsp;жить&nbsp;на&nbsp;свете,&nbsp;но&nbsp;не&nbsp;могу&nbsp;не&nbsp;умирать..."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     D7  Em </span>
+<span class="line"><span class="txt"> И&nbsp;шевельнётся&nbsp;камень,&nbsp;и&nbsp;покачнутся&nbsp;стебли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> И&nbsp;я&nbsp;услышу&nbsp;голос,&nbsp;который&nbsp;внятно&nbsp;молвит:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> "Меняй&nbsp;дорогу,&nbsp;путник.&nbsp;Ты&nbsp;был&nbsp;не&nbsp;прав,&nbsp;как&nbsp;видишь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> Я&nbsp;не&nbsp;богиня&nbsp;вовсе,&nbsp;и&nbsp;не&nbsp;колдунья&nbsp;даже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> хоть&nbsp;и&nbsp;могу&nbsp;такое,&nbsp;чего&nbsp;никто&nbsp;не&nbsp;может:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6   F# </span></span>
+<span class="line"><span class="txt"> могу&nbsp;не&nbsp;знать&nbsp;отрады,&nbsp;могу&nbsp;не&nbsp;быть&nbsp;любимой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     Hm </span></span>
+<span class="line"><span class="txt"> могу&nbsp;не&nbsp;ждать,&nbsp;не&nbsp;помнить,&nbsp;могу&nbsp;не&nbsp;петь,&nbsp;не&nbsp;плакать,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D# </span></span>
+<span class="line"><span class="txt"> могу&nbsp;не&nbsp;жить&nbsp;на&nbsp;свете,&nbsp;но&nbsp;не&nbsp;могу&nbsp;не&nbsp;умирать..."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     D7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;снова&nbsp;всё&nbsp;умолкнет.&nbsp;Но&nbsp;вскоре&nbsp;тихим&nbsp;шагом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> из&nbsp;дома&nbsp;выйдет&nbsp;некто&nbsp;-&nbsp;должно&nbsp;быть,&nbsp;местный&nbsp;сторож&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> и&nbsp;спросит,&nbsp;чем&nbsp;обязан.&nbsp;И&nbsp;я&nbsp;солгу&nbsp;поспешно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> что&nbsp;перепутал&nbsp;адрес.&nbsp;И&nbsp;повернусь&nbsp;к&nbsp;воротам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> И&nbsp;засмеётся&nbsp;камень,&nbsp;и&nbsp;отшатнутся&nbsp;стебли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6   F# </span>
-<span class="txt"> И&nbsp;тихим&nbsp;шагом&nbsp;сторож&nbsp;пойдёт&nbsp;обратно&nbsp;к&nbsp;дому,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     Hm </span>
-<span class="txt"> чтоб&nbsp;начертать&nbsp;отметку&nbsp;в&nbsp;своей&nbsp;учётной&nbsp;книге.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D# </span>
-<span class="txt"> Так&nbsp;превратится&nbsp;в&nbsp;прочерк&nbsp;то,&nbsp;что&nbsp;когда-то&nbsp;было&nbsp;мной...&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     D7  Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm9   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm9   Em </span>
+<span class="line"><span class="txt"> И&nbsp;снова&nbsp;всё&nbsp;умолкнет.&nbsp;Но&nbsp;вскоре&nbsp;тихим&nbsp;шагом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> из&nbsp;дома&nbsp;выйдет&nbsp;некто&nbsp;-&nbsp;должно&nbsp;быть,&nbsp;местный&nbsp;сторож&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> и&nbsp;спросит,&nbsp;чем&nbsp;обязан.&nbsp;И&nbsp;я&nbsp;солгу&nbsp;поспешно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> что&nbsp;перепутал&nbsp;адрес.&nbsp;И&nbsp;повернусь&nbsp;к&nbsp;воротам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> И&nbsp;засмеётся&nbsp;камень,&nbsp;и&nbsp;отшатнутся&nbsp;стебли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6   F# </span></span>
+<span class="line"><span class="txt"> И&nbsp;тихим&nbsp;шагом&nbsp;сторож&nbsp;пойдёт&nbsp;обратно&nbsp;к&nbsp;дому,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     Hm </span></span>
+<span class="line"><span class="txt"> чтоб&nbsp;начертать&nbsp;отметку&nbsp;в&nbsp;своей&nbsp;учётной&nbsp;книге.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     D# </span></span>
+<span class="line"><span class="txt"> Так&nbsp;превратится&nbsp;в&nbsp;прочерк&nbsp;то,&nbsp;что&nbsp;когда-то&nbsp;было&nbsp;мной...&nbsp;&nbsp;&nbsp; </span><span class="ch"> G     D7  Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm11  C#m </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm9   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm9   Em </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1991</span>
-
+<pre><span class="year">1991</span>
 
 </pre>
+
 
                 </div>
         </div>

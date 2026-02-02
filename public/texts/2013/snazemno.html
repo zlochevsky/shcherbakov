@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,68 +423,65 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">Аллегорическая баллада о каботажном плавании</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
+data-key="Dm"><h1>Аллегорическая баллада о каботажном плавании</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> С&nbsp;наземной&nbsp;льготой&nbsp;знаться&nbsp;поздно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
-<span class="txt"> беречься&nbsp;поздно,&nbsp;лодка&nbsp;снаряжена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
-<span class="txt"> Гребцам&nbsp;сигнальщик&nbsp;в&nbsp;помощь&nbsp;позван.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
-<span class="txt"> Он&nbsp;руку&nbsp;поднял,&nbsp;напряжена&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
+<span class="line"><span class="txt"> С&nbsp;наземной&nbsp;льготой&nbsp;знаться&nbsp;поздно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
+<span class="line"><span class="txt"> беречься&nbsp;поздно,&nbsp;лодка&nbsp;снаряжена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
+<span class="line"><span class="txt"> Гребцам&nbsp;сигнальщик&nbsp;в&nbsp;помощь&nbsp;позван.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
+<span class="line"><span class="txt"> Он&nbsp;руку&nbsp;поднял,&nbsp;напряжена&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Как&nbsp;хищник&nbsp;в&nbsp;цирке&nbsp;внемлет&nbsp;плётке,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
-<span class="txt"> следим&nbsp;мы&nbsp;в&nbsp;лодке&nbsp;нехотя&nbsp;за&nbsp;рукой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 D7 </span>
-<span class="txt"> Спасаться&nbsp;поздно,&nbsp;людно&nbsp;в&nbsp;лодке&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Dm </span>
-<span class="txt"> и&nbsp;плотно&nbsp;лодка&nbsp;окружена&nbsp;рекой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
-<span class="txt">  </span>
- <br />
-<span class="txt">  </span>
- <br />
-<span class="txt"> Все&nbsp;реки&nbsp;к&nbsp;морю,&nbsp;к&nbsp;морю&nbsp;течет&nbsp;и&nbsp;эта,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
-<span class="txt"> того&nbsp;же&nbsp;цвета,&nbsp;что&nbsp;и&nbsp;закат&nbsp;над&nbsp;ней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 D7 </span>
-<span class="txt"> Где&nbsp;мель,&nbsp;где&nbsp;омут?&nbsp;Вместо&nbsp;примет&nbsp;понятных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Dm    </span>
-<span class="txt"> в&nbsp;закатных&nbsp;пятнах&nbsp;бакены&nbsp;без&nbsp;огней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
+<span class="line"><span class="txt"> Как&nbsp;хищник&nbsp;в&nbsp;цирке&nbsp;внемлет&nbsp;плётке,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
+<span class="line"><span class="txt"> следим&nbsp;мы&nbsp;в&nbsp;лодке&nbsp;нехотя&nbsp;за&nbsp;рукой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 D7 </span></span>
+<span class="line"><span class="txt"> Спасаться&nbsp;поздно,&nbsp;людно&nbsp;в&nbsp;лодке&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;плотно&nbsp;лодка&nbsp;окружена&nbsp;рекой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
  <br />
-<span class="txt"> Теперь&nbsp;мы&nbsp;вправе&nbsp;биться&nbsp;о&nbsp;камни&nbsp;с&nbsp;треском,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
-<span class="txt"> в&nbsp;потёмках&nbsp;мокнуть,&nbsp;даже&nbsp;кричать&nbsp;"ау",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 D7 </span>
-<span class="txt"> но&nbsp;не&nbsp;прибегнуть&nbsp;к&nbsp;якобы&nbsp;верным&nbsp;средствам&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Dm    </span>
-<span class="txt"> для&nbsp;поддержанья&nbsp;якобы&nbsp;на&nbsp;плаву.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> Никто&nbsp;и&nbsp;не&nbsp;помнит,&nbsp;да&nbsp;в&nbsp;чём&nbsp;их&nbsp;польза.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
-<span class="txt"> Немногим&nbsp;впору&nbsp;пояс&nbsp;или&nbsp;жилет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 D7 </span>
-<span class="txt"> Вдоль&nbsp;твёрдой&nbsp;почвы&nbsp;влечься&nbsp;поздно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Dm </span>
-<span class="txt"> беречься&nbsp;поздно:&nbsp;берега&nbsp;больше&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
+<span class="line"><span class="txt"> Все&nbsp;реки&nbsp;к&nbsp;морю,&nbsp;к&nbsp;морю&nbsp;течет&nbsp;и&nbsp;эта,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
+<span class="line"><span class="txt"> того&nbsp;же&nbsp;цвета,&nbsp;что&nbsp;и&nbsp;закат&nbsp;над&nbsp;ней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 D7 </span></span>
+<span class="line"><span class="txt"> Где&nbsp;мель,&nbsp;где&nbsp;омут?&nbsp;Вместо&nbsp;примет&nbsp;понятных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Dm    </span></span>
+<span class="line"><span class="txt"> в&nbsp;закатных&nbsp;пятнах&nbsp;бакены&nbsp;без&nbsp;огней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
  <br />
-<span class="txt"> Все&nbsp;реки&nbsp;к&nbsp;морю,&nbsp;к&nbsp;морю&nbsp;течет&nbsp;и&nbsp;эта,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
-<span class="txt"> того&nbsp;же&nbsp;цвета,&nbsp;что&nbsp;и&nbsp;закат&nbsp;над&nbsp;ней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 D7 </span>
-<span class="txt"> Где&nbsp;мель,&nbsp;где&nbsp;омут?&nbsp;Вместо&nbsp;примет&nbsp;понятных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Dm </span>
-<span class="txt"> в&nbsp;закатных&nbsp;пятнах&nbsp;бакены&nbsp;без&nbsp;огней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span>
+<span class="line"><span class="txt"> Теперь&nbsp;мы&nbsp;вправе&nbsp;биться&nbsp;о&nbsp;камни&nbsp;с&nbsp;треском,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
+<span class="line"><span class="txt"> в&nbsp;потёмках&nbsp;мокнуть,&nbsp;даже&nbsp;кричать&nbsp;"ау",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 D7 </span></span>
+<span class="line"><span class="txt"> но&nbsp;не&nbsp;прибегнуть&nbsp;к&nbsp;якобы&nbsp;верным&nbsp;средствам&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Dm    </span></span>
+<span class="line"><span class="txt"> для&nbsp;поддержанья&nbsp;якобы&nbsp;на&nbsp;плаву.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
 <span class="txt">  </span>
  <br />
+<span class="line"><span class="txt"> Никто&nbsp;и&nbsp;не&nbsp;помнит,&nbsp;да&nbsp;в&nbsp;чём&nbsp;их&nbsp;польза.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
+<span class="line"><span class="txt"> Немногим&nbsp;впору&nbsp;пояс&nbsp;или&nbsp;жилет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 D7 </span></span>
+<span class="line"><span class="txt"> Вдоль&nbsp;твёрдой&nbsp;почвы&nbsp;влечься&nbsp;поздно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Dm </span></span>
+<span class="line"><span class="txt"> беречься&nbsp;поздно:&nbsp;берега&nbsp;больше&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
+<span class="txt">  </span>
  <br />
-
+<span class="txt">  </span>
+ <br />
+<span class="line"><span class="txt"> Все&nbsp;реки&nbsp;к&nbsp;морю,&nbsp;к&nbsp;морю&nbsp;течет&nbsp;и&nbsp;эта,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
+<span class="line"><span class="txt"> того&nbsp;же&nbsp;цвета,&nbsp;что&nbsp;и&nbsp;закат&nbsp;над&nbsp;ней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 D7 </span></span>
+<span class="line"><span class="txt"> Где&nbsp;мель,&nbsp;где&nbsp;омут?&nbsp;Вместо&nbsp;примет&nbsp;понятных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Dm </span></span>
+<span class="line"><span class="txt"> в&nbsp;закатных&nbsp;пятнах&nbsp;бакены&nbsp;без&nbsp;огней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 A7 Dm </span></span>
+<span class="txt">  </span>
+ <br />
 </div>
-<pre>
-    <span class="year">2013</span>                                         Гармония по исполнению
+<pre><span class="year">2013</span>                                         Гармония по исполнению
                                                 С. Труханова <span class="year">2013</span> года.
 
-
 </pre>
+
 
                 </div>
         </div>

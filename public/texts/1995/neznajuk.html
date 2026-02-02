@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,62 +433,60 @@ span.c {
 data-key="E"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;знаю,&nbsp;как&nbsp;там&nbsp;ландыш,&nbsp;засверкал&nbsp;ли&nbsp;рябью&nbsp;росной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       F+7-5/E  E </span>
-<span class="txt"> Не&nbsp;знаю,&nbsp;как&nbsp;там&nbsp;Веспер,&nbsp;весь&nbsp;ли&nbsp;высью&nbsp;смыт&nbsp;небесной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         F+7-5/E  E </span>
-<span class="txt"> Картину&nbsp;дня,&nbsp;сдаётся&nbsp;мне,&nbsp;придётся&nbsp;дать&nbsp;неясной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  B   E7       Am </span>
-<span class="txt"> в&nbsp;слепых&nbsp;ещё&nbsp;лучах,&nbsp;при&nbsp;первом&nbsp;робком&nbsp;блеске&nbsp;дня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7  A </span>
-<span class="txt"> Не&nbsp;знаю,&nbsp;мрамор&nbsp;как,&nbsp;остыл&nbsp;ли&nbsp;впрок,&nbsp;готов&nbsp;ли&nbsp;к&nbsp;зною;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span>
-<span class="txt"> здоровы&nbsp;ль&nbsp;бургомистр,&nbsp;его&nbsp;мадам&nbsp;и&nbsp;иже&nbsp;с&nbsp;нею...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span>
-<span class="txt"> Что&nbsp;граждане,&nbsp;спокойно&nbsp;ль&nbsp;спят,&nbsp;тем&nbsp;более&nbsp;не&nbsp;знаю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Eb7 A7       Dm </span>
-<span class="txt"> Но&nbsp;знаю,&nbsp;что&nbsp;один&nbsp;из&nbsp;них&nbsp;от&nbsp;сна&nbsp;уже&nbsp;восстал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  E7       A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Один&nbsp;из&nbsp;них&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span>
-<span class="txt"> уже&nbsp;восстал&nbsp;-&nbsp;и&nbsp;прочь&nbsp;от&nbsp;прочих,&nbsp;кои&nbsp;спать&nbsp;горазды&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       F+7-5/E  E </span>
-<span class="txt"> (за&nbsp;что&nbsp;и&nbsp;шлют&nbsp;их,&nbsp;кстати,&nbsp;сплошь&nbsp;на&nbsp;форумы&nbsp;и&nbsp;съезды),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         F+7-5/E  E </span>
-<span class="txt"> идёт&nbsp;он,&nbsp;бодр,&nbsp;хотя&nbsp;почти&nbsp;всю&nbsp;ночь&nbsp;смотрел&nbsp;на&nbsp;звезды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  B   E7       Am </span>
-<span class="txt"> В&nbsp;руках&nbsp;перед&nbsp;собой&nbsp;несёт&nbsp;словарь&nbsp;заморских&nbsp;слов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7  A </span>
-<span class="txt"> Не&nbsp;знаю,&nbsp;как&nbsp;там&nbsp;лет&nbsp;гам,&nbsp;как&nbsp;лет&nbsp;гам&nbsp;там,&nbsp;как&nbsp;там&nbsp;Гамлет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span>
-<span class="txt"> схватился&nbsp;ль&nbsp;за&nbsp;кинжал&nbsp;иль&nbsp;до&nbsp;сих&nbsp;пор&nbsp;в&nbsp;сомненьях&nbsp;дремлет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span>
-<span class="txt"> Не&nbsp;каждый&nbsp;внемлет&nbsp;призракам.&nbsp;Но&nbsp;кто&nbsp;уж&nbsp;точно&nbsp;внемлет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Eb7 A7       Dm </span>
-<span class="txt"> так&nbsp;это&nbsp;наш&nbsp;знаток&nbsp;заморских&nbsp;слов,&nbsp;сомнений&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  E7       A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сомнений&nbsp;нет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span>
-<span class="txt"> близки&nbsp;ему&nbsp;и&nbsp;замок&nbsp;Эльсинор,&nbsp;и&nbsp;остров&nbsp;Родос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       F+7-5/E  E </span>
-<span class="txt"> Он&nbsp;чует&nbsp;сдвиг&nbsp;эклиптик&nbsp;в&nbsp;должный&nbsp;час&nbsp;на&nbsp;должный&nbsp;градус.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         F+7-5/E  E </span>
-<span class="txt"> В&nbsp;вещах&nbsp;он&nbsp;ценит&nbsp;атрибут,&nbsp;но&nbsp;также&nbsp;чтит&nbsp;и&nbsp;модус.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  B   E7       Am </span>
-<span class="txt"> Сенатор-мавр&nbsp;и&nbsp;люмпен-скиф&nbsp;равно&nbsp;родня&nbsp;ему.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7  A </span>
-<span class="txt"> Маршрут&nbsp;его&nbsp;ведёт&nbsp;меж&nbsp;тем&nbsp;к&nbsp;реке&nbsp;или&nbsp;к&nbsp;карьеру,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span>
-<span class="txt"> где&nbsp;транспортное&nbsp;средство&nbsp;ждёт&nbsp;его&nbsp;об&nbsp;эту&nbsp;пору.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span>
-<span class="txt"> И&nbsp;вот,&nbsp;наивный&nbsp;как&nbsp;ботва,&nbsp;задумчивый&nbsp;как&nbsp;гуру,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Eb7 A7       Dm </span>
-<span class="txt"> в&nbsp;кабину&nbsp;он&nbsp;словарь&nbsp;кладёт&nbsp;и&nbsp;следом&nbsp;лезет&nbsp;сам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  E7       A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;лезет&nbsp;сам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span>
-<span class="txt"> Кабина&nbsp;сто&nbsp;очков&nbsp;иному&nbsp;крову&nbsp;даст&nbsp;по&nbsp;праву:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       F+7-5/E  E </span>
-<span class="txt"> по&nbsp;леву&nbsp;руку&nbsp;левый&nbsp;борт&nbsp;и&nbsp;правый&nbsp;борт&nbsp;по&nbsp;праву,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         F+7-5/E  E </span>
-<span class="txt"> а&nbsp;в&nbsp;центре&nbsp;на&nbsp;стекле&nbsp;портрет&nbsp;весьма&nbsp;раздетой&nbsp;фрау.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  B   E7       Am </span>
-<span class="txt"> Ценитель&nbsp;слов&nbsp;ничуть&nbsp;не&nbsp;чужд&nbsp;подкожных&nbsp;нежных&nbsp;чувств.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7  A </span>
-<span class="txt"> Не&nbsp;знаю,&nbsp;как&nbsp;там&nbsp;люмпен,&nbsp;взят&nbsp;ли&nbsp;в&nbsp;рай,&nbsp;внедрён&nbsp;ли&nbsp;в&nbsp;Хаос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span>
-<span class="txt"> Не&nbsp;смыслю&nbsp;корректив,&nbsp;какие&nbsp;в&nbsp;этнос&nbsp;вносит&nbsp;Эрос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span>
-<span class="txt"> Но&nbsp;знаю,&nbsp;что,&nbsp;чуть&nbsp;в&nbsp;небо&nbsp;ткнёт&nbsp;перстом&nbsp;пурпурным&nbsp;Эос,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Eb7 A7       Dm </span>
-<span class="txt"> уже&nbsp;знаток&nbsp;вокабул&nbsp;-&nbsp;у&nbsp;руля,&nbsp;прошу&nbsp;взглянуть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  E7       A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Прошу&nbsp;взглянуть:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span>
-<span class="txt"> не&nbsp;в&nbsp;лодке&nbsp;рыбнадзорной&nbsp;режет&nbsp;он&nbsp;камыш,&nbsp;и&nbsp;груз&nbsp;его&nbsp;-&nbsp;не&nbsp;почта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       F+7-5/E  E </span>
-<span class="txt"> Открытый&nbsp;океан&nbsp;пред&nbsp;ним,&nbsp;и&nbsp;криминальное&nbsp;таится&nbsp;в&nbsp;трюме&nbsp;нечто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         F+7-5/E  E </span>
-<span class="txt"> И&nbsp;ватерполоса&nbsp;какого&nbsp;хочешь&nbsp;цвета,&nbsp;и&nbsp;какая&nbsp;хочешь&nbsp;мачта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  B   E7       Am </span>
-<span class="txt"> Буссоль,&nbsp;секстан,&nbsp;квадрант,&nbsp;бом-брам-рей-грот-шкот&nbsp;-&nbsp;всё&nbsp;при&nbsp;нём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7  A </span>
-<span class="txt"> Не&nbsp;грунт&nbsp;ровняет&nbsp;он,&nbsp;трясясь&nbsp;в&nbsp;машине&nbsp;типа&nbsp;грейдер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span>
-<span class="txt"> В&nbsp;ландо&nbsp;без&nbsp;верха&nbsp;давит&nbsp;он&nbsp;на&nbsp;газ,&nbsp;как&nbsp;easy&nbsp;rider.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span>
-<span class="txt"> И&nbsp;мчатся&nbsp;с&nbsp;ним&nbsp;в&nbsp;ландо&nbsp;Брижит&nbsp;Бардо&nbsp;и&nbsp;Роми&nbsp;Шнайдер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Eb7 A7       Dm </span>
-<span class="txt"> Когда&nbsp;мотор&nbsp;заглохнет...&nbsp;впрочем,&nbsp;нет!&nbsp;такого&nbsp;я&nbsp;вообразить&nbsp;не&nbsp;в&nbsp;силах. </span><span class="ch"> Am  Dm  E7       A </span>
+<span class="line"><span class="txt"> Не&nbsp;знаю,&nbsp;как&nbsp;там&nbsp;ландыш,&nbsp;засверкал&nbsp;ли&nbsp;рябью&nbsp;росной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       F+7-5/E  E </span></span>
+<span class="line"><span class="txt"> Не&nbsp;знаю,&nbsp;как&nbsp;там&nbsp;Веспер,&nbsp;весь&nbsp;ли&nbsp;высью&nbsp;смыт&nbsp;небесной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         F+7-5/E  E </span></span>
+<span class="line"><span class="txt"> Картину&nbsp;дня,&nbsp;сдаётся&nbsp;мне,&nbsp;придётся&nbsp;дать&nbsp;неясной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  B   E7       Am </span></span>
+<span class="line"><span class="txt"> в&nbsp;слепых&nbsp;ещё&nbsp;лучах,&nbsp;при&nbsp;первом&nbsp;робком&nbsp;блеске&nbsp;дня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7  A </span></span>
+<span class="line"><span class="txt"> Не&nbsp;знаю,&nbsp;мрамор&nbsp;как,&nbsp;остыл&nbsp;ли&nbsp;впрок,&nbsp;готов&nbsp;ли&nbsp;к&nbsp;зною;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span></span>
+<span class="line"><span class="txt"> здоровы&nbsp;ль&nbsp;бургомистр,&nbsp;его&nbsp;мадам&nbsp;и&nbsp;иже&nbsp;с&nbsp;нею...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span></span>
+<span class="line"><span class="txt"> Что&nbsp;граждане,&nbsp;спокойно&nbsp;ль&nbsp;спят,&nbsp;тем&nbsp;более&nbsp;не&nbsp;знаю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Eb7 A7       Dm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;знаю,&nbsp;что&nbsp;один&nbsp;из&nbsp;них&nbsp;от&nbsp;сна&nbsp;уже&nbsp;восстал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  E7       A </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Один&nbsp;из&nbsp;них&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span></span>
+<span class="line"><span class="txt"> уже&nbsp;восстал&nbsp;-&nbsp;и&nbsp;прочь&nbsp;от&nbsp;прочих,&nbsp;кои&nbsp;спать&nbsp;горазды&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       F+7-5/E  E </span></span>
+<span class="line"><span class="txt"> (за&nbsp;что&nbsp;и&nbsp;шлют&nbsp;их,&nbsp;кстати,&nbsp;сплошь&nbsp;на&nbsp;форумы&nbsp;и&nbsp;съезды),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         F+7-5/E  E </span></span>
+<span class="line"><span class="txt"> идёт&nbsp;он,&nbsp;бодр,&nbsp;хотя&nbsp;почти&nbsp;всю&nbsp;ночь&nbsp;смотрел&nbsp;на&nbsp;звезды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  B   E7       Am </span></span>
+<span class="line"><span class="txt"> В&nbsp;руках&nbsp;перед&nbsp;собой&nbsp;несёт&nbsp;словарь&nbsp;заморских&nbsp;слов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7  A </span></span>
+<span class="line"><span class="txt"> Не&nbsp;знаю,&nbsp;как&nbsp;там&nbsp;лет&nbsp;гам,&nbsp;как&nbsp;лет&nbsp;гам&nbsp;там,&nbsp;как&nbsp;там&nbsp;Гамлет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span></span>
+<span class="line"><span class="txt"> схватился&nbsp;ль&nbsp;за&nbsp;кинжал&nbsp;иль&nbsp;до&nbsp;сих&nbsp;пор&nbsp;в&nbsp;сомненьях&nbsp;дремлет?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span></span>
+<span class="line"><span class="txt"> Не&nbsp;каждый&nbsp;внемлет&nbsp;призракам.&nbsp;Но&nbsp;кто&nbsp;уж&nbsp;точно&nbsp;внемлет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Eb7 A7       Dm </span></span>
+<span class="line"><span class="txt"> так&nbsp;это&nbsp;наш&nbsp;знаток&nbsp;заморских&nbsp;слов,&nbsp;сомнений&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  E7       A </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сомнений&nbsp;нет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span></span>
+<span class="line"><span class="txt"> близки&nbsp;ему&nbsp;и&nbsp;замок&nbsp;Эльсинор,&nbsp;и&nbsp;остров&nbsp;Родос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       F+7-5/E  E </span></span>
+<span class="line"><span class="txt"> Он&nbsp;чует&nbsp;сдвиг&nbsp;эклиптик&nbsp;в&nbsp;должный&nbsp;час&nbsp;на&nbsp;должный&nbsp;градус.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         F+7-5/E  E </span></span>
+<span class="line"><span class="txt"> В&nbsp;вещах&nbsp;он&nbsp;ценит&nbsp;атрибут,&nbsp;но&nbsp;также&nbsp;чтит&nbsp;и&nbsp;модус.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  B   E7       Am </span></span>
+<span class="line"><span class="txt"> Сенатор-мавр&nbsp;и&nbsp;люмпен-скиф&nbsp;равно&nbsp;родня&nbsp;ему.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7  A </span></span>
+<span class="line"><span class="txt"> Маршрут&nbsp;его&nbsp;ведёт&nbsp;меж&nbsp;тем&nbsp;к&nbsp;реке&nbsp;или&nbsp;к&nbsp;карьеру,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span></span>
+<span class="line"><span class="txt"> где&nbsp;транспортное&nbsp;средство&nbsp;ждёт&nbsp;его&nbsp;об&nbsp;эту&nbsp;пору.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span></span>
+<span class="line"><span class="txt"> И&nbsp;вот,&nbsp;наивный&nbsp;как&nbsp;ботва,&nbsp;задумчивый&nbsp;как&nbsp;гуру,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Eb7 A7       Dm </span></span>
+<span class="line"><span class="txt"> в&nbsp;кабину&nbsp;он&nbsp;словарь&nbsp;кладёт&nbsp;и&nbsp;следом&nbsp;лезет&nbsp;сам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  E7       A </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;лезет&nbsp;сам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span></span>
+<span class="line"><span class="txt"> Кабина&nbsp;сто&nbsp;очков&nbsp;иному&nbsp;крову&nbsp;даст&nbsp;по&nbsp;праву:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       F+7-5/E  E </span></span>
+<span class="line"><span class="txt"> по&nbsp;леву&nbsp;руку&nbsp;левый&nbsp;борт&nbsp;и&nbsp;правый&nbsp;борт&nbsp;по&nbsp;праву,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         F+7-5/E  E </span></span>
+<span class="line"><span class="txt"> а&nbsp;в&nbsp;центре&nbsp;на&nbsp;стекле&nbsp;портрет&nbsp;весьма&nbsp;раздетой&nbsp;фрау.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  B   E7       Am </span></span>
+<span class="line"><span class="txt"> Ценитель&nbsp;слов&nbsp;ничуть&nbsp;не&nbsp;чужд&nbsp;подкожных&nbsp;нежных&nbsp;чувств.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7  A </span></span>
+<span class="line"><span class="txt"> Не&nbsp;знаю,&nbsp;как&nbsp;там&nbsp;люмпен,&nbsp;взят&nbsp;ли&nbsp;в&nbsp;рай,&nbsp;внедрён&nbsp;ли&nbsp;в&nbsp;Хаос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span></span>
+<span class="line"><span class="txt"> Не&nbsp;смыслю&nbsp;корректив,&nbsp;какие&nbsp;в&nbsp;этнос&nbsp;вносит&nbsp;Эрос.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span></span>
+<span class="line"><span class="txt"> Но&nbsp;знаю,&nbsp;что,&nbsp;чуть&nbsp;в&nbsp;небо&nbsp;ткнёт&nbsp;перстом&nbsp;пурпурным&nbsp;Эос,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Eb7 A7       Dm </span></span>
+<span class="line"><span class="txt"> уже&nbsp;знаток&nbsp;вокабул&nbsp;-&nbsp;у&nbsp;руля,&nbsp;прошу&nbsp;взглянуть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  E7       A </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Прошу&nbsp;взглянуть:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span></span>
+<span class="line"><span class="txt"> не&nbsp;в&nbsp;лодке&nbsp;рыбнадзорной&nbsp;режет&nbsp;он&nbsp;камыш,&nbsp;и&nbsp;груз&nbsp;его&nbsp;-&nbsp;не&nbsp;почта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       F+7-5/E  E </span></span>
+<span class="line"><span class="txt"> Открытый&nbsp;океан&nbsp;пред&nbsp;ним,&nbsp;и&nbsp;криминальное&nbsp;таится&nbsp;в&nbsp;трюме&nbsp;нечто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         F+7-5/E  E </span></span>
+<span class="line"><span class="txt"> И&nbsp;ватерполоса&nbsp;какого&nbsp;хочешь&nbsp;цвета,&nbsp;и&nbsp;какая&nbsp;хочешь&nbsp;мачта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  B   E7       Am </span></span>
+<span class="line"><span class="txt"> Буссоль,&nbsp;секстан,&nbsp;квадрант,&nbsp;бом-брам-рей-грот-шкот&nbsp;-&nbsp;всё&nbsp;при&nbsp;нём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7  A </span></span>
+<span class="line"><span class="txt"> Не&nbsp;грунт&nbsp;ровняет&nbsp;он,&nbsp;трясясь&nbsp;в&nbsp;машине&nbsp;типа&nbsp;грейдер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span></span>
+<span class="line"><span class="txt"> В&nbsp;ландо&nbsp;без&nbsp;верха&nbsp;давит&nbsp;он&nbsp;на&nbsp;газ,&nbsp;как&nbsp;easy&nbsp;rider.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B       A </span></span>
+<span class="line"><span class="txt"> И&nbsp;мчатся&nbsp;с&nbsp;ним&nbsp;в&nbsp;ландо&nbsp;Брижит&nbsp;Бардо&nbsp;и&nbsp;Роми&nbsp;Шнайдер.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Eb7 A7       Dm </span></span>
+<span class="line"><span class="txt"> Когда&nbsp;мотор&nbsp;заглохнет...&nbsp;впрочем,&nbsp;нет!&nbsp;такого&nbsp;я&nbsp;вообразить&nbsp;не&nbsp;в&nbsp;силах. </span><span class="ch"> Am  Dm  E7       A </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1995</span>
-
+<pre><span class="year">1995</span>
 </pre>
+
 
                 </div>
         </div>

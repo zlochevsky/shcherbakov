@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,62 +423,59 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">БЕЛЫЙ БЕРЕГ</span>
+data-key="Em"><h1>БЕЛЫЙ БЕРЕГ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Был&nbsp;берег&nbsp;бел&nbsp;как&nbsp;снег.&nbsp;Не&nbsp;зря&nbsp;из&nbsp;века&nbsp;в&nbsp;век&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     G </span>
-<span class="txt"> белил&nbsp;его&nbsp;и&nbsp;чистил&nbsp;альпийских&nbsp;вод&nbsp;разбег.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  E </span>
-<span class="txt"> На&nbsp;то,&nbsp;как&nbsp;берег&nbsp;бел,&nbsp;со&nbsp;склона&nbsp;сад&nbsp;смотрел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  G#m E   Am </span>
-<span class="txt"> В&nbsp;саду&nbsp;был&nbsp;дом,&nbsp;а&nbsp;в&nbsp;доме,&nbsp;дымясь,&nbsp;камин&nbsp;горел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  C  Am </span>
-<span class="txt"> В&nbsp;саду&nbsp;был&nbsp;дом,&nbsp;а&nbsp;в&nbsp;доме,&nbsp;дымясь,&nbsp;камин&nbsp;горел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7  Am  Em H7 Em </span>
+<span class="line"><span class="txt"> Был&nbsp;берег&nbsp;бел&nbsp;как&nbsp;снег.&nbsp;Не&nbsp;зря&nbsp;из&nbsp;века&nbsp;в&nbsp;век&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     G </span></span>
+<span class="line"><span class="txt"> белил&nbsp;его&nbsp;и&nbsp;чистил&nbsp;альпийских&nbsp;вод&nbsp;разбег.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  E </span></span>
+<span class="line"><span class="txt"> На&nbsp;то,&nbsp;как&nbsp;берег&nbsp;бел,&nbsp;со&nbsp;склона&nbsp;сад&nbsp;смотрел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  G#m E   Am </span></span>
+<span class="line"><span class="txt"> В&nbsp;саду&nbsp;был&nbsp;дом,&nbsp;а&nbsp;в&nbsp;доме,&nbsp;дымясь,&nbsp;камин&nbsp;горел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  C  Am </span></span>
+<span class="line"><span class="txt"> В&nbsp;саду&nbsp;был&nbsp;дом,&nbsp;а&nbsp;в&nbsp;доме,&nbsp;дымясь,&nbsp;камин&nbsp;горел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7  Am  Em H7 Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Дверной&nbsp;скрипел&nbsp;навес.&nbsp;И&nbsp;сад&nbsp;шумел&nbsp;как&nbsp;лес,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     G </span>
-<span class="txt"> пока&nbsp;закат&nbsp;струился&nbsp;-&nbsp;с&nbsp;вершин,&nbsp;с&nbsp;высот,&nbsp;с&nbsp;небес.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  E </span>
-<span class="txt"> По&nbsp;склону&nbsp;мгла&nbsp;текла.&nbsp;И&nbsp;ты&nbsp;туда,&nbsp;где&nbsp;мгла,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  G#m E   Am </span>
-<span class="txt"> холодными&nbsp;руками&nbsp;с&nbsp;собой&nbsp;меня&nbsp;влекла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  C  Am </span>
-<span class="txt"> Холодными&nbsp;руками&nbsp;с&nbsp;собой&nbsp;меня&nbsp;влекла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7  Am  Em H7 Em </span>
+<span class="line"><span class="txt"> Дверной&nbsp;скрипел&nbsp;навес.&nbsp;И&nbsp;сад&nbsp;шумел&nbsp;как&nbsp;лес,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     G </span></span>
+<span class="line"><span class="txt"> пока&nbsp;закат&nbsp;струился&nbsp;-&nbsp;с&nbsp;вершин,&nbsp;с&nbsp;высот,&nbsp;с&nbsp;небес.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  E </span></span>
+<span class="line"><span class="txt"> По&nbsp;склону&nbsp;мгла&nbsp;текла.&nbsp;И&nbsp;ты&nbsp;туда,&nbsp;где&nbsp;мгла,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  G#m E   Am </span></span>
+<span class="line"><span class="txt"> холодными&nbsp;руками&nbsp;с&nbsp;собой&nbsp;меня&nbsp;влекла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  C  Am </span></span>
+<span class="line"><span class="txt"> Холодными&nbsp;руками&nbsp;с&nbsp;собой&nbsp;меня&nbsp;влекла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7  Am  Em H7 Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Потом&nbsp;опять&nbsp;высок&nbsp;и&nbsp;ясен&nbsp;был&nbsp;восток.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     G </span>
-<span class="txt"> Опять&nbsp;прилив&nbsp;был&nbsp;звонок,&nbsp;опять&nbsp;певуч&nbsp;песок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  E </span>
-<span class="txt"> И&nbsp;все&nbsp;цветы&nbsp;земли,&nbsp;глаза&nbsp;раскрыв,&nbsp;цвели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  G#m E   Am </span>
-<span class="txt"> И&nbsp;Франция&nbsp;сияла&nbsp;за&nbsp;озером&nbsp;вдали.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  C  Am </span>
-<span class="txt"> И&nbsp;Франция&nbsp;сияла&nbsp;за&nbsp;озером&nbsp;вдали.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7  Am  Em H7 Em </span>
+<span class="line"><span class="txt"> Потом&nbsp;опять&nbsp;высок&nbsp;и&nbsp;ясен&nbsp;был&nbsp;восток.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     G </span></span>
+<span class="line"><span class="txt"> Опять&nbsp;прилив&nbsp;был&nbsp;звонок,&nbsp;опять&nbsp;певуч&nbsp;песок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  E </span></span>
+<span class="line"><span class="txt"> И&nbsp;все&nbsp;цветы&nbsp;земли,&nbsp;глаза&nbsp;раскрыв,&nbsp;цвели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  G#m E   Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;Франция&nbsp;сияла&nbsp;за&nbsp;озером&nbsp;вдали.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  C  Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;Франция&nbsp;сияла&nbsp;за&nbsp;озером&nbsp;вдали.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7  Am  Em H7 Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;гомон&nbsp;птичьих&nbsp;стай&nbsp;и&nbsp;вздохи&nbsp;волн&nbsp;меж&nbsp;свай&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     G </span>
-<span class="txt"> звучали&nbsp;так,&nbsp;как&nbsp;будто&nbsp;внушали&nbsp;мне:&nbsp;"Прощай!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  E </span>
-<span class="txt"> И&nbsp;берег,&nbsp;бел&nbsp;как&nbsp;мел,&nbsp;"прощай,&nbsp;прощай!"&nbsp;мне&nbsp;пел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  G#m E   Am </span>
-<span class="txt"> И&nbsp;ветер&nbsp;выл&nbsp;о&nbsp;том&nbsp;же,&nbsp;и&nbsp;тёмный&nbsp;сад&nbsp;шумел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  C  Am </span>
-<span class="txt"> И&nbsp;ветер&nbsp;выл&nbsp;о&nbsp;том&nbsp;же,&nbsp;и&nbsp;тёмный&nbsp;сад&nbsp;шумел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7  Am  Em H7 Em </span>
+<span class="line"><span class="txt"> Но&nbsp;гомон&nbsp;птичьих&nbsp;стай&nbsp;и&nbsp;вздохи&nbsp;волн&nbsp;меж&nbsp;свай&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     G </span></span>
+<span class="line"><span class="txt"> звучали&nbsp;так,&nbsp;как&nbsp;будто&nbsp;внушали&nbsp;мне:&nbsp;"Прощай!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  E </span></span>
+<span class="line"><span class="txt"> И&nbsp;берег,&nbsp;бел&nbsp;как&nbsp;мел,&nbsp;"прощай,&nbsp;прощай!"&nbsp;мне&nbsp;пел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  G#m E   Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;ветер&nbsp;выл&nbsp;о&nbsp;том&nbsp;же,&nbsp;и&nbsp;тёмный&nbsp;сад&nbsp;шумел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  C  Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;ветер&nbsp;выл&nbsp;о&nbsp;том&nbsp;же,&nbsp;и&nbsp;тёмный&nbsp;сад&nbsp;шумел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7  Am  Em H7 Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пришлось&nbsp;очнуться&nbsp;мне&nbsp;и&nbsp;прочь&nbsp;отплыть&nbsp;в&nbsp;челне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     G </span>
-<span class="txt"> Я&nbsp;плыл&nbsp;и&nbsp;жизнь&nbsp;другую&nbsp;задумывал&nbsp;вчерне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  E </span>
-<span class="txt"> Свежо&nbsp;дышал&nbsp;зенит.&nbsp;И&nbsp;дочиста&nbsp;отмыт&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  G#m E   Am </span>
-<span class="txt"> был&nbsp;берег&nbsp;тот,&nbsp;где&nbsp;ныне&nbsp;я&nbsp;начисто&nbsp;забыт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  C  Am </span>
+<span class="line"><span class="txt"> Пришлось&nbsp;очнуться&nbsp;мне&nbsp;и&nbsp;прочь&nbsp;отплыть&nbsp;в&nbsp;челне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     G </span></span>
+<span class="line"><span class="txt"> Я&nbsp;плыл&nbsp;и&nbsp;жизнь&nbsp;другую&nbsp;задумывал&nbsp;вчерне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  E </span></span>
+<span class="line"><span class="txt"> Свежо&nbsp;дышал&nbsp;зенит.&nbsp;И&nbsp;дочиста&nbsp;отмыт&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  G#m E   Am </span></span>
+<span class="line"><span class="txt"> был&nbsp;берег&nbsp;тот,&nbsp;где&nbsp;ныне&nbsp;я&nbsp;начисто&nbsp;забыт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  C  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;где&nbsp;огонь&nbsp;в&nbsp;камине&nbsp;моргает&nbsp;и&nbsp;дымит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7  Am  Em H7 C </span>
-<span class="txt"> И&nbsp;сад&nbsp;шумит,&nbsp;шумит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  Em </span>
+<span class="line"><span class="txt"> И&nbsp;где&nbsp;огонь&nbsp;в&nbsp;камине&nbsp;моргает&nbsp;и&nbsp;дымит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em E7  Am  Em H7 C </span></span>
+<span class="line"><span class="txt"> И&nbsp;сад&nbsp;шумит,&nbsp;шумит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  H7  Em </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2002</span>
-
+<pre><span class="year">2002</span>
 
 </pre>
+
 
                 </div>
         </div>

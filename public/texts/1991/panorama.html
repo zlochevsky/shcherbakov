@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,70 +423,67 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ПАНОРАМА</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm Am F  E </span>
-<span class="txt"> Первым&nbsp;номером&nbsp;будешь,&nbsp;скорей&nbsp;всего,&nbsp;ты.&nbsp;То&nbsp;есть&nbsp;некогда&nbsp;звонкий&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;кутила,&nbsp;разбойник&nbsp;и&nbsp;друг&nbsp;дорогой.&nbsp;А&nbsp;теперь&nbsp;-&nbsp;незнакомец&nbsp;брадатый.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  Am E </span>
-<span class="txt"> Ты&nbsp;зачем-то&nbsp;мне&nbsp;нужен&nbsp;-&nbsp;как&nbsp;часть&nbsp;панорамы,&nbsp;пятно,&nbsp;силуэт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> без&nbsp;фамилии,&nbsp;в&nbsp;профиль&nbsp;-&nbsp;ты&nbsp;всё&nbsp;же&nbsp;мне&nbsp;важен&nbsp;не&nbsp;меньше,&nbsp;чем&nbsp;номер&nbsp;второй.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  A </span>
+data-key="Am"><h1>ПАНОРАМА</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm Am F  E </span></span>
+<span class="line"><span class="txt"> Первым&nbsp;номером&nbsp;будешь,&nbsp;скорей&nbsp;всего,&nbsp;ты.&nbsp;То&nbsp;есть&nbsp;некогда&nbsp;звонкий&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;кутила,&nbsp;разбойник&nbsp;и&nbsp;друг&nbsp;дорогой.&nbsp;А&nbsp;теперь&nbsp;-&nbsp;незнакомец&nbsp;брадатый.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  Am E </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;зачем-то&nbsp;мне&nbsp;нужен&nbsp;-&nbsp;как&nbsp;часть&nbsp;панорамы,&nbsp;пятно,&nbsp;силуэт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> без&nbsp;фамилии,&nbsp;в&nbsp;профиль&nbsp;-&nbsp;ты&nbsp;всё&nbsp;же&nbsp;мне&nbsp;важен&nbsp;не&nbsp;меньше,&nbsp;чем&nbsp;номер&nbsp;второй.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Номером&nbsp;вторым&nbsp;побудет&nbsp;дама&nbsp;средних&nbsp;лет.&nbsp;Не&nbsp;из&nbsp;разряда&nbsp;примадонн.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;прошлом&nbsp;аспирантка,&nbsp;полубарышня,&nbsp;из&nbsp;этих,&nbsp;знаешь,&nbsp;коих&nbsp;легион,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  F  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;кои&nbsp;вразумительно&nbsp;целуются&nbsp;и&nbsp;плачут,&nbsp;но&nbsp;почти&nbsp;не&nbsp;говорят,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  Fm Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;сызмальства&nbsp;готовятся&nbsp;в&nbsp;балет,&nbsp;но&nbsp;поступают&nbsp;на&nbsp;мехмат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Ab G  C  E </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Номером&nbsp;вторым&nbsp;побудет&nbsp;дама&nbsp;средних&nbsp;лет.&nbsp;Не&nbsp;из&nbsp;разряда&nbsp;примадонн.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;прошлом&nbsp;аспирантка,&nbsp;полубарышня,&nbsp;из&nbsp;этих,&nbsp;знаешь,&nbsp;коих&nbsp;легион,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  F  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;кои&nbsp;вразумительно&nbsp;целуются&nbsp;и&nbsp;плачут,&nbsp;но&nbsp;почти&nbsp;не&nbsp;говорят,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  Fm Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;сызмальства&nbsp;готовятся&nbsp;в&nbsp;балет,&nbsp;но&nbsp;поступают&nbsp;на&nbsp;мехмат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Ab G  C  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Третьим&nbsp;номером,&nbsp;видимо,&nbsp;буду&nbsp;я&nbsp;сам.&nbsp;То&nbsp;есть&nbsp;бывший&nbsp;герой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мореплаватель,&nbsp;плотник&nbsp;и&nbsp;прочее.&nbsp;Только&nbsp;не&nbsp;член&nbsp;никаких&nbsp;академий.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  Am E </span>
-<span class="txt"> Без&nbsp;меня&nbsp;панораме&nbsp;не&nbsp;быть,&nbsp;как&nbsp;не&nbsp;быть&nbsp;их&nbsp;без&nbsp;многих&nbsp;ещё&nbsp;номеров,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> различимых&nbsp;слабее,&nbsp;и&nbsp;даже&nbsp;не&nbsp;названных&nbsp;в&nbsp;этой&nbsp;связи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  A </span>
+<span class="line"><span class="txt"> Третьим&nbsp;номером,&nbsp;видимо,&nbsp;буду&nbsp;я&nbsp;сам.&nbsp;То&nbsp;есть&nbsp;бывший&nbsp;герой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мореплаватель,&nbsp;плотник&nbsp;и&nbsp;прочее.&nbsp;Только&nbsp;не&nbsp;член&nbsp;никаких&nbsp;академий.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  Am E </span></span>
+<span class="line"><span class="txt"> Без&nbsp;меня&nbsp;панораме&nbsp;не&nbsp;быть,&nbsp;как&nbsp;не&nbsp;быть&nbsp;их&nbsp;без&nbsp;многих&nbsp;ещё&nbsp;номеров,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> различимых&nbsp;слабее,&nbsp;и&nbsp;даже&nbsp;не&nbsp;названных&nbsp;в&nbsp;этой&nbsp;связи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всех&nbsp;не&nbsp;нарисуешь,&nbsp;да&nbsp;и&nbsp;незачем,&nbsp;достаточно&nbsp;отметки&nbsp;на&nbsp;шкале.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Пепел&nbsp;подтверждает&nbsp;силу&nbsp;пламени,&nbsp;но&nbsp;пламя&nbsp;не&nbsp;нуждается&nbsp;в&nbsp;золе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  F  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Живопись&nbsp;питается&nbsp;деталью,&nbsp;но&nbsp;моя&nbsp;задача&nbsp;-&nbsp;жертвуя&nbsp;мазком,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  Fm Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;выиграть&nbsp;во&nbsp;времени.&nbsp;А&nbsp;время&nbsp;не&nbsp;нуждается&nbsp;ни&nbsp;в&nbsp;ком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Ab G  C  E </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всех&nbsp;не&nbsp;нарисуешь,&nbsp;да&nbsp;и&nbsp;незачем,&nbsp;достаточно&nbsp;отметки&nbsp;на&nbsp;шкале.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Пепел&nbsp;подтверждает&nbsp;силу&nbsp;пламени,&nbsp;но&nbsp;пламя&nbsp;не&nbsp;нуждается&nbsp;в&nbsp;золе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  F  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Живопись&nbsp;питается&nbsp;деталью,&nbsp;но&nbsp;моя&nbsp;задача&nbsp;-&nbsp;жертвуя&nbsp;мазком,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  Fm Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;выиграть&nbsp;во&nbsp;времени.&nbsp;А&nbsp;время&nbsp;не&nbsp;нуждается&nbsp;ни&nbsp;в&nbsp;ком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Ab G  C  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;поверишь,&nbsp;но&nbsp;с&nbsp;той&nbsp;сумасшедшей&nbsp;поры,&nbsp;когда&nbsp;всё&nbsp;ещё&nbsp;было&nbsp;другим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;сохранил&nbsp;я&nbsp;бутыль:&nbsp;сувенирный&nbsp;портвейн,&nbsp;не&nbsp;поверишь&nbsp;-&nbsp;"Массандра".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  Am E </span>
-<span class="txt"> Почему-то&nbsp;мне&nbsp;небезразличны&nbsp;зелёное&nbsp;это&nbsp;стекло&nbsp;и&nbsp;напиток&nbsp;внутри,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> непроглядный,&nbsp;прости&nbsp;за&nbsp;банальность,&nbsp;как&nbsp;полночь&nbsp;в&nbsp;Крыму.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  A </span>
+<span class="line"><span class="txt"> Не&nbsp;поверишь,&nbsp;но&nbsp;с&nbsp;той&nbsp;сумасшедшей&nbsp;поры,&nbsp;когда&nbsp;всё&nbsp;ещё&nbsp;было&nbsp;другим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;сохранил&nbsp;я&nbsp;бутыль:&nbsp;сувенирный&nbsp;портвейн,&nbsp;не&nbsp;поверишь&nbsp;-&nbsp;"Массандра".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  Am E </span></span>
+<span class="line"><span class="txt"> Почему-то&nbsp;мне&nbsp;небезразличны&nbsp;зелёное&nbsp;это&nbsp;стекло&nbsp;и&nbsp;напиток&nbsp;внутри,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> непроглядный,&nbsp;прости&nbsp;за&nbsp;банальность,&nbsp;как&nbsp;полночь&nbsp;в&nbsp;Крыму.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  Dm B  A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Видимо,&nbsp;при&nbsp;нынешнем&nbsp;меню,&nbsp;в&nbsp;котором&nbsp;дёготь&nbsp;-&nbsp;обязательная&nbsp;снедь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;в&nbsp;новой&nbsp;топографии,&nbsp;где&nbsp;каждый&nbsp;перекрёсток&nbsp;приглашает&nbsp;умереть,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  F  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;те&nbsp;обломки&nbsp;прошлого,&nbsp;что&nbsp;вовремя&nbsp;не&nbsp;сгнили&nbsp;и&nbsp;не&nbsp;преданы&nbsp;огню,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  Fm Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;выглядят&nbsp;по-своему&nbsp;торжественно.&nbsp;К&nbsp;чему&nbsp;я&nbsp;и&nbsp;клоню.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Ab G  C  E </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Видимо,&nbsp;при&nbsp;нынешнем&nbsp;меню,&nbsp;в&nbsp;котором&nbsp;дёготь&nbsp;-&nbsp;обязательная&nbsp;снедь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;в&nbsp;новой&nbsp;топографии,&nbsp;где&nbsp;каждый&nbsp;перекрёсток&nbsp;приглашает&nbsp;умереть,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  F  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;те&nbsp;обломки&nbsp;прошлого,&nbsp;что&nbsp;вовремя&nbsp;не&nbsp;сгнили&nbsp;и&nbsp;не&nbsp;преданы&nbsp;огню,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  Fm Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;выглядят&nbsp;по-своему&nbsp;торжественно.&nbsp;К&nbsp;чему&nbsp;я&nbsp;и&nbsp;клоню.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Ab G  C  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;Давай,&nbsp;брат,&nbsp;умрём.&nbsp;Но&nbsp;сперва&nbsp;воспарим,&nbsp;как&nbsp;когда-то.&nbsp;Когда-то...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Am E </span>
-<span class="txt"> &nbsp;&nbsp;"Массандру"&nbsp;почнём.&nbsp;Пригласим&nbsp;аспирантку&nbsp;с&nbsp;мехмата.&nbsp;Кутнём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm A </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;Давай,&nbsp;брат,&nbsp;умрём.&nbsp;Но&nbsp;сперва&nbsp;воспарим,&nbsp;как&nbsp;когда-то.&nbsp;Когда-то...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm Am E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;"Массандру"&nbsp;почнём.&nbsp;Пригласим&nbsp;аспирантку&nbsp;с&nbsp;мехмата.&nbsp;Кутнём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стоит&nbsp;ли&nbsp;гадать,&nbsp;какими&nbsp;именно&nbsp;лучами&nbsp;озарит&nbsp;нас&nbsp;Божество?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё,&nbsp;что&nbsp;мы&nbsp;свершим&nbsp;и&nbsp;скажем,&nbsp;будет&nbsp;-&nbsp;для&nbsp;Него.&nbsp;Но&nbsp;без&nbsp;оглядки&nbsp;на&nbsp;Него.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  F  Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё,&nbsp;включая&nbsp;прихоти,&nbsp;ужимки&nbsp;и&nbsp;прыжки&nbsp;к&nbsp;седьмому&nbsp;небу&nbsp;без&nbsp;шеста,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  Fm Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;будем&nbsp;мы&nbsp;проделывать&nbsp;единственно&nbsp;во&nbsp;славу&nbsp;Божества.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Ab G  C  E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;Божества&nbsp;не&nbsp;замечая.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стоит&nbsp;ли&nbsp;гадать,&nbsp;какими&nbsp;именно&nbsp;лучами&nbsp;озарит&nbsp;нас&nbsp;Божество?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Dm Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё,&nbsp;что&nbsp;мы&nbsp;свершим&nbsp;и&nbsp;скажем,&nbsp;будет&nbsp;-&nbsp;для&nbsp;Него.&nbsp;Но&nbsp;без&nbsp;оглядки&nbsp;на&nbsp;Него.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  F  Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё,&nbsp;включая&nbsp;прихоти,&nbsp;ужимки&nbsp;и&nbsp;прыжки&nbsp;к&nbsp;седьмому&nbsp;небу&nbsp;без&nbsp;шеста,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  Fm Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;будем&nbsp;мы&nbsp;проделывать&nbsp;единственно&nbsp;во&nbsp;славу&nbsp;Божества.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Ab G  C  E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;Божества&nbsp;не&nbsp;замечая.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1991</span>
-
+<pre><span class="year">1991</span>
 
 </pre>
+
 
                 </div>
         </div>

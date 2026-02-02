@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,70 +423,68 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">АВСТРАЛИЯ</span>
+data-key="Hm"><h1>АВСТРАЛИЯ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мотор&nbsp;подъехал&nbsp;-&nbsp;чужеземный,&nbsp;фиолетовый&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span>
-<span class="txt"> я&nbsp;марку&nbsp;бы&nbsp;назвал,&nbsp;да&nbsp;забываю&nbsp;постоянно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span>
-<span class="txt"> В&nbsp;него&nbsp;шатенка&nbsp;голенастая&nbsp;уселась,&nbsp;дверью&nbsp;хлопнула&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span>
-<span class="txt"> и&nbsp;всё,&nbsp;и&nbsp;всё,&nbsp;и&nbsp;только&nbsp;брызги&nbsp;из-под&nbsp;колеса...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span>
-<span class="txt"> Странно!&nbsp;Вы&nbsp;как&nbsp;хотите,&nbsp;мне&nbsp;странно!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    H7 Em </span>
-<span class="txt"> Ведь&nbsp;я&nbsp;почти&nbsp;уже&nbsp;любил&nbsp;её&nbsp;за&nbsp;некоторый&nbsp;пафос&nbsp;очертаний,&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em6 Hm F#7 Hm </span>
-<span class="txt"> так&nbsp;сказать,&nbsp;и&nbsp;вообще&nbsp;за&nbsp;выражение&nbsp;лица.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F#7 H7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Em6 Hm F#7 Hm F#7 </span>
+<span class="line"><span class="txt"> Мотор&nbsp;подъехал&nbsp;-&nbsp;чужеземный,&nbsp;фиолетовый&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span></span>
+<span class="line"><span class="txt"> я&nbsp;марку&nbsp;бы&nbsp;назвал,&nbsp;да&nbsp;забываю&nbsp;постоянно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span></span>
+<span class="line"><span class="txt"> В&nbsp;него&nbsp;шатенка&nbsp;голенастая&nbsp;уселась,&nbsp;дверью&nbsp;хлопнула&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;всё,&nbsp;и&nbsp;всё,&nbsp;и&nbsp;только&nbsp;брызги&nbsp;из-под&nbsp;колеса...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span></span>
+<span class="line"><span class="txt"> Странно!&nbsp;Вы&nbsp;как&nbsp;хотите,&nbsp;мне&nbsp;странно!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    H7 Em </span></span>
+<span class="line"><span class="txt"> Ведь&nbsp;я&nbsp;почти&nbsp;уже&nbsp;любил&nbsp;её&nbsp;за&nbsp;некоторый&nbsp;пафос&nbsp;очертаний,&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em6 Hm F#7 Hm </span></span>
+<span class="line"><span class="txt"> так&nbsp;сказать,&nbsp;и&nbsp;вообще&nbsp;за&nbsp;выражение&nbsp;лица.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F#7 H7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Em6 Hm F#7 Hm F#7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> (Когда&nbsp;знакомишься&nbsp;на&nbsp;улице,&nbsp;тирады&nbsp;о&nbsp;погоде&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span>
-<span class="txt"> не&nbsp;проходят,&nbsp;устарели&nbsp;как&nbsp;идея.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span>
-<span class="txt"> Предпочитаю&nbsp;для&nbsp;начала&nbsp;выразительный&nbsp;какой-нибудь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span>
-<span class="txt"> вопрос&nbsp;философического&nbsp;свойства,&nbsp;например:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span>
-<span class="txt"> "Где&nbsp;я?&nbsp;Скажите,&nbsp;девушка,&nbsp;где&nbsp;я?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    H7 Em </span>
-<span class="txt"> На&nbsp;многих&nbsp;действует.&nbsp;А&nbsp;этой&nbsp;хоть&nbsp;бы&nbsp;что.&nbsp;Не&nbsp;удивилась,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em6 Hm F#7 Hm </span>
-<span class="txt"> как&nbsp;не&nbsp;удивился&nbsp;бы&nbsp;реаниматор&nbsp;или&nbsp;милиционер.)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F#7 H7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Em6 Hm F#7 Hm F#7 </span>
+<span class="line"><span class="txt"> (Когда&nbsp;знакомишься&nbsp;на&nbsp;улице,&nbsp;тирады&nbsp;о&nbsp;погоде&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span></span>
+<span class="line"><span class="txt"> не&nbsp;проходят,&nbsp;устарели&nbsp;как&nbsp;идея.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span></span>
+<span class="line"><span class="txt"> Предпочитаю&nbsp;для&nbsp;начала&nbsp;выразительный&nbsp;какой-нибудь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span></span>
+<span class="line"><span class="txt"> вопрос&nbsp;философического&nbsp;свойства,&nbsp;например:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span></span>
+<span class="line"><span class="txt"> "Где&nbsp;я?&nbsp;Скажите,&nbsp;девушка,&nbsp;где&nbsp;я?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    H7 Em </span></span>
+<span class="line"><span class="txt"> На&nbsp;многих&nbsp;действует.&nbsp;А&nbsp;этой&nbsp;хоть&nbsp;бы&nbsp;что.&nbsp;Не&nbsp;удивилась,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em6 Hm F#7 Hm </span></span>
+<span class="line"><span class="txt"> как&nbsp;не&nbsp;удивился&nbsp;бы&nbsp;реаниматор&nbsp;или&nbsp;милиционер.)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F#7 H7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Em6 Hm F#7 Hm F#7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Нет,&nbsp;я&nbsp;не&nbsp;жалуюсь,&nbsp;я&nbsp;в&nbsp;принципе&nbsp;привык&nbsp;бы&nbsp;и&nbsp;к&nbsp;тому,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span>
-<span class="txt"> что&nbsp;мир&nbsp;бывает&nbsp;невнимательным&nbsp;и&nbsp;чёрствым,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span>
-<span class="txt"> что&nbsp;благородным&nbsp;образцам&nbsp;он&nbsp;соответствует&nbsp;не&nbsp;шибко&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span>
-<span class="txt"> или&nbsp;требованьям&nbsp;высшим&nbsp;отвечает&nbsp;не&nbsp;вполне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span>
-<span class="txt"> Чёрт&nbsp;с&nbsp;ним!&nbsp;Не&nbsp;отвечает,&nbsp;и&nbsp;чёрт&nbsp;с&nbsp;ним!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    H7 Em </span>
-<span class="txt"> Но&nbsp;почему&nbsp;в&nbsp;таком&nbsp;количестве,&nbsp;во&nbsp;всяком&nbsp;переулке,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em6 Hm F#7 Hm </span>
-<span class="txt"> изначально,&nbsp;бесконечно&nbsp;-&nbsp;и&nbsp;как&nbsp;раз&nbsp;по&nbsp;отношению&nbsp;ко&nbsp;мне?&nbsp;&nbsp;&nbsp; </span><span class="ch">    F#7 H7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Em6 Hm F#7 Hm F#7 </span>
+<span class="line"><span class="txt"> Нет,&nbsp;я&nbsp;не&nbsp;жалуюсь,&nbsp;я&nbsp;в&nbsp;принципе&nbsp;привык&nbsp;бы&nbsp;и&nbsp;к&nbsp;тому,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span></span>
+<span class="line"><span class="txt"> что&nbsp;мир&nbsp;бывает&nbsp;невнимательным&nbsp;и&nbsp;чёрствым,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span></span>
+<span class="line"><span class="txt"> что&nbsp;благородным&nbsp;образцам&nbsp;он&nbsp;соответствует&nbsp;не&nbsp;шибко&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm F#7 </span></span>
+<span class="line"><span class="txt"> или&nbsp;требованьям&nbsp;высшим&nbsp;отвечает&nbsp;не&nbsp;вполне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm Hm6 </span></span>
+<span class="line"><span class="txt"> Чёрт&nbsp;с&nbsp;ним!&nbsp;Не&nbsp;отвечает,&nbsp;и&nbsp;чёрт&nbsp;с&nbsp;ним!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    H7 Em </span></span>
+<span class="line"><span class="txt"> Но&nbsp;почему&nbsp;в&nbsp;таком&nbsp;количестве,&nbsp;во&nbsp;всяком&nbsp;переулке,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em6 Hm F#7 Hm </span></span>
+<span class="line"><span class="txt"> изначально,&nbsp;бесконечно&nbsp;-&nbsp;и&nbsp;как&nbsp;раз&nbsp;по&nbsp;отношению&nbsp;ко&nbsp;мне?&nbsp;&nbsp;&nbsp; </span><span class="ch">    F#7 H7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Em6 Hm F#7 Hm F#7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ещё&nbsp;я&nbsp;мальчиком&nbsp;всё&nbsp;думал:&nbsp;заведу&nbsp;себе&nbsp;зверька,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Cm G7 </span>
-<span class="txt"> а&nbsp;то&nbsp;их&nbsp;вона&nbsp;сколько&nbsp;скачет&nbsp;по&nbsp;полям-то!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Cm Cm6 </span>
-<span class="txt"> Возьму&nbsp;в&nbsp;товарищи&nbsp;разумного&nbsp;жирафа,&nbsp;муравьеда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Cm G7 </span>
-<span class="txt"> или&nbsp;просто&nbsp;кенгуру,&nbsp;я&nbsp;даже&nbsp;имя&nbsp;подыскал:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Cm Cm6 </span>
-<span class="txt"> Лямбда!&nbsp;Я&nbsp;назову&nbsp;его&nbsp;Лямбда!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C7 Fm </span>
-<span class="txt"> ...Так&nbsp;думал&nbsp;я,&nbsp;но&nbsp;детство&nbsp;кончилось,&nbsp;а&nbsp;бедный&nbsp;муравьед&nbsp;&nbsp;&nbsp; </span><span class="ch">    Fm6 Cm G7 Cm </span>
-<span class="txt"> и&nbsp;по&nbsp;сегодня&nbsp;остаётся&nbsp;не&nbsp;востребован&nbsp;и&nbsp;скачет,&nbsp;где&nbsp;скакал. </span><span class="ch"> .. G7  C7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Fm6 Cm G7 Cm G7 </span>
+<span class="line"><span class="txt"> Ещё&nbsp;я&nbsp;мальчиком&nbsp;всё&nbsp;думал:&nbsp;заведу&nbsp;себе&nbsp;зверька,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Cm G7 </span></span>
+<span class="line"><span class="txt"> а&nbsp;то&nbsp;их&nbsp;вона&nbsp;сколько&nbsp;скачет&nbsp;по&nbsp;полям-то!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Cm Cm6 </span></span>
+<span class="line"><span class="txt"> Возьму&nbsp;в&nbsp;товарищи&nbsp;разумного&nbsp;жирафа,&nbsp;муравьеда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Cm G7 </span></span>
+<span class="line"><span class="txt"> или&nbsp;просто&nbsp;кенгуру,&nbsp;я&nbsp;даже&nbsp;имя&nbsp;подыскал:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Cm Cm6 </span></span>
+<span class="line"><span class="txt"> Лямбда!&nbsp;Я&nbsp;назову&nbsp;его&nbsp;Лямбда!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C7 Fm </span></span>
+<span class="line"><span class="txt"> ...Так&nbsp;думал&nbsp;я,&nbsp;но&nbsp;детство&nbsp;кончилось,&nbsp;а&nbsp;бедный&nbsp;муравьед&nbsp;&nbsp;&nbsp; </span><span class="ch">    Fm6 Cm G7 Cm </span></span>
+<span class="line"><span class="txt"> и&nbsp;по&nbsp;сегодня&nbsp;остаётся&nbsp;не&nbsp;востребован&nbsp;и&nbsp;скачет,&nbsp;где&nbsp;скакал. </span><span class="ch"> .. G7  C7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Fm6 Cm G7 Cm G7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;незнакомка&nbsp;номер&nbsp;два&nbsp;уже&nbsp;тем&nbsp;временем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C#m  G#7 </span>
-<span class="txt"> взошла&nbsp;на&nbsp;тротуар,&nbsp;фосфоресцируя&nbsp;и&nbsp;рдея.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C#m  C#m6 </span>
-<span class="txt"> Весьма&nbsp;мила,&nbsp;не&nbsp;хуже&nbsp;первой,&nbsp;даже&nbsp;лучше,&nbsp;то&nbsp;есть&nbsp;даже&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C#m  G#7 </span>
-<span class="txt"> лучше&nbsp;всех&nbsp;-&nbsp;и&nbsp;очень&nbsp;кстати:&nbsp;я&nbsp;ведь&nbsp;тоже&nbsp;не&nbsp;любой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C#m  C#m6 </span>
-<span class="txt"> Где&nbsp;я?&nbsp;Девушка,&nbsp;девушка!&nbsp;Где&nbsp;я?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C#7  F#m </span>
-<span class="txt"> Не&nbsp;к&nbsp;вам,&nbsp;не&nbsp;к&nbsp;вам&nbsp;ли&nbsp;я&nbsp;теперь&nbsp;уже&nbsp;совсем&nbsp;почти&nbsp;испытываю&nbsp; </span><span class="ch">    F#m6 C#m G#7 Hm </span>
-<span class="txt"> что-то,&nbsp;что&nbsp;по&nbsp;некоторым&nbsp;признакам&nbsp;похоже&nbsp;на&nbsp;любовь?..&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G#7  C#7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F#m  F#m6 C#m </span>
-
+<span class="line"><span class="txt"> А&nbsp;незнакомка&nbsp;номер&nbsp;два&nbsp;уже&nbsp;тем&nbsp;временем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C#m  G#7 </span></span>
+<span class="line"><span class="txt"> взошла&nbsp;на&nbsp;тротуар,&nbsp;фосфоресцируя&nbsp;и&nbsp;рдея.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C#m  C#m6 </span></span>
+<span class="line"><span class="txt"> Весьма&nbsp;мила,&nbsp;не&nbsp;хуже&nbsp;первой,&nbsp;даже&nbsp;лучше,&nbsp;то&nbsp;есть&nbsp;даже&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C#m  G#7 </span></span>
+<span class="line"><span class="txt"> лучше&nbsp;всех&nbsp;-&nbsp;и&nbsp;очень&nbsp;кстати:&nbsp;я&nbsp;ведь&nbsp;тоже&nbsp;не&nbsp;любой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C#m  C#m6 </span></span>
+<span class="line"><span class="txt"> Где&nbsp;я?&nbsp;Девушка,&nbsp;девушка!&nbsp;Где&nbsp;я?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C#7  F#m </span></span>
+<span class="line"><span class="txt"> Не&nbsp;к&nbsp;вам,&nbsp;не&nbsp;к&nbsp;вам&nbsp;ли&nbsp;я&nbsp;теперь&nbsp;уже&nbsp;совсем&nbsp;почти&nbsp;испытываю&nbsp; </span><span class="ch">    F#m6 C#m G#7 Hm </span></span>
+<span class="line"><span class="txt"> что-то,&nbsp;что&nbsp;по&nbsp;некоторым&nbsp;признакам&nbsp;похоже&nbsp;на&nbsp;любовь?..&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G#7  C#7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F#m  F#m6 C#m </span></span>
 </div>
-<pre>
-    <span class="year">1994</span>                                                         G#7  C#m  G#7
-
+<pre><span class="year">1994</span>                                                         G#7  C#m  G#7
 </pre>
+
 
                 </div>
         </div>

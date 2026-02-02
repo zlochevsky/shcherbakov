@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,56 +423,52 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="C"><span class="sng-title">ПУСКАЙ</span>
+data-key="C"><h1>ПУСКАЙ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ты&nbsp;возьми,&nbsp;геометр,&nbsp;из&nbsp;казны&nbsp;из&nbsp;моей&nbsp;сколько&nbsp;нужно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C       A7 Dm </span>
-<span class="txt"> инвентарь&nbsp;собери,&nbsp;хоть&nbsp;купцом&nbsp;притворись,&nbsp;хоть&nbsp;пиратом,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G          Cm </span>
-<span class="txt"> и&nbsp;ступай,&nbsp;как&nbsp;велю,&nbsp;сквозь&nbsp;кордон.&nbsp;Почему?&nbsp;Потому&nbsp;что&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#      C7 Fm C# </span>
-<span class="txt"> ты&nbsp;всего&nbsp;геометр,&nbsp;ну&nbsp;а&nbsp;я&nbsp;как-никак&nbsp;император.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm G Cm G  G# Cm </span>
+<span class="line"><span class="txt"> Ты&nbsp;возьми,&nbsp;геометр,&nbsp;из&nbsp;казны&nbsp;из&nbsp;моей&nbsp;сколько&nbsp;нужно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C       A7 Dm </span></span>
+<span class="line"><span class="txt"> инвентарь&nbsp;собери,&nbsp;хоть&nbsp;купцом&nbsp;притворись,&nbsp;хоть&nbsp;пиратом,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G          Cm </span></span>
+<span class="line"><span class="txt"> и&nbsp;ступай,&nbsp;как&nbsp;велю,&nbsp;сквозь&nbsp;кордон.&nbsp;Почему?&nbsp;Потому&nbsp;что&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#      C7 Fm C# </span></span>
+<span class="line"><span class="txt"> ты&nbsp;всего&nbsp;геометр,&nbsp;ну&nbsp;а&nbsp;я&nbsp;как-никак&nbsp;император.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm G Cm G  G# Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;пускай&nbsp;на&nbsp;земле&nbsp;на&nbsp;моей&nbsp;артишок&nbsp;не&nbsp;родится,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      C7 Fm </span>
-<span class="txt"> и&nbsp;пускай&nbsp;от&nbsp;межи&nbsp;до&nbsp;межи&nbsp;-&nbsp;всё&nbsp;ромашки&nbsp;да&nbsp;тундра,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B          Cm </span>
-<span class="txt"> За&nbsp;кордоном&nbsp;земля&nbsp;вообще&nbsp;ни&nbsp;на&nbsp;что&nbsp;не&nbsp;годится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#      C7 Fm C# </span>
-<span class="txt"> Я&nbsp;хочу,&nbsp;чтоб&nbsp;сюда&nbsp;проложили&nbsp;дорогу&nbsp;оттуда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm G Cm G  G# Cm </span>
+<span class="line"><span class="txt"> И&nbsp;пускай&nbsp;на&nbsp;земле&nbsp;на&nbsp;моей&nbsp;артишок&nbsp;не&nbsp;родится,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm      C7 Fm </span></span>
+<span class="line"><span class="txt"> и&nbsp;пускай&nbsp;от&nbsp;межи&nbsp;до&nbsp;межи&nbsp;-&nbsp;всё&nbsp;ромашки&nbsp;да&nbsp;тундра,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B          Cm </span></span>
+<span class="line"><span class="txt"> За&nbsp;кордоном&nbsp;земля&nbsp;вообще&nbsp;ни&nbsp;на&nbsp;что&nbsp;не&nbsp;годится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#      C7 Fm C# </span></span>
+<span class="line"><span class="txt"> Я&nbsp;хочу,&nbsp;чтоб&nbsp;сюда&nbsp;проложили&nbsp;дорогу&nbsp;оттуда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm G Cm G  G# Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ни&nbsp;колёс&nbsp;грузовых&nbsp;не&nbsp;страшась,&nbsp;ни&nbsp;толпы&nbsp;многоногой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D       H7 Em </span>
-<span class="txt"> наотрез&nbsp;отвратясь&nbsp;от&nbsp;любой&nbsp;посторонней&nbsp;потребы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A          Dm </span>
-<span class="txt"> целый&nbsp;век&nbsp;я&nbsp;бы&nbsp;мог&nbsp;без&nbsp;помех&nbsp;наблюдать&nbsp;за&nbsp;дорогой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       D7 Gm Eb </span>
-<span class="txt"> День&nbsp;за&nbsp;днём,&nbsp;как&nbsp;ни&nbsp;в&nbsp;чём,&nbsp;всё&nbsp;сидел&nbsp;бы&nbsp;себе&nbsp;и&nbsp;смотрел&nbsp;бы. </span><span class="ch"> Dm Gm A Dm A  B  Dm </span>
+<span class="line"><span class="txt"> Ни&nbsp;колёс&nbsp;грузовых&nbsp;не&nbsp;страшась,&nbsp;ни&nbsp;толпы&nbsp;многоногой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D       H7 Em </span></span>
+<span class="line"><span class="txt"> наотрез&nbsp;отвратясь&nbsp;от&nbsp;любой&nbsp;посторонней&nbsp;потребы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A          Dm </span></span>
+<span class="line"><span class="txt"> целый&nbsp;век&nbsp;я&nbsp;бы&nbsp;мог&nbsp;без&nbsp;помех&nbsp;наблюдать&nbsp;за&nbsp;дорогой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       D7 Gm Eb </span></span>
+<span class="line"><span class="txt"> День&nbsp;за&nbsp;днём,&nbsp;как&nbsp;ни&nbsp;в&nbsp;чём,&nbsp;всё&nbsp;сидел&nbsp;бы&nbsp;себе&nbsp;и&nbsp;смотрел&nbsp;бы. </span><span class="ch"> Dm Gm A Dm A  B  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;пускай&nbsp;надо&nbsp;мной&nbsp;сам&nbsp;Орфей&nbsp;запоет&nbsp;в&nbsp;ре&nbsp;миноре,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      D7 Gm </span>
-<span class="txt"> я&nbsp;и&nbsp;лбом&nbsp;повести&nbsp;поленюсь,&nbsp;позабыв&nbsp;про&nbsp;манеры.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C          Dm </span>
-<span class="txt"> И&nbsp;пускай&nbsp;в&nbsp;честь&nbsp;меня&nbsp;назовут&nbsp;океан&nbsp;или&nbsp;море,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       D7 Gm Eb </span>
-<span class="txt"> я&nbsp;и&nbsp;рта&nbsp;не&nbsp;поморщу&nbsp;сказать,&nbsp;что&nbsp;польщён&nbsp;выше&nbsp;меры.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm A Dm A  B  Dm </span>
+<span class="line"><span class="txt"> И&nbsp;пускай&nbsp;надо&nbsp;мной&nbsp;сам&nbsp;Орфей&nbsp;запоет&nbsp;в&nbsp;ре&nbsp;миноре,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      D7 Gm </span></span>
+<span class="line"><span class="txt"> я&nbsp;и&nbsp;лбом&nbsp;повести&nbsp;поленюсь,&nbsp;позабыв&nbsp;про&nbsp;манеры.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C          Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;пускай&nbsp;в&nbsp;честь&nbsp;меня&nbsp;назовут&nbsp;океан&nbsp;или&nbsp;море,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F       D7 Gm Eb </span></span>
+<span class="line"><span class="txt"> я&nbsp;и&nbsp;рта&nbsp;не&nbsp;поморщу&nbsp;сказать,&nbsp;что&nbsp;польщён&nbsp;выше&nbsp;меры.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm A Dm A  B  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Лишь&nbsp;бы&nbsp;гравий&nbsp;хрустел&nbsp;под&nbsp;пятой&nbsp;крепыша-иммигранта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       C#7   F#m </span>
-<span class="txt"> и&nbsp;оковы&nbsp;его&nbsp;сундука&nbsp;под&nbsp;звездой&nbsp;золотились,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H          Em </span>
-<span class="txt"> лишь&nbsp;бы,&nbsp;эхом&nbsp;вразлёт&nbsp;от&nbsp;холмов&nbsp;расходясь&nbsp;семикратно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G       E7 Am F </span>
-<span class="txt"> ныл&nbsp;рожок&nbsp;путевой...&nbsp;и&nbsp;повозки&nbsp;катились,&nbsp;катились...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am H Em H  C  Em </span>
+<span class="line"><span class="txt"> Лишь&nbsp;бы&nbsp;гравий&nbsp;хрустел&nbsp;под&nbsp;пятой&nbsp;крепыша-иммигранта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E       C#7   F#m </span></span>
+<span class="line"><span class="txt"> и&nbsp;оковы&nbsp;его&nbsp;сундука&nbsp;под&nbsp;звездой&nbsp;золотились,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H          Em </span></span>
+<span class="line"><span class="txt"> лишь&nbsp;бы,&nbsp;эхом&nbsp;вразлёт&nbsp;от&nbsp;холмов&nbsp;расходясь&nbsp;семикратно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G       E7 Am F </span></span>
+<span class="line"><span class="txt"> ныл&nbsp;рожок&nbsp;путевой...&nbsp;и&nbsp;повозки&nbsp;катились,&nbsp;катились...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am H Em H  C  Em </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1993</span>
-
+<pre><span class="year">1993</span>
 
 
 </pre>
+
 
                 </div>
         </div>

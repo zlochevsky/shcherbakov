@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,33 +433,31 @@ span.c {
 data-key="Am"><span class="txt"> НА&nbsp;ВСЕЙ&nbsp;ЗЕМЛЕ </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Без&nbsp;цели,&nbsp;без&nbsp;дорог,&nbsp;сквозь&nbsp;сумерки&nbsp;Земли&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  F7    B7  E7  Am </span>
-<span class="txt"> ведёт&nbsp;нас&nbsp;скорбный&nbsp;Бог,&nbsp;весь&nbsp;бледный&nbsp;от&nbsp;любви.&nbsp;&nbsp;&nbsp; </span><span class="ch">      C   A7 Dm F7  Am  E7 </span>
-<span class="txt"> Наш&nbsp;путь&nbsp;лежит&nbsp;во&nbsp;мгле&nbsp;и&nbsp;тянется&nbsp;в&nbsp;туман.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim Bdim  C#dim/Bdim/Gdim Dm </span>
-<span class="txt"> Он&nbsp;вьётся&nbsp;по&nbsp;холмам,&nbsp;петляет&nbsp;тут&nbsp;и&nbsp;там...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  Em    E7 </span>
-<span class="txt"> А&nbsp;между&nbsp;тем&nbsp;-&nbsp;на&nbsp;всей&nbsp;Земле,&nbsp;на&nbsp;всей&nbsp;Земле&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am        Em </span>
-<span class="txt"> не&nbsp;хватит&nbsp;места&nbsp;нам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C7  H7    Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  (бас - E F# G G# A)   Am </span>
-<span class="txt"> Но&nbsp;где-то&nbsp;за&nbsp;холмом&nbsp;-&nbsp;разгадка&nbsp;тайн&nbsp;Земли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  F7    B7  E7  Am </span>
-<span class="txt"> как&nbsp;птица,&nbsp;бьёт&nbsp;крылом&nbsp;в&nbsp;сиянье&nbsp;и&nbsp;в&nbsp;пыли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C   A7 Dm F7  Am  E7 </span>
-<span class="txt"> И&nbsp;блещет&nbsp;на&nbsp;крыле&nbsp;то&nbsp;слава,&nbsp;то&nbsp;смола,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim Bdim  C#dim/Bdim/Gdim Dm </span>
-<span class="txt"> то&nbsp;пламя,&nbsp;то&nbsp;зола&nbsp;ссыпается&nbsp;с&nbsp;крыла...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  Em    E7 </span>
-<span class="txt"> А&nbsp;между&nbsp;тем&nbsp;-&nbsp;на&nbsp;всей&nbsp;Земле,&nbsp;на&nbsp;всей&nbsp;Земле&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am        Em </span>
-<span class="txt"> не&nbsp;будет&nbsp;нам&nbsp;тепла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C7  H7    Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  (бас - E F# G G# A)   Am </span>
-<span class="txt"> И&nbsp;каждый&nbsp;поворот&nbsp;мы&nbsp;помним&nbsp;до&nbsp;седин:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  F7    B7  E7  Am </span>
-<span class="txt"> и&nbsp;тяжкий&nbsp;мрак&nbsp;болот,&nbsp;и&nbsp;гордый&nbsp;блеск&nbsp;вершин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C   A7 Dm F7  Am  E7 </span>
-<span class="txt"> и&nbsp;спящий&nbsp;на&nbsp;заре&nbsp;в&nbsp;долине&nbsp;тёмный&nbsp;храм,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim Bdim  C#dim/Bdim/Gdim Dm </span>
-<span class="txt"> и&nbsp;нечто,&nbsp;в&nbsp;глубине&nbsp;таящееся&nbsp;там...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  Em    E7 </span>
-<span class="txt"> А&nbsp;между&nbsp;тем&nbsp;-&nbsp;на&nbsp;всей&nbsp;Земле,&nbsp;на&nbsp;всей&nbsp;Земле&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am        Em </span>
-<span class="txt"> не&nbsp;выйдет&nbsp;счастья&nbsp;нам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C7  H7    Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  (бас - E F# G G# A)   Am </span>
-
+<span class="line"><span class="txt"> Без&nbsp;цели,&nbsp;без&nbsp;дорог,&nbsp;сквозь&nbsp;сумерки&nbsp;Земли&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  F7    B7  E7  Am </span></span>
+<span class="line"><span class="txt"> ведёт&nbsp;нас&nbsp;скорбный&nbsp;Бог,&nbsp;весь&nbsp;бледный&nbsp;от&nbsp;любви.&nbsp;&nbsp;&nbsp; </span><span class="ch">      C   A7 Dm F7  Am  E7 </span></span>
+<span class="line"><span class="txt"> Наш&nbsp;путь&nbsp;лежит&nbsp;во&nbsp;мгле&nbsp;и&nbsp;тянется&nbsp;в&nbsp;туман.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim Bdim  C#dim/Bdim/Gdim Dm </span></span>
+<span class="line"><span class="txt"> Он&nbsp;вьётся&nbsp;по&nbsp;холмам,&nbsp;петляет&nbsp;тут&nbsp;и&nbsp;там...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  Em    E7 </span></span>
+<span class="line"><span class="txt"> А&nbsp;между&nbsp;тем&nbsp;-&nbsp;на&nbsp;всей&nbsp;Земле,&nbsp;на&nbsp;всей&nbsp;Земле&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am        Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;хватит&nbsp;места&nbsp;нам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C7  H7    Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  (бас - E F# G G# A)   Am </span></span>
+<span class="line"><span class="txt"> Но&nbsp;где-то&nbsp;за&nbsp;холмом&nbsp;-&nbsp;разгадка&nbsp;тайн&nbsp;Земли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  F7    B7  E7  Am </span></span>
+<span class="line"><span class="txt"> как&nbsp;птица,&nbsp;бьёт&nbsp;крылом&nbsp;в&nbsp;сиянье&nbsp;и&nbsp;в&nbsp;пыли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C   A7 Dm F7  Am  E7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;блещет&nbsp;на&nbsp;крыле&nbsp;то&nbsp;слава,&nbsp;то&nbsp;смола,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim Bdim  C#dim/Bdim/Gdim Dm </span></span>
+<span class="line"><span class="txt"> то&nbsp;пламя,&nbsp;то&nbsp;зола&nbsp;ссыпается&nbsp;с&nbsp;крыла...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  Em    E7 </span></span>
+<span class="line"><span class="txt"> А&nbsp;между&nbsp;тем&nbsp;-&nbsp;на&nbsp;всей&nbsp;Земле,&nbsp;на&nbsp;всей&nbsp;Земле&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am        Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;будет&nbsp;нам&nbsp;тепла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C7  H7    Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  (бас - E F# G G# A)   Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;каждый&nbsp;поворот&nbsp;мы&nbsp;помним&nbsp;до&nbsp;седин:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  F7    B7  E7  Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;тяжкий&nbsp;мрак&nbsp;болот,&nbsp;и&nbsp;гордый&nbsp;блеск&nbsp;вершин,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C   A7 Dm F7  Am  E7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;спящий&nbsp;на&nbsp;заре&nbsp;в&nbsp;долине&nbsp;тёмный&nbsp;храм,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim Bdim  C#dim/Bdim/Gdim Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;нечто,&nbsp;в&nbsp;глубине&nbsp;таящееся&nbsp;там...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am  Em    E7 </span></span>
+<span class="line"><span class="txt"> А&nbsp;между&nbsp;тем&nbsp;-&nbsp;на&nbsp;всей&nbsp;Земле,&nbsp;на&nbsp;всей&nbsp;Земле&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am        Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;выйдет&nbsp;счастья&nbsp;нам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      C7  H7    Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  (бас - E F# G G# A)   Am </span></span>
 </div>
-<pre>
-    <span class="year">1985</span>-<span class="year">1986</span>
-
+<pre><span class="year">1985</span>-<span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

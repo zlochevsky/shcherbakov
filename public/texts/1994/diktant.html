@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,66 +423,63 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ДИКТАНТ</span>
+data-key="Am"><h1>ДИКТАНТ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Профан&nbsp;по&nbsp;всем&nbsp;остальным&nbsp;наукам&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
+<span class="line"><span class="txt"> Профан&nbsp;по&nbsp;всем&nbsp;остальным&nbsp;наукам&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
 <span class="txt"> ладно,&nbsp;я&nbsp;не&nbsp;о&nbsp;тех&nbsp;талантах. </span>
 <span class="txt"> К&nbsp;чему&nbsp;к&nbsp;чему,&nbsp;а&nbsp;к&nbsp;дворцовым&nbsp;трюкам </span>
-<span class="txt"> ты&nbsp;мог&nbsp;привыкнуть&nbsp;ещё&nbsp;в&nbsp;инфантах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Расчесть&nbsp;хотя&nbsp;бы&nbsp;азы&nbsp;карьеры&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
+<span class="line"><span class="txt"> ты&nbsp;мог&nbsp;привыкнуть&nbsp;ещё&nbsp;в&nbsp;инфантах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Расчесть&nbsp;хотя&nbsp;бы&nbsp;азы&nbsp;карьеры&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
 <span class="txt"> монарх&nbsp;обязан&nbsp;уметь&nbsp;вслепую. </span>
 <span class="txt"> Бросаем&nbsp;всё,&nbsp;принимаем&nbsp;меры. </span>
-<span class="txt"> Садись,&nbsp;записывай,&nbsp;я&nbsp;диктую.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Поскольку&nbsp;аз&nbsp;есмь&nbsp;церемониймейстер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="line"><span class="txt"> Садись,&nbsp;записывай,&nbsp;я&nbsp;диктую.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Поскольку&nbsp;аз&nbsp;есмь&nbsp;церемониймейстер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt"> сиречь&nbsp;действительный&nbsp;магистр, </span>
-<span class="txt"> молчи,&nbsp;не&nbsp;спрашивай&nbsp;-&nbsp;чего,&nbsp;чего,&nbsp;чего,&nbsp;чего,&nbsp;чего...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm    Cm </span>
+<span class="line"><span class="txt"> молчи,&nbsp;не&nbsp;спрашивай&nbsp;-&nbsp;чего,&nbsp;чего,&nbsp;чего,&nbsp;чего,&nbsp;чего...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm    Cm </span></span>
 <span class="txt"> Сам&nbsp;чувствуешь,&nbsp;должно&nbsp;быть, </span>
-<span class="txt"> вопрос&nbsp;нелеп,&nbsp;ответ&nbsp;-&nbsp;всего,&nbsp;всего,&nbsp;всего,&nbsp;всего,&nbsp;все...&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am7-5 Gm Hm7-5 Am </span>
-<span class="txt"> Премьер-министра&nbsp;позвать&nbsp;-&nbsp;и&nbsp;в&nbsp;морду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
+<span class="line"><span class="txt"> вопрос&nbsp;нелеп,&nbsp;ответ&nbsp;-&nbsp;всего,&nbsp;всего,&nbsp;всего,&nbsp;всего,&nbsp;все...&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am7-5 Gm Hm7-5 Am </span></span>
+<span class="line"><span class="txt"> Премьер-министра&nbsp;позвать&nbsp;-&nbsp;и&nbsp;в&nbsp;морду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
 <span class="txt"> Пажа&nbsp;казнить,&nbsp;королеву&nbsp;выгнать. </span>
 <span class="txt"> Сыграть&nbsp;с&nbsp;Европой&nbsp;на&nbsp;выход&nbsp;к&nbsp;морю. </span>
-<span class="txt"> Во&nbsp;что&nbsp;не&nbsp;важно,&nbsp;главное&nbsp;выиграть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Казна&nbsp;грязна?&nbsp;велика&nbsp;забота.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
+<span class="line"><span class="txt"> Во&nbsp;что&nbsp;не&nbsp;важно,&nbsp;главное&nbsp;выиграть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Казна&nbsp;грязна?&nbsp;велика&nbsp;забота.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
 <span class="txt"> Такие&nbsp;деньги,&nbsp;если&nbsp;подумать, </span>
 <span class="txt"> мы&nbsp;сами&nbsp;в&nbsp;силах&nbsp;отмыть&nbsp;в&nbsp;два&nbsp;счёта. </span>
-<span class="txt"> Но&nbsp;ты&nbsp;не&nbsp;пойдёшь&nbsp;мыть.&nbsp;И&nbsp;я&nbsp;не&nbsp;пойду&nbsp;мыть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Рабы&nbsp;не&nbsp;мы.&nbsp;Тут&nbsp;есть&nbsp;и&nbsp;помоложе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="line"><span class="txt"> Но&nbsp;ты&nbsp;не&nbsp;пойдёшь&nbsp;мыть.&nbsp;И&nbsp;я&nbsp;не&nbsp;пойду&nbsp;мыть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Рабы&nbsp;не&nbsp;мы.&nbsp;Тут&nbsp;есть&nbsp;и&nbsp;помоложе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt"> Мерзавцев&nbsp;набран&nbsp;полный&nbsp;штат, </span>
-<span class="txt"> молчи,&nbsp;не&nbsp;спрашивай&nbsp;-&nbsp;зачем,&nbsp;зачем,&nbsp;зачем,&nbsp;зачем,&nbsp;зачем...&nbsp; </span><span class="ch"> Gm    Cm </span>
+<span class="line"><span class="txt"> молчи,&nbsp;не&nbsp;спрашивай&nbsp;-&nbsp;зачем,&nbsp;зачем,&nbsp;зачем,&nbsp;зачем,&nbsp;зачем...&nbsp; </span><span class="ch"> Gm    Cm </span></span>
 <span class="txt"> Волк&nbsp;волку&nbsp;не&nbsp;опасен, </span>
-<span class="txt"> наоборот.&nbsp;Так&nbsp;вот&nbsp;-&nbsp;затем,&nbsp;затем,&nbsp;затем,&nbsp;затем,&nbsp;за...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am7-5 Gm Hm7-5 Am </span>
-<span class="txt"> Какой&nbsp;же&nbsp;ты,&nbsp;я&nbsp;не&nbsp;знаю,&nbsp;глупый!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
+<span class="line"><span class="txt"> наоборот.&nbsp;Так&nbsp;вот&nbsp;-&nbsp;затем,&nbsp;затем,&nbsp;затем,&nbsp;затем,&nbsp;за...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am7-5 Gm Hm7-5 Am </span></span>
+<span class="line"><span class="txt"> Какой&nbsp;же&nbsp;ты,&nbsp;я&nbsp;не&nbsp;знаю,&nbsp;глупый!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
 <span class="txt"> А&nbsp;между&nbsp;прочим,&nbsp;давно&nbsp;за&nbsp;тридцать. </span>
 <span class="txt"> Вели&nbsp;болтливой&nbsp;и&nbsp;мокрогубой </span>
-<span class="txt"> фронде&nbsp;заткнуться&nbsp;или&nbsp;закрыться.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Ползком&nbsp;не&nbsp;вышло,&nbsp;возьмёшь&nbsp;наскоком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
+<span class="line"><span class="txt"> фронде&nbsp;заткнуться&nbsp;или&nbsp;закрыться.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Ползком&nbsp;не&nbsp;вышло,&nbsp;возьмёшь&nbsp;наскоком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
 <span class="txt"> Перед&nbsp;"возьмёшь"&nbsp;поставь&nbsp;запятую. </span>
 <span class="txt"> В&nbsp;особых&nbsp;случаях&nbsp;-&nbsp;я&nbsp;под&nbsp;боком. </span>
-<span class="txt"> Не&nbsp;спи,&nbsp;записывай,&nbsp;я&nbsp;диктую.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Поскольку&nbsp;аз&nbsp;есмь&nbsp;церемониймейстер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="line"><span class="txt"> Не&nbsp;спи,&nbsp;записывай,&nbsp;я&nbsp;диктую.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Поскольку&nbsp;аз&nbsp;есмь&nbsp;церемониймейстер,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt"> мне&nbsp;этот&nbsp;утренник&nbsp;вести, </span>
-<span class="txt"> молчи,&nbsp;не&nbsp;спрашивай&nbsp;-&nbsp;куда,&nbsp;куда,&nbsp;куда,&nbsp;куда,&nbsp;куда...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm    Cm </span>
+<span class="line"><span class="txt"> молчи,&nbsp;не&nbsp;спрашивай&nbsp;-&nbsp;куда,&nbsp;куда,&nbsp;куда,&nbsp;куда,&nbsp;куда...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm    Cm </span></span>
 <span class="txt"> Чу,&nbsp;слышишь&nbsp;отголоски? </span>
-<span class="txt"> В&nbsp;бинокли&nbsp;зришь?&nbsp;Так&nbsp;вот&nbsp;-&nbsp;туда,&nbsp;туда,&nbsp;туда,&nbsp;туда,&nbsp;ту...&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am7-5 Gm Hm7-5 Am </span>
- <br />
-
+<span class="line"><span class="txt"> В&nbsp;бинокли&nbsp;зришь?&nbsp;Так&nbsp;вот&nbsp;-&nbsp;туда,&nbsp;туда,&nbsp;туда,&nbsp;туда,&nbsp;ту...&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am7-5 Gm Hm7-5 Am </span></span>
 </div>
-<pre>
-    <span class="year">1994</span>
-
+<pre><span class="year">1994</span>
 
 </pre>
+
 
                 </div>
         </div>

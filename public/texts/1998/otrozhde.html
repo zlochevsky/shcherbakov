@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,19 +423,19 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">От Рождества</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (Hm) </span>
-<span class="txt"> Не&nbsp;ниже,&nbsp;не&nbsp;строже&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em </span>
-<span class="txt"> сегодняшний&nbsp;холод&nbsp;свистел,&nbsp;чем&nbsp;вчера.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em G7/F F# </span>
-<span class="txt"> И&nbsp;завтра&nbsp;-&nbsp;всё&nbsp;то&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em </span>
-<span class="txt"> Кортежи,&nbsp;вельможи.&nbsp;Глазурь,&nbsp;мишура.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C E Em Hm </span>
+data-key="Hm"><h1>От Рождества</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> (Hm) </span></span>
+<span class="line"><span class="txt"> Не&nbsp;ниже,&nbsp;не&nbsp;строже&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em </span></span>
+<span class="line"><span class="txt"> сегодняшний&nbsp;холод&nbsp;свистел,&nbsp;чем&nbsp;вчера.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em G7/F F# </span></span>
+<span class="line"><span class="txt"> И&nbsp;завтра&nbsp;-&nbsp;всё&nbsp;то&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em </span></span>
+<span class="line"><span class="txt"> Кортежи,&nbsp;вельможи.&nbsp;Глазурь,&nbsp;мишура.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C E Em Hm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Брось,&nbsp;холод,&nbsp;стараться. </span>
@@ -439,44 +447,41 @@ data-key="Hm"><span class="sng-title">От Рождества</span>
 <span class="txt"> Гирлянда&nbsp;провисла. </span>
 <span class="txt"> Вернулся&nbsp;в&nbsp;Канаду&nbsp;рождественский&nbsp;гусь. </span>
 <span class="txt"> И&nbsp;после&nbsp;-&nbsp;ни&nbsp;смысла, </span>
-<span class="txt"> ни&nbsp;вымысла&nbsp;даже.&nbsp;Но&nbsp;я&nbsp;не&nbsp;боюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                  --Cm </span>
+<span class="line"><span class="txt"> ни&nbsp;вымысла&nbsp;даже.&nbsp;Но&nbsp;я&nbsp;не&nbsp;боюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                  --Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> На&nbsp;что&nbsp;мне&nbsp;свобода?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm </span>
-<span class="txt"> К&nbsp;чему&nbsp;мне&nbsp;победа&nbsp;моей&nbsp;правоты?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm G#7/F# G </span>
+<span class="line"><span class="txt"> На&nbsp;что&nbsp;мне&nbsp;свобода?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm </span></span>
+<span class="line"><span class="txt"> К&nbsp;чему&nbsp;мне&nbsp;победа&nbsp;моей&nbsp;правоты?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm G#7/F# G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;надо&nbsp;восхода.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm </span>
-<span class="txt"> Тем&nbsp;лучше,&nbsp;чем&nbsp;хуже.&nbsp;Январь,&nbsp;это&nbsp;ты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm C# F Fm Cm </span>
+<span class="line"><span class="txt"> Не&nbsp;надо&nbsp;восхода.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm </span></span>
+<span class="line"><span class="txt"> Тем&nbsp;лучше,&nbsp;чем&nbsp;хуже.&nbsp;Январь,&nbsp;это&nbsp;ты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm C# F Fm Cm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Всё&nbsp;мило.&nbsp;Всё&nbsp;вяло. </span>
 <span class="txt"> И&nbsp;роза,&nbsp;что&nbsp;нынче&nbsp;я&nbsp;выбросил&nbsp;вон, </span>
 <span class="txt"> конечно,&nbsp;упала </span>
-<span class="txt"> на&nbsp;лапу&nbsp;Азора.&nbsp;Азор&nbsp;удивлён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                  --C#m </span>
+<span class="line"><span class="txt"> на&nbsp;лапу&nbsp;Азора.&nbsp;Азор&nbsp;удивлён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                  --C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всё&nbsp;то&nbsp;же.&nbsp;Нет&nbsp;сладу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span>
-<span class="txt"> Не&nbsp;ближе&nbsp;фанфары,&nbsp;не&nbsp;туже&nbsp;аркан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m A7/G G# </span>
-<span class="txt"> Уеду&nbsp;в&nbsp;Канаду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span>
-<span class="txt"> Я&nbsp;слышал,&nbsp;там&nbsp;есть&nbsp;водопад-великан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m D F# F#m C#m --Dm </span>
+<span class="line"><span class="txt"> Всё&nbsp;то&nbsp;же.&nbsp;Нет&nbsp;сладу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span></span>
+<span class="line"><span class="txt"> Не&nbsp;ближе&nbsp;фанфары,&nbsp;не&nbsp;туже&nbsp;аркан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m A7/G G# </span></span>
+<span class="line"><span class="txt"> Уеду&nbsp;в&nbsp;Канаду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span></span>
+<span class="line"><span class="txt"> Я&nbsp;слышал,&nbsp;там&nbsp;есть&nbsp;водопад-великан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m D F# F#m C#m --Dm </span></span>
 <span class="txt">  </span>
-<span class="txt"> Стократный,&nbsp;стоцветный.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span>
-<span class="txt"> Как&nbsp;Бог&nbsp;знает&nbsp;что,&nbsp;как&nbsp;последний&nbsp;парад.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm B7/G# A </span>
-<span class="txt"> Безмерный,&nbsp;бессмертный.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span>
-<span class="txt"> Я&nbsp;лично&nbsp;не&nbsp;видел,&nbsp;но&nbsp;так&nbsp;говорят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Eb G Gm Dm </span>
+<span class="line"><span class="txt"> Стократный,&nbsp;стоцветный.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span></span>
+<span class="line"><span class="txt"> Как&nbsp;Бог&nbsp;знает&nbsp;что,&nbsp;как&nbsp;последний&nbsp;парад.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm B7/G# A </span></span>
+<span class="line"><span class="txt"> Безмерный,&nbsp;бессмертный.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;лично&nbsp;не&nbsp;видел,&nbsp;но&nbsp;так&nbsp;говорят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Eb G Gm Dm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1998</span>
+<pre><span class="year">1998</span>
                                           Условная нотировка по исполнению <span class="year">1998</span> года                         
                                           (диск &#171;<a href="../../Disks/fauxpas.html">Faux pas</a>&#187;).
 
-
 </pre>
+
 
                 </div>
         </div>

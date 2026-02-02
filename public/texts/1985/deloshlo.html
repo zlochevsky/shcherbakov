@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,63 +423,61 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="txt"> *&nbsp;*&nbsp;* </span>
+data-key="Hm"><span class="txt"> &nbsp;*&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Дело&nbsp;шло&nbsp;к&nbsp;рассвету,&nbsp;вьюги&nbsp;бушевали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span>
-<span class="txt"> зимняя&nbsp;погода&nbsp;лезла&nbsp;вон&nbsp;из&nbsp;кожи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# </span>
-<span class="txt"> В&nbsp;доме&nbsp;шло&nbsp;веселье,&nbsp;гости&nbsp;танцевали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span>
-<span class="txt"> ты&nbsp;была&nbsp;прекрасна&nbsp;-&nbsp;прямо-таки&nbsp;до&nbsp;дрожи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;никто&nbsp;не&nbsp;слышал,&nbsp;как&nbsp;метель&nbsp;гудела,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;каждый&nbsp;был&nbsp;обласкан&nbsp;и&nbsp;храним&nbsp;судьбою...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;ж&nbsp;тогда&nbsp;подумал:&nbsp;плохо&nbsp;наше&nbsp;дело!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm D7 G </span>
-<span class="txt"> Хватит&nbsp;нам&nbsp;с&nbsp;тобою&nbsp;лиха,&nbsp;будет&nbsp;нам&nbsp;с&nbsp;тобою...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm E A7 Dm F# </span>
+<span class="line"><span class="txt"> Дело&nbsp;шло&nbsp;к&nbsp;рассвету,&nbsp;вьюги&nbsp;бушевали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span></span>
+<span class="line"><span class="txt"> зимняя&nbsp;погода&nbsp;лезла&nbsp;вон&nbsp;из&nbsp;кожи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# </span></span>
+<span class="line"><span class="txt"> В&nbsp;доме&nbsp;шло&nbsp;веселье,&nbsp;гости&nbsp;танцевали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span></span>
+<span class="line"><span class="txt"> ты&nbsp;была&nbsp;прекрасна&nbsp;-&nbsp;прямо-таки&nbsp;до&nbsp;дрожи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;никто&nbsp;не&nbsp;слышал,&nbsp;как&nbsp;метель&nbsp;гудела,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;каждый&nbsp;был&nbsp;обласкан&nbsp;и&nbsp;храним&nbsp;судьбою...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;ж&nbsp;тогда&nbsp;подумал:&nbsp;плохо&nbsp;наше&nbsp;дело!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm D7 G </span></span>
+<span class="line"><span class="txt"> Хватит&nbsp;нам&nbsp;с&nbsp;тобою&nbsp;лиха,&nbsp;будет&nbsp;нам&nbsp;с&nbsp;тобою...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm E A7 Dm F# </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Так&nbsp;оно&nbsp;и&nbsp;вышло&nbsp;-&nbsp;всё&nbsp;смешалось&nbsp;в&nbsp;доме,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span>
-<span class="txt"> развалились&nbsp;гнёзда,&nbsp;закружились&nbsp;русла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# </span>
-<span class="txt"> Ты&nbsp;молчишь&nbsp;и&nbsp;сердце&nbsp;держишь&nbsp;на&nbsp;ладони...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span>
-<span class="txt"> Боже,&nbsp;всё&nbsp;так&nbsp;просто!&nbsp;Что&nbsp;же&nbsp;всё&nbsp;так&nbsp;грустно?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;То&nbsp;ли&nbsp;дело&nbsp;прежде,&nbsp;в&nbsp;юности&nbsp;лазурной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вот&nbsp;уж&nbsp;впрямь&nbsp;-&nbsp;бывало&nbsp;разного&nbsp;немало!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;любил&nbsp;бессчётно,&nbsp;и&nbsp;всегда&nbsp;безумно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm D7 G </span>
-<span class="txt"> и&nbsp;всегда&nbsp;успешно,&nbsp;знаешь,&nbsp;жертв&nbsp;не&nbsp;возникало...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm E A7 Dm F# </span>
+<span class="line"><span class="txt"> Так&nbsp;оно&nbsp;и&nbsp;вышло&nbsp;-&nbsp;всё&nbsp;смешалось&nbsp;в&nbsp;доме,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span></span>
+<span class="line"><span class="txt"> развалились&nbsp;гнёзда,&nbsp;закружились&nbsp;русла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;молчишь&nbsp;и&nbsp;сердце&nbsp;держишь&nbsp;на&nbsp;ладони...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span></span>
+<span class="line"><span class="txt"> Боже,&nbsp;всё&nbsp;так&nbsp;просто!&nbsp;Что&nbsp;же&nbsp;всё&nbsp;так&nbsp;грустно?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;То&nbsp;ли&nbsp;дело&nbsp;прежде,&nbsp;в&nbsp;юности&nbsp;лазурной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вот&nbsp;уж&nbsp;впрямь&nbsp;-&nbsp;бывало&nbsp;разного&nbsp;немало!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;любил&nbsp;бессчётно,&nbsp;и&nbsp;всегда&nbsp;безумно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm D7 G </span></span>
+<span class="line"><span class="txt"> и&nbsp;всегда&nbsp;успешно,&nbsp;знаешь,&nbsp;жертв&nbsp;не&nbsp;возникало...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm E A7 Dm F# </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Люди&nbsp;мне&nbsp;сказали:&nbsp;разделяй&nbsp;и&nbsp;властвуй,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span>
-<span class="txt"> торжествуй&nbsp;и&nbsp;празднуй,&nbsp;а&nbsp;то&nbsp;проморгаешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# </span>
-<span class="txt"> Сфера&nbsp;вольных&nbsp;мыслей,&nbsp;область&nbsp;дальних&nbsp;странствий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span>
-<span class="txt"> выбирай&nbsp;что&nbsp;хочешь,&nbsp;поступай&nbsp;как&nbsp;знаешь!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё&nbsp;вы,&nbsp;люди,&nbsp;врёте,&nbsp;а&nbsp;я&nbsp;всё&nbsp;киваю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;бес&nbsp;во&nbsp;мне&nbsp;какой-то&nbsp;-&nbsp;ест&nbsp;меня&nbsp;и&nbsp;губит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Никому&nbsp;не&nbsp;верю,&nbsp;ничего&nbsp;не&nbsp;знаю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm D7 G </span>
-<span class="txt"> знаю,&nbsp;что&nbsp;люблю&nbsp;тебя,&nbsp;но&nbsp;кто&nbsp;ж&nbsp;тебя&nbsp;не&nbsp;любит!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm E A7 Dm F# </span>
+<span class="line"><span class="txt"> Люди&nbsp;мне&nbsp;сказали:&nbsp;разделяй&nbsp;и&nbsp;властвуй,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span></span>
+<span class="line"><span class="txt"> торжествуй&nbsp;и&nbsp;празднуй,&nbsp;а&nbsp;то&nbsp;проморгаешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# </span></span>
+<span class="line"><span class="txt"> Сфера&nbsp;вольных&nbsp;мыслей,&nbsp;область&nbsp;дальних&nbsp;странствий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span></span>
+<span class="line"><span class="txt"> выбирай&nbsp;что&nbsp;хочешь,&nbsp;поступай&nbsp;как&nbsp;знаешь!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё&nbsp;вы,&nbsp;люди,&nbsp;врёте,&nbsp;а&nbsp;я&nbsp;всё&nbsp;киваю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;бес&nbsp;во&nbsp;мне&nbsp;какой-то&nbsp;-&nbsp;ест&nbsp;меня&nbsp;и&nbsp;губит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Никому&nbsp;не&nbsp;верю,&nbsp;ничего&nbsp;не&nbsp;знаю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm D7 G </span></span>
+<span class="line"><span class="txt"> знаю,&nbsp;что&nbsp;люблю&nbsp;тебя,&nbsp;но&nbsp;кто&nbsp;ж&nbsp;тебя&nbsp;не&nbsp;любит!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm E A7 Dm F# </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И,&nbsp;как&nbsp;прежде,&nbsp;тонет&nbsp;всё&nbsp;в&nbsp;весёлом&nbsp;вздоре,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span>
-<span class="txt"> вьюга&nbsp;рвёт&nbsp;и&nbsp;мечет,&nbsp;гости&nbsp;веселятся...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# </span>
-<span class="txt"> Сил&nbsp;моих&nbsp;нет&nbsp;больше,&nbsp;я&nbsp;хочу&nbsp;на&nbsp;море,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span>
-<span class="txt"> я&nbsp;хочу&nbsp;забыться,&nbsp;я&nbsp;хочу&nbsp;влюбляться,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Лазать&nbsp;по&nbsp;откосам,&nbsp;грезить&nbsp;о&nbsp;мадоннах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;излучать&nbsp;сиянье,&nbsp;небу&nbsp;подражая...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E A7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вот&nbsp;бы&nbsp;как!..&nbsp;Но&nbsp;сердце&nbsp;держишь&nbsp;ты&nbsp;в&nbsp;ладонях.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm D7 G </span>
-<span class="txt"> Чем&nbsp;же&nbsp;крыть?&nbsp;А&nbsp;крыть&nbsp;и&nbsp;нечем.&nbsp;Так&nbsp;и&nbsp;продолжаем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm E A7 Dm F# </span>
-<span class="txt"> жить... </span>
+<span class="line"><span class="txt"> И,&nbsp;как&nbsp;прежде,&nbsp;тонет&nbsp;всё&nbsp;в&nbsp;весёлом&nbsp;вздоре,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span></span>
+<span class="line"><span class="txt"> вьюга&nbsp;рвёт&nbsp;и&nbsp;мечет,&nbsp;гости&nbsp;веселятся...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# </span></span>
+<span class="line"><span class="txt"> Сил&nbsp;моих&nbsp;нет&nbsp;больше,&nbsp;я&nbsp;хочу&nbsp;на&nbsp;море,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm F# </span></span>
+<span class="line"><span class="txt"> я&nbsp;хочу&nbsp;забыться,&nbsp;я&nbsp;хочу&nbsp;влюбляться,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm E Em F# Hm A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Лазать&nbsp;по&nbsp;откосам,&nbsp;грезить&nbsp;о&nbsp;мадоннах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;излучать&nbsp;сиянье,&nbsp;небу&nbsp;подражая...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E A7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вот&nbsp;бы&nbsp;как!..&nbsp;Но&nbsp;сердце&nbsp;держишь&nbsp;ты&nbsp;в&nbsp;ладонях.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm D7 G </span></span>
+<span class="line"><span class="txt"> Чем&nbsp;же&nbsp;крыть?&nbsp;А&nbsp;крыть&nbsp;и&nbsp;нечем.&nbsp;Так&nbsp;и&nbsp;продолжаем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm E A7 Dm F# </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;жить... </span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

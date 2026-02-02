@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,65 +423,61 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="C#m"><span class="sng-title">Напоследок</span>
+data-key="C#m"><h1>Напоследок</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Напоследок&nbsp;-&nbsp;георгин&nbsp;продеть&nbsp;в&nbsp;пиджак&nbsp;(для&nbsp;колорита),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/C#-A-G#-E   A/G-E     C#m/G#-E    C#/F-G#-H-G#   </span>
-<span class="txt"> хладнокровно&nbsp;убедиться,&nbsp;всё&nbsp;ли&nbsp;взял,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/F#-A-G#-F#  C#m/E-G#  G#/C-G#                    </span>
-<span class="txt"> расплатиться.&nbsp;С&nbsp;персоналом&nbsp;попрощаться&nbsp;деловито.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#/C#-G#-F-G#   C#m/E-G#  A    C#/F   F#m/F#-A-D#-C# </span>
-<span class="txt"> Спину&nbsp;выгнуть,&nbsp;как&nbsp;виконт&nbsp;какой-нибудь.&nbsp;И&nbsp;на&nbsp;вокзал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/E-G#-D#-C#  A7/G      F#   F#m    C#m/E-G#-C#-G# </span>
+<span class="line"><span class="txt"> Напоследок&nbsp;-&nbsp;георгин&nbsp;продеть&nbsp;в&nbsp;пиджак&nbsp;(для&nbsp;колорита),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/C#-A-G#-E   A/G-E     C#m/G#-E    C#/F-G#-H-G#   </span></span>
+<span class="line"><span class="txt"> хладнокровно&nbsp;убедиться,&nbsp;всё&nbsp;ли&nbsp;взял,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m/F#-A-G#-F#  C#m/E-G#  G#/C-G#                    </span></span>
+<span class="line"><span class="txt"> расплатиться.&nbsp;С&nbsp;персоналом&nbsp;попрощаться&nbsp;деловито.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#/C#-G#-F-G#   C#m/E-G#  A    C#/F   F#m/F#-A-D#-C# </span></span>
+<span class="line"><span class="txt"> Спину&nbsp;выгнуть,&nbsp;как&nbsp;виконт&nbsp;какой-нибудь.&nbsp;И&nbsp;на&nbsp;вокзал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/E-G#-D#-C#  A7/G      F#   F#m    C#m/E-G#-C#-G# </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ни&nbsp;трагедий,&nbsp;ни&nbsp;проклятий&nbsp;переменчивому&nbsp;счастью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/C#... </span>
+<span class="line"><span class="txt"> Ни&nbsp;трагедий,&nbsp;ни&nbsp;проклятий&nbsp;переменчивому&nbsp;счастью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/C#... </span></span>
 <span class="txt"> Натурально,&nbsp;всё&nbsp;обман&nbsp;в&nbsp;пыли&nbsp;земной. </span>
 <span class="txt"> Вот&nbsp;и&nbsp;лошадь&nbsp;-&nbsp;то&nbsp;ли&nbsp;цифрой&nbsp;обманула,&nbsp;то&nbsp;ли&nbsp;мастью: </span>
 <span class="txt"> вороная,&nbsp;шла&nbsp;под&nbsp;номером&nbsp;седьмым,&nbsp;пришла&nbsp;седьмой. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;воротишь...&nbsp;заигрался,&nbsp;перегнул&nbsp;насчёт&nbsp;виконтства.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/C#... </span>
+<span class="line"><span class="txt"> Не&nbsp;воротишь...&nbsp;заигрался,&nbsp;перегнул&nbsp;насчёт&nbsp;виконтства.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/C#... </span></span>
 <span class="txt"> Постояльцем&nbsp;угодил&nbsp;не&nbsp;ко&nbsp;двору. </span>
 <span class="txt"> Хорошо&nbsp;хоть&nbsp;из&nbsp;хозяев&nbsp;ни&nbsp;с&nbsp;одним&nbsp;не&nbsp;свёл&nbsp;знакомства. </span>
 <span class="txt"> Извиняться&nbsp;напоследок&nbsp;не&nbsp;пойду&nbsp;ни&nbsp;к&nbsp;одному. </span>
 <span class="txt">  </span>
-<span class="txt"> Честный&nbsp;недруг,&nbsp;уличив&nbsp;меня&nbsp;во&nbsp;вздоре&nbsp;и&nbsp;сумбуре,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/C#... </span>
+<span class="line"><span class="txt"> Честный&nbsp;недруг,&nbsp;уличив&nbsp;меня&nbsp;во&nbsp;вздоре&nbsp;и&nbsp;сумбуре,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/C#... </span></span>
 <span class="txt"> с&nbsp;донесеньем&nbsp;не&nbsp;спеши&nbsp;на&nbsp;телеграф: </span>
 <span class="txt"> хоть&nbsp;и&nbsp;честный,&nbsp;а&nbsp;в&nbsp;моей&nbsp;наверняка&nbsp;ты&nbsp;не&nbsp;был&nbsp;шкуре. </span>
-<span class="txt"> Кто&nbsp;бы&nbsp;ни&nbsp;был,&nbsp;если&nbsp;судишь&nbsp;по&nbsp;себе,&nbsp;не&nbsp;будешь&nbsp;прав.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                                                   A+5 --Dm </span>
+<span class="line"><span class="txt"> Кто&nbsp;бы&nbsp;ни&nbsp;был,&nbsp;если&nbsp;судишь&nbsp;по&nbsp;себе,&nbsp;не&nbsp;будешь&nbsp;прав.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                                                   A+5 --Dm </span></span>
 <span class="txt">  </span>
-<span class="txt"> То&nbsp;не&nbsp;горе,&nbsp;что&nbsp;тяжёл&nbsp;исход.&nbsp;Беда,&nbsp;что&nbsp;предсказуем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/D-B-A-F      B/G#-F    Dm/A-F      D/F#-A-C-A </span>
-<span class="txt"> Рюмка&nbsp;рому&nbsp;-&nbsp;и&nbsp;в&nbsp;туман&nbsp;без&nbsp;пиджака...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-B-A-G      Dm/F-A    A/C#-A                 </span>
-<span class="txt"> Знаешь,&nbsp;честный,&nbsp;мало&nbsp;мы&nbsp;с&nbsp;тобой&nbsp;кого&nbsp;интересуем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/D-A-F#-A      Dm/F-A    B    D/F#   Gm/G-B-E-D </span>
-<span class="txt"> Колеснице&nbsp;что&nbsp;хозяина&nbsp;везти,&nbsp;что&nbsp;чужака.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F-A-E-D      B7/G#     G    Gm     Dm/F-A-D   G#+5  C#m<- </span>
+<span class="line"><span class="txt"> То&nbsp;не&nbsp;горе,&nbsp;что&nbsp;тяжёл&nbsp;исход.&nbsp;Беда,&nbsp;что&nbsp;предсказуем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/D-B-A-F      B/G#-F    Dm/A-F      D/F#-A-C-A </span></span>
+<span class="line"><span class="txt"> Рюмка&nbsp;рому&nbsp;-&nbsp;и&nbsp;в&nbsp;туман&nbsp;без&nbsp;пиджака...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-B-A-G      Dm/F-A    A/C#-A                 </span></span>
+<span class="line"><span class="txt"> Знаешь,&nbsp;честный,&nbsp;мало&nbsp;мы&nbsp;с&nbsp;тобой&nbsp;кого&nbsp;интересуем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D/D-A-F#-A      Dm/F-A    B    D/F#   Gm/G-B-E-D </span></span>
+<span class="line"><span class="txt"> Колеснице&nbsp;что&nbsp;хозяина&nbsp;везти,&nbsp;что&nbsp;чужака.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F-A-E-D      B7/G#     G    Gm     Dm/F-A-D   G#+5  C#m<- </span></span>
 <span class="txt">  </span>
-<span class="txt"> В&nbsp;ювелирном,&nbsp;где&nbsp;задёшево&nbsp;чеканят&nbsp;на&nbsp;браслетах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/C#... </span>
+<span class="line"><span class="txt"> В&nbsp;ювелирном,&nbsp;где&nbsp;задёшево&nbsp;чеканят&nbsp;на&nbsp;браслетах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m/C#... </span></span>
 <span class="txt"> что&nbsp;закажешь,&nbsp;-&nbsp;закажу&nbsp;семёрку&nbsp;треф. </span>
 <span class="txt"> И&nbsp;отчалю&nbsp;без&nbsp;оглядки.&nbsp;Либо&nbsp;всё&nbsp;же&nbsp;напоследок </span>
-<span class="txt"> оглядевшись,&nbsp;но&nbsp;диковин&nbsp;за&nbsp;бортом&nbsp;не&nbsp;усмотрев.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                                                  A+5 --Dm </span>
+<span class="line"><span class="txt"> оглядевшись,&nbsp;но&nbsp;диковин&nbsp;за&nbsp;бортом&nbsp;не&nbsp;усмотрев.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                                                  A+5 --Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;ведь&nbsp;мог&nbsp;бы&nbsp;шапито&nbsp;в&nbsp;конце&nbsp;придумать&nbsp;с&nbsp;циркачами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/D... </span>
+<span class="line"><span class="txt"> А&nbsp;ведь&nbsp;мог&nbsp;бы&nbsp;шапито&nbsp;в&nbsp;конце&nbsp;придумать&nbsp;с&nbsp;циркачами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/D... </span></span>
 <span class="txt"> позументы&nbsp;из&nbsp;того,&nbsp;что&nbsp;под&nbsp;рукой, </span>
 <span class="txt"> и&nbsp;циркачку&nbsp;(с&nbsp;чересчур,&nbsp;пожалуй,&nbsp;чёрными&nbsp;очами), </span>
 <span class="txt"> и&nbsp;другое...&nbsp;Но&nbsp;тогда&nbsp;бы&nbsp;и&nbsp;сюжет&nbsp;возник&nbsp;другой. </span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2004</span>                                                  ок.: B7/G# G Gm Dm (bis)
-
+<pre><span class="year">2004</span>                                                  ок.: B7/G# G Gm Dm (bis)
 
 
 </pre>
+
 
                 </div>
         </div>

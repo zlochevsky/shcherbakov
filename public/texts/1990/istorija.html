@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,46 +433,44 @@ span.c {
 data-key="Hm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сначала&nbsp;я,&nbsp;натурально,&nbsp;жил&nbsp;без&nbsp;всякого&nbsp;разуменья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  F#  Hm </span>
-<span class="txt"> Затем&nbsp;подрос,&nbsp;но,&nbsp;будучи&nbsp;слеп,&nbsp;рассчитывал&nbsp;на&nbsp;чутьё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G  F#  Hm </span>
-<span class="txt"> Потом&nbsp;однажды&nbsp;раздался&nbsp;звон,&nbsp;послышалось&nbsp;дуновенье&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm E7  Am </span>
-<span class="txt"> и&nbsp;вдруг&nbsp;открылись&nbsp;мои&nbsp;глаза,&nbsp;и&nbsp;я&nbsp;увидел&nbsp;её.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em H7  E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Желанье&nbsp;чуда&nbsp;светилось&nbsp;в&nbsp;ней&nbsp;прожилкою&nbsp;голубою,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  E   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;но&nbsp;я&nbsp;ещё&nbsp;не&nbsp;умел&nbsp;ни&nbsp;дать,&nbsp;ни&nbsp;вымолвить&nbsp;ничего...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F  E   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Она&nbsp;была&nbsp;-&nbsp;то&nbsp;кристалл,&nbsp;то&nbsp;газ;&nbsp;а&nbsp;я&nbsp;представлял&nbsp;собою&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm A7  Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;какое-то&nbsp;неизвестное&nbsp;химикам&nbsp;бурое&nbsp;вещество.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/A-G-F# E Am F# </span>
-<span class="txt"> Потом&nbsp;я&nbsp;видел&nbsp;её&nbsp;на&nbsp;перекрестках&nbsp;шумного&nbsp;града:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  F#  Hm </span>
-<span class="txt"> клыки&nbsp;молодых&nbsp;людей&nbsp;то&nbsp;здесь,&nbsp;то&nbsp;там&nbsp;её&nbsp;стерегли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G  F#  Hm </span>
-<span class="txt"> То&nbsp;здесь,&nbsp;то&nbsp;там&nbsp;движением&nbsp;каблучка,&nbsp;плеча&nbsp;или&nbsp;взгляда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm E7  Am </span>
-<span class="txt"> она&nbsp;приказывала&nbsp;клыкам&nbsp;не&nbsp;сметь&nbsp;-&nbsp;и&nbsp;те&nbsp;не&nbsp;могли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em H7  E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Статистов,&nbsp;как&nbsp;мотыльков&nbsp;огонь,&nbsp;влекла&nbsp;её&nbsp;пантомима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  E   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;суля&nbsp;призы&nbsp;и&nbsp;казни&nbsp;-&nbsp;кому&nbsp;зазря,&nbsp;кому&nbsp;поделом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F  E   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мой&nbsp;брат&nbsp;ступал&nbsp;по&nbsp;её&nbsp;следам,&nbsp;страдая&nbsp;неутомимо...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm A7  Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Лишь&nbsp;я&nbsp;скучал&nbsp;в&nbsp;стороне.&nbsp;И&nbsp;всё&nbsp;текло&nbsp;своим&nbsp;чередом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/A-G-F# E Am F# </span>
-<span class="txt"> Потом&nbsp;я&nbsp;выучил&nbsp;языки&nbsp;и&nbsp;сделался&nbsp;безупречен.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  F#  Hm </span>
-<span class="txt"> В&nbsp;её&nbsp;расчёты&nbsp;сюрприз&nbsp;такой,&nbsp;скорей&nbsp;всего,&nbsp;не&nbsp;входил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G  F#  Hm </span>
-<span class="txt"> Поэтому,&nbsp;стоило&nbsp;мне&nbsp;мелькнуть,&nbsp;как&nbsp;я&nbsp;уже&nbsp;был&nbsp;замечен:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm E7  Am </span>
-<span class="txt"> не&nbsp;то&nbsp;чтобы&nbsp;избран,&nbsp;но&nbsp;учтён&nbsp;во&nbsp;всяком&nbsp;случае&nbsp;был.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em H7  E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Итак,&nbsp;"великий&nbsp;слепой&nbsp;прозрел",&nbsp;дальнейшее&nbsp;-&nbsp;не&nbsp;загадка:&nbsp;&nbsp; </span><span class="ch"> Am F  E   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;безногий&nbsp;пошёл&nbsp;плясать,&nbsp;лишённый&nbsp;слуха&nbsp;сел&nbsp;за&nbsp;рояль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F  E   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Она&nbsp;и&nbsp;я&nbsp;оказались&nbsp;вдруг&nbsp;единой&nbsp;частью&nbsp;порядка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm A7  Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;сменить&nbsp;который&nbsp;не&nbsp;властны&nbsp;ни&nbsp;безумие,&nbsp;ни&nbsp;мораль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/A-G-F# E Am F# </span>
-<span class="txt"> В&nbsp;конце&nbsp;концов&nbsp;(не&nbsp;ведаю,&nbsp;кто&nbsp;из&nbsp;демонов&nbsp;научил&nbsp;нас),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  F#  Hm </span>
-<span class="txt"> свершилось&nbsp;нечто&nbsp;-&nbsp;и&nbsp;навсегда&nbsp;сокрылось&nbsp;в&nbsp;царстве&nbsp;теней...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G  F#  Hm </span>
-<span class="txt"> Уже&nbsp;два&nbsp;года&nbsp;минуло&nbsp;с&nbsp;той&nbsp;поры,&nbsp;как&nbsp;это&nbsp;случилось,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm E7  Am </span>
-<span class="txt"> но&nbsp;больше&nbsp;я&nbsp;её&nbsp;не&nbsp;встречал.&nbsp;И&nbsp;мало&nbsp;слышал&nbsp;о&nbsp;ней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em H7  E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё&nbsp;также,&nbsp;видимо,&nbsp;где-то&nbsp;она&nbsp;маячит&nbsp;и&nbsp;пропадает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  E   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вертя&nbsp;пространство&nbsp;перед&nbsp;собой,&nbsp;как&nbsp;пряха&nbsp;веретено.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F  E   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё&nbsp;так&nbsp;же&nbsp;брат&nbsp;мой&nbsp;ходит&nbsp;за&nbsp;ней&nbsp;вослед&nbsp;и&nbsp;так&nbsp;же&nbsp;страдает. </span><span class="ch">    Gm A7  Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;это&nbsp;мне,&nbsp;простите,&nbsp;уже&nbsp;два&nbsp;года,&nbsp;как&nbsp;всё&nbsp;равно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/A-G-F# E Am F# </span>
+<span class="line"><span class="txt"> Сначала&nbsp;я,&nbsp;натурально,&nbsp;жил&nbsp;без&nbsp;всякого&nbsp;разуменья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  F#  Hm </span></span>
+<span class="line"><span class="txt"> Затем&nbsp;подрос,&nbsp;но,&nbsp;будучи&nbsp;слеп,&nbsp;рассчитывал&nbsp;на&nbsp;чутьё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G  F#  Hm </span></span>
+<span class="line"><span class="txt"> Потом&nbsp;однажды&nbsp;раздался&nbsp;звон,&nbsp;послышалось&nbsp;дуновенье&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm E7  Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;вдруг&nbsp;открылись&nbsp;мои&nbsp;глаза,&nbsp;и&nbsp;я&nbsp;увидел&nbsp;её.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em H7  E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Желанье&nbsp;чуда&nbsp;светилось&nbsp;в&nbsp;ней&nbsp;прожилкою&nbsp;голубою,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  E   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;но&nbsp;я&nbsp;ещё&nbsp;не&nbsp;умел&nbsp;ни&nbsp;дать,&nbsp;ни&nbsp;вымолвить&nbsp;ничего...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F  E   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Она&nbsp;была&nbsp;-&nbsp;то&nbsp;кристалл,&nbsp;то&nbsp;газ;&nbsp;а&nbsp;я&nbsp;представлял&nbsp;собою&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm A7  Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;какое-то&nbsp;неизвестное&nbsp;химикам&nbsp;бурое&nbsp;вещество.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/A-G-F# E Am F# </span></span>
+<span class="line"><span class="txt"> Потом&nbsp;я&nbsp;видел&nbsp;её&nbsp;на&nbsp;перекрестках&nbsp;шумного&nbsp;града:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  F#  Hm </span></span>
+<span class="line"><span class="txt"> клыки&nbsp;молодых&nbsp;людей&nbsp;то&nbsp;здесь,&nbsp;то&nbsp;там&nbsp;её&nbsp;стерегли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G  F#  Hm </span></span>
+<span class="line"><span class="txt"> То&nbsp;здесь,&nbsp;то&nbsp;там&nbsp;движением&nbsp;каблучка,&nbsp;плеча&nbsp;или&nbsp;взгляда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm E7  Am </span></span>
+<span class="line"><span class="txt"> она&nbsp;приказывала&nbsp;клыкам&nbsp;не&nbsp;сметь&nbsp;-&nbsp;и&nbsp;те&nbsp;не&nbsp;могли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em H7  E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Статистов,&nbsp;как&nbsp;мотыльков&nbsp;огонь,&nbsp;влекла&nbsp;её&nbsp;пантомима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  E   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;суля&nbsp;призы&nbsp;и&nbsp;казни&nbsp;-&nbsp;кому&nbsp;зазря,&nbsp;кому&nbsp;поделом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F  E   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мой&nbsp;брат&nbsp;ступал&nbsp;по&nbsp;её&nbsp;следам,&nbsp;страдая&nbsp;неутомимо...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm A7  Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Лишь&nbsp;я&nbsp;скучал&nbsp;в&nbsp;стороне.&nbsp;И&nbsp;всё&nbsp;текло&nbsp;своим&nbsp;чередом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/A-G-F# E Am F# </span></span>
+<span class="line"><span class="txt"> Потом&nbsp;я&nbsp;выучил&nbsp;языки&nbsp;и&nbsp;сделался&nbsp;безупречен.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  F#  Hm </span></span>
+<span class="line"><span class="txt"> В&nbsp;её&nbsp;расчёты&nbsp;сюрприз&nbsp;такой,&nbsp;скорей&nbsp;всего,&nbsp;не&nbsp;входил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G  F#  Hm </span></span>
+<span class="line"><span class="txt"> Поэтому,&nbsp;стоило&nbsp;мне&nbsp;мелькнуть,&nbsp;как&nbsp;я&nbsp;уже&nbsp;был&nbsp;замечен:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm E7  Am </span></span>
+<span class="line"><span class="txt"> не&nbsp;то&nbsp;чтобы&nbsp;избран,&nbsp;но&nbsp;учтён&nbsp;во&nbsp;всяком&nbsp;случае&nbsp;был.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em H7  E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Итак,&nbsp;"великий&nbsp;слепой&nbsp;прозрел",&nbsp;дальнейшее&nbsp;-&nbsp;не&nbsp;загадка:&nbsp;&nbsp; </span><span class="ch"> Am F  E   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;безногий&nbsp;пошёл&nbsp;плясать,&nbsp;лишённый&nbsp;слуха&nbsp;сел&nbsp;за&nbsp;рояль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F  E   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Она&nbsp;и&nbsp;я&nbsp;оказались&nbsp;вдруг&nbsp;единой&nbsp;частью&nbsp;порядка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm A7  Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;сменить&nbsp;который&nbsp;не&nbsp;властны&nbsp;ни&nbsp;безумие,&nbsp;ни&nbsp;мораль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/A-G-F# E Am F# </span></span>
+<span class="line"><span class="txt"> В&nbsp;конце&nbsp;концов&nbsp;(не&nbsp;ведаю,&nbsp;кто&nbsp;из&nbsp;демонов&nbsp;научил&nbsp;нас),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm G  F#  Hm </span></span>
+<span class="line"><span class="txt"> свершилось&nbsp;нечто&nbsp;-&nbsp;и&nbsp;навсегда&nbsp;сокрылось&nbsp;в&nbsp;царстве&nbsp;теней...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G  F#  Hm </span></span>
+<span class="line"><span class="txt"> Уже&nbsp;два&nbsp;года&nbsp;минуло&nbsp;с&nbsp;той&nbsp;поры,&nbsp;как&nbsp;это&nbsp;случилось,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Dm E7  Am </span></span>
+<span class="line"><span class="txt"> но&nbsp;больше&nbsp;я&nbsp;её&nbsp;не&nbsp;встречал.&nbsp;И&nbsp;мало&nbsp;слышал&nbsp;о&nbsp;ней.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em H7  E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё&nbsp;также,&nbsp;видимо,&nbsp;где-то&nbsp;она&nbsp;маячит&nbsp;и&nbsp;пропадает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F  E   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вертя&nbsp;пространство&nbsp;перед&nbsp;собой,&nbsp;как&nbsp;пряха&nbsp;веретено.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F  E   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё&nbsp;так&nbsp;же&nbsp;брат&nbsp;мой&nbsp;ходит&nbsp;за&nbsp;ней&nbsp;вослед&nbsp;и&nbsp;так&nbsp;же&nbsp;страдает. </span><span class="ch">    Gm A7  Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;это&nbsp;мне,&nbsp;простите,&nbsp;уже&nbsp;два&nbsp;года,&nbsp;как&nbsp;всё&nbsp;равно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/A-G-F# E Am F# </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1990</span>
-
+<pre><span class="year">1990</span>
 </pre>
+
 
                 </div>
         </div>

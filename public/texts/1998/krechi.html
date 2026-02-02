@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,67 +423,65 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">К РЕЧИ</span>
+data-key="Am"><h1>К РЕЧИ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Прямо&nbsp;сейчас,&nbsp;до&nbsp;торгов,&nbsp;до&nbsp;переоснастки,&nbsp;до&nbsp;немоты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> то&nbsp;есть&nbsp;пока&nbsp;есть&nbsp;откуда&nbsp;выступить&nbsp;и&nbsp;куда&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> начнись,&nbsp;речь&nbsp;моя.&nbsp;В&nbsp;тугую&nbsp;оденься&nbsp;ткань,&nbsp;облекись&nbsp;в&nbsp;черты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span>
-<span class="txt"> Обрети&nbsp;власть&nbsp;ферзя.&nbsp;Тело&nbsp;гимнастки.&nbsp;И&nbsp;уж&nbsp;тогда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am  A7 </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Прямо&nbsp;сейчас,&nbsp;до&nbsp;торгов,&nbsp;до&nbsp;переоснастки,&nbsp;до&nbsp;немоты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> то&nbsp;есть&nbsp;пока&nbsp;есть&nbsp;откуда&nbsp;выступить&nbsp;и&nbsp;куда&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> начнись,&nbsp;речь&nbsp;моя.&nbsp;В&nbsp;тугую&nbsp;оденься&nbsp;ткань,&nbsp;облекись&nbsp;в&nbsp;черты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span></span>
+<span class="line"><span class="txt"> Обрети&nbsp;власть&nbsp;ферзя.&nbsp;Тело&nbsp;гимнастки.&nbsp;И&nbsp;уж&nbsp;тогда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am  A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> чем-то&nbsp;таким&nbsp;став,&nbsp;чего&nbsp;сама&nbsp;ни&nbsp;в&nbsp;поле&nbsp;не&nbsp;спрячешь,&nbsp;ни&nbsp;взаперти,&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> не&nbsp;усмиришь,&nbsp;не&nbsp;просеешь&nbsp;сквозь&nbsp;решето,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> седлай&nbsp;весь&nbsp;табун.&nbsp;Бери&nbsp;добровольцев&nbsp;сотню&nbsp;и&nbsp;вскачь&nbsp;лети.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span>
-<span class="txt"> А&nbsp;потом&nbsp;дашь&nbsp;нам&nbsp;знать,&nbsp;если&nbsp;доскачешь,&nbsp;как&nbsp;там&nbsp;и&nbsp;что.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Dm  D7 </span>
+<span class="line"><span class="txt"> чем-то&nbsp;таким&nbsp;став,&nbsp;чего&nbsp;сама&nbsp;ни&nbsp;в&nbsp;поле&nbsp;не&nbsp;спрячешь,&nbsp;ни&nbsp;взаперти,&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> не&nbsp;усмиришь,&nbsp;не&nbsp;просеешь&nbsp;сквозь&nbsp;решето,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> седлай&nbsp;весь&nbsp;табун.&nbsp;Бери&nbsp;добровольцев&nbsp;сотню&nbsp;и&nbsp;вскачь&nbsp;лети.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span></span>
+<span class="line"><span class="txt"> А&nbsp;потом&nbsp;дашь&nbsp;нам&nbsp;знать,&nbsp;если&nbsp;доскачешь,&nbsp;как&nbsp;там&nbsp;и&nbsp;что.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Dm  D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Там&nbsp;-&nbsp;это&nbsp;там,&nbsp;где&nbsp;(пред&nbsp;тем&nbsp;в&nbsp;пути&nbsp;не&nbsp;ужаснувшись&nbsp;много&nbsp;чему)&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm </span>
-<span class="txt"> ты&nbsp;задрожишь,&nbsp;вдруг&nbsp;узрев&nbsp;себя&nbsp;в&nbsp;сонме&nbsp;божеств,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm </span>
-<span class="txt"> одно&nbsp;из&nbsp;которых,&nbsp;лёгкую&nbsp;длань&nbsp;свою&nbsp;поднеся&nbsp;к&nbsp;челу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    Dm </span>
-<span class="txt"> твоему,&nbsp;дрожь&nbsp;смягчит,&nbsp;еле&nbsp;коснувшись.&nbsp;Царственный&nbsp;жест.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    Gm  A7 </span>
+<span class="line"><span class="txt"> Там&nbsp;-&nbsp;это&nbsp;там,&nbsp;где&nbsp;(пред&nbsp;тем&nbsp;в&nbsp;пути&nbsp;не&nbsp;ужаснувшись&nbsp;много&nbsp;чему)&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm </span></span>
+<span class="line"><span class="txt"> ты&nbsp;задрожишь,&nbsp;вдруг&nbsp;узрев&nbsp;себя&nbsp;в&nbsp;сонме&nbsp;божеств,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm </span></span>
+<span class="line"><span class="txt"> одно&nbsp;из&nbsp;которых,&nbsp;лёгкую&nbsp;длань&nbsp;свою&nbsp;поднеся&nbsp;к&nbsp;челу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    Dm </span></span>
+<span class="line"><span class="txt"> твоему,&nbsp;дрожь&nbsp;смягчит,&nbsp;еле&nbsp;коснувшись.&nbsp;Царственный&nbsp;жест.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    Gm  A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;приникай&nbsp;к&nbsp;той&nbsp;руке.&nbsp;Рука,&nbsp;она&nbsp;не&nbsp;надолго.&nbsp;Всё&nbsp;учтено.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> Не&nbsp;привыкай&nbsp;к&nbsp;ней,&nbsp;она&nbsp;издалека.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> Всмотрись&nbsp;только&nbsp;в&nbsp;контур.&nbsp;Да&nbsp;на&nbsp;запястье&nbsp;тонком&nbsp;заметь&nbsp;пятно.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span>
-<span class="txt"> Некий&nbsp;знак,&nbsp;род&nbsp;клейма.&nbsp;Вряд&nbsp;ли&nbsp;наколка.&nbsp;Наверняка&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am  A7 </span>
+<span class="line"><span class="txt"> Не&nbsp;приникай&nbsp;к&nbsp;той&nbsp;руке.&nbsp;Рука,&nbsp;она&nbsp;не&nbsp;надолго.&nbsp;Всё&nbsp;учтено.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> Не&nbsp;привыкай&nbsp;к&nbsp;ней,&nbsp;она&nbsp;издалека.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> Всмотрись&nbsp;только&nbsp;в&nbsp;контур.&nbsp;Да&nbsp;на&nbsp;запястье&nbsp;тонком&nbsp;заметь&nbsp;пятно.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span></span>
+<span class="line"><span class="txt"> Некий&nbsp;знак,&nbsp;род&nbsp;клейма.&nbsp;Вряд&nbsp;ли&nbsp;наколка.&nbsp;Наверняка&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am  A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> он&nbsp;не&nbsp;таков,&nbsp;как&nbsp;о&nbsp;нём&nbsp;предания&nbsp;повествуют,&nbsp;этот&nbsp;рубец.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> Путаных&nbsp;мест&nbsp;в&nbsp;древних&nbsp;книгах&nbsp;что&nbsp;саранчи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> Кураж,&nbsp;речь&nbsp;моя.&nbsp;Я&nbsp;затихаю,&nbsp;ибо&nbsp;велел&nbsp;мудрец:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span>
-<span class="txt"> о&nbsp;богах&nbsp;говори,&nbsp;что&nbsp;они&nbsp;существуют.&nbsp;Либо&nbsp;молчи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Dm  D7 </span>
+<span class="line"><span class="txt"> он&nbsp;не&nbsp;таков,&nbsp;как&nbsp;о&nbsp;нём&nbsp;предания&nbsp;повествуют,&nbsp;этот&nbsp;рубец.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> Путаных&nbsp;мест&nbsp;в&nbsp;древних&nbsp;книгах&nbsp;что&nbsp;саранчи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> Кураж,&nbsp;речь&nbsp;моя.&nbsp;Я&nbsp;затихаю,&nbsp;ибо&nbsp;велел&nbsp;мудрец:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span></span>
+<span class="line"><span class="txt"> о&nbsp;богах&nbsp;говори,&nbsp;что&nbsp;они&nbsp;существуют.&nbsp;Либо&nbsp;молчи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Dm  D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Впрочем,&nbsp;потом&nbsp;всяк&nbsp;поймёт&nbsp;тебя&nbsp;даже&nbsp;по-рыбьи.&nbsp;Со&nbsp;словарём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm </span>
-<span class="txt"> На&nbsp;языке&nbsp;стад&nbsp;и&nbsp;стойбищ,&nbsp;озёр&nbsp;и&nbsp;лагун.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm </span>
-<span class="txt"> Когда,&nbsp;выгнув&nbsp;спину,&nbsp;ты&nbsp;возвратишься&nbsp;вечером,&nbsp;вряд&nbsp;ли&nbsp;днём,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    Dm </span>
-<span class="txt"> сообщить,&nbsp;что&nbsp;в&nbsp;пути&nbsp;добровольцы&nbsp;погибли,&nbsp;как&nbsp;и&nbsp;табун.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    Gm  A7 </span>
+<span class="line"><span class="txt"> Впрочем,&nbsp;потом&nbsp;всяк&nbsp;поймёт&nbsp;тебя&nbsp;даже&nbsp;по-рыбьи.&nbsp;Со&nbsp;словарём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm </span></span>
+<span class="line"><span class="txt"> На&nbsp;языке&nbsp;стад&nbsp;и&nbsp;стойбищ,&nbsp;озёр&nbsp;и&nbsp;лагун.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   Dm </span></span>
+<span class="line"><span class="txt"> Когда,&nbsp;выгнув&nbsp;спину,&nbsp;ты&nbsp;возвратишься&nbsp;вечером,&nbsp;вряд&nbsp;ли&nbsp;днём,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    Dm </span></span>
+<span class="line"><span class="txt"> сообщить,&nbsp;что&nbsp;в&nbsp;пути&nbsp;добровольцы&nbsp;погибли,&nbsp;как&nbsp;и&nbsp;табун.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    Gm  A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Год&nbsp;проведя&nbsp;не&nbsp;с&nbsp;тобой,&nbsp;без&nbsp;малейшего&nbsp;толка,&nbsp;как&nbsp;не&nbsp;живя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> то-то&nbsp;собьюсь&nbsp;я&nbsp;при&nbsp;встрече!&nbsp;То-то&nbsp;же&nbsp;я&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> скажу&nbsp;сам&nbsp;себе:&nbsp;шире&nbsp;глаза,&nbsp;горбун,&nbsp;это&nbsp;речь&nbsp;твоя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span>
-<span class="txt"> Улыбнись&nbsp;ей&nbsp;скорей,&nbsp;она&nbsp;не&nbsp;надолго.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span>
+<span class="line"><span class="txt"> Год&nbsp;проведя&nbsp;не&nbsp;с&nbsp;тобой,&nbsp;без&nbsp;малейшего&nbsp;толка,&nbsp;как&nbsp;не&nbsp;живя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> то-то&nbsp;собьюсь&nbsp;я&nbsp;при&nbsp;встрече!&nbsp;То-то&nbsp;же&nbsp;я&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="line"><span class="txt"> скажу&nbsp;сам&nbsp;себе:&nbsp;шире&nbsp;глаза,&nbsp;горбун,&nbsp;это&nbsp;речь&nbsp;твоя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span></span>
+<span class="line"><span class="txt"> Улыбнись&nbsp;ей&nbsp;скорей,&nbsp;она&nbsp;не&nbsp;надолго.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Am </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1998</span>
-
+<pre><span class="year">1998</span>
 </pre>
+
 
                 </div>
         </div>

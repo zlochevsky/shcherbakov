@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,62 +433,59 @@ span.c {
 data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Русалка,&nbsp;цыганка,&nbsp;цикада,&nbsp;она&nbsp;понимать&nbsp;рождена&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm6 </span>
-<span class="txt"> густой&nbsp;разнобой&nbsp;вертограда,&nbsp;громоздкий&nbsp;полёт&nbsp;табуна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span>
-<span class="txt"> В&nbsp;канкане&nbsp;вакхической&nbsp;свадьбы,&nbsp;полночных&nbsp;безумств&nbsp;посреди,&nbsp; </span><span class="ch"> C  A7 Dm F(g f c a) </span>
-<span class="txt"> она&nbsp;жениха&nbsp;целовать&nbsp;бы&nbsp;могла.&nbsp;Но&nbsp;не&nbsp;станет,&nbsp;не&nbsp;жди.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span>
+<span class="line"><span class="txt"> Русалка,&nbsp;цыганка,&nbsp;цикада,&nbsp;она&nbsp;понимать&nbsp;рождена&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm6 </span></span>
+<span class="line"><span class="txt"> густой&nbsp;разнобой&nbsp;вертограда,&nbsp;громоздкий&nbsp;полёт&nbsp;табуна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span></span>
+<span class="line"><span class="txt"> В&nbsp;канкане&nbsp;вакхической&nbsp;свадьбы,&nbsp;полночных&nbsp;безумств&nbsp;посреди,&nbsp; </span><span class="ch"> C  A7 Dm F(g f c a) </span></span>
+<span class="line"><span class="txt"> она&nbsp;жениха&nbsp;целовать&nbsp;бы&nbsp;могла.&nbsp;Но&nbsp;не&nbsp;станет,&nbsp;не&nbsp;жди.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;станет,&nbsp;вдали&nbsp;от&nbsp;сатиров,&nbsp;менад&nbsp;и&nbsp;силенов&nbsp;ручных,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm6 </span>
-<span class="txt"> столичных&nbsp;смущать&nbsp;ювелиров,&nbsp;тиранить&nbsp;портных&nbsp;и&nbsp;портних.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span>
-<span class="txt"> Укрывшись&nbsp;во&nbsp;мрак&nbsp;чернобурки,&nbsp;в&nbsp;атлас,&nbsp;в&nbsp;золотое&nbsp;шитьё,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  A7 Dm F(g f c a) </span>
-<span class="txt"> в&nbsp;холодном&nbsp;сгорит&nbsp;Петербурге&nbsp;холодное&nbsp;сердце&nbsp;её.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span>
+<span class="line"><span class="txt"> А&nbsp;станет,&nbsp;вдали&nbsp;от&nbsp;сатиров,&nbsp;менад&nbsp;и&nbsp;силенов&nbsp;ручных,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm6 </span></span>
+<span class="line"><span class="txt"> столичных&nbsp;смущать&nbsp;ювелиров,&nbsp;тиранить&nbsp;портных&nbsp;и&nbsp;портних.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span></span>
+<span class="line"><span class="txt"> Укрывшись&nbsp;во&nbsp;мрак&nbsp;чернобурки,&nbsp;в&nbsp;атлас,&nbsp;в&nbsp;золотое&nbsp;шитьё,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  A7 Dm F(g f c a) </span></span>
+<span class="line"><span class="txt"> в&nbsp;холодном&nbsp;сгорит&nbsp;Петербурге&nbsp;холодное&nbsp;сердце&nbsp;её.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;жизнь&nbsp;эта&nbsp;будет&nbsp;напрасна,&nbsp;со&nbsp;всякой&nbsp;другой&nbsp;наравне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A7 D  F(d c a f) </span>
-<span class="txt"> И&nbsp;хватит&nbsp;о&nbsp;ней,&nbsp;и&nbsp;прекрасно.&nbsp;Теперь&nbsp;обо&nbsp;мне,&nbsp;обо&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span>
+<span class="line"><span class="txt"> И&nbsp;жизнь&nbsp;эта&nbsp;будет&nbsp;напрасна,&nbsp;со&nbsp;всякой&nbsp;другой&nbsp;наравне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A7 D  F(d c a f) </span></span>
+<span class="line"><span class="txt"> И&nbsp;хватит&nbsp;о&nbsp;ней,&nbsp;и&nbsp;прекрасно.&nbsp;Теперь&nbsp;обо&nbsp;мне,&nbsp;обо&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;мог&nbsp;бы,&nbsp;допустим,&nbsp;майором&nbsp;всемирных&nbsp;спасательных&nbsp;сил,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm6 </span>
-<span class="txt"> зевая,&nbsp;лететь&nbsp;гастролёром,&nbsp;куда&nbsp;Красный&nbsp;Крест&nbsp;попросил.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span>
-<span class="txt"> Ни&nbsp;ямба&nbsp;не&nbsp;чтить,&nbsp;ни&nbsp;бемоля.&nbsp;А&nbsp;выйдя&nbsp;в&nbsp;отставку,&nbsp;осесть&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  A7 Dm F(g f c a) </span>
-<span class="txt"> у&nbsp;самого&nbsp;синего&nbsp;моря,&nbsp;у&nbsp;самого&nbsp;что&nbsp;ни&nbsp;на&nbsp;есть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span>
+<span class="line"><span class="txt"> Я&nbsp;мог&nbsp;бы,&nbsp;допустим,&nbsp;майором&nbsp;всемирных&nbsp;спасательных&nbsp;сил,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm6 </span></span>
+<span class="line"><span class="txt"> зевая,&nbsp;лететь&nbsp;гастролёром,&nbsp;куда&nbsp;Красный&nbsp;Крест&nbsp;попросил.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span></span>
+<span class="line"><span class="txt"> Ни&nbsp;ямба&nbsp;не&nbsp;чтить,&nbsp;ни&nbsp;бемоля.&nbsp;А&nbsp;выйдя&nbsp;в&nbsp;отставку,&nbsp;осесть&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  A7 Dm F(g f c a) </span></span>
+<span class="line"><span class="txt"> у&nbsp;самого&nbsp;синего&nbsp;моря,&nbsp;у&nbsp;самого&nbsp;что&nbsp;ни&nbsp;на&nbsp;есть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;вместо&nbsp;того,&nbsp;от&nbsp;обиды&nbsp;кривясь,&nbsp;поведу&nbsp;под&nbsp;уздцы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm6 </span>
-<span class="txt"> бемоля&nbsp;и&nbsp;ямба&nbsp;гибриды,&nbsp;добро&nbsp;хоть&nbsp;не&nbsp;льва&nbsp;и&nbsp;овцы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span>
-<span class="txt"> Моей&nbsp;погибать&nbsp;без&nbsp;браслета&nbsp;руке,&nbsp;голове&nbsp;-&nbsp;без&nbsp;царя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  A7 Dm F(g f c a) </span>
-<span class="txt"> И&nbsp;самого&nbsp;чёрного&nbsp;цвета&nbsp;мне&nbsp;будут&nbsp;встречаться&nbsp;моря.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span>
+<span class="line"><span class="txt"> Но&nbsp;вместо&nbsp;того,&nbsp;от&nbsp;обиды&nbsp;кривясь,&nbsp;поведу&nbsp;под&nbsp;уздцы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm6 </span></span>
+<span class="line"><span class="txt"> бемоля&nbsp;и&nbsp;ямба&nbsp;гибриды,&nbsp;добро&nbsp;хоть&nbsp;не&nbsp;льва&nbsp;и&nbsp;овцы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span></span>
+<span class="line"><span class="txt"> Моей&nbsp;погибать&nbsp;без&nbsp;браслета&nbsp;руке,&nbsp;голове&nbsp;-&nbsp;без&nbsp;царя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  A7 Dm F(g f c a) </span></span>
+<span class="line"><span class="txt"> И&nbsp;самого&nbsp;чёрного&nbsp;цвета&nbsp;мне&nbsp;будут&nbsp;встречаться&nbsp;моря.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;всё&nbsp;это&nbsp;будет&nbsp;досадно,&nbsp;смешно&nbsp;и&nbsp;т.д.&nbsp;и&nbsp;т.п.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A7 D  F(d c a f) </span>
-<span class="txt"> И&nbsp;хватит&nbsp;об&nbsp;этом,&nbsp;и&nbsp;ладно.&nbsp;Теперь&nbsp;о&nbsp;тебе,&nbsp;о&nbsp;тебе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span>
+<span class="line"><span class="txt"> И&nbsp;всё&nbsp;это&nbsp;будет&nbsp;досадно,&nbsp;смешно&nbsp;и&nbsp;т.д.&nbsp;и&nbsp;т.п.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F  A7 D  F(d c a f) </span></span>
+<span class="line"><span class="txt"> И&nbsp;хватит&nbsp;об&nbsp;этом,&nbsp;и&nbsp;ладно.&nbsp;Теперь&nbsp;о&nbsp;тебе,&nbsp;о&nbsp;тебе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;только&nbsp;зачем&nbsp;эти&nbsp;взмахи,&nbsp;зачем&nbsp;этот&nbsp;плеск&nbsp;через&nbsp;борт?&nbsp;&nbsp;&nbsp; </span><span class="ch">  Am    Dm6 </span>
-<span class="txt"> Ты&nbsp;явно&nbsp;напуган,&nbsp;ты&nbsp;в&nbsp;страхе&nbsp;таком,&nbsp;что&nbsp;сбежал&nbsp;бы,&nbsp;да&nbsp;горд. </span><span class="ch">  E7    Am </span>
-<span class="txt"> Едва&nbsp;приступил&nbsp;я&nbsp;к&nbsp;рассказу,&nbsp;а&nbsp;ты&nbsp;уж&nbsp;и&nbsp;белый&nbsp;совсем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C  A7 Dm F(g f c a) </span>
-<span class="txt"> И&nbsp;сразу&nbsp;закуривать,&nbsp;сразу&nbsp;закуривать,&nbsp;сразу.&nbsp;Зачем?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Dm Am E7 Am </span>
+<span class="line"><span class="txt"> Но&nbsp;только&nbsp;зачем&nbsp;эти&nbsp;взмахи,&nbsp;зачем&nbsp;этот&nbsp;плеск&nbsp;через&nbsp;борт?&nbsp;&nbsp;&nbsp; </span><span class="ch">  Am    Dm6 </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;явно&nbsp;напуган,&nbsp;ты&nbsp;в&nbsp;страхе&nbsp;таком,&nbsp;что&nbsp;сбежал&nbsp;бы,&nbsp;да&nbsp;горд. </span><span class="ch">  E7    Am </span></span>
+<span class="line"><span class="txt"> Едва&nbsp;приступил&nbsp;я&nbsp;к&nbsp;рассказу,&nbsp;а&nbsp;ты&nbsp;уж&nbsp;и&nbsp;белый&nbsp;совсем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C  A7 Dm F(g f c a) </span></span>
+<span class="line"><span class="txt"> И&nbsp;сразу&nbsp;закуривать,&nbsp;сразу&nbsp;закуривать,&nbsp;сразу.&nbsp;Зачем?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Dm Am E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Уймись,&nbsp;не&nbsp;греми&nbsp;кандалами,&nbsp;тебе&nbsp;повезёт,&nbsp;повезёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Am    Dm6 </span>
-<span class="txt"> В&nbsp;твоей&nbsp;поднебесной&nbsp;программе&nbsp;никто&nbsp;ничего&nbsp;не&nbsp;поймёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  E7    Am </span>
-<span class="txt"> В&nbsp;тебе&nbsp;согласятся&nbsp;как&nbsp;раз&nbsp;два&nbsp;фарватера:&nbsp;твой&nbsp;и&nbsp;ничей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C  A7 Dm F(g f c a) </span>
-<span class="txt"> Ты&nbsp;светлая&nbsp;точка&nbsp;пространства,&nbsp;тандем,&nbsp;совпаденье&nbsp;лучей.&nbsp;&nbsp;&nbsp; </span><span class="ch">  Dm Am E7 Am </span>
+<span class="line"><span class="txt"> Уймись,&nbsp;не&nbsp;греми&nbsp;кандалами,&nbsp;тебе&nbsp;повезёт,&nbsp;повезёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Am    Dm6 </span></span>
+<span class="line"><span class="txt"> В&nbsp;твоей&nbsp;поднебесной&nbsp;программе&nbsp;никто&nbsp;ничего&nbsp;не&nbsp;поймёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  E7    Am </span></span>
+<span class="line"><span class="txt"> В&nbsp;тебе&nbsp;согласятся&nbsp;как&nbsp;раз&nbsp;два&nbsp;фарватера:&nbsp;твой&nbsp;и&nbsp;ничей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C  A7 Dm F(g f c a) </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;светлая&nbsp;точка&nbsp;пространства,&nbsp;тандем,&nbsp;совпаденье&nbsp;лучей.&nbsp;&nbsp;&nbsp; </span><span class="ch">  Dm Am E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Дерзай,&nbsp;мизерабль&nbsp;грандиозный.&nbsp;Быть&nbsp;может,&nbsp;за&nbsp;твой-то&nbsp;визит </span><span class="ch"> ,F  A7 D  F(d c a f) </span>
-<span class="txt"> смягчившись,&nbsp;каратель&nbsp;межзвёздный&nbsp;и&nbsp;нас,&nbsp;остальных,&nbsp;извинит </span><span class="ch"> .Dm Am E7 Am </span>
+<span class="line"><span class="txt"> Дерзай,&nbsp;мизерабль&nbsp;грандиозный.&nbsp;Быть&nbsp;может,&nbsp;за&nbsp;твой-то&nbsp;визит </span><span class="ch"> ,F  A7 D  F(d c a f) </span></span>
+<span class="line"><span class="txt"> смягчившись,&nbsp;каратель&nbsp;межзвёздный&nbsp;и&nbsp;нас,&nbsp;остальных,&nbsp;извинит </span><span class="ch"> .Dm Am E7 Am </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1992</span>
-
+<pre><span class="year">1992</span>
 
 </pre>
+
 
                 </div>
         </div>

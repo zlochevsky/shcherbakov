@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,40 +433,38 @@ span.c {
 data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt"> &nbsp;Любить...&nbsp;не&nbsp;стоит&nbsp;труда. </span>
 <span class="txt"> &nbsp;&nbsp;&nbsp;Лермонтов </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Любовь,&nbsp;как&nbsp;истина,&nbsp;темна&nbsp;и,&nbsp;как&nbsp;полынь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm Dm6 </span>
-<span class="txt"> горька.&nbsp;И&nbsp;соль&nbsp;всё&nbsp;солонее&nbsp;с&nbsp;каждым&nbsp;пудом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H E  Ebdim E7 </span>
-<span class="txt"> Пора&nbsp;менять&nbsp;пейзаж.&nbsp;Нельзя&nbsp;же&nbsp;быть&nbsp;верблюдом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm B </span>
-<span class="txt"> весь&nbsp;век,&nbsp;ad&nbsp;finem,&nbsp;до&nbsp;последнего&nbsp;"аминь".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H Am E     Am </span>
-<span class="txt"> Конца&nbsp;не&nbsp;будет&nbsp;череде&nbsp;учёных&nbsp;книг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     F  F/E   Dm  Dm/C </span>
-<span class="txt"> Словарь&nbsp;в&nbsp;пустыне&nbsp;-&nbsp;невеликая&nbsp;подмога.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/H   E </span>
-<span class="txt"> Блажен,&nbsp;кто&nbsp;духом&nbsp;твёрд&nbsp;и&nbsp;в&nbsp;истину&nbsp;проник.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    A  Dm/A  F7/A </span>
-<span class="txt"> Но&nbsp;истин&nbsp;много,&nbsp;много...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Порой&nbsp;Фортуна&nbsp;предо&nbsp;мною,&nbsp;как&nbsp;во&nbsp;сне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm Dm6 </span>
-<span class="txt"> встаёт&nbsp;-&nbsp;и&nbsp;вижу,&nbsp;что&nbsp;глаза&nbsp;её&nbsp;незрячи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H E  Ebdim E7 </span>
-<span class="txt"> Дразня&nbsp;обилием,&nbsp;из&nbsp;года&nbsp;в&nbsp;год&nbsp;богаче,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm B </span>
-<span class="txt"> её&nbsp;сокровища&nbsp;подмигивают&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H Am E     Am </span>
-<span class="txt"> Краду!..&nbsp;В&nbsp;наш&nbsp;век&nbsp;один&nbsp;ленивый&nbsp;не&nbsp;крадёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     F  F/E   Dm  Dm/C </span>
-<span class="txt"> Беру&nbsp;запретный&nbsp;плод&nbsp;и&nbsp;звонкую&nbsp;монету.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/H   E </span>
-<span class="txt"> Слепа&nbsp;судьба&nbsp;и&nbsp;даже&nbsp;ухом&nbsp;не&nbsp;ведёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    A  Dm/A  F7/A </span>
-<span class="txt"> Но&nbsp;счастья&nbsp;нету,&nbsp;нету...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> "Воспрянь,&nbsp;-&nbsp;внушает&nbsp;мне&nbsp;мой&nbsp;ангел-проводник,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm Dm6 </span>
-<span class="txt"> терпи,&nbsp;полынь&nbsp;пройдёт,&nbsp;начнутся&nbsp;цикламены.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H E  Ebdim E7 </span>
-<span class="txt"> Равно&nbsp;полезен&nbsp;мёд&nbsp;любви&nbsp;и&nbsp;яд&nbsp;измены&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm B </span>
-<span class="txt"> тому,&nbsp;кто&nbsp;духом&nbsp;твёрд&nbsp;и&nbsp;в&nbsp;истину&nbsp;проник".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H Am E     Am </span>
-<span class="txt"> "Ты&nbsp;прав,&nbsp;киваю&nbsp;я,&nbsp;-&nbsp;измена&nbsp;пустяки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     F  F/E   Dm  Dm/C </span>
-<span class="txt"> Любовь&nbsp;важней,&nbsp;но&nbsp;и&nbsp;она&nbsp;трудов&nbsp;не&nbsp;стоит..."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/H   E </span>
-<span class="txt"> И&nbsp;взор&nbsp;мой&nbsp;весел,&nbsp;и&nbsp;стопы&nbsp;мои&nbsp;легки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    A  Dm/A  F7/A </span>
-<span class="txt"> Но&nbsp;сердце&nbsp;ноет,&nbsp;ноет...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> &nbsp; </span>
-
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Любовь,&nbsp;как&nbsp;истина,&nbsp;темна&nbsp;и,&nbsp;как&nbsp;полынь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm Dm6 </span></span>
+<span class="line"><span class="txt"> горька.&nbsp;И&nbsp;соль&nbsp;всё&nbsp;солонее&nbsp;с&nbsp;каждым&nbsp;пудом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H E  Ebdim E7 </span></span>
+<span class="line"><span class="txt"> Пора&nbsp;менять&nbsp;пейзаж.&nbsp;Нельзя&nbsp;же&nbsp;быть&nbsp;верблюдом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm B </span></span>
+<span class="line"><span class="txt"> весь&nbsp;век,&nbsp;ad&nbsp;finem,&nbsp;до&nbsp;последнего&nbsp;"аминь".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H Am E     Am </span></span>
+<span class="line"><span class="txt"> Конца&nbsp;не&nbsp;будет&nbsp;череде&nbsp;учёных&nbsp;книг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     F  F/E   Dm  Dm/C </span></span>
+<span class="line"><span class="txt"> Словарь&nbsp;в&nbsp;пустыне&nbsp;-&nbsp;невеликая&nbsp;подмога.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/H   E </span></span>
+<span class="line"><span class="txt"> Блажен,&nbsp;кто&nbsp;духом&nbsp;твёрд&nbsp;и&nbsp;в&nbsp;истину&nbsp;проник.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    A  Dm/A  F7/A </span></span>
+<span class="line"><span class="txt"> Но&nbsp;истин&nbsp;много,&nbsp;много...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Порой&nbsp;Фортуна&nbsp;предо&nbsp;мною,&nbsp;как&nbsp;во&nbsp;сне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm Dm6 </span></span>
+<span class="line"><span class="txt"> встаёт&nbsp;-&nbsp;и&nbsp;вижу,&nbsp;что&nbsp;глаза&nbsp;её&nbsp;незрячи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H E  Ebdim E7 </span></span>
+<span class="line"><span class="txt"> Дразня&nbsp;обилием,&nbsp;из&nbsp;года&nbsp;в&nbsp;год&nbsp;богаче,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm B </span></span>
+<span class="line"><span class="txt"> её&nbsp;сокровища&nbsp;подмигивают&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H Am E     Am </span></span>
+<span class="line"><span class="txt"> Краду!..&nbsp;В&nbsp;наш&nbsp;век&nbsp;один&nbsp;ленивый&nbsp;не&nbsp;крадёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     F  F/E   Dm  Dm/C </span></span>
+<span class="line"><span class="txt"> Беру&nbsp;запретный&nbsp;плод&nbsp;и&nbsp;звонкую&nbsp;монету.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/H   E </span></span>
+<span class="line"><span class="txt"> Слепа&nbsp;судьба&nbsp;и&nbsp;даже&nbsp;ухом&nbsp;не&nbsp;ведёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    A  Dm/A  F7/A </span></span>
+<span class="line"><span class="txt"> Но&nbsp;счастья&nbsp;нету,&nbsp;нету...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> "Воспрянь,&nbsp;-&nbsp;внушает&nbsp;мне&nbsp;мой&nbsp;ангел-проводник,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm Dm6 </span></span>
+<span class="line"><span class="txt"> терпи,&nbsp;полынь&nbsp;пройдёт,&nbsp;начнутся&nbsp;цикламены.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H E  Ebdim E7 </span></span>
+<span class="line"><span class="txt"> Равно&nbsp;полезен&nbsp;мёд&nbsp;любви&nbsp;и&nbsp;яд&nbsp;измены&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm B </span></span>
+<span class="line"><span class="txt"> тому,&nbsp;кто&nbsp;духом&nbsp;твёрд&nbsp;и&nbsp;в&nbsp;истину&nbsp;проник".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6/H Am E     Am </span></span>
+<span class="line"><span class="txt"> "Ты&nbsp;прав,&nbsp;киваю&nbsp;я,&nbsp;-&nbsp;измена&nbsp;пустяки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C     F  F/E   Dm  Dm/C </span></span>
+<span class="line"><span class="txt"> Любовь&nbsp;важней,&nbsp;но&nbsp;и&nbsp;она&nbsp;трудов&nbsp;не&nbsp;стоит..."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/H   E </span></span>
+<span class="line"><span class="txt"> И&nbsp;взор&nbsp;мой&nbsp;весел,&nbsp;и&nbsp;стопы&nbsp;мои&nbsp;легки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    A  Dm/A  F7/A </span></span>
+<span class="line"><span class="txt"> Но&nbsp;сердце&nbsp;ноет,&nbsp;ноет...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="txt">  </span>
 </div>
-<pre>
-    <span class="year">1990</span>
-
+<pre><span class="year">1990</span>
 </pre>
+
 
                 </div>
         </div>

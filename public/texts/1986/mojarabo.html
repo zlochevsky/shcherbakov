@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,52 +423,50 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="A"><span class="sng-title">МОЯ РАБОТА</span>
+data-key="A"><h1>МОЯ РАБОТА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;помню&nbsp;север,&nbsp;я&nbsp;помню&nbsp;юг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A        D </span>
-<span class="txt"> я&nbsp;помню&nbsp;клевер,&nbsp;я&nbsp;помню&nbsp;луг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Am       Dm </span>
-<span class="txt"> и&nbsp;тёплый&nbsp;ветер,&nbsp;и&nbsp;птичий&nbsp;крик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6     C   C7   F   F#dim </span>
-<span class="txt"> и&nbsp;каждый&nbsp;вечер,&nbsp;и&nbsp;каждый&nbsp;миг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A   E7   A </span>
-<span class="txt"> Я&nbsp;так&nbsp;обязан,&nbsp;я&nbsp;так&nbsp;рождён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      D        G </span>
-<span class="txt"> Я&nbsp;так&nbsp;наказан&nbsp;и&nbsp;осуждён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Dm  Dm6  Gm </span>
-<span class="txt"> Чтоб&nbsp;всё&nbsp;исполнить&nbsp;и&nbsp;всё&nbsp;суметь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 F   D7   Gm </span>
-<span class="txt"> я&nbsp;должен&nbsp;помнить.&nbsp;Иначе&nbsp;-&nbsp;смерть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 D   Em   A7  D </span>
+<span class="line"><span class="txt"> Я&nbsp;помню&nbsp;север,&nbsp;я&nbsp;помню&nbsp;юг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A        D </span></span>
+<span class="line"><span class="txt"> я&nbsp;помню&nbsp;клевер,&nbsp;я&nbsp;помню&nbsp;луг,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Am       Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;тёплый&nbsp;ветер,&nbsp;и&nbsp;птичий&nbsp;крик,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6     C   C7   F   F#dim </span></span>
+<span class="line"><span class="txt"> и&nbsp;каждый&nbsp;вечер,&nbsp;и&nbsp;каждый&nbsp;миг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A   E7   A </span></span>
+<span class="line"><span class="txt"> Я&nbsp;так&nbsp;обязан,&nbsp;я&nbsp;так&nbsp;рождён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      D        G </span></span>
+<span class="line"><span class="txt"> Я&nbsp;так&nbsp;наказан&nbsp;и&nbsp;осуждён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Dm  Dm6  Gm </span></span>
+<span class="line"><span class="txt"> Чтоб&nbsp;всё&nbsp;исполнить&nbsp;и&nbsp;всё&nbsp;суметь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 F   D7   Gm </span></span>
+<span class="line"><span class="txt"> я&nbsp;должен&nbsp;помнить.&nbsp;Иначе&nbsp;-&nbsp;смерть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 D   Em   A7  D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;снова,&nbsp;снова,&nbsp;всю&nbsp;жизнь&nbsp;подряд&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A        D </span>
-<span class="txt"> я&nbsp;помню&nbsp;слово,&nbsp;я&nbsp;помню&nbsp;взгляд;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Am       Dm </span>
-<span class="txt"> восторг&nbsp;полёта,&nbsp;паденья&nbsp;стыд&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6     C   C7   F   F#dim </span>
-<span class="txt"> моя&nbsp;работа&nbsp;во&nbsp;мне&nbsp;хранит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A   E7   A </span>
-<span class="txt"> Моя&nbsp;работа&nbsp;-&nbsp;моя&nbsp;беда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      D        G </span>
-<span class="txt"> моя&nbsp;забота,&nbsp;моя&nbsp;звезда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Dm  Dm6  Gm </span>
-<span class="txt"> мой&nbsp;день&nbsp;ненастный&nbsp;и&nbsp;гром&nbsp;побед,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 F   D7   Gm </span>
-<span class="txt"> мой&nbsp;свет&nbsp;прекрасный,&nbsp;прекрасный&nbsp;свет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 D   Em   A7  D </span>
+<span class="line"><span class="txt"> И&nbsp;снова,&nbsp;снова,&nbsp;всю&nbsp;жизнь&nbsp;подряд&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A        D </span></span>
+<span class="line"><span class="txt"> я&nbsp;помню&nbsp;слово,&nbsp;я&nbsp;помню&nbsp;взгляд;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Am       Dm </span></span>
+<span class="line"><span class="txt"> восторг&nbsp;полёта,&nbsp;паденья&nbsp;стыд&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6     C   C7   F   F#dim </span></span>
+<span class="line"><span class="txt"> моя&nbsp;работа&nbsp;во&nbsp;мне&nbsp;хранит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A   E7   A </span></span>
+<span class="line"><span class="txt"> Моя&nbsp;работа&nbsp;-&nbsp;моя&nbsp;беда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      D        G </span></span>
+<span class="line"><span class="txt"> моя&nbsp;забота,&nbsp;моя&nbsp;звезда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Dm  Dm6  Gm </span></span>
+<span class="line"><span class="txt"> мой&nbsp;день&nbsp;ненастный&nbsp;и&nbsp;гром&nbsp;побед,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 F   D7   Gm </span></span>
+<span class="line"><span class="txt"> мой&nbsp;свет&nbsp;прекрасный,&nbsp;прекрасный&nbsp;свет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 D   Em   A7  D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Огнём&nbsp;надежды&nbsp;горю,&nbsp;творя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A        D </span>
-<span class="txt"> пока&nbsp;безбрежны&nbsp;мои&nbsp;моря.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Am       Dm </span>
-<span class="txt"> Но&nbsp;если&nbsp;что-то&nbsp;произойдёт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6     C   C7   F   F#dim </span>
-<span class="txt"> моя&nbsp;работа&nbsp;меня&nbsp;спасёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A   E7   A </span>
-<span class="txt"> Везде&nbsp;на&nbsp;свете&nbsp;сквозь&nbsp;боль&nbsp;и&nbsp;мрак&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      D        G </span>
-<span class="txt"> всегда&nbsp;мне&nbsp;светит&nbsp;её&nbsp;маяк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Dm  Dm6  Gm </span>
-<span class="txt"> На&nbsp;все&nbsp;призывы,&nbsp;хотя&nbsp;б&nbsp;во&nbsp;сне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 F   D7   Gm </span>
-<span class="txt"> её&nbsp;мотивы&nbsp;ответят&nbsp;мне...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 D   Em   A7  D </span>
+<span class="line"><span class="txt"> Огнём&nbsp;надежды&nbsp;горю,&nbsp;творя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A        D </span></span>
+<span class="line"><span class="txt"> пока&nbsp;безбрежны&nbsp;мои&nbsp;моря.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Am       Dm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;если&nbsp;что-то&nbsp;произойдёт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6     C   C7   F   F#dim </span></span>
+<span class="line"><span class="txt"> моя&nbsp;работа&nbsp;меня&nbsp;спасёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A   E7   A </span></span>
+<span class="line"><span class="txt"> Везде&nbsp;на&nbsp;свете&nbsp;сквозь&nbsp;боль&nbsp;и&nbsp;мрак&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      D        G </span></span>
+<span class="line"><span class="txt"> всегда&nbsp;мне&nbsp;светит&nbsp;её&nbsp;маяк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Dm  Dm6  Gm </span></span>
+<span class="line"><span class="txt"> На&nbsp;все&nbsp;призывы,&nbsp;хотя&nbsp;б&nbsp;во&nbsp;сне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 F   D7   Gm </span></span>
+<span class="line"><span class="txt"> её&nbsp;мотивы&nbsp;ответят&nbsp;мне...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Gm6 D   Em   A7  D </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>, <span class="year">1986</span>
-
+<pre><span class="year">1985</span>, <span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

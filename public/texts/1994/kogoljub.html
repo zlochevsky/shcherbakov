@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,62 +423,60 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="E"><span class="txt"> *&nbsp;*&nbsp;* </span>
+data-key="E"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кого&nbsp;люблю,&nbsp;того&nbsp;не </span>
-<span class="txt"> встречу&nbsp;в&nbsp;списке&nbsp;первых&nbsp;ста&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кого&nbsp;люблю,&nbsp;того&nbsp;не </span>
+<span class="line"><span class="txt"> встречу&nbsp;в&nbsp;списке&nbsp;первых&nbsp;ста&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E </span></span>
 <span class="txt"> персон,&nbsp;на&nbsp;раут&nbsp;званых,&nbsp;но&nbsp;и </span>
-<span class="txt"> в&nbsp;чёрных&nbsp;списках,&nbsp;в&nbsp;кои&nbsp;сам&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a-h-c-d-d#-e-a    5,4,3 str. </span>
-<span class="txt"> внесён&nbsp;я,&nbsp;нет&nbsp;их,&nbsp;чтимых&nbsp;мною&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-Dm </span>
-<span class="txt"> черт,&nbsp;любезных&nbsp;прозвищ;&nbsp;словом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
-<span class="txt"> их&nbsp;в&nbsp;известном&nbsp;смысле&nbsp;нет&nbsp;совсем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-f#-g-a-b-h-eh- Am 6,5,4 str. </span>
+<span class="line"><span class="txt"> в&nbsp;чёрных&nbsp;списках,&nbsp;в&nbsp;кои&nbsp;сам&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a-h-c-d-d#-e-a    5,4,3 str. </span></span>
+<span class="line"><span class="txt"> внесён&nbsp;я,&nbsp;нет&nbsp;их,&nbsp;чтимых&nbsp;мною&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-Dm </span></span>
+<span class="line"><span class="txt"> черт,&nbsp;любезных&nbsp;прозвищ;&nbsp;словом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
+<span class="line"><span class="txt"> их&nbsp;в&nbsp;известном&nbsp;смысле&nbsp;нет&nbsp;совсем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-f#-g-a-b-h-eh- Am 6,5,4 str. </span></span>
 <span class="txt"> но&nbsp;лишь&nbsp;в&nbsp;известном,&nbsp;так&nbsp;как </span>
-<span class="txt"> тих&nbsp;полёт&nbsp;луча,&nbsp;а&nbsp;всё&nbsp;ж&nbsp;не&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    etc. </span>
-<span class="txt"> нем.&nbsp;Мы&nbsp;-&nbsp;крупный&nbsp;шрифт;&nbsp;они&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E </span>
+<span class="line"><span class="txt"> тих&nbsp;полёт&nbsp;луча,&nbsp;а&nbsp;всё&nbsp;ж&nbsp;не&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    etc. </span></span>
+<span class="line"><span class="txt"> нем.&nbsp;Мы&nbsp;-&nbsp;крупный&nbsp;шрифт;&nbsp;они&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E </span></span>
 <span class="txt"> петит.&nbsp;Предместье&nbsp;-&nbsp;их&nbsp;среда. </span>
-<span class="txt"> Медуз&nbsp;и&nbsp;мидий&nbsp;запах&nbsp;им&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a-h-c-d-d#-e-a    5,4,3 str. </span>
-<span class="txt"> претит.&nbsp;Они&nbsp;не&nbsp;пьют&nbsp;напитков,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-Dm </span>
-<span class="txt"> плюс&nbsp;мудры&nbsp;в&nbsp;вопросах&nbsp;плоти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
-<span class="txt"> Спецфасон&nbsp;сидит&nbsp;на&nbsp;них&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-f#-g-a-b-h-eh- Am 6,5,4 str. </span>
+<span class="line"><span class="txt"> Медуз&nbsp;и&nbsp;мидий&nbsp;запах&nbsp;им&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a-h-c-d-d#-e-a    5,4,3 str. </span></span>
+<span class="line"><span class="txt"> претит.&nbsp;Они&nbsp;не&nbsp;пьют&nbsp;напитков,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-Dm </span></span>
+<span class="line"><span class="txt"> плюс&nbsp;мудры&nbsp;в&nbsp;вопросах&nbsp;плоти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
+<span class="line"><span class="txt"> Спецфасон&nbsp;сидит&nbsp;на&nbsp;них&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-f#-g-a-b-h-eh- Am 6,5,4 str. </span></span>
 <span class="txt"> сурово,&nbsp;без&nbsp;гвардейства,&nbsp;хоть&nbsp;и </span>
-<span class="txt"> не&nbsp;без&nbsp;щегольства.&nbsp;Из&nbsp;них&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> любого,&nbsp;даром&nbsp;что&nbsp;не&nbsp;видел&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E </span>
+<span class="line"><span class="txt"> не&nbsp;без&nbsp;щегольства.&nbsp;Из&nbsp;них&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> любого,&nbsp;даром&nbsp;что&nbsp;не&nbsp;видел&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E </span></span>
 <span class="txt"> век,&nbsp;узнаешь,&nbsp;встретив,&nbsp;вмиг: </span>
-<span class="txt"> примета&nbsp;-&nbsp;шлем&nbsp;как&nbsp;смоль,&nbsp;плюмаж&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a-h-c-d-d#-e-a    5,4,3 str. </span>
-<span class="txt"> как&nbsp;снег.&nbsp;Что&nbsp;до&nbsp;талантов&nbsp;-&nbsp;их&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-Dm </span>
-<span class="txt"> боюсь&nbsp;не&nbsp;счесть,&nbsp;но&nbsp;есть&nbsp;один&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
-<span class="txt"> конёк,&nbsp;и&nbsp;он&nbsp;не&nbsp;чушь,&nbsp;не&nbsp;глупость,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-f#-g-a-b-h-eh- Am 6,5,4 str. </span>
+<span class="line"><span class="txt"> примета&nbsp;-&nbsp;шлем&nbsp;как&nbsp;смоль,&nbsp;плюмаж&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a-h-c-d-d#-e-a    5,4,3 str. </span></span>
+<span class="line"><span class="txt"> как&nbsp;снег.&nbsp;Что&nbsp;до&nbsp;талантов&nbsp;-&nbsp;их&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-Dm </span></span>
+<span class="line"><span class="txt"> боюсь&nbsp;не&nbsp;счесть,&nbsp;но&nbsp;есть&nbsp;один&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
+<span class="line"><span class="txt"> конёк,&nbsp;и&nbsp;он&nbsp;не&nbsp;чушь,&nbsp;не&nbsp;глупость,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-f#-g-a-b-h-eh- Am 6,5,4 str. </span></span>
 <span class="txt"> нет,&nbsp;сей&nbsp;труд&nbsp;-&nbsp;ремонт&nbsp;машин </span>
-<span class="txt"> спортивных,&nbsp;вот&nbsp;за&nbsp;что&nbsp;люблю.&nbsp;Пусть&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    etc. </span>
-<span class="txt"> критик&nbsp;злой&nbsp;поднимет&nbsp;свист&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E </span>
+<span class="line"><span class="txt"> спортивных,&nbsp;вот&nbsp;за&nbsp;что&nbsp;люблю.&nbsp;Пусть&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    etc. </span></span>
+<span class="line"><span class="txt"> критик&nbsp;злой&nbsp;поднимет&nbsp;свист&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E </span></span>
 <span class="txt"> и&nbsp;брань,&nbsp;незлой&nbsp;воскликнет:&nbsp;"Шутишь!" </span>
-<span class="txt"> пусть.&nbsp;Но&nbsp;долу&nbsp;взор&nbsp;склонив&nbsp;и&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a-h-c-d-d#-e-a    5,4,3 str. </span>
-<span class="txt"> длань&nbsp;воздев,&nbsp;клянусь,&nbsp;что,&nbsp;чуть&nbsp;лишь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-Dm </span>
-<span class="txt"> с&nbsp;месяц&nbsp;их&nbsp;не&nbsp;зрю&nbsp;в&nbsp;житейском&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
-<span class="txt"> море,&nbsp;право,&nbsp;друг&nbsp;Гораций,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-f#-g-a-b-h-eh- Am 6,5,4 str. </span>
+<span class="line"><span class="txt"> пусть.&nbsp;Но&nbsp;долу&nbsp;взор&nbsp;склонив&nbsp;и&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a-h-c-d-d#-e-a    5,4,3 str. </span></span>
+<span class="line"><span class="txt"> длань&nbsp;воздев,&nbsp;клянусь,&nbsp;что,&nbsp;чуть&nbsp;лишь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-Dm </span></span>
+<span class="line"><span class="txt"> с&nbsp;месяц&nbsp;их&nbsp;не&nbsp;зрю&nbsp;в&nbsp;житейском&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
+<span class="line"><span class="txt"> море,&nbsp;право,&nbsp;друг&nbsp;Гораций,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-f#-g-a-b-h-eh- Am 6,5,4 str. </span></span>
 <span class="txt"> я&nbsp;с&nbsp;ума&nbsp;схожу.&nbsp;О&nbsp;горе, </span>
-<span class="txt"> горе&nbsp;мне:&nbsp;у&nbsp;них&nbsp;всегда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> цейтнот,&nbsp;а&nbsp;нынче&nbsp;вовсе&nbsp;масса&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E </span>
+<span class="line"><span class="txt"> горе&nbsp;мне:&nbsp;у&nbsp;них&nbsp;всегда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> цейтнот,&nbsp;а&nbsp;нынче&nbsp;вовсе&nbsp;масса&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E </span></span>
 <span class="txt"> дел,&nbsp;как&nbsp;раз&nbsp;работ&nbsp;разгар </span>
-<span class="txt"> ремонтных,&nbsp;скоро&nbsp;кросс,&nbsp;блиц-трасса:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a-h-c-d-d#-e-a    5,4,3 str. </span>
-<span class="txt"> Ревель&nbsp;-&nbsp;Лемберг&nbsp;-&nbsp;Сыктывкар&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-Dm </span>
-<span class="txt"> Тифлис,&nbsp;приз&nbsp;двести&nbsp;тысяч&nbsp;фунтов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span>
+<span class="line"><span class="txt"> ремонтных,&nbsp;скоро&nbsp;кросс,&nbsp;блиц-трасса:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> a-h-c-d-d#-e-a    5,4,3 str. </span></span>
+<span class="line"><span class="txt"> Ревель&nbsp;-&nbsp;Лемберг&nbsp;-&nbsp;Сыктывкар&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> e-Dm </span></span>
+<span class="line"><span class="txt"> Тифлис,&nbsp;приз&nbsp;двести&nbsp;тысяч&nbsp;фунтов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1994</span>
-
+<pre><span class="year">1994</span>
 </pre>
+
 
                 </div>
         </div>

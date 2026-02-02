@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,49 +433,45 @@ span.c {
 data-key="Am"><span class="txt"> ИНТЕРМЕДИЯ&nbsp;5 </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;в&nbsp;архиве&nbsp;при&nbsp;лампаде,&nbsp;не&nbsp;на&nbsp;Мойке&nbsp;в&nbsp;Петрограде,&nbsp;не&nbsp;в&nbsp;роще&nbsp;у&nbsp;ручья,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C A7 F A7 Dm  </span>
-<span class="txt"> на&nbsp;московской&nbsp;Маросейке&nbsp;поместился&nbsp;на&nbsp;скамейке&nbsp;я.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C Dm Am </span>
-<span class="txt"> В&nbsp;книгу&nbsp;взором&nbsp;я&nbsp;упёрся.&nbsp;Что&nbsp;читал&nbsp;-&nbsp;не&nbsp;помню&nbsp;-&nbsp;Бёрнса?&nbsp;Хармса?&nbsp;-&nbsp;не&nbsp;помню&nbsp;что.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C A7 F A7 Dm  </span>
-<span class="txt"> Но&nbsp;легко,&nbsp;без&nbsp;проволочек,&nbsp;одолел&nbsp;примерно&nbsp;строчек&nbsp;сто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C Dm Am </span>
+<span class="line"><span class="txt"> Не&nbsp;в&nbsp;архиве&nbsp;при&nbsp;лампаде,&nbsp;не&nbsp;на&nbsp;Мойке&nbsp;в&nbsp;Петрограде,&nbsp;не&nbsp;в&nbsp;роще&nbsp;у&nbsp;ручья,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C A7 F A7 Dm  </span></span>
+<span class="line"><span class="txt"> на&nbsp;московской&nbsp;Маросейке&nbsp;поместился&nbsp;на&nbsp;скамейке&nbsp;я.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C Dm Am </span></span>
+<span class="line"><span class="txt"> В&nbsp;книгу&nbsp;взором&nbsp;я&nbsp;упёрся.&nbsp;Что&nbsp;читал&nbsp;-&nbsp;не&nbsp;помню&nbsp;-&nbsp;Бёрнса?&nbsp;Хармса?&nbsp;-&nbsp;не&nbsp;помню&nbsp;что.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C A7 F A7 Dm  </span></span>
+<span class="line"><span class="txt"> Но&nbsp;легко,&nbsp;без&nbsp;проволочек,&nbsp;одолел&nbsp;примерно&nbsp;строчек&nbsp;сто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C Dm Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;мечтая&nbsp;о&nbsp;скандале,&nbsp;принялся&nbsp;читать&nbsp;я&nbsp;дале.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C A7 F A7 Dm </span>
-<span class="txt"> Но&nbsp;-&nbsp;еле&nbsp;принялся&nbsp;-&nbsp;села&nbsp;на&nbsp;скамейку&nbsp;дама,&nbsp;из&nbsp;одних&nbsp;суставов&nbsp;прямо&nbsp;вся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C Dm Am       </span>
-<span class="txt"> Только&nbsp;что&nbsp;в&nbsp;ларьке,&nbsp;где&nbsp;было&nbsp;дёшево,&nbsp;она&nbsp;купила&nbsp;отечественных&nbsp;кур.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Eb C7 G# C7 Fm  </span>
-<span class="txt"> Два&nbsp;кота,&nbsp;что&nbsp;рядом&nbsp;спали,&nbsp;встрепенулись&nbsp;и&nbsp;сказали&nbsp;&laquo;мур&raquo;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">             B Eb Fm Cm </span>
+<span class="line"><span class="txt"> Не&nbsp;мечтая&nbsp;о&nbsp;скандале,&nbsp;принялся&nbsp;читать&nbsp;я&nbsp;дале.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C A7 F A7 Dm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;-&nbsp;еле&nbsp;принялся&nbsp;-&nbsp;села&nbsp;на&nbsp;скамейку&nbsp;дама,&nbsp;из&nbsp;одних&nbsp;суставов&nbsp;прямо&nbsp;вся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C Dm Am       </span></span>
+<span class="line"><span class="txt"> Только&nbsp;что&nbsp;в&nbsp;ларьке,&nbsp;где&nbsp;было&nbsp;дёшево,&nbsp;она&nbsp;купила&nbsp;отечественных&nbsp;кур.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Eb C7 G# C7 Fm  </span></span>
+<span class="line"><span class="txt"> Два&nbsp;кота,&nbsp;что&nbsp;рядом&nbsp;спали,&nbsp;встрепенулись&nbsp;и&nbsp;сказали&nbsp;&laquo;мур&raquo;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">             B Eb Fm Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> "Надо&nbsp;же!&nbsp;-&nbsp;вздохнула&nbsp;дама,&nbsp;-&nbsp;это&nbsp;же&nbsp;кошмар&nbsp;и&nbsp;драма:&nbsp;семь&nbsp;сорок&nbsp;за&nbsp;кило!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> "Надо&nbsp;же!&nbsp;-&nbsp;вздохнула&nbsp;дама,&nbsp;-&nbsp;это&nbsp;же&nbsp;кошмар&nbsp;и&nbsp;драма:&nbsp;семь&nbsp;сорок&nbsp;за&nbsp;кило!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> ...А&nbsp;вокруг&nbsp;Москва&nbsp;гудела,&nbsp;солнце&nbsp;жгло,&nbsp;к&nbsp;июлю&nbsp;дело&nbsp;шло... </span>
-<span class="txt"> "Жулики!&nbsp;-&nbsp;взметнулась&nbsp;дама.&nbsp;-&nbsp;Не&nbsp;товар,&nbsp;одна&nbsp;реклама,&nbsp;не&nbsp;куры&nbsp;-&nbsp;смех&nbsp;и&nbsp;грех.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm... </span>
+<span class="line"><span class="txt"> "Жулики!&nbsp;-&nbsp;взметнулась&nbsp;дама.&nbsp;-&nbsp;Не&nbsp;товар,&nbsp;одна&nbsp;реклама,&nbsp;не&nbsp;куры&nbsp;-&nbsp;смех&nbsp;и&nbsp;грех.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm... </span></span>
 <span class="txt"> Нет&nbsp;от&nbsp;этого&nbsp;товара&nbsp;ни&nbsp;бульона,&nbsp;ни&nbsp;навара,&nbsp;эх. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Чтоб&nbsp;у&nbsp;них&nbsp;труба&nbsp;сломалась!&nbsp;Жулики!&nbsp;-&nbsp;не&nbsp;унималась&nbsp;дама,&nbsp;-&nbsp;побей&nbsp;их&nbsp;Бог!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Чтоб&nbsp;у&nbsp;них&nbsp;труба&nbsp;сломалась!&nbsp;Жулики!&nbsp;-&nbsp;не&nbsp;унималась&nbsp;дама,&nbsp;-&nbsp;побей&nbsp;их&nbsp;Бог!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> Мясо&nbsp;где?&nbsp;Сплошные&nbsp;кости.&nbsp;А&nbsp;у&nbsp;нас&nbsp;во&nbsp;вторник&nbsp;гости,&nbsp;ох. </span>
-<span class="txt"> Ни&nbsp;за&nbsp;что,&nbsp;-&nbsp;взревела&nbsp;дама,&nbsp;-&nbsp;не&nbsp;приму&nbsp;такого&nbsp;срама,&nbsp;лучше&nbsp;обратно&nbsp;сдам!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm... </span>
+<span class="line"><span class="txt"> Ни&nbsp;за&nbsp;что,&nbsp;-&nbsp;взревела&nbsp;дама,&nbsp;-&nbsp;не&nbsp;приму&nbsp;такого&nbsp;срама,&nbsp;лучше&nbsp;обратно&nbsp;сдам!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm... </span></span>
 <span class="txt"> ...И&nbsp;пошла&nbsp;сдавать&nbsp;обратно&nbsp;купленный&nbsp;почти&nbsp;бесплатно&nbsp;хлам. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Шевелиться&nbsp;не&nbsp;имея&nbsp;повода,&nbsp;сидел&nbsp;себе&nbsp;я,&nbsp;обликом&nbsp;не&nbsp;светлел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Шевелиться&nbsp;не&nbsp;имея&nbsp;повода,&nbsp;сидел&nbsp;себе&nbsp;я,&nbsp;обликом&nbsp;не&nbsp;светлел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> А&nbsp;кругом,&nbsp;гудя&nbsp;и&nbsp;воя,&nbsp;город&nbsp;каменный&nbsp;от&nbsp;зноя&nbsp;млел. </span>
-<span class="txt"> Кашлял&nbsp;он&nbsp;и&nbsp;задыхался.&nbsp;Я&nbsp;же&nbsp;вновь&nbsp;уткнулся&nbsp;в&nbsp;Хармса,&nbsp;не&nbsp;молвил&nbsp;ничего.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
-<span class="txt"> Небо&nbsp;наземь&nbsp;не&nbsp;спустилось,&nbsp;но&nbsp;в&nbsp;душе&nbsp;моей&nbsp;сгустилось&nbsp;некоторое&nbsp;хамство,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C Dm Am </span>
-<span class="txt"> некоторое&nbsp;хамство,&nbsp;некоторое&nbsp;хамство,&nbsp;некоторое&nbsp;хамство.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F C Dm E Am </span>
+<span class="line"><span class="txt"> Кашлял&nbsp;он&nbsp;и&nbsp;задыхался.&nbsp;Я&nbsp;же&nbsp;вновь&nbsp;уткнулся&nbsp;в&nbsp;Хармса,&nbsp;не&nbsp;молвил&nbsp;ничего.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
+<span class="line"><span class="txt"> Небо&nbsp;наземь&nbsp;не&nbsp;спустилось,&nbsp;но&nbsp;в&nbsp;душе&nbsp;моей&nbsp;сгустилось&nbsp;некоторое&nbsp;хамство,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C Dm Am </span></span>
+<span class="line"><span class="txt"> некоторое&nbsp;хамство,&nbsp;некоторое&nbsp;хамство,&nbsp;некоторое&nbsp;хамство.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F C Dm E Am </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
 <pre>
-    
 <span class="year">2002</span>                                                                                 Условная нотировка
                                                                                      по исполнению <span class="year">2002</span> года
                                                                                      под синтезатор (диск <a href="../../Disks/esli.html">Если</a>).
 
-
 </pre>
+
 
                 </div>
         </div>

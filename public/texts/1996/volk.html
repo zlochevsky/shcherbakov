@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,59 +423,57 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Gm"><span class="sng-title">ВОЛК</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7/C# Cm6   Gm6/B </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A A7/G  Gm6   D      Gm </span>
+data-key="Gm"><h1>ВОЛК</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7/C# Cm6   Gm6/B </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A A7/G  Gm6   D      Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ты&nbsp;-&nbsp;чёрный&nbsp;волк.&nbsp;В&nbsp;должный&nbsp;час&nbsp;вспомнит&nbsp;о&nbsp;тебе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7 </span>
-<span class="txt"> ад.&nbsp;А&nbsp;пока&nbsp;привыкай&nbsp;вздыбливать&nbsp;тарзанью&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A D7    Cm/Eb D7 Gm </span>
-<span class="txt"> шерсть,&nbsp;письменам&nbsp;не&nbsp;внимать,&nbsp;верить&nbsp;осязанью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  G     Cm </span>
-<span class="txt"> Огнь,&nbsp;ореол,&nbsp;океан&nbsp;-&nbsp;всё&nbsp;это&nbsp;тебе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Cm/G  F#dim/A  G </span>
-<span class="txt"> В&nbsp;шторм&nbsp;должный&nbsp;курс&nbsp;не&nbsp;однажды&nbsp;бизанью&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7/C# Cm6      Gm6/B  </span>
-<span class="txt"> мёртвый&nbsp;голландец&nbsp;укажет&nbsp;тебе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A A7/G  Gm6      D   Gm </span>
+<span class="line"><span class="txt"> Ты&nbsp;-&nbsp;чёрный&nbsp;волк.&nbsp;В&nbsp;должный&nbsp;час&nbsp;вспомнит&nbsp;о&nbsp;тебе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7 </span></span>
+<span class="line"><span class="txt"> ад.&nbsp;А&nbsp;пока&nbsp;привыкай&nbsp;вздыбливать&nbsp;тарзанью&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A D7    Cm/Eb D7 Gm </span></span>
+<span class="line"><span class="txt"> шерсть,&nbsp;письменам&nbsp;не&nbsp;внимать,&nbsp;верить&nbsp;осязанью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  G     Cm </span></span>
+<span class="line"><span class="txt"> Огнь,&nbsp;ореол,&nbsp;океан&nbsp;-&nbsp;всё&nbsp;это&nbsp;тебе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Cm/G  F#dim/A  G </span></span>
+<span class="line"><span class="txt"> В&nbsp;шторм&nbsp;должный&nbsp;курс&nbsp;не&nbsp;однажды&nbsp;бизанью&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7/C# Cm6      Gm6/B  </span></span>
+<span class="line"><span class="txt"> мёртвый&nbsp;голландец&nbsp;укажет&nbsp;тебе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A A7/G  Gm6      D   Gm </span></span>
 <span class="txt">  </span>
-<span class="txt"> Плен&nbsp;победишь,&nbsp;и&nbsp;холмы&nbsp;встанут&nbsp;пред&nbsp;тобой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7 </span>
-<span class="txt"> Но,&nbsp;на&nbsp;холмах&nbsp;не&nbsp;узнав&nbsp;Иерусалима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A D7    Cm/Eb D7 Gm </span>
-<span class="txt"> так&nbsp;и&nbsp;пройдёшь&nbsp;сквозь&nbsp;врата,&nbsp;только&nbsp;что&nbsp;не&nbsp;мимо,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  G     Cm </span>
-<span class="txt"> в&nbsp;храм,&nbsp;где&nbsp;как&nbsp;раз&nbsp;в&nbsp;этот&nbsp;час&nbsp;радужно-рябой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Cm/G  F#dim/A  G </span>
-<span class="txt"> пёстрый&nbsp;витраж&nbsp;сам&nbsp;собой,&nbsp;без&nbsp;нажима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7/C# Cm6      Gm6/B </span>
-<span class="txt"> брызнет&nbsp;и&nbsp;блёстки&nbsp;взметнёт&nbsp;над&nbsp;тобой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A A7/G  Gm6      D   Gm </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> Букв&nbsp;не&nbsp;поймёшь.&nbsp;Но&nbsp;словарь&nbsp;втиснет&nbsp;и&nbsp;тебя&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7 </span>
-<span class="txt"> в&nbsp;свой&nbsp;дом&nbsp;сирот,&nbsp;в&nbsp;толчею&nbsp;чётных&nbsp;и&nbsp;нечётных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A D7    Cm/Eb D7 Gm </span>
-<span class="txt"> глав.&nbsp;Клевете&nbsp;личных&nbsp;дел,&nbsp;мрачных&nbsp;подноготных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  G     Cm </span>
-<span class="txt"> в&nbsp;тон&nbsp;подпоёт&nbsp;клевета&nbsp;басен&nbsp;про&nbsp;тебя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Cm/G  F#dim/A  G </span>
-<span class="txt"> Плоть&nbsp;неизвестных,&nbsp;безвинных&nbsp;животных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7/C# Cm6      Gm6/B </span>
-<span class="txt"> с&nbsp;детства&nbsp;навязнет&nbsp;в&nbsp;зубах&nbsp;у&nbsp;тебя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A A7/G  Gm6      D   Gm </span>
+<span class="line"><span class="txt"> Плен&nbsp;победишь,&nbsp;и&nbsp;холмы&nbsp;встанут&nbsp;пред&nbsp;тобой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7 </span></span>
+<span class="line"><span class="txt"> Но,&nbsp;на&nbsp;холмах&nbsp;не&nbsp;узнав&nbsp;Иерусалима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A D7    Cm/Eb D7 Gm </span></span>
+<span class="line"><span class="txt"> так&nbsp;и&nbsp;пройдёшь&nbsp;сквозь&nbsp;врата,&nbsp;только&nbsp;что&nbsp;не&nbsp;мимо,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  G     Cm </span></span>
+<span class="line"><span class="txt"> в&nbsp;храм,&nbsp;где&nbsp;как&nbsp;раз&nbsp;в&nbsp;этот&nbsp;час&nbsp;радужно-рябой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Cm/G  F#dim/A  G </span></span>
+<span class="line"><span class="txt"> пёстрый&nbsp;витраж&nbsp;сам&nbsp;собой,&nbsp;без&nbsp;нажима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7/C# Cm6      Gm6/B </span></span>
+<span class="line"><span class="txt"> брызнет&nbsp;и&nbsp;блёстки&nbsp;взметнёт&nbsp;над&nbsp;тобой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A A7/G  Gm6      D   Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Долг&nbsp;платежом&nbsp;-&nbsp;там,&nbsp;в&nbsp;конце.&nbsp;Это&nbsp;не&nbsp;шучу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7 </span>
-<span class="txt"> Огнь&nbsp;письменам,&nbsp;сироте&nbsp;гривенник&nbsp;и&nbsp;ёлку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A D7    Cm/Eb D7 Gm </span>
-<span class="txt"> Там&nbsp;-&nbsp;бледной&nbsp;ли&nbsp;бездари,&nbsp;чёрному&nbsp;ли&nbsp;волку&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  G     Cm </span>
-<span class="txt"> дам&nbsp;поделом.&nbsp;Нипочём&nbsp;не&nbsp;переплачу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Cm/G  F#dim/A  G </span>
-<span class="txt"> Всем&nbsp;от&nbsp;того&nbsp;витража&nbsp;по&nbsp;осколку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7/C# Cm6      Gm6/B </span>
-<span class="txt"> Скупо,&nbsp;нелепо.&nbsp;Но&nbsp;я&nbsp;так&nbsp;хочу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A A7/G  Gm6      D   Gm </span>
+<span class="line"><span class="txt"> Букв&nbsp;не&nbsp;поймёшь.&nbsp;Но&nbsp;словарь&nbsp;втиснет&nbsp;и&nbsp;тебя&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7 </span></span>
+<span class="line"><span class="txt"> в&nbsp;свой&nbsp;дом&nbsp;сирот,&nbsp;в&nbsp;толчею&nbsp;чётных&nbsp;и&nbsp;нечётных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A D7    Cm/Eb D7 Gm </span></span>
+<span class="line"><span class="txt"> глав.&nbsp;Клевете&nbsp;личных&nbsp;дел,&nbsp;мрачных&nbsp;подноготных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  G     Cm </span></span>
+<span class="line"><span class="txt"> в&nbsp;тон&nbsp;подпоёт&nbsp;клевета&nbsp;басен&nbsp;про&nbsp;тебя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Cm/G  F#dim/A  G </span></span>
+<span class="line"><span class="txt"> Плоть&nbsp;неизвестных,&nbsp;безвинных&nbsp;животных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7/C# Cm6      Gm6/B </span></span>
+<span class="line"><span class="txt"> с&nbsp;детства&nbsp;навязнет&nbsp;в&nbsp;зубах&nbsp;у&nbsp;тебя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A A7/G  Gm6      D   Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;-&nbsp;чёрный&nbsp;волк.&nbsp;Никого&nbsp;нет,&nbsp;кто&nbsp;бы&nbsp;помог&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7 </span>
-<span class="txt"> мне&nbsp;эту&nbsp;речь&nbsp;прекратить&nbsp;не&nbsp;на&nbsp;полуслове.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A D7    Cm/Eb    D7  Gm </span>
+<span class="line"><span class="txt"> Долг&nbsp;платежом&nbsp;-&nbsp;там,&nbsp;в&nbsp;конце.&nbsp;Это&nbsp;не&nbsp;шучу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7 </span></span>
+<span class="line"><span class="txt"> Огнь&nbsp;письменам,&nbsp;сироте&nbsp;гривенник&nbsp;и&nbsp;ёлку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A D7    Cm/Eb D7 Gm </span></span>
+<span class="line"><span class="txt"> Там&nbsp;-&nbsp;бледной&nbsp;ли&nbsp;бездари,&nbsp;чёрному&nbsp;ли&nbsp;волку&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  G     Cm </span></span>
+<span class="line"><span class="txt"> дам&nbsp;поделом.&nbsp;Нипочём&nbsp;не&nbsp;переплачу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab   Cm/G  F#dim/A  G </span></span>
+<span class="line"><span class="txt"> Всем&nbsp;от&nbsp;того&nbsp;витража&nbsp;по&nbsp;осколку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7/C# Cm6      Gm6/B </span></span>
+<span class="line"><span class="txt"> Скупо,&nbsp;нелепо.&nbsp;Но&nbsp;я&nbsp;так&nbsp;хочу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A A7/G  Gm6      D   Gm </span></span>
 <span class="txt">  </span>
  <br />
-
+<span class="line"><span class="txt"> Я&nbsp;-&nbsp;чёрный&nbsp;волк.&nbsp;Никого&nbsp;нет,&nbsp;кто&nbsp;бы&nbsp;помог&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   A7 </span></span>
+<span class="line"><span class="txt"> мне&nbsp;эту&nbsp;речь&nbsp;прекратить&nbsp;не&nbsp;на&nbsp;полуслове.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/A D7    Cm/Eb    D7  Gm </span></span>
+<span class="txt">  </span>
+ <br />
 </div>
-<pre>
-    <span class="year">1996</span>
-
+<pre><span class="year">1996</span>
 </pre>
+
 
                 </div>
         </div>

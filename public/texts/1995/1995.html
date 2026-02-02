@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,88 +423,86 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">1995</span>
+data-key="Em"><h1>1995</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;то&nbsp;время,&nbsp;как&nbsp;нефть&nbsp;на&nbsp;нуле,&nbsp;гниют&nbsp;семена,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/h - g - e - h - </span>
-<span class="txt"> налоги&nbsp;растут&nbsp;не&nbsp;по&nbsp;дням,&nbsp;страна&nbsp;умирает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> - g - e - h -b Am </span>
-<span class="txt"> вы&nbsp;склонны&nbsp;к&nbsp;согласию&nbsp;с&nbsp;кем-то,&nbsp;кто&nbsp;уверяет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> что&nbsp;худшей&nbsp;бедой&nbsp;была&nbsp;бы&nbsp;всё&nbsp;же&nbsp;война.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7             Em </span>
-<span class="txt"> Неправда!&nbsp;Война&nbsp;-&nbsp;это&nbsp;очень&nbsp;славная&nbsp;вещь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Того&nbsp;же,&nbsp;кто&nbsp;вас&nbsp;заморочил&nbsp;иной&nbsp;программой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            E7  Am </span>
-<span class="txt"> я&nbsp;видел:&nbsp;он&nbsp;давеча&nbsp;шёл&nbsp;по&nbsp;проспекту&nbsp;с&nbsp;дамой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6        Em  C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ликом&nbsp;лоснясь,&nbsp;как&nbsp;вяленый&nbsp;лещ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   H7    Em </span>
+<span class="line"><span class="txt"> В&nbsp;то&nbsp;время,&nbsp;как&nbsp;нефть&nbsp;на&nbsp;нуле,&nbsp;гниют&nbsp;семена,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/h - g - e - h - </span></span>
+<span class="line"><span class="txt"> налоги&nbsp;растут&nbsp;не&nbsp;по&nbsp;дням,&nbsp;страна&nbsp;умирает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> - g - e - h -b Am </span></span>
+<span class="line"><span class="txt"> вы&nbsp;склонны&nbsp;к&nbsp;согласию&nbsp;с&nbsp;кем-то,&nbsp;кто&nbsp;уверяет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> что&nbsp;худшей&nbsp;бедой&nbsp;была&nbsp;бы&nbsp;всё&nbsp;же&nbsp;война.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7             Em </span></span>
+<span class="line"><span class="txt"> Неправда!&nbsp;Война&nbsp;-&nbsp;это&nbsp;очень&nbsp;славная&nbsp;вещь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Того&nbsp;же,&nbsp;кто&nbsp;вас&nbsp;заморочил&nbsp;иной&nbsp;программой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            E7  Am </span></span>
+<span class="line"><span class="txt"> я&nbsp;видел:&nbsp;он&nbsp;давеча&nbsp;шёл&nbsp;по&nbsp;проспекту&nbsp;с&nbsp;дамой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6        Em  C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ликом&nbsp;лоснясь,&nbsp;как&nbsp;вяленый&nbsp;лещ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   H7    Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Помилуйте,&nbsp;нешто&nbsp;возможно&nbsp;с&nbsp;ним&nbsp;толковать?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> Ведь&nbsp;он,&nbsp;чай,&nbsp;и&nbsp;формулы&nbsp;пороха&nbsp;знать&nbsp;не&nbsp;знает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am         Dm </span>
-<span class="txt"> гуляет&nbsp;с&nbsp;Мими&nbsp;своей,&nbsp;и&nbsp;пускай&nbsp;гуляет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 </span>
-<span class="txt"> в&nbsp;кровать&nbsp;к&nbsp;ней,&nbsp;чай,&nbsp;норовит,&nbsp;пускай&nbsp;в&nbsp;кровать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7         Am </span>
-<span class="txt"> Нет,&nbsp;мало,&nbsp;ещё&nbsp;и&nbsp;за&nbsp;мир&nbsp;-&nbsp;для&nbsp;чего&nbsp;невесть!&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> в&nbsp;том&nbsp;смысле&nbsp;шумит&nbsp;приватно&nbsp;или&nbsp;публично,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   A7    Dm </span>
-<span class="txt"> что,&nbsp;если&nbsp;б&nbsp;зависело&nbsp;всё&nbsp;от&nbsp;него&nbsp;бы&nbsp;лично,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am    F </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;он&nbsp;бросил&nbsp;бы&nbsp;пить&nbsp;и&nbsp;есть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   E7    Am </span>
+<span class="line"><span class="txt"> Помилуйте,&nbsp;нешто&nbsp;возможно&nbsp;с&nbsp;ним&nbsp;толковать?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> Ведь&nbsp;он,&nbsp;чай,&nbsp;и&nbsp;формулы&nbsp;пороха&nbsp;знать&nbsp;не&nbsp;знает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am         Dm </span></span>
+<span class="line"><span class="txt"> гуляет&nbsp;с&nbsp;Мими&nbsp;своей,&nbsp;и&nbsp;пускай&nbsp;гуляет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 </span></span>
+<span class="line"><span class="txt"> в&nbsp;кровать&nbsp;к&nbsp;ней,&nbsp;чай,&nbsp;норовит,&nbsp;пускай&nbsp;в&nbsp;кровать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7         Am </span></span>
+<span class="line"><span class="txt"> Нет,&nbsp;мало,&nbsp;ещё&nbsp;и&nbsp;за&nbsp;мир&nbsp;-&nbsp;для&nbsp;чего&nbsp;невесть!&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> в&nbsp;том&nbsp;смысле&nbsp;шумит&nbsp;приватно&nbsp;или&nbsp;публично,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   A7    Dm </span></span>
+<span class="line"><span class="txt"> что,&nbsp;если&nbsp;б&nbsp;зависело&nbsp;всё&nbsp;от&nbsp;него&nbsp;бы&nbsp;лично,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am    F </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;он&nbsp;бросил&nbsp;бы&nbsp;пить&nbsp;и&nbsp;есть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   E7    Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Отлично!&nbsp;Параноидально-радужный&nbsp;спектр&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/h - g - e - h - </span>
-<span class="txt"> чуть&nbsp;повод,&nbsp;провозглашай,&nbsp;что&nbsp;солдат&nbsp;не&nbsp;мясо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> - g - e - h -b Am </span>
-<span class="txt"> что&nbsp;танки&nbsp;ходить&nbsp;не&nbsp;должны&nbsp;по&nbsp;земле&nbsp;ни&nbsp;часа&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> воскликнул&nbsp;и&nbsp;вышел&nbsp;проветриться&nbsp;на&nbsp;проспект.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7             Em </span>
-<span class="txt"> А&nbsp;воин&nbsp;меж&nbsp;тем&nbsp;атакует,&nbsp;не&nbsp;трепеща.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> А&nbsp;танки&nbsp;должны&nbsp;не&nbsp;ходить&nbsp;по&nbsp;земле,&nbsp;но&nbsp;ездить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            E7  Am </span>
-<span class="txt"> Молчать&nbsp;бы&nbsp;лещу&nbsp;цивильному,&nbsp;ибо&nbsp;есть&nbsp;ведь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6        Em  C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;где-то&nbsp;потрава&nbsp;и&nbsp;на&nbsp;леща.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   H7    Em </span>
+<span class="line"><span class="txt"> Отлично!&nbsp;Параноидально-радужный&nbsp;спектр&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/h - g - e - h - </span></span>
+<span class="line"><span class="txt"> чуть&nbsp;повод,&nbsp;провозглашай,&nbsp;что&nbsp;солдат&nbsp;не&nbsp;мясо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> - g - e - h -b Am </span></span>
+<span class="line"><span class="txt"> что&nbsp;танки&nbsp;ходить&nbsp;не&nbsp;должны&nbsp;по&nbsp;земле&nbsp;ни&nbsp;часа&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> воскликнул&nbsp;и&nbsp;вышел&nbsp;проветриться&nbsp;на&nbsp;проспект.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7             Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;воин&nbsp;меж&nbsp;тем&nbsp;атакует,&nbsp;не&nbsp;трепеща.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;танки&nbsp;должны&nbsp;не&nbsp;ходить&nbsp;по&nbsp;земле,&nbsp;но&nbsp;ездить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            E7  Am </span></span>
+<span class="line"><span class="txt"> Молчать&nbsp;бы&nbsp;лещу&nbsp;цивильному,&nbsp;ибо&nbsp;есть&nbsp;ведь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6        Em  C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;где-то&nbsp;потрава&nbsp;и&nbsp;на&nbsp;леща.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   H7    Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Однажды&nbsp;он,&nbsp;пролечив&nbsp;головную&nbsp;боль&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> полгода,&nbsp;с&nbsp;курорта&nbsp;скучного&nbsp;возвратится&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am         Dm </span>
-<span class="txt"> и&nbsp;к&nbsp;милой&nbsp;Мими&nbsp;с&nbsp;мимозами&nbsp;разлетится,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 </span>
-<span class="txt"> ан&nbsp;поздно:&nbsp;она&nbsp;не&nbsp;Мими&nbsp;уж,&nbsp;а&nbsp;Ми-бемоль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7         Am </span>
-<span class="txt"> Кто&nbsp;с&nbsp;нею?&nbsp;Да&nbsp;хоть&nbsp;соседнего&nbsp;дома&nbsp;консьерж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> зовут,&nbsp;предположим,&nbsp;Серж,&nbsp;лейтенант&nbsp;запаса.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   A7    Dm </span>
-<span class="txt"> Невкусно?&nbsp;Однако&nbsp;рыба&nbsp;ты&nbsp;или&nbsp;мясо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am    F </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;голоден,&nbsp;сыт&nbsp;ли,&nbsp;а&nbsp;это&nbsp;съешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   E7    Am </span>
+<span class="line"><span class="txt"> Однажды&nbsp;он,&nbsp;пролечив&nbsp;головную&nbsp;боль&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> полгода,&nbsp;с&nbsp;курорта&nbsp;скучного&nbsp;возвратится&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am         Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;к&nbsp;милой&nbsp;Мими&nbsp;с&nbsp;мимозами&nbsp;разлетится,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 </span></span>
+<span class="line"><span class="txt"> ан&nbsp;поздно:&nbsp;она&nbsp;не&nbsp;Мими&nbsp;уж,&nbsp;а&nbsp;Ми-бемоль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7         Am </span></span>
+<span class="line"><span class="txt"> Кто&nbsp;с&nbsp;нею?&nbsp;Да&nbsp;хоть&nbsp;соседнего&nbsp;дома&nbsp;консьерж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> зовут,&nbsp;предположим,&nbsp;Серж,&nbsp;лейтенант&nbsp;запаса.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   A7    Dm </span></span>
+<span class="line"><span class="txt"> Невкусно?&nbsp;Однако&nbsp;рыба&nbsp;ты&nbsp;или&nbsp;мясо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am    F </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;голоден,&nbsp;сыт&nbsp;ли,&nbsp;а&nbsp;это&nbsp;съешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   E7    Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;вот&nbsp;он&nbsp;на&nbsp;все&nbsp;свои&nbsp;слёзные&nbsp;"ох"&nbsp;и&nbsp;"ах"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/h - g - e - h - </span>
-<span class="txt"> услышав&nbsp;в&nbsp;ответ&nbsp;негромкое&nbsp;"А&nbsp;пошёл&nbsp;ты!",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> - g - e - h -b Am </span>
-<span class="txt"> с&nbsp;позором&nbsp;плетётся&nbsp;прочь,&nbsp;как&nbsp;мимоза,&nbsp;жёлтый.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> А&nbsp;воин&nbsp;ему&nbsp;навстречу&nbsp;на&nbsp;костылях,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7             Em </span>
-<span class="txt"> изранен,&nbsp;обезображен,&nbsp;судьба&nbsp;в&nbsp;клочки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Но&nbsp;это&nbsp;трагедия&nbsp;тигра,&nbsp;а&nbsp;не&nbsp;койота,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            E7  Am </span>
-<span class="txt"> завидный&nbsp;удел,&nbsp;и&nbsp;зря&nbsp;пресловутый&nbsp;кто-то&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6        Em  C </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;гневно&nbsp;вперяет&nbsp;в&nbsp;меня&nbsp;зрачки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   H7    Em </span>
+<span class="line"><span class="txt"> И&nbsp;вот&nbsp;он&nbsp;на&nbsp;все&nbsp;свои&nbsp;слёзные&nbsp;"ох"&nbsp;и&nbsp;"ах"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/h - g - e - h - </span></span>
+<span class="line"><span class="txt"> услышав&nbsp;в&nbsp;ответ&nbsp;негромкое&nbsp;"А&nbsp;пошёл&nbsp;ты!",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> - g - e - h -b Am </span></span>
+<span class="line"><span class="txt"> с&nbsp;позором&nbsp;плетётся&nbsp;прочь,&nbsp;как&nbsp;мимоза,&nbsp;жёлтый.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> А&nbsp;воин&nbsp;ему&nbsp;навстречу&nbsp;на&nbsp;костылях,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7             Em </span></span>
+<span class="line"><span class="txt"> изранен,&nbsp;обезображен,&nbsp;судьба&nbsp;в&nbsp;клочки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Но&nbsp;это&nbsp;трагедия&nbsp;тигра,&nbsp;а&nbsp;не&nbsp;койота,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            E7  Am </span></span>
+<span class="line"><span class="txt"> завидный&nbsp;удел,&nbsp;и&nbsp;зря&nbsp;пресловутый&nbsp;кто-то&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6        Em  C </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;гневно&nbsp;вперяет&nbsp;в&nbsp;меня&nbsp;зрачки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   H7    Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;стоит&nbsp;таращиться&nbsp;так,&nbsp;будто&nbsp;я&nbsp;дебил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> пресекший&nbsp;у&nbsp;вас&nbsp;на&nbsp;глазах&nbsp;девятнадцать&nbsp;жизней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am         Dm </span>
-<span class="txt"> мне&nbsp;просто&nbsp;иные&nbsp;лозунги&nbsp;ненавистней&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 </span>
-<span class="txt"> триады&nbsp;"прицелился,&nbsp;выстрелил&nbsp;и&nbsp;убил".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7         Am </span>
-<span class="txt"> А&nbsp;гневному&nbsp;-&nbsp;добрый&nbsp;урок:&nbsp;нелепых&nbsp;знакомств,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> не&nbsp;делайm,&nbsp;пока&nbsp;санитар&nbsp;отвернулся&nbsp;влево.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   A7    Dm </span>
-<span class="txt"> Пойди,&nbsp;вон,&nbsp;раскинь&nbsp;пасьянс,&nbsp;обработай&nbsp;древо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am    F </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ляпни&nbsp;пару&nbsp;мазков&nbsp;на&nbsp;холст.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   E7    Am </span>
+<span class="line"><span class="txt"> Не&nbsp;стоит&nbsp;таращиться&nbsp;так,&nbsp;будто&nbsp;я&nbsp;дебил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> пресекший&nbsp;у&nbsp;вас&nbsp;на&nbsp;глазах&nbsp;девятнадцать&nbsp;жизней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am         Dm </span></span>
+<span class="line"><span class="txt"> мне&nbsp;просто&nbsp;иные&nbsp;лозунги&nbsp;ненавистней&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 </span></span>
+<span class="line"><span class="txt"> триады&nbsp;"прицелился,&nbsp;выстрелил&nbsp;и&nbsp;убил".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7         Am </span></span>
+<span class="line"><span class="txt"> А&nbsp;гневному&nbsp;-&nbsp;добрый&nbsp;урок:&nbsp;нелепых&nbsp;знакомств,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="line"><span class="txt"> не&nbsp;делайm,&nbsp;пока&nbsp;санитар&nbsp;отвернулся&nbsp;влево.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   A7    Dm </span></span>
+<span class="line"><span class="txt"> Пойди,&nbsp;вон,&nbsp;раскинь&nbsp;пасьянс,&nbsp;обработай&nbsp;древо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am    F </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ляпни&nbsp;пару&nbsp;мазков&nbsp;на&nbsp;холст.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   E7    Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;я&nbsp;здесь&nbsp;так&nbsp;и&nbsp;останусь&nbsp;играть&nbsp;в&nbsp;слова,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/h - g - e - h - </span>
-<span class="txt"> губами&nbsp;водя&nbsp;подобно,&nbsp;опять&nbsp;же,&nbsp;рыбе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> - g - e - h -b Am </span>
-<span class="txt"> в&nbsp;кургузой&nbsp;больничной&nbsp;робе&nbsp;с&nbsp;пятном&nbsp;на&nbsp;сгибе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> второго,&nbsp;ещё&nbsp;не&nbsp;порожнего,&nbsp;рукава.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7             Em </span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;здесь&nbsp;так&nbsp;и&nbsp;останусь&nbsp;играть&nbsp;в&nbsp;слова,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/h - g - e - h - </span></span>
+<span class="line"><span class="txt"> губами&nbsp;водя&nbsp;подобно,&nbsp;опять&nbsp;же,&nbsp;рыбе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> - g - e - h -b Am </span></span>
+<span class="line"><span class="txt"> в&nbsp;кургузой&nbsp;больничной&nbsp;робе&nbsp;с&nbsp;пятном&nbsp;на&nbsp;сгибе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> второго,&nbsp;ещё&nbsp;не&nbsp;порожнего,&nbsp;рукава.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7             Em </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1995</span>
-
+<pre><span class="year">1995</span>
 </pre>
+
 
                 </div>
         </div>

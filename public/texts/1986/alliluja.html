@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,62 +423,60 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Gm"><span class="sng-title">АЛЛИЛУЙЯ</span>
+data-key="Gm"><h1>АЛЛИЛУЙЯ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Помнишь,&nbsp;как&nbsp;оно&nbsp;бывало?&nbsp;Всё&nbsp;горело,&nbsp;всё&nbsp;светилось,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm </span>
-<span class="txt"> утром&nbsp;солнце&nbsp;как&nbsp;вставало,&nbsp;так&nbsp;до&nbsp;ночи&nbsp;не&nbsp;садилось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Cm </span>
-<span class="txt"> А&nbsp;когда&nbsp;оно&nbsp;садилось,&nbsp;ты&nbsp;звонила&nbsp;мне&nbsp;и&nbsp;пела:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            D7 </span>
-<span class="txt"> "Приходи,&nbsp;мол,&nbsp;сделай&nbsp;милость,&nbsp;расскажи,&nbsp;что&nbsp;солнце&nbsp;село".&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Gm </span>
+<span class="line"><span class="txt"> Помнишь,&nbsp;как&nbsp;оно&nbsp;бывало?&nbsp;Всё&nbsp;горело,&nbsp;всё&nbsp;светилось,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm </span></span>
+<span class="line"><span class="txt"> утром&nbsp;солнце&nbsp;как&nbsp;вставало,&nbsp;так&nbsp;до&nbsp;ночи&nbsp;не&nbsp;садилось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Cm </span></span>
+<span class="line"><span class="txt"> А&nbsp;когда&nbsp;оно&nbsp;садилось,&nbsp;ты&nbsp;звонила&nbsp;мне&nbsp;и&nbsp;пела:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            D7 </span></span>
+<span class="line"><span class="txt"> "Приходи,&nbsp;мол,&nbsp;сделай&nbsp;милость,&nbsp;расскажи,&nbsp;что&nbsp;солнце&nbsp;село".&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Gm </span></span>
 <span class="txt"> И&nbsp;бежал&nbsp;я,&nbsp;спотыкаясь,&nbsp;и&nbsp;хмелел&nbsp;от&nbsp;поцелуя, </span>
-<span class="txt"> и&nbsp;обратно&nbsp;брёл,&nbsp;шатаясь,&nbsp;напевая&nbsp;"аллилуйя".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       G7   Cm </span>
-<span class="txt"> Шёл&nbsp;к&nbsp;приятелю&nbsp;и&nbsp;другу,&nbsp;с&nbsp;корабля&nbsp;на&nbsp;бал&nbsp;и&nbsp;с&nbsp;бала&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Ab   Gm </span>
-<span class="txt"> на&nbsp;корабль&nbsp;-&nbsp;и&nbsp;так&nbsp;по&nbsp;кругу,&nbsp;без&nbsp;конца&nbsp;и&nbsp;без&nbsp;начала.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       D7   Am </span>
+<span class="line"><span class="txt"> и&nbsp;обратно&nbsp;брёл,&nbsp;шатаясь,&nbsp;напевая&nbsp;"аллилуйя".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       G7   Cm </span></span>
+<span class="line"><span class="txt"> Шёл&nbsp;к&nbsp;приятелю&nbsp;и&nbsp;другу,&nbsp;с&nbsp;корабля&nbsp;на&nbsp;бал&nbsp;и&nbsp;с&nbsp;бала&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Ab   Gm </span></span>
+<span class="line"><span class="txt"> на&nbsp;корабль&nbsp;-&nbsp;и&nbsp;так&nbsp;по&nbsp;кругу,&nbsp;без&nbsp;конца&nbsp;и&nbsp;без&nbsp;начала.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       D7   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> На&nbsp;секунды&nbsp;рассыпаясь,&nbsp;как&nbsp;на&nbsp;искры&nbsp;фейерверка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Am </span>
-<span class="txt"> жизнь&nbsp;текла,&nbsp;переливаясь,&nbsp;как&nbsp;цыганская&nbsp;венгерка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Dm </span>
-<span class="txt"> Круг&nbsp;за&nbsp;кругом,&nbsp;честь&nbsp;по&nbsp;чести,&nbsp;ни&nbsp;почётно,&nbsp;ни&nbsp;позорно...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            E7 </span>
-<span class="txt"> Но&nbsp;в&nbsp;одном&nbsp;прекрасном&nbsp;месте&nbsp;оказался&nbsp;круг&nbsp;разорван.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Am </span>
+<span class="line"><span class="txt"> На&nbsp;секунды&nbsp;рассыпаясь,&nbsp;как&nbsp;на&nbsp;искры&nbsp;фейерверка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Am </span></span>
+<span class="line"><span class="txt"> жизнь&nbsp;текла,&nbsp;переливаясь,&nbsp;как&nbsp;цыганская&nbsp;венгерка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Dm </span></span>
+<span class="line"><span class="txt"> Круг&nbsp;за&nbsp;кругом,&nbsp;честь&nbsp;по&nbsp;чести,&nbsp;ни&nbsp;почётно,&nbsp;ни&nbsp;позорно...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            E7 </span></span>
+<span class="line"><span class="txt"> Но&nbsp;в&nbsp;одном&nbsp;прекрасном&nbsp;месте&nbsp;оказался&nbsp;круг&nbsp;разорван.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Am </span></span>
 <span class="txt"> И&nbsp;в&nbsp;лицо&nbsp;мне&nbsp;чёрный&nbsp;ветер&nbsp;загудел,&nbsp;нещадно&nbsp;дуя. </span>
-<span class="txt"> А&nbsp;я&nbsp;даже&nbsp;не&nbsp;ответил,&nbsp;напевая&nbsp;"аллилуйя".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       A7   Dm </span>
-<span class="txt"> Сквозь&nbsp;немыслимую&nbsp;вьюгу,&nbsp;через&nbsp;жуткую&nbsp;позёмку&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       B    Am </span>
-<span class="txt"> я&nbsp;летел&nbsp;себе&nbsp;по&nbsp;кругу&nbsp;и&nbsp;не&nbsp;знал,&nbsp;что&nbsp;он&nbsp;разомкнут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       E7   Hm </span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;даже&nbsp;не&nbsp;ответил,&nbsp;напевая&nbsp;"аллилуйя".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       A7   Dm </span></span>
+<span class="line"><span class="txt"> Сквозь&nbsp;немыслимую&nbsp;вьюгу,&nbsp;через&nbsp;жуткую&nbsp;позёмку&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       B    Am </span></span>
+<span class="line"><span class="txt"> я&nbsp;летел&nbsp;себе&nbsp;по&nbsp;кругу&nbsp;и&nbsp;не&nbsp;знал,&nbsp;что&nbsp;он&nbsp;разомкнут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       E7   Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Лишь&nbsp;у&nbsp;самого&nbsp;разрыва&nbsp;я&nbsp;неладное&nbsp;заметил&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Hm </span>
-<span class="txt"> и&nbsp;воскликнул:&nbsp;"Что&nbsp;за&nbsp;диво!",&nbsp;но&nbsp;движенья&nbsp;не&nbsp;замедлил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Em </span>
-<span class="txt"> Я&nbsp;недоброе&nbsp;почуял,&nbsp;и&nbsp;бессмысленно,&nbsp;но&nbsp;грозно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            F#7 </span>
-<span class="txt"> прошептал&nbsp;я&nbsp;"аллилуйя",&nbsp;да&nbsp;уж&nbsp;это&nbsp;было&nbsp;поздно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Hm </span>
+<span class="line"><span class="txt"> Лишь&nbsp;у&nbsp;самого&nbsp;разрыва&nbsp;я&nbsp;неладное&nbsp;заметил&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  Hm </span></span>
+<span class="line"><span class="txt"> и&nbsp;воскликнул:&nbsp;"Что&nbsp;за&nbsp;диво!",&nbsp;но&nbsp;движенья&nbsp;не&nbsp;замедлил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Em </span></span>
+<span class="line"><span class="txt"> Я&nbsp;недоброе&nbsp;почуял,&nbsp;и&nbsp;бессмысленно,&nbsp;но&nbsp;грозно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            F#7 </span></span>
+<span class="line"><span class="txt"> прошептал&nbsp;я&nbsp;"аллилуйя",&nbsp;да&nbsp;уж&nbsp;это&nbsp;было&nbsp;поздно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            Hm </span></span>
 <span class="txt"> Те&nbsp;всемирные&nbsp;теченья,&nbsp;те&nbsp;всесильные&nbsp;потоки, </span>
-<span class="txt"> что&nbsp;диктуют&nbsp;направленья&nbsp;и&nbsp;указывают&nbsp;сроки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       H7   Em </span>
-<span class="txt"> управляя&nbsp;каждым&nbsp;шагом,&nbsp;повели&nbsp;меня,&nbsp;погнали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       C    Hm </span>
-<span class="txt"> фантастическим&nbsp;зигзагом&nbsp;по&nbsp;неведомой&nbsp;спирали.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       F#7  C#m </span>
+<span class="line"><span class="txt"> что&nbsp;диктуют&nbsp;направленья&nbsp;и&nbsp;указывают&nbsp;сроки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       H7   Em </span></span>
+<span class="line"><span class="txt"> управляя&nbsp;каждым&nbsp;шагом,&nbsp;повели&nbsp;меня,&nbsp;погнали&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       C    Hm </span></span>
+<span class="line"><span class="txt"> фантастическим&nbsp;зигзагом&nbsp;по&nbsp;неведомой&nbsp;спирали.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       F#7  C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;до&nbsp;нынешнего&nbsp;часа,&nbsp;до&nbsp;последнего&nbsp;предела&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C#m </span>
-<span class="txt"> я&nbsp;на&nbsp;круг&nbsp;не&nbsp;возвращался.&nbsp;Но&nbsp;я&nbsp;помню,&nbsp;как&nbsp;ты&nbsp;пела.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            F#m </span>
-<span class="txt"> И&nbsp;уж&nbsp;если&nbsp;возвращенье&nbsp;совершить&nbsp;судьба&nbsp;заставит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            G#7 </span>
-<span class="txt"> пусть&nbsp;меня&nbsp;моё&nbsp;мгновенье&nbsp;у&nbsp;дверей&nbsp;твоих&nbsp;застанет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            C#m </span>
+<span class="line"><span class="txt"> И&nbsp;до&nbsp;нынешнего&nbsp;часа,&nbsp;до&nbsp;последнего&nbsp;предела&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C#m </span></span>
+<span class="line"><span class="txt"> я&nbsp;на&nbsp;круг&nbsp;не&nbsp;возвращался.&nbsp;Но&nbsp;я&nbsp;помню,&nbsp;как&nbsp;ты&nbsp;пела.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            F#m </span></span>
+<span class="line"><span class="txt"> И&nbsp;уж&nbsp;если&nbsp;возвращенье&nbsp;совершить&nbsp;судьба&nbsp;заставит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            G#7 </span></span>
+<span class="line"><span class="txt"> пусть&nbsp;меня&nbsp;моё&nbsp;мгновенье&nbsp;у&nbsp;дверей&nbsp;твоих&nbsp;застанет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">            C#m </span></span>
 <span class="txt"> Неприкаянный&nbsp;и&nbsp;лишний,&nbsp;окажусь&nbsp;я&nbsp;у&nbsp;истока. </span>
-<span class="txt"> И&nbsp;пускай&nbsp;тогда&nbsp;Всевышний&nbsp;приберёт&nbsp;меня&nbsp;до&nbsp;срока.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       C#7  F#m </span>
-<span class="txt"> А&nbsp;покуда&nbsp;ветер&nbsp;встречный&nbsp;всё&nbsp;безумствует,&nbsp;лютуя,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       D    C#m </span>
-<span class="txt"> аллилуйя,&nbsp;свет&nbsp;мой&nbsp;млечный!&nbsp;Аллилуйя,&nbsp;аллилуйя...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       G#7  C#m </span>
+<span class="line"><span class="txt"> И&nbsp;пускай&nbsp;тогда&nbsp;Всевышний&nbsp;приберёт&nbsp;меня&nbsp;до&nbsp;срока.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       C#7  F#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;покуда&nbsp;ветер&nbsp;встречный&nbsp;всё&nbsp;безумствует,&nbsp;лютуя,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       D    C#m </span></span>
+<span class="line"><span class="txt"> аллилуйя,&nbsp;свет&nbsp;мой&nbsp;млечный!&nbsp;Аллилуйя,&nbsp;аллилуйя...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       G#7  C#m </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1986</span>
-
+<pre><span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

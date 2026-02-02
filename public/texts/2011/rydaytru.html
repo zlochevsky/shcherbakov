@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,70 +423,55 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">Там же, тогда же</span>
+data-key="Hm"><h1>Там же, тогда же</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> вст.: A7 D Em Hm B F# Hm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> вст.: A7 D Em Hm B F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Рыдай,&nbsp;труба,&nbsp;над&nbsp;морем&nbsp;и&nbsp;прибоем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm   Em6  Hm        | </span>
-<span class="txt"> прощальный&nbsp;наш&nbsp;трубя&nbsp;привет&nbsp;волнам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm/F# G/F  Em        | 1 </span>
-<span class="txt"> В&nbsp;кочевье&nbsp;посуху&nbsp;своим&nbsp;ты&nbsp;воем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em6       Hm        |   </span>
-<span class="txt"> напутствуй&nbsp;нас&nbsp;и&nbsp;впредь&nbsp;сопутствуй&nbsp;нам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm  A A/A# Hm       |   </span>
+<span class="line"><span class="txt"> Рыдай,&nbsp;труба,&nbsp;над&nbsp;морем&nbsp;и&nbsp;прибоем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm   Em6  Hm        | </span></span>
+<span class="line"><span class="txt"> прощальный&nbsp;наш&nbsp;трубя&nbsp;привет&nbsp;волнам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm/F# G/F  Em        | 1 </span></span>
+<span class="line"><span class="txt"> В&nbsp;кочевье&nbsp;посуху&nbsp;своим&nbsp;ты&nbsp;воем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em6       Hm        |   </span></span>
+<span class="line"><span class="txt"> напутствуй&nbsp;нас&nbsp;и&nbsp;впредь&nbsp;сопутствуй&nbsp;нам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm  A A/A# Hm       |   </span></span>
 <span class="txt">  </span>
-<span class="txt"> Ничья&nbsp;родня,&nbsp;дельфиньи&nbsp;побратимы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm  G/F  Em         |   </span>
-<span class="txt"> материка&nbsp;достигшие&nbsp;в&nbsp;ладье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   H   G    H7         | 2 </span>
-<span class="txt"> большой&nbsp;землёй&nbsp;теперь&nbsp;должны&nbsp;пройти&nbsp;мы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      Hm6/G# G/F      |   </span>
-<span class="txt"> и&nbsp;выйти&nbsp;вновь&nbsp;к&nbsp;большой&nbsp;воде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F#   Em   Hm         |   </span>
+<span class="line"><span class="txt"> Ничья&nbsp;родня,&nbsp;дельфиньи&nbsp;побратимы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm  G/F  Em         |   </span></span>
+<span class="line"><span class="txt"> материка&nbsp;достигшие&nbsp;в&nbsp;ладье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   H   G    H7         | 2 </span></span>
+<span class="line"><span class="txt"> большой&nbsp;землёй&nbsp;теперь&nbsp;должны&nbsp;пройти&nbsp;мы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      Hm6/G# G/F      |   </span></span>
+<span class="line"><span class="txt"> и&nbsp;выйти&nbsp;вновь&nbsp;к&nbsp;большой&nbsp;воде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F#   Em   Hm         |   </span></span>
 <span class="txt">  </span>
-<span class="txt"> Вот-вот&nbsp;замрёт&nbsp;музыка&nbsp;брызг&nbsp;и&nbsp;пены,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm   Em6  Hm        |   </span>
-<span class="txt"> затмит&nbsp;глаза&nbsp;разлука&nbsp;с&nbsp;синевой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm/F# G/F  Em        | 1 </span>
-<span class="txt"> но&nbsp;наших&nbsp;странствий&nbsp;ты,&nbsp;труба,&nbsp;напевы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em6       Hm        |   </span>
-<span class="txt"> на&nbsp;здешний&nbsp;лад,&nbsp;коль&nbsp;сможешь,&nbsp;перевой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm  A A/A# Hm       |   </span>
+<span class="line"><span class="txt"> Вот-вот&nbsp;замрёт&nbsp;музыка&nbsp;брызг&nbsp;и&nbsp;пены,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm   Em6  Hm        |   </span></span>
+<span class="line"><span class="txt"> затмит&nbsp;глаза&nbsp;разлука&nbsp;с&nbsp;синевой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm/F# G/F  Em        | 1 </span></span>
+<span class="line"><span class="txt"> но&nbsp;наших&nbsp;странствий&nbsp;ты,&nbsp;труба,&nbsp;напевы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em6       Hm        |   </span></span>
+<span class="line"><span class="txt"> на&nbsp;здешний&nbsp;лад,&nbsp;коль&nbsp;сможешь,&nbsp;перевой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm  A A/A# Hm       |   </span></span>
 <span class="txt">  </span>
-<span class="txt"> Весьма&nbsp;всерьёз&nbsp;идем&nbsp;мы&nbsp;в&nbsp;лес&nbsp;медвежий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm  G/F  Em         |   </span>
-<span class="txt"> где&nbsp;редок&nbsp;луч,&nbsp;ленив&nbsp;и&nbsp;робок&nbsp;звук,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   H   G    H7         | 2 </span>
-<span class="txt"> и&nbsp;как&nbsp;бы&nbsp;нет&nbsp;обоих&nbsp;побережий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      Hm6/G# G/F      |   </span>
-<span class="txt"> но&nbsp;есть&nbsp;молва&nbsp;о&nbsp;них&nbsp;о&nbsp;двух.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F#   Em   Hm         |   </span>
+<span class="line"><span class="txt"> Весьма&nbsp;всерьёз&nbsp;идем&nbsp;мы&nbsp;в&nbsp;лес&nbsp;медвежий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm  G/F  Em         |   </span></span>
+<span class="line"><span class="txt"> где&nbsp;редок&nbsp;луч,&nbsp;ленив&nbsp;и&nbsp;робок&nbsp;звук,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   H   G    H7         | 2 </span></span>
+<span class="line"><span class="txt"> и&nbsp;как&nbsp;бы&nbsp;нет&nbsp;обоих&nbsp;побережий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      Hm6/G# G/F      |   </span></span>
+<span class="line"><span class="txt"> но&nbsp;есть&nbsp;молва&nbsp;о&nbsp;них&nbsp;о&nbsp;двух.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F#   Em   Hm         |   </span></span>
 <span class="txt">  </span>
-<span class="txt"> Молве&nbsp;ли&nbsp;той,&nbsp;туземцу&nbsp;ли&nbsp;в&nbsp;вигваме&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm   Em6  Hm        |   </span>
-<span class="txt"> морской&nbsp;акцент&nbsp;беремся&nbsp;мы&nbsp;привить?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm/F# G/F  Em        | 1 </span>
-<span class="txt"> Не&nbsp;уставай,&nbsp;труба,&nbsp;напето&nbsp;нами&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em6       Hm        |   </span>
-<span class="txt"> обильно&nbsp;впрок,&nbsp;всего&nbsp;не&nbsp;перевыть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm  A A/A# Hm       |   </span>
+<span class="line"><span class="txt"> Молве&nbsp;ли&nbsp;той,&nbsp;туземцу&nbsp;ли&nbsp;в&nbsp;вигваме&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Hm   Em6  Hm        |   </span></span>
+<span class="line"><span class="txt"> морской&nbsp;акцент&nbsp;беремся&nbsp;мы&nbsp;привить?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm/F# G/F  Em        | 1 </span></span>
+<span class="line"><span class="txt"> Не&nbsp;уставай,&nbsp;труба,&nbsp;напето&nbsp;нами&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em6       Hm        |   </span></span>
+<span class="line"><span class="txt"> обильно&nbsp;впрок,&nbsp;всего&nbsp;не&nbsp;перевыть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm  A A/A# Hm       |   </span></span>
 <span class="txt">  </span>
-<span class="txt"> Вот&nbsp;этот&nbsp;ряд&nbsp;построится&nbsp;в&nbsp;колонны&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm  G/F  Em         |   </span>
-<span class="txt"> для&nbsp;долгих&nbsp;вёрст&nbsp;и&nbsp;трудного&nbsp;труда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   H   G    H7         | 2 </span>
-<span class="txt"> Глаза&nbsp;темны,&nbsp;движенья&nbsp;экономны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      Hm6/G# G/F      | </span>
-<span class="txt"> ничья&nbsp;родня,&nbsp;лиха&nbsp;беда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F#   Em   Hm (H7)    | </span>
+<span class="line"><span class="txt"> Вот&nbsp;этот&nbsp;ряд&nbsp;построится&nbsp;в&nbsp;колонны&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm  G/F  Em         |   </span></span>
+<span class="line"><span class="txt"> для&nbsp;долгих&nbsp;вёрст&nbsp;и&nbsp;трудного&nbsp;труда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   H   G    H7         | 2 </span></span>
+<span class="line"><span class="txt"> Глаза&nbsp;темны,&nbsp;движенья&nbsp;экономны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em      Hm6/G# G/F      | </span></span>
+<span class="line"><span class="txt"> ничья&nbsp;родня,&nbsp;лиха&nbsp;беда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F#   Em   Hm (H7)    | </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> ок.:  Em6      G7/F Hm  </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm6/G# G Hm/F# Em6        </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm                 </span>
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
-
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> ок.:  Em6      G7/F Hm  </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm6/G# G Hm/F# Em6        </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm                 </span></span>
 </div>
-<pre>
-    <span class="year">2012</span>
+<pre><span class="year">2012</span>
 
 
 Вариант по исполнению 17.11.<span class="year">2012</span>
@@ -563,8 +556,8 @@ x|---|---|---|  x|---|---   0|---|-     |---|-■-|
 x|---|---|---|   |---|-■-   x|---|-     |-■-|---|   
  |---|---|-■-|  x|---|---    |-■-|-    x|---|---|   
 
-
 </pre>
+
 
                 </div>
         </div>

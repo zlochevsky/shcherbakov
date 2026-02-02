@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,55 +423,53 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="E"><span class="sng-title">ВОЗВРАЩЕНИЕ</span>
+data-key="E"><h1>ВОЗВРАЩЕНИЕ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Эй-эй-эй,&nbsp;южные&nbsp;страны!&nbsp;Дали&nbsp;морей...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E      Hm     Em </span>
-<span class="txt"> Горные&nbsp;цепи,&nbsp;пустынь&nbsp;пески,&nbsp;озёр&nbsp;и&nbsp;рек&nbsp;прохлада,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm7 </span>
-<span class="txt"> все&nbsp;красоты&nbsp;земные,&nbsp;все&nbsp;радости&nbsp;и&nbsp;беды&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      C#7    F# </span>
-<span class="txt"> путешествий&nbsp;многолетних&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span>
-<span class="txt"> Мы&nbsp;познали,&nbsp;испытали&nbsp;на&nbsp;себе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     F# </span>
-<span class="txt"> Теперь&nbsp;всё&nbsp;это&nbsp;позади.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        H </span>
-<span class="txt"> Теперь&nbsp;-&nbsp;домой&nbsp;на&nbsp;крыльях&nbsp;ветра&nbsp;-&nbsp;тра-та-та-та!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7     E      Em </span>
-<span class="txt"> К&nbsp;родимым&nbsp;берегам&nbsp;летим&nbsp;мы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am            Em </span>
-<span class="txt"> и&nbsp;эти&nbsp;берега&nbsp;уже&nbsp;близки,&nbsp;уже&nbsp;видны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#            A  H7  E </span>
+<span class="line"><span class="txt"> Эй-эй-эй,&nbsp;южные&nbsp;страны!&nbsp;Дали&nbsp;морей...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E      Hm     Em </span></span>
+<span class="line"><span class="txt"> Горные&nbsp;цепи,&nbsp;пустынь&nbsp;пески,&nbsp;озёр&nbsp;и&nbsp;рек&nbsp;прохлада,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm7 </span></span>
+<span class="line"><span class="txt"> все&nbsp;красоты&nbsp;земные,&nbsp;все&nbsp;радости&nbsp;и&nbsp;беды&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      C#7    F# </span></span>
+<span class="line"><span class="txt"> путешествий&nbsp;многолетних&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;познали,&nbsp;испытали&nbsp;на&nbsp;себе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     F# </span></span>
+<span class="line"><span class="txt"> Теперь&nbsp;всё&nbsp;это&nbsp;позади.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        H </span></span>
+<span class="line"><span class="txt"> Теперь&nbsp;-&nbsp;домой&nbsp;на&nbsp;крыльях&nbsp;ветра&nbsp;-&nbsp;тра-та-та-та!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7     E      Em </span></span>
+<span class="line"><span class="txt"> К&nbsp;родимым&nbsp;берегам&nbsp;летим&nbsp;мы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am            Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;эти&nbsp;берега&nbsp;уже&nbsp;близки,&nbsp;уже&nbsp;видны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#            A  H7  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Эй-эй-эй,&nbsp;полные&nbsp;трюмы!&nbsp;Кучи&nbsp;богатств...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E      Hm     Em </span>
-<span class="txt"> Полные&nbsp;бочки&nbsp;заморских&nbsp;вин,&nbsp;парча,&nbsp;хрусталь,&nbsp;алмазы...&nbsp; </span><span class="ch"> Hm7 </span>
-<span class="txt"> Ждёт&nbsp;богатых&nbsp;подарков&nbsp;отчизна&nbsp;дорогая;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      C#7    F# </span>
-<span class="txt"> августейшие&nbsp;особы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span>
-<span class="txt"> заготовили&nbsp;награды,&nbsp;и&nbsp;войска&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     F# </span>
-<span class="txt"> на&nbsp;берегу&nbsp;встречают&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        H </span>
-<span class="txt"> Трубач&nbsp;трубит&nbsp;начало&nbsp;смотра&nbsp;-&nbsp;тра-та-та-та!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7     E      Em </span>
-<span class="txt"> Построились&nbsp;полки&nbsp;в&nbsp;шеренги&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am            Em </span>
-<span class="txt"> и,&nbsp;трижды&nbsp;салютуя&nbsp;в&nbsp;нашу&nbsp;честь,&nbsp;кричат&nbsp;"виват!".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#            A  H7  E </span>
+<span class="line"><span class="txt"> Эй-эй-эй,&nbsp;полные&nbsp;трюмы!&nbsp;Кучи&nbsp;богатств...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E      Hm     Em </span></span>
+<span class="line"><span class="txt"> Полные&nbsp;бочки&nbsp;заморских&nbsp;вин,&nbsp;парча,&nbsp;хрусталь,&nbsp;алмазы...&nbsp; </span><span class="ch"> Hm7 </span></span>
+<span class="line"><span class="txt"> Ждёт&nbsp;богатых&nbsp;подарков&nbsp;отчизна&nbsp;дорогая;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      C#7    F# </span></span>
+<span class="line"><span class="txt"> августейшие&nbsp;особы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span></span>
+<span class="line"><span class="txt"> заготовили&nbsp;награды,&nbsp;и&nbsp;войска&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     F# </span></span>
+<span class="line"><span class="txt"> на&nbsp;берегу&nbsp;встречают&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        H </span></span>
+<span class="line"><span class="txt"> Трубач&nbsp;трубит&nbsp;начало&nbsp;смотра&nbsp;-&nbsp;тра-та-та-та!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7     E      Em </span></span>
+<span class="line"><span class="txt"> Построились&nbsp;полки&nbsp;в&nbsp;шеренги&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am            Em </span></span>
+<span class="line"><span class="txt"> и,&nbsp;трижды&nbsp;салютуя&nbsp;в&nbsp;нашу&nbsp;честь,&nbsp;кричат&nbsp;"виват!".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#            A  H7  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Эй-эй...&nbsp;Но&nbsp;что&nbsp;же&nbsp;мы&nbsp;видим!&nbsp;Где&nbsp;же&nbsp;триумф?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E      Hm     Em </span>
-<span class="txt"> Где&nbsp;же&nbsp;цветы,&nbsp;где&nbsp;почёт&nbsp;и&nbsp;слава,&nbsp;где&nbsp;объятья?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm7 </span>
-<span class="txt"> Всё&nbsp;не&nbsp;так!&nbsp;Нас&nbsp;не&nbsp;желают!&nbsp;Нас&nbsp;видеть&nbsp;не&nbsp;хотят,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      C#7    F# </span>
-<span class="txt"> и&nbsp;принимают&nbsp;за&nbsp;врагов,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span>
-<span class="txt"> и,&nbsp;обратив&nbsp;стволы&nbsp;орудий&nbsp;в&nbsp;нашу&nbsp;сторону,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     F# </span>
-<span class="txt"> приказывают&nbsp;нам&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        H </span>
-<span class="txt"> лечь&nbsp;в&nbsp;дрейф&nbsp;не&nbsp;ближе&nbsp;километра&nbsp;-&nbsp;тра-та-та-та!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7     E      Em </span>
-<span class="txt"> Ай,&nbsp;где-то&nbsp;мы&nbsp;опять&nbsp;ошиблись&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am            Em </span>
-<span class="txt"> и&nbsp;снова&nbsp;что-то&nbsp;сделали&nbsp;не&nbsp;так.&nbsp;А&nbsp;это&nbsp;жаль...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#            A  H7  E </span>
+<span class="line"><span class="txt"> Эй-эй...&nbsp;Но&nbsp;что&nbsp;же&nbsp;мы&nbsp;видим!&nbsp;Где&nbsp;же&nbsp;триумф?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E      Hm     Em </span></span>
+<span class="line"><span class="txt"> Где&nbsp;же&nbsp;цветы,&nbsp;где&nbsp;почёт&nbsp;и&nbsp;слава,&nbsp;где&nbsp;объятья?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm7 </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;не&nbsp;так!&nbsp;Нас&nbsp;не&nbsp;желают!&nbsp;Нас&nbsp;видеть&nbsp;не&nbsp;хотят,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      C#7    F# </span></span>
+<span class="line"><span class="txt"> и&nbsp;принимают&nbsp;за&nbsp;врагов,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span></span>
+<span class="line"><span class="txt"> и,&nbsp;обратив&nbsp;стволы&nbsp;орудий&nbsp;в&nbsp;нашу&nbsp;сторону,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     F# </span></span>
+<span class="line"><span class="txt"> приказывают&nbsp;нам&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">        H </span></span>
+<span class="line"><span class="txt"> лечь&nbsp;в&nbsp;дрейф&nbsp;не&nbsp;ближе&nbsp;километра&nbsp;-&nbsp;тра-та-та-та!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7     E      Em </span></span>
+<span class="line"><span class="txt"> Ай,&nbsp;где-то&nbsp;мы&nbsp;опять&nbsp;ошиблись&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am            Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;снова&nbsp;что-то&nbsp;сделали&nbsp;не&nbsp;так.&nbsp;А&nbsp;это&nbsp;жаль...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#            A  H7  E </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

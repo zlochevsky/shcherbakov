@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,75 +423,72 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">ПОСЕЩЕНИЕ</span>
+data-key="Dm"><h1>ПОСЕЩЕНИЕ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;усердствуй,&nbsp;на&nbsp;этих&nbsp;трёхстах&nbsp;стеллажах&nbsp;-&nbsp;в&nbsp;основном&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm B7  E7/G# </span>
-<span class="txt"> криптограммы,&nbsp;лишь&nbsp;кое-когда&nbsp;-&nbsp;логарифм,&nbsp;палиндром...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A   B     Dm/A </span>
-<span class="txt"> Но&nbsp;интимных&nbsp;посланий&nbsp;ты&nbsp;здесь&nbsp;не&nbsp;найдёшь&nbsp;ни&nbsp;строки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm  E7/G# </span>
-<span class="txt"> Шлют&nbsp;в&nbsp;избытке,&nbsp;да&nbsp;мне&nbsp;сохранять&nbsp;не&nbsp;с&nbsp;руки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E   A     Dm E A </span>
+<span class="line"><span class="txt"> Не&nbsp;усердствуй,&nbsp;на&nbsp;этих&nbsp;трёхстах&nbsp;стеллажах&nbsp;-&nbsp;в&nbsp;основном&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm B7  E7/G# </span></span>
+<span class="line"><span class="txt"> криптограммы,&nbsp;лишь&nbsp;кое-когда&nbsp;-&nbsp;логарифм,&nbsp;палиндром...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A   B     Dm/A </span></span>
+<span class="line"><span class="txt"> Но&nbsp;интимных&nbsp;посланий&nbsp;ты&nbsp;здесь&nbsp;не&nbsp;найдёшь&nbsp;ни&nbsp;строки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm  E7/G# </span></span>
+<span class="line"><span class="txt"> Шлют&nbsp;в&nbsp;избытке,&nbsp;да&nbsp;мне&nbsp;сохранять&nbsp;не&nbsp;с&nbsp;руки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E   A     Dm E A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Этой&nbsp;ширмы&nbsp;не&nbsp;трогай,&nbsp;за&nbsp;ней&nbsp;пусть&nbsp;не&nbsp;гибель,&nbsp;но&nbsp;риск:&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm </span>
-<span class="txt"> там&nbsp;ютится&nbsp;-&nbsp;отнюдь&nbsp;не&nbsp;наложница,&nbsp;нет&nbsp;-&nbsp;василиск.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Gm  A7 </span>
-<span class="txt"> Он&nbsp;не&nbsp;кормлен,&nbsp;но&nbsp;если&nbsp;бесшумно&nbsp;его&nbsp;миновать,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm  E7/G# </span>
-<span class="txt"> не&nbsp;проснётся.&nbsp;Полицию&nbsp;можешь&nbsp;не&nbsp;звать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E   A     Dm </span>
+<span class="line"><span class="txt"> Этой&nbsp;ширмы&nbsp;не&nbsp;трогай,&nbsp;за&nbsp;ней&nbsp;пусть&nbsp;не&nbsp;гибель,&nbsp;но&nbsp;риск:&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm </span></span>
+<span class="line"><span class="txt"> там&nbsp;ютится&nbsp;-&nbsp;отнюдь&nbsp;не&nbsp;наложница,&nbsp;нет&nbsp;-&nbsp;василиск.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Gm  A7 </span></span>
+<span class="line"><span class="txt"> Он&nbsp;не&nbsp;кормлен,&nbsp;но&nbsp;если&nbsp;бесшумно&nbsp;его&nbsp;миновать,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm  E7/G# </span></span>
+<span class="line"><span class="txt"> не&nbsp;проснётся.&nbsp;Полицию&nbsp;можешь&nbsp;не&nbsp;звать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E   A     Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Эти&nbsp;с&nbsp;тонкой&nbsp;фигурной&nbsp;резьбой&nbsp;вертела-близнецы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm B7  E7/G# </span>
-<span class="txt"> суть&nbsp;антенны&nbsp;для&nbsp;ловли&nbsp;особых&nbsp;лучей&nbsp;и&nbsp;пыльцы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A   B     Dm/A </span>
-<span class="txt"> но&nbsp;не&nbsp;больше.&nbsp;Не&nbsp;розги&nbsp;для&nbsp;дам,&nbsp;не&nbsp;ещё&nbsp;что&nbsp;невесть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm  E7/G# </span>
-<span class="txt"> Успокойся,&nbsp;антенны&nbsp;на&nbsp;место&nbsp;привесь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E   A     Dm E A </span>
+<span class="line"><span class="txt"> Эти&nbsp;с&nbsp;тонкой&nbsp;фигурной&nbsp;резьбой&nbsp;вертела-близнецы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm B7  E7/G# </span></span>
+<span class="line"><span class="txt"> суть&nbsp;антенны&nbsp;для&nbsp;ловли&nbsp;особых&nbsp;лучей&nbsp;и&nbsp;пыльцы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A   B     Dm/A </span></span>
+<span class="line"><span class="txt"> но&nbsp;не&nbsp;больше.&nbsp;Не&nbsp;розги&nbsp;для&nbsp;дам,&nbsp;не&nbsp;ещё&nbsp;что&nbsp;невесть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm  E7/G# </span></span>
+<span class="line"><span class="txt"> Успокойся,&nbsp;антенны&nbsp;на&nbsp;место&nbsp;привесь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E   A     Dm E A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Прямо&nbsp;драма,&nbsp;насколько&nbsp;у&nbsp;страсти&nbsp;глаза&nbsp;велики.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm </span>
-<span class="txt"> Кстати,&nbsp;помни:&nbsp;в&nbsp;подполье&nbsp;как&nbsp;раз&nbsp;под&nbsp;тобой&nbsp;-&nbsp;ледники.&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Gm  A7 </span>
-<span class="txt"> Вряд&nbsp;ли&nbsp;стоит,&nbsp;всем&nbsp;телом&nbsp;вращая,&nbsp;ломать&nbsp;реквизит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm  E7/G# </span>
-<span class="txt"> Распалишься,&nbsp;намокнешь.&nbsp;Тебя&nbsp;просквозит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E   A     Dm H7 </span>
+<span class="line"><span class="txt"> Прямо&nbsp;драма,&nbsp;насколько&nbsp;у&nbsp;страсти&nbsp;глаза&nbsp;велики.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm </span></span>
+<span class="line"><span class="txt"> Кстати,&nbsp;помни:&nbsp;в&nbsp;подполье&nbsp;как&nbsp;раз&nbsp;под&nbsp;тобой&nbsp;-&nbsp;ледники.&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Gm  A7 </span></span>
+<span class="line"><span class="txt"> Вряд&nbsp;ли&nbsp;стоит,&nbsp;всем&nbsp;телом&nbsp;вращая,&nbsp;ломать&nbsp;реквизит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm  E7/G# </span></span>
+<span class="line"><span class="txt"> Распалишься,&nbsp;намокнешь.&nbsp;Тебя&nbsp;просквозит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E   A     Dm H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Угловой&nbsp;же&nbsp;камин&nbsp;не&nbsp;расценивай&nbsp;как&nbsp;таковой:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em C7  F#7/A# </span>
-<span class="txt"> в&nbsp;эту&nbsp;утварь&nbsp;вмонтирован&nbsp;мной&nbsp;типовой&nbsp;бытовой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am H   C     Em/H </span>
-<span class="txt"> генератор&nbsp;погодных&nbsp;сюрпризов...&nbsp;При&nbsp;чём&nbsp;тут&nbsp;постель?!&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am  F#7/A# </span>
-<span class="txt"> Не&nbsp;свирепствуй,&nbsp;ведь&nbsp;ты&nbsp;же&nbsp;не&nbsp;следователь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em F#  H     Em F# H </span>
+<span class="line"><span class="txt"> Угловой&nbsp;же&nbsp;камин&nbsp;не&nbsp;расценивай&nbsp;как&nbsp;таковой:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em C7  F#7/A# </span></span>
+<span class="line"><span class="txt"> в&nbsp;эту&nbsp;утварь&nbsp;вмонтирован&nbsp;мной&nbsp;типовой&nbsp;бытовой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am H   C     Em/H </span></span>
+<span class="line"><span class="txt"> генератор&nbsp;погодных&nbsp;сюрпризов...&nbsp;При&nbsp;чём&nbsp;тут&nbsp;постель?!&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am  F#7/A# </span></span>
+<span class="line"><span class="txt"> Не&nbsp;свирепствуй,&nbsp;ведь&nbsp;ты&nbsp;же&nbsp;не&nbsp;следователь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em F#  H     Em F# H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Трижды&nbsp;в&nbsp;сутки:&nbsp;в&nbsp;одиннадцать,&nbsp;в&nbsp;семь&nbsp;пополудни&nbsp;и&nbsp;в&nbsp;три&nbsp;&nbsp; </span><span class="ch"> E7  Am </span>
-<span class="txt"> на&nbsp;рассвете&nbsp;-&nbsp;я&nbsp;утвари&nbsp;сей&nbsp;говорю&nbsp;"говори",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Am H7 </span>
-<span class="txt"> и&nbsp;несётся&nbsp;циклон&nbsp;в&nbsp;Вавилон,&nbsp;ураган&nbsp;в&nbsp;Мичиган.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am F#7/A# </span>
-<span class="txt"> Жрец&nbsp;дельфийский&nbsp;в&nbsp;сравненье&nbsp;со&nbsp;мной&nbsp;-&nbsp;мальчуган.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F# H     Em </span>
+<span class="line"><span class="txt"> Трижды&nbsp;в&nbsp;сутки:&nbsp;в&nbsp;одиннадцать,&nbsp;в&nbsp;семь&nbsp;пополудни&nbsp;и&nbsp;в&nbsp;три&nbsp;&nbsp; </span><span class="ch"> E7  Am </span></span>
+<span class="line"><span class="txt"> на&nbsp;рассвете&nbsp;-&nbsp;я&nbsp;утвари&nbsp;сей&nbsp;говорю&nbsp;"говори",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Am H7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;несётся&nbsp;циклон&nbsp;в&nbsp;Вавилон,&nbsp;ураган&nbsp;в&nbsp;Мичиган.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am F#7/A# </span></span>
+<span class="line"><span class="txt"> Жрец&nbsp;дельфийский&nbsp;в&nbsp;сравненье&nbsp;со&nbsp;мной&nbsp;-&nbsp;мальчуган.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F# H     Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Если&nbsp;то,&nbsp;что&nbsp;в&nbsp;твоём&nbsp;называется&nbsp;"спать"&nbsp;словаре,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em C7  F#7/A# </span>
-<span class="txt"> посещает&nbsp;одних&nbsp;еженощно,&nbsp;других&nbsp;-&nbsp;по&nbsp;поре,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am H   C     Em/H </span>
-<span class="txt"> то&nbsp;(не&nbsp;всех&nbsp;же&nbsp;к&nbsp;одним&nbsp;и&nbsp;другим&nbsp;причислять,&nbsp;господа!)&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am  F#7/A# </span>
-<span class="txt"> я&nbsp;из&nbsp;третьих.&nbsp;Из&nbsp;тех,&nbsp;что&nbsp;не&nbsp;спят&nbsp;никогда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em F#  H     Em F# H </span>
+<span class="line"><span class="txt"> Если&nbsp;то,&nbsp;что&nbsp;в&nbsp;твоём&nbsp;называется&nbsp;"спать"&nbsp;словаре,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em C7  F#7/A# </span></span>
+<span class="line"><span class="txt"> посещает&nbsp;одних&nbsp;еженощно,&nbsp;других&nbsp;-&nbsp;по&nbsp;поре,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am H   C     Em/H </span></span>
+<span class="line"><span class="txt"> то&nbsp;(не&nbsp;всех&nbsp;же&nbsp;к&nbsp;одним&nbsp;и&nbsp;другим&nbsp;причислять,&nbsp;господа!)&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am  F#7/A# </span></span>
+<span class="line"><span class="txt"> я&nbsp;из&nbsp;третьих.&nbsp;Из&nbsp;тех,&nbsp;что&nbsp;не&nbsp;спят&nbsp;никогда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em F#  H     Em F# H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;вибрируй,&nbsp;дыши&nbsp;через&nbsp;раз,&nbsp;в&nbsp;остальном&nbsp;я&nbsp;вполне&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span>
-<span class="txt"> зауряден.&nbsp;И&nbsp;что&nbsp;у&nbsp;других&nbsp;при&nbsp;себе,&nbsp;то&nbsp;при&nbsp;мне:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Am H7 </span>
-<span class="txt"> сердце&nbsp;справа,&nbsp;зелёная&nbsp;кровь,&nbsp;голова&nbsp;на&nbsp;винтах...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am F#7/A# </span>
-<span class="txt"> и&nbsp;довольно.&nbsp;Давай&nbsp;рассуждать&nbsp;о&nbsp;цветах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F# H     Em </span>
+<span class="line"><span class="txt"> Не&nbsp;вибрируй,&nbsp;дыши&nbsp;через&nbsp;раз,&nbsp;в&nbsp;остальном&nbsp;я&nbsp;вполне&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am </span></span>
+<span class="line"><span class="txt"> зауряден.&nbsp;И&nbsp;что&nbsp;у&nbsp;других&nbsp;при&nbsp;себе,&nbsp;то&nbsp;при&nbsp;мне:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Am H7 </span></span>
+<span class="line"><span class="txt"> сердце&nbsp;справа,&nbsp;зелёная&nbsp;кровь,&nbsp;голова&nbsp;на&nbsp;винтах...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am F#7/A# </span></span>
+<span class="line"><span class="txt"> и&nbsp;довольно.&nbsp;Давай&nbsp;рассуждать&nbsp;о&nbsp;цветах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  F# H     Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;люблю&nbsp;гиацинты.&nbsp;А&nbsp;ты?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
+<span class="line"><span class="txt"> Я&nbsp;люблю&nbsp;гиацинты.&nbsp;А&nbsp;ты?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1993</span>
-
+<pre><span class="year">1993</span>
 
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,62 +423,59 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">ЖИЗНЬ ПРЕКРАСНА</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> Достиг&nbsp;вершин&nbsp;членкор&nbsp;какой-нибудь,&nbsp;главный&nbsp;врач,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span>
-<span class="txt"> большой&nbsp;знаток&nbsp;коленной&nbsp;чашечки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span>
-<span class="txt"> Дрожит&nbsp;медчасть,&nbsp;когда&nbsp;он&nbsp;в&nbsp;белом&nbsp;весь&nbsp;шествует&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span>
-<span class="txt"> лечить&nbsp;болезнь.&nbsp;Прошу&nbsp;к&nbsp;столу!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span>
+data-key="Hm"><h1>ЖИЗНЬ ПРЕКРАСНА</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> Достиг&nbsp;вершин&nbsp;членкор&nbsp;какой-нибудь,&nbsp;главный&nbsp;врач,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span></span>
+<span class="line"><span class="txt"> большой&nbsp;знаток&nbsp;коленной&nbsp;чашечки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span></span>
+<span class="line"><span class="txt"> Дрожит&nbsp;медчасть,&nbsp;когда&nbsp;он&nbsp;в&nbsp;белом&nbsp;весь&nbsp;шествует&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span></span>
+<span class="line"><span class="txt"> лечить&nbsp;болезнь.&nbsp;Прошу&nbsp;к&nbsp;столу!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Глаза&nbsp;сверкают.&nbsp;В&nbsp;руках&nbsp;ланцет&nbsp;блестит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  C   Hm </span>
-<span class="txt"> Больной,&nbsp;молчать!&nbsp;Бояться&nbsp;нечего.&nbsp;Восемь,&nbsp;девять,&nbsp;аут.&nbsp;&nbsp; </span><span class="ch"> C  Hm  H7  Em  Em6  Hm </span>
+<span class="line"><span class="txt"> Глаза&nbsp;сверкают.&nbsp;В&nbsp;руках&nbsp;ланцет&nbsp;блестит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  C   Hm </span></span>
+<span class="line"><span class="txt"> Больной,&nbsp;молчать!&nbsp;Бояться&nbsp;нечего.&nbsp;Восемь,&nbsp;девять,&nbsp;аут.&nbsp;&nbsp; </span><span class="ch"> C  Hm  H7  Em  Em6  Hm </span></span>
 <span class="txt">  </span>
-<span class="txt"> Презрел&nbsp;покой&nbsp;какой-нибудь&nbsp;Давид&nbsp;Ливингстон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span>
-<span class="txt"> Легко&nbsp;ему&nbsp;с&nbsp;его&nbsp;винчестером.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span>
-<span class="txt"> На&nbsp;Новый&nbsp;год&nbsp;махнёт&nbsp;в&nbsp;Центральную&nbsp;Африку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span>
-<span class="txt"> Одних&nbsp;слонов&nbsp;забьёт&nbsp;сто&nbsp;штук.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> Да&nbsp;львов&nbsp;штук&nbsp;двести.&nbsp;Да&nbsp;триста&nbsp;страусов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  C   Hm </span>
-<span class="txt"> И&nbsp;будет&nbsp;жить&nbsp;в&nbsp;народной&nbsp;памяти&nbsp;-&nbsp;прям,&nbsp;плечист,&nbsp;высок.&nbsp;&nbsp; </span><span class="ch"> C  Hm  H7  Em  Em6  Hm </span>
+<span class="line"><span class="txt"> Презрел&nbsp;покой&nbsp;какой-нибудь&nbsp;Давид&nbsp;Ливингстон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span></span>
+<span class="line"><span class="txt"> Легко&nbsp;ему&nbsp;с&nbsp;его&nbsp;винчестером.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span></span>
+<span class="line"><span class="txt"> На&nbsp;Новый&nbsp;год&nbsp;махнёт&nbsp;в&nbsp;Центральную&nbsp;Африку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span></span>
+<span class="line"><span class="txt"> Одних&nbsp;слонов&nbsp;забьёт&nbsp;сто&nbsp;штук.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;выше&nbsp;всех&nbsp;-&nbsp;гимнаст&nbsp;под&nbsp;куполом,&nbsp;это&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span>
-<span class="txt"> Не&nbsp;взять&nbsp;его&nbsp;за&nbsp;доллар&nbsp;с&nbsp;четвертью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span>
-<span class="txt"> Стальным&nbsp;узлом&nbsp;привязан&nbsp;к&nbsp;лонже&nbsp;он,&nbsp;молодец.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span>
-<span class="txt"> Шпрехшталмейстер&nbsp;гордится&nbsp;им.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span>
+<span class="line"><span class="txt"> Да&nbsp;львов&nbsp;штук&nbsp;двести.&nbsp;Да&nbsp;триста&nbsp;страусов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  C   Hm </span></span>
+<span class="line"><span class="txt"> И&nbsp;будет&nbsp;жить&nbsp;в&nbsp;народной&nbsp;памяти&nbsp;-&nbsp;прям,&nbsp;плечист,&nbsp;высок.&nbsp;&nbsp; </span><span class="ch"> C  Hm  H7  Em  Em6  Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;лонжа&nbsp;рвётся.&nbsp;Застыньте,&nbsp;граждане.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  C   Hm </span>
-<span class="txt"> Разиньте&nbsp;рты,&nbsp;прикиньте:&nbsp;падает...&nbsp;Ах,&nbsp;как&nbsp;низко&nbsp;пал.&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  H7  Em  Em6  Hm </span>
+<span class="line"><span class="txt"> Но&nbsp;выше&nbsp;всех&nbsp;-&nbsp;гимнаст&nbsp;под&nbsp;куполом,&nbsp;это&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span></span>
+<span class="line"><span class="txt"> Не&nbsp;взять&nbsp;его&nbsp;за&nbsp;доллар&nbsp;с&nbsp;четвертью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span></span>
+<span class="line"><span class="txt"> Стальным&nbsp;узлом&nbsp;привязан&nbsp;к&nbsp;лонже&nbsp;он,&nbsp;молодец.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span></span>
+<span class="line"><span class="txt"> Шпрехшталмейстер&nbsp;гордится&nbsp;им.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Прекрасна&nbsp;жизнь!&nbsp;Затейлив&nbsp;хруст&nbsp;её&nbsp;шестерён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span>
-<span class="txt"> Прищур&nbsp;востёр.&nbsp;Полки&nbsp;внушительны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span>
-<span class="txt"> Во&nbsp;фрунт&nbsp;равняйсь!&nbsp;Поблажек&nbsp;никаких&nbsp;никому.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span>
-<span class="txt"> Чем&nbsp;гуще&nbsp;шквал,&nbsp;тем&nbsp;слаще&nbsp;штурм.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span>
+<span class="line"><span class="txt"> А&nbsp;лонжа&nbsp;рвётся.&nbsp;Застыньте,&nbsp;граждане.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  C   Hm </span></span>
+<span class="line"><span class="txt"> Разиньте&nbsp;рты,&nbsp;прикиньте:&nbsp;падает...&nbsp;Ах,&nbsp;как&nbsp;низко&nbsp;пал.&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  H7  Em  Em6  Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;гаснет&nbsp;вечер.&nbsp;И&nbsp;на&nbsp;штурмующих,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  C   Hm </span>
-<span class="txt"> как&nbsp;снег&nbsp;судеб,&nbsp;нисходит&nbsp;белая&nbsp;ночь.&nbsp;Отбой,&nbsp;гудбай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  H7  Em  Em6  Hm </span>
+<span class="line"><span class="txt"> Прекрасна&nbsp;жизнь!&nbsp;Затейлив&nbsp;хруст&nbsp;её&nbsp;шестерён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span></span>
+<span class="line"><span class="txt"> Прищур&nbsp;востёр.&nbsp;Полки&nbsp;внушительны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span></span>
+<span class="line"><span class="txt"> Во&nbsp;фрунт&nbsp;равняйсь!&nbsp;Поблажек&nbsp;никаких&nbsp;никому.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Hm  Em  Em6 </span></span>
+<span class="line"><span class="txt"> Чем&nbsp;гуще&nbsp;шквал,&nbsp;тем&nbsp;слаще&nbsp;штурм.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Hm  C   Hm </span></span>
 <span class="txt">  </span>
  <br />
+<span class="line"><span class="txt"> Но&nbsp;гаснет&nbsp;вечер.&nbsp;И&nbsp;на&nbsp;штурмующих,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  C   Hm </span></span>
+<span class="line"><span class="txt"> как&nbsp;снег&nbsp;судеб,&nbsp;нисходит&nbsp;белая&nbsp;ночь.&nbsp;Отбой,&nbsp;гудбай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C  Hm  H7  Em  Em6  Hm </span></span>
+<span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">2001</span>
-
+<pre><span class="year">2001</span>
 
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,73 +423,71 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">ПЕСНЯ О ТРОЙКЕ</span>
+data-key="Em"><h1>ПЕСНЯ О ТРОЙКЕ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Резвы&nbsp;кони&nbsp;быстроноги,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em          Am </span>
-<span class="txt"> ночь&nbsp;длинна,&nbsp;кругла&nbsp;Земля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am6         Em </span>
-<span class="txt"> Вот&nbsp;кончаются&nbsp;дороги,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E           Dm   E </span>
-<span class="txt"> начинаются&nbsp;поля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am          Em </span>
+<span class="line"><span class="txt"> Резвы&nbsp;кони&nbsp;быстроноги,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em          Am </span></span>
+<span class="line"><span class="txt"> ночь&nbsp;длинна,&nbsp;кругла&nbsp;Земля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am6         Em </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;кончаются&nbsp;дороги,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E           Dm   E </span></span>
+<span class="line"><span class="txt"> начинаются&nbsp;поля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am          Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ни&nbsp;кладбища,&nbsp;ни&nbsp;постройки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F           Em </span>
-<span class="txt"> не&nbsp;найдёт&nbsp;усталый&nbsp;взгляд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E           Dm   E </span>
-<span class="txt"> Слышен&nbsp;только&nbsp;топот&nbsp;тройки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am6         Em </span>
-<span class="txt"> колокольчики&nbsp;звенят...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C7          H7   Em </span>
-<span class="txt"> Колокольчики&nbsp;звенят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B           D7   Gm </span>
+<span class="line"><span class="txt"> Ни&nbsp;кладбища,&nbsp;ни&nbsp;постройки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F           Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;найдёт&nbsp;усталый&nbsp;взгляд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E           Dm   E </span></span>
+<span class="line"><span class="txt"> Слышен&nbsp;только&nbsp;топот&nbsp;тройки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am6         Em </span></span>
+<span class="line"><span class="txt"> колокольчики&nbsp;звенят...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C7          H7   Em </span></span>
+<span class="line"><span class="txt"> Колокольчики&nbsp;звенят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B           D7   Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Впереди&nbsp;-&nbsp;опять&nbsp;начало,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm          Cm </span>
-<span class="txt"> а&nbsp;затем&nbsp;-&nbsp;опять&nbsp;финал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm-Cm          Gm </span>
-<span class="txt"> Что&nbsp;бы&nbsp;это&nbsp;означало?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G           G7   Cm </span>
-<span class="txt"> Очевидно,&nbsp;мир&nbsp;так&nbsp;мал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm          D7   G </span>
+<span class="line"><span class="txt"> Впереди&nbsp;-&nbsp;опять&nbsp;начало,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm          Cm </span></span>
+<span class="line"><span class="txt"> а&nbsp;затем&nbsp;-&nbsp;опять&nbsp;финал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm-Cm          Gm </span></span>
+<span class="line"><span class="txt"> Что&nbsp;бы&nbsp;это&nbsp;означало?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    G           G7   Cm </span></span>
+<span class="line"><span class="txt"> Очевидно,&nbsp;мир&nbsp;так&nbsp;мал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Gm          D7   G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Позади,&nbsp;помилуй&nbsp;Боже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    A           Am </span>
-<span class="txt"> смято&nbsp;всё&nbsp;и&nbsp;сожжено.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em          H7   C </span>
-<span class="txt"> Ничего&nbsp;не&nbsp;будет&nbsp;больше,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am          Em </span>
-<span class="txt"> и&nbsp;надеяться&nbsp;смешно...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C7          H7   Em </span>
-<span class="txt"> И&nbsp;надеяться&nbsp;смешно...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B           D7   Gm </span>
+<span class="line"><span class="txt"> Позади,&nbsp;помилуй&nbsp;Боже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    A           Am </span></span>
+<span class="line"><span class="txt"> смято&nbsp;всё&nbsp;и&nbsp;сожжено.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em          H7   C </span></span>
+<span class="line"><span class="txt"> Ничего&nbsp;не&nbsp;будет&nbsp;больше,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am          Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;надеяться&nbsp;смешно...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C7          H7   Em </span></span>
+<span class="line"><span class="txt"> И&nbsp;надеяться&nbsp;смешно...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B           D7   Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Как&nbsp;легко&nbsp;и&nbsp;как&nbsp;чудесно!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Cm </span>
-<span class="txt"> Мы&nbsp;всё&nbsp;те&nbsp;же,&nbsp;да&nbsp;не&nbsp;те.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm-Cm               Gm </span>
-<span class="txt"> Старым&nbsp;песням&nbsp;нету&nbsp;места&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    A           Am </span>
-<span class="txt"> в&nbsp;этой&nbsp;тесной&nbsp;пустоте.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em          H7   C </span>
+<span class="line"><span class="txt"> Как&nbsp;легко&nbsp;и&nbsp;как&nbsp;чудесно!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Cm </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;всё&nbsp;те&nbsp;же,&nbsp;да&nbsp;не&nbsp;те.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm-Cm               Gm </span></span>
+<span class="line"><span class="txt"> Старым&nbsp;песням&nbsp;нету&nbsp;места&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    A           Am </span></span>
+<span class="line"><span class="txt"> в&nbsp;этой&nbsp;тесной&nbsp;пустоте.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em          H7   C </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Только&nbsp;топот&nbsp;резвой&nbsp;тройки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F           H7 </span>
-<span class="txt"> раздаётся&nbsp;в&nbsp;стороне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F           H7 </span>
-<span class="txt"> и&nbsp;неслыханные&nbsp;строки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E7          Am </span>
-<span class="txt"> зреют&nbsp;трепетно&nbsp;во&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em          H7   Em </span>
+<span class="line"><span class="txt"> Только&nbsp;топот&nbsp;резвой&nbsp;тройки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F           H7 </span></span>
+<span class="line"><span class="txt"> раздаётся&nbsp;в&nbsp;стороне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F           H7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;неслыханные&nbsp;строки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E7          Am </span></span>
+<span class="line"><span class="txt"> зреют&nbsp;трепетно&nbsp;во&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em          H7   Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;когда&nbsp;их&nbsp;голос&nbsp;ломкий&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am </span>
-<span class="txt"> обрывается,&nbsp;смирен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am6         Em </span>
-<span class="txt"> остаётся&nbsp;лишь&nbsp;негромкий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E           Dm   E </span>
-<span class="txt"> нескончаемый&nbsp;рефрен:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am          Em </span>
+<span class="line"><span class="txt"> А&nbsp;когда&nbsp;их&nbsp;голос&nbsp;ломкий&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am </span></span>
+<span class="line"><span class="txt"> обрывается,&nbsp;смирен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am6         Em </span></span>
+<span class="line"><span class="txt"> остаётся&nbsp;лишь&nbsp;негромкий,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E           Dm   E </span></span>
+<span class="line"><span class="txt"> нескончаемый&nbsp;рефрен:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am          Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> степь&nbsp;да&nbsp;степь.&nbsp;И&nbsp;так&nbsp;же&nbsp;бойко,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F           Em </span>
-<span class="txt"> как&nbsp;и&nbsp;двести&nbsp;лет&nbsp;назад,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E           Dm   E </span>
-<span class="txt"> по&nbsp;степи&nbsp;несётся&nbsp;тройка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am6         Em </span>
-<span class="txt"> колокольчики&nbsp;звенят...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C7          H7   Em </span>
-<span class="txt"> Колокольчики&nbsp;звенят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B           D7   Gm </span>
+<span class="line"><span class="txt"> степь&nbsp;да&nbsp;степь.&nbsp;И&nbsp;так&nbsp;же&nbsp;бойко,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    F           Em </span></span>
+<span class="line"><span class="txt"> как&nbsp;и&nbsp;двести&nbsp;лет&nbsp;назад,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    E           Dm   E </span></span>
+<span class="line"><span class="txt"> по&nbsp;степи&nbsp;несётся&nbsp;тройка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Am6         Em </span></span>
+<span class="line"><span class="txt"> колокольчики&nbsp;звенят...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    C7          H7   Em </span></span>
+<span class="line"><span class="txt"> Колокольчики&nbsp;звенят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    B           D7   Gm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1983</span>
-
+<pre><span class="year">1983</span>
 </pre>
+
 
                 </div>
         </div>

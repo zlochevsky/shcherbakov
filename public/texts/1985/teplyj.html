@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,38 +433,35 @@ span.c {
 data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Тёплый&nbsp;дом,&nbsp;сытный&nbsp;стол,&nbsp;брудершафт&nbsp;с&nbsp;поцелуем&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  Am </span>
-<span class="txt"> всё&nbsp;потом,&nbsp;всё&nbsp;потом,&nbsp;а&nbsp;теперь&nbsp;-&nbsp;недосуг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F   Am  Dm G7 C </span>
-<span class="txt"> Собирайся,&nbsp;солдат,&nbsp;и&nbsp;пойдём&nbsp;повоюем!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  F   Am </span>
-<span class="txt"> Что&nbsp;потом&nbsp;-&nbsp;то&nbsp;потом,&nbsp;что&nbsp;теперь&nbsp;-&nbsp;то&nbsp;вокруг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Am  E  F </span>
-<span class="txt"> Собирайся,&nbsp;солдат,&nbsp;и&nbsp;пойдём&nbsp;повоюем!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm6 F  Am </span>
-<span class="txt"> Что&nbsp;потом&nbsp;-&nbsp;то&nbsp;потом,&nbsp;что&nbsp;теперь&nbsp;-&nbsp;то&nbsp;вокруг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B   Am  E  Am </span>
+<span class="line"><span class="txt"> Тёплый&nbsp;дом,&nbsp;сытный&nbsp;стол,&nbsp;брудершафт&nbsp;с&nbsp;поцелуем&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  Am </span></span>
+<span class="line"><span class="txt"> всё&nbsp;потом,&nbsp;всё&nbsp;потом,&nbsp;а&nbsp;теперь&nbsp;-&nbsp;недосуг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F   Am  Dm G7 C </span></span>
+<span class="line"><span class="txt"> Собирайся,&nbsp;солдат,&nbsp;и&nbsp;пойдём&nbsp;повоюем!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  F   Am </span></span>
+<span class="line"><span class="txt"> Что&nbsp;потом&nbsp;-&nbsp;то&nbsp;потом,&nbsp;что&nbsp;теперь&nbsp;-&nbsp;то&nbsp;вокруг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Am  E  F </span></span>
+<span class="line"><span class="txt"> Собирайся,&nbsp;солдат,&nbsp;и&nbsp;пойдём&nbsp;повоюем!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm6 F  Am </span></span>
+<span class="line"><span class="txt"> Что&nbsp;потом&nbsp;-&nbsp;то&nbsp;потом,&nbsp;что&nbsp;теперь&nbsp;-&nbsp;то&nbsp;вокруг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B   Am  E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кто&nbsp;кого,&nbsp;кто&nbsp;куда...&nbsp;Мы&nbsp;приказ&nbsp;не&nbsp;нарушим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  Am </span>
-<span class="txt"> Мы&nbsp;присяге&nbsp;верны,&nbsp;хоть&nbsp;огнём&nbsp;всё&nbsp;гори.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F   Am  Dm G7 C </span>
-<span class="txt"> Тёплой&nbsp;кровью&nbsp;по&nbsp;горло&nbsp;зальёмся&nbsp;снаружи&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  F   Am </span>
-<span class="txt"> и&nbsp;трофейным&nbsp;портвейном&nbsp;-&nbsp;по&nbsp;горло&nbsp;внутри...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Am  E  F </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ни&nbsp;за&nbsp;что,&nbsp;никогда&nbsp;мы&nbsp;устав&nbsp;не&nbsp;нарушим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm6 F  Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;по&nbsp;горло&nbsp;снаружи,&nbsp;и&nbsp;по&nbsp;горло&nbsp;внутри...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B   Am  E  Am </span>
+<span class="line"><span class="txt"> Кто&nbsp;кого,&nbsp;кто&nbsp;куда...&nbsp;Мы&nbsp;приказ&nbsp;не&nbsp;нарушим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm  Am </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;присяге&nbsp;верны,&nbsp;хоть&nbsp;огнём&nbsp;всё&nbsp;гори.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F   Am  Dm G7 C </span></span>
+<span class="line"><span class="txt"> Тёплой&nbsp;кровью&nbsp;по&nbsp;горло&nbsp;зальёмся&nbsp;снаружи&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  F   Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;трофейным&nbsp;портвейном&nbsp;-&nbsp;по&nbsp;горло&nbsp;внутри...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Am  E  F </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ни&nbsp;за&nbsp;что,&nbsp;никогда&nbsp;мы&nbsp;устав&nbsp;не&nbsp;нарушим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm6 F  Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;по&nbsp;горло&nbsp;снаружи,&nbsp;и&nbsp;по&nbsp;горло&nbsp;внутри...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B   Am  E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Наше&nbsp;чёрное&nbsp;время&nbsp;не&nbsp;кончится&nbsp;с&nbsp;нами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em  Hm </span>
-<span class="txt"> Нас&nbsp;вода&nbsp;унесёт,&nbsp;а&nbsp;оно&nbsp;-&nbsp;над&nbsp;водой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm  Em A7 D </span>
-<span class="txt"> повисит,&nbsp;переждёт&nbsp;и&nbsp;вернётся&nbsp;с&nbsp;войсками,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  G   Hm </span>
-<span class="txt"> и&nbsp;никто&nbsp;ему&nbsp;снова&nbsp;не&nbsp;скажет&nbsp;"долой!".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm  F# G </span>
-<span class="txt"> повисит,&nbsp;переждёт&nbsp;и&nbsp;вернётся&nbsp;с&nbsp;войсками,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em6 G  Hm </span>
-<span class="txt"> и&nbsp;никто&nbsp;ему&nbsp;снова&nbsp;не&nbsp;скажет&nbsp;"долой!".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   Hm  F# Hm </span>
+<span class="line"><span class="txt"> Наше&nbsp;чёрное&nbsp;время&nbsp;не&nbsp;кончится&nbsp;с&nbsp;нами.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Em  Hm </span></span>
+<span class="line"><span class="txt"> Нас&nbsp;вода&nbsp;унесёт,&nbsp;а&nbsp;оно&nbsp;-&nbsp;над&nbsp;водой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   Hm  Em A7 D </span></span>
+<span class="line"><span class="txt"> повисит,&nbsp;переждёт&nbsp;и&nbsp;вернётся&nbsp;с&nbsp;войсками,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  G   Hm </span></span>
+<span class="line"><span class="txt"> и&nbsp;никто&nbsp;ему&nbsp;снова&nbsp;не&nbsp;скажет&nbsp;"долой!".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Hm  F# G </span></span>
+<span class="line"><span class="txt"> повисит,&nbsp;переждёт&nbsp;и&nbsp;вернётся&nbsp;с&nbsp;войсками,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em6 G  Hm </span></span>
+<span class="line"><span class="txt"> и&nbsp;никто&nbsp;ему&nbsp;снова&nbsp;не&nbsp;скажет&nbsp;"долой!".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   Hm  F# Hm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> 1985 </span>
- <br />
-
 </div>
 <pre>
-    
-
 </pre>
+
 
                 </div>
         </div>

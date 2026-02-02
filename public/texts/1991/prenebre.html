@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,66 +423,62 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">ПЕСНЯ БЕЗУМЦА</span>
+data-key="Hm"><h1>ПЕСНЯ БЕЗУМЦА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пренебреги&nbsp;приятностью&nbsp;обряда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span>
-<span class="txt"> не&nbsp;объявляй&nbsp;помолвки&nbsp;с&nbsp;иноверцем:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span>
-<span class="txt"> кто&nbsp;воспылал&nbsp;любовью&nbsp;неземною,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span>
-<span class="txt"> тот&nbsp;редко&nbsp;прав,&nbsp;а&nbsp;счастлив&nbsp;ещё&nbsp;реже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span>
-<span class="txt"> Стань&nbsp;холодна,&nbsp;тебе&nbsp;к&nbsp;лицу&nbsp;прохлада.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
-<span class="txt"> Коль&nbsp;выбирать&nbsp;меж&nbsp;разумом&nbsp;и&nbsp;сердцем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  Fm </span>
-<span class="txt"> пренебреги&nbsp;последним&nbsp;-&nbsp;то&nbsp;есть&nbsp;мною.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Gm </span>
-<span class="txt"> Не&nbsp;отвечай&nbsp;безумцу&nbsp;-&nbsp;то&nbsp;есть&nbsp;мне&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  C7 </span>
+<span class="line"><span class="txt"> Пренебреги&nbsp;приятностью&nbsp;обряда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span></span>
+<span class="line"><span class="txt"> не&nbsp;объявляй&nbsp;помолвки&nbsp;с&nbsp;иноверцем:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span></span>
+<span class="line"><span class="txt"> кто&nbsp;воспылал&nbsp;любовью&nbsp;неземною,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span></span>
+<span class="line"><span class="txt"> тот&nbsp;редко&nbsp;прав,&nbsp;а&nbsp;счастлив&nbsp;ещё&nbsp;реже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span></span>
+<span class="line"><span class="txt"> Стань&nbsp;холодна,&nbsp;тебе&nbsp;к&nbsp;лицу&nbsp;прохлада.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
+<span class="line"><span class="txt"> Коль&nbsp;выбирать&nbsp;меж&nbsp;разумом&nbsp;и&nbsp;сердцем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  Fm </span></span>
+<span class="line"><span class="txt"> пренебреги&nbsp;последним&nbsp;-&nbsp;то&nbsp;есть&nbsp;мною.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Gm </span></span>
+<span class="line"><span class="txt"> Не&nbsp;отвечай&nbsp;безумцу&nbsp;-&nbsp;то&nbsp;есть&nbsp;мне&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  C7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Как&nbsp;ходит&nbsp;бык,&nbsp;не&nbsp;зная&nbsp;реверанса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span>
-<span class="txt"> так&nbsp;я&nbsp;хожу,&nbsp;развлечься&nbsp;не&nbsp;умея.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span>
-<span class="txt"> Вокруг&nbsp;меня&nbsp;-&nbsp;лишь&nbsp;кровь&nbsp;да&nbsp;неизвестность,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span>
-<span class="txt"> и&nbsp;мой&nbsp;напев&nbsp;едва&nbsp;ль&nbsp;зовёт&nbsp;ко&nbsp;благу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span>
-<span class="txt"> Как&nbsp;от&nbsp;чумы,&nbsp;беги&nbsp;от&nbsp;мезальянса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
-<span class="txt"> остепенись&nbsp;-&nbsp;и&nbsp;будь&nbsp;вперёд&nbsp;умнее:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  Fm </span>
-<span class="txt"> люби&nbsp;одну&nbsp;изящную&nbsp;словесность,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Gm </span>
-<span class="txt"> но&nbsp;не&nbsp;люби&nbsp;бездомного&nbsp;бродягу...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  C7 </span>
+<span class="line"><span class="txt"> Как&nbsp;ходит&nbsp;бык,&nbsp;не&nbsp;зная&nbsp;реверанса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span></span>
+<span class="line"><span class="txt"> так&nbsp;я&nbsp;хожу,&nbsp;развлечься&nbsp;не&nbsp;умея.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span></span>
+<span class="line"><span class="txt"> Вокруг&nbsp;меня&nbsp;-&nbsp;лишь&nbsp;кровь&nbsp;да&nbsp;неизвестность,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span></span>
+<span class="line"><span class="txt"> и&nbsp;мой&nbsp;напев&nbsp;едва&nbsp;ль&nbsp;зовёт&nbsp;ко&nbsp;благу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span></span>
+<span class="line"><span class="txt"> Как&nbsp;от&nbsp;чумы,&nbsp;беги&nbsp;от&nbsp;мезальянса,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
+<span class="line"><span class="txt"> остепенись&nbsp;-&nbsp;и&nbsp;будь&nbsp;вперёд&nbsp;умнее:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  Fm </span></span>
+<span class="line"><span class="txt"> люби&nbsp;одну&nbsp;изящную&nbsp;словесность,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Gm </span></span>
+<span class="line"><span class="txt"> но&nbsp;не&nbsp;люби&nbsp;бездомного&nbsp;бродягу...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  C7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;последний&nbsp;раз&nbsp;с&nbsp;последним&nbsp;безразличьем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span>
-<span class="txt"> взгляни&nbsp;туда,&nbsp;где&nbsp;хуже&nbsp;быть&nbsp;не&nbsp;может,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span>
-<span class="txt"> где&nbsp;посреди&nbsp;кровавого&nbsp;ненастья&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span>
-<span class="txt"> реву&nbsp;быком&nbsp;и&nbsp;хрипну&nbsp;я,&nbsp;и&nbsp;глохну;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span>
-<span class="txt"> но&nbsp;не&nbsp;спеши,&nbsp;гнушаясь&nbsp;рёвом&nbsp;бычьим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
-<span class="txt"> тех&nbsp;предпочесть,&nbsp;кто&nbsp;меч&nbsp;в&nbsp;уста&nbsp;мне&nbsp;вложит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  Fm </span>
-<span class="txt"> Вообрази,&nbsp;что&nbsp;я&nbsp;пою&nbsp;от&nbsp;счастья&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Gm </span>
-<span class="txt"> и&nbsp;так&nbsp;и&nbsp;буду&nbsp;петь,&nbsp;пока&nbsp;не&nbsp;сдохну...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  C7 </span>
+<span class="line"><span class="txt"> В&nbsp;последний&nbsp;раз&nbsp;с&nbsp;последним&nbsp;безразличьем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span></span>
+<span class="line"><span class="txt"> взгляни&nbsp;туда,&nbsp;где&nbsp;хуже&nbsp;быть&nbsp;не&nbsp;может,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span></span>
+<span class="line"><span class="txt"> где&nbsp;посреди&nbsp;кровавого&nbsp;ненастья&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span></span>
+<span class="line"><span class="txt"> реву&nbsp;быком&nbsp;и&nbsp;хрипну&nbsp;я,&nbsp;и&nbsp;глохну;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span></span>
+<span class="line"><span class="txt"> но&nbsp;не&nbsp;спеши,&nbsp;гнушаясь&nbsp;рёвом&nbsp;бычьим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
+<span class="line"><span class="txt"> тех&nbsp;предпочесть,&nbsp;кто&nbsp;меч&nbsp;в&nbsp;уста&nbsp;мне&nbsp;вложит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  Fm </span></span>
+<span class="line"><span class="txt"> Вообрази,&nbsp;что&nbsp;я&nbsp;пою&nbsp;от&nbsp;счастья&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Gm </span></span>
+<span class="line"><span class="txt"> и&nbsp;так&nbsp;и&nbsp;буду&nbsp;петь,&nbsp;пока&nbsp;не&nbsp;сдохну...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  C7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;плачь,&nbsp;не&nbsp;плачь.&nbsp;Не&nbsp;больно&nbsp;и&nbsp;хотелось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span>
-<span class="txt"> Гляди&nbsp;на&nbsp;всё&nbsp;холодными&nbsp;глазами:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span>
-<span class="txt"> на&nbsp;всех&nbsp;двуногих,&nbsp;чуждых&nbsp;воспитанью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span>
-<span class="txt"> которым&nbsp;грех&nbsp;не&nbsp;грех,&nbsp;могила&nbsp;спишет;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span>
-<span class="txt"> и&nbsp;на&nbsp;одно&nbsp;из&nbsp;них,&nbsp;что&nbsp;вдруг&nbsp;распелось,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
-<span class="txt"> на&nbsp;существо&nbsp;с&nbsp;разъятыми&nbsp;зубами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  Fm </span>
-<span class="txt"> на&nbsp;это&nbsp;вот,&nbsp;с&nbsp;надорванной&nbsp;гортанью...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Gm </span>
-<span class="txt"> Гляди,&nbsp;гляди!&nbsp;Оно&nbsp;уже&nbsp;не&nbsp;дышит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  C7 </span>
+<span class="line"><span class="txt"> Не&nbsp;плачь,&nbsp;не&nbsp;плачь.&nbsp;Не&nbsp;больно&nbsp;и&nbsp;хотелось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span></span>
+<span class="line"><span class="txt"> Гляди&nbsp;на&nbsp;всё&nbsp;холодными&nbsp;глазами:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span></span>
+<span class="line"><span class="txt"> на&nbsp;всех&nbsp;двуногих,&nbsp;чуждых&nbsp;воспитанью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Cm </span></span>
+<span class="line"><span class="txt"> которым&nbsp;грех&nbsp;не&nbsp;грех,&nbsp;могила&nbsp;спишет;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Bm </span></span>
+<span class="line"><span class="txt"> и&nbsp;на&nbsp;одно&nbsp;из&nbsp;них,&nbsp;что&nbsp;вдруг&nbsp;распелось,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
+<span class="line"><span class="txt"> на&nbsp;существо&nbsp;с&nbsp;разъятыми&nbsp;зубами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  Fm </span></span>
+<span class="line"><span class="txt"> на&nbsp;это&nbsp;вот,&nbsp;с&nbsp;надорванной&nbsp;гортанью...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Gm </span></span>
+<span class="line"><span class="txt"> Гляди,&nbsp;гляди!&nbsp;Оно&nbsp;уже&nbsp;не&nbsp;дышит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Bm  C7 </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1991</span>
-
+<pre><span class="year">1991</span>
 
 
 </pre>
+
 
                 </div>
         </div>

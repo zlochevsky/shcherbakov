@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,17 +433,17 @@ span.c {
 data-key="Hm"><span class="txt"> Интермедия&nbsp;8 </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Между&nbsp;прочим,&nbsp;чтоб&nbsp;в&nbsp;Австралию&nbsp;попасть&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em </span>
-<span class="txt"> нужно&nbsp;прыгнуть&nbsp;без&nbsp;разбега&nbsp;дальше&nbsp;всех.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Hm </span>
-<span class="txt"> Вот&nbsp;я&nbsp;прыгнул&nbsp;-&nbsp;чуть&nbsp;в&nbsp;окно&nbsp;не&nbsp;улетел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span>
-<span class="txt"> обомлели&nbsp;все&nbsp;в&nbsp;спортзале.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7/E# F# </span>
-<span class="txt"> Физкультурник&nbsp;зафиксировал&nbsp;рекорд&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7 </span>
-<span class="txt"> и&nbsp;меня&nbsp;он,&nbsp;то&nbsp;есть&nbsp;прямо&nbsp;в&nbsp;чём&nbsp;я&nbsp;был,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H </span>
-<span class="txt"> моментально-срочно&nbsp;к&nbsp;завучу&nbsp;повел:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7 </span>
-<span class="txt"> вот,&nbsp;мол,&nbsp;полюбуйтесь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em F# Hm </span>
+<span class="line"><span class="txt"> Между&nbsp;прочим,&nbsp;чтоб&nbsp;в&nbsp;Австралию&nbsp;попасть&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em </span></span>
+<span class="line"><span class="txt"> нужно&nbsp;прыгнуть&nbsp;без&nbsp;разбега&nbsp;дальше&nbsp;всех.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Hm </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;я&nbsp;прыгнул&nbsp;-&nbsp;чуть&nbsp;в&nbsp;окно&nbsp;не&nbsp;улетел,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F#m </span></span>
+<span class="line"><span class="txt"> обомлели&nbsp;все&nbsp;в&nbsp;спортзале.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7/E# F# </span></span>
+<span class="line"><span class="txt"> Физкультурник&nbsp;зафиксировал&nbsp;рекорд&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;меня&nbsp;он,&nbsp;то&nbsp;есть&nbsp;прямо&nbsp;в&nbsp;чём&nbsp;я&nbsp;был,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H </span></span>
+<span class="line"><span class="txt"> моментально-срочно&nbsp;к&nbsp;завучу&nbsp;повел:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm C#7 </span></span>
+<span class="line"><span class="txt"> вот,&nbsp;мол,&nbsp;полюбуйтесь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em F# Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Любоваться&nbsp;завуч&nbsp;пристально&nbsp;не&nbsp;стал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm... </span>
+<span class="line"><span class="txt"> Любоваться&nbsp;завуч&nbsp;пристально&nbsp;не&nbsp;стал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm... </span></span>
 <span class="txt"> но&nbsp;заметно&nbsp;было,&nbsp;что&nbsp;доволен-рад. </span>
 <span class="txt"> Даже&nbsp;тут&nbsp;же&nbsp;угоститься&nbsp;предложил </span>
 <span class="txt"> бутербродом&nbsp;с&nbsp;бужениной. </span>
@@ -445,66 +453,62 @@ data-key="Hm"><span class="txt"> Интермедия&nbsp;8 </span>
 <span class="txt"> Глупый,&nbsp;но&nbsp;красивый. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;сказал&nbsp;он&nbsp;(завуч&nbsp;то&nbsp;есть,&nbsp;а&nbsp;не&nbsp;пёс):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm... </span>
+<span class="line"><span class="txt"> И&nbsp;сказал&nbsp;он&nbsp;(завуч&nbsp;то&nbsp;есть,&nbsp;а&nbsp;не&nbsp;пёс):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm... </span></span>
 <span class="txt"> дескать,&nbsp;едешь&nbsp;на&nbsp;комиссию&nbsp;в&nbsp;Москву. </span>
 <span class="txt"> Австралийский&nbsp;Олимпийский&nbsp;комитет </span>
 <span class="txt"> приглашает&nbsp;вундеркиндов. </span>
 <span class="txt"> Едет&nbsp;группа&nbsp;завтра&nbsp;поездом&nbsp;ночным, </span>
 <span class="txt"> двое&nbsp;старших&nbsp;и&nbsp;ещё&nbsp;один,&nbsp;как&nbsp;ты, </span>
 <span class="txt"> тоже&nbsp;местный,&nbsp;ты&nbsp;прыгун,&nbsp;а&nbsp;он&nbsp;бегун. </span>
-<span class="txt"> Собирай,&nbsp;брат,&nbsp;вещи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">             --Cm </span>
+<span class="line"><span class="txt"> Собирай,&nbsp;брат,&nbsp;вещи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">             --Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сел&nbsp;я&nbsp;в&nbsp;поезд,&nbsp;присмотрелся&nbsp;к&nbsp;бегуну.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm </span>
-<span class="txt"> Обсудили&nbsp;с&nbsp;ним&nbsp;Австралию-страну.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm </span>
-<span class="txt"> Он&nbsp;сказал,&nbsp;что&nbsp;видел&nbsp;он&nbsp;её&nbsp;в&nbsp;гробу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm </span>
-<span class="txt"> Я&nbsp;сказал,&nbsp;что&nbsp;тоже&nbsp;там&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G </span>
-<span class="txt"> Сговорились:&nbsp;как&nbsp;докатим&nbsp;до&nbsp;Москвы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm D7 </span>
-<span class="txt"> мы&nbsp;от&nbsp;взрослых&nbsp;оторвёмся&nbsp;-&nbsp;не&nbsp;догнать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span>
-<span class="txt"> Без&nbsp;надзора&nbsp;погуляем,&nbsp;где&nbsp;хотим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm D7 </span>
-<span class="txt"> Будет,&nbsp;мол,&nbsp;что&nbsp;вспомнить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm G Cm </span>
+<span class="line"><span class="txt"> Сел&nbsp;я&nbsp;в&nbsp;поезд,&nbsp;присмотрелся&nbsp;к&nbsp;бегуну.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Fm </span></span>
+<span class="line"><span class="txt"> Обсудили&nbsp;с&nbsp;ним&nbsp;Австралию-страну.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm Cm </span></span>
+<span class="line"><span class="txt"> Он&nbsp;сказал,&nbsp;что&nbsp;видел&nbsp;он&nbsp;её&nbsp;в&nbsp;гробу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;сказал,&nbsp;что&nbsp;тоже&nbsp;там&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G </span></span>
+<span class="line"><span class="txt"> Сговорились:&nbsp;как&nbsp;докатим&nbsp;до&nbsp;Москвы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm D7 </span></span>
+<span class="line"><span class="txt"> мы&nbsp;от&nbsp;взрослых&nbsp;оторвёмся&nbsp;-&nbsp;не&nbsp;догнать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm C </span></span>
+<span class="line"><span class="txt"> Без&nbsp;надзора&nbsp;погуляем,&nbsp;где&nbsp;хотим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm D7 </span></span>
+<span class="line"><span class="txt"> Будет,&nbsp;мол,&nbsp;что&nbsp;вспомнить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm G Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Потоптали&nbsp;мы&nbsp;столицу&nbsp;хорошо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm... </span>
+<span class="line"><span class="txt"> Потоптали&nbsp;мы&nbsp;столицу&nbsp;хорошо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm... </span></span>
 <span class="txt"> Сосчитали&nbsp;башни&nbsp;древнего&nbsp;Кремля. </span>
 <span class="txt"> Возле&nbsp;ЦУМа&nbsp;разругались-разошлись. </span>
 <span class="txt"> В&nbsp;Лужниках&nbsp;сошлись&nbsp;обратно. </span>
 <span class="txt"> У&nbsp;трамплина&nbsp;по&nbsp;площадке&nbsp;смотровой </span>
 <span class="txt"> послонялись,&nbsp;поглазели&nbsp;на&nbsp;закат. </span>
 <span class="txt"> Солнце&nbsp;скрылось,&nbsp;дождь&nbsp;пошёл,&nbsp;и&nbsp;стало&nbsp;нам </span>
-<span class="txt"> холодно&nbsp;и&nbsp;скучно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">             --C#m </span>
+<span class="line"><span class="txt"> холодно&nbsp;и&nbsp;скучно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">             --C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Деньги&nbsp;наши&nbsp;утром&nbsp;кончились&nbsp;ещё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span>
-<span class="txt"> Их&nbsp;ведь&nbsp;толком&nbsp;сразу&nbsp;не&nbsp;было&nbsp;почти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span>
-<span class="txt"> За&nbsp;спасибо&nbsp;даром&nbsp;частник-весельчак&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span>
-<span class="txt"> нас&nbsp;подвёз&nbsp;до&nbsp;Каланчёвки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#7 G# </span>
-<span class="txt"> На&nbsp;Казанском,&nbsp;где&nbsp;торговый&nbsp;закуток,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m D#7 </span>
-<span class="txt"> мы&nbsp;взломали&nbsp;продовольственный&nbsp;ларёк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C# </span>
-<span class="txt"> Нас&nbsp;поймали,&nbsp;посадили&nbsp;под&nbsp;замок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m D#7 </span>
-<span class="txt"> Третий&nbsp;час&nbsp;не&nbsp;кормят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m G# C#m  --Dm </span>
+<span class="line"><span class="txt"> Деньги&nbsp;наши&nbsp;утром&nbsp;кончились&nbsp;ещё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#m </span></span>
+<span class="line"><span class="txt"> Их&nbsp;ведь&nbsp;толком&nbsp;сразу&nbsp;не&nbsp;было&nbsp;почти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C#m </span></span>
+<span class="line"><span class="txt"> За&nbsp;спасибо&nbsp;даром&nbsp;частник-весельчак&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span></span>
+<span class="line"><span class="txt"> нас&nbsp;подвёз&nbsp;до&nbsp;Каланчёвки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#7 G# </span></span>
+<span class="line"><span class="txt"> На&nbsp;Казанском,&nbsp;где&nbsp;торговый&nbsp;закуток,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m D#7 </span></span>
+<span class="line"><span class="txt"> мы&nbsp;взломали&nbsp;продовольственный&nbsp;ларёк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C# </span></span>
+<span class="line"><span class="txt"> Нас&nbsp;поймали,&nbsp;посадили&nbsp;под&nbsp;замок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m D#7 </span></span>
+<span class="line"><span class="txt"> Третий&nbsp;час&nbsp;не&nbsp;кормят.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m G# C#m  --Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Дайте&nbsp;грифель,&nbsp;я&nbsp;на&nbsp;стенке&nbsp;напишу:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span>
-<span class="txt"> здесь&nbsp;был&nbsp;Павлик&nbsp;из&nbsp;Ростова-на-Дону.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm </span>
-<span class="txt"> С&nbsp;места&nbsp;прыгнул&nbsp;дальше&nbsp;он,&nbsp;чем&nbsp;кенгуру.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Gm </span>
-<span class="txt"> Вы&nbsp;его&nbsp;домой&nbsp;отправьте.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 A7  </span>
-<span class="txt"> День&nbsp;рожденья&nbsp;через&nbsp;месяц&nbsp;у&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7 </span>
-<span class="txt"> Стукнет&nbsp;ровно&nbsp;Павлику&nbsp;шестнадцать&nbsp;лет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm D </span>
-<span class="txt"> Он&nbsp;в&nbsp;Ростове&nbsp;сам&nbsp;в&nbsp;милицию&nbsp;пойдёт&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7 </span>
-<span class="txt"> и&nbsp;получит&nbsp;паспорт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A7 Dm </span>
+<span class="line"><span class="txt"> Дайте&nbsp;грифель,&nbsp;я&nbsp;на&nbsp;стенке&nbsp;напишу:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span></span>
+<span class="line"><span class="txt"> здесь&nbsp;был&nbsp;Павлик&nbsp;из&nbsp;Ростова-на-Дону.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm </span></span>
+<span class="line"><span class="txt"> С&nbsp;места&nbsp;прыгнул&nbsp;дальше&nbsp;он,&nbsp;чем&nbsp;кенгуру.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Gm </span></span>
+<span class="line"><span class="txt"> Вы&nbsp;его&nbsp;домой&nbsp;отправьте.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 A7  </span></span>
+<span class="line"><span class="txt"> День&nbsp;рожденья&nbsp;через&nbsp;месяц&nbsp;у&nbsp;него.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7 </span></span>
+<span class="line"><span class="txt"> Стукнет&nbsp;ровно&nbsp;Павлику&nbsp;шестнадцать&nbsp;лет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm D </span></span>
+<span class="line"><span class="txt"> Он&nbsp;в&nbsp;Ростове&nbsp;сам&nbsp;в&nbsp;милицию&nbsp;пойдёт&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6 E7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;получит&nbsp;паспорт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A7 Dm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2011</span>                                                   Условная нотировка по исполнению <span class="year">2012</span> года.
-
+<pre><span class="year">2011</span>                                                   Условная нотировка по исполнению <span class="year">2012</span> года.
 
 
 </pre>
+
 
                 </div>
         </div>

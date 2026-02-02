@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,51 +423,48 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">Паром</span>
+data-key="Am"><h1>Паром</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B Am E/G# Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B Am E/G# Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Что&nbsp;за&nbsp;недуг.&nbsp;Прямо&nbsp;беда.&nbsp;Что-то&nbsp;не&nbsp;так&nbsp;с&nbsp;левым&nbsp;виском.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am D Dm6/H Am D Dm6/H Am </span>
-<span class="txt"> То&nbsp;ли&nbsp;зовут&nbsp;Бог&nbsp;весть&nbsp;куда.&nbsp;То&nbsp;ли&nbsp;звонят&nbsp;Бог&nbsp;весть&nbsp;по&nbsp;ком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C A7/C# Dm B Am B Am E/G# Am </span>
-<span class="txt"> И&nbsp;не&nbsp;понять&nbsp;-&nbsp;что&nbsp;за&nbsp;звонком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 B Am E/G# Am </span>
-<span class="txt"> Ноет&nbsp;в&nbsp;виске&nbsp;влажный&nbsp;мотив.&nbsp;Прямо&nbsp;романс&nbsp;"Пара&nbsp;гнедых".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am D Dm6/H Am D Dm6/H Am </span>
-<span class="txt"> Та&nbsp;же&nbsp;слеза,&nbsp;тот&nbsp;же&nbsp;надрыв.&nbsp;Словно&nbsp;и&nbsp;лет&nbsp;нет&nbsp;прожитых.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C A7/C# Dm B Am B Dm A7 Dm </span>
-<span class="txt"> Были&nbsp;и&nbsp;нет.&nbsp;Кто&nbsp;помнит&nbsp;их?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 B Am E/G# Am </span>
+<span class="line"><span class="txt"> Что&nbsp;за&nbsp;недуг.&nbsp;Прямо&nbsp;беда.&nbsp;Что-то&nbsp;не&nbsp;так&nbsp;с&nbsp;левым&nbsp;виском.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am D Dm6/H Am D Dm6/H Am </span></span>
+<span class="line"><span class="txt"> То&nbsp;ли&nbsp;зовут&nbsp;Бог&nbsp;весть&nbsp;куда.&nbsp;То&nbsp;ли&nbsp;звонят&nbsp;Бог&nbsp;весть&nbsp;по&nbsp;ком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C A7/C# Dm B Am B Am E/G# Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;не&nbsp;понять&nbsp;-&nbsp;что&nbsp;за&nbsp;звонком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 B Am E/G# Am </span></span>
+<span class="line"><span class="txt"> Ноет&nbsp;в&nbsp;виске&nbsp;влажный&nbsp;мотив.&nbsp;Прямо&nbsp;романс&nbsp;"Пара&nbsp;гнедых".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am D Dm6/H Am D Dm6/H Am </span></span>
+<span class="line"><span class="txt"> Та&nbsp;же&nbsp;слеза,&nbsp;тот&nbsp;же&nbsp;надрыв.&nbsp;Словно&nbsp;и&nbsp;лет&nbsp;нет&nbsp;прожитых.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C A7/C# Dm B Am B Dm A7 Dm </span></span>
+<span class="line"><span class="txt"> Были&nbsp;и&nbsp;нет.&nbsp;Кто&nbsp;помнит&nbsp;их?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 B Am E/G# Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Словно&nbsp;и&nbsp;тех&nbsp;нет&nbsp;городов,&nbsp;где&nbsp;тосковал,&nbsp;но&nbsp;ночевал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am D Dm6/H Am D Dm6/H Am </span>
-<span class="txt"> Словно&nbsp;опять&nbsp;завтра&nbsp;готов&nbsp;то&nbsp;завершить,&nbsp;что&nbsp;затевал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C A7/C# Dm B Am B Dm A7 Dm </span>
-<span class="txt"> Словно&nbsp;и&nbsp;жить&nbsp;не&nbsp;начинал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 B Am E/G# Am </span>
-<span class="txt"> Детское&nbsp;желанье&nbsp;удачи,&nbsp;вожделенье&nbsp;мотылька.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am B Am C </span>
-<span class="txt"> Между&nbsp;тем&nbsp;окрест&nbsp;-&nbsp;и&nbsp;холодный&nbsp;плеск,&nbsp;и&nbsp;последняя&nbsp;река...&nbsp;вода...&nbsp;&nbsp; </span><span class="ch"> Dm B Am E/G#             --Cm </span>
+<span class="line"><span class="txt"> Словно&nbsp;и&nbsp;тех&nbsp;нет&nbsp;городов,&nbsp;где&nbsp;тосковал,&nbsp;но&nbsp;ночевал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am D Dm6/H Am D Dm6/H Am </span></span>
+<span class="line"><span class="txt"> Словно&nbsp;опять&nbsp;завтра&nbsp;готов&nbsp;то&nbsp;завершить,&nbsp;что&nbsp;затевал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C A7/C# Dm B Am B Dm A7 Dm </span></span>
+<span class="line"><span class="txt"> Словно&nbsp;и&nbsp;жить&nbsp;не&nbsp;начинал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 B Am E/G# Am </span></span>
+<span class="line"><span class="txt"> Детское&nbsp;желанье&nbsp;удачи,&nbsp;вожделенье&nbsp;мотылька.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am B Am C </span></span>
+<span class="line"><span class="txt"> Между&nbsp;тем&nbsp;окрест&nbsp;-&nbsp;и&nbsp;холодный&nbsp;плеск,&nbsp;и&nbsp;последняя&nbsp;река...&nbsp;вода...&nbsp;&nbsp; </span><span class="ch"> Dm B Am E/G#             --Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;по&nbsp;воде&nbsp;-&nbsp;вроде&nbsp;паром&nbsp;тяжко&nbsp;идёт&nbsp;с&nbsp;той&nbsp;стороны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm F Fm6/D Cm F Fm6/D Cm </span>
-<span class="txt"> Что&nbsp;там&nbsp;за&nbsp;ним?&nbsp;Кто&nbsp;там&nbsp;на&nbsp;нём?&nbsp;Слышит&nbsp;ли&nbsp;он&nbsp;зов&nbsp;глубины?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb Fm Db Cm Db Fm C7 Fm </span>
-<span class="txt"> Ветер&nbsp;силён.&nbsp;Волны&nbsp;темны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">             Db Cm G7 Cm    Am<- </span>
-<span class="txt"> Здесь,&nbsp;возле&nbsp;волн&nbsp;и&nbsp;тростника,&nbsp;грея&nbsp;висок&nbsp;левой&nbsp;рукой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am D Dm6/H Am D Dm6/H Am      </span>
-<span class="txt"> долго&nbsp;ль&nbsp;мне&nbsp;ждать,&nbsp;сладит&nbsp;пока&nbsp;тяжкий&nbsp;паром&nbsp;с&nbsp;тёмной&nbsp;рекой?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C A7/C# Dm B Am B Dm A7 Dm </span>
-<span class="txt"> Зато&nbsp;потом&nbsp;-&nbsp;вечный&nbsp;покой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 B Am E/G# Am </span>
+<span class="line"><span class="txt"> А&nbsp;по&nbsp;воде&nbsp;-&nbsp;вроде&nbsp;паром&nbsp;тяжко&nbsp;идёт&nbsp;с&nbsp;той&nbsp;стороны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm F Fm6/D Cm F Fm6/D Cm </span></span>
+<span class="line"><span class="txt"> Что&nbsp;там&nbsp;за&nbsp;ним?&nbsp;Кто&nbsp;там&nbsp;на&nbsp;нём?&nbsp;Слышит&nbsp;ли&nbsp;он&nbsp;зов&nbsp;глубины?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb Fm Db Cm Db Fm C7 Fm </span></span>
+<span class="line"><span class="txt"> Ветер&nbsp;силён.&nbsp;Волны&nbsp;темны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">             Db Cm G7 Cm    Am<- </span></span>
+<span class="line"><span class="txt"> Здесь,&nbsp;возле&nbsp;волн&nbsp;и&nbsp;тростника,&nbsp;грея&nbsp;висок&nbsp;левой&nbsp;рукой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am D Dm6/H Am D Dm6/H Am      </span></span>
+<span class="line"><span class="txt"> долго&nbsp;ль&nbsp;мне&nbsp;ждать,&nbsp;сладит&nbsp;пока&nbsp;тяжкий&nbsp;паром&nbsp;с&nbsp;тёмной&nbsp;рекой?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C A7/C# Dm B Am B Dm A7 Dm </span></span>
+<span class="line"><span class="txt"> Зато&nbsp;потом&nbsp;-&nbsp;вечный&nbsp;покой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 B Am E/G# Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 B Am E/G# Am </span>
- <br />
-
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">                 B Am E/G# Am </span></span>
 </div>
 <pre>
-    
 <span class="year">2005</span>
-
 </pre>
+
 
                 </div>
         </div>

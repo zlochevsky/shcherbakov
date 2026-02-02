@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,76 +433,70 @@ span.c {
 data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> (пр.) </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(пр.) </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> О&nbsp;ты,&nbsp;не&nbsp;знающий&nbsp;сна,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span>
-<span class="txt"> трибун,&nbsp;политик,&nbsp;борец!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Fm </span>
-<span class="txt"> Ты&nbsp;возмутитель&nbsp;сердец,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      E7 </span>
-<span class="txt"> твоя&nbsp;задача&nbsp;сложна:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span>
+<span class="line"><span class="txt"> О&nbsp;ты,&nbsp;не&nbsp;знающий&nbsp;сна,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span></span>
+<span class="line"><span class="txt"> трибун,&nbsp;политик,&nbsp;борец!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Fm </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;возмутитель&nbsp;сердец,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      E7 </span></span>
+<span class="line"><span class="txt"> твоя&nbsp;задача&nbsp;сложна:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span></span>
 <span class="txt">  </span>
-<span class="txt"> ты&nbsp;веришь&nbsp;в&nbsp;царство&nbsp;труда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H Am </span>
-<span class="txt"> в&nbsp;убийство&nbsp;ради&nbsp;добра;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Cm </span>
-<span class="txt"> ты&nbsp;в&nbsp;это&nbsp;верил&nbsp;вчера&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm </span>
-<span class="txt"> и&nbsp;должен&nbsp;верить&nbsp;всегда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> (пр.) </span>
-<span class="txt">  </span>
-<span class="txt"> О&nbsp;ты,&nbsp;чья&nbsp;поступь&nbsp;слышна&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span>
-<span class="txt"> сквозь&nbsp;грохот&nbsp;стрел&nbsp;грозовых!&nbsp;&nbsp; </span><span class="ch">      Fm </span>
-<span class="txt"> Ты&nbsp;мастер&nbsp;дел&nbsp;гробовых,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      E7 </span>
-<span class="txt"> твоя&nbsp;задача&nbsp;сложна:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span>
-<span class="txt">  </span>
-<span class="txt"> ты&nbsp;должен&nbsp;строить&nbsp;гробы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H Am </span>
-<span class="txt"> для&nbsp;некой&nbsp;милой&nbsp;страны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Cm </span>
-<span class="txt"> в&nbsp;которой&nbsp;люди&nbsp;равны&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm </span>
-<span class="txt"> поскольку&nbsp;все&nbsp;суть&nbsp;рабы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span>
+<span class="line"><span class="txt"> ты&nbsp;веришь&nbsp;в&nbsp;царство&nbsp;труда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H Am </span></span>
+<span class="line"><span class="txt"> в&nbsp;убийство&nbsp;ради&nbsp;добра;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Cm </span></span>
+<span class="line"><span class="txt"> ты&nbsp;в&nbsp;это&nbsp;верил&nbsp;вчера&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm </span></span>
+<span class="line"><span class="txt"> и&nbsp;должен&nbsp;верить&nbsp;всегда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> (пр.) </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(пр.) </span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> О&nbsp;ты,&nbsp;чья&nbsp;поступь&nbsp;слышна&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span></span>
+<span class="line"><span class="txt"> сквозь&nbsp;грохот&nbsp;стрел&nbsp;грозовых!&nbsp;&nbsp; </span><span class="ch">      Fm </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;мастер&nbsp;дел&nbsp;гробовых,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      E7 </span></span>
+<span class="line"><span class="txt"> твоя&nbsp;задача&nbsp;сложна:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> ты&nbsp;должен&nbsp;строить&nbsp;гробы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H Am </span></span>
+<span class="line"><span class="txt"> для&nbsp;некой&nbsp;милой&nbsp;страны,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Cm </span></span>
+<span class="line"><span class="txt"> в&nbsp;которой&nbsp;люди&nbsp;равны&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm </span></span>
+<span class="line"><span class="txt"> поскольку&nbsp;все&nbsp;суть&nbsp;рабы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> О&nbsp;ты,&nbsp;достигший&nbsp;сполна&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span>
-<span class="txt"> верховной&nbsp;власти&nbsp;и&nbsp;благ!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am6 </span>
-<span class="txt"> Ты&nbsp;сам&nbsp;не&nbsp;ведаешь,&nbsp;как&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em </span>
-<span class="txt"> твоя&nbsp;задача&nbsp;сложна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(пр.) </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Когда&nbsp;в&nbsp;монаршьей&nbsp;алчбе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span>
-<span class="txt"> ты&nbsp;понукаешь&nbsp;толпой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am6 </span>
-<span class="txt"> я&nbsp;восхищаюсь&nbsp;тобой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      E7 </span>
-<span class="txt"> и&nbsp;ужасаюсь&nbsp;тебе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Fm </span>
+<span class="line"><span class="txt"> О&nbsp;ты,&nbsp;достигший&nbsp;сполна&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span></span>
+<span class="line"><span class="txt"> верховной&nbsp;власти&nbsp;и&nbsp;благ!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am6 </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;сам&nbsp;не&nbsp;ведаешь,&nbsp;как&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em </span></span>
+<span class="line"><span class="txt"> твоя&nbsp;задача&nbsp;сложна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> О,&nbsp;покоритель&nbsp;держав&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  Cm </span>
-<span class="txt"> и&nbsp;усмиритель&nbsp;племён!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm </span>
-<span class="txt"> Ты&nbsp;несомненно&nbsp;умён,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm </span>
-<span class="txt"> но&nbsp;совершенно&nbsp;не&nbsp;прав.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span>
+<span class="line"><span class="txt"> Когда&nbsp;в&nbsp;монаршьей&nbsp;алчбе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span></span>
+<span class="line"><span class="txt"> ты&nbsp;понукаешь&nbsp;толпой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am6 </span></span>
+<span class="line"><span class="txt"> я&nbsp;восхищаюсь&nbsp;тобой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      E7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;ужасаюсь&nbsp;тебе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Fm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> (пр.) </span>
+<span class="line"><span class="txt"> О,&nbsp;покоритель&nbsp;держав&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  Cm </span></span>
+<span class="line"><span class="txt"> и&nbsp;усмиритель&nbsp;племён!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;несомненно&nbsp;умён,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm </span></span>
+<span class="line"><span class="txt"> но&nbsp;совершенно&nbsp;не&nbsp;прав.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Хлопот&nbsp;не&nbsp;знаю&nbsp;лишь&nbsp;я,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span>
-<span class="txt"> слагая&nbsp;всякую&nbsp;чушь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Fm </span>
-<span class="txt"> Я&nbsp;нужд&nbsp;общественных&nbsp;чужд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      E7 </span>
-<span class="txt"> Проста&nbsp;задача&nbsp;моя:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span>
-<span class="txt">  </span>
-<span class="txt"> пока&nbsp;рассвет&nbsp;не&nbsp;расцвёл,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H Am </span>
-<span class="txt"> я&nbsp;должен&nbsp;-&nbsp;в&nbsp;поте&nbsp;лица&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Cm </span>
-<span class="txt"> придумать&nbsp;новый&nbsp;глагол.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm </span>
-<span class="txt"> И&nbsp;повторять&nbsp;без&nbsp;конца.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(пр.) </span>
 <span class="txt">  </span>
  <br />
+<span class="line"><span class="txt"> Хлопот&nbsp;не&nbsp;знаю&nbsp;лишь&nbsp;я,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Dm </span></span>
+<span class="line"><span class="txt"> слагая&nbsp;всякую&nbsp;чушь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Fm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;нужд&nbsp;общественных&nbsp;чужд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      E7 </span></span>
+<span class="line"><span class="txt"> Проста&nbsp;задача&nbsp;моя:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Dm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> пока&nbsp;рассвет&nbsp;не&nbsp;расцвёл,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H Am </span></span>
+<span class="line"><span class="txt"> я&nbsp;должен&nbsp;-&nbsp;в&nbsp;поте&nbsp;лица&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Cm </span></span>
+<span class="line"><span class="txt"> придумать&nbsp;новый&nbsp;глагол.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm </span></span>
+<span class="line"><span class="txt"> И&nbsp;повторять&nbsp;без&nbsp;конца.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7   Am </span></span>
+<span class="txt">  </span>
  <br />
- <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1990</span>                          (пр.)
+<pre><span class="year">1990</span>                          (пр.)
 
                                Нотировка по исполнению <span class="year">1996</span> года
                               (диск <Воздвиг я памятник>).
@@ -513,8 +515,8 @@ data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
                               x|---|---|---|     x|---|---|---|
                               0|---|---|---|     0|---|---|---|
                               0|---|---|---|     0|---|---|---|
-
 </pre>
+
 
                 </div>
         </div>

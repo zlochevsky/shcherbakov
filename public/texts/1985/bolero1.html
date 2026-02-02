@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,50 +433,48 @@ span.c {
 data-key="A"><span class="txt"> БОЛЕРО&nbsp;I </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;зря&nbsp;ли&nbsp;я&nbsp;взывал&nbsp;до&nbsp;хрипоты,&nbsp;племена&nbsp;миря?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A      A7 </span>
-<span class="txt"> Вражды&nbsp;не&nbsp;одолел,&nbsp;не&nbsp;смял&nbsp;границ,&nbsp;не&nbsp;сломал&nbsp;плотин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A      A7  Dm </span>
-<span class="txt"> Ведь&nbsp;если&nbsp;б&nbsp;даже&nbsp;люди&nbsp;всей&nbsp;Земли&nbsp;одного&nbsp;меня&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6    Am </span>
-<span class="txt"> избрали&nbsp;и&nbsp;вручили&nbsp;б&nbsp;мне&nbsp;весь&nbsp;мир,&nbsp;-&nbsp;то&nbsp;чтоб&nbsp;я&nbsp;смог&nbsp;один?&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     B   E7   A </span>
+<span class="line"><span class="txt"> Не&nbsp;зря&nbsp;ли&nbsp;я&nbsp;взывал&nbsp;до&nbsp;хрипоты,&nbsp;племена&nbsp;миря?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A      A7 </span></span>
+<span class="line"><span class="txt"> Вражды&nbsp;не&nbsp;одолел,&nbsp;не&nbsp;смял&nbsp;границ,&nbsp;не&nbsp;сломал&nbsp;плотин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A      A7  Dm </span></span>
+<span class="line"><span class="txt"> Ведь&nbsp;если&nbsp;б&nbsp;даже&nbsp;люди&nbsp;всей&nbsp;Земли&nbsp;одного&nbsp;меня&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6    Am </span></span>
+<span class="line"><span class="txt"> избрали&nbsp;и&nbsp;вручили&nbsp;б&nbsp;мне&nbsp;весь&nbsp;мир,&nbsp;-&nbsp;то&nbsp;чтоб&nbsp;я&nbsp;смог&nbsp;один?&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     B   E7   A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;я&nbsp;был&nbsp;не&nbsp;один&nbsp;и&nbsp;всё&nbsp;равно&nbsp;ничего&nbsp;не&nbsp;смог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> и&nbsp;сроки&nbsp;на&nbsp;исходе,&nbsp;и&nbsp;вот-вот&nbsp;повлекут&nbsp;к&nbsp;суду,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-<span class="txt"> вот-вот&nbsp;уже&nbsp;появятся&nbsp;лучи,&nbsp;задрожит&nbsp;восток,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am </span>
-<span class="txt"> и&nbsp;вспомнится&nbsp;моё&nbsp;любое&nbsp;слово,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm           B </span>
-<span class="txt"> и&nbsp;спросится&nbsp;за&nbsp;каждое&nbsp;движенье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     B </span>
-<span class="txt"> и&nbsp;знаю&nbsp;я,&nbsp;что&nbsp;не&nbsp;смогу&nbsp;ответить,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm     Dm </span>
-<span class="txt"> и&nbsp;всё&nbsp;равно&nbsp;-&nbsp;иду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A7D </span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;был&nbsp;не&nbsp;один&nbsp;и&nbsp;всё&nbsp;равно&nbsp;ничего&nbsp;не&nbsp;смог,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;сроки&nbsp;на&nbsp;исходе,&nbsp;и&nbsp;вот-вот&nbsp;повлекут&nbsp;к&nbsp;суду,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="line"><span class="txt"> вот-вот&nbsp;уже&nbsp;появятся&nbsp;лучи,&nbsp;задрожит&nbsp;восток,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;вспомнится&nbsp;моё&nbsp;любое&nbsp;слово,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm           B </span></span>
+<span class="line"><span class="txt"> и&nbsp;спросится&nbsp;за&nbsp;каждое&nbsp;движенье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     B </span></span>
+<span class="line"><span class="txt"> и&nbsp;знаю&nbsp;я,&nbsp;что&nbsp;не&nbsp;смогу&nbsp;ответить,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm     Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;всё&nbsp;равно&nbsp;-&nbsp;иду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A7D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;пусть,&nbsp;когда&nbsp;настанет&nbsp;расчёт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     E7     A </span>
-<span class="txt"> Господь&nbsp;мне&nbsp;не&nbsp;простит,&nbsp;но&nbsp;зачтёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm  E7     A </span>
+<span class="line"><span class="txt"> И&nbsp;пусть,&nbsp;когда&nbsp;настанет&nbsp;расчёт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     E7     A </span></span>
+<span class="line"><span class="txt"> Господь&nbsp;мне&nbsp;не&nbsp;простит,&nbsp;но&nbsp;зачтёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm  E7     A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;ты&nbsp;во&nbsp;имя&nbsp;царствия&nbsp;любви&nbsp;меня&nbsp;простишь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A      A7 </span>
-<span class="txt"> за&nbsp;то,&nbsp;что&nbsp;я&nbsp;столь&nbsp;близкий&nbsp;для&nbsp;себя&nbsp;начертал&nbsp;предел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A      A7  Dm </span>
-<span class="txt"> В&nbsp;то&nbsp;время,&nbsp;как&nbsp;другие&nbsp;брали&nbsp;власть,&nbsp;ордена,&nbsp;престиж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6    Am </span>
-<span class="txt"> я&nbsp;слишком&nbsp;много&nbsp;думал&nbsp;о&nbsp;тебе&nbsp;-&nbsp;и&nbsp;ничего&nbsp;не&nbsp;успел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     B   E7   A </span>
+<span class="line"><span class="txt"> И&nbsp;ты&nbsp;во&nbsp;имя&nbsp;царствия&nbsp;любви&nbsp;меня&nbsp;простишь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A      A7 </span></span>
+<span class="line"><span class="txt"> за&nbsp;то,&nbsp;что&nbsp;я&nbsp;столь&nbsp;близкий&nbsp;для&nbsp;себя&nbsp;начертал&nbsp;предел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A      A7  Dm </span></span>
+<span class="line"><span class="txt"> В&nbsp;то&nbsp;время,&nbsp;как&nbsp;другие&nbsp;брали&nbsp;власть,&nbsp;ордена,&nbsp;престиж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6    Am </span></span>
+<span class="line"><span class="txt"> я&nbsp;слишком&nbsp;много&nbsp;думал&nbsp;о&nbsp;тебе&nbsp;-&nbsp;и&nbsp;ничего&nbsp;не&nbsp;успел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     B   E7   A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;то,&nbsp;что&nbsp;я&nbsp;растратился&nbsp;вотще,&nbsp;племена&nbsp;миря,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span>
-<span class="txt"> стараюсь&nbsp;не&nbsp;вменять&nbsp;себе&nbsp;в&nbsp;вину,&nbsp;но&nbsp;иметь&nbsp;в&nbsp;виду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-<span class="txt"> Оно,&nbsp;быть&nbsp;может,&nbsp;правда,&nbsp;ни&nbsp;к&nbsp;чему,&nbsp;а&nbsp;всё&nbsp;равно&nbsp;-&nbsp;не&nbsp;зря,&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am </span>
-<span class="txt"> поскольку&nbsp;порождается&nbsp;надеждой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm           B </span>
-<span class="txt"> на&nbsp;призрачное&nbsp;радужное&nbsp;завтра,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     B </span>
-<span class="txt"> до&nbsp;коего&nbsp;дойти&nbsp;не&nbsp;уповаю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm     Dm </span>
-<span class="txt"> и&nbsp;всё&nbsp;равно&nbsp;-&nbsp;иду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A7D </span>
+<span class="line"><span class="txt"> Но&nbsp;то,&nbsp;что&nbsp;я&nbsp;растратился&nbsp;вотще,&nbsp;племена&nbsp;миря,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 </span></span>
+<span class="line"><span class="txt"> стараюсь&nbsp;не&nbsp;вменять&nbsp;себе&nbsp;в&nbsp;вину,&nbsp;но&nbsp;иметь&nbsp;в&nbsp;виду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="line"><span class="txt"> Оно,&nbsp;быть&nbsp;может,&nbsp;правда,&nbsp;ни&nbsp;к&nbsp;чему,&nbsp;а&nbsp;всё&nbsp;равно&nbsp;-&nbsp;не&nbsp;зря,&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm6  Am </span></span>
+<span class="line"><span class="txt"> поскольку&nbsp;порождается&nbsp;надеждой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm           B </span></span>
+<span class="line"><span class="txt"> на&nbsp;призрачное&nbsp;радужное&nbsp;завтра,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     B </span></span>
+<span class="line"><span class="txt"> до&nbsp;коего&nbsp;дойти&nbsp;не&nbsp;уповаю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm     Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;всё&nbsp;равно&nbsp;-&nbsp;иду.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E   A7D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;пусть,&nbsp;когда&nbsp;настанет&nbsp;расчёт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     E7     A </span>
-<span class="txt"> Господь&nbsp;мне&nbsp;не&nbsp;простит,&nbsp;но&nbsp;зачтёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm  E7     A </span>
+<span class="line"><span class="txt"> И&nbsp;пусть,&nbsp;когда&nbsp;настанет&nbsp;расчёт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm     E7     A </span></span>
+<span class="line"><span class="txt"> Господь&nbsp;мне&nbsp;не&nbsp;простит,&nbsp;но&nbsp;зачтёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm  E7     A </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

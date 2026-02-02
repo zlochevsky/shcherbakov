@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,46 +423,44 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">ПЕСНЯ КЛАДБИЩЕНСКИХ СТОРОЖЕЙ</span>
+data-key="Em"><h1>ПЕСНЯ КЛАДБИЩЕНСКИХ СТОРОЖЕЙ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Под&nbsp;пылью&nbsp;миров,&nbsp;под&nbsp;светилами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em        D7   G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;под&nbsp;песнями&nbsp;снов&nbsp;чернокрылыми&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/f# G/f  E7   Am </span>
-<span class="txt"> клубится&nbsp;туман&nbsp;у&nbsp;кладбищенских&nbsp;стен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7   C    Am </span>
-<span class="txt"> не&nbsp;спят&nbsp;сторожа,&nbsp;стерегущие&nbsp;тлен.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7        C7 </span>
-<span class="txt"> Дрожим&nbsp;мы&nbsp;в&nbsp;сторожках,&nbsp;куском&nbsp;дорожа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm        Em </span>
-<span class="txt"> живыми&nbsp;у&nbsp;мёртвых&nbsp;служа&nbsp;в&nbsp;сторожах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Am   H7   Em </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Под&nbsp;пылью&nbsp;миров,&nbsp;под&nbsp;светилами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em        D7   G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;под&nbsp;песнями&nbsp;снов&nbsp;чернокрылыми&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/f# G/f  E7   Am </span></span>
+<span class="line"><span class="txt"> клубится&nbsp;туман&nbsp;у&nbsp;кладбищенских&nbsp;стен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7   C    Am </span></span>
+<span class="line"><span class="txt"> не&nbsp;спят&nbsp;сторожа,&nbsp;стерегущие&nbsp;тлен.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7        C7 </span></span>
+<span class="line"><span class="txt"> Дрожим&nbsp;мы&nbsp;в&nbsp;сторожках,&nbsp;куском&nbsp;дорожа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm        Em </span></span>
+<span class="line"><span class="txt"> живыми&nbsp;у&nbsp;мёртвых&nbsp;служа&nbsp;в&nbsp;сторожах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Am   H7   Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Наш&nbsp;труд&nbsp;бесполезнее&nbsp;многих&nbsp;трудов:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em        D7   G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;храним&nbsp;мы&nbsp;последний&nbsp;покой&nbsp;мертвецов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/f# G/f  E7   Am </span>
-<span class="txt"> Хотя&nbsp;вам&nbsp;за&nbsp;них&nbsp;не&nbsp;дадут&nbsp;ни&nbsp;гроша,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7   C    Am </span>
-<span class="txt"> приставлены&nbsp;к&nbsp;ним&nbsp;дураки&nbsp;в&nbsp;сторожа.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7        C7 </span>
-<span class="txt"> Нет,&nbsp;даже&nbsp;не&nbsp;к&nbsp;ним,&nbsp;а&nbsp;к&nbsp;крестам&nbsp;дорогим&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm        Em </span>
-<span class="txt"> приставлены&nbsp;мы,&nbsp;и&nbsp;стоим,&nbsp;сторожим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Am   H7   Em </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Наш&nbsp;труд&nbsp;бесполезнее&nbsp;многих&nbsp;трудов:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em        D7   G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;храним&nbsp;мы&nbsp;последний&nbsp;покой&nbsp;мертвецов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/f# G/f  E7   Am </span></span>
+<span class="line"><span class="txt"> Хотя&nbsp;вам&nbsp;за&nbsp;них&nbsp;не&nbsp;дадут&nbsp;ни&nbsp;гроша,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7   C    Am </span></span>
+<span class="line"><span class="txt"> приставлены&nbsp;к&nbsp;ним&nbsp;дураки&nbsp;в&nbsp;сторожа.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7        C7 </span></span>
+<span class="line"><span class="txt"> Нет,&nbsp;даже&nbsp;не&nbsp;к&nbsp;ним,&nbsp;а&nbsp;к&nbsp;крестам&nbsp;дорогим&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm        Em </span></span>
+<span class="line"><span class="txt"> приставлены&nbsp;мы,&nbsp;и&nbsp;стоим,&nbsp;сторожим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Am   H7   Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Одною&nbsp;ногой&nbsp;мы&nbsp;в&nbsp;могилах&nbsp;уже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em        D7   G </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;после&nbsp;поставят&nbsp;других&nbsp;сторожей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/f# G/f  E7   Am </span>
-<span class="txt"> И&nbsp;снова&nbsp;ничто&nbsp;не&nbsp;нарушит&nbsp;рядов&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7   C    Am </span>
-<span class="txt"> над&nbsp;тленом&nbsp;стоящих&nbsp;нетленных&nbsp;крестов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7        C7 </span>
-<span class="txt"> И&nbsp;вечный&nbsp;туман&nbsp;над&nbsp;могилами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm        Em </span>
-<span class="txt"> под&nbsp;песнями&nbsp;снов&nbsp;чернокрылыми.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Am   H7   Em </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Одною&nbsp;ногой&nbsp;мы&nbsp;в&nbsp;могилах&nbsp;уже,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em        D7   G </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;после&nbsp;поставят&nbsp;других&nbsp;сторожей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G/f# G/f  E7   Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;снова&nbsp;ничто&nbsp;не&nbsp;нарушит&nbsp;рядов&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7   C    Am </span></span>
+<span class="line"><span class="txt"> над&nbsp;тленом&nbsp;стоящих&nbsp;нетленных&nbsp;крестов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7        C7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;вечный&nbsp;туман&nbsp;над&nbsp;могилами,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm        Em </span></span>
+<span class="line"><span class="txt"> под&nbsp;песнями&nbsp;снов&nbsp;чернокрылыми.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   Am   H7   Em </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1980</span>, <span class="year">1986</span>
-
+<pre><span class="year">1980</span>, <span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

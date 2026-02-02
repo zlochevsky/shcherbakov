@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,64 +423,62 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">ЦИРКАЧКА</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebdim  Dm     B     Dm/A   A7 </span>
-<span class="txt"> Дрожь&nbsp;унялась.&nbsp;Казнь&nbsp;миновала.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span>
-<span class="txt"> Он&nbsp;далеко.&nbsp;Горше&nbsp;не&nbsp;будет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span>
-<span class="txt"> Ты&nbsp;молода.&nbsp;Время&nbsp;целебно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span>
-<span class="txt"> Прочее&nbsp;всё&nbsp;-&nbsp;снег&nbsp;прошлогодний.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span>
-<span class="txt"> Ну,&nbsp;пренебрёг.&nbsp;Что&nbsp;уж&nbsp;теперь-то&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F      Bdim   Dm    Gm </span>
-<span class="txt"> толку&nbsp;в&nbsp;слезах?&nbsp;Лишняя&nbsp;сырость.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm6    Dm    Gm </span>
-<span class="txt"> Всё-таки&nbsp;был,&nbsp;не&nbsp;показалось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F      Bdim   Dm    Gm </span>
-<span class="txt"> Может,&nbsp;оно&nbsp;даже&nbsp;и&nbsp;к&nbsp;счастью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm6    Dm    Gm </span>
+data-key="Dm"><h1>ЦИРКАЧКА</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebdim  Dm     B     Dm/A   A7 </span></span>
+<span class="line"><span class="txt"> Дрожь&nbsp;унялась.&nbsp;Казнь&nbsp;миновала.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span></span>
+<span class="line"><span class="txt"> Он&nbsp;далеко.&nbsp;Горше&nbsp;не&nbsp;будет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;молода.&nbsp;Время&nbsp;целебно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span></span>
+<span class="line"><span class="txt"> Прочее&nbsp;всё&nbsp;-&nbsp;снег&nbsp;прошлогодний.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span></span>
+<span class="line"><span class="txt"> Ну,&nbsp;пренебрёг.&nbsp;Что&nbsp;уж&nbsp;теперь-то&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F      Bdim   Dm    Gm </span></span>
+<span class="line"><span class="txt"> толку&nbsp;в&nbsp;слезах?&nbsp;Лишняя&nbsp;сырость.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm6    Dm    Gm </span></span>
+<span class="line"><span class="txt"> Всё-таки&nbsp;был,&nbsp;не&nbsp;показалось.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F      Bdim   Dm    Gm </span></span>
+<span class="line"><span class="txt"> Может,&nbsp;оно&nbsp;даже&nbsp;и&nbsp;к&nbsp;счастью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm6    Dm    Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Если&nbsp;б&nbsp;не&nbsp;он,&nbsp;ты&nbsp;б&nbsp;не&nbsp;умела&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span>
-<span class="txt"> петь&nbsp;снегирём,&nbsp;выть&nbsp;по-собачьи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span>
-<span class="txt"> Год&nbsp;напролёт&nbsp;ты&nbsp;с&nbsp;кочевым&nbsp;бы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span>
-<span class="txt"> цирком&nbsp;теперь&nbsp;не&nbsp;кочевала.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span>
-<span class="txt"> Хлеб&nbsp;да&nbsp;вода.&nbsp;Медные&nbsp;деньги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F      Bdim   Dm    Gm </span>
-<span class="txt"> Чем&nbsp;не&nbsp;житьё?&nbsp;Что&nbsp;ж&nbsp;ты&nbsp;не&nbsp;рада?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm6    Dm    Gm </span>
-<span class="txt"> Что&nbsp;всё&nbsp;сидишь&nbsp;-&nbsp;молча&nbsp;да&nbsp;молча,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F      Bdim   Dm    Gm </span>
-<span class="txt"> тушью&nbsp;черня&nbsp;раннюю&nbsp;проседь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm6    Dm    Gm </span>
+<span class="line"><span class="txt"> Если&nbsp;б&nbsp;не&nbsp;он,&nbsp;ты&nbsp;б&nbsp;не&nbsp;умела&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span></span>
+<span class="line"><span class="txt"> петь&nbsp;снегирём,&nbsp;выть&nbsp;по-собачьи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span></span>
+<span class="line"><span class="txt"> Год&nbsp;напролёт&nbsp;ты&nbsp;с&nbsp;кочевым&nbsp;бы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span></span>
+<span class="line"><span class="txt"> цирком&nbsp;теперь&nbsp;не&nbsp;кочевала.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F   Gm6/E  Dm/F  Gm6/E </span></span>
+<span class="line"><span class="txt"> Хлеб&nbsp;да&nbsp;вода.&nbsp;Медные&nbsp;деньги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F      Bdim   Dm    Gm </span></span>
+<span class="line"><span class="txt"> Чем&nbsp;не&nbsp;житьё?&nbsp;Что&nbsp;ж&nbsp;ты&nbsp;не&nbsp;рада?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm6    Dm    Gm </span></span>
+<span class="line"><span class="txt"> Что&nbsp;всё&nbsp;сидишь&nbsp;-&nbsp;молча&nbsp;да&nbsp;молча,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F      Bdim   Dm    Gm </span></span>
+<span class="line"><span class="txt"> тушью&nbsp;черня&nbsp;раннюю&nbsp;проседь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm6    Dm    Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ахнет&nbsp;ли&nbsp;где&nbsp;звонкая&nbsp;сбруя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span>
-<span class="txt"> выстрелит&nbsp;ли&nbsp;хлыст&nbsp;вольтижёра,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span>
-<span class="txt"> всё&nbsp;об&nbsp;одном&nbsp;ты&nbsp;вспоминаешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span>
-<span class="txt"> Всё&nbsp;позабыть&nbsp;не&nbsp;соберёшься,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span>
-<span class="txt"> как&nbsp;в&nbsp;роковой&nbsp;тот&nbsp;понедельник&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      Cdim   Em    Am </span>
-<span class="txt"> он&nbsp;всполошил&nbsp;сонную&nbsp;дворню:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Am6    Em    Am </span>
-<span class="txt"> "Эй,&nbsp;лошадей!..&nbsp;Ночь&nbsp;на&nbsp;исходе."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      Cdim   Em    Am </span>
-<span class="txt"> И&nbsp;укатил.&nbsp;Не&nbsp;оглянулся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Am6    Em    Am </span>
+<span class="line"><span class="txt"> Ахнет&nbsp;ли&nbsp;где&nbsp;звонкая&nbsp;сбруя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span></span>
+<span class="line"><span class="txt"> выстрелит&nbsp;ли&nbsp;хлыст&nbsp;вольтижёра,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span></span>
+<span class="line"><span class="txt"> всё&nbsp;об&nbsp;одном&nbsp;ты&nbsp;вспоминаешь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;позабыть&nbsp;не&nbsp;соберёшься,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span></span>
+<span class="line"><span class="txt"> как&nbsp;в&nbsp;роковой&nbsp;тот&nbsp;понедельник&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      Cdim   Em    Am </span></span>
+<span class="line"><span class="txt"> он&nbsp;всполошил&nbsp;сонную&nbsp;дворню:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Am6    Em    Am </span></span>
+<span class="line"><span class="txt"> "Эй,&nbsp;лошадей!..&nbsp;Ночь&nbsp;на&nbsp;исходе."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      Cdim   Em    Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;укатил.&nbsp;Не&nbsp;оглянулся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Am6    Em    Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim   Em     C     Em/G    H7 </span>
-<span class="txt"> Ну,&nbsp;не&nbsp;любил.&nbsp;Вольному&nbsp;воля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span>
-<span class="txt"> Грех&nbsp;не&nbsp;большой.&nbsp;С&nbsp;кем&nbsp;не&nbsp;бывает.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span>
-<span class="txt"> Право,&nbsp;забудь.&nbsp;Экая&nbsp;важность!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span>
-<span class="txt"> Не&nbsp;вспоминай.&nbsp;Лучше&nbsp;возьми&nbsp;вот&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span>
-<span class="txt"> горсть&nbsp;серебра.&nbsp;Завтра&nbsp;в&nbsp;Варшаве&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      Cdim   Em    Am </span>
-<span class="txt"> купишь&nbsp;себе&nbsp;новую&nbsp;ширму.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Am6    Em    Am </span>
-<span class="txt"> Эй,&nbsp;лошадей!&nbsp;Ночь&nbsp;на&nbsp;исходе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      Cdim   Em    Am </span>
-<span class="txt"> Чёрт&nbsp;бы&nbsp;побрал&nbsp;эти&nbsp;ухабы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Am6    Em    Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Edim   Em     C     Em/G    H7 </span></span>
+<span class="line"><span class="txt"> Ну,&nbsp;не&nbsp;любил.&nbsp;Вольному&nbsp;воля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span></span>
+<span class="line"><span class="txt"> Грех&nbsp;не&nbsp;большой.&nbsp;С&nbsp;кем&nbsp;не&nbsp;бывает.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span></span>
+<span class="line"><span class="txt"> Право,&nbsp;забудь.&nbsp;Экая&nbsp;важность!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span></span>
+<span class="line"><span class="txt"> Не&nbsp;вспоминай.&nbsp;Лучше&nbsp;возьми&nbsp;вот&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/G   Am6/F# Em/G  Am6/F# </span></span>
+<span class="line"><span class="txt"> горсть&nbsp;серебра.&nbsp;Завтра&nbsp;в&nbsp;Варшаве&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      Cdim   Em    Am </span></span>
+<span class="line"><span class="txt"> купишь&nbsp;себе&nbsp;новую&nbsp;ширму.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Am6    Em    Am </span></span>
+<span class="line"><span class="txt"> Эй,&nbsp;лошадей!&nbsp;Ночь&nbsp;на&nbsp;исходе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G      Cdim   Em    Am </span></span>
+<span class="line"><span class="txt"> Чёрт&nbsp;бы&nbsp;побрал&nbsp;эти&nbsp;ухабы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em     Am6    Em    Am </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1996</span>
-
+<pre><span class="year">1996</span>
 </pre>
+
 
                 </div>
         </div>

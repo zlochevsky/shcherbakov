@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,77 +423,75 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">ONCE</span>
+data-key="Em"><h1>ONCE</h1>
 <span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> &nbsp;Мы&nbsp;прах.&nbsp;Мы&nbsp;явный&nbsp;прах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   C </span>
-<span class="txt"> , </span>
-<span class="txt"> &nbsp;В&nbsp;буквальном&nbsp;смысле&nbsp;пыль&nbsp;земли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
-<span class="txt"> , </span>
-<span class="txt"> &nbsp;а&nbsp;также&nbsp;след&nbsp;в&nbsp;пыли.&nbsp;Мы&nbsp;мел&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> &nbsp;руин,&nbsp;щепа&nbsp;сухих&nbsp;древес,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7 </span>
-<span class="txt"> , </span>
-<span class="txt"> &nbsp;морской&nbsp;песок&nbsp;и&nbsp;след&nbsp;в&nbsp;песке,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
+<span class="line"><span class="txt"> &nbsp;Мы&nbsp;прах.&nbsp;Мы&nbsp;явный&nbsp;прах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   C </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> &nbsp;В&nbsp;буквальном&nbsp;смысле&nbsp;пыль&nbsp;земли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> &nbsp;а&nbsp;также&nbsp;след&nbsp;в&nbsp;пыли.&nbsp;Мы&nbsp;мел&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> &nbsp;руин,&nbsp;щепа&nbsp;сухих&nbsp;древес,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   H7 </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> &nbsp;морской&nbsp;песок&nbsp;и&nbsp;след&nbsp;в&nbsp;песке,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
 <span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> &nbsp;утиль&nbsp;музеев&nbsp;и&nbsp;настенный&nbsp;мох&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7/F# G  H7 </span>
+<span class="line"><span class="txt"> &nbsp;утиль&nbsp;музеев&nbsp;и&nbsp;настенный&nbsp;мох&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7/F# G  H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> пещер.&nbsp;Мы&nbsp;алебастр&nbsp;и&nbsp;тальк. </span>
-<span class="txt"> И&nbsp;та&nbsp;мука,&nbsp;что&nbsp;лик&nbsp;паяца&nbsp;белит. </span>
-<span class="txt"> И&nbsp;опилки&nbsp;закулисных&nbsp;стойл. </span>
-<span class="txt"> А&nbsp;также&nbsp;прочий&nbsp;арсенал </span>
-<span class="txt"> сыпучей&nbsp;всячины, </span>
-<span class="txt"> без&nbsp;коей&nbsp;шапито&nbsp;не&nbsp;шапито. </span>
-<span class="txt"> Мы&nbsp;несомненный&nbsp;прах. </span>
-<span class="txt"> Мы&nbsp;порох,&nbsp;что&nbsp;столетьями </span>
-<span class="txt"> лежит&nbsp;себе&nbsp;и&nbsp;ждёт&nbsp;- </span>
-<span class="txt"> ну&nbsp;разве&nbsp;что&nbsp;случайности, </span>
-<span class="txt"> поскольку&nbsp;в&nbsp;тайники, </span>
-<span class="txt"> где&nbsp;спрятан&nbsp;он,&nbsp;ни&nbsp;светлый&nbsp;эльф, </span>
-<span class="txt"> ни&nbsp;чёрный&nbsp;гном&nbsp;пути </span>
-<span class="txt"> не&nbsp;сыщет.&nbsp;Мы&nbsp;нагар&nbsp;и&nbsp;накипь, </span>
-<span class="txt"> зола&nbsp;и&nbsp;сажа&nbsp;мастерских, </span>
-<span class="txt"> густой&nbsp;на&nbsp;гробовой&nbsp;плите </span>
-<span class="txt"> нарост,&nbsp;налёт&nbsp;-&nbsp;убрав&nbsp;его, </span>
-<span class="txt"> прочтёшь&nbsp;слова:&nbsp;навек, </span>
-<span class="txt"> навек,&nbsp;навек,&nbsp;ушла,&nbsp;ушла, </span>
-<span class="txt"> ушла,&nbsp;любовь,&nbsp;любовь,&nbsp;любовь... </span>
-<span class="txt"> Мы&nbsp;несравненный&nbsp;прах. </span>
-<span class="txt"> Мы&nbsp;важный&nbsp;пепел,&nbsp;знатная </span>
-<span class="txt"> руда...&nbsp;Какой,&nbsp;не&nbsp;правда&nbsp;ли, </span>
-<span class="txt"> высокий&nbsp;стиль?&nbsp;Мы&nbsp;пыль, </span>
-<span class="txt"> но&nbsp;если&nbsp;мы&nbsp;не&nbsp;соль&nbsp;земли, </span>
-<span class="txt"> то&nbsp;кто&nbsp;же&nbsp;соль&nbsp;земли? </span>
-<span class="txt">  </span>
- <br />
-<span class="txt">  </span>
- <br />
-<span class="txt"> &nbsp;Once&nbsp;in&nbsp;our&nbsp;lives&nbsp;let&nbsp;us&nbsp;drink&nbsp;to&nbsp;our&nbsp;wives,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em C  Am   H7 </span>
-<span class="txt"> &nbsp;tho'&nbsp;their&nbsp;numbers&nbsp;be&nbsp;but&nbsp;small:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7/F# G    H7/F# </span>
-<span class="txt"> Heav'n&nbsp;take&nbsp;the&nbsp;best&nbsp;and&nbsp;the&nbsp;Devil&nbsp;take&nbsp;the&nbsp;rest, </span>
-<span class="txt"> and&nbsp;so&nbsp;we&nbsp;shall&nbsp;get&nbsp;rid&nbsp;of&nbsp;them&nbsp;all. </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> To&nbsp;this&nbsp;hearty&nbsp;wish&nbsp;let&nbsp;each&nbsp;man&nbsp;take&nbsp;his&nbsp;dish, </span>
-<span class="txt"> and&nbsp;drink,&nbsp;drink,&nbsp;drink&nbsp;till&nbsp;he&nbsp;fall. </span>
+<span class="txt"> &nbsp;пещер.&nbsp;Мы&nbsp;алебастр&nbsp;и&nbsp;тальк. </span>
+<span class="txt"> &nbsp;И&nbsp;та&nbsp;мука,&nbsp;что&nbsp;лик&nbsp;паяца&nbsp;белит. </span>
+<span class="txt"> &nbsp;И&nbsp;опилки&nbsp;закулисных&nbsp;стойл. </span>
+<span class="txt"> &nbsp;А&nbsp;также&nbsp;прочий&nbsp;арсенал </span>
+<span class="txt"> &nbsp;сыпучей&nbsp;всячины, </span>
+<span class="txt"> &nbsp;без&nbsp;коей&nbsp;шапито&nbsp;не&nbsp;шапито. </span>
+<span class="txt"> &nbsp;Мы&nbsp;несомненный&nbsp;прах. </span>
+<span class="txt"> &nbsp;Мы&nbsp;порох,&nbsp;что&nbsp;столетьями </span>
+<span class="txt"> &nbsp;лежит&nbsp;себе&nbsp;и&nbsp;ждёт&nbsp;- </span>
+<span class="txt"> &nbsp;ну&nbsp;разве&nbsp;что&nbsp;случайности, </span>
+<span class="txt"> &nbsp;поскольку&nbsp;в&nbsp;тайники, </span>
+<span class="txt"> &nbsp;где&nbsp;спрятан&nbsp;он,&nbsp;ни&nbsp;светлый&nbsp;эльф, </span>
+<span class="txt"> &nbsp;ни&nbsp;чёрный&nbsp;гном&nbsp;пути </span>
+<span class="txt"> &nbsp;не&nbsp;сыщет.&nbsp;Мы&nbsp;нагар&nbsp;и&nbsp;накипь, </span>
+<span class="txt"> &nbsp;зола&nbsp;и&nbsp;сажа&nbsp;мастерских, </span>
+<span class="txt"> &nbsp;густой&nbsp;на&nbsp;гробовой&nbsp;плите </span>
+<span class="txt"> &nbsp;нарост,&nbsp;налёт&nbsp;-&nbsp;убрав&nbsp;его, </span>
+<span class="txt"> &nbsp;прочтёшь&nbsp;слова:&nbsp;навек, </span>
+<span class="txt"> &nbsp;навек,&nbsp;навек,&nbsp;ушла,&nbsp;ушла, </span>
+<span class="txt"> &nbsp;ушла,&nbsp;любовь,&nbsp;любовь,&nbsp;любовь... </span>
+<span class="txt"> &nbsp;Мы&nbsp;несравненный&nbsp;прах. </span>
+<span class="txt"> &nbsp;Мы&nbsp;важный&nbsp;пепел,&nbsp;знатная </span>
+<span class="txt"> &nbsp;руда...&nbsp;Какой,&nbsp;не&nbsp;правда&nbsp;ли, </span>
+<span class="txt"> &nbsp;высокий&nbsp;стиль?&nbsp;Мы&nbsp;пыль, </span>
+<span class="txt"> &nbsp;но&nbsp;если&nbsp;мы&nbsp;не&nbsp;соль&nbsp;земли, </span>
+<span class="txt"> &nbsp;то&nbsp;кто&nbsp;же&nbsp;соль&nbsp;земли? </span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
  <br />
-
+<span class="line"><span class="txt"> &nbsp;Once&nbsp;in&nbsp;our&nbsp;lives&nbsp;let&nbsp;us&nbsp;drink&nbsp;to&nbsp;our&nbsp;wives,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em C  Am   H7 </span></span>
+<span class="line"><span class="txt"> &nbsp;tho'&nbsp;their&nbsp;numbers&nbsp;be&nbsp;but&nbsp;small:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em    H7   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7/F# G    H7/F# </span></span>
+<span class="txt"> &nbsp;Heav'n&nbsp;take&nbsp;the&nbsp;best&nbsp;and&nbsp;the&nbsp;Devil&nbsp;take&nbsp;the&nbsp;rest, </span>
+<span class="txt"> &nbsp;and&nbsp;so&nbsp;we&nbsp;shall&nbsp;get&nbsp;rid&nbsp;of&nbsp;them&nbsp;all. </span>
+<span class="txt">  </span>
+ <br />
+<span class="txt"> &nbsp;To&nbsp;this&nbsp;hearty&nbsp;wish&nbsp;let&nbsp;each&nbsp;man&nbsp;take&nbsp;his&nbsp;dish, </span>
+<span class="txt"> &nbsp;and&nbsp;drink,&nbsp;drink,&nbsp;drink&nbsp;till&nbsp;he&nbsp;fall. </span>
+<span class="txt">  </span>
+ <br />
+<span class="txt">  </span>
+ <br />
 </div>
-<pre>
-     <span class="year">1995</span>
-
+<pre> <span class="year">1995</span>
 </pre>
+
 
                 </div>
         </div>

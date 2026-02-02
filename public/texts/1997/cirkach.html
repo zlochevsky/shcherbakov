@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,78 +423,75 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">Циркач</span>
+data-key="Dm"><h1>Циркач</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вст.:&nbsp; </span><span class="ch"> B C Dm Gm Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B C Gm A Dm </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вст.:&nbsp; </span><span class="ch"> B C Dm Gm Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B C Gm A Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сном&nbsp;называй,&nbsp;ворожбой,&nbsp;искушеньем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm  D7 </span>
-<span class="txt"> но&nbsp;-&nbsp;чуть&nbsp;разглядев&nbsp;этот&nbsp;праздник&nbsp;чумной&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B   Dm/A A7  Dm </span>
-<span class="txt"> я&nbsp;возомнил,&nbsp;будто&nbsp;он&nbsp;соглашеньем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   B   C   B7 </span>
-<span class="txt"> пускай&nbsp;краткосрочным,&nbsp;но&nbsp;связан&nbsp;со&nbsp;мной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm  A7  Dm </span>
+<span class="line"><span class="txt"> Сном&nbsp;называй,&nbsp;ворожбой,&nbsp;искушеньем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm  D7 </span></span>
+<span class="line"><span class="txt"> но&nbsp;-&nbsp;чуть&nbsp;разглядев&nbsp;этот&nbsp;праздник&nbsp;чумной&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B   Dm/A A7  Dm </span></span>
+<span class="line"><span class="txt"> я&nbsp;возомнил,&nbsp;будто&nbsp;он&nbsp;соглашеньем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   B   C   B7 </span></span>
+<span class="line"><span class="txt"> пускай&nbsp;краткосрочным,&nbsp;но&nbsp;связан&nbsp;со&nbsp;мной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Gm  Dm  A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Без&nbsp;году&nbsp;неделя&nbsp;в&nbsp;цирке,&nbsp;меньше,&nbsp;чем&nbsp;тот&nbsp;ворон&nbsp;на&nbsp;Майорке,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( </span><span class="ch"> = вст.) B   C   Dm  </span>
-<span class="txt"> будь&nbsp;я&nbsp;-&nbsp;ну&nbsp;хотя&nbsp;бы&nbsp;не&nbsp;птенец,&nbsp;тогда&nbsp;оно&nbsp;бы&nbsp;-&nbsp;туда-сюда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Gm      Dm </span>
-<span class="txt"> Мне&nbsp;же&nbsp;словно&nbsp;кто-то&nbsp;подмигнул&nbsp;-&nbsp;и&nbsp;вот,&nbsp;один&nbsp;во&nbsp;всей&nbsp;галёрке,&nbsp;&nbsp;&nbsp; </span><span class="ch">         B   C   Gm </span>
-<span class="txt"> обмер&nbsp;я&nbsp;и&nbsp;воздух&nbsp;обнял,&nbsp;не&nbsp;исчезнуть&nbsp;чтобы.&nbsp;Что&nbsp;да&nbsp;то&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A       Dm </span>
+<span class="line"><span class="txt"> Без&nbsp;году&nbsp;неделя&nbsp;в&nbsp;цирке,&nbsp;меньше,&nbsp;чем&nbsp;тот&nbsp;ворон&nbsp;на&nbsp;Майорке,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( </span><span class="ch"> = вст.) B   C   Dm  </span></span>
+<span class="line"><span class="txt"> будь&nbsp;я&nbsp;-&nbsp;ну&nbsp;хотя&nbsp;бы&nbsp;не&nbsp;птенец,&nbsp;тогда&nbsp;оно&nbsp;бы&nbsp;-&nbsp;туда-сюда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         Gm      Dm </span></span>
+<span class="line"><span class="txt"> Мне&nbsp;же&nbsp;словно&nbsp;кто-то&nbsp;подмигнул&nbsp;-&nbsp;и&nbsp;вот,&nbsp;один&nbsp;во&nbsp;всей&nbsp;галёрке,&nbsp;&nbsp;&nbsp; </span><span class="ch">         B   C   Gm </span></span>
+<span class="line"><span class="txt"> обмер&nbsp;я&nbsp;и&nbsp;воздух&nbsp;обнял,&nbsp;не&nbsp;исчезнуть&nbsp;чтобы.&nbsp;Что&nbsp;да&nbsp;то&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">         A       Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кровь&nbsp;осеклась,&nbsp;бормоча&nbsp;"поздно,&nbsp;поздно".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm... </span>
+<span class="line"><span class="txt"> Кровь&nbsp;осеклась,&nbsp;бормоча&nbsp;"поздно,&nbsp;поздно".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm... </span></span>
 <span class="txt"> Душа&nbsp;заметалась,&nbsp;сама&nbsp;не&nbsp;своя. </span>
 <span class="txt"> Словно&nbsp;у&nbsp;всех&nbsp;на&nbsp;глазах&nbsp;виртуозно </span>
 <span class="txt"> не&nbsp;рыжий&nbsp;ковёрный&nbsp;споткнулся,&nbsp;а&nbsp;я. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Словно&nbsp;в&nbsp;заводной&nbsp;шкатулке&nbsp;вентиль&nbsp;или&nbsp;клапан,&nbsp;там&nbsp;не&nbsp;важно,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B... </span>
+<span class="line"><span class="txt"> Словно&nbsp;в&nbsp;заводной&nbsp;шкатулке&nbsp;вентиль&nbsp;или&nbsp;клапан,&nbsp;там&nbsp;не&nbsp;важно,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B... </span></span>
 <span class="txt"> сбился,&nbsp;ноту&nbsp;взял&nbsp;и&nbsp;отпустить&nbsp;не&nbsp;мог,&nbsp;о&nbsp;чудо,&nbsp;аж&nbsp;полчаса. </span>
 <span class="txt"> Всякий&nbsp;звук&nbsp;умолк,&nbsp;а&nbsp;этот&nbsp;нет,&nbsp;и&nbsp;-&nbsp;вполрезьбы,&nbsp;но&nbsp;так&nbsp;протяжно&nbsp;- </span>
 <span class="txt"> длился,&nbsp;не&nbsp;кончался,&nbsp;не&nbsp;кончался&nbsp;он,&nbsp;покуда&nbsp;не&nbsp;кончился. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Семь&nbsp;с&nbsp;той&nbsp;поры&nbsp;январей&nbsp;незаметных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm... </span>
+<span class="line"><span class="txt"> Семь&nbsp;с&nbsp;той&nbsp;поры&nbsp;январей&nbsp;незаметных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm... </span></span>
 <span class="txt"> в&nbsp;архив&nbsp;отошло&nbsp;и&nbsp;быльём&nbsp;поросло. </span>
 <span class="txt"> Помню&nbsp;ещё,&nbsp;что&nbsp;крикун&nbsp;в&nbsp;позументах </span>
 <span class="txt"> картавил,&nbsp;но&nbsp;это&nbsp;меня&nbsp;не&nbsp;спасло. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;и&nbsp;не&nbsp;расслышал&nbsp;толком,&nbsp;что&nbsp;он&nbsp;объявлял,&nbsp;вертя&nbsp;фасадом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B... </span>
+<span class="line"><span class="txt"> Я&nbsp;и&nbsp;не&nbsp;расслышал&nbsp;толком,&nbsp;что&nbsp;он&nbsp;объявлял,&nbsp;вертя&nbsp;фасадом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B... </span></span>
 <span class="txt"> Видно,&nbsp;речь&nbsp;его&nbsp;и&nbsp;впрямь&nbsp;была&nbsp;скорей&nbsp;корява,&nbsp;чем&nbsp;вычурна. </span>
 <span class="txt"> Понял&nbsp;я&nbsp;лишь&nbsp;то,&nbsp;что&nbsp;неширок&nbsp;под&nbsp;ним&nbsp;помост&nbsp;и&nbsp;рядом-рядом&nbsp;- </span>
-<span class="txt"> бездна.&nbsp;Глубже&nbsp;впадины&nbsp;морской.&nbsp;Черней&nbsp;зуава.&nbsp;Черным-черна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A       Dm    --Em </span>
+<span class="line"><span class="txt"> бездна.&nbsp;Глубже&nbsp;впадины&nbsp;морской.&nbsp;Черней&nbsp;зуава.&nbsp;Черным-черна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A       Dm    --Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Врач&nbsp;говорит:&nbsp;магистраль&nbsp;не&nbsp;задета.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H7  Em  E7 </span>
-<span class="txt"> Испуг&nbsp;излечим.&nbsp;А&nbsp;могло&nbsp;б&nbsp;и&nbsp;убить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  C   Em/H H7  Em </span>
-<span class="txt"> Цирк&nbsp;отступил.&nbsp;Расцвела&nbsp;оперетта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   C   D   C7 </span>
-<span class="txt"> Любить&nbsp;ли&nbsp;её?&nbsp;Слух&nbsp;прошёл,&nbsp;что&nbsp;любить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am  Em  H7  Em </span>
+<span class="line"><span class="txt"> Врач&nbsp;говорит:&nbsp;магистраль&nbsp;не&nbsp;задета.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  H7  Em  E7 </span></span>
+<span class="line"><span class="txt"> Испуг&nbsp;излечим.&nbsp;А&nbsp;могло&nbsp;б&nbsp;и&nbsp;убить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  C   Em/H H7  Em </span></span>
+<span class="line"><span class="txt"> Цирк&nbsp;отступил.&nbsp;Расцвела&nbsp;оперетта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   C   D   C7 </span></span>
+<span class="line"><span class="txt"> Любить&nbsp;ли&nbsp;её?&nbsp;Слух&nbsp;прошёл,&nbsp;что&nbsp;любить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am  Em  H7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Впрочем,&nbsp;тут&nbsp;и&nbsp;"да"&nbsp;и&nbsp;"нет"&nbsp;верны,&nbsp;пиши&nbsp;рецепт,&nbsp;какой&nbsp;охота.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   D   Em        </span>
-<span class="txt"> Легче&nbsp;не&nbsp;бывало,&nbsp;не&nbsp;бывало,&nbsp;не&nbsp;бывало&nbsp;экзамена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      Em        </span>
-<span class="txt"> Кто-то&nbsp;и&nbsp;тебя&nbsp;потом&nbsp;с&nbsp;шарманкою&nbsp;сравнит,&nbsp;в&nbsp;которой&nbsp;что-то&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   D   Am        </span>
-<span class="txt"> долго&nbsp;замирало,&nbsp;замирало,&nbsp;замирало...&nbsp;И&nbsp;замерло.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H       Em        </span>
+<span class="line"><span class="txt"> Впрочем,&nbsp;тут&nbsp;и&nbsp;"да"&nbsp;и&nbsp;"нет"&nbsp;верны,&nbsp;пиши&nbsp;рецепт,&nbsp;какой&nbsp;охота.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   D   Em        </span></span>
+<span class="line"><span class="txt"> Легче&nbsp;не&nbsp;бывало,&nbsp;не&nbsp;бывало,&nbsp;не&nbsp;бывало&nbsp;экзамена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      Em        </span></span>
+<span class="line"><span class="txt"> Кто-то&nbsp;и&nbsp;тебя&nbsp;потом&nbsp;с&nbsp;шарманкою&nbsp;сравнит,&nbsp;в&nbsp;которой&nbsp;что-то&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   D   Am        </span></span>
+<span class="line"><span class="txt"> долго&nbsp;замирало,&nbsp;замирало,&nbsp;замирало...&nbsp;И&nbsp;замерло.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H       Em        </span></span>
 <span class="txt">  </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C D Em C D Em etc </span>
- <br />
-
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C D Em C D Em etc </span></span>
 </div>
-<pre>
-    <span class="year">1997</span>
+<pre><span class="year">1997</span>
                                                                 гармония по исп. <span class="year">1998</span> г.
                                                                 (диск &#171;<a href="../../Disks/fauxpas.html">Faux pas</a>&#187;)
 
-
 </pre>
+
 
                 </div>
         </div>

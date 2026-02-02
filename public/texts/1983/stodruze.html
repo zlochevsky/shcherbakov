@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,65 +423,63 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Gm"><span class="sng-title">СТО ДРУЗЕЙ</span>
+data-key="Gm"><h1>СТО ДРУЗЕЙ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ах,&nbsp;не&nbsp;имейте&nbsp;сто&nbsp;рублей,&nbsp;а&nbsp;сто&nbsp;друзей&nbsp;имейте,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span>
-<span class="txt"> и,&nbsp;может&nbsp;быть,&nbsp;зачтётся&nbsp;вам&nbsp;когда-нибудь&nbsp;потом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm  A7 D7 </span>
-<span class="txt"> Пока&nbsp;же,&nbsp;как&nbsp;сумеете,&nbsp;себе&nbsp;уразумейте,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span>
-<span class="txt"> что&nbsp;тут&nbsp;не&nbsp;в&nbsp;поговорке&nbsp;суть,&nbsp;а&nbsp;кое&nbsp;в&nbsp;чём&nbsp;другом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Друзья&nbsp;теперь&nbsp;дешёвые,&nbsp;а&nbsp;деньги&nbsp;вздорожали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Cm Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;любит&nbsp;счёт&nbsp;копеечка,&nbsp;и&nbsp;любит&nbsp;счет&nbsp;пятак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рубли&nbsp;у&nbsp;нас&nbsp;на&nbsp;улицах&nbsp;валяться&nbsp;перестали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;зато&nbsp;друзья,&nbsp;наоборот,&nbsp;лежат,&nbsp;да&nbsp;ещё&nbsp;как!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm D7 Gm </span>
+<span class="line"><span class="txt"> Ах,&nbsp;не&nbsp;имейте&nbsp;сто&nbsp;рублей,&nbsp;а&nbsp;сто&nbsp;друзей&nbsp;имейте,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span></span>
+<span class="line"><span class="txt"> и,&nbsp;может&nbsp;быть,&nbsp;зачтётся&nbsp;вам&nbsp;когда-нибудь&nbsp;потом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm  A7 D7 </span></span>
+<span class="line"><span class="txt"> Пока&nbsp;же,&nbsp;как&nbsp;сумеете,&nbsp;себе&nbsp;уразумейте,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span></span>
+<span class="line"><span class="txt"> что&nbsp;тут&nbsp;не&nbsp;в&nbsp;поговорке&nbsp;суть,&nbsp;а&nbsp;кое&nbsp;в&nbsp;чём&nbsp;другом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Друзья&nbsp;теперь&nbsp;дешёвые,&nbsp;а&nbsp;деньги&nbsp;вздорожали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Cm Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;любит&nbsp;счёт&nbsp;копеечка,&nbsp;и&nbsp;любит&nbsp;счет&nbsp;пятак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рубли&nbsp;у&nbsp;нас&nbsp;на&nbsp;улицах&nbsp;валяться&nbsp;перестали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;зато&nbsp;друзья,&nbsp;наоборот,&nbsp;лежат,&nbsp;да&nbsp;ещё&nbsp;как!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm D7 Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;заимел&nbsp;я&nbsp;сто&nbsp;друзей.&nbsp;А&nbsp;что&nbsp;мне&nbsp;оставалось?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span>
-<span class="txt"> И&nbsp;сразу&nbsp;дома&nbsp;у&nbsp;себя&nbsp;поставил&nbsp;круглый&nbsp;стол.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm  A7 D7 </span>
-<span class="txt"> И&nbsp;сто&nbsp;приборов&nbsp;на&nbsp;столе&nbsp;на&nbsp;том&nbsp;располагалось,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span>
-<span class="txt"> и&nbsp;сто&nbsp;бутылок&nbsp;было&nbsp;там,&nbsp;и&nbsp;рюмок&nbsp;тоже&nbsp;сто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мои&nbsp;любезные&nbsp;друзья&nbsp;упрямиться&nbsp;не&nbsp;стали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Cm Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;на&nbsp;приглашение&nbsp;моё&nbsp;кивнули,&nbsp;не&nbsp;чинясь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;все&nbsp;пришли,&nbsp;и&nbsp;все&nbsp;вошли,&nbsp;и&nbsp;жутко&nbsp;натоптали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;разлили&nbsp;враз&nbsp;и&nbsp;чокнулись,&nbsp;и&nbsp;дружба&nbsp;началась.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm D7 Gm </span>
+<span class="line"><span class="txt"> И&nbsp;заимел&nbsp;я&nbsp;сто&nbsp;друзей.&nbsp;А&nbsp;что&nbsp;мне&nbsp;оставалось?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span></span>
+<span class="line"><span class="txt"> И&nbsp;сразу&nbsp;дома&nbsp;у&nbsp;себя&nbsp;поставил&nbsp;круглый&nbsp;стол.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm  A7 D7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;сто&nbsp;приборов&nbsp;на&nbsp;столе&nbsp;на&nbsp;том&nbsp;располагалось,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span></span>
+<span class="line"><span class="txt"> и&nbsp;сто&nbsp;бутылок&nbsp;было&nbsp;там,&nbsp;и&nbsp;рюмок&nbsp;тоже&nbsp;сто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мои&nbsp;любезные&nbsp;друзья&nbsp;упрямиться&nbsp;не&nbsp;стали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Cm Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;на&nbsp;приглашение&nbsp;моё&nbsp;кивнули,&nbsp;не&nbsp;чинясь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;все&nbsp;пришли,&nbsp;и&nbsp;все&nbsp;вошли,&nbsp;и&nbsp;жутко&nbsp;натоптали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;разлили&nbsp;враз&nbsp;и&nbsp;чокнулись,&nbsp;и&nbsp;дружба&nbsp;началась.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm D7 Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;сотня&nbsp;тостов&nbsp;прозвучать&nbsp;успела&nbsp;в&nbsp;одночасье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span>
-<span class="txt"> и&nbsp;сотня&nbsp;глоток&nbsp;пела&nbsp;гимн,&nbsp;и&nbsp;не&nbsp;скучал&nbsp;никто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm  A7 D7 </span>
-<span class="txt"> Посуду&nbsp;били&nbsp;щедро&nbsp;так,&nbsp;что,&nbsp;если&nbsp;б&nbsp;это&nbsp;к&nbsp;счастью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span>
-<span class="txt"> я&nbsp;был&nbsp;бы&nbsp;счастлив&nbsp;тыщу&nbsp;лет.&nbsp;По&nbsp;крайней&nbsp;мере&nbsp;√&nbsp;сто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;я&nbsp;всё&nbsp;думал&nbsp;и&nbsp;гадал,&nbsp;вот&nbsp;если&nbsp;бы&nbsp;да&nbsp;кабы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Cm Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;про&nbsp;себя&nbsp;подсчитывал,&nbsp;что&nbsp;вдруг&nbsp;да&nbsp;каждый&nbsp;друг&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;принёс&nbsp;бы&nbsp;мне&nbsp;по&nbsp;сотенке,&nbsp;по&nbsp;сотенке&nbsp;хотя&nbsp;бы!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;всё&nbsp;не&nbsp;мог&nbsp;я&nbsp;сосчитать&nbsp;√&nbsp;захватывало&nbsp;дух.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm D7 Gm </span>
+<span class="line"><span class="txt"> И&nbsp;сотня&nbsp;тостов&nbsp;прозвучать&nbsp;успела&nbsp;в&nbsp;одночасье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span></span>
+<span class="line"><span class="txt"> и&nbsp;сотня&nbsp;глоток&nbsp;пела&nbsp;гимн,&nbsp;и&nbsp;не&nbsp;скучал&nbsp;никто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm  A7 D7 </span></span>
+<span class="line"><span class="txt"> Посуду&nbsp;били&nbsp;щедро&nbsp;так,&nbsp;что,&nbsp;если&nbsp;б&nbsp;это&nbsp;к&nbsp;счастью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span></span>
+<span class="line"><span class="txt"> я&nbsp;был&nbsp;бы&nbsp;счастлив&nbsp;тыщу&nbsp;лет.&nbsp;По&nbsp;крайней&nbsp;мере&nbsp;√&nbsp;сто.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;я&nbsp;всё&nbsp;думал&nbsp;и&nbsp;гадал,&nbsp;вот&nbsp;если&nbsp;бы&nbsp;да&nbsp;кабы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Cm Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;про&nbsp;себя&nbsp;подсчитывал,&nbsp;что&nbsp;вдруг&nbsp;да&nbsp;каждый&nbsp;друг&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;принёс&nbsp;бы&nbsp;мне&nbsp;по&nbsp;сотенке,&nbsp;по&nbsp;сотенке&nbsp;хотя&nbsp;бы!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;всё&nbsp;не&nbsp;мог&nbsp;я&nbsp;сосчитать&nbsp;√&nbsp;захватывало&nbsp;дух.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm D7 Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Перед&nbsp;уходом&nbsp;каждый&nbsp;друг&nbsp;почёл&nbsp;первейшим&nbsp;долгом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span>
-<span class="txt"> мне&nbsp;высказать&nbsp;свою&nbsp;любовь&nbsp;и&nbsp;множество&nbsp;похвал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm  A7 D7 </span>
-<span class="txt"> И&nbsp;каждый&nbsp;руку&nbsp;мне&nbsp;сжимал&nbsp;усердно&nbsp;и&nbsp;подолгу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span>
-<span class="txt"> мне&nbsp;даже&nbsp;стало&nbsp;больно,&nbsp;но&nbsp;я&nbsp;виду&nbsp;не&nbsp;подал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;улыбался&nbsp;и&nbsp;в&nbsp;уме&nbsp;хвалил&nbsp;свою&nbsp;проделку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Cm Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;конце&nbsp;концов&nbsp;и&nbsp;сто&nbsp;друзей&nbsp;довольны&nbsp;были&nbsp;мной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;попросили,&nbsp;уходя,&nbsp;взаймы&nbsp;на&nbsp;опохмелку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;я&nbsp;им&nbsp;выдал&nbsp;по&nbsp;рублю,&nbsp;и&nbsp;сто&nbsp;рублей&nbsp;долой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm D7 Gm </span>
+<span class="line"><span class="txt"> Перед&nbsp;уходом&nbsp;каждый&nbsp;друг&nbsp;почёл&nbsp;первейшим&nbsp;долгом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span></span>
+<span class="line"><span class="txt"> мне&nbsp;высказать&nbsp;свою&nbsp;любовь&nbsp;и&nbsp;множество&nbsp;похвал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm  A7 D7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;каждый&nbsp;руку&nbsp;мне&nbsp;сжимал&nbsp;усердно&nbsp;и&nbsp;подолгу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm </span></span>
+<span class="line"><span class="txt"> мне&nbsp;даже&nbsp;стало&nbsp;больно,&nbsp;но&nbsp;я&nbsp;виду&nbsp;не&nbsp;подал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;улыбался&nbsp;и&nbsp;в&nbsp;уме&nbsp;хвалил&nbsp;свою&nbsp;проделку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Cm Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;конце&nbsp;концов&nbsp;и&nbsp;сто&nbsp;друзей&nbsp;довольны&nbsp;были&nbsp;мной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;попросили,&nbsp;уходя,&nbsp;взаймы&nbsp;на&nbsp;опохмелку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;я&nbsp;им&nbsp;выдал&nbsp;по&nbsp;рублю,&nbsp;и&nbsp;сто&nbsp;рублей&nbsp;долой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Cm Gm D7 Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ах,&nbsp;не&nbsp;имейте&nbsp;сто&nbsp;рублей!&nbsp;А&nbsp;сто&nbsp;друзей&nbsp;имейте.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm D7 Gm </span>
+<span class="line"><span class="txt"> Ах,&nbsp;не&nbsp;имейте&nbsp;сто&nbsp;рублей!&nbsp;А&nbsp;сто&nbsp;друзей&nbsp;имейте.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   Gm Cm D7 Gm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1983</span>
-
+<pre><span class="year">1983</span>
 </pre>
+
 
                 </div>
         </div>

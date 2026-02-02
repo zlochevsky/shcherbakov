@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,76 +423,74 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">МАРШ-МАРШ</span>
+data-key="Dm"><h1>МАРШ-МАРШ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Из&nbsp;пепла&nbsp;былого&nbsp;и&nbsp;дыма&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span>
-<span class="txt"> едва&nbsp;ли&nbsp;всплывет&nbsp;через&nbsp;век,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span>
-<span class="txt"> как&nbsp;мимо&nbsp;тебя&nbsp;всё&nbsp;другие,&nbsp;всё&nbsp;мимо&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> в&nbsp;машинах&nbsp;катились&nbsp;в&nbsp;Артек.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  Dm </span>
+<span class="line"><span class="txt"> Из&nbsp;пепла&nbsp;былого&nbsp;и&nbsp;дыма&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span></span>
+<span class="line"><span class="txt"> едва&nbsp;ли&nbsp;всплывет&nbsp;через&nbsp;век,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span></span>
+<span class="line"><span class="txt"> как&nbsp;мимо&nbsp;тебя&nbsp;всё&nbsp;другие,&nbsp;всё&nbsp;мимо&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> в&nbsp;машинах&nbsp;катились&nbsp;в&nbsp;Артек.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Как&nbsp;пели&nbsp;счастливцы&nbsp;беспечно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> кто&nbsp;хором,&nbsp;кто&nbsp;сам,&nbsp;кто&nbsp;вдвоём,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  F   A7 </span>
-<span class="txt"> и&nbsp;отзвук&nbsp;той&nbsp;песни&nbsp;навечно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> остался&nbsp;в&nbsp;сознанье&nbsp;твоём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A/C    Dm </span>
+<span class="line"><span class="txt"> Как&nbsp;пели&nbsp;счастливцы&nbsp;беспечно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> кто&nbsp;хором,&nbsp;кто&nbsp;сам,&nbsp;кто&nbsp;вдвоём,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  F   A7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;отзвук&nbsp;той&nbsp;песни&nbsp;навечно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> остался&nbsp;в&nbsp;сознанье&nbsp;твоём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A/C    Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> С&nbsp;годами&nbsp;звучал&nbsp;он&nbsp;не&nbsp;тише,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span>
-<span class="txt"> тревожил,&nbsp;будил,&nbsp;оглушал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span>
-<span class="txt"> Хотел&nbsp;ты&nbsp;и&nbsp;вровень&nbsp;с&nbsp;другими,&nbsp;и&nbsp;выше&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> подняться,&nbsp;но&nbsp;отзвук&nbsp;мешал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  Dm </span>
+<span class="line"><span class="txt"> С&nbsp;годами&nbsp;звучал&nbsp;он&nbsp;не&nbsp;тише,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span></span>
+<span class="line"><span class="txt"> тревожил,&nbsp;будил,&nbsp;оглушал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span></span>
+<span class="line"><span class="txt"> Хотел&nbsp;ты&nbsp;и&nbsp;вровень&nbsp;с&nbsp;другими,&nbsp;и&nbsp;выше&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> подняться,&nbsp;но&nbsp;отзвук&nbsp;мешал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;каких&nbsp;бы&nbsp;ни&nbsp;мчался&nbsp;машинах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> ты&nbsp;слышал,&nbsp;как&nbsp;мчится&nbsp;в&nbsp;обгон&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  F   A7 </span>
-<span class="txt"> та&nbsp;песня&nbsp;о&nbsp;горных&nbsp;вершинах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> и&nbsp;словно&nbsp;лишался&nbsp;погон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A/C    Dm </span>
+<span class="line"><span class="txt"> В&nbsp;каких&nbsp;бы&nbsp;ни&nbsp;мчался&nbsp;машинах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> ты&nbsp;слышал,&nbsp;как&nbsp;мчится&nbsp;в&nbsp;обгон&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  F   A7 </span></span>
+<span class="line"><span class="txt"> та&nbsp;песня&nbsp;о&nbsp;горных&nbsp;вершинах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> и&nbsp;словно&nbsp;лишался&nbsp;погон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A/C    Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;знал,&nbsp;что&nbsp;достигнуть&nbsp;способен&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span>
-<span class="txt"> ты&nbsp;только&nbsp;такой&nbsp;высоты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span>
-<span class="txt"> где&nbsp;ниже&nbsp;тебя&nbsp;только&nbsp;тот,&nbsp;кто&nbsp;подобен&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> тебе,&nbsp;или&nbsp;хуже,&nbsp;чем&nbsp;ты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  Dm </span>
+<span class="line"><span class="txt"> И&nbsp;знал,&nbsp;что&nbsp;достигнуть&nbsp;способен&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span></span>
+<span class="line"><span class="txt"> ты&nbsp;только&nbsp;такой&nbsp;высоты,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span></span>
+<span class="line"><span class="txt"> где&nbsp;ниже&nbsp;тебя&nbsp;только&nbsp;тот,&nbsp;кто&nbsp;подобен&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> тебе,&nbsp;или&nbsp;хуже,&nbsp;чем&nbsp;ты.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Другие&nbsp;на&nbsp;взморьях&nbsp;отмокнут,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> оттают&nbsp;в&nbsp;тепле&nbsp;и&nbsp;в&nbsp;семье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  F   A7 </span>
-<span class="txt"> твои&nbsp;же&nbsp;обиды&nbsp;умолкнут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> лишь&nbsp;вместе&nbsp;с&nbsp;тобою&nbsp;в&nbsp;земле.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A/C    Dm </span>
+<span class="line"><span class="txt"> Другие&nbsp;на&nbsp;взморьях&nbsp;отмокнут,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> оттают&nbsp;в&nbsp;тепле&nbsp;и&nbsp;в&nbsp;семье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  F   A7 </span></span>
+<span class="line"><span class="txt"> твои&nbsp;же&nbsp;обиды&nbsp;умолкнут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> лишь&nbsp;вместе&nbsp;с&nbsp;тобою&nbsp;в&nbsp;земле.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A/C    Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ведь&nbsp;даже&nbsp;прижившись&nbsp;во&nbsp;власти&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span>
-<span class="txt"> и&nbsp;вдоволь&nbsp;украв&nbsp;и&nbsp;убив,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span>
-<span class="txt"> себя&nbsp;ты&nbsp;едва&nbsp;ли&nbsp;разнимешь&nbsp;на&nbsp;части&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> и&nbsp;вросший&nbsp;изымешь&nbsp;мотив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  Dm </span>
+<span class="line"><span class="txt"> Ведь&nbsp;даже&nbsp;прижившись&nbsp;во&nbsp;власти&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span></span>
+<span class="line"><span class="txt"> и&nbsp;вдоволь&nbsp;украв&nbsp;и&nbsp;убив,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am A </span></span>
+<span class="line"><span class="txt"> себя&nbsp;ты&nbsp;едва&nbsp;ли&nbsp;разнимешь&nbsp;на&nbsp;части&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> и&nbsp;вросший&nbsp;изымешь&nbsp;мотив.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Удастся&nbsp;тебе&nbsp;о&nbsp;вершинах&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> не&nbsp;раньше&nbsp;забыть,&nbsp;чем&nbsp;залечь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  F   A7 </span>
-<span class="txt"> на&nbsp;трёх&nbsp;или&nbsp;меньше&nbsp;аршинах&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> смотря&nbsp;как:&nbsp;зарыть&nbsp;или&nbsp;сжечь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A/C    Dm </span>
+<span class="line"><span class="txt"> Удастся&nbsp;тебе&nbsp;о&nbsp;вершинах&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> не&nbsp;раньше&nbsp;забыть,&nbsp;чем&nbsp;залечь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  F   A7 </span></span>
+<span class="line"><span class="txt"> на&nbsp;трёх&nbsp;или&nbsp;меньше&nbsp;аршинах&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> смотря&nbsp;как:&nbsp;зарыть&nbsp;или&nbsp;сжечь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A/C    Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Контора&nbsp;участок&nbsp;запомнит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> на&nbsp;схеме&nbsp;укажет&nbsp;-&nbsp;куда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  F   A7 </span>
-<span class="txt"> и&nbsp;самый&nbsp;безумный&nbsp;паломник&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span>
-<span class="txt"> разыщет&nbsp;тебя&nbsp;без&nbsp;труда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A/C    Dm </span>
+<span class="line"><span class="txt"> Контора&nbsp;участок&nbsp;запомнит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> на&nbsp;схеме&nbsp;укажет&nbsp;-&nbsp;куда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A  F   A7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;самый&nbsp;безумный&nbsp;паломник&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D  Gm Gm/E </span></span>
+<span class="line"><span class="txt"> разыщет&nbsp;тебя&nbsp;без&nbsp;труда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm A/C    Dm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">2019</span>
-
+<pre><span class="year">2019</span>
 </pre>
+
 
                 </div>
         </div>

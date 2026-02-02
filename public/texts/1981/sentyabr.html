@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,69 +423,67 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">СЕНТЯБРЬ</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Dm6 </span>
-<span class="txt"> Облака&nbsp;-&nbsp;существа&nbsp;нелетучие,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   Dm </span>
-<span class="txt"> облака&nbsp;-&nbsp;существа&nbsp;висячие.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   C7   F </span>
-<span class="txt"> Что&nbsp;же&nbsp;мучит&nbsp;меня,&nbsp;что&nbsp;же&nbsp;мучает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Gm   Dm </span>
-<span class="txt"> что&nbsp;же&nbsp;силы&nbsp;мои&nbsp;подтачивает?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E    C    G </span>
+data-key="Dm"><h1>СЕНТЯБРЬ</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Dm6 </span></span>
+<span class="line"><span class="txt"> Облака&nbsp;-&nbsp;существа&nbsp;нелетучие,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   Dm </span></span>
+<span class="line"><span class="txt"> облака&nbsp;-&nbsp;существа&nbsp;висячие.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   C7   F </span></span>
+<span class="line"><span class="txt"> Что&nbsp;же&nbsp;мучит&nbsp;меня,&nbsp;что&nbsp;же&nbsp;мучает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Gm   Dm </span></span>
+<span class="line"><span class="txt"> что&nbsp;же&nbsp;силы&nbsp;мои&nbsp;подтачивает?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E    C    G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вот&nbsp;опять&nbsp;многопутье&nbsp;завертится,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Gm   F    A7 </span>
-<span class="txt"> заморгает&nbsp;Судьба&nbsp;-&nbsp;семафорщица,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   D7   Gm </span>
-<span class="txt"> и&nbsp;рассмотрит&nbsp;меня,&nbsp;и&nbsp;рассердится,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Gm </span>
-<span class="txt"> и&nbsp;проглотит&nbsp;меня,&nbsp;и&nbsp;поморщится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Dm6 </span>
+<span class="line"><span class="txt"> Вот&nbsp;опять&nbsp;многопутье&nbsp;завертится,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Gm   F    A7 </span></span>
+<span class="line"><span class="txt"> заморгает&nbsp;Судьба&nbsp;-&nbsp;семафорщица,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   D7   Gm </span></span>
+<span class="line"><span class="txt"> и&nbsp;рассмотрит&nbsp;меня,&nbsp;и&nbsp;рассердится,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Gm </span></span>
+<span class="line"><span class="txt"> и&nbsp;проглотит&nbsp;меня,&nbsp;и&nbsp;поморщится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Dm6 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ой&nbsp;вы,&nbsp;песни&nbsp;мои&nbsp;бесполезные,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   Dm </span>
-<span class="txt"> то&nbsp;острожные,&nbsp;то&nbsp;осторожные,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   C7   F </span>
-<span class="txt"> и&nbsp;куплеты&nbsp;дорожно-железные,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Gm   Dm </span>
-<span class="txt"> и&nbsp;сюжеты&nbsp;железнодорожные!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E    C    G </span>
+<span class="line"><span class="txt"> Ой&nbsp;вы,&nbsp;песни&nbsp;мои&nbsp;бесполезные,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   Dm </span></span>
+<span class="line"><span class="txt"> то&nbsp;острожные,&nbsp;то&nbsp;осторожные,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   C7   F </span></span>
+<span class="line"><span class="txt"> и&nbsp;куплеты&nbsp;дорожно-железные,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Gm   Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;сюжеты&nbsp;железнодорожные!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E    C    G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> У&nbsp;судьбы&nbsp;я&nbsp;не&nbsp;баловень&nbsp;-&nbsp;шпаловень,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Gm   F    A7 </span>
-<span class="txt"> я&nbsp;не&nbsp;дома,&nbsp;я&nbsp;в&nbsp;стане,&nbsp;я&nbsp;в&nbsp;таборе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   D7   Gm </span>
-<span class="txt"> я&nbsp;на&nbsp;трапе,&nbsp;в&nbsp;каюте,&nbsp;на&nbsp;палубе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Gm </span>
-<span class="txt"> на&nbsp;перроне,&nbsp;в&nbsp;вагоне&nbsp;и&nbsp;в&nbsp;тамбуре.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Dm6 </span>
+<span class="line"><span class="txt"> У&nbsp;судьбы&nbsp;я&nbsp;не&nbsp;баловень&nbsp;-&nbsp;шпаловень,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Gm   F    A7 </span></span>
+<span class="line"><span class="txt"> я&nbsp;не&nbsp;дома,&nbsp;я&nbsp;в&nbsp;стане,&nbsp;я&nbsp;в&nbsp;таборе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   D7   Gm </span></span>
+<span class="line"><span class="txt"> я&nbsp;на&nbsp;трапе,&nbsp;в&nbsp;каюте,&nbsp;на&nbsp;палубе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Gm </span></span>
+<span class="line"><span class="txt"> на&nbsp;перроне,&nbsp;в&nbsp;вагоне&nbsp;и&nbsp;в&nbsp;тамбуре.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Dm6 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> ...Мы&nbsp;с&nbsp;тобою&nbsp;опять&nbsp;не&nbsp;насытились,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   Dm </span>
-<span class="txt"> и&nbsp;опять&nbsp;не&nbsp;решили&nbsp;-&nbsp;расстаться&nbsp;ли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   C7   F </span>
-<span class="txt"> Мы&nbsp;любили,&nbsp;ругались,&nbsp;обиделись,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Gm   Dm </span>
-<span class="txt"> а&nbsp;увиделись&nbsp;только&nbsp;на&nbsp;станции.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E    C    G </span>
+<span class="line"><span class="txt"> ...Мы&nbsp;с&nbsp;тобою&nbsp;опять&nbsp;не&nbsp;насытились,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;опять&nbsp;не&nbsp;решили&nbsp;-&nbsp;расстаться&nbsp;ли.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   C7   F </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;любили,&nbsp;ругались,&nbsp;обиделись,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Gm   Dm </span></span>
+<span class="line"><span class="txt"> а&nbsp;увиделись&nbsp;только&nbsp;на&nbsp;станции.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E    C    G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;несогласии&nbsp;глаз&nbsp;-&nbsp;несоглазие,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Gm   F    A7 </span>
-<span class="txt"> в&nbsp;разлучении&nbsp;рук&nbsp;-&nbsp;неприрученность,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   D7   Gm </span>
-<span class="txt"> безобразие&nbsp;слов&nbsp;-&nbsp;в&nbsp;многоразии,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Gm </span>
-<span class="txt"> в&nbsp;неизмученности&nbsp;-&nbsp;неизученность.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Dm6 </span>
+<span class="line"><span class="txt"> В&nbsp;несогласии&nbsp;глаз&nbsp;-&nbsp;несоглазие,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Gm   F    A7 </span></span>
+<span class="line"><span class="txt"> в&nbsp;разлучении&nbsp;рук&nbsp;-&nbsp;неприрученность,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   D7   Gm </span></span>
+<span class="line"><span class="txt"> безобразие&nbsp;слов&nbsp;-&nbsp;в&nbsp;многоразии,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Gm </span></span>
+<span class="line"><span class="txt"> в&nbsp;неизмученности&nbsp;-&nbsp;неизученность.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Dm6 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Так&nbsp;и&nbsp;жить&nbsp;мне,&nbsp;тобой&nbsp;попрекаемым,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   Dm </span>
-<span class="txt"> в&nbsp;суматошном&nbsp;дорожном&nbsp;язычестве,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   C7   F </span>
-<span class="txt"> в&nbsp;одуреньи&nbsp;моём&nbsp;неприкаянном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Gm   Dm </span>
-<span class="txt"> в&nbsp;сентябреньи&nbsp;моём,&nbsp;сентябричестве.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E    C    G </span>
+<span class="line"><span class="txt"> Так&nbsp;и&nbsp;жить&nbsp;мне,&nbsp;тобой&nbsp;попрекаемым,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   Dm </span></span>
+<span class="line"><span class="txt"> в&nbsp;суматошном&nbsp;дорожном&nbsp;язычестве,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A9   C7   F </span></span>
+<span class="line"><span class="txt"> в&nbsp;одуреньи&nbsp;моём&nbsp;неприкаянном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Gm   Dm </span></span>
+<span class="line"><span class="txt"> в&nbsp;сентябреньи&nbsp;моём,&nbsp;сентябричестве.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E    C    G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;уже&nbsp;не&nbsp;умею&nbsp;иначе&nbsp;я&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Gm   F    A7 </span>
-<span class="txt"> и&nbsp;болтаюсь&nbsp;от&nbsp;случая&nbsp;к&nbsp;случаю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   D7   Gm </span>
-<span class="txt"> забредя&nbsp;в&nbsp;небосводье&nbsp;висячее,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Gm </span>
-<span class="txt"> в&nbsp;нелетучие&nbsp;тучи&nbsp;ползучие...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Dm6 </span>
+<span class="line"><span class="txt"> Но&nbsp;уже&nbsp;не&nbsp;умею&nbsp;иначе&nbsp;я&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Gm   F    A7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;болтаюсь&nbsp;от&nbsp;случая&nbsp;к&nbsp;случаю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#   D7   Gm </span></span>
+<span class="line"><span class="txt"> забредя&nbsp;в&nbsp;небосводье&nbsp;висячее,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Gm </span></span>
+<span class="line"><span class="txt"> в&nbsp;нелетучие&nbsp;тучи&nbsp;ползучие...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm   Dm6 </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1981</span>
-
+<pre><span class="year">1981</span>
 </pre>
+
 
                 </div>
         </div>

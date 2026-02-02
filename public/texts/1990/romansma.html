@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,65 +423,62 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">РОМАНС-МАРШ</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Порою&nbsp;давней,&nbsp;хмельной&nbsp;да&nbsp;резвой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span>
-<span class="txt"> твои&nbsp;считал&nbsp;я&nbsp;имена,&nbsp;но&nbsp;бросил&nbsp;счёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
-<span class="txt"> Звалась&nbsp;ты&nbsp;Мартой,&nbsp;звалась&nbsp;Терезой...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span>
-<span class="txt"> Не&nbsp;знаю,&nbsp;кто&nbsp;и&nbsp;как&nbsp;теперь&nbsp;тебя&nbsp;зовёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
+data-key="Em"><h1>РОМАНС-МАРШ</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Порою&nbsp;давней,&nbsp;хмельной&nbsp;да&nbsp;резвой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span></span>
+<span class="line"><span class="txt"> твои&nbsp;считал&nbsp;я&nbsp;имена,&nbsp;но&nbsp;бросил&nbsp;счёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
+<span class="line"><span class="txt"> Звалась&nbsp;ты&nbsp;Мартой,&nbsp;звалась&nbsp;Терезой...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span></span>
+<span class="line"><span class="txt"> Не&nbsp;знаю,&nbsp;кто&nbsp;и&nbsp;как&nbsp;теперь&nbsp;тебя&nbsp;зовёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всегда&nbsp;внезапно,&nbsp;всегда&nbsp;поспешно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span>
-<span class="txt"> встречались&nbsp;мы,&nbsp;где&nbsp;только&nbsp;случай&nbsp;выпадал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span>
-<span class="txt"> От&nbsp;Люксембурга&nbsp;до&nbsp;Будапешта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span>
-<span class="txt"> следил&nbsp;я&nbsp;странствия&nbsp;твои,&nbsp;потом&nbsp;устал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#  H </span>
+<span class="line"><span class="txt"> Всегда&nbsp;внезапно,&nbsp;всегда&nbsp;поспешно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span></span>
+<span class="line"><span class="txt"> встречались&nbsp;мы,&nbsp;где&nbsp;только&nbsp;случай&nbsp;выпадал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span></span>
+<span class="line"><span class="txt"> От&nbsp;Люксембурга&nbsp;до&nbsp;Будапешта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span></span>
+<span class="line"><span class="txt"> следил&nbsp;я&nbsp;странствия&nbsp;твои,&nbsp;потом&nbsp;устал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#  H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Деля&nbsp;разлуку&nbsp;на&nbsp;сто&nbsp;и&nbsp;двести,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span>
-<span class="txt"> я&nbsp;понимал,&nbsp;не&nbsp;услыхав&nbsp;ни&nbsp;"нет",&nbsp;ни&nbsp;"да",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
-<span class="txt"> что&nbsp;никогда&nbsp;мы&nbsp;не&nbsp;будем&nbsp;вместе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span>
-<span class="txt"> но&nbsp;и&nbsp;навеки&nbsp;не&nbsp;простимся&nbsp;никогда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
+<span class="line"><span class="txt"> Деля&nbsp;разлуку&nbsp;на&nbsp;сто&nbsp;и&nbsp;двести,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span></span>
+<span class="line"><span class="txt"> я&nbsp;понимал,&nbsp;не&nbsp;услыхав&nbsp;ни&nbsp;"нет",&nbsp;ни&nbsp;"да",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
+<span class="line"><span class="txt"> что&nbsp;никогда&nbsp;мы&nbsp;не&nbsp;будем&nbsp;вместе,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span></span>
+<span class="line"><span class="txt"> но&nbsp;и&nbsp;навеки&nbsp;не&nbsp;простимся&nbsp;никогда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Шутя&nbsp;исчезнешь,&nbsp;легко&nbsp;возникнешь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span>
-<span class="txt"> изменишь&nbsp;подданство,&nbsp;марьяж&nbsp;осуществишь,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span>
-<span class="txt"> но&nbsp;от&nbsp;меня&nbsp;ты&nbsp;едва&nbsp;ль&nbsp;отвыкнешь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span>
-<span class="txt"> и&nbsp;мне&nbsp;отвыкнуть&nbsp;от&nbsp;себя&nbsp;не&nbsp;разрешишь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#  H </span>
+<span class="line"><span class="txt"> Шутя&nbsp;исчезнешь,&nbsp;легко&nbsp;возникнешь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span></span>
+<span class="line"><span class="txt"> изменишь&nbsp;подданство,&nbsp;марьяж&nbsp;осуществишь,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span></span>
+<span class="line"><span class="txt"> но&nbsp;от&nbsp;меня&nbsp;ты&nbsp;едва&nbsp;ль&nbsp;отвыкнешь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span></span>
+<span class="line"><span class="txt"> и&nbsp;мне&nbsp;отвыкнуть&nbsp;от&nbsp;себя&nbsp;не&nbsp;разрешишь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#  H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Письмо&nbsp;примчится&nbsp;-&nbsp;с&nbsp;невнятной&nbsp;маркой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span>
-<span class="txt"> на&nbsp;невозможном&nbsp;языке,&nbsp;Бог&nbsp;весть&nbsp;о&nbsp;чём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
-<span class="txt"> Была&nbsp;ты&nbsp;немкой,&nbsp;была&nbsp;мадьяркой...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span>
-<span class="txt"> Кто&nbsp;ты&nbsp;теперь,&nbsp;не&nbsp;разберу&nbsp;и&nbsp;с&nbsp;толмачом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
+<span class="line"><span class="txt"> Письмо&nbsp;примчится&nbsp;-&nbsp;с&nbsp;невнятной&nbsp;маркой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span></span>
+<span class="line"><span class="txt"> на&nbsp;невозможном&nbsp;языке,&nbsp;Бог&nbsp;весть&nbsp;о&nbsp;чём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
+<span class="line"><span class="txt"> Была&nbsp;ты&nbsp;немкой,&nbsp;была&nbsp;мадьяркой...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span></span>
+<span class="line"><span class="txt"> Кто&nbsp;ты&nbsp;теперь,&nbsp;не&nbsp;разберу&nbsp;и&nbsp;с&nbsp;толмачом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Да&nbsp;много&nbsp;ль&nbsp;ты&nbsp;мне&nbsp;напишешь,&nbsp;кроме&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span>
-<span class="txt"> расхожей&nbsp;истины,&nbsp;что&nbsp;всюду&nbsp;-&nbsp;как&nbsp;везде?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span>
-<span class="txt"> О&nbsp;новом&nbsp;муже,&nbsp;о&nbsp;новом&nbsp;доме,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span>
-<span class="txt"> о&nbsp;местной&nbsp;моде,&nbsp;о&nbsp;погоде,&nbsp;о&nbsp;дожде...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#  H </span>
+<span class="line"><span class="txt"> Да&nbsp;много&nbsp;ль&nbsp;ты&nbsp;мне&nbsp;напишешь,&nbsp;кроме&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span></span>
+<span class="line"><span class="txt"> расхожей&nbsp;истины,&nbsp;что&nbsp;всюду&nbsp;-&nbsp;как&nbsp;везде?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  F#m </span></span>
+<span class="line"><span class="txt"> О&nbsp;новом&nbsp;муже,&nbsp;о&nbsp;новом&nbsp;доме,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m </span></span>
+<span class="line"><span class="txt"> о&nbsp;местной&nbsp;моде,&nbsp;о&nbsp;погоде,&nbsp;о&nbsp;дожде...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m F#  H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> О&nbsp;том,&nbsp;какая&nbsp;в&nbsp;гостиной&nbsp;ваза,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span>
-<span class="txt"> какой&nbsp;фонтан&nbsp;в&nbsp;твоём&nbsp;саду,&nbsp;какой&nbsp;бассейн...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span>
-<span class="txt"> А&nbsp;по-немецки&nbsp;-&nbsp;в&nbsp;конце&nbsp;три&nbsp;раза:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span>
-<span class="txt"> Auf&nbsp;Wiedersehen!&nbsp;Auf&nbsp;Wiedersehen!&nbsp;Auf&nbsp;Wiedersehen!&nbsp;&nbsp; </span><span class="ch"> H7  Am </span>
+<span class="line"><span class="txt"> О&nbsp;том,&nbsp;какая&nbsp;в&nbsp;гостиной&nbsp;ваза,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span></span>
+<span class="line"><span class="txt"> какой&nbsp;фонтан&nbsp;в&nbsp;твоём&nbsp;саду,&nbsp;какой&nbsp;бассейн...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;по-немецки&nbsp;-&nbsp;в&nbsp;конце&nbsp;три&nbsp;раза:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em </span></span>
+<span class="line"><span class="txt"> Auf&nbsp;Wiedersehen!&nbsp;Auf&nbsp;Wiedersehen!&nbsp;Auf&nbsp;Wiedersehen!&nbsp;&nbsp; </span><span class="ch"> H7  Am </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1990</span>
-
+<pre><span class="year">1990</span>
 
 </pre>
+
 
                 </div>
         </div>

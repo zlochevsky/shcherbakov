@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,72 +433,70 @@ span.c {
 data-key="Em"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Итак,&nbsp;друзья,&nbsp;какие&nbsp;будут&nbsp;мнения?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Пришла&nbsp;пора&nbsp;решать&nbsp;без&nbsp;промедления.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> Сегодня&nbsp;же&nbsp;я&nbsp;должен&nbsp;наши&nbsp;выводы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> представить&nbsp;королю&nbsp;для&nbsp;общей&nbsp;выгоды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span>
+<span class="line"><span class="txt"> Итак,&nbsp;друзья,&nbsp;какие&nbsp;будут&nbsp;мнения?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Пришла&nbsp;пора&nbsp;решать&nbsp;без&nbsp;промедления.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> Сегодня&nbsp;же&nbsp;я&nbsp;должен&nbsp;наши&nbsp;выводы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> представить&nbsp;королю&nbsp;для&nbsp;общей&nbsp;выгоды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;он&nbsp;в&nbsp;делах&nbsp;военной&nbsp;безопасности&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> всегда&nbsp;вникает&nbsp;в&nbsp;мелочи&nbsp;и&nbsp;частности,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> поэтому&nbsp;-&nbsp;держитесь&nbsp;беспристрастности,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> секретности,&nbsp;конкретности&nbsp;и&nbsp;ясности.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span>
+<span class="line"><span class="txt"> А&nbsp;он&nbsp;в&nbsp;делах&nbsp;военной&nbsp;безопасности&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> всегда&nbsp;вникает&nbsp;в&nbsp;мелочи&nbsp;и&nbsp;частности,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> поэтому&nbsp;-&nbsp;держитесь&nbsp;беспристрастности,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> секретности,&nbsp;конкретности&nbsp;и&nbsp;ясности.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Войны,&nbsp;конечно,&nbsp;нет&nbsp;и&nbsp;не&nbsp;предвидится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Но&nbsp;так&nbsp;писать&nbsp;нельзя:&nbsp;король&nbsp;обидится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> Напишем,&nbsp;не&nbsp;утратив&nbsp;должной&nbsp;смелости,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> что&nbsp;есть&nbsp;война&nbsp;и&nbsp;войско&nbsp;наше&nbsp;в&nbsp;целости.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span>
+<span class="line"><span class="txt"> Войны,&nbsp;конечно,&nbsp;нет&nbsp;и&nbsp;не&nbsp;предвидится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Но&nbsp;так&nbsp;писать&nbsp;нельзя:&nbsp;король&nbsp;обидится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> Напишем,&nbsp;не&nbsp;утратив&nbsp;должной&nbsp;смелости,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> что&nbsp;есть&nbsp;война&nbsp;и&nbsp;войско&nbsp;наше&nbsp;в&nbsp;целости.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Плевать,&nbsp;что&nbsp;мы&nbsp;цивильные&nbsp;чиновники:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> в&nbsp;бумагах&nbsp;мы&nbsp;-&nbsp;всесильные&nbsp;полковники.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> Напишем,&nbsp;что&nbsp;приложим&nbsp;всё&nbsp;умение,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> чтоб&nbsp;разогнать&nbsp;машину&nbsp;наступления.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span>
+<span class="line"><span class="txt"> Плевать,&nbsp;что&nbsp;мы&nbsp;цивильные&nbsp;чиновники:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> в&nbsp;бумагах&nbsp;мы&nbsp;-&nbsp;всесильные&nbsp;полковники.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> Напишем,&nbsp;что&nbsp;приложим&nbsp;всё&nbsp;умение,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> чтоб&nbsp;разогнать&nbsp;машину&nbsp;наступления.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Машина&nbsp;никакая&nbsp;не&nbsp;завертится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Но&nbsp;так&nbsp;писать&nbsp;нельзя:&nbsp;король&nbsp;рассердится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> Напишем,&nbsp;что,&nbsp;ввиду&nbsp;решенья&nbsp;твёрдого,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> мы&nbsp;выступаем&nbsp;завтра&nbsp;в&nbsp;полчетвёртого.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span>
+<span class="line"><span class="txt"> Машина&nbsp;никакая&nbsp;не&nbsp;завертится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Но&nbsp;так&nbsp;писать&nbsp;нельзя:&nbsp;король&nbsp;рассердится.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> Напишем,&nbsp;что,&nbsp;ввиду&nbsp;решенья&nbsp;твёрдого,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> мы&nbsp;выступаем&nbsp;завтра&nbsp;в&nbsp;полчетвёртого.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мы&nbsp;в&nbsp;тактике&nbsp;не&nbsp;смыслим&nbsp;и&nbsp;в&nbsp;баллистике,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> зато&nbsp;весьма&nbsp;натасканы&nbsp;в&nbsp;лингвистике,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> и&nbsp;главный&nbsp;фокус&nbsp;в&nbsp;том,&nbsp;что&nbsp;мы&nbsp;действительно&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> решенье&nbsp;соблюдём&nbsp;неукоснительно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span>
+<span class="line"><span class="txt"> Мы&nbsp;в&nbsp;тактике&nbsp;не&nbsp;смыслим&nbsp;и&nbsp;в&nbsp;баллистике,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> зато&nbsp;весьма&nbsp;натасканы&nbsp;в&nbsp;лингвистике,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> и&nbsp;главный&nbsp;фокус&nbsp;в&nbsp;том,&nbsp;что&nbsp;мы&nbsp;действительно&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> решенье&nbsp;соблюдём&nbsp;неукоснительно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;войско&nbsp;пусть&nbsp;ведёт&nbsp;кто&nbsp;побездарнее.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Мы&nbsp;выступим&nbsp;прекрасно&nbsp;и&nbsp;без&nbsp;армии.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> А&nbsp;чтоб&nbsp;поднять&nbsp;значенье&nbsp;марша&nbsp;нашего,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> присвоим&nbsp;мне,&nbsp;к&nbsp;примеру,&nbsp;чин&nbsp;фельдмаршала:&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span>
+<span class="line"><span class="txt"> Но&nbsp;войско&nbsp;пусть&nbsp;ведёт&nbsp;кто&nbsp;побездарнее.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;выступим&nbsp;прекрасно&nbsp;и&nbsp;без&nbsp;армии.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> А&nbsp;чтоб&nbsp;поднять&nbsp;значенье&nbsp;марша&nbsp;нашего,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> присвоим&nbsp;мне,&nbsp;к&nbsp;примеру,&nbsp;чин&nbsp;фельдмаршала:&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> известен&nbsp;я&nbsp;и&nbsp;ревностью&nbsp;и&nbsp;честностью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> нельзя&nbsp;пренебрегать&nbsp;такой&nbsp;известностью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> Король&nbsp;мне&nbsp;доверяет,&nbsp;как&nbsp;родителям,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> я&nbsp;буду&nbsp;вам&nbsp;достойным&nbsp;предводителем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span>
+<span class="line"><span class="txt"> известен&nbsp;я&nbsp;и&nbsp;ревностью&nbsp;и&nbsp;честностью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> нельзя&nbsp;пренебрегать&nbsp;такой&nbsp;известностью.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> Король&nbsp;мне&nbsp;доверяет,&nbsp;как&nbsp;родителям,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> я&nbsp;буду&nbsp;вам&nbsp;достойным&nbsp;предводителем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;итоге,&nbsp;не&nbsp;творя&nbsp;вреда&nbsp;родной&nbsp;стране,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> мы&nbsp;высадимся&nbsp;где-нибудь&nbsp;на&nbsp;острове,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> и&nbsp;там,&nbsp;перемежая&nbsp;труд&nbsp;веселием,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> мы&nbsp;станем&nbsp;заниматься&nbsp;земледелием,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span>
+<span class="line"><span class="txt"> В&nbsp;итоге,&nbsp;не&nbsp;творя&nbsp;вреда&nbsp;родной&nbsp;стране,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> мы&nbsp;высадимся&nbsp;где-нибудь&nbsp;на&nbsp;острове,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> и&nbsp;там,&nbsp;перемежая&nbsp;труд&nbsp;веселием,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> мы&nbsp;станем&nbsp;заниматься&nbsp;земледелием,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> отваживать&nbsp;туземцев&nbsp;от&nbsp;язычества&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> и&nbsp;ждать,&nbsp;когда&nbsp;помрёт&nbsp;его&nbsp;величество&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> или&nbsp;когда&nbsp;он&nbsp;спятит&nbsp;окончательно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> что&nbsp;более&nbsp;вероятно,&nbsp;но&nbsp;менее&nbsp;замечательно.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em   H7   Em </span>
+<span class="line"><span class="txt"> отваживать&nbsp;туземцев&nbsp;от&nbsp;язычества&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;ждать,&nbsp;когда&nbsp;помрёт&nbsp;его&nbsp;величество&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> или&nbsp;когда&nbsp;он&nbsp;спятит&nbsp;окончательно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> что&nbsp;более&nbsp;вероятно,&nbsp;но&nbsp;менее&nbsp;замечательно.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   Em   H7   Em </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1989</span>
-
+<pre><span class="year">1989</span>
 </pre>
+
 
                 </div>
         </div>

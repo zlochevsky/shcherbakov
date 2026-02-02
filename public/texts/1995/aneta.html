@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,78 +423,51 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">АНЕТА</span>
+data-key="Em"><h1>АНЕТА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Хороших&nbsp;нет&nbsp;вестей,&nbsp;дурные&nbsp;тут&nbsp;как&nbsp;тут&nbsp;-&nbsp;Анета&nbsp;влюблена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> С&nbsp;утра&nbsp;жильцы&nbsp;не&nbsp;вслух&nbsp;на&nbsp;этот&nbsp;счёт&nbsp;шумят,&nbsp;но&nbsp;глаз&nbsp;у&nbsp;всех&nbsp;косит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Никто&nbsp;из&nbsp;первых&nbsp;рук&nbsp;не&nbsp;взял&nbsp;и&nbsp;взять&nbsp;никак&nbsp;не&nbsp;мог,&nbsp;но&nbsp;ясно&nbsp;всем&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span>
-<span class="txt"> как&nbsp;есть&nbsp;влюбилась.&nbsp;Это&nbsp;ль&nbsp;не&nbsp;напасть?&nbsp;Да&nbsp;плюс&nbsp;ещё&nbsp;туман&nbsp;с&nbsp;утра.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span>
+<span class="line"><span class="txt"> Хороших&nbsp;нет&nbsp;вестей,&nbsp;дурные&nbsp;тут&nbsp;как&nbsp;тут&nbsp;-&nbsp;Анета&nbsp;влюблена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> С&nbsp;утра&nbsp;жильцы&nbsp;не&nbsp;вслух&nbsp;на&nbsp;этот&nbsp;счёт&nbsp;шумят,&nbsp;но&nbsp;глаз&nbsp;у&nbsp;всех&nbsp;косит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Никто&nbsp;из&nbsp;первых&nbsp;рук&nbsp;не&nbsp;взял&nbsp;и&nbsp;взять&nbsp;никак&nbsp;не&nbsp;мог,&nbsp;но&nbsp;ясно&nbsp;всем&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span></span>
+<span class="line"><span class="txt"> как&nbsp;есть&nbsp;влюбилась.&nbsp;Это&nbsp;ль&nbsp;не&nbsp;напасть?&nbsp;Да&nbsp;плюс&nbsp;ещё&nbsp;туман&nbsp;с&nbsp;утра.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сосед-флейтист&nbsp;обломки&nbsp;флейты&nbsp;в&nbsp;печке&nbsp;сжёг&nbsp;-&nbsp;Анета&nbsp;влюблена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> К&nbsp;чему&nbsp;теперь&nbsp;"Турецкий&nbsp;марш",&nbsp;какой&nbsp;такой&nbsp;ещё&nbsp;скрипичный&nbsp;ключ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Извлёк&nbsp;из&nbsp;замши&nbsp;вещь,&nbsp;всего-то&nbsp;дел&nbsp;-&nbsp;нажал&nbsp;покрепче&nbsp;и&nbsp;сломал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span>
-<span class="txt"> Когда-то&nbsp;стройный&nbsp;клён,&nbsp;потом&nbsp;умельца&nbsp;труд&nbsp;-&nbsp;зола,&nbsp;зола&nbsp;теперь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> В&nbsp;столице&nbsp;нынче&nbsp;сложный&nbsp;день&nbsp;-&nbsp;венки,&nbsp;повозки,&nbsp;траур,&nbsp;медный&nbsp;звон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Тиран&nbsp;скончался,&nbsp;город&nbsp;слёзы&nbsp;льёт&nbsp;по&nbsp;нём&nbsp;-&nbsp;Анета&nbsp;влюблена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Ведь&nbsp;вот&nbsp;привёл&nbsp;Господь&nbsp;родиться,&nbsp;что&nbsp;за&nbsp;город&nbsp;-&nbsp;право,&nbsp;я&nbsp;дивлюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span>
-<span class="txt"> Седьмой&nbsp;покойник&nbsp;за&nbsp;семь&nbsp;лет,&nbsp;привыкнуть&nbsp;бы&nbsp;-&nbsp;а&nbsp;он&nbsp;всё&nbsp;слёзы&nbsp;льёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> Входи,&nbsp;прохожий,&nbsp;гостем&nbsp;будь,&nbsp;садись,&nbsp;велю&nbsp;сейчас&nbsp;подать&nbsp;кувшин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> У&nbsp;нас&nbsp;тут,&nbsp;знаешь,&nbsp;цирк,&nbsp;бедлам,&nbsp;смешно&nbsp;сказать&nbsp;-&nbsp;Анета&nbsp;влюблена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Не&nbsp;стать&nbsp;уж,&nbsp;видно,&nbsp;ей&nbsp;на&nbsp;"ты"&nbsp;со&nbsp;мной&nbsp;во&nbsp;весь&nbsp;сезон,&nbsp;пока&nbsp;я&nbsp;здесь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span>
-<span class="txt"> Тем&nbsp;паче&nbsp;-&nbsp;нет,&nbsp;когда&nbsp;я&nbsp;буду&nbsp;там,&nbsp;увы,&nbsp;где&nbsp;скоро&nbsp;буду&nbsp;я.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span>
+<span class="line"><span class="txt"> Сосед-флейтист&nbsp;обломки&nbsp;флейты&nbsp;в&nbsp;печке&nbsp;сжёг&nbsp;-&nbsp;Анета&nbsp;влюблена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> К&nbsp;чему&nbsp;теперь&nbsp;"Турецкий&nbsp;марш",&nbsp;какой&nbsp;такой&nbsp;ещё&nbsp;скрипичный&nbsp;ключ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Извлёк&nbsp;из&nbsp;замши&nbsp;вещь,&nbsp;всего-то&nbsp;дел&nbsp;-&nbsp;нажал&nbsp;покрепче&nbsp;и&nbsp;сломал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span></span>
+<span class="line"><span class="txt"> Когда-то&nbsp;стройный&nbsp;клён,&nbsp;потом&nbsp;умельца&nbsp;труд&nbsp;-&nbsp;зола,&nbsp;зола&nbsp;теперь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> В&nbsp;столице&nbsp;нынче&nbsp;сложный&nbsp;день&nbsp;-&nbsp;венки,&nbsp;повозки,&nbsp;траур,&nbsp;медный&nbsp;звон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Тиран&nbsp;скончался,&nbsp;город&nbsp;слёзы&nbsp;льёт&nbsp;по&nbsp;нём&nbsp;-&nbsp;Анета&nbsp;влюблена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Ведь&nbsp;вот&nbsp;привёл&nbsp;Господь&nbsp;родиться,&nbsp;что&nbsp;за&nbsp;город&nbsp;-&nbsp;право,&nbsp;я&nbsp;дивлюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span></span>
+<span class="line"><span class="txt"> Седьмой&nbsp;покойник&nbsp;за&nbsp;семь&nbsp;лет,&nbsp;привыкнуть&nbsp;бы&nbsp;-&nbsp;а&nbsp;он&nbsp;всё&nbsp;слёзы&nbsp;льёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Входи,&nbsp;прохожий,&nbsp;гостем&nbsp;будь,&nbsp;садись,&nbsp;велю&nbsp;сейчас&nbsp;подать&nbsp;кувшин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> У&nbsp;нас&nbsp;тут,&nbsp;знаешь,&nbsp;цирк,&nbsp;бедлам,&nbsp;смешно&nbsp;сказать&nbsp;-&nbsp;Анета&nbsp;влюблена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Не&nbsp;стать&nbsp;уж,&nbsp;видно,&nbsp;ей&nbsp;на&nbsp;"ты"&nbsp;со&nbsp;мной&nbsp;во&nbsp;весь&nbsp;сезон,&nbsp;пока&nbsp;я&nbsp;здесь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span></span>
+<span class="line"><span class="txt"> Тем&nbsp;паче&nbsp;-&nbsp;нет,&nbsp;когда&nbsp;я&nbsp;буду&nbsp;там,&nbsp;увы,&nbsp;где&nbsp;скоро&nbsp;буду&nbsp;я.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Что&nbsp;делать,&nbsp;сложный&nbsp;день&nbsp;-&nbsp;венки,&nbsp;войска,&nbsp;туман&nbsp;-&nbsp;другой,&nbsp;чем&nbsp;в&nbsp;прошлый&nbsp;раз.&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Тогда&nbsp;ещё&nbsp;хоть&nbsp;флейты&nbsp;посвист&nbsp;был&nbsp;окрест,&nbsp;а&nbsp;нынче&nbsp;медный&nbsp;звон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Взгляни&nbsp;на&nbsp;птиц&nbsp;моих,&nbsp;они&nbsp;теперь&nbsp;застыли&nbsp;в&nbsp;клетках&nbsp;и&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span>
-<span class="txt"> Спроси,&nbsp;кто&nbsp;дрозд&nbsp;из&nbsp;них,&nbsp;кто&nbsp;зяблик,&nbsp;-&nbsp;я&nbsp;теперь&nbsp;ответить&nbsp;не&nbsp;смогу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> Прохожий,&nbsp;грустно&nbsp;мне,&nbsp;неинтересно&nbsp;мне&nbsp;-&nbsp;Анета&nbsp;влюблена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Бокал&nbsp;из&nbsp;тех,&nbsp;из&nbsp;лучших&nbsp;двух,&nbsp;любой&nbsp;бери,&nbsp;но&nbsp;пей&nbsp;пока&nbsp;один.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Вино&nbsp;невкусно&nbsp;мне,&nbsp;тяжёл&nbsp;туман,&nbsp;в&nbsp;столице&nbsp;траур&nbsp;круглый&nbsp;год.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span>
-<span class="txt"> Не&nbsp;жаль&nbsp;Анеты&nbsp;-&nbsp;флейты&nbsp;жаль.&nbsp;Хотя&nbsp;что&nbsp;флейта&nbsp;-&nbsp;бывший&nbsp;клён,&nbsp;и&nbsp;всё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span>
+<span class="line"><span class="txt"> Что&nbsp;делать,&nbsp;сложный&nbsp;день&nbsp;-&nbsp;венки,&nbsp;войска,&nbsp;туман&nbsp;-&nbsp;другой,&nbsp;чем&nbsp;в&nbsp;прошлый&nbsp;раз.&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Тогда&nbsp;ещё&nbsp;хоть&nbsp;флейты&nbsp;посвист&nbsp;был&nbsp;окрест,&nbsp;а&nbsp;нынче&nbsp;медный&nbsp;звон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Взгляни&nbsp;на&nbsp;птиц&nbsp;моих,&nbsp;они&nbsp;теперь&nbsp;застыли&nbsp;в&nbsp;клетках&nbsp;и&nbsp;молчат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span></span>
+<span class="line"><span class="txt"> Спроси,&nbsp;кто&nbsp;дрозд&nbsp;из&nbsp;них,&nbsp;кто&nbsp;зяблик,&nbsp;-&nbsp;я&nbsp;теперь&nbsp;ответить&nbsp;не&nbsp;смогу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Прохожий,&nbsp;грустно&nbsp;мне,&nbsp;неинтересно&nbsp;мне&nbsp;-&nbsp;Анета&nbsp;влюблена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Бокал&nbsp;из&nbsp;тех,&nbsp;из&nbsp;лучших&nbsp;двух,&nbsp;любой&nbsp;бери,&nbsp;но&nbsp;пей&nbsp;пока&nbsp;один.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Вино&nbsp;невкусно&nbsp;мне,&nbsp;тяжёл&nbsp;туман,&nbsp;в&nbsp;столице&nbsp;траур&nbsp;круглый&nbsp;год.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    E7 Am/F# </span></span>
+<span class="line"><span class="txt"> Не&nbsp;жаль&nbsp;Анеты&nbsp;-&nbsp;флейты&nbsp;жаль.&nbsp;Хотя&nbsp;что&nbsp;флейта&nbsp;-&nbsp;бывший&nbsp;клён,&nbsp;и&nbsp;всё.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/F# Em F#7   Am/F#  Em </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1995</span>
+<pre><span class="year">1995</span>
 
 Таблатура:
 1 такт - ~1.2 с
@@ -600,8 +581,8 @@ data-key="Em"><span class="sng-title">АНЕТА</span>
 6 куплет как 2
 Финал как вступление
 
-
 </pre>
+
 
                 </div>
         </div>

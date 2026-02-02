@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -423,78 +431,76 @@ span.c {
 
                     <div class="song"
 data-key="Am"><span class="txt"> ШКОЛА&nbsp;ТАНЦЕВ&nbsp;II </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Я&nbsp;не&nbsp;сказал&nbsp;бы,&nbsp;что&nbsp;во&nbsp;время&nbsp;сна&nbsp;люблю&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    E7 </span>
-<span class="txt"> вдыхать&nbsp;миазмы&nbsp;разные&nbsp;-&nbsp;клопам&nbsp;на&nbsp;страх,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Am </span>
-<span class="txt"> но&nbsp;я&nbsp;дышу&nbsp;всем&nbsp;этим,&nbsp;поскольку&nbsp;сплю&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span>
-<span class="txt"> ноздрями&nbsp;к&nbsp;стенке,&nbsp;а&nbsp;она&nbsp;в&nbsp;коврах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Пока&nbsp;я&nbsp;сплю,&nbsp;жильцы&nbsp;внизу&nbsp;тарелки&nbsp;бьют&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    E7 </span>
-<span class="txt"> и&nbsp;друг&nbsp;за&nbsp;другом&nbsp;бегают&nbsp;по&nbsp;этажу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Am </span>
-<span class="txt"> Порой&nbsp;во&nbsp;сне&nbsp;я&nbsp;думаю:&nbsp;зачем&nbsp;живут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span>
-<span class="txt"> они?&nbsp;-&nbsp;Но&nbsp;смысла&nbsp;не&nbsp;нахожу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Ещё&nbsp;во&nbsp;сне&nbsp;я&nbsp;думаю,&nbsp;что&nbsp;жизнь&nbsp;есть&nbsp;шум,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    E7 </span>
-<span class="txt"> но&nbsp;минимальный,&nbsp;в&nbsp;тон&nbsp;чему&nbsp;и&nbsp;смерть&nbsp;сама:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Am </span>
-<span class="txt"> вчера&nbsp;был&nbsp;минимум,&nbsp;нынче&nbsp;минимум,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span>
-<span class="txt"> завтра&nbsp;-&nbsp;меньше&nbsp;минимума.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> О&nbsp;смерти&nbsp;в&nbsp;целом&nbsp;мыслю&nbsp;я&nbsp;так&nbsp;часто,&nbsp;что,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span>
-<span class="txt"> когда&nbsp;ко&nbsp;мне&nbsp;(опять-таки&nbsp;во&nbsp;время&nbsp;сна)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span>
-<span class="txt"> она&nbsp;является&nbsp;-&nbsp;не&nbsp;вопрошаю:&nbsp;кто&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span>
-<span class="txt"> это?&nbsp;Я&nbsp;знаю&nbsp;-&nbsp;это&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> И&nbsp;я&nbsp;дрожу,&nbsp;когда&nbsp;в&nbsp;оранжерейной&nbsp;мгле&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    G7 </span>
-<span class="txt"> с&nbsp;галантерейно-кремовым&nbsp;(а-ля&nbsp;Париж)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Cm </span>
-<span class="txt"> великолепием&nbsp;гостья&nbsp;шепчет&nbsp;мне:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span>
-<span class="txt"> станцуем,&nbsp;что&nbsp;ли,&nbsp;чего&nbsp;дрожишь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7    Cm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> О,&nbsp;Красота!&nbsp;Сколь&nbsp;ни&nbsp;карала&nbsp;бы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    G7 </span>
-<span class="txt"> нас&nbsp;ты,&nbsp;всё&nbsp;неверный&nbsp;твой&nbsp;ловим&nbsp;свет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Cm </span>
-<span class="txt"> хотя&nbsp;и&nbsp;помним,&nbsp;что,&nbsp;чем&nbsp;коралловый&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span>
-<span class="txt"> аспид,&nbsp;гадины&nbsp;краше&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7    Cm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> И&nbsp;обмануться&nbsp;страшно,&nbsp;и&nbsp;перечить&nbsp;жаль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span>
-<span class="txt"> Небось&nbsp;не&nbsp;каждый&nbsp;день&nbsp;-&nbsp;вообразите&nbsp;кадр&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span>
-<span class="txt"> маячит&nbsp;рядом&nbsp;этакая&nbsp;флешь-рояль&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span>
-<span class="txt"> и&nbsp;приглашает&nbsp;на&nbsp;данс-макабр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Всем&nbsp;парам&nbsp;парочка,&nbsp;хоть&nbsp;впрямь&nbsp;танцуй.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span>
-<span class="txt"> Она&nbsp;Жорж&nbsp;Санд&nbsp;анфас,&nbsp;а&nbsp;я&nbsp;маркиз&nbsp;де&nbsp;Сад.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span>
-<span class="txt"> Она&nbsp;воздушна,&nbsp;типа,&nbsp;как&nbsp;поцелуй,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span>
-<span class="txt"> а&nbsp;я&nbsp;воздушен,&nbsp;как&nbsp;десант.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Уж&nbsp;я&nbsp;станцую&nbsp;так,&nbsp;что&nbsp;у&nbsp;меня&nbsp;ни-ни!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span>
-<span class="txt"> Я&nbsp;все&nbsp;паркеты&nbsp;в&nbsp;щепки&nbsp;разнесу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span>
-<span class="txt"> А&nbsp;те,&nbsp;которые&nbsp;живут&nbsp;внизу,&nbsp;они&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span>
-<span class="txt"> себе&nbsp;пускай&nbsp;живут&nbsp;внизу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Поберегись!&nbsp;-&nbsp;не&nbsp;хуже&nbsp;третьего&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    G7 </span>
-<span class="txt"> петуха&nbsp;кричу&nbsp;я&nbsp;и&nbsp;лечу&nbsp;в&nbsp;галоп.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Cm </span>
-<span class="txt"> Сегодня&nbsp;минимум,&nbsp;завтра&nbsp;нет&nbsp;его,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span>
-<span class="txt"> послезавтра&nbsp;пускай&nbsp;потоп.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7    Cm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Но&nbsp;тут&nbsp;она&nbsp;и&nbsp;весь&nbsp;её&nbsp;парфюм&nbsp;и&nbsp;джем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    G7 </span>
-<span class="txt"> весь&nbsp;этот&nbsp;вереск,&nbsp;чтобы&nbsp;не&nbsp;сказать&nbsp;-&nbsp;миндаль,&nbsp;&nbsp;&nbsp; </span><span class="ch">       Cm </span>
-<span class="txt"> шелками&nbsp;свистнув,&nbsp;делается&nbsp;вновь&nbsp;ничем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span>
-<span class="txt"> и&nbsp;я&nbsp;не&nbsp;ведаю,&nbsp;как&nbsp;быть&nbsp;даль(ше).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7    Cm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> И&nbsp;просыпаюсь&nbsp;я,&nbsp;какой-то&nbsp;кислый&nbsp;вкус&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span>
-<span class="txt"> держа&nbsp;во&nbsp;рту.&nbsp;И&nbsp;голосом&nbsp;вполне&nbsp;чужим&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span>
-<span class="txt"> клянусь&nbsp;вперёд&nbsp;блюсти&nbsp;антитабачный&nbsp;курс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span>
-<span class="txt"> вегетарьянство&nbsp;и&nbsp;сплошной&nbsp;режим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Затем&nbsp;проглатываю&nbsp;эскалоп&nbsp;свиной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span>
-<span class="txt"> распространяю&nbsp;в&nbsp;комнате&nbsp;сигарный&nbsp;чад&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span>
-<span class="txt"> и&nbsp;снова&nbsp;сплю&nbsp;(напившись&nbsp;собственной&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span>
-<span class="txt"> крови&nbsp;-&nbsp;дёсны&nbsp;кровоточат).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span>
-<span class="txt"> &nbsp; </span>
-
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Я&nbsp;не&nbsp;сказал&nbsp;бы,&nbsp;что&nbsp;во&nbsp;время&nbsp;сна&nbsp;люблю&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    E7 </span></span>
+<span class="line"><span class="txt"> вдыхать&nbsp;миазмы&nbsp;разные&nbsp;-&nbsp;клопам&nbsp;на&nbsp;страх,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Am </span></span>
+<span class="line"><span class="txt"> но&nbsp;я&nbsp;дышу&nbsp;всем&nbsp;этим,&nbsp;поскольку&nbsp;сплю&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span></span>
+<span class="line"><span class="txt"> ноздрями&nbsp;к&nbsp;стенке,&nbsp;а&nbsp;она&nbsp;в&nbsp;коврах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Пока&nbsp;я&nbsp;сплю,&nbsp;жильцы&nbsp;внизу&nbsp;тарелки&nbsp;бьют&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    E7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;друг&nbsp;за&nbsp;другом&nbsp;бегают&nbsp;по&nbsp;этажу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Am </span></span>
+<span class="line"><span class="txt"> Порой&nbsp;во&nbsp;сне&nbsp;я&nbsp;думаю:&nbsp;зачем&nbsp;живут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span></span>
+<span class="line"><span class="txt"> они?&nbsp;-&nbsp;Но&nbsp;смысла&nbsp;не&nbsp;нахожу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Ещё&nbsp;во&nbsp;сне&nbsp;я&nbsp;думаю,&nbsp;что&nbsp;жизнь&nbsp;есть&nbsp;шум,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    E7 </span></span>
+<span class="line"><span class="txt"> но&nbsp;минимальный,&nbsp;в&nbsp;тон&nbsp;чему&nbsp;и&nbsp;смерть&nbsp;сама:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Am </span></span>
+<span class="line"><span class="txt"> вчера&nbsp;был&nbsp;минимум,&nbsp;нынче&nbsp;минимум,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7    Dm </span></span>
+<span class="line"><span class="txt"> завтра&nbsp;-&nbsp;меньше&nbsp;минимума.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7    Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> О&nbsp;смерти&nbsp;в&nbsp;целом&nbsp;мыслю&nbsp;я&nbsp;так&nbsp;часто,&nbsp;что,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span></span>
+<span class="line"><span class="txt"> когда&nbsp;ко&nbsp;мне&nbsp;(опять-таки&nbsp;во&nbsp;время&nbsp;сна)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span></span>
+<span class="line"><span class="txt"> она&nbsp;является&nbsp;-&nbsp;не&nbsp;вопрошаю:&nbsp;кто&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span></span>
+<span class="line"><span class="txt"> это?&nbsp;Я&nbsp;знаю&nbsp;-&nbsp;это&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> И&nbsp;я&nbsp;дрожу,&nbsp;когда&nbsp;в&nbsp;оранжерейной&nbsp;мгле&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    G7 </span></span>
+<span class="line"><span class="txt"> с&nbsp;галантерейно-кремовым&nbsp;(а-ля&nbsp;Париж)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Cm </span></span>
+<span class="line"><span class="txt"> великолепием&nbsp;гостья&nbsp;шепчет&nbsp;мне:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span></span>
+<span class="line"><span class="txt"> станцуем,&nbsp;что&nbsp;ли,&nbsp;чего&nbsp;дрожишь?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7    Cm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> О,&nbsp;Красота!&nbsp;Сколь&nbsp;ни&nbsp;карала&nbsp;бы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    G7 </span></span>
+<span class="line"><span class="txt"> нас&nbsp;ты,&nbsp;всё&nbsp;неверный&nbsp;твой&nbsp;ловим&nbsp;свет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Cm </span></span>
+<span class="line"><span class="txt"> хотя&nbsp;и&nbsp;помним,&nbsp;что,&nbsp;чем&nbsp;коралловый&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span></span>
+<span class="line"><span class="txt"> аспид,&nbsp;гадины&nbsp;краше&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7    Cm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> И&nbsp;обмануться&nbsp;страшно,&nbsp;и&nbsp;перечить&nbsp;жаль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span></span>
+<span class="line"><span class="txt"> Небось&nbsp;не&nbsp;каждый&nbsp;день&nbsp;-&nbsp;вообразите&nbsp;кадр&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span></span>
+<span class="line"><span class="txt"> маячит&nbsp;рядом&nbsp;этакая&nbsp;флешь-рояль&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;приглашает&nbsp;на&nbsp;данс-макабр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Всем&nbsp;парам&nbsp;парочка,&nbsp;хоть&nbsp;впрямь&nbsp;танцуй.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span></span>
+<span class="line"><span class="txt"> Она&nbsp;Жорж&nbsp;Санд&nbsp;анфас,&nbsp;а&nbsp;я&nbsp;маркиз&nbsp;де&nbsp;Сад.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span></span>
+<span class="line"><span class="txt"> Она&nbsp;воздушна,&nbsp;типа,&nbsp;как&nbsp;поцелуй,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span></span>
+<span class="line"><span class="txt"> а&nbsp;я&nbsp;воздушен,&nbsp;как&nbsp;десант.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Уж&nbsp;я&nbsp;станцую&nbsp;так,&nbsp;что&nbsp;у&nbsp;меня&nbsp;ни-ни!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span></span>
+<span class="line"><span class="txt"> Я&nbsp;все&nbsp;паркеты&nbsp;в&nbsp;щепки&nbsp;разнесу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span></span>
+<span class="line"><span class="txt"> А&nbsp;те,&nbsp;которые&nbsp;живут&nbsp;внизу,&nbsp;они&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span></span>
+<span class="line"><span class="txt"> себе&nbsp;пускай&nbsp;живут&nbsp;внизу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Поберегись!&nbsp;-&nbsp;не&nbsp;хуже&nbsp;третьего&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    G7 </span></span>
+<span class="line"><span class="txt"> петуха&nbsp;кричу&nbsp;я&nbsp;и&nbsp;лечу&nbsp;в&nbsp;галоп.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Cm </span></span>
+<span class="line"><span class="txt"> Сегодня&nbsp;минимум,&nbsp;завтра&nbsp;нет&nbsp;его,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span></span>
+<span class="line"><span class="txt"> послезавтра&nbsp;пускай&nbsp;потоп.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7    Cm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Но&nbsp;тут&nbsp;она&nbsp;и&nbsp;весь&nbsp;её&nbsp;парфюм&nbsp;и&nbsp;джем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm    G7 </span></span>
+<span class="line"><span class="txt"> весь&nbsp;этот&nbsp;вереск,&nbsp;чтобы&nbsp;не&nbsp;сказать&nbsp;-&nbsp;миндаль,&nbsp;&nbsp;&nbsp; </span><span class="ch">       Cm </span></span>
+<span class="line"><span class="txt"> шелками&nbsp;свистнув,&nbsp;делается&nbsp;вновь&nbsp;ничем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7    Fm </span></span>
+<span class="line"><span class="txt"> и&nbsp;я&nbsp;не&nbsp;ведаю,&nbsp;как&nbsp;быть&nbsp;даль(ше).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7    Cm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> И&nbsp;просыпаюсь&nbsp;я,&nbsp;какой-то&nbsp;кислый&nbsp;вкус&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span></span>
+<span class="line"><span class="txt"> держа&nbsp;во&nbsp;рту.&nbsp;И&nbsp;голосом&nbsp;вполне&nbsp;чужим&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span></span>
+<span class="line"><span class="txt"> клянусь&nbsp;вперёд&nbsp;блюсти&nbsp;антитабачный&nbsp;курс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span></span>
+<span class="line"><span class="txt"> вегетарьянство&nbsp;и&nbsp;сплошной&nbsp;режим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Затем&nbsp;проглатываю&nbsp;эскалоп&nbsp;свиной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm    F#7 </span></span>
+<span class="line"><span class="txt"> распространяю&nbsp;в&nbsp;комнате&nbsp;сигарный&nbsp;чад&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">       Hm </span></span>
+<span class="line"><span class="txt"> и&nbsp;снова&nbsp;сплю&nbsp;(напившись&nbsp;собственной&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7    Em </span></span>
+<span class="line"><span class="txt"> крови&nbsp;-&nbsp;дёсны&nbsp;кровоточат).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7   Hm </span></span>
+<span class="txt">  </span>
 </div>
-<pre>
-    <span class="year">1995</span>
-
+<pre><span class="year">1995</span>
 </pre>
+
 
                 </div>
         </div>

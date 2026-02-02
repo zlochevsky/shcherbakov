@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,92 +423,90 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">КТО?</span>
+data-key="Am"><h1>КТО?</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Стало&nbsp;быть,&nbsp;ломать&nbsp;решил&nbsp;судьбу&nbsp;не&nbsp;понарошку&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am(V) Dm </span>
-<span class="txt"> увольняется&nbsp;вчистую&nbsp;сослуживец-активист.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E   Am </span>
-<span class="txt"> Вот&nbsp;уже&nbsp;сдаёт&nbsp;без&nbsp;колебаний&nbsp;спецодёжку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> обходной&nbsp;туда-сюда&nbsp;таскает&nbsp;лист.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am </span>
+<span class="line"><span class="txt"> Стало&nbsp;быть,&nbsp;ломать&nbsp;решил&nbsp;судьбу&nbsp;не&nbsp;понарошку&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am(V) Dm </span></span>
+<span class="line"><span class="txt"> увольняется&nbsp;вчистую&nbsp;сослуживец-активист.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E   Am </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;уже&nbsp;сдаёт&nbsp;без&nbsp;колебаний&nbsp;спецодёжку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> обходной&nbsp;туда-сюда&nbsp;таскает&nbsp;лист.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> То-то&nbsp;недаром,&nbsp;значит,&nbsp;давеча&nbsp;был&nbsp;отлов!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E   Am B </span>
-<span class="txt"> По&nbsp;алфавиту&nbsp;всех&nbsp;вызывали&nbsp;в&nbsp;первый&nbsp;отдел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H  G   Cm </span>
-<span class="txt"> Кто&nbsp;помоложе,&nbsp;с&nbsp;теми&nbsp;много&nbsp;сказали&nbsp;слов&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G   A7/A#  A7 Dm </span>
-<span class="txt"> горьких&nbsp;и&nbsp;сладких.&nbsp;Я&nbsp;устоял,&nbsp;а&nbsp;он&nbsp;-&nbsp;съел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  D/F#  F  E </span>
+<span class="line"><span class="txt"> То-то&nbsp;недаром,&nbsp;значит,&nbsp;давеча&nbsp;был&nbsp;отлов!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E   Am B </span></span>
+<span class="line"><span class="txt"> По&nbsp;алфавиту&nbsp;всех&nbsp;вызывали&nbsp;в&nbsp;первый&nbsp;отдел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H  G   Cm </span></span>
+<span class="line"><span class="txt"> Кто&nbsp;помоложе,&nbsp;с&nbsp;теми&nbsp;много&nbsp;сказали&nbsp;слов&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G   A7/A#  A7 Dm </span></span>
+<span class="line"><span class="txt"> горьких&nbsp;и&nbsp;сладких.&nbsp;Я&nbsp;устоял,&nbsp;а&nbsp;он&nbsp;-&nbsp;съел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  D/F#  F  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Значит,&nbsp;нам&nbsp;он&nbsp;больше&nbsp;не&nbsp;подручный-закадычный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> далеко&nbsp;шагнул&nbsp;по&nbsp;линии&nbsp;-&nbsp;понятно,&nbsp;по&nbsp;какой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E  Am </span>
-<span class="txt"> Уровень,&nbsp;само&nbsp;собой,&nbsp;хотя&nbsp;и&nbsp;не&nbsp;столичный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> всё&nbsp;же&nbsp;выше,&nbsp;чем,&nbsp;как&nbsp;раньше,&nbsp;под&nbsp;рукой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am </span>
+<span class="line"><span class="txt"> Значит,&nbsp;нам&nbsp;он&nbsp;больше&nbsp;не&nbsp;подручный-закадычный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> далеко&nbsp;шагнул&nbsp;по&nbsp;линии&nbsp;-&nbsp;понятно,&nbsp;по&nbsp;какой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E  Am </span></span>
+<span class="line"><span class="txt"> Уровень,&nbsp;само&nbsp;собой,&nbsp;хотя&nbsp;и&nbsp;не&nbsp;столичный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> всё&nbsp;же&nbsp;выше,&nbsp;чем,&nbsp;как&nbsp;раньше,&nbsp;под&nbsp;рукой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Это&nbsp;же&nbsp;сходу&nbsp;всюду&nbsp;пропуск,&nbsp;а&nbsp;то&nbsp;и&nbsp;два.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E   Am B </span>
-<span class="txt"> Сразу&nbsp;прибавка,&nbsp;минимум&nbsp;сорок,&nbsp;если&nbsp;не&nbsp;сто...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H  G   Cm </span>
-<span class="txt"> Всё,&nbsp;что&nbsp;когда-то&nbsp;-&nbsp;будни,&nbsp;после&nbsp;уже&nbsp;-&nbsp;молва.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G   A7/A#  A7 Dm </span>
-<span class="txt"> Или&nbsp;безмолвие.&nbsp;Был&nbsp;человек,&nbsp;а&nbsp;стал&nbsp;-&nbsp;кто?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  D/F#  F  E (флажолет (XII)) </span>
+<span class="line"><span class="txt"> Это&nbsp;же&nbsp;сходу&nbsp;всюду&nbsp;пропуск,&nbsp;а&nbsp;то&nbsp;и&nbsp;два.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E   Am B </span></span>
+<span class="line"><span class="txt"> Сразу&nbsp;прибавка,&nbsp;минимум&nbsp;сорок,&nbsp;если&nbsp;не&nbsp;сто...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H  G   Cm </span></span>
+<span class="line"><span class="txt"> Всё,&nbsp;что&nbsp;когда-то&nbsp;-&nbsp;будни,&nbsp;после&nbsp;уже&nbsp;-&nbsp;молва.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G   A7/A#  A7 Dm </span></span>
+<span class="line"><span class="txt"> Или&nbsp;безмолвие.&nbsp;Был&nbsp;человек,&nbsp;а&nbsp;стал&nbsp;-&nbsp;кто?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  D/F#  F  E (флажолет (XII)) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Кто&nbsp;он,&nbsp;чья&nbsp;пока&nbsp;ещё&nbsp;висит,&nbsp;вторая&nbsp;справа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> фотокарточка&nbsp;на&nbsp;стенде&nbsp;про&nbsp;весну&nbsp;и&nbsp;комсомол?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E  Am </span>
-<span class="txt"> Кто,&nbsp;в&nbsp;героев&nbsp;юности&nbsp;поверив&nbsp;не&nbsp;лукаво,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> следопыта&nbsp;воспитал&nbsp;в&nbsp;себе&nbsp;самом?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am </span>
+<span class="line"><span class="txt"> Кто&nbsp;он,&nbsp;чья&nbsp;пока&nbsp;ещё&nbsp;висит,&nbsp;вторая&nbsp;справа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> фотокарточка&nbsp;на&nbsp;стенде&nbsp;про&nbsp;весну&nbsp;и&nbsp;комсомол?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E  Am </span></span>
+<span class="line"><span class="txt"> Кто,&nbsp;в&nbsp;героев&nbsp;юности&nbsp;поверив&nbsp;не&nbsp;лукаво,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> следопыта&nbsp;воспитал&nbsp;в&nbsp;себе&nbsp;самом?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Радиосхемы&nbsp;строил,&nbsp;шифры&nbsp;изобретал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E   Am B </span>
-<span class="txt"> то&nbsp;стихотворный,&nbsp;то&nbsp;музыкальный,&nbsp;до-ре-ми-соль...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H  G   Cm </span>
-<span class="txt"> Странно&nbsp;бы,&nbsp;если&nbsp;он&nbsp;бы&nbsp;счастья&nbsp;не&nbsp;попытал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G   A7/A#  A7 Dm </span>
-<span class="txt"> первую&nbsp;в&nbsp;жизни&nbsp;взрослую&nbsp;отклонив&nbsp;роль!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  D/F#  F  E </span>
+<span class="line"><span class="txt"> Радиосхемы&nbsp;строил,&nbsp;шифры&nbsp;изобретал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E   Am B </span></span>
+<span class="line"><span class="txt"> то&nbsp;стихотворный,&nbsp;то&nbsp;музыкальный,&nbsp;до-ре-ми-соль...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H  G   Cm </span></span>
+<span class="line"><span class="txt"> Странно&nbsp;бы,&nbsp;если&nbsp;он&nbsp;бы&nbsp;счастья&nbsp;не&nbsp;попытал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G   A7/A#  A7 Dm </span></span>
+<span class="line"><span class="txt"> первую&nbsp;в&nbsp;жизни&nbsp;взрослую&nbsp;отклонив&nbsp;роль!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  D/F#  F  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Так,&nbsp;чего&nbsp;бы&nbsp;доброго,&nbsp;и&nbsp;прожил&nbsp;без&nbsp;нагана&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> или&nbsp;что&nbsp;сегодня&nbsp;там&nbsp;на&nbsp;всякий&nbsp;случай&nbsp;выдают?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E  Am </span>
-<span class="txt"> Жил&nbsp;бы,&nbsp;нам&nbsp;подобно,&nbsp;монотонно,&nbsp;моногамно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> ни&nbsp;провалов,&nbsp;ни&nbsp;побед,&nbsp;один&nbsp;уют...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am </span>
+<span class="line"><span class="txt"> Так,&nbsp;чего&nbsp;бы&nbsp;доброго,&nbsp;и&nbsp;прожил&nbsp;без&nbsp;нагана&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> или&nbsp;что&nbsp;сегодня&nbsp;там&nbsp;на&nbsp;всякий&nbsp;случай&nbsp;выдают?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E  Am </span></span>
+<span class="line"><span class="txt"> Жил&nbsp;бы,&nbsp;нам&nbsp;подобно,&nbsp;монотонно,&nbsp;моногамно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> ни&nbsp;провалов,&nbsp;ни&nbsp;побед,&nbsp;один&nbsp;уют...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Нам-то&nbsp;не&nbsp;тесно&nbsp;в&nbsp;русле&nbsp;-&nbsp;как,&nbsp;например,&nbsp;ему.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E   Am B </span>
-<span class="txt"> До&nbsp;пенсионных&nbsp;почестей&nbsp;мы&nbsp;вполне&nbsp;дотечём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H  G   Cm </span>
-<span class="txt"> В&nbsp;дар&nbsp;от&nbsp;месткома&nbsp;примем&nbsp;яркую&nbsp;хохлому.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G   A7/A#  A7 Dm </span>
-<span class="txt"> И&nbsp;не&nbsp;повинны&nbsp;будем&nbsp;ни&nbsp;в&nbsp;чём.&nbsp;А&nbsp;он&nbsp;-&nbsp;в&nbsp;чём?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  D/F#  F  E(III) </span>
+<span class="line"><span class="txt"> Нам-то&nbsp;не&nbsp;тесно&nbsp;в&nbsp;русле&nbsp;-&nbsp;как,&nbsp;например,&nbsp;ему.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E   Am B </span></span>
+<span class="line"><span class="txt"> До&nbsp;пенсионных&nbsp;почестей&nbsp;мы&nbsp;вполне&nbsp;дотечём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H  G   Cm </span></span>
+<span class="line"><span class="txt"> В&nbsp;дар&nbsp;от&nbsp;месткома&nbsp;примем&nbsp;яркую&nbsp;хохлому.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G   A7/A#  A7 Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;не&nbsp;повинны&nbsp;будем&nbsp;ни&nbsp;в&nbsp;чём.&nbsp;А&nbsp;он&nbsp;-&nbsp;в&nbsp;чём?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  D/F#  F  E(III) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Весь&nbsp;теперь&nbsp;актив&nbsp;от&nbsp;предвкушений&nbsp;цепенеет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> Обделённые&nbsp;сотрудницы&nbsp;не&nbsp;знают,&nbsp;как&nbsp;им&nbsp;быть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E  Am </span>
-<span class="txt"> Чувствую,&nbsp;задумали&nbsp;-&nbsp;тайком,&nbsp;когда&nbsp;стемнеет&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> фотокарточку&nbsp;от&nbsp;стенда&nbsp;отскоблить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am </span>
+<span class="line"><span class="txt"> Весь&nbsp;теперь&nbsp;актив&nbsp;от&nbsp;предвкушений&nbsp;цепенеет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> Обделённые&nbsp;сотрудницы&nbsp;не&nbsp;знают,&nbsp;как&nbsp;им&nbsp;быть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E  Am </span></span>
+<span class="line"><span class="txt"> Чувствую,&nbsp;задумали&nbsp;-&nbsp;тайком,&nbsp;когда&nbsp;стемнеет&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> фотокарточку&nbsp;от&nbsp;стенда&nbsp;отскоблить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;попадая,&nbsp;сыплют&nbsp;сахар&nbsp;в&nbsp;остывший&nbsp;чай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E   Am B </span>
-<span class="txt"> Вносят&nbsp;в&nbsp;отчёты&nbsp;нормы&nbsp;не&nbsp;те,&nbsp;квадраты,&nbsp;кубы...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H  G   Cm </span>
-<span class="txt"> Я&nbsp;не&nbsp;назвал&nbsp;бы&nbsp;светлой&nbsp;девичью&nbsp;их&nbsp;печаль,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G   A7/A#  A7 Dm </span>
-<span class="txt"> но&nbsp;с&nbsp;медицинской&nbsp;помощью&nbsp;не&nbsp;спешил&nbsp;бы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  D/F#  F  E </span>
+<span class="line"><span class="txt"> Не&nbsp;попадая,&nbsp;сыплют&nbsp;сахар&nbsp;в&nbsp;остывший&nbsp;чай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm    E   Am B </span></span>
+<span class="line"><span class="txt"> Вносят&nbsp;в&nbsp;отчёты&nbsp;нормы&nbsp;не&nbsp;те,&nbsp;квадраты,&nbsp;кубы...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H  G   Cm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;не&nbsp;назвал&nbsp;бы&nbsp;светлой&nbsp;девичью&nbsp;их&nbsp;печаль,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm    G   A7/A#  A7 Dm </span></span>
+<span class="line"><span class="txt"> но&nbsp;с&nbsp;медицинской&nbsp;помощью&nbsp;не&nbsp;спешил&nbsp;бы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am/E  D/F#  F  E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Завтра&nbsp;же&nbsp;смахнут&nbsp;с&nbsp;бумажек&nbsp;сахарную&nbsp;крошку&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> и&nbsp;квадраты&nbsp;все&nbsp;вернут&nbsp;на&nbsp;место,&nbsp;благо&nbsp;не&nbsp;с&nbsp;нуля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E  Am </span>
-<span class="txt"> Эй,&nbsp;кто&nbsp;там&nbsp;на&nbsp;вахте,&nbsp;отпускайте&nbsp;неотложку!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span>
-<span class="txt"> За&nbsp;отмену&nbsp;только&nbsp;дайте&nbsp;два&nbsp;рубля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am Dm/H </span>
-<span class="txt"> Можно&nbsp;и&nbsp;трёшку.&nbsp;Фа-ми-ре-до-си-ля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm E Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H C F Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-
+<span class="line"><span class="txt"> Завтра&nbsp;же&nbsp;смахнут&nbsp;с&nbsp;бумажек&nbsp;сахарную&nbsp;крошку&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;квадраты&nbsp;все&nbsp;вернут&nbsp;на&nbsp;место,&nbsp;благо&nbsp;не&nbsp;с&nbsp;нуля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B  /F /E  Am </span></span>
+<span class="line"><span class="txt"> Эй,&nbsp;кто&nbsp;там&nbsp;на&nbsp;вахте,&nbsp;отпускайте&nbsp;неотложку!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    Dm </span></span>
+<span class="line"><span class="txt"> За&nbsp;отмену&nbsp;только&nbsp;дайте&nbsp;два&nbsp;рубля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am    B   Am Dm/H </span></span>
+<span class="line"><span class="txt"> Можно&nbsp;и&nbsp;трёшку.&nbsp;Фа-ми-ре-до-си-ля.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Dm E Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/H C F Am </span></span>
+<span class="txt">  </span>
 </div>
-<pre>
-    <span class="year">2022</span>
-
+<pre><span class="year">2022</span>
 </pre>
+
 
                 </div>
         </div>

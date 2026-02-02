@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,46 +423,44 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">МУЖАЙСЯ</span>
+data-key="Am"><h1>МУЖАЙСЯ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пока&nbsp;не&nbsp;грянул&nbsp;горн&nbsp;и&nbsp;залп&nbsp;не&nbsp;прозвучал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  Am  E  Am </span>
-<span class="txt"> пока&nbsp;ни&nbsp;лавр,&nbsp;ни&nbsp;тёрн&nbsp;чела&nbsp;не&nbsp;увенчал&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  G  Cm  G  Cm </span>
-<span class="txt"> мужайся!&nbsp;Ведь&nbsp;даже&nbsp;кровь&nbsp;твоя&nbsp;на&nbsp;эшафоте&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#     Fm     Cm </span>
-<span class="txt"> о&nbsp;смерти&nbsp;лишний&nbsp;раз&nbsp;напомнит&nbsp;палачам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m    G      Cm </span>
+<span class="line"><span class="txt"> Пока&nbsp;не&nbsp;грянул&nbsp;горн&nbsp;и&nbsp;залп&nbsp;не&nbsp;прозвучал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  Am  E  Am </span></span>
+<span class="line"><span class="txt"> пока&nbsp;ни&nbsp;лавр,&nbsp;ни&nbsp;тёрн&nbsp;чела&nbsp;не&nbsp;увенчал&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  G  Cm  G  Cm </span></span>
+<span class="line"><span class="txt"> мужайся!&nbsp;Ведь&nbsp;даже&nbsp;кровь&nbsp;твоя&nbsp;на&nbsp;эшафоте&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#     Fm     Cm </span></span>
+<span class="line"><span class="txt"> о&nbsp;смерти&nbsp;лишний&nbsp;раз&nbsp;напомнит&nbsp;палачам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m    G      Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Далёк&nbsp;небесный&nbsp;суд,&nbsp;Господь&nbsp;тебя&nbsp;храни!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  Am  E  Am </span>
-<span class="txt"> Но&nbsp;близок&nbsp;суд&nbsp;земной,&nbsp;видны&nbsp;его&nbsp;огни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  G  Cm  G  Cm </span>
-<span class="txt"> И&nbsp;плохо,&nbsp;коль&nbsp;принесёшь&nbsp;ему&nbsp;одни&nbsp;проклятья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#     Fm     Cm </span>
-<span class="txt"> а&nbsp;он&nbsp;не&nbsp;примет&nbsp;их,&nbsp;зачем&nbsp;ему&nbsp;они!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m    G      Cm </span>
+<span class="line"><span class="txt"> Далёк&nbsp;небесный&nbsp;суд,&nbsp;Господь&nbsp;тебя&nbsp;храни!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  Am  E  Am </span></span>
+<span class="line"><span class="txt"> Но&nbsp;близок&nbsp;суд&nbsp;земной,&nbsp;видны&nbsp;его&nbsp;огни.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  G  Cm  G  Cm </span></span>
+<span class="line"><span class="txt"> И&nbsp;плохо,&nbsp;коль&nbsp;принесёшь&nbsp;ему&nbsp;одни&nbsp;проклятья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#     Fm     Cm </span></span>
+<span class="line"><span class="txt"> а&nbsp;он&nbsp;не&nbsp;примет&nbsp;их,&nbsp;зачем&nbsp;ему&nbsp;они!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m    G      Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;значит&nbsp;-&nbsp;вновь&nbsp;один,&nbsp;в&nbsp;ночи,&nbsp;среди&nbsp;могил&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m B  D#m B  D#m </span>
-<span class="txt"> кричи&nbsp;навзрыд,&nbsp;до&nbsp;слёз,&nbsp;до&nbsp;хрипа,&nbsp;что&nbsp;есть&nbsp;сил:&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C# F#m C# F#m </span>
-<span class="txt"> спасибо&nbsp;-&nbsp;за&nbsp;самый&nbsp;ясный&nbsp;день&nbsp;и&nbsp;самый&nbsp;чёрный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A      Hm     F#m </span>
-<span class="txt"> за&nbsp;то,&nbsp;что&nbsp;вынес,&nbsp;вышел,&nbsp;выжил&nbsp;и&nbsp;простил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     C#     F#m </span>
+<span class="line"><span class="txt"> И&nbsp;значит&nbsp;-&nbsp;вновь&nbsp;один,&nbsp;в&nbsp;ночи,&nbsp;среди&nbsp;могил&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m B  D#m B  D#m </span></span>
+<span class="line"><span class="txt"> кричи&nbsp;навзрыд,&nbsp;до&nbsp;слёз,&nbsp;до&nbsp;хрипа,&nbsp;что&nbsp;есть&nbsp;сил:&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m C# F#m C# F#m </span></span>
+<span class="line"><span class="txt"> спасибо&nbsp;-&nbsp;за&nbsp;самый&nbsp;ясный&nbsp;день&nbsp;и&nbsp;самый&nbsp;чёрный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A      Hm     F#m </span></span>
+<span class="line"><span class="txt"> за&nbsp;то,&nbsp;что&nbsp;вынес,&nbsp;вышел,&nbsp;выжил&nbsp;и&nbsp;простил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     C#     F#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> О,&nbsp;гордый&nbsp;внук&nbsp;монархов,&nbsp;сын&nbsp;богатырей!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  Am  E  Am </span>
-<span class="txt"> О,&nbsp;вечный&nbsp;раб&nbsp;изгнаний,&nbsp;данник&nbsp;алтарей!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  G  Cm  G  Cm </span>
-<span class="txt"> Мужайся!&nbsp;Недалеко&nbsp;уже,&nbsp;на&nbsp;горизонте,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#     Fm     Cm </span>
-<span class="txt"> горят&nbsp;огни&nbsp;несчастной&nbsp;родины&nbsp;твоей...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m    G      Cm </span>
+<span class="line"><span class="txt"> О,&nbsp;гордый&nbsp;внук&nbsp;монархов,&nbsp;сын&nbsp;богатырей!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  E  Am  E  Am </span></span>
+<span class="line"><span class="txt"> О,&nbsp;вечный&nbsp;раб&nbsp;изгнаний,&nbsp;данник&nbsp;алтарей!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  G  Cm  G  Cm </span></span>
+<span class="line"><span class="txt"> Мужайся!&nbsp;Недалеко&nbsp;уже,&nbsp;на&nbsp;горизонте,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#     Fm     Cm </span></span>
+<span class="line"><span class="txt"> горят&nbsp;огни&nbsp;несчастной&nbsp;родины&nbsp;твоей...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m    G      Cm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1987</span>
-
+<pre><span class="year">1987</span>
 </pre>
+
 
                 </div>
         </div>

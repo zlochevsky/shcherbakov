@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,51 +423,49 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ЗАЛИВ</span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Душа,&nbsp;каких&nbsp;похвал&nbsp;ещё&nbsp;тебе,&nbsp;ворожее?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   Em+7 Em7  A7/c# </span>
-<span class="txt"> Ликуй:&nbsp;всё&nbsp;обошлось&nbsp;примерно&nbsp;так,&nbsp;как&nbsp;ты&nbsp;рекла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    D7   Am </span>
-<span class="txt"> Всерьёз&nbsp;на&nbsp;этот&nbsp;раз&nbsp;я&nbsp;превозмог&nbsp;небытие,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    C    Am </span>
-<span class="txt"> воскрес,&nbsp;уехал&nbsp;вдаль,&nbsp;построил&nbsp;дом,&nbsp;завёл&nbsp;щегла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   D7   C7   E </span>
-<span class="txt"> Он&nbsp;мал,&nbsp;неискушён,&nbsp;и&nbsp;разучил&nbsp;пока&nbsp;всего&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span>
-<span class="txt"> семь&nbsp;нот...&nbsp;Но&nbsp;две&nbsp;из&nbsp;них&nbsp;он&nbsp;перенял&nbsp;у&nbsp;соловья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span>
-<span class="txt"> Когда&nbsp;и&nbsp;упрекну&nbsp;кого-нибудь,&nbsp;то&nbsp;не&nbsp;его:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span>
-<span class="txt"> он&nbsp;пленник,&nbsp;он&nbsp;певец.&nbsp;Совсем&nbsp;как&nbsp;ты,&nbsp;душа&nbsp;моя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;душа&nbsp;моя,&nbsp;душа&nbsp;моя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Октябрь,&nbsp;пустой&nbsp;сезон.&nbsp;Глухие&nbsp;дни&nbsp;стоят&nbsp;стеной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   Em+7 Em7  A7/c# </span>
-<span class="txt"> Мертво&nbsp;на&nbsp;берегу&nbsp;-&nbsp;ни&nbsp;рыбака,&nbsp;ни&nbsp;челнока.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    D7   Am </span>
-<span class="txt"> Каким&nbsp;дремучим&nbsp;сном&nbsp;сия&nbsp;страна&nbsp;уснёт&nbsp;зимой&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    C    Am </span>
-<span class="txt"> могу&nbsp;вообразить,&nbsp;но&nbsp;не&nbsp;скажу&nbsp;наверняка...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   D7   C7   E </span>
-<span class="txt"> Влажна&nbsp;дневная&nbsp;мгла&nbsp;и&nbsp;тяжела&nbsp;для&nbsp;головы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span>
-<span class="txt"> В&nbsp;заливе&nbsp;-&nbsp;не&nbsp;вода,&nbsp;а&nbsp;словно&nbsp;ртуть,&nbsp;не&nbsp;то&nbsp;свинец.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span>
-<span class="txt"> Щегол&nbsp;глядит&nbsp;в&nbsp;окно&nbsp;и&nbsp;говорит&nbsp;своё&nbsp;"увы!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span>
-<span class="txt"> всем&nbsp;птицам&nbsp;и&nbsp;птенцам.&nbsp;Хотя&nbsp;и&nbsp;сам&nbsp;-&nbsp;ещё&nbsp;птенец...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ещё&nbsp;птенец,&nbsp;ещё&nbsp;птенец...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Строка&nbsp;идёт&nbsp;к&nbsp;строке,&nbsp;один&nbsp;фрагмент&nbsp;в&nbsp;ладу&nbsp;с&nbsp;другим;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   Em+7 Em7  A7/c# </span>
-<span class="txt"> эскиз&nbsp;вчерне&nbsp;готов,&nbsp;перебелить&nbsp;-&nbsp;и&nbsp;на&nbsp;струну.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    D7   Am </span>
-<span class="txt"> Но&nbsp;нет!&nbsp;Финал&nbsp;иной&nbsp;велит&nbsp;перу&nbsp;прервать&nbsp;нажим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    C    Am </span>
-<span class="txt"> Увы,&nbsp;душа&nbsp;моя!&nbsp;Не&nbsp;удержусь&nbsp;-&nbsp;перечеркну.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   D7   C7   E </span>
-<span class="txt"> Свинец&nbsp;пошлю&nbsp;долой,&nbsp;пустые&nbsp;дни&nbsp;похороню,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span>
-<span class="txt"> залив&nbsp;и&nbsp;берега&nbsp;расположу&nbsp;наоборот,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span>
-<span class="txt"> октябрь&nbsp;сменю&nbsp;на&nbsp;май...&nbsp;И&nbsp;лишь&nbsp;в&nbsp;одном&nbsp;повременю:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span>
-<span class="txt"> щегла&nbsp;оставлю&nbsp;в&nbsp;клетке&nbsp;-&nbsp;и&nbsp;пускай...&nbsp;пока&nbsp;поёт...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пока&nbsp;поёт,&nbsp;пока&nbsp;поёт...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span>
-<span class="txt"> &nbsp; </span>
-
+data-key="Am"><h1>ЗАЛИВ</h1>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Душа,&nbsp;каких&nbsp;похвал&nbsp;ещё&nbsp;тебе,&nbsp;ворожее?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   Em+7 Em7  A7/c# </span></span>
+<span class="line"><span class="txt"> Ликуй:&nbsp;всё&nbsp;обошлось&nbsp;примерно&nbsp;так,&nbsp;как&nbsp;ты&nbsp;рекла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    D7   Am </span></span>
+<span class="line"><span class="txt"> Всерьёз&nbsp;на&nbsp;этот&nbsp;раз&nbsp;я&nbsp;превозмог&nbsp;небытие,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    C    Am </span></span>
+<span class="line"><span class="txt"> воскрес,&nbsp;уехал&nbsp;вдаль,&nbsp;построил&nbsp;дом,&nbsp;завёл&nbsp;щегла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   D7   C7   E </span></span>
+<span class="line"><span class="txt"> Он&nbsp;мал,&nbsp;неискушён,&nbsp;и&nbsp;разучил&nbsp;пока&nbsp;всего&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span></span>
+<span class="line"><span class="txt"> семь&nbsp;нот...&nbsp;Но&nbsp;две&nbsp;из&nbsp;них&nbsp;он&nbsp;перенял&nbsp;у&nbsp;соловья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span></span>
+<span class="line"><span class="txt"> Когда&nbsp;и&nbsp;упрекну&nbsp;кого-нибудь,&nbsp;то&nbsp;не&nbsp;его:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span></span>
+<span class="line"><span class="txt"> он&nbsp;пленник,&nbsp;он&nbsp;певец.&nbsp;Совсем&nbsp;как&nbsp;ты,&nbsp;душа&nbsp;моя,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;душа&nbsp;моя,&nbsp;душа&nbsp;моя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Октябрь,&nbsp;пустой&nbsp;сезон.&nbsp;Глухие&nbsp;дни&nbsp;стоят&nbsp;стеной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   Em+7 Em7  A7/c# </span></span>
+<span class="line"><span class="txt"> Мертво&nbsp;на&nbsp;берегу&nbsp;-&nbsp;ни&nbsp;рыбака,&nbsp;ни&nbsp;челнока.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    D7   Am </span></span>
+<span class="line"><span class="txt"> Каким&nbsp;дремучим&nbsp;сном&nbsp;сия&nbsp;страна&nbsp;уснёт&nbsp;зимой&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    C    Am </span></span>
+<span class="line"><span class="txt"> могу&nbsp;вообразить,&nbsp;но&nbsp;не&nbsp;скажу&nbsp;наверняка...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   D7   C7   E </span></span>
+<span class="line"><span class="txt"> Влажна&nbsp;дневная&nbsp;мгла&nbsp;и&nbsp;тяжела&nbsp;для&nbsp;головы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span></span>
+<span class="line"><span class="txt"> В&nbsp;заливе&nbsp;-&nbsp;не&nbsp;вода,&nbsp;а&nbsp;словно&nbsp;ртуть,&nbsp;не&nbsp;то&nbsp;свинец.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span></span>
+<span class="line"><span class="txt"> Щегол&nbsp;глядит&nbsp;в&nbsp;окно&nbsp;и&nbsp;говорит&nbsp;своё&nbsp;"увы!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span></span>
+<span class="line"><span class="txt"> всем&nbsp;птицам&nbsp;и&nbsp;птенцам.&nbsp;Хотя&nbsp;и&nbsp;сам&nbsp;-&nbsp;ещё&nbsp;птенец...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ещё&nbsp;птенец,&nbsp;ещё&nbsp;птенец...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Строка&nbsp;идёт&nbsp;к&nbsp;строке,&nbsp;один&nbsp;фрагмент&nbsp;в&nbsp;ладу&nbsp;с&nbsp;другим;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   Em+7 Em7  A7/c# </span></span>
+<span class="line"><span class="txt"> эскиз&nbsp;вчерне&nbsp;готов,&nbsp;перебелить&nbsp;-&nbsp;и&nbsp;на&nbsp;струну.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    D7   Am </span></span>
+<span class="line"><span class="txt"> Но&nbsp;нет!&nbsp;Финал&nbsp;иной&nbsp;велит&nbsp;перу&nbsp;прервать&nbsp;нажим.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    C    Am </span></span>
+<span class="line"><span class="txt"> Увы,&nbsp;душа&nbsp;моя!&nbsp;Не&nbsp;удержусь&nbsp;-&nbsp;перечеркну.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   D7   C7   E </span></span>
+<span class="line"><span class="txt"> Свинец&nbsp;пошлю&nbsp;долой,&nbsp;пустые&nbsp;дни&nbsp;похороню,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span></span>
+<span class="line"><span class="txt"> залив&nbsp;и&nbsp;берега&nbsp;расположу&nbsp;наоборот,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span></span>
+<span class="line"><span class="txt"> октябрь&nbsp;сменю&nbsp;на&nbsp;май...&nbsp;И&nbsp;лишь&nbsp;в&nbsp;одном&nbsp;повременю:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A    A7   D    F7 </span></span>
+<span class="line"><span class="txt"> щегла&nbsp;оставлю&nbsp;в&nbsp;клетке&nbsp;-&nbsp;и&nbsp;пускай...&nbsp;пока&nbsp;поёт...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C    G    Dm   Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пока&nbsp;поёт,&nbsp;пока&nbsp;поёт...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Am </span></span>
+<span class="txt">  </span>
 </div>
-<pre>
-    <span class="year">1990</span>
-
+<pre><span class="year">1990</span>
 </pre>
+
 
                 </div>
         </div>

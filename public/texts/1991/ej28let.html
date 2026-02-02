@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,60 +433,57 @@ span.c {
 data-key="Am"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ей&nbsp;двадцать&nbsp;восемь&nbsp;лет,&nbsp;она&nbsp;уже&nbsp;вполне&nbsp;во&nbsp;власти&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> привычек,&nbsp;коим&nbsp;грош&nbsp;цена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span>
-<span class="txt"> Она&nbsp;не&nbsp;в&nbsp;силах&nbsp;не&nbsp;любить&nbsp;собак,&nbsp;цветы&nbsp;и&nbsp;сласти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> зато&nbsp;в&nbsp;объятьях&nbsp;холодна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span>
-<span class="txt"> Красы&nbsp;не&nbsp;много&nbsp;в&nbsp;ней,&nbsp;хотя&nbsp;черты&nbsp;чисты&nbsp;и&nbsp;хрупки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> но&nbsp;меркнет&nbsp;даже&nbsp;то,&nbsp;что&nbsp;есть,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Dm </span>
-<span class="txt"> от&nbsp;нераденья,&nbsp;от&nbsp;зевка,&nbsp;от&nbsp;телефонной&nbsp;трубки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A Am Dm </span>
-<span class="txt"> от&nbsp;неуменья&nbsp;встать&nbsp;и&nbsp;сесть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F E A </span>
+<span class="line"><span class="txt"> Ей&nbsp;двадцать&nbsp;восемь&nbsp;лет,&nbsp;она&nbsp;уже&nbsp;вполне&nbsp;во&nbsp;власти&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> привычек,&nbsp;коим&nbsp;грош&nbsp;цена.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span></span>
+<span class="line"><span class="txt"> Она&nbsp;не&nbsp;в&nbsp;силах&nbsp;не&nbsp;любить&nbsp;собак,&nbsp;цветы&nbsp;и&nbsp;сласти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> зато&nbsp;в&nbsp;объятьях&nbsp;холодна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span></span>
+<span class="line"><span class="txt"> Красы&nbsp;не&nbsp;много&nbsp;в&nbsp;ней,&nbsp;хотя&nbsp;черты&nbsp;чисты&nbsp;и&nbsp;хрупки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> но&nbsp;меркнет&nbsp;даже&nbsp;то,&nbsp;что&nbsp;есть,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Dm </span></span>
+<span class="line"><span class="txt"> от&nbsp;нераденья,&nbsp;от&nbsp;зевка,&nbsp;от&nbsp;телефонной&nbsp;трубки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A Am Dm </span></span>
+<span class="line"><span class="txt"> от&nbsp;неуменья&nbsp;встать&nbsp;и&nbsp;сесть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F E A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Людских&nbsp;законов&nbsp;не&nbsp;ценя,&nbsp;она&nbsp;в&nbsp;усердье&nbsp;милом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> блюдет&nbsp;"законы"&nbsp;божества.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span>
-<span class="txt"> При&nbsp;этом&nbsp;ближнему&nbsp;вредит&nbsp;с&nbsp;религиозным&nbsp;пылом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> и&nbsp;полагает,&nbsp;что&nbsp;права.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span>
-<span class="txt"> Вопрос&nbsp;нехитрый&nbsp;ей&nbsp;задав&nbsp;при&nbsp;ординарной&nbsp;встрече,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> не&nbsp;жди&nbsp;простого&nbsp;"да"&nbsp;иль&nbsp;"нет":&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Dm </span>
-<span class="txt"> она&nbsp;из&nbsp;тех,&nbsp;кто&nbsp;предпочтёт&nbsp;членораздельной&nbsp;речи&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A Am Dm </span>
-<span class="txt"> полумычанье-полубред.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F E A </span>
+<span class="line"><span class="txt"> Людских&nbsp;законов&nbsp;не&nbsp;ценя,&nbsp;она&nbsp;в&nbsp;усердье&nbsp;милом&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> блюдет&nbsp;"законы"&nbsp;божества.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span></span>
+<span class="line"><span class="txt"> При&nbsp;этом&nbsp;ближнему&nbsp;вредит&nbsp;с&nbsp;религиозным&nbsp;пылом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> и&nbsp;полагает,&nbsp;что&nbsp;права.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span></span>
+<span class="line"><span class="txt"> Вопрос&nbsp;нехитрый&nbsp;ей&nbsp;задав&nbsp;при&nbsp;ординарной&nbsp;встрече,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> не&nbsp;жди&nbsp;простого&nbsp;"да"&nbsp;иль&nbsp;"нет":&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Dm </span></span>
+<span class="line"><span class="txt"> она&nbsp;из&nbsp;тех,&nbsp;кто&nbsp;предпочтёт&nbsp;членораздельной&nbsp;речи&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A Am Dm </span></span>
+<span class="line"><span class="txt"> полумычанье-полубред.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F E A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пою&nbsp;о&nbsp;ней,&nbsp;когда&nbsp;раздевшись,&nbsp;как&nbsp;и&nbsp;должно&nbsp;летом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> на&nbsp;берегу&nbsp;или&nbsp;в&nbsp;лесу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span>
-<span class="txt"> она&nbsp;спешит&nbsp;покрыться&nbsp;тем&nbsp;ненатуральным&nbsp;цветом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> который&nbsp;мало&nbsp;ей&nbsp;к&nbsp;лицу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span>
-<span class="txt"> Пою&nbsp;о&nbsp;ней,&nbsp;когда&nbsp;зарывшись&nbsp;в&nbsp;шубу,&nbsp;как&nbsp;в&nbsp;берлогу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> по&nbsp;мостовым&nbsp;родных&nbsp;трущоб&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Dm </span>
-<span class="txt"> январским&nbsp;днём&nbsp;она&nbsp;идёт,&nbsp;заняв&nbsp;собой&nbsp;дорогу:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A Am Dm </span>
-<span class="txt"> все&nbsp;люди,&nbsp;падайте&nbsp;в&nbsp;сугроб!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F E A </span>
+<span class="line"><span class="txt"> Пою&nbsp;о&nbsp;ней,&nbsp;когда&nbsp;раздевшись,&nbsp;как&nbsp;и&nbsp;должно&nbsp;летом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> на&nbsp;берегу&nbsp;или&nbsp;в&nbsp;лесу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span></span>
+<span class="line"><span class="txt"> она&nbsp;спешит&nbsp;покрыться&nbsp;тем&nbsp;ненатуральным&nbsp;цветом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> который&nbsp;мало&nbsp;ей&nbsp;к&nbsp;лицу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span></span>
+<span class="line"><span class="txt"> Пою&nbsp;о&nbsp;ней,&nbsp;когда&nbsp;зарывшись&nbsp;в&nbsp;шубу,&nbsp;как&nbsp;в&nbsp;берлогу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> по&nbsp;мостовым&nbsp;родных&nbsp;трущоб&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Dm </span></span>
+<span class="line"><span class="txt"> январским&nbsp;днём&nbsp;она&nbsp;идёт,&nbsp;заняв&nbsp;собой&nbsp;дорогу:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A Am Dm </span></span>
+<span class="line"><span class="txt"> все&nbsp;люди,&nbsp;падайте&nbsp;в&nbsp;сугроб!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F E A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;тут,&nbsp;быть&nbsp;может,&nbsp;кто-нибудь&nbsp;из&nbsp;оппонентов&nbsp;строгих&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> воскликнет&nbsp;с&nbsp;пеной&nbsp;на&nbsp;губе:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span>
-<span class="txt"> "Да&nbsp;кто&nbsp;же,&nbsp;кто&nbsp;сия&nbsp;модель&nbsp;твоих&nbsp;словес&nbsp;убогих?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> И&nbsp;кем&nbsp;приходится&nbsp;тебе?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span>
-<span class="txt"> А&nbsp;я&nbsp;отвечу,&nbsp;будто&nbsp;я&nbsp;не&nbsp;я,&nbsp;и&nbsp;хата&nbsp;с&nbsp;краю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> как&nbsp;подобает&nbsp;рифмачу:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Dm </span>
-<span class="txt"> "Побойтесь&nbsp;Бога,&nbsp;я&nbsp;её&nbsp;не&nbsp;только&nbsp;что&nbsp;не&nbsp;знаю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A Am Dm </span>
-<span class="txt"> её&nbsp;и&nbsp;знать&nbsp;я&nbsp;не&nbsp;хочу!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F E A </span>
+<span class="line"><span class="txt"> Но&nbsp;тут,&nbsp;быть&nbsp;может,&nbsp;кто-нибудь&nbsp;из&nbsp;оппонентов&nbsp;строгих&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> воскликнет&nbsp;с&nbsp;пеной&nbsp;на&nbsp;губе:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span></span>
+<span class="line"><span class="txt"> "Да&nbsp;кто&nbsp;же,&nbsp;кто&nbsp;сия&nbsp;модель&nbsp;твоих&nbsp;словес&nbsp;убогих?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> И&nbsp;кем&nbsp;приходится&nbsp;тебе?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span></span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;отвечу,&nbsp;будто&nbsp;я&nbsp;не&nbsp;я,&nbsp;и&nbsp;хата&nbsp;с&nbsp;краю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> как&nbsp;подобает&nbsp;рифмачу:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm  Dm </span></span>
+<span class="line"><span class="txt"> "Побойтесь&nbsp;Бога,&nbsp;я&nbsp;её&nbsp;не&nbsp;только&nbsp;что&nbsp;не&nbsp;знаю,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A Am Dm </span></span>
+<span class="line"><span class="txt"> её&nbsp;и&nbsp;знать&nbsp;я&nbsp;не&nbsp;хочу!"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am F E A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> О&nbsp;чём,&nbsp;зачем,&nbsp;к&nbsp;чему...&nbsp;пускай&nbsp;решает&nbsp;сам,&nbsp;кто&nbsp;слышит.&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> Решит&nbsp;-&nbsp;и&nbsp;будет&nbsp;в&nbsp;барыше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span>
-<span class="txt"> Бумага&nbsp;терпит,&nbsp;карандаш&nbsp;скрипит,&nbsp;контора&nbsp;пишет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span>
-<span class="txt"> Душа&nbsp;тоскует&nbsp;о&nbsp;душе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span>
+<span class="line"><span class="txt"> О&nbsp;чём,&nbsp;зачем,&nbsp;к&nbsp;чему...&nbsp;пускай&nbsp;решает&nbsp;сам,&nbsp;кто&nbsp;слышит.&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> Решит&nbsp;-&nbsp;и&nbsp;будет&nbsp;в&nbsp;барыше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span></span>
+<span class="line"><span class="txt"> Бумага&nbsp;терпит,&nbsp;карандаш&nbsp;скрипит,&nbsp;контора&nbsp;пишет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 </span></span>
+<span class="line"><span class="txt"> Душа&nbsp;тоскует&nbsp;о&nbsp;душе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em6 Am </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1991</span>
-
+<pre><span class="year">1991</span>
 
 </pre>
+
 
                 </div>
         </div>

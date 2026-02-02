@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -424,42 +432,39 @@ span.c {
                     <div class="song"
 data-key="Hm"><span class="txt"> От&nbsp;этих&nbsp;зимних&nbsp;зорь&nbsp;над&nbsp;миром&nbsp;синь&nbsp;такая, </span>
 <span class="txt"> что&nbsp;позабыта&nbsp;хворь&nbsp;и&nbsp;дребедень&nbsp;мирская. </span>
-<span class="txt"> А&nbsp;над&nbsp;землей&nbsp;стоят&nbsp;крещенские&nbsp;морозы. </span>
-<span class="txt"> Такой&nbsp;страшенный&nbsp;хлад,&nbsp;аж&nbsp;застывают&nbsp;слёзы. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;над&nbsp;землей&nbsp;стоят&nbsp;крещенские&nbsp;морозы. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Такой&nbsp;страшенный&nbsp;хлад,&nbsp;аж&nbsp;застывают&nbsp;слёзы. </span>
 <span class="txt"> У&nbsp;всех&nbsp;людей&nbsp;дома,&nbsp;коттеджи,&nbsp;дачи,&nbsp;виллы, </span>
 <span class="txt"> а&nbsp;для&nbsp;меня&nbsp;тюрьма&nbsp;-&nbsp;и&nbsp;крыша,&nbsp;и&nbsp;могила. </span>
-<span class="txt"> Мне&nbsp;отблеск&nbsp;дальних&nbsp;звёзд&nbsp;через&nbsp;решётку&nbsp;светит. </span>
-<span class="txt"> А&nbsp;я&nbsp;за&nbsp;тыщу&nbsp;вёрст&nbsp;от&nbsp;всех&nbsp;людей&nbsp;на&nbsp;свете. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Мне&nbsp;отблеск&nbsp;дальних&nbsp;звёзд&nbsp;через&nbsp;решётку&nbsp;светит. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;я&nbsp;за&nbsp;тыщу&nbsp;вёрст&nbsp;от&nbsp;всех&nbsp;людей&nbsp;на&nbsp;свете. </span>
 <span class="txt"> Я&nbsp;иногда&nbsp;пою,&nbsp;но&nbsp;чаще&nbsp;волком&nbsp;вою, </span>
 <span class="txt"> и&nbsp;если&nbsp;водку&nbsp;пью,&nbsp;то&nbsp;только&nbsp;сам&nbsp;с&nbsp;собою. </span>
-<span class="txt"> Не&nbsp;потому,&nbsp;что&nbsp;смят&nbsp;каким-то&nbsp;сбоем&nbsp;резким, </span>
-<span class="txt"> не&nbsp;потому,&nbsp;что&nbsp;гад,&nbsp;а&nbsp;потому,&nbsp;что&nbsp;не&nbsp;с&nbsp;кем. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Не&nbsp;потому,&nbsp;что&nbsp;смят&nbsp;каким-то&nbsp;сбоем&nbsp;резким, </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;не&nbsp;потому,&nbsp;что&nbsp;гад,&nbsp;а&nbsp;потому,&nbsp;что&nbsp;не&nbsp;с&nbsp;кем. </span>
 <span class="txt"> Неполная&nbsp;сума,&nbsp;немягкая&nbsp;лежанка, </span>
 <span class="txt"> а,&nbsp;между&nbsp;тем,&nbsp;зима,&nbsp;и,&nbsp;между&nbsp;тем,&nbsp;не&nbsp;жарко. </span>
-<span class="txt"> Заиндевел&nbsp;металл,&nbsp;заледенели&nbsp;двери, </span>
-<span class="txt"> а&nbsp;я&nbsp;так&nbsp;долго&nbsp;ждал,&nbsp;а&nbsp;я&nbsp;так&nbsp;свято&nbsp;верил. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Заиндевел&nbsp;металл,&nbsp;заледенели&nbsp;двери, </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;я&nbsp;так&nbsp;долго&nbsp;ждал,&nbsp;а&nbsp;я&nbsp;так&nbsp;свято&nbsp;верил. </span>
 <span class="txt"> Я&nbsp;ждал,&nbsp;что&nbsp;всё&nbsp;пройдёт,&nbsp;я&nbsp;думал,&nbsp;лето&nbsp;с&nbsp;нами, </span>
 <span class="txt"> оно&nbsp;нас&nbsp;поведёт&nbsp;на&nbsp;битву&nbsp;с&nbsp;холодами. </span>
-<span class="txt"> Я&nbsp;ждал,&nbsp;что,&nbsp;хмур&nbsp;и&nbsp;сир,&nbsp;на&nbsp;бой&nbsp;с&nbsp;зимою&nbsp;сонной </span>
-<span class="txt"> уже&nbsp;встаёт&nbsp;весь&nbsp;мир,&nbsp;проклятьем&nbsp;заклеймённый. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;ждал,&nbsp;что,&nbsp;хмур&nbsp;и&nbsp;сир,&nbsp;на&nbsp;бой&nbsp;с&nbsp;зимою&nbsp;сонной </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;уже&nbsp;встаёт&nbsp;весь&nbsp;мир,&nbsp;проклятьем&nbsp;заклеймённый. </span>
 <span class="txt"> Я&nbsp;слышал&nbsp;гул&nbsp;войны&nbsp;и&nbsp;в&nbsp;пении&nbsp;снарядов, </span>
 <span class="txt"> узнал&nbsp;свирель&nbsp;весны&nbsp;и&nbsp;думал:&nbsp;так&nbsp;и&nbsp;надо. </span>
-<span class="txt"> Я&nbsp;слышал&nbsp;новых&nbsp;снов&nbsp;нетвёрдую&nbsp;чечётку </span>
-<span class="txt"> и&nbsp;был&nbsp;уже&nbsp;готов&nbsp;перепилить&nbsp;решётку. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;слышал&nbsp;новых&nbsp;снов&nbsp;нетвёрдую&nbsp;чечётку </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;был&nbsp;уже&nbsp;готов&nbsp;перепилить&nbsp;решётку. </span>
 <span class="txt"> Но&nbsp;вышло&nbsp;всё&nbsp;внахлест.&nbsp;Зима&nbsp;прошла&nbsp;-&nbsp;не&nbsp;жалко, </span>
 <span class="txt"> и&nbsp;я&nbsp;за&nbsp;тыщу&nbsp;вёрст,&nbsp;и,&nbsp;между&nbsp;тем,&nbsp;не&nbsp;жарко. </span>
-<span class="txt"> [нрзбр]&nbsp;тюрьма.&nbsp;И,&nbsp;можно&nbsp;жить,&nbsp;не&nbsp;старясь. </span>
-<span class="txt"> Зима&nbsp;ушла&nbsp;сама,&nbsp;а&nbsp;холода&nbsp;остались. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;[нрзбр]&nbsp;тюрьма.&nbsp;И,&nbsp;можно&nbsp;жить,&nbsp;не&nbsp;старясь. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Зима&nbsp;ушла&nbsp;сама,&nbsp;а&nbsp;холода&nbsp;остались. </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> <1985> </span>
- <br />
-
 </div>
 <pre>
-    
-
 </pre>
+
 
                 </div>
         </div>

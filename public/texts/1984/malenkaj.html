@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,63 +423,61 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">МАЛЕНЬКАЯ ХОЗЯЙКА</span>
+data-key="Em"><h1>МАЛЕНЬКАЯ ХОЗЯЙКА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Никто&nbsp;из&nbsp;нас&nbsp;не&nbsp;знал&nbsp;надёжнее&nbsp;лазейки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am Em </span>
-<span class="txt"> из&nbsp;царства&nbsp;холодов&nbsp;в&nbsp;республику&nbsp;тепла:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span>
-<span class="txt"> Мы&nbsp;собирались&nbsp;все&nbsp;у&nbsp;маленькой&nbsp;хозяйки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em Am Em </span>
-<span class="txt"> она&nbsp;была&nbsp;всегда&nbsp;мила&nbsp;и&nbsp;весела.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span>
-<span class="txt"> И&nbsp;в&nbsp;долгий&nbsp;летний&nbsp;день,&nbsp;и&nbsp;в&nbsp;зимний&nbsp;день&nbsp;короткий&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm  Cm D7 </span>
-<span class="txt"> неведомо&nbsp;за&nbsp;что&nbsp;съедали&nbsp;нас&nbsp;дела;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A7  Eb D7 </span>
-<span class="txt"> но&nbsp;вечером&nbsp;мы&nbsp;все&nbsp;у&nbsp;маленькой&nbsp;красотки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Cm Gm </span>
-<span class="txt"> сходились,&nbsp;и&nbsp;она&nbsp;всегда&nbsp;была&nbsp;мила.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm  D7 Gm </span>
+<span class="line"><span class="txt"> Никто&nbsp;из&nbsp;нас&nbsp;не&nbsp;знал&nbsp;надёжнее&nbsp;лазейки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am Em </span></span>
+<span class="line"><span class="txt"> из&nbsp;царства&nbsp;холодов&nbsp;в&nbsp;республику&nbsp;тепла:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;собирались&nbsp;все&nbsp;у&nbsp;маленькой&nbsp;хозяйки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em Am Em </span></span>
+<span class="line"><span class="txt"> она&nbsp;была&nbsp;всегда&nbsp;мила&nbsp;и&nbsp;весела.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span></span>
+<span class="line"><span class="txt"> И&nbsp;в&nbsp;долгий&nbsp;летний&nbsp;день,&nbsp;и&nbsp;в&nbsp;зимний&nbsp;день&nbsp;короткий&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm  Cm D7 </span></span>
+<span class="line"><span class="txt"> неведомо&nbsp;за&nbsp;что&nbsp;съедали&nbsp;нас&nbsp;дела;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A7  Eb D7 </span></span>
+<span class="line"><span class="txt"> но&nbsp;вечером&nbsp;мы&nbsp;все&nbsp;у&nbsp;маленькой&nbsp;красотки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Cm Gm </span></span>
+<span class="line"><span class="txt"> сходились,&nbsp;и&nbsp;она&nbsp;всегда&nbsp;была&nbsp;мила.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm  D7 Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сходились&nbsp;голоса,&nbsp;сплетались&nbsp;интересы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am Em </span>
-<span class="txt"> не&nbsp;портила&nbsp;бесед&nbsp;ни&nbsp;ссора,&nbsp;ни&nbsp;вражда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span>
-<span class="txt"> И&nbsp;все&nbsp;мы&nbsp;вновь&nbsp;и&nbsp;вновь&nbsp;у&nbsp;маленькой&nbsp;принцессы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em Am Em </span>
-<span class="txt"> встречались,&nbsp;и&nbsp;она...&nbsp;она&nbsp;была&nbsp;всегда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span>
-<span class="txt"> Её&nbsp;любили&nbsp;все&nbsp;√&nbsp;чем&nbsp;дальше,&nbsp;тем&nbsp;сильнее.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm  Cm D7 </span>
-<span class="txt"> Никто&nbsp;не&nbsp;знал,&nbsp;когда&nbsp;всё&nbsp;это&nbsp;началось,&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A7  Eb D7 </span>
-<span class="txt"> чем&nbsp;лучше&nbsp;было&nbsp;нам,&nbsp;когда&nbsp;мы&nbsp;были&nbsp;с&nbsp;нею,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Cm Gm </span>
-<span class="txt"> тем&nbsp;хуже&nbsp;было&nbsp;нам,&nbsp;когда&nbsp;мы&nbsp;были&nbsp;врозь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm  D7 Gm </span>
+<span class="line"><span class="txt"> Сходились&nbsp;голоса,&nbsp;сплетались&nbsp;интересы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;портила&nbsp;бесед&nbsp;ни&nbsp;ссора,&nbsp;ни&nbsp;вражда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span></span>
+<span class="line"><span class="txt"> И&nbsp;все&nbsp;мы&nbsp;вновь&nbsp;и&nbsp;вновь&nbsp;у&nbsp;маленькой&nbsp;принцессы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em Am Em </span></span>
+<span class="line"><span class="txt"> встречались,&nbsp;и&nbsp;она...&nbsp;она&nbsp;была&nbsp;всегда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span></span>
+<span class="line"><span class="txt"> Её&nbsp;любили&nbsp;все&nbsp;√&nbsp;чем&nbsp;дальше,&nbsp;тем&nbsp;сильнее.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm  Cm D7 </span></span>
+<span class="line"><span class="txt"> Никто&nbsp;не&nbsp;знал,&nbsp;когда&nbsp;всё&nbsp;это&nbsp;началось,&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A7  Eb D7 </span></span>
+<span class="line"><span class="txt"> чем&nbsp;лучше&nbsp;было&nbsp;нам,&nbsp;когда&nbsp;мы&nbsp;были&nbsp;с&nbsp;нею,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Cm Gm </span></span>
+<span class="line"><span class="txt"> тем&nbsp;хуже&nbsp;было&nbsp;нам,&nbsp;когда&nbsp;мы&nbsp;были&nbsp;врозь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm  D7 Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;приближался&nbsp;крах&nbsp;весёлой&nbsp;нашей&nbsp;шайки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am Em </span>
-<span class="txt"> поскольку&nbsp;где&nbsp;любовь&nbsp;√&nbsp;там&nbsp;ревность&nbsp;и&nbsp;раздор.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span>
-<span class="txt"> До&nbsp;некоторых&nbsp;пор&nbsp;у&nbsp;маленькой&nbsp;хозяйки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em Am Em </span>
-<span class="txt"> не&nbsp;видывали&nbsp;ссор,&nbsp;но&nbsp;с&nbsp;некоторых&nbsp;пор&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span>
-<span class="txt"> мы,&nbsp;перья&nbsp;распустив,&nbsp;вытягивали&nbsp;шеи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm  Cm D7 </span>
-<span class="txt"> сверкая&nbsp;в&nbsp;полутьме&nbsp;огнём&nbsp;ревнивых&nbsp;глаз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A7  Eb D7 </span>
-<span class="txt"> Чем&nbsp;дальше,&nbsp;тем&nbsp;острей,&nbsp;чем&nbsp;дольше,&nbsp;тем&nbsp;сильнее&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Cm Gm </span>
-<span class="txt"> претензии&nbsp;росли&nbsp;у&nbsp;каждого&nbsp;из&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm  D7 Gm </span>
+<span class="line"><span class="txt"> И&nbsp;приближался&nbsp;крах&nbsp;весёлой&nbsp;нашей&nbsp;шайки,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am Em </span></span>
+<span class="line"><span class="txt"> поскольку&nbsp;где&nbsp;любовь&nbsp;√&nbsp;там&nbsp;ревность&nbsp;и&nbsp;раздор.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span></span>
+<span class="line"><span class="txt"> До&nbsp;некоторых&nbsp;пор&nbsp;у&nbsp;маленькой&nbsp;хозяйки&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em Am Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;видывали&nbsp;ссор,&nbsp;но&nbsp;с&nbsp;некоторых&nbsp;пор&nbsp;√&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span></span>
+<span class="line"><span class="txt"> мы,&nbsp;перья&nbsp;распустив,&nbsp;вытягивали&nbsp;шеи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm  Cm D7 </span></span>
+<span class="line"><span class="txt"> сверкая&nbsp;в&nbsp;полутьме&nbsp;огнём&nbsp;ревнивых&nbsp;глаз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A7  Eb D7 </span></span>
+<span class="line"><span class="txt"> Чем&nbsp;дальше,&nbsp;тем&nbsp;острей,&nbsp;чем&nbsp;дольше,&nbsp;тем&nbsp;сильнее&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Cm Gm </span></span>
+<span class="line"><span class="txt"> претензии&nbsp;росли&nbsp;у&nbsp;каждого&nbsp;из&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm  D7 Gm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;так&nbsp;за&nbsp;часом&nbsp;час&nbsp;√&nbsp;никак&nbsp;не&nbsp;разберёмся,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am Em </span>
-<span class="txt"> и&nbsp;каждый,&nbsp;наконец,&nbsp;решил&nbsp;себе&nbsp;тогда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span>
-<span class="txt"> что&nbsp;надо&nbsp;уходить,&nbsp;не&nbsp;то&nbsp;передерёмся,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em Am Em </span>
-<span class="txt"> и&nbsp;вот&nbsp;мы&nbsp;разошлись&nbsp;√&nbsp;обратно&nbsp;в&nbsp;холода.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span>
-<span class="txt"> А&nbsp;милый&nbsp;наш&nbsp;кумир,&nbsp;прелестная&nbsp;игрушка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm  Cm D7 </span>
-<span class="txt"> стояла&nbsp;у&nbsp;окна,&nbsp;глядела&nbsp;нам&nbsp;вослед.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A7  Eb D7 </span>
-<span class="txt"> Она&nbsp;любила&nbsp;всех,&nbsp;ей&nbsp;было&nbsp;очень&nbsp;грустно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Cm Gm </span>
-<span class="txt"> не&nbsp;менее,&nbsp;чем&nbsp;нам.&nbsp;Но,&nbsp;может&nbsp;быть,&nbsp;и&nbsp;нет...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm  D7 Gm </span>
-<span class="txt"> Но,&nbsp;может&nbsp;быть,&nbsp;и&nbsp;нет...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span>
+<span class="line"><span class="txt"> И&nbsp;так&nbsp;за&nbsp;часом&nbsp;час&nbsp;√&nbsp;никак&nbsp;не&nbsp;разберёмся,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Am Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;каждый,&nbsp;наконец,&nbsp;решил&nbsp;себе&nbsp;тогда,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span></span>
+<span class="line"><span class="txt"> что&nbsp;надо&nbsp;уходить,&nbsp;не&nbsp;то&nbsp;передерёмся,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  Em Am Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;вот&nbsp;мы&nbsp;разошлись&nbsp;√&nbsp;обратно&nbsp;в&nbsp;холода.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am6 Em H7 Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;милый&nbsp;наш&nbsp;кумир,&nbsp;прелестная&nbsp;игрушка,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 Gm  Cm D7 </span></span>
+<span class="line"><span class="txt"> стояла&nbsp;у&nbsp;окна,&nbsp;глядела&nbsp;нам&nbsp;вослед.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A7  Eb D7 </span></span>
+<span class="line"><span class="txt"> Она&nbsp;любила&nbsp;всех,&nbsp;ей&nbsp;было&nbsp;очень&nbsp;грустно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Gm6 Cm Gm </span></span>
+<span class="line"><span class="txt"> не&nbsp;менее,&nbsp;чем&nbsp;нам.&nbsp;Но,&nbsp;может&nbsp;быть,&nbsp;и&nbsp;нет...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm Gm  D7 Gm </span></span>
+<span class="line"><span class="txt"> Но,&nbsp;может&nbsp;быть,&nbsp;и&nbsp;нет...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 Em </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1984</span>
-
+<pre><span class="year">1984</span>
 </pre>
+
 
                 </div>
         </div>

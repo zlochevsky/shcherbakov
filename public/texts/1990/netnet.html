@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,62 +433,58 @@ span.c {
 data-key="Hm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Нет,&nbsp;нет!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> Твоё&nbsp;ли&nbsp;дело&nbsp;-&nbsp;облака!&nbsp;Господь&nbsp;с&nbsp;тобою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span>
-<span class="txt"> Кто&nbsp;вообще&nbsp;тебе&nbsp;внушил,&nbsp;что&nbsp;атмосфера&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
-<span class="txt"> с&nbsp;её&nbsp;бесплотным&nbsp;колдовством&nbsp;-&nbsp;занятье&nbsp;женщин?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> По&nbsp;всем&nbsp;законам&nbsp;ты&nbsp;должна&nbsp;любить&nbsp;предметы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm </span>
-<span class="txt"> размер&nbsp;которых&nbsp;невелик&nbsp;и&nbsp;постоянен.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B Dm Cm </span>
-<span class="txt"> А&nbsp;с&nbsp;облаками&nbsp;как-нибудь&nbsp;и&nbsp;сам&nbsp;я&nbsp;справлюсь...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G D7 Hm </span>
+<span class="line"><span class="txt"> Нет,&nbsp;нет!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> Твоё&nbsp;ли&nbsp;дело&nbsp;-&nbsp;облака!&nbsp;Господь&nbsp;с&nbsp;тобою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span></span>
+<span class="line"><span class="txt"> Кто&nbsp;вообще&nbsp;тебе&nbsp;внушил,&nbsp;что&nbsp;атмосфера&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
+<span class="line"><span class="txt"> с&nbsp;её&nbsp;бесплотным&nbsp;колдовством&nbsp;-&nbsp;занятье&nbsp;женщин?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> По&nbsp;всем&nbsp;законам&nbsp;ты&nbsp;должна&nbsp;любить&nbsp;предметы,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm </span></span>
+<span class="line"><span class="txt"> размер&nbsp;которых&nbsp;невелик&nbsp;и&nbsp;постоянен.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B Dm Cm </span></span>
+<span class="line"><span class="txt"> А&nbsp;с&nbsp;облаками&nbsp;как-нибудь&nbsp;и&nbsp;сам&nbsp;я&nbsp;справлюсь...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G D7 Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вдобавок&nbsp;ты&nbsp;ещё&nbsp;слаба&nbsp;и&nbsp;неприлежна,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span>
-<span class="txt"> в&nbsp;твоих&nbsp;ли&nbsp;силах&nbsp;совладать&nbsp;с&nbsp;таким&nbsp;простором?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
-<span class="txt"> Живи&nbsp;в&nbsp;долине,&nbsp;вышивай,&nbsp;веди&nbsp;хозяйство.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> А&nbsp;я&nbsp;тем&nbsp;временем&nbsp;займусь&nbsp;своей&nbsp;работой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm </span>
-<span class="txt"> И&nbsp;будут&nbsp;частыми&nbsp;мои&nbsp;исчезновенья&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B Dm Cm </span>
-<span class="txt"> пока&nbsp;не&nbsp;сложится&nbsp;их&nbsp;ритм&nbsp;и&nbsp;не&nbsp;окрепнет...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G D7 G7 </span>
+<span class="line"><span class="txt"> Вдобавок&nbsp;ты&nbsp;ещё&nbsp;слаба&nbsp;и&nbsp;неприлежна,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span></span>
+<span class="line"><span class="txt"> в&nbsp;твоих&nbsp;ли&nbsp;силах&nbsp;совладать&nbsp;с&nbsp;таким&nbsp;простором?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
+<span class="line"><span class="txt"> Живи&nbsp;в&nbsp;долине,&nbsp;вышивай,&nbsp;веди&nbsp;хозяйство.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;тем&nbsp;временем&nbsp;займусь&nbsp;своей&nbsp;работой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ebm </span></span>
+<span class="line"><span class="txt"> И&nbsp;будут&nbsp;частыми&nbsp;мои&nbsp;исчезновенья&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B Dm Cm </span></span>
+<span class="line"><span class="txt"> пока&nbsp;не&nbsp;сложится&nbsp;их&nbsp;ритм&nbsp;и&nbsp;не&nbsp;окрепнет...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G D7 G7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Нет,&nbsp;нет!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Я&nbsp;их&nbsp;числа&nbsp;не&nbsp;сокращу.&nbsp;Хотя&nbsp;и&nbsp;мог&nbsp;бы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H </span>
-<span class="txt"> Но&nbsp;изученье&nbsp;облаков&nbsp;-&nbsp;особый&nbsp;случай,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m </span>
-<span class="txt"> оно&nbsp;не&nbsp;терпит&nbsp;баловства&nbsp;и&nbsp;дилетантства.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
-<span class="txt"> И&nbsp;всякий&nbsp;раз,&nbsp;как&nbsp;я&nbsp;с&nbsp;тобой,&nbsp;меня&nbsp;волнует,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> что&nbsp;кучевые&nbsp;племена&nbsp;остались&nbsp;где-то&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H  D#m C#m </span>
-<span class="txt"> вне&nbsp;наблюденья&nbsp;моего&nbsp;и&nbsp;без&nbsp;присмотра...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G# D#7 Cm </span>
+<span class="line"><span class="txt"> Нет,&nbsp;нет!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;их&nbsp;числа&nbsp;не&nbsp;сокращу.&nbsp;Хотя&nbsp;и&nbsp;мог&nbsp;бы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H </span></span>
+<span class="line"><span class="txt"> Но&nbsp;изученье&nbsp;облаков&nbsp;-&nbsp;особый&nbsp;случай,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m </span></span>
+<span class="line"><span class="txt"> оно&nbsp;не&nbsp;терпит&nbsp;баловства&nbsp;и&nbsp;дилетантства.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
+<span class="line"><span class="txt"> И&nbsp;всякий&nbsp;раз,&nbsp;как&nbsp;я&nbsp;с&nbsp;тобой,&nbsp;меня&nbsp;волнует,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> что&nbsp;кучевые&nbsp;племена&nbsp;остались&nbsp;где-то&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H  D#m C#m </span></span>
+<span class="line"><span class="txt"> вне&nbsp;наблюденья&nbsp;моего&nbsp;и&nbsp;без&nbsp;присмотра...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G# D#7 Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;вряд&nbsp;ли&nbsp;правы&nbsp;будут&nbsp;те,&nbsp;кто&nbsp;предположит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H </span>
-<span class="txt"> что&nbsp;поведенью&nbsp;облаков&nbsp;закон&nbsp;не&nbsp;писан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m </span>
-<span class="txt"> Напротив,&nbsp;каждый&nbsp;их&nbsp;узор&nbsp;закономерен&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
-<span class="txt"> в&nbsp;своём&nbsp;стремленье&nbsp;быть&nbsp;иным,&nbsp;чем&nbsp;предыдущий.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Во&nbsp;всём&nbsp;же&nbsp;прочем&nbsp;-&nbsp;положусь&nbsp;на&nbsp;местный&nbsp;климат,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H  D#m C#m </span>
-<span class="txt"> поскольку&nbsp;климат&nbsp;не&nbsp;поэт&nbsp;и&nbsp;лгать&nbsp;не&nbsp;станет...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G# D#7 Ab </span>
+<span class="line"><span class="txt"> Но&nbsp;вряд&nbsp;ли&nbsp;правы&nbsp;будут&nbsp;те,&nbsp;кто&nbsp;предположит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H </span></span>
+<span class="line"><span class="txt"> что&nbsp;поведенью&nbsp;облаков&nbsp;закон&nbsp;не&nbsp;писан.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m </span></span>
+<span class="line"><span class="txt"> Напротив,&nbsp;каждый&nbsp;их&nbsp;узор&nbsp;закономерен&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
+<span class="line"><span class="txt"> в&nbsp;своём&nbsp;стремленье&nbsp;быть&nbsp;иным,&nbsp;чем&nbsp;предыдущий.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Во&nbsp;всём&nbsp;же&nbsp;прочем&nbsp;-&nbsp;положусь&nbsp;на&nbsp;местный&nbsp;климат,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H  D#m C#m </span></span>
+<span class="line"><span class="txt"> поскольку&nbsp;климат&nbsp;не&nbsp;поэт&nbsp;и&nbsp;лгать&nbsp;не&nbsp;станет...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G# D#7 Ab </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Нет,&nbsp;нет!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
-<span class="txt"> Тебе&nbsp;не&nbsp;место&nbsp;в&nbsp;облаках.&nbsp;Учти&nbsp;к&nbsp;тому&nbsp;же,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> что&nbsp;я&nbsp;и&nbsp;сам&nbsp;и&nbsp;ещё&nbsp;не&nbsp;столь&nbsp;владею&nbsp;ими,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> чтоб&nbsp;демонстрировать&nbsp;другим&nbsp;свои&nbsp;хоромы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-<span class="txt"> Терпи,&nbsp;покуда&nbsp;замок&nbsp;сей&nbsp;достроен&nbsp;будет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span>
-<span class="txt"> и&nbsp;расцветут&nbsp;в&nbsp;его&nbsp;стенах&nbsp;комфорт&nbsp;и&nbsp;нега...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C Em Dm </span>
-<span class="txt"> Тогда,&nbsp;быть&nbsp;может,&nbsp;я&nbsp;тебя&nbsp;возьму&nbsp;с&nbsp;собою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A E7 A7 </span>
+<span class="line"><span class="txt"> Нет,&nbsp;нет!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
+<span class="line"><span class="txt"> Тебе&nbsp;не&nbsp;место&nbsp;в&nbsp;облаках.&nbsp;Учти&nbsp;к&nbsp;тому&nbsp;же,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> что&nbsp;я&nbsp;и&nbsp;сам&nbsp;и&nbsp;ещё&nbsp;не&nbsp;столь&nbsp;владею&nbsp;ими,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> чтоб&nbsp;демонстрировать&nbsp;другим&nbsp;свои&nbsp;хоромы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="line"><span class="txt"> Терпи,&nbsp;покуда&nbsp;замок&nbsp;сей&nbsp;достроен&nbsp;будет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm </span></span>
+<span class="line"><span class="txt"> и&nbsp;расцветут&nbsp;в&nbsp;его&nbsp;стенах&nbsp;комфорт&nbsp;и&nbsp;нега...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C Em Dm </span></span>
+<span class="line"><span class="txt"> Тогда,&nbsp;быть&nbsp;может,&nbsp;я&nbsp;тебя&nbsp;возьму&nbsp;с&nbsp;собою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A E7 A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;впрочем,&nbsp;нет,&nbsp;нет!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
+<span class="line"><span class="txt"> А&nbsp;впрочем,&nbsp;нет,&nbsp;нет!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1990</span>
-
+<pre><span class="year">1990</span>
 
 
 </pre>
+
 
                 </div>
         </div>

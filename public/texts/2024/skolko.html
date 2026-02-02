@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -423,47 +431,44 @@ span.c {
 
                     <div class="song"
 data-key="A"><span class="txt"> *&nbsp;*&nbsp;* </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Am/E G Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Сколько&nbsp;ни&nbsp;трать&nbsp;слов,&nbsp;песня&nbsp;опять&nbsp;та&nbsp;же&nbsp;-&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G# </span>
-<span class="txt"> вся&nbsp;из&nbsp;былых&nbsp;черт&nbsp;небыль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm6 Am/E  G </span>
-<span class="txt"> Без&nbsp;новостей&nbsp;ночь.&nbsp;Без&nbsp;перемен&nbsp;вьюга.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G# </span>
-<span class="txt"> Не&nbsp;оживлён&nbsp;взгляд.&nbsp;Слаб&nbsp;свет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am  G     Am </span>
-<span class="txt"> Двое&nbsp;опять&nbsp;врозь.&nbsp;Некогда&nbsp;стать&nbsp;старше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7 </span>
-<span class="txt"> Конница&nbsp;всё&nbsp;вскачь,&nbsp;в&nbsp;снег,&nbsp;в&nbsp;пыль...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 B   Fdim  A </span>
-<span class="txt"> Дева&nbsp;опять&nbsp;ждёт&nbsp;милого&nbsp;друга.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7  Dm </span>
-<span class="txt"> А&nbsp;его&nbsp;всё&nbsp;нет,&nbsp;нет,&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#dim  Am  G  Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Не&nbsp;миновать&nbsp;ей&nbsp;в&nbsp;городе&nbsp;быть&nbsp;утром&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G#     </span>
-<span class="txt"> завтрашним&nbsp;и&nbsp;впредь&nbsp;каждым.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm6 Am/E  G   </span>
-<span class="txt"> Проповедь&nbsp;там&nbsp;вслух.&nbsp;И&nbsp;прихожан&nbsp;много.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G#     </span>
-<span class="txt"> И&nbsp;на&nbsp;скамьях&nbsp;мест&nbsp;не&nbsp;счесть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am  G     Am  </span>
-<span class="txt"> Римский&nbsp;канон&nbsp;твёрд.&nbsp;Золотом&nbsp;храм&nbsp;убран.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7            </span>
-<span class="txt"> К&nbsp;небу&nbsp;летит&nbsp;речь,&nbsp;как&nbsp;дым...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 B   Fdim  A      </span>
-<span class="txt"> Если&nbsp;и&nbsp;там&nbsp;нет&nbsp;доброго&nbsp;Бога,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7  Dm        </span>
-<span class="txt"> где&nbsp;тогда&nbsp;Он&nbsp;есть?&nbsp;Бог&nbsp;весть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#dim  Am  G  Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Am/E G Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> Знаешь,&nbsp;зачем&nbsp;вскачь&nbsp;суженый&nbsp;твой,&nbsp;дева,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G#     </span>
-<span class="txt"> должен&nbsp;коней&nbsp;гнать&nbsp;резвых?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm6 Am/E  G   </span>
-<span class="txt"> Подвигов&nbsp;он&nbsp;чужд.&nbsp;Он&nbsp;не&nbsp;готов&nbsp;к&nbsp;бою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G#     </span>
-<span class="txt"> Труден&nbsp;ему&nbsp;марш&nbsp;-&nbsp;в&nbsp;ночь,&nbsp;в&nbsp;снег.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am  G     Am  </span>
-<span class="txt"> Доблесть&nbsp;не&nbsp;есть&nbsp;долг.&nbsp;Не&nbsp;в&nbsp;орденах&nbsp;дело.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7            </span>
-<span class="txt"> Прожил&nbsp;бы&nbsp;он&nbsp;век&nbsp;без&nbsp;них.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 B   Fdim  A      </span>
-<span class="txt"> Он&nbsp;бы&nbsp;хотел&nbsp;быть&nbsp;только&nbsp;с&nbsp;тобою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7  Dm        </span>
-<span class="txt"> А&nbsp;тебя&nbsp;всё&nbsp;нет,&nbsp;нет,&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#dim  Am  G  Am </span>
-<span class="txt"> &nbsp; </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Am/E G Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Am/E G Am </span>
- <br />
-
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Am/E G Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Сколько&nbsp;ни&nbsp;трать&nbsp;слов,&nbsp;песня&nbsp;опять&nbsp;та&nbsp;же&nbsp;-&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G# </span></span>
+<span class="line"><span class="txt"> вся&nbsp;из&nbsp;былых&nbsp;черт&nbsp;небыль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm6 Am/E  G </span></span>
+<span class="line"><span class="txt"> Без&nbsp;новостей&nbsp;ночь.&nbsp;Без&nbsp;перемен&nbsp;вьюга.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G# </span></span>
+<span class="line"><span class="txt"> Не&nbsp;оживлён&nbsp;взгляд.&nbsp;Слаб&nbsp;свет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am  G     Am </span></span>
+<span class="line"><span class="txt"> Двое&nbsp;опять&nbsp;врозь.&nbsp;Некогда&nbsp;стать&nbsp;старше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7 </span></span>
+<span class="line"><span class="txt"> Конница&nbsp;всё&nbsp;вскачь,&nbsp;в&nbsp;снег,&nbsp;в&nbsp;пыль...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 B   Fdim  A </span></span>
+<span class="line"><span class="txt"> Дева&nbsp;опять&nbsp;ждёт&nbsp;милого&nbsp;друга.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7  Dm </span></span>
+<span class="line"><span class="txt"> А&nbsp;его&nbsp;всё&nbsp;нет,&nbsp;нет,&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#dim  Am  G  Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Не&nbsp;миновать&nbsp;ей&nbsp;в&nbsp;городе&nbsp;быть&nbsp;утром&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G#     </span></span>
+<span class="line"><span class="txt"> завтрашним&nbsp;и&nbsp;впредь&nbsp;каждым.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm6 Am/E  G   </span></span>
+<span class="line"><span class="txt"> Проповедь&nbsp;там&nbsp;вслух.&nbsp;И&nbsp;прихожан&nbsp;много.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G#     </span></span>
+<span class="line"><span class="txt"> И&nbsp;на&nbsp;скамьях&nbsp;мест&nbsp;не&nbsp;счесть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am  G     Am  </span></span>
+<span class="line"><span class="txt"> Римский&nbsp;канон&nbsp;твёрд.&nbsp;Золотом&nbsp;храм&nbsp;убран.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7            </span></span>
+<span class="line"><span class="txt"> К&nbsp;небу&nbsp;летит&nbsp;речь,&nbsp;как&nbsp;дым...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 B   Fdim  A      </span></span>
+<span class="line"><span class="txt"> Если&nbsp;и&nbsp;там&nbsp;нет&nbsp;доброго&nbsp;Бога,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7  Dm        </span></span>
+<span class="line"><span class="txt"> где&nbsp;тогда&nbsp;Он&nbsp;есть?&nbsp;Бог&nbsp;весть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#dim  Am  G  Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Am/E G Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Знаешь,&nbsp;зачем&nbsp;вскачь&nbsp;суженый&nbsp;твой,&nbsp;дева,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G#     </span></span>
+<span class="line"><span class="txt"> должен&nbsp;коней&nbsp;гнать&nbsp;резвых?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm6 Am/E  G   </span></span>
+<span class="line"><span class="txt"> Подвигов&nbsp;он&nbsp;чужд.&nbsp;Он&nbsp;не&nbsp;готов&nbsp;к&nbsp;бою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  E7  E7/G#     </span></span>
+<span class="line"><span class="txt"> Труден&nbsp;ему&nbsp;марш&nbsp;-&nbsp;в&nbsp;ночь,&nbsp;в&nbsp;снег.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am  G     Am  </span></span>
+<span class="line"><span class="txt"> Доблесть&nbsp;не&nbsp;есть&nbsp;долг.&nbsp;Не&nbsp;в&nbsp;орденах&nbsp;дело.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A  A7            </span></span>
+<span class="line"><span class="txt"> Прожил&nbsp;бы&nbsp;он&nbsp;век&nbsp;без&nbsp;них.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 B   Fdim  A      </span></span>
+<span class="line"><span class="txt"> Он&nbsp;бы&nbsp;хотел&nbsp;быть&nbsp;только&nbsp;с&nbsp;тобою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A7  Dm        </span></span>
+<span class="line"><span class="txt"> А&nbsp;тебя&nbsp;всё&nbsp;нет,&nbsp;нет,&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#dim  Am  G  Am </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Am/E G Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F Am/E G Am </span></span>
 </div>
 <pre>
-    
 <span class="year">2024</span>
-
 </pre>
+
 
                 </div>
         </div>

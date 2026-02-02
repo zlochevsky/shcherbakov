@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,52 +423,50 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="D"><span class="sng-title">ДУША</span>
+data-key="D"><h1>ДУША</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Оставлю&nbsp;всех,&nbsp;пройду&nbsp;повсюду,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G </span>
-<span class="txt"> пускай&nbsp;ни&nbsp;с&nbsp;чем,&nbsp;но&nbsp;не&nbsp;в&nbsp;долгу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G  D     A7 D </span>
-<span class="txt"> Себя&nbsp;раздам,&nbsp;тебя&nbsp;забуду,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> мне&nbsp;всё&nbsp;равно,&nbsp;я&nbsp;всё&nbsp;могу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm Dm    A7 D7 </span>
-<span class="txt"> А&nbsp;вот&nbsp;душа...&nbsp;она&nbsp;не&nbsp;может,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm        Dm </span>
-<span class="txt"> небесный&nbsp;свет&nbsp;в&nbsp;неё&nbsp;пролит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        Dm   (D7) </span>
-<span class="txt"> неясный&nbsp;зов&nbsp;её&nbsp;тревожит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Gm    Dm </span>
-<span class="txt"> она&nbsp;поёт,&nbsp;она&nbsp;болит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        D </span>
+<span class="line"><span class="txt"> Оставлю&nbsp;всех,&nbsp;пройду&nbsp;повсюду,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G </span></span>
+<span class="line"><span class="txt"> пускай&nbsp;ни&nbsp;с&nbsp;чем,&nbsp;но&nbsp;не&nbsp;в&nbsp;долгу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G  D     A7 D </span></span>
+<span class="line"><span class="txt"> Себя&nbsp;раздам,&nbsp;тебя&nbsp;забуду,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> мне&nbsp;всё&nbsp;равно,&nbsp;я&nbsp;всё&nbsp;могу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm Dm    A7 D7 </span></span>
+<span class="line"><span class="txt"> А&nbsp;вот&nbsp;душа...&nbsp;она&nbsp;не&nbsp;может,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm        Dm </span></span>
+<span class="line"><span class="txt"> небесный&nbsp;свет&nbsp;в&nbsp;неё&nbsp;пролит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        Dm   (D7) </span></span>
+<span class="line"><span class="txt"> неясный&nbsp;зов&nbsp;её&nbsp;тревожит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Gm    Dm </span></span>
+<span class="line"><span class="txt"> она&nbsp;поёт,&nbsp;она&nbsp;болит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;пусть&nbsp;вдали&nbsp;над&nbsp;цепью&nbsp;горной&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G </span>
-<span class="txt"> уже&nbsp;взлетел,&nbsp;уже&nbsp;возник&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G  D     A7 D </span>
-<span class="txt"> мой&nbsp;монумент&nbsp;нерукотворный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> я&nbsp;сам&nbsp;себе&nbsp;его&nbsp;воздвиг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm Dm    A7 D7 </span>
-<span class="txt"> А&nbsp;всё&nbsp;ж&nbsp;душа&nbsp;ему&nbsp;не&nbsp;рада,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm        Dm </span>
-<span class="txt"> не&nbsp;укротить&nbsp;её&nbsp;никак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        Dm   (D7) </span>
-<span class="txt"> Она&nbsp;парит,&nbsp;и&nbsp;ей&nbsp;не&nbsp;надо&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Gm    Dm </span>
-<span class="txt"> ни&nbsp;гор&nbsp;златых,&nbsp;ни&nbsp;вечных&nbsp;благ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        D </span>
+<span class="line"><span class="txt"> И&nbsp;пусть&nbsp;вдали&nbsp;над&nbsp;цепью&nbsp;горной&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G </span></span>
+<span class="line"><span class="txt"> уже&nbsp;взлетел,&nbsp;уже&nbsp;возник&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G  D     A7 D </span></span>
+<span class="line"><span class="txt"> мой&nbsp;монумент&nbsp;нерукотворный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> я&nbsp;сам&nbsp;себе&nbsp;его&nbsp;воздвиг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm Dm    A7 D7 </span></span>
+<span class="line"><span class="txt"> А&nbsp;всё&nbsp;ж&nbsp;душа&nbsp;ему&nbsp;не&nbsp;рада,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm        Dm </span></span>
+<span class="line"><span class="txt"> не&nbsp;укротить&nbsp;её&nbsp;никак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        Dm   (D7) </span></span>
+<span class="line"><span class="txt"> Она&nbsp;парит,&nbsp;и&nbsp;ей&nbsp;не&nbsp;надо&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Gm    Dm </span></span>
+<span class="line"><span class="txt"> ни&nbsp;гор&nbsp;златых,&nbsp;ни&nbsp;вечных&nbsp;благ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        D </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Когда&nbsp;ж&nbsp;беда&nbsp;сомкнёт&nbsp;объятья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G </span>
-<span class="txt"> ничем&nbsp;я&nbsp;ей&nbsp;не&nbsp;возражу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G  D     A7 D </span>
-<span class="txt"> Родимый&nbsp;край&nbsp;пришлёт&nbsp;проклятья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> в&nbsp;чужих&nbsp;краях&nbsp;ответ&nbsp;сложу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm Dm    A7 D7 </span>
-<span class="txt"> И&nbsp;лишь&nbsp;душа&nbsp;неколебима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm        Dm </span>
-<span class="txt"> в&nbsp;грязи&nbsp;чиста,&nbsp;в&nbsp;беде&nbsp;честна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        Dm   (D7) </span>
-<span class="txt"> Всё&nbsp;так&nbsp;же&nbsp;ей&nbsp;горька&nbsp;чужбина&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Gm    Dm </span>
-<span class="txt"> и&nbsp;сладок&nbsp;дым&nbsp;Отечества.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        D </span>
+<span class="line"><span class="txt"> Когда&nbsp;ж&nbsp;беда&nbsp;сомкнёт&nbsp;объятья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G </span></span>
+<span class="line"><span class="txt"> ничем&nbsp;я&nbsp;ей&nbsp;не&nbsp;возражу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D      G  D     A7 D </span></span>
+<span class="line"><span class="txt"> Родимый&nbsp;край&nbsp;пришлёт&nbsp;проклятья,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> в&nbsp;чужих&nbsp;краях&nbsp;ответ&nbsp;сложу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     Gm Dm    A7 D7 </span></span>
+<span class="line"><span class="txt"> И&nbsp;лишь&nbsp;душа&nbsp;неколебима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm        Dm </span></span>
+<span class="line"><span class="txt"> в&nbsp;грязи&nbsp;чиста,&nbsp;в&nbsp;беде&nbsp;честна.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        Dm   (D7) </span></span>
+<span class="line"><span class="txt"> Всё&nbsp;так&nbsp;же&nbsp;ей&nbsp;горька&nbsp;чужбина&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           Gm    Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;сладок&nbsp;дым&nbsp;Отечества.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7        D </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

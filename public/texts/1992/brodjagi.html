@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,54 +423,51 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Gm"><span class="sng-title">БРОДЯГИ</span>
+data-key="Gm"><h1>БРОДЯГИ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пёс&nbsp;их&nbsp;знает&nbsp;бродяг,&nbsp;для&nbsp;какой&nbsp;они&nbsp;пользы,&nbsp;бродяги?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span>
-<span class="txt"> По&nbsp;каким&nbsp;по&nbsp;таким&nbsp;ордерам&nbsp;принимать&nbsp;их&nbsp;в&nbsp;расчёт?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span>
-<span class="txt"> В&nbsp;чём&nbsp;желательно&nbsp;было&nbsp;бы&nbsp;с&nbsp;ними&nbsp;сойтись?&nbsp;В&nbsp;чём&nbsp;не&nbsp;стоит?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/G-H-B-A </span>
-<span class="txt"> Да&nbsp;и&nbsp;есть&nbsp;ли&nbsp;они&nbsp;вообще?&nbsp;Кто&nbsp;их&nbsp;видел,&nbsp;бродяг?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span>
+<span class="line"><span class="txt"> Пёс&nbsp;их&nbsp;знает&nbsp;бродяг,&nbsp;для&nbsp;какой&nbsp;они&nbsp;пользы,&nbsp;бродяги?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span></span>
+<span class="line"><span class="txt"> По&nbsp;каким&nbsp;по&nbsp;таким&nbsp;ордерам&nbsp;принимать&nbsp;их&nbsp;в&nbsp;расчёт?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span></span>
+<span class="line"><span class="txt"> В&nbsp;чём&nbsp;желательно&nbsp;было&nbsp;бы&nbsp;с&nbsp;ними&nbsp;сойтись?&nbsp;В&nbsp;чём&nbsp;не&nbsp;стоит?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/G-H-B-A </span></span>
+<span class="line"><span class="txt"> Да&nbsp;и&nbsp;есть&nbsp;ли&nbsp;они&nbsp;вообще?&nbsp;Кто&nbsp;их&nbsp;видел,&nbsp;бродяг?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;пойми-разбери,&nbsp;что&nbsp;за&nbsp;лица&nbsp;у&nbsp;них,&nbsp;что&nbsp;за&nbsp;взгляды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Сm/C-H-B-A </span>
-<span class="txt"> Разговор&nbsp;-&nbsp;не&nbsp;пойми,&nbsp;алфавит,&nbsp;календарь&nbsp;-&nbsp;не&nbsp;пойми.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Сm/C-H-B-A </span>
-<span class="txt"> Что&nbsp;за&nbsp;дикость,&nbsp;должно&nbsp;быть,&nbsp;у&nbsp;них&nbsp;в&nbsp;головах&nbsp;и&nbsp;в&nbsp;одеждах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm/C-E-Eb-D </span>
-<span class="txt"> Шерсть&nbsp;и&nbsp;войлок,&nbsp;должно&nbsp;быть,&nbsp;и&nbsp;всё.&nbsp;Замерзай,&nbsp;пропадай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/C-H-B-A </span>
+<span class="line"><span class="txt"> Не&nbsp;пойми-разбери,&nbsp;что&nbsp;за&nbsp;лица&nbsp;у&nbsp;них,&nbsp;что&nbsp;за&nbsp;взгляды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Сm/C-H-B-A </span></span>
+<span class="line"><span class="txt"> Разговор&nbsp;-&nbsp;не&nbsp;пойми,&nbsp;алфавит,&nbsp;календарь&nbsp;-&nbsp;не&nbsp;пойми.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Сm/C-H-B-A </span></span>
+<span class="line"><span class="txt"> Что&nbsp;за&nbsp;дикость,&nbsp;должно&nbsp;быть,&nbsp;у&nbsp;них&nbsp;в&nbsp;головах&nbsp;и&nbsp;в&nbsp;одеждах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm/C-E-Eb-D </span></span>
+<span class="line"><span class="txt"> Шерсть&nbsp;и&nbsp;войлок,&nbsp;должно&nbsp;быть,&nbsp;и&nbsp;всё.&nbsp;Замерзай,&nbsp;пропадай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/C-H-B-A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;служу&nbsp;в&nbsp;патруле,&nbsp;я&nbsp;в&nbsp;машине&nbsp;сижу&nbsp;полицейской.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span>
-<span class="txt"> Меж&nbsp;развалин&nbsp;каких-то&nbsp;кружу,&nbsp;шевеленья&nbsp;слежу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span>
-<span class="txt"> Уж&nbsp;не&nbsp;шабаш&nbsp;ли&nbsp;там&nbsp;у&nbsp;бродяг?&nbsp;Не&nbsp;иначе,&nbsp;как&nbsp;шабаш.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/G-H-B-A </span>
-<span class="txt"> То&nbsp;ворона&nbsp;взлетит,&nbsp;то&nbsp;собачья&nbsp;мелькнёт&nbsp;голова.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span>
+<span class="line"><span class="txt"> Я&nbsp;служу&nbsp;в&nbsp;патруле,&nbsp;я&nbsp;в&nbsp;машине&nbsp;сижу&nbsp;полицейской.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span></span>
+<span class="line"><span class="txt"> Меж&nbsp;развалин&nbsp;каких-то&nbsp;кружу,&nbsp;шевеленья&nbsp;слежу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span></span>
+<span class="line"><span class="txt"> Уж&nbsp;не&nbsp;шабаш&nbsp;ли&nbsp;там&nbsp;у&nbsp;бродяг?&nbsp;Не&nbsp;иначе,&nbsp;как&nbsp;шабаш.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/G-H-B-A </span></span>
+<span class="line"><span class="txt"> То&nbsp;ворона&nbsp;взлетит,&nbsp;то&nbsp;собачья&nbsp;мелькнёт&nbsp;голова.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Уж&nbsp;не&nbsp;с&nbsp;ними&nbsp;ли&nbsp;ты&nbsp;коротаешь&nbsp;теперь&nbsp;новолунье?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Сm/C-H-B-A </span>
-<span class="txt"> Похудела,&nbsp;должно&nbsp;быть,&nbsp;обветрилась,&nbsp;стала&nbsp;смугла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Сm/C-H-B-A </span>
-<span class="txt"> Шерсть&nbsp;и&nbsp;войлок&nbsp;на&nbsp;бёдрах&nbsp;твоих&nbsp;и&nbsp;груди,&nbsp;шерсть&nbsp;и&nbsp;войлок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm/C-E-Eb-D </span>
-<span class="txt"> Как&nbsp;запутали,&nbsp;как&nbsp;завлекли?&nbsp;Пёс&nbsp;их&nbsp;ведает,&nbsp;псов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/C-H-B-A </span>
+<span class="line"><span class="txt"> Уж&nbsp;не&nbsp;с&nbsp;ними&nbsp;ли&nbsp;ты&nbsp;коротаешь&nbsp;теперь&nbsp;новолунье?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Сm/C-H-B-A </span></span>
+<span class="line"><span class="txt"> Похудела,&nbsp;должно&nbsp;быть,&nbsp;обветрилась,&nbsp;стала&nbsp;смугла.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Сm/C-H-B-A </span></span>
+<span class="line"><span class="txt"> Шерсть&nbsp;и&nbsp;войлок&nbsp;на&nbsp;бёдрах&nbsp;твоих&nbsp;и&nbsp;груди,&nbsp;шерсть&nbsp;и&nbsp;войлок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm/C-E-Eb-D </span></span>
+<span class="line"><span class="txt"> Как&nbsp;запутали,&nbsp;как&nbsp;завлекли?&nbsp;Пёс&nbsp;их&nbsp;ведает,&nbsp;псов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/C-H-B-A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мне&nbsp;нерадостно&nbsp;здесь&nbsp;одному,&nbsp;меж&nbsp;развалин&nbsp;каких-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span>
-<span class="txt"> До&nbsp;утра&nbsp;далеко.&nbsp;Слаб&nbsp;и&nbsp;слеп&nbsp;мой&nbsp;патрульный&nbsp;фонарь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span>
-<span class="txt"> Жизнь&nbsp;бессмысленна.&nbsp;Ты&nbsp;не&nbsp;со&nbsp;мной.&nbsp;Что&nbsp;за&nbsp;дикость&nbsp;повсюду!&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/G-H-B-A </span>
-<span class="txt"> Мне&nbsp;тоскливо,&nbsp;темно.&nbsp;Я&nbsp;люблю&nbsp;тебя.&nbsp;Псы&nbsp;ни&nbsp;при&nbsp;чём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span>
+<span class="line"><span class="txt"> Мне&nbsp;нерадостно&nbsp;здесь&nbsp;одному,&nbsp;меж&nbsp;развалин&nbsp;каких-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span></span>
+<span class="line"><span class="txt"> До&nbsp;утра&nbsp;далеко.&nbsp;Слаб&nbsp;и&nbsp;слеп&nbsp;мой&nbsp;патрульный&nbsp;фонарь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span></span>
+<span class="line"><span class="txt"> Жизнь&nbsp;бессмысленна.&nbsp;Ты&nbsp;не&nbsp;со&nbsp;мной.&nbsp;Что&nbsp;за&nbsp;дикость&nbsp;повсюду!&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm/G-H-B-A </span></span>
+<span class="line"><span class="txt"> Мне&nbsp;тоскливо,&nbsp;темно.&nbsp;Я&nbsp;люблю&nbsp;тебя.&nbsp;Псы&nbsp;ни&nbsp;при&nbsp;чём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm/G-F#-F-E </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1992</span>
-
+<pre><span class="year">1992</span>
 
 </pre>
+
 
                 </div>
         </div>

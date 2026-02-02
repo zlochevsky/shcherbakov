@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,72 +423,70 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">ПЕСНЯ ПАЖА</span>
+data-key="Am"><h1>ПЕСНЯ ПАЖА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вот&nbsp;так&nbsp;пропел&nbsp;небесный&nbsp;шансонье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span>
-<span class="txt"> вот&nbsp;так&nbsp;решили&nbsp;каверзные&nbsp;боги:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> три&nbsp;брата&nbsp;было&nbsp;нас&nbsp;в&nbsp;одной&nbsp;семье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span>
-<span class="txt"> и&nbsp;каждый&nbsp;шёл&nbsp;по&nbsp;собственной&nbsp;дороге.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> Один&nbsp;мой&nbsp;брат&nbsp;решил&nbsp;стать&nbsp;моряком&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  G   C   F </span>
-<span class="txt"> и&nbsp;бороздить&nbsp;земные&nbsp;параллели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> Другой&nbsp;увлёкся&nbsp;карточным&nbsp;столом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      Dm </span>
-<span class="txt"> А&nbsp;я&nbsp;в&nbsp;любви&nbsp;признался&nbsp;королеве.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#  Gm  Dm (басы d c h a# a) </span>
+<span class="line"><span class="txt"> Вот&nbsp;так&nbsp;пропел&nbsp;небесный&nbsp;шансонье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span></span>
+<span class="line"><span class="txt"> вот&nbsp;так&nbsp;решили&nbsp;каверзные&nbsp;боги:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> три&nbsp;брата&nbsp;было&nbsp;нас&nbsp;в&nbsp;одной&nbsp;семье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;каждый&nbsp;шёл&nbsp;по&nbsp;собственной&nbsp;дороге.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> Один&nbsp;мой&nbsp;брат&nbsp;решил&nbsp;стать&nbsp;моряком&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  G   C   F </span></span>
+<span class="line"><span class="txt"> и&nbsp;бороздить&nbsp;земные&nbsp;параллели.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> Другой&nbsp;увлёкся&nbsp;карточным&nbsp;столом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      Dm </span></span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;в&nbsp;любви&nbsp;признался&nbsp;королеве.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#  Gm  Dm (басы d c h a# a) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;дрогнул&nbsp;мрамор,&nbsp;горн&nbsp;запел&nbsp;вдали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span>
-<span class="txt"> согласье&nbsp;глаз&nbsp;решило&nbsp;час&nbsp;свиданья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> И&nbsp;в&nbsp;тот&nbsp;же&nbsp;день&nbsp;монарху&nbsp;донесли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span>
-<span class="txt"> что&nbsp;я&nbsp;-&nbsp;соперник,&nbsp;стоящий&nbsp;вниманья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> Один&nbsp;мой&nbsp;брат&nbsp;уплыл&nbsp;на&nbsp;остров&nbsp;Крит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  G   C   F </span>
-<span class="txt"> другой&nbsp;приник&nbsp;к&nbsp;азартному&nbsp;притону.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> А&nbsp;я&nbsp;пока&nbsp;печально&nbsp;знаменит&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      Dm </span>
-<span class="txt"> как&nbsp;паж,&nbsp;имевший&nbsp;виды&nbsp;на&nbsp;корону.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#  Gm  Dm (басы d c h a# a) </span>
+<span class="line"><span class="txt"> И&nbsp;дрогнул&nbsp;мрамор,&nbsp;горн&nbsp;запел&nbsp;вдали,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span></span>
+<span class="line"><span class="txt"> согласье&nbsp;глаз&nbsp;решило&nbsp;час&nbsp;свиданья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;в&nbsp;тот&nbsp;же&nbsp;день&nbsp;монарху&nbsp;донесли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span></span>
+<span class="line"><span class="txt"> что&nbsp;я&nbsp;-&nbsp;соперник,&nbsp;стоящий&nbsp;вниманья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> Один&nbsp;мой&nbsp;брат&nbsp;уплыл&nbsp;на&nbsp;остров&nbsp;Крит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  G   C   F </span></span>
+<span class="line"><span class="txt"> другой&nbsp;приник&nbsp;к&nbsp;азартному&nbsp;притону.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;пока&nbsp;печально&nbsp;знаменит&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      Dm </span></span>
+<span class="line"><span class="txt"> как&nbsp;паж,&nbsp;имевший&nbsp;виды&nbsp;на&nbsp;корону.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#  Gm  Dm (басы d c h a# a) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Летели&nbsp;годы,&nbsp;вихрями&nbsp;дрожа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span>
-<span class="txt"> и&nbsp;день&nbsp;за&nbsp;днём,&nbsp;услужлив&nbsp;и&nbsp;покорен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> я&nbsp;был&nbsp;доволен&nbsp;должностью&nbsp;пажа&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span>
-<span class="txt"> и&nbsp;вход&nbsp;имел&nbsp;в&nbsp;заветные&nbsp;покои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> Один&nbsp;мой&nbsp;брат&nbsp;открыл&nbsp;архипелаг&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  G   C   F </span>
-<span class="txt"> и&nbsp;имя&nbsp;дал&nbsp;своё&nbsp;местам&nbsp;открытым.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> Другой&nbsp;блистал,&nbsp;рискуя&nbsp;так&nbsp;и&nbsp;сяк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      Dm </span>
-<span class="txt"> А&nbsp;я&nbsp;прослыл&nbsp;придворным&nbsp;фаворитом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#  Gm  Dm (басы d c h a# a) </span>
+<span class="line"><span class="txt"> Летели&nbsp;годы,&nbsp;вихрями&nbsp;дрожа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;день&nbsp;за&nbsp;днём,&nbsp;услужлив&nbsp;и&nbsp;покорен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> я&nbsp;был&nbsp;доволен&nbsp;должностью&nbsp;пажа&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;вход&nbsp;имел&nbsp;в&nbsp;заветные&nbsp;покои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> Один&nbsp;мой&nbsp;брат&nbsp;открыл&nbsp;архипелаг&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  G   C   F </span></span>
+<span class="line"><span class="txt"> и&nbsp;имя&nbsp;дал&nbsp;своё&nbsp;местам&nbsp;открытым.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> Другой&nbsp;блистал,&nbsp;рискуя&nbsp;так&nbsp;и&nbsp;сяк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      Dm </span></span>
+<span class="line"><span class="txt"> А&nbsp;я&nbsp;прослыл&nbsp;придворным&nbsp;фаворитом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#  Gm  Dm (басы d c h a# a) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;горд,&nbsp;не&nbsp;знатен,&nbsp;даже&nbsp;не&nbsp;богат,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span>
-<span class="txt"> я&nbsp;с&nbsp;королевой&nbsp;счастье&nbsp;знал&nbsp;иное.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> И&nbsp;был&nbsp;король&nbsp;бессовестно&nbsp;рогат,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span>
-<span class="txt"> и&nbsp;нож&nbsp;точил&nbsp;-&nbsp;расправиться&nbsp;со&nbsp;мною.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> Один&nbsp;мой&nbsp;брат&nbsp;на&nbsp;дальних&nbsp;островах&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  G   C   F </span>
-<span class="txt"> нашёл&nbsp;покой,&nbsp;уставши&nbsp;куролесить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> Другой,&nbsp;рискнув,&nbsp;продулся&nbsp;в&nbsp;пух&nbsp;и&nbsp;прах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      Dm </span>
-<span class="txt"> Ну&nbsp;а&nbsp;меня&nbsp;король&nbsp;велел&nbsp;повесить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#  Gm  Dm (басы d c h a# a) </span>
+<span class="line"><span class="txt"> Не&nbsp;горд,&nbsp;не&nbsp;знатен,&nbsp;даже&nbsp;не&nbsp;богат,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span></span>
+<span class="line"><span class="txt"> я&nbsp;с&nbsp;королевой&nbsp;счастье&nbsp;знал&nbsp;иное.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> И&nbsp;был&nbsp;король&nbsp;бессовестно&nbsp;рогат,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;нож&nbsp;точил&nbsp;-&nbsp;расправиться&nbsp;со&nbsp;мною.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> Один&nbsp;мой&nbsp;брат&nbsp;на&nbsp;дальних&nbsp;островах&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  G   C   F </span></span>
+<span class="line"><span class="txt"> нашёл&nbsp;покой,&nbsp;уставши&nbsp;куролесить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> Другой,&nbsp;рискнув,&nbsp;продулся&nbsp;в&nbsp;пух&nbsp;и&nbsp;прах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      Dm </span></span>
+<span class="line"><span class="txt"> Ну&nbsp;а&nbsp;меня&nbsp;король&nbsp;велел&nbsp;повесить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#  Gm  Dm (басы d c h a# a) </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;всё&nbsp;же&nbsp;братьев&nbsp;я&nbsp;не&nbsp;посрамил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span>
-<span class="txt"> но&nbsp;воплотил&nbsp;их&nbsp;сил&nbsp;соединенье:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> я,&nbsp;как&nbsp;моряк,&nbsp;стихию&nbsp;бороздил&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span>
-<span class="txt"> и,&nbsp;как&nbsp;игрок,&nbsp;молился&nbsp;о&nbsp;везенье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> Я&nbsp;тоже&nbsp;мог&nbsp;прославиться&nbsp;в&nbsp;другом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  G   C   F </span>
-<span class="txt"> я&nbsp;тоже&nbsp;мог,&nbsp;иному&nbsp;вняв&nbsp;напеву,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span>
-<span class="txt"> стать&nbsp;мореходом&nbsp;или&nbsp;игроком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      Dm </span>
-<span class="txt"> Но&nbsp;я,&nbsp;увы,&nbsp;влюбился&nbsp;в&nbsp;королеву...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#  Gm  Dm (басы d c h a# a) </span>
+<span class="line"><span class="txt"> И&nbsp;всё&nbsp;же&nbsp;братьев&nbsp;я&nbsp;не&nbsp;посрамил,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span></span>
+<span class="line"><span class="txt"> но&nbsp;воплотил&nbsp;их&nbsp;сил&nbsp;соединенье:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> я,&nbsp;как&nbsp;моряк,&nbsp;стихию&nbsp;бороздил&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am      H7 </span></span>
+<span class="line"><span class="txt"> и,&nbsp;как&nbsp;игрок,&nbsp;молился&nbsp;о&nbsp;везенье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> Я&nbsp;тоже&nbsp;мог&nbsp;прославиться&nbsp;в&nbsp;другом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  G   C   F </span></span>
+<span class="line"><span class="txt"> я&nbsp;тоже&nbsp;мог,&nbsp;иному&nbsp;вняв&nbsp;напеву,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7  Am </span></span>
+<span class="line"><span class="txt"> стать&nbsp;мореходом&nbsp;или&nbsp;игроком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7      Dm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;я,&nbsp;увы,&nbsp;влюбился&nbsp;в&nbsp;королеву...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A#  Gm  Dm (басы d c h a# a) </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1980</span>, <span class="year">1986</span>
-
+<pre><span class="year">1980</span>, <span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

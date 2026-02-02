@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,75 +423,71 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">МАРШ КРОТОВ</span>
+data-key="Am"><h1>МАРШ КРОТОВ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Альт&nbsp;и&nbsp;бас&nbsp;дают&nbsp;петуха,&nbsp;моргнув,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am </span>
-<span class="txt"> игрушки&nbsp;свои&nbsp;жонглёр&nbsp;на&nbsp;землю&nbsp;бросает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G  F   E </span>
-<span class="txt"> стар&nbsp;и&nbsp;млад,&nbsp;плясун,&nbsp;балагур&nbsp;и&nbsp;шут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am </span>
-<span class="txt"> становятся&nbsp;немы&nbsp;ртом&nbsp;и&nbsp;ликом&nbsp;темны,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G  F </span>
-<span class="txt"> чуть&nbsp;только&nbsp;наш,&nbsp;от&nbsp;ярмарки&nbsp;в&nbsp;двух&nbsp;верстах,&nbsp;кимвал&nbsp;забряцает&nbsp; </span><span class="ch"> A7  B  Dm  Am </span>
-<span class="txt"> и&nbsp;окрест,&nbsp;бригадами&nbsp;по&nbsp;сто&nbsp;душ,&nbsp;появимся&nbsp;мы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B   Am E7  Am </span>
+<span class="line"><span class="txt"> Альт&nbsp;и&nbsp;бас&nbsp;дают&nbsp;петуха,&nbsp;моргнув,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am </span></span>
+<span class="line"><span class="txt"> игрушки&nbsp;свои&nbsp;жонглёр&nbsp;на&nbsp;землю&nbsp;бросает,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G  F   E </span></span>
+<span class="line"><span class="txt"> стар&nbsp;и&nbsp;млад,&nbsp;плясун,&nbsp;балагур&nbsp;и&nbsp;шут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am </span></span>
+<span class="line"><span class="txt"> становятся&nbsp;немы&nbsp;ртом&nbsp;и&nbsp;ликом&nbsp;темны,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G  F </span></span>
+<span class="line"><span class="txt"> чуть&nbsp;только&nbsp;наш,&nbsp;от&nbsp;ярмарки&nbsp;в&nbsp;двух&nbsp;верстах,&nbsp;кимвал&nbsp;забряцает&nbsp; </span><span class="ch"> A7  B  Dm  Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;окрест,&nbsp;бригадами&nbsp;по&nbsp;сто&nbsp;душ,&nbsp;появимся&nbsp;мы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B   Am E7  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Мы&nbsp;-&nbsp;кроты.&nbsp;При&nbsp;нас&nbsp;улыбаться&nbsp;брось!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C  G7  Am </span>
-<span class="txt"> Мы&nbsp;видим&nbsp;тебя&nbsp;насквозь.&nbsp;Да,&nbsp;насквозь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  F  Am </span>
+<span class="line"><span class="txt"> Мы&nbsp;-&nbsp;кроты.&nbsp;При&nbsp;нас&nbsp;улыбаться&nbsp;брось!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C  G7  Am </span></span>
+<span class="line"><span class="txt"> Мы&nbsp;видим&nbsp;тебя&nbsp;насквозь.&nbsp;Да,&nbsp;насквозь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  F  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Главный&nbsp;крот&nbsp;сидит&nbsp;на&nbsp;таком&nbsp;коне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am </span>
-<span class="txt"> в&nbsp;камзоле&nbsp;таком,&nbsp;что&nbsp;нам&nbsp;и&nbsp;сладко&nbsp;и&nbsp;больно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G  F   E </span>
-<span class="txt"> Мы,&nbsp;кроты,&nbsp;его&nbsp;безусловно,&nbsp;чтим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am </span>
-<span class="txt"> поскольку&nbsp;он&nbsp;старше&nbsp;всех&nbsp;на&nbsp;семьдесят&nbsp;лет&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G  F </span>
-<span class="txt"> и&nbsp;под&nbsp;рукой&nbsp;огромная&nbsp;у&nbsp;него,&nbsp;естественно,&nbsp;бомба,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  B  Dm  Am </span>
-<span class="txt"> от&nbsp;какой&nbsp;спасения&nbsp;никому,&nbsp;естественно,&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B   Am E7  Am </span>
+<span class="line"><span class="txt"> Главный&nbsp;крот&nbsp;сидит&nbsp;на&nbsp;таком&nbsp;коне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am </span></span>
+<span class="line"><span class="txt"> в&nbsp;камзоле&nbsp;таком,&nbsp;что&nbsp;нам&nbsp;и&nbsp;сладко&nbsp;и&nbsp;больно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G  F   E </span></span>
+<span class="line"><span class="txt"> Мы,&nbsp;кроты,&nbsp;его&nbsp;безусловно,&nbsp;чтим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am </span></span>
+<span class="line"><span class="txt"> поскольку&nbsp;он&nbsp;старше&nbsp;всех&nbsp;на&nbsp;семьдесят&nbsp;лет&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G  F </span></span>
+<span class="line"><span class="txt"> и&nbsp;под&nbsp;рукой&nbsp;огромная&nbsp;у&nbsp;него,&nbsp;естественно,&nbsp;бомба,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  B  Dm  Am </span></span>
+<span class="line"><span class="txt"> от&nbsp;какой&nbsp;спасения&nbsp;никому,&nbsp;естественно,&nbsp;нет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B   Am E7  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ну,&nbsp;а&nbsp;мной&nbsp;-&nbsp;кончается&nbsp;строй&nbsp;бригад.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C  G7  Am </span>
-<span class="txt"> Я&nbsp;самый&nbsp;последний&nbsp;крот,&nbsp;арьергард.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  F  Am  F#7 </span>
+<span class="line"><span class="txt"> Ну,&nbsp;а&nbsp;мной&nbsp;-&nbsp;кончается&nbsp;строй&nbsp;бригад.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C  G7  Am </span></span>
+<span class="line"><span class="txt"> Я&nbsp;самый&nbsp;последний&nbsp;крот,&nbsp;арьергард.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  F  Am  F#7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;иду.&nbsp;Я&nbsp;всем&nbsp;ходокам&nbsp;ходок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm </span>
-<span class="txt"> А&nbsp;будет&nbsp;привал&nbsp;-&nbsp;засну,&nbsp;умру,&nbsp;не&nbsp;опомнюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A  G   F# </span>
-<span class="txt"> В&nbsp;нас,&nbsp;кротах,&nbsp;силён&nbsp;коренной&nbsp;рефлекс:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm </span>
-<span class="txt"> велят&nbsp;умереть&nbsp;-&nbsp;умри,&nbsp;родиться&nbsp;-&nbsp;родись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A  G </span>
-<span class="txt"> Плюс&nbsp;мы&nbsp;спешим,&nbsp;мы&nbsp;шествуем&nbsp;далеко,&nbsp;на&nbsp;Северный&nbsp;Полюс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  C  Em  Hm </span>
-<span class="txt"> чтоб&nbsp;на&nbsp;нём,&nbsp;присвоив&nbsp;его&nbsp;себе,&nbsp;создать&nbsp;парадиз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   Hm F#7 Hm </span>
+<span class="line"><span class="txt"> Я&nbsp;иду.&nbsp;Я&nbsp;всем&nbsp;ходокам&nbsp;ходок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm </span></span>
+<span class="line"><span class="txt"> А&nbsp;будет&nbsp;привал&nbsp;-&nbsp;засну,&nbsp;умру,&nbsp;не&nbsp;опомнюсь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A  G   F# </span></span>
+<span class="line"><span class="txt"> В&nbsp;нас,&nbsp;кротах,&nbsp;силён&nbsp;коренной&nbsp;рефлекс:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm </span></span>
+<span class="line"><span class="txt"> велят&nbsp;умереть&nbsp;-&nbsp;умри,&nbsp;родиться&nbsp;-&nbsp;родись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A  G </span></span>
+<span class="line"><span class="txt"> Плюс&nbsp;мы&nbsp;спешим,&nbsp;мы&nbsp;шествуем&nbsp;далеко,&nbsp;на&nbsp;Северный&nbsp;Полюс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7  C  Em  Hm </span></span>
+<span class="line"><span class="txt"> чтоб&nbsp;на&nbsp;нём,&nbsp;присвоив&nbsp;его&nbsp;себе,&nbsp;создать&nbsp;парадиз.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C   Hm F#7 Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;хотя&nbsp;над&nbsp;Полюсом&nbsp;ночь&nbsp;густа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D  A7  Hm </span>
-<span class="txt"> с&nbsp;ней&nbsp;справится&nbsp;зоркий&nbsp;глаз,&nbsp;глаз&nbsp;крота.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 G  Hm  G#7 </span>
+<span class="line"><span class="txt"> И&nbsp;хотя&nbsp;над&nbsp;Полюсом&nbsp;ночь&nbsp;густа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D  A7  Hm </span></span>
+<span class="line"><span class="txt"> с&nbsp;ней&nbsp;справится&nbsp;зоркий&nbsp;глаз,&nbsp;глаз&nbsp;крота.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 G  Hm  G#7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всяк&nbsp;жонглёр&nbsp;на&nbsp;ярмарке,&nbsp;шут&nbsp;любой,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span>
-<span class="txt"> пока&nbsp;мы&nbsp;течём&nbsp;вокруг,&nbsp;бряцая&nbsp;надсадно,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   A   G# </span>
-<span class="txt"> прям&nbsp;стоит,&nbsp;и&nbsp;вертит&nbsp;в&nbsp;уме&nbsp;цифирь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span>
-<span class="txt"> (горазд&nbsp;не&nbsp;горазд&nbsp;считать,&nbsp;удал&nbsp;не&nbsp;удал):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   A </span>
-<span class="txt"> мол,&nbsp;клык&nbsp;за&nbsp;клык,&nbsp;за&nbsp;хвост&nbsp;полтора&nbsp;хвоста,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7 D    F#m </span>
-<span class="txt"> три,&nbsp;стало&nbsp;быть,&nbsp;за&nbsp;два.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span>
-<span class="txt"> А&nbsp;итог&nbsp;выходит&nbsp;всегда&nbsp;другим,&nbsp;чем&nbsp;он&nbsp;ожидал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   C#m  G#7 C#m </span>
+<span class="line"><span class="txt"> Всяк&nbsp;жонглёр&nbsp;на&nbsp;ярмарке,&nbsp;шут&nbsp;любой,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span></span>
+<span class="line"><span class="txt"> пока&nbsp;мы&nbsp;течём&nbsp;вокруг,&nbsp;бряцая&nbsp;надсадно,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   A   G# </span></span>
+<span class="line"><span class="txt"> прям&nbsp;стоит,&nbsp;и&nbsp;вертит&nbsp;в&nbsp;уме&nbsp;цифирь&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span></span>
+<span class="line"><span class="txt"> (горазд&nbsp;не&nbsp;горазд&nbsp;считать,&nbsp;удал&nbsp;не&nbsp;удал):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   A </span></span>
+<span class="line"><span class="txt"> мол,&nbsp;клык&nbsp;за&nbsp;клык,&nbsp;за&nbsp;хвост&nbsp;полтора&nbsp;хвоста,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#7 D    F#m </span></span>
+<span class="line"><span class="txt"> три,&nbsp;стало&nbsp;быть,&nbsp;за&nbsp;два.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;итог&nbsp;выходит&nbsp;всегда&nbsp;другим,&nbsp;чем&nbsp;он&nbsp;ожидал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D   C#m  G#7 C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Эй,&nbsp;басы!&nbsp;Моргните-ка&nbsp;там&nbsp;альтам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     E    H7  C#m </span>
-<span class="txt"> Из&nbsp;Моцарта&nbsp;что-нибудь&nbsp;-&nbsp;нам,&nbsp;кротам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7 A    C#m </span>
+<span class="line"><span class="txt"> Эй,&nbsp;басы!&nbsp;Моргните-ка&nbsp;там&nbsp;альтам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     E    H7  C#m </span></span>
+<span class="line"><span class="txt"> Из&nbsp;Моцарта&nbsp;что-нибудь&nbsp;-&nbsp;нам,&nbsp;кротам.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#7 A    C#m </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1993</span>
-
+<pre><span class="year">1993</span>
 
 
 </pre>
+
 
                 </div>
         </div>

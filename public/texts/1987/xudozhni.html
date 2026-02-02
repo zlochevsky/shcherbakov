@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -427,32 +435,29 @@ data-key="Hm"><span class="txt"> ХУДОЖНИК&nbsp;-&nbsp;ТОЛПЕ </span>
  <br />
 <span class="txt"> Что&nbsp;же&nbsp;вы&nbsp;все&nbsp;врёте-то,&nbsp;а&nbsp;я&nbsp;все&nbsp;клюю? </span>
 <span class="txt"> Что&nbsp;ж&nbsp;вы&nbsp;не&nbsp;даёте-то&nbsp;чашу&nbsp;мне&nbsp;сию? </span>
-<span class="txt"> Мне&nbsp;ли&nbsp;ждать&nbsp;погоды,&nbsp;бросив&nbsp;стремена, </span>
-<span class="txt"> в&nbsp;наши&nbsp;с&nbsp;вами&nbsp;годы,&nbsp;в&nbsp;наши&nbsp;времена? </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Мне&nbsp;ли&nbsp;ждать&nbsp;погоды,&nbsp;бросив&nbsp;стремена, </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;в&nbsp;наши&nbsp;с&nbsp;вами&nbsp;годы,&nbsp;в&nbsp;наши&nbsp;времена? </span>
 <span class="txt"> Публика&nbsp;-&nbsp;с&nbsp;запросами,&nbsp;критика&nbsp;-&nbsp;с&nbsp;бичом, </span>
 <span class="txt"> Тропочка&nbsp;-&nbsp;с&nbsp;откосами,&nbsp;а&nbsp;мне&nbsp;нипочём. </span>
-<span class="txt"> Что&nbsp;такое&nbsp;критика?&nbsp;В&nbsp;сущности,&nbsp;мура. </span>
-<span class="txt"> Три-четыре&nbsp;критика,&nbsp;больше&nbsp;-&nbsp;ничего. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Что&nbsp;такое&nbsp;критика?&nbsp;В&nbsp;сущности,&nbsp;мура. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Три-четыре&nbsp;критика,&nbsp;больше&nbsp;-&nbsp;ничего. </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Станут&nbsp;бить&nbsp;в&nbsp;литавры&nbsp;-&nbsp;полный&nbsp;им&nbsp;привет. </span>
 <span class="txt"> У&nbsp;меня&nbsp;на&nbsp;лавры&nbsp;аллергии&nbsp;нет. </span>
-<span class="txt"> Если&nbsp;ж&nbsp;вдруг&nbsp;осудят&nbsp;-&nbsp;плюну,&nbsp;разотру. </span>
-<span class="txt"> Будь&nbsp;оно,&nbsp;что&nbsp;будет&nbsp;-&nbsp;насмерть&nbsp;не&nbsp;помру. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Если&nbsp;ж&nbsp;вдруг&nbsp;осудят&nbsp;-&nbsp;плюну,&nbsp;разотру. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Будь&nbsp;оно,&nbsp;что&nbsp;будет&nbsp;-&nbsp;насмерть&nbsp;не&nbsp;помру. </span>
 <span class="txt"> Что&nbsp;же&nbsp;вы,&nbsp;ей-богу?&nbsp;Я&nbsp;ж&nbsp;давным-давно </span>
 <span class="txt"> всю&nbsp;свою&nbsp;дорогу&nbsp;знаю&nbsp;всё&nbsp;равно. </span>
-<span class="txt"> Путь&nbsp;кремнистый&nbsp;-&nbsp;вон&nbsp;он,&nbsp;вон&nbsp;она&nbsp;-&nbsp;гора, </span>
-<span class="txt"> а&nbsp;над&nbsp;нею&nbsp;ворон,&nbsp;больше&nbsp;-&nbsp;ничего. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Путь&nbsp;кремнистый&nbsp;-&nbsp;вон&nbsp;он,&nbsp;вон&nbsp;она&nbsp;-&nbsp;гора, </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;над&nbsp;нею&nbsp;ворон,&nbsp;больше&nbsp;-&nbsp;ничего. </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> 1987 </span>
- <br />
-
 </div>
 <pre>
-    
-
 </pre>
+
 
                 </div>
         </div>

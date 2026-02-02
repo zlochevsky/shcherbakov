@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,40 +433,36 @@ span.c {
 data-key="Em"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Восходя&nbsp;дорогой&nbsp;горной&nbsp;прямо&nbsp;к&nbsp;бездне&nbsp;голубой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am     Em  Am       Em </span>
-<span class="txt"> не&nbsp;печалься,&nbsp;брат&nbsp;мой&nbsp;гордый,&nbsp;будет&nbsp;нам&nbsp;ещё&nbsp;с&nbsp;тобой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7  E7  Am Em H7 Em </span>
-<span class="txt"> и&nbsp;парча&nbsp;ковров&nbsp;ценнейших,&nbsp;и&nbsp;невиданный&nbsp;фарфор,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am     Em  Am       Em </span>
-<span class="txt"> и&nbsp;красавиц&nbsp;августейших&nbsp;неожиданный&nbsp;фавор.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7  Am  Em    H7 Em </span>
-<span class="txt"> Не&nbsp;раздавят&nbsp;нас,&nbsp;ей-Богу,&nbsp;ни&nbsp;чужбина,&nbsp;ни&nbsp;нужда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C      Cm6 G        Hm </span>
-<span class="txt"> Будет&nbsp;нам&nbsp;всего&nbsp;помногу.&nbsp;А&nbsp;не&nbsp;будет&nbsp;-&nbsp;не&nbsp;беда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     E7  Am       Em </span>
+<span class="line"><span class="txt"> Восходя&nbsp;дорогой&nbsp;горной&nbsp;прямо&nbsp;к&nbsp;бездне&nbsp;голубой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am     Em  Am       Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;печалься,&nbsp;брат&nbsp;мой&nbsp;гордый,&nbsp;будет&nbsp;нам&nbsp;ещё&nbsp;с&nbsp;тобой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7  E7  Am Em H7 Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;парча&nbsp;ковров&nbsp;ценнейших,&nbsp;и&nbsp;невиданный&nbsp;фарфор,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am     Em  Am       Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;красавиц&nbsp;августейших&nbsp;неожиданный&nbsp;фавор.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7  Am  Em    H7 Em </span></span>
+<span class="line"><span class="txt"> Не&nbsp;раздавят&nbsp;нас,&nbsp;ей-Богу,&nbsp;ни&nbsp;чужбина,&nbsp;ни&nbsp;нужда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C      Cm6 G        Hm </span></span>
+<span class="line"><span class="txt"> Будет&nbsp;нам&nbsp;всего&nbsp;помногу.&nbsp;А&nbsp;не&nbsp;будет&nbsp;-&nbsp;не&nbsp;беда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     E7  Am       Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;когда&nbsp;недуг&nbsp;сердечный&nbsp;вдруг&nbsp;сожмёт&nbsp;тебя&nbsp;в&nbsp;горсти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am     Em  Am       Em </span>
-<span class="txt"> не&nbsp;печалься,&nbsp;друг&nbsp;мой&nbsp;вечный,&nbsp;твой&nbsp;корабль&nbsp;уже&nbsp;в&nbsp;пути.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7  E7  Am Em H7 Em </span>
-<span class="txt"> Не&nbsp;зазря&nbsp;ломал&nbsp;ты&nbsp;крылья,&nbsp;не&nbsp;напрасно&nbsp;ты&nbsp;страдал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am     Em  Am       Em </span>
-<span class="txt"> и&nbsp;бесился&nbsp;от&nbsp;бессилья,&nbsp;и&nbsp;от&nbsp;холода&nbsp;рыдал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7  Am  Em    H7 Em </span>
-<span class="txt"> Потеряешь&nbsp;счёт&nbsp;пожиткам,&nbsp;предсказаньям&nbsp;вопреки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C      Cm6 G        Hm </span>
-<span class="txt"> Будет&nbsp;нам&nbsp;всего&nbsp;с&nbsp;избытком.&nbsp;А&nbsp;не&nbsp;будет&nbsp;-&nbsp;пустяки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     E7  Am       Em </span>
+<span class="line"><span class="txt"> И&nbsp;когда&nbsp;недуг&nbsp;сердечный&nbsp;вдруг&nbsp;сожмёт&nbsp;тебя&nbsp;в&nbsp;горсти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am     Em  Am       Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;печалься,&nbsp;друг&nbsp;мой&nbsp;вечный,&nbsp;твой&nbsp;корабль&nbsp;уже&nbsp;в&nbsp;пути.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7  E7  Am Em H7 Em </span></span>
+<span class="line"><span class="txt"> Не&nbsp;зазря&nbsp;ломал&nbsp;ты&nbsp;крылья,&nbsp;не&nbsp;напрасно&nbsp;ты&nbsp;страдал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am     Em  Am       Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;бесился&nbsp;от&nbsp;бессилья,&nbsp;и&nbsp;от&nbsp;холода&nbsp;рыдал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  G7  Am  Em    H7 Em </span></span>
+<span class="line"><span class="txt"> Потеряешь&nbsp;счёт&nbsp;пожиткам,&nbsp;предсказаньям&nbsp;вопреки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C      Cm6 G        Hm </span></span>
+<span class="line"><span class="txt"> Будет&nbsp;нам&nbsp;всего&nbsp;с&nbsp;избытком.&nbsp;А&nbsp;не&nbsp;будет&nbsp;-&nbsp;пустяки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm     E7  Am       Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;покуда&nbsp;шёпот&nbsp;струнный&nbsp;всё&nbsp;зовёт&nbsp;куда-то&nbsp;вдаль,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  Am  Em </span>
-<span class="txt"> Дольше&nbsp;срока,&nbsp;принц&nbsp;мой&nbsp;юный,&nbsp;не&nbsp;продлится&nbsp;твой&nbsp;февраль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G G7 E7 Am Em H7 Em </span>
-<span class="txt"> Вспыхнет&nbsp;утро,&nbsp;грянут&nbsp;грозы,&nbsp;льды&nbsp;сойдут,&nbsp;снега&nbsp;сойдут,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  Am  Em </span>
-<span class="txt"> и&nbsp;твои&nbsp;ночные&nbsp;слёзы&nbsp;дневным&nbsp;садом&nbsp;прорастут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G G7 Am Em H7 Em </span>
-<span class="txt"> Будь&nbsp;что&nbsp;будет,&nbsp;знай,&nbsp;не&nbsp;медли,&nbsp;путь&nbsp;не&nbsp;близок,&nbsp;в&nbsp;добрый&nbsp;час!..&nbsp; </span><span class="ch"> C  Cm6 G   Hm </span>
-<span class="txt"> Там&nbsp;посмотрим&nbsp;-&nbsp;будет,&nbsp;нет&nbsp;ли...&nbsp;Не&nbsp;печалься,&nbsp;будет&nbsp;с&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E7  Am  Em </span>
+<span class="line"><span class="txt"> И&nbsp;покуда&nbsp;шёпот&nbsp;струнный&nbsp;всё&nbsp;зовёт&nbsp;куда-то&nbsp;вдаль,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  Am  Em </span></span>
+<span class="line"><span class="txt"> Дольше&nbsp;срока,&nbsp;принц&nbsp;мой&nbsp;юный,&nbsp;не&nbsp;продлится&nbsp;твой&nbsp;февраль.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G G7 E7 Am Em H7 Em </span></span>
+<span class="line"><span class="txt"> Вспыхнет&nbsp;утро,&nbsp;грянут&nbsp;грозы,&nbsp;льды&nbsp;сойдут,&nbsp;снега&nbsp;сойдут,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em  Am  Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;твои&nbsp;ночные&nbsp;слёзы&nbsp;дневным&nbsp;садом&nbsp;прорастут.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G G7 Am Em H7 Em </span></span>
+<span class="line"><span class="txt"> Будь&nbsp;что&nbsp;будет,&nbsp;знай,&nbsp;не&nbsp;медли,&nbsp;путь&nbsp;не&nbsp;близок,&nbsp;в&nbsp;добрый&nbsp;час!..&nbsp; </span><span class="ch"> C  Cm6 G   Hm </span></span>
+<span class="line"><span class="txt"> Там&nbsp;посмотрим&nbsp;-&nbsp;будет,&nbsp;нет&nbsp;ли...&nbsp;Не&nbsp;печалься,&nbsp;будет&nbsp;с&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E7  Am  Em </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1986</span>
-
+<pre><span class="year">1986</span>
 
 
 </pre>
+
 
                 </div>
         </div>

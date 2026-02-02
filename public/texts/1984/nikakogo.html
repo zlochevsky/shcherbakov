@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -431,8 +439,8 @@ data-key="Hm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt"> кому&nbsp;как,&nbsp;а&nbsp;мне&nbsp;печально,&nbsp;время&nbsp;года,&nbsp;как&nbsp;никак. </span>
 <span class="txt"> Что&nbsp;захочешь&nbsp;-&nbsp;наверстаешь,&nbsp;что&nbsp;понравится&nbsp;-&nbsp;возьмёшь, </span>
 <span class="txt"> а&nbsp;уж&nbsp;время&nbsp;не&nbsp;догонишь,&nbsp;не&nbsp;поймаешь,&nbsp;не&nbsp;вернёшь. </span>
-<span class="txt"> Ой,&nbsp;холод&nbsp;был,&nbsp;а&nbsp;вот&nbsp;теперь </span>
-<span class="txt"> наступила&nbsp;оттепель. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Ой,&nbsp;холод&nbsp;был,&nbsp;а&nbsp;вот&nbsp;теперь </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;наступила&nbsp;оттепель. </span>
 <span class="txt"> То-то&nbsp;и&nbsp;оно-то,&nbsp;братцы,&nbsp;то-то&nbsp;и&nbsp;оно-то. </span>
 <span class="txt">  </span>
  <br />
@@ -444,8 +452,8 @@ data-key="Hm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt"> и&nbsp;подружка&nbsp;номер&nbsp;первый&nbsp;не&nbsp;ответит&nbsp;на&nbsp;привет. </span>
 <span class="txt"> Не&nbsp;ответит,&nbsp;потому&nbsp;что&nbsp;я&nbsp;в&nbsp;былые&nbsp;времена </span>
 <span class="txt"> провинился&nbsp;перед&nbsp;нею,&nbsp;не&nbsp;забыла&nbsp;мне&nbsp;она. </span>
-<span class="txt"> А&nbsp;подружка&nbsp;номер&nbsp;два&nbsp;- </span>
-<span class="txt"> добродушна,&nbsp;но&nbsp;мертва. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;подружка&nbsp;номер&nbsp;два&nbsp;- </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;добродушна,&nbsp;но&nbsp;мертва. </span>
 <span class="txt"> То-то&nbsp;и&nbsp;оно-то,&nbsp;братцы,&nbsp;то-то&nbsp;и&nbsp;оно-то. </span>
 <span class="txt">  </span>
  <br />
@@ -457,19 +465,16 @@ data-key="Hm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt"> и&nbsp;смешное&nbsp;это&nbsp;счастье&nbsp;длилось&nbsp;целых&nbsp;восемь&nbsp;дней. </span>
 <span class="txt"> Ну&nbsp;и&nbsp;что,&nbsp;большое&nbsp;дело,&nbsp;вы&nbsp;мне&nbsp;скажете&nbsp;-&nbsp;пустяк, </span>
 <span class="txt"> и,&nbsp;конечно&nbsp;же,&nbsp;вы&nbsp;правы,&nbsp;да&nbsp;уж&nbsp;это&nbsp;кому&nbsp;как. </span>
-<span class="txt"> А&nbsp;часто&nbsp;ль&nbsp;вы,&nbsp;а&nbsp;часто&nbsp;ль&nbsp;вы&nbsp;- </span>
-<span class="txt"> сами&nbsp;были&nbsp;счастливы? </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;часто&nbsp;ль&nbsp;вы,&nbsp;а&nbsp;часто&nbsp;ль&nbsp;вы&nbsp;- </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;сами&nbsp;были&nbsp;счастливы? </span>
 <span class="txt"> То-то&nbsp;и&nbsp;оно-то,&nbsp;братцы,&nbsp;то-то&nbsp;и&nbsp;оно-то. </span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1984</span>
-
+<pre><span class="year">1984</span>
 
 </pre>
+
 
                 </div>
         </div>

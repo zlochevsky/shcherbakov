@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,30 +423,30 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Cm"><span class="sng-title">Nemo</span>
+data-key="Cm"><h1>Nemo</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пока&nbsp;я&nbsp;был&nbsp;никто,&nbsp;не&nbsp;обитал&nbsp;нигде,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm       </span>
-<span class="txt"> примерно&nbsp;лет&nbsp;от&nbsp;двух&nbsp;до&nbsp;трёх,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   Fm6 </span>
-<span class="txt"> я&nbsp;наслаждался&nbsp;тем,&nbsp;что&nbsp;никакой&nbsp;вражде&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  Cm  </span>
-<span class="txt"> не&nbsp;захватить&nbsp;меня&nbsp;врасплох.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7   Cm  </span>
+<span class="line"><span class="txt"> Пока&nbsp;я&nbsp;был&nbsp;никто,&nbsp;не&nbsp;обитал&nbsp;нигде,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm       </span></span>
+<span class="line"><span class="txt"> примерно&nbsp;лет&nbsp;от&nbsp;двух&nbsp;до&nbsp;трёх,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   Fm6 </span></span>
+<span class="line"><span class="txt"> я&nbsp;наслаждался&nbsp;тем,&nbsp;что&nbsp;никакой&nbsp;вражде&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  Cm  </span></span>
+<span class="line"><span class="txt"> не&nbsp;захватить&nbsp;меня&nbsp;врасплох.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7   Cm  </span></span>
 <span class="txt">  </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Любой&nbsp;в&nbsp;ту&nbsp;пору&nbsp;шторм,&nbsp;иных&nbsp;сбивавший&nbsp;с&nbsp;ног,&nbsp;&nbsp; </span><span class="ch"> Cm       </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;не&nbsp;досадил&nbsp;бы&nbsp;мне,&nbsp;заметь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   Fm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;ни&nbsp;один&nbsp;гарпун&nbsp;тогда&nbsp;меня&nbsp;не&nbsp;мог&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  Cm  </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;(не&nbsp;говорю&nbsp;-&nbsp;пронзить)&nbsp;задеть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7   Cm  </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Любой&nbsp;в&nbsp;ту&nbsp;пору&nbsp;шторм,&nbsp;иных&nbsp;сбивавший&nbsp;с&nbsp;ног,&nbsp;&nbsp; </span><span class="ch"> Cm       </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;не&nbsp;досадил&nbsp;бы&nbsp;мне,&nbsp;заметь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm   Fm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;ни&nbsp;один&nbsp;гарпун&nbsp;тогда&nbsp;меня&nbsp;не&nbsp;мог&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm6  Cm  </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;(не&nbsp;говорю&nbsp;-&nbsp;пронзить)&nbsp;задеть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7   Cm  </span></span>
 <span class="txt">  </span>
-<span class="txt"> Тогда&nbsp;любая&nbsp;власть,&nbsp;любой&nbsp;творя&nbsp;эдем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm       </span>
-<span class="txt"> не&nbsp;причиняла&nbsp;мне&nbsp;вреда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Fm  </span>
-<span class="txt"> Ведь&nbsp;я&nbsp;же&nbsp;был&nbsp;никто.&nbsp;И&nbsp;потому&nbsp;никем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm  </span>
-<span class="txt"> не&nbsp;назывался&nbsp;я.&nbsp;О&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7   Cm  </span>
+<span class="line"><span class="txt"> Тогда&nbsp;любая&nbsp;власть,&nbsp;любой&nbsp;творя&nbsp;эдем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm       </span></span>
+<span class="line"><span class="txt"> не&nbsp;причиняла&nbsp;мне&nbsp;вреда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7   Fm  </span></span>
+<span class="line"><span class="txt"> Ведь&nbsp;я&nbsp;же&nbsp;был&nbsp;никто.&nbsp;И&nbsp;потому&nbsp;никем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm   Cm  </span></span>
+<span class="line"><span class="txt"> не&nbsp;назывался&nbsp;я.&nbsp;О&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G7   Cm  </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Именовался&nbsp;я&nbsp;не&nbsp;вожаком&nbsp;вояк, </span>
@@ -447,10 +455,10 @@ data-key="Cm"><span class="sng-title">Nemo</span>
 <span class="txt"> отправил&nbsp;странствовать&nbsp;Жюль&nbsp;Верн. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Была&nbsp;недвижна&nbsp;зыбь,&nbsp;невысока&nbsp;волна. </span>
-<span class="txt"> И&nbsp;мог&nbsp;ли&nbsp;думать&nbsp;я&nbsp;тогда, </span>
-<span class="txt"> что&nbsp;мне&nbsp;ещё&nbsp;тонуть,&nbsp;не&nbsp;достигая&nbsp;дна, </span>
-<span class="txt"> в&nbsp;стихии&nbsp;злейшей,&nbsp;чем&nbsp;вода. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Была&nbsp;недвижна&nbsp;зыбь,&nbsp;невысока&nbsp;волна. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;мог&nbsp;ли&nbsp;думать&nbsp;я&nbsp;тогда, </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;что&nbsp;мне&nbsp;ещё&nbsp;тонуть,&nbsp;не&nbsp;достигая&nbsp;дна, </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;в&nbsp;стихии&nbsp;злейшей,&nbsp;чем&nbsp;вода. </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Была&nbsp;надёжна&nbsp;ночь&nbsp;(пока&nbsp;я&nbsp;слыл&nbsp;ничем), </span>
@@ -465,10 +473,10 @@ data-key="Cm"><span class="sng-title">Nemo</span>
 <span class="txt"> на&nbsp;языке&nbsp;любой&nbsp;страны. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вдали&nbsp;от&nbsp;райских&nbsp;рощ,&nbsp;где&nbsp;дышат&nbsp;лавр&nbsp;и&nbsp;мирт, </span>
-<span class="txt"> считать&nbsp;отечество&nbsp;тюрьмой </span>
-<span class="txt"> и&nbsp;бормотать&nbsp;в&nbsp;сердцах&nbsp;"какой&nbsp;невкусный&nbsp;спирт", </span>
-<span class="txt"> лечась&nbsp;от&nbsp;холода&nbsp;зимой. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Вдали&nbsp;от&nbsp;райских&nbsp;рощ,&nbsp;где&nbsp;дышат&nbsp;лавр&nbsp;и&nbsp;мирт, </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;считать&nbsp;отечество&nbsp;тюрьмой </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;бормотать&nbsp;в&nbsp;сердцах&nbsp;"какой&nbsp;невкусный&nbsp;спирт", </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;лечась&nbsp;от&nbsp;холода&nbsp;зимой. </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> И&nbsp;повергаться&nbsp;ниц,&nbsp;теряя&nbsp;нюх&nbsp;и&nbsp;слух, </span>
@@ -483,10 +491,10 @@ data-key="Cm"><span class="sng-title">Nemo</span>
 <span class="txt"> где&nbsp;чужеземцы&nbsp;лишь&nbsp;одни. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Где&nbsp;никакой&nbsp;за&nbsp;мной&nbsp;не&nbsp;уследит&nbsp;Кусто, </span>
-<span class="txt"> где&nbsp;не&nbsp;видна&nbsp;блесна&nbsp;ничья. </span>
-<span class="txt"> Я&nbsp;раньше&nbsp;был&nbsp;никем.&nbsp;Я&nbsp;и&nbsp;теперь&nbsp;никто. </span>
-<span class="txt"> Но&nbsp;только&nbsp;знающий,&nbsp;кто&nbsp;я. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Где&nbsp;никакой&nbsp;за&nbsp;мной&nbsp;не&nbsp;уследит&nbsp;Кусто, </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;где&nbsp;не&nbsp;видна&nbsp;блесна&nbsp;ничья. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Я&nbsp;раньше&nbsp;был&nbsp;никем.&nbsp;Я&nbsp;и&nbsp;теперь&nbsp;никто. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;только&nbsp;знающий,&nbsp;кто&nbsp;я. </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> А&nbsp;далеко&nbsp;вдали,&nbsp;где&nbsp;в&nbsp;роще&nbsp;бьёт&nbsp;родник </span>
@@ -495,15 +503,12 @@ data-key="Cm"><span class="sng-title">Nemo</span>
 <span class="txt"> ещё&nbsp;не&nbsp;знающий,&nbsp;кто&nbsp;он. </span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2002</span>                                               Условная гармония по исполнениям с альбомов
+<pre><span class="year">2002</span>                                               Условная гармония по исполнениям с альбомов
                                                    &#171;<a href="../../Disks/esli.html">Если</a>&#187; и &#171;<a href="../../Disks/chmuzyka1.html">Чужая музыка и не только. Часть 1</a>&#187;
 
-
 </pre>
+
 
                 </div>
         </div>

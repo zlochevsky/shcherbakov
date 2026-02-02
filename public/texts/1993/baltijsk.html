@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,40 +433,38 @@ span.c {
 data-key="Dm"><span class="txt"> "БАЛТИЙСКИЕ&nbsp;ВОЛНЫ" </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Норд-вест,&nbsp;гудки,&nbsp;синева.&nbsp;Крейсер,&nbsp;не&nbsp;то&nbsp;миноносец.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm B     D/A </span>
-<span class="txt"> В&nbsp;рубке&nbsp;радист&nbsp;репетирует:&nbsp;точка,&nbsp;тире,&nbsp;запятая...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   D#   A7 B7/D# A7/G </span>
-<span class="txt"> Девочка&nbsp;машет&nbsp;с&nbsp;берега&nbsp;белой&nbsp;рукою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F A    Dm D7    Gm </span>
-<span class="txt"> Все&nbsp;с&nbsp;борта&nbsp;машут&nbsp;в&nbsp;ответ.&nbsp;Самый&nbsp;красивый&nbsp;не&nbsp;машет.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6  Dm/A B  B G/H Gm A7 </span>
+<span class="line"><span class="txt"> Норд-вест,&nbsp;гудки,&nbsp;синева.&nbsp;Крейсер,&nbsp;не&nbsp;то&nbsp;миноносец.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm B     D/A </span></span>
+<span class="line"><span class="txt"> В&nbsp;рубке&nbsp;радист&nbsp;репетирует:&nbsp;точка,&nbsp;тире,&nbsp;запятая...&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   D#   A7 B7/D# A7/G </span></span>
+<span class="line"><span class="txt"> Девочка&nbsp;машет&nbsp;с&nbsp;берега&nbsp;белой&nbsp;рукою.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F A    Dm D7    Gm </span></span>
+<span class="line"><span class="txt"> Все&nbsp;с&nbsp;борта&nbsp;машут&nbsp;в&nbsp;ответ.&nbsp;Самый&nbsp;красивый&nbsp;не&nbsp;машет.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6  Dm/A B  B G/H Gm A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Жаль,&nbsp;жаль.&nbsp;А&nbsp;вот&nbsp;и&nbsp;не&nbsp;жаль.&nbsp;Очень&nbsp;ей&nbsp;нужен&nbsp;красивый.&nbsp; </span><span class="ch"> Dm   A7   Dm B     D/A </span>
-<span class="txt"> Пусть&nbsp;он&nbsp;утонет&nbsp;геройски&nbsp;со&nbsp;всею&nbsp;эскадрою&nbsp;вместе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   D#   A7 B7/D# A7/G </span>
-<span class="txt"> Ангелы&nbsp;божьи&nbsp;станут&nbsp;ему&nbsp;улыбаться.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F A    Dm D7    Gm </span>
-<span class="txt"> Ей,&nbsp;что&nbsp;ли,&nbsp;плакать&nbsp;тогда?&nbsp;Вот&nbsp;ещё,&nbsp;глупости&nbsp;тоже.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6  Dm/A B  B G/H Gm A7 </span>
+<span class="line"><span class="txt"> Жаль,&nbsp;жаль.&nbsp;А&nbsp;вот&nbsp;и&nbsp;не&nbsp;жаль.&nbsp;Очень&nbsp;ей&nbsp;нужен&nbsp;красивый.&nbsp; </span><span class="ch"> Dm   A7   Dm B     D/A </span></span>
+<span class="line"><span class="txt"> Пусть&nbsp;он&nbsp;утонет&nbsp;геройски&nbsp;со&nbsp;всею&nbsp;эскадрою&nbsp;вместе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   D#   A7 B7/D# A7/G </span></span>
+<span class="line"><span class="txt"> Ангелы&nbsp;божьи&nbsp;станут&nbsp;ему&nbsp;улыбаться.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F A    Dm D7    Gm </span></span>
+<span class="line"><span class="txt"> Ей,&nbsp;что&nbsp;ли,&nbsp;плакать&nbsp;тогда?&nbsp;Вот&nbsp;ещё,&nbsp;глупости&nbsp;тоже.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6  Dm/A B  B G/H Gm A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Слёз,&nbsp;грёз,&nbsp;чудес&nbsp;в&nbsp;решете&nbsp;-&nbsp;ей&nbsp;бы&nbsp;теперь&nbsp;не&nbsp;хотелось. </span><span class="ch"> Dm   A7   Dm B     D/A </span>
-<span class="txt"> Ей&nbsp;бы&nbsp;хотелось&nbsp;пожалуй&nbsp;что&nbsp;бабочкой&nbsp;быть&nbsp;однодневкой.&nbsp; </span><span class="ch"> Gm   D#   A7 B7/D# A7/G </span>
-<span class="txt"> День&nbsp;срок&nbsp;недолгий,&nbsp;он&nbsp;бы&nbsp;пройти&nbsp;не&nbsp;замедлил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F A    Dm D7    Gm </span>
-<span class="txt"> Ночь&nbsp;бы&nbsp;навек&nbsp;трепетать&nbsp;сердцу&nbsp;её&nbsp;запретила...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6  Dm/A B  B G/H Gm A7 </span>
+<span class="line"><span class="txt"> Слёз,&nbsp;грёз,&nbsp;чудес&nbsp;в&nbsp;решете&nbsp;-&nbsp;ей&nbsp;бы&nbsp;теперь&nbsp;не&nbsp;хотелось. </span><span class="ch"> Dm   A7   Dm B     D/A </span></span>
+<span class="line"><span class="txt"> Ей&nbsp;бы&nbsp;хотелось&nbsp;пожалуй&nbsp;что&nbsp;бабочкой&nbsp;быть&nbsp;однодневкой.&nbsp; </span><span class="ch"> Gm   D#   A7 B7/D# A7/G </span></span>
+<span class="line"><span class="txt"> День&nbsp;срок&nbsp;недолгий,&nbsp;он&nbsp;бы&nbsp;пройти&nbsp;не&nbsp;замедлил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F A    Dm D7    Gm </span></span>
+<span class="line"><span class="txt"> Ночь&nbsp;бы&nbsp;навек&nbsp;трепетать&nbsp;сердцу&nbsp;её&nbsp;запретила...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6  Dm/A B  B G/H Gm A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Но&nbsp;-&nbsp;мчат&nbsp;Амур&nbsp;и&nbsp;Дунай&nbsp;волны&nbsp;к&nbsp;Балтийскому&nbsp;небу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm B     D/A </span>
-<span class="txt"> Норд-вест,&nbsp;гудки,&nbsp;синева,&nbsp;сумасшедшее&nbsp;соло&nbsp;радиста.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   D#   A7 B7/D# A7/G </span>
-<span class="txt"> Плачь,&nbsp;плачь,&nbsp;о&nbsp;сердце!&nbsp;Ночь&nbsp;миновала&nbsp;бесславно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F A    Dm D7    Gm </span>
-<span class="txt"> День&nbsp;не&nbsp;замедлил&nbsp;прийти&nbsp;-&nbsp;ясный,&nbsp;холодный,&nbsp;враждебный. </span><span class="ch"> Gm6  Dm/A B  B G/H Gm A7 </span>
+<span class="line"><span class="txt"> Но&nbsp;-&nbsp;мчат&nbsp;Амур&nbsp;и&nbsp;Дунай&nbsp;волны&nbsp;к&nbsp;Балтийскому&nbsp;небу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   A7   Dm B     D/A </span></span>
+<span class="line"><span class="txt"> Норд-вест,&nbsp;гудки,&nbsp;синева,&nbsp;сумасшедшее&nbsp;соло&nbsp;радиста.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm   D#   A7 B7/D# A7/G </span></span>
+<span class="line"><span class="txt"> Плачь,&nbsp;плачь,&nbsp;о&nbsp;сердце!&nbsp;Ночь&nbsp;миновала&nbsp;бесславно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F A    Dm D7    Gm </span></span>
+<span class="line"><span class="txt"> День&nbsp;не&nbsp;замедлил&nbsp;прийти&nbsp;-&nbsp;ясный,&nbsp;холодный,&nbsp;враждебный. </span><span class="ch"> Gm6  Dm/A B  B G/H Gm A7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F A  Dm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7(d f# a c d# d) Gm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7/G# Dm/A B E7/H </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/C# ... </span>
-
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/F A  Dm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7(d f# a c d# d) Gm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B7/G# Dm/A B E7/H </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/C# ... </span></span>
 </div>
-<pre>
-    <span class="year">1993</span>
-
+<pre><span class="year">1993</span>
 </pre>
+
 
                 </div>
         </div>

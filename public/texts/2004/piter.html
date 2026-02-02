@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,85 +423,82 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Em"><span class="sng-title">Тарантелла</span>
+data-key="Em"><h1>Тарантелла</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Есть&nbsp;на&nbsp;планете&nbsp;город&nbsp;Питер.&nbsp;Он&nbsp;поделён&nbsp;на&nbsp;острова.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span>
-<span class="txt"> Будь&nbsp;в&nbsp;алфавите&nbsp;больше&nbsp;литер,&nbsp;я&nbsp;бы&nbsp;сложил&nbsp;из&nbsp;них&nbsp;слова.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G D7/F# Em Am Em H7 Em </span>
-<span class="txt"> Склеил&nbsp;бы&nbsp;опус&nbsp;я&nbsp;и&nbsp;даже&nbsp;целый&nbsp;бы&nbsp;эпос&nbsp;развернул.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7/D# Em </span>
-<span class="txt"> Благо&nbsp;недавно&nbsp;в&nbsp;Эрмитаже&nbsp;я&nbsp;вдохновенье&nbsp;почерпнул.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G D7/F# Em Am Em H7 Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вздумалось&nbsp;вдруг&nbsp;в&nbsp;ненастье&nbsp;мне&nbsp;зайти&nbsp;в&nbsp;Эрмитаж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 G C G D7 G D7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Взял&nbsp;и&nbsp;зашёл.&nbsp;А&nbsp;на&nbsp;стене&nbsp;висит&nbsp;персонаж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 G C G H7 Em H7 Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мало&nbsp;заметный&nbsp;глазу&nbsp;ярких&nbsp;между&nbsp;личин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 G C G D7 G D7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;среди&nbsp;прочих&nbsp;сразу&nbsp;я&nbsp;его&nbsp;отличил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 G C G H7 Em H7 Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-<span class="txt"> Щёки&nbsp;и&nbsp;лоб&nbsp;его&nbsp;багровы,&nbsp;силы&nbsp;он&nbsp;полон&nbsp;и&nbsp;огня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span>
+<span class="line"><span class="txt"> Есть&nbsp;на&nbsp;планете&nbsp;город&nbsp;Питер.&nbsp;Он&nbsp;поделён&nbsp;на&nbsp;острова.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7 Em </span></span>
+<span class="line"><span class="txt"> Будь&nbsp;в&nbsp;алфавите&nbsp;больше&nbsp;литер,&nbsp;я&nbsp;бы&nbsp;сложил&nbsp;из&nbsp;них&nbsp;слова.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G D7/F# Em Am Em H7 Em </span></span>
+<span class="line"><span class="txt"> Склеил&nbsp;бы&nbsp;опус&nbsp;я&nbsp;и&nbsp;даже&nbsp;целый&nbsp;бы&nbsp;эпос&nbsp;развернул.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em H7/D# Em </span></span>
+<span class="line"><span class="txt"> Благо&nbsp;недавно&nbsp;в&nbsp;Эрмитаже&nbsp;я&nbsp;вдохновенье&nbsp;почерпнул.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G D7/F# Em Am Em H7 Em </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вздумалось&nbsp;вдруг&nbsp;в&nbsp;ненастье&nbsp;мне&nbsp;зайти&nbsp;в&nbsp;Эрмитаж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 G C G D7 G D7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Взял&nbsp;и&nbsp;зашёл.&nbsp;А&nbsp;на&nbsp;стене&nbsp;висит&nbsp;персонаж,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 G C G H7 Em H7 Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мало&nbsp;заметный&nbsp;глазу&nbsp;ярких&nbsp;между&nbsp;личин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 G C G D7 G D7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;среди&nbsp;прочих&nbsp;сразу&nbsp;я&nbsp;его&nbsp;отличил.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   D7 G C G H7 Em H7 Em </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Щёки&nbsp;и&nbsp;лоб&nbsp;его&nbsp;багровы,&nbsp;силы&nbsp;он&nbsp;полон&nbsp;и&nbsp;огня.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span></span>
 <span class="txt"> В&nbsp;цирке&nbsp;он&nbsp;мог&nbsp;бы&nbsp;гнуть&nbsp;подковы&nbsp;и&nbsp;багроветь,&nbsp;подковы&nbsp;гня. </span>
 <span class="txt"> Стать&nbsp;бы&nbsp;он&nbsp;дельный&nbsp;мог&nbsp;сановник.&nbsp;Важно&nbsp;смотрелся&nbsp;бы&nbsp;в&nbsp;седле. </span>
 <span class="txt"> Был&nbsp;бы&nbsp;в&nbsp;пехоте&nbsp;он&nbsp;полковник&nbsp;и&nbsp;канонир&nbsp;на&nbsp;корабле. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мог&nbsp;бы&nbsp;он&nbsp;всё&nbsp;на&nbsp;свете,&nbsp;вон&nbsp;какой&nbsp;габарит!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G... </span>
-<span class="txt"> Плохо,&nbsp;что&nbsp;на&nbsp;портрете&nbsp;он&nbsp;сидит&nbsp;и&nbsp;молчит. </span>
-<span class="txt"> Ибо&nbsp;герой&nbsp;без&nbsp;жеста&nbsp;схож&nbsp;неведомо&nbsp;с&nbsp;чем. </span>
-<span class="txt"> Повесть&nbsp;моя&nbsp;ни&nbsp;с&nbsp;места.&nbsp;Что&nbsp;ж,&nbsp;пойду&nbsp;и&nbsp;поем. </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мог&nbsp;бы&nbsp;он&nbsp;всё&nbsp;на&nbsp;свете,&nbsp;вон&nbsp;какой&nbsp;габарит!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G... </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Плохо,&nbsp;что&nbsp;на&nbsp;портрете&nbsp;он&nbsp;сидит&nbsp;и&nbsp;молчит. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ибо&nbsp;герой&nbsp;без&nbsp;жеста&nbsp;схож&nbsp;неведомо&nbsp;с&nbsp;чем. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Повесть&nbsp;моя&nbsp;ни&nbsp;с&nbsp;места.&nbsp;Что&nbsp;ж,&nbsp;пойду&nbsp;и&nbsp;поем. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Неповторим&nbsp;и&nbsp;одинаков,&nbsp;город&nbsp;шумит,&nbsp;течёт&nbsp;Нева.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span>
+<span class="line"><span class="txt"> Неповторим&nbsp;и&nbsp;одинаков,&nbsp;город&nbsp;шумит,&nbsp;течёт&nbsp;Нева.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span></span>
 <span class="txt"> Жаль,&nbsp;в&nbsp;алфавите&nbsp;мало&nbsp;знаков,&nbsp;я&nbsp;бы&nbsp;сложил&nbsp;из&nbsp;них&nbsp;слова. </span>
 <span class="txt"> Я&nbsp;разместил&nbsp;бы&nbsp;всё&nbsp;по&nbsp;полкам,&nbsp;распределил&nbsp;бы&nbsp;мишуру. </span>
 <span class="txt"> Но&nbsp;персонажу&nbsp;(вой&nbsp;хоть&nbsp;волком)&nbsp;дела&nbsp;никак&nbsp;не&nbsp;подберу. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Время&nbsp;летит.&nbsp;Бумага&nbsp;терпит.&nbsp;Кто&nbsp;виноват?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G... </span>
-<span class="txt"> В&nbsp;Питере&nbsp;шум&nbsp;и&nbsp;влага.&nbsp;Эрмитаж&nbsp;нарасхват. </span>
-<span class="txt"> В&nbsp;зале,&nbsp;привычным&nbsp;фоном&nbsp;став,&nbsp;красуется&nbsp;холст. </span>
-<span class="txt"> И&nbsp;персонаж&nbsp;на&nbsp;оном&nbsp;-&nbsp;брав,&nbsp;беспечен&nbsp;и&nbsp;толст. </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Время&nbsp;летит.&nbsp;Бумага&nbsp;терпит.&nbsp;Кто&nbsp;виноват?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G... </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;Питере&nbsp;шум&nbsp;и&nbsp;влага.&nbsp;Эрмитаж&nbsp;нарасхват. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В&nbsp;зале,&nbsp;привычным&nbsp;фоном&nbsp;став,&nbsp;красуется&nbsp;холст. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;персонаж&nbsp;на&nbsp;оном&nbsp;-&nbsp;брав,&nbsp;беспечен&nbsp;и&nbsp;толст. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Уж&nbsp;с&nbsp;тополей,&nbsp;дубов&nbsp;и&nbsp;буков&nbsp;жёлтая&nbsp;падает&nbsp;листва.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span>
+<span class="line"><span class="txt"> Уж&nbsp;с&nbsp;тополей,&nbsp;дубов&nbsp;и&nbsp;буков&nbsp;жёлтая&nbsp;падает&nbsp;листва.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span></span>
 <span class="txt"> Нет&nbsp;в&nbsp;алфавите&nbsp;нужных&nbsp;буков,&nbsp;чтобы&nbsp;сложить&nbsp;из&nbsp;них&nbsp;слова. </span>
 <span class="txt"> Способа&nbsp;нет&nbsp;добиться&nbsp;толка&nbsp;от&nbsp;персонажа&nbsp;моего. </span>
 <span class="txt"> Всё&nbsp;потому,&nbsp;что&nbsp;был&nbsp;он&nbsp;только&nbsp;лодырь&nbsp;и&nbsp;больше&nbsp;ничего. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Да,&nbsp;никаких&nbsp;не&nbsp;делал&nbsp;дел&nbsp;он,&nbsp;я&nbsp;узнавал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G... </span>
-<span class="txt"> Целую&nbsp;жизнь&nbsp;пил-ел&nbsp;он,&nbsp;пел&nbsp;он&nbsp;и&nbsp;танцевал. </span>
-<span class="txt"> Но&nbsp;на&nbsp;холсте&nbsp;прекрасном&nbsp;всплыл&nbsp;из&nbsp;небытия. </span>
-<span class="txt"> Хоть&nbsp;и&nbsp;гулякой&nbsp;праздным&nbsp;был,&nbsp;как&nbsp;Моцарт&nbsp;и&nbsp;я. </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Да,&nbsp;никаких&nbsp;не&nbsp;делал&nbsp;дел&nbsp;он,&nbsp;я&nbsp;узнавал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G... </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Целую&nbsp;жизнь&nbsp;пил-ел&nbsp;он,&nbsp;пел&nbsp;он&nbsp;и&nbsp;танцевал. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;на&nbsp;холсте&nbsp;прекрасном&nbsp;всплыл&nbsp;из&nbsp;небытия. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Хоть&nbsp;и&nbsp;гулякой&nbsp;праздным&nbsp;был,&nbsp;как&nbsp;Моцарт&nbsp;и&nbsp;я. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Перья&nbsp;долой,&nbsp;подать&nbsp;фужеры,&nbsp;фрукты&nbsp;и&nbsp;музыку&nbsp;сюда!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span>
+<span class="line"><span class="txt"> Перья&nbsp;долой,&nbsp;подать&nbsp;фужеры,&nbsp;фрукты&nbsp;и&nbsp;музыку&nbsp;сюда!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em... </span></span>
 <span class="txt"> Будем&nbsp;бездельничать,&nbsp;моншеры,&nbsp;будем&nbsp;лениться,&nbsp;господа! </span>
 <span class="txt"> Но,&nbsp;несмотря&nbsp;на&nbsp;нашу&nbsp;леность,&nbsp;много&nbsp;веков&nbsp;пускай&nbsp;подряд </span>
 <span class="txt"> ценят&nbsp;потомки&nbsp;нашу&nbsp;ценность&nbsp;и&nbsp;с&nbsp;замиранием&nbsp;хранят. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Организуя&nbsp;стаи,&nbsp;пусть&nbsp;повсюду&nbsp;не&nbsp;раз&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G... </span>
-<span class="txt"> правнуки&nbsp;наши&nbsp;наизусть&nbsp;цитируют&nbsp;нас. </span>
-<span class="txt"> И&nbsp;над&nbsp;рекой&nbsp;Невою&nbsp;масс&nbsp;народных&nbsp;толпа </span>
-<span class="txt"> пусть&nbsp;вознесёт&nbsp;главою&nbsp;нас&nbsp;превыше&nbsp;столпа. </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Организуя&nbsp;стаи,&nbsp;пусть&nbsp;повсюду&nbsp;не&nbsp;раз&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7 G... </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;правнуки&nbsp;наши&nbsp;наизусть&nbsp;цитируют&nbsp;нас. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;над&nbsp;рекой&nbsp;Невою&nbsp;масс&nbsp;народных&nbsp;толпа </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пусть&nbsp;вознесёт&nbsp;главою&nbsp;нас&nbsp;превыше&nbsp;столпа. </span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2004</span>                                                        Нотировка по исполнению <span class="year">2014</span> года.
+<pre><span class="year">2004</span>                                                        Нотировка по исполнению <span class="year">2014</span> года.
                                                             Автор исполняет в G#m с каподастром
                                                             на IV ладу. На альбоме <a href="../../Disks/raycentr.html">Райцентр</a> исполнено
                                                             в Am под синтезатор.
 
-
 </pre>
+
 
                 </div>
         </div>

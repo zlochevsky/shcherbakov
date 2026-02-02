@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,71 +423,69 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">ПО ПОВОДУ ОЧЕРЕДНЫХ РЕФОРМ</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em Hm Em F# Hm </span>
-<span class="txt"> Как-то&nbsp;раз&nbsp;на&nbsp;собранье&nbsp;партейном&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm         Em </span>
-<span class="txt"> вдруг&nbsp;внезапно&nbsp;запахло&nbsp;портвейном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span>
-<span class="txt"> самым&nbsp;гнусным&nbsp;дешёвым&nbsp;портвейном&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           H7   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;засмердило&nbsp;вовсю,&nbsp;хоть&nbsp;беги!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span>
-<span class="txt"> Вы&nbsp;подумайте,&nbsp;в&nbsp;плане&nbsp;идейном,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am    H7   Em </span>
-<span class="txt"> ведь&nbsp;не&nbsp;где-то&nbsp;в&nbsp;шалмане&nbsp;питейном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C          Hm </span>
-<span class="txt"> а&nbsp;в&nbsp;литейном,&nbsp;в&nbsp;собранье&nbsp;партейном!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em    G7   Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Просто&nbsp;ужас,&nbsp;что&nbsp;скажут&nbsp;враги!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   F#    F#7  Hm </span>
+data-key="Hm"><h1>ПО ПОВОДУ ОЧЕРЕДНЫХ РЕФОРМ</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em Hm Em F# Hm </span></span>
+<span class="line"><span class="txt"> Как-то&nbsp;раз&nbsp;на&nbsp;собранье&nbsp;партейном&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm         Em </span></span>
+<span class="line"><span class="txt"> вдруг&nbsp;внезапно&nbsp;запахло&nbsp;портвейном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span></span>
+<span class="line"><span class="txt"> самым&nbsp;гнусным&nbsp;дешёвым&nbsp;портвейном&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           H7   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;засмердило&nbsp;вовсю,&nbsp;хоть&nbsp;беги!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span></span>
+<span class="line"><span class="txt"> Вы&nbsp;подумайте,&nbsp;в&nbsp;плане&nbsp;идейном,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am    H7   Em </span></span>
+<span class="line"><span class="txt"> ведь&nbsp;не&nbsp;где-то&nbsp;в&nbsp;шалмане&nbsp;питейном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C          Hm </span></span>
+<span class="line"><span class="txt"> а&nbsp;в&nbsp;литейном,&nbsp;в&nbsp;собранье&nbsp;партейном!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em    G7   Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Просто&nbsp;ужас,&nbsp;что&nbsp;скажут&nbsp;враги!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   F#    F#7  Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Все,&nbsp;конечно,&nbsp;учуяли&nbsp;сразу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm         Em </span>
-<span class="txt"> и&nbsp;решили&nbsp;исторгнуть&nbsp;заразу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span>
-<span class="txt"> И&nbsp;тотчас&nbsp;же,&nbsp;согласно&nbsp;приказу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           H7   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;удалили&nbsp;из&nbsp;зала&nbsp;двоих.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span>
-<span class="txt"> Хоть&nbsp;они&nbsp;и&nbsp;божились&nbsp;ретиво,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am    H7   Em </span>
-<span class="txt"> что&nbsp;не&nbsp;пьют&nbsp;ничего,&nbsp;кроме&nbsp;пива,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C          Hm </span>
-<span class="txt"> их&nbsp;похерили&nbsp;несправедливо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em    G7   Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;затем&nbsp;и&nbsp;ещё&nbsp;четверых.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   F#    F#7  Hm </span>
+<span class="line"><span class="txt"> Все,&nbsp;конечно,&nbsp;учуяли&nbsp;сразу&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm         Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;решили&nbsp;исторгнуть&nbsp;заразу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span></span>
+<span class="line"><span class="txt"> И&nbsp;тотчас&nbsp;же,&nbsp;согласно&nbsp;приказу,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           H7   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;удалили&nbsp;из&nbsp;зала&nbsp;двоих.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span></span>
+<span class="line"><span class="txt"> Хоть&nbsp;они&nbsp;и&nbsp;божились&nbsp;ретиво,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am    H7   Em </span></span>
+<span class="line"><span class="txt"> что&nbsp;не&nbsp;пьют&nbsp;ничего,&nbsp;кроме&nbsp;пива,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C          Hm </span></span>
+<span class="line"><span class="txt"> их&nbsp;похерили&nbsp;несправедливо,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em    G7   Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;затем&nbsp;и&nbsp;ещё&nbsp;четверых.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   F#    F#7  Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Только&nbsp;запах&nbsp;остался&nbsp;в&nbsp;собранье&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm         Em </span>
-<span class="txt"> и&nbsp;витал,&nbsp;отвлекая&nbsp;вниманье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span>
-<span class="txt"> И&nbsp;тогда,&nbsp;проявивши&nbsp;старанье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           H7   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;изловили&nbsp;ещё&nbsp;одного.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span>
-<span class="txt"> И&nbsp;хотя&nbsp;он&nbsp;орал&nbsp;во&nbsp;всю&nbsp;глотку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am    H7   Em </span>
-<span class="txt"> что,&nbsp;мол,&nbsp;сызмальства&nbsp;пьет&nbsp;только&nbsp;водку,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C          Hm </span>
-<span class="txt"> отвели&nbsp;его&nbsp;за&nbsp;загородку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em    G7   Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;за&nbsp;ним&nbsp;и&nbsp;ещё&nbsp;кой-кого.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   F#    F#7  Hm </span>
+<span class="line"><span class="txt"> Только&nbsp;запах&nbsp;остался&nbsp;в&nbsp;собранье&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm         Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;витал,&nbsp;отвлекая&nbsp;вниманье.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span></span>
+<span class="line"><span class="txt"> И&nbsp;тогда,&nbsp;проявивши&nbsp;старанье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           H7   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;изловили&nbsp;ещё&nbsp;одного.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span></span>
+<span class="line"><span class="txt"> И&nbsp;хотя&nbsp;он&nbsp;орал&nbsp;во&nbsp;всю&nbsp;глотку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am    H7   Em </span></span>
+<span class="line"><span class="txt"> что,&nbsp;мол,&nbsp;сызмальства&nbsp;пьет&nbsp;только&nbsp;водку,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C          Hm </span></span>
+<span class="line"><span class="txt"> отвели&nbsp;его&nbsp;за&nbsp;загородку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em    G7   Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;за&nbsp;ним&nbsp;и&nbsp;ещё&nbsp;кой-кого.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   F#    F#7  Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Каждый&nbsp;клялся&nbsp;под&nbsp;честное&nbsp;слово,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm         Em </span>
-<span class="txt"> что&nbsp;портвейну&nbsp;не&nbsp;пил&nbsp;никакого,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span>
-<span class="txt"> что&nbsp;ликёру&nbsp;хлебнул&nbsp;иль&nbsp;сухого,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           H7   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;стучал&nbsp;партбилетом&nbsp;об&nbsp;стол.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span>
-<span class="txt"> Но&nbsp;потом&nbsp;всё&nbsp;равно&nbsp;изгонялся,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am    H7   Em </span>
-<span class="txt"> только&nbsp;запах&nbsp;один&nbsp;оставался...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C          Hm </span>
-<span class="txt"> Наконец&nbsp;и&nbsp;весь&nbsp;зал&nbsp;разбежался,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em    G7   Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;президиум&nbsp;тоже&nbsp;ушёл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   F#    F#7  Hm </span>
+<span class="line"><span class="txt"> Каждый&nbsp;клялся&nbsp;под&nbsp;честное&nbsp;слово,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm         Em </span></span>
+<span class="line"><span class="txt"> что&nbsp;портвейну&nbsp;не&nbsp;пил&nbsp;никакого,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span></span>
+<span class="line"><span class="txt"> что&nbsp;ликёру&nbsp;хлебнул&nbsp;иль&nbsp;сухого,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           H7   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;стучал&nbsp;партбилетом&nbsp;об&nbsp;стол.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;потом&nbsp;всё&nbsp;равно&nbsp;изгонялся,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am    H7   Em </span></span>
+<span class="line"><span class="txt"> только&nbsp;запах&nbsp;один&nbsp;оставался...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C          Hm </span></span>
+<span class="line"><span class="txt"> Наконец&nbsp;и&nbsp;весь&nbsp;зал&nbsp;разбежался,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em    G7   Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;президиум&nbsp;тоже&nbsp;ушёл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   F#    F#7  Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Председатель&nbsp;в&nbsp;тоске&nbsp;плюнул&nbsp;на&nbsp;пол,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm         Em </span>
-<span class="txt"> почесал&nbsp;себе&nbsp;лоб,&nbsp;поцарапал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span>
-<span class="txt"> Он&nbsp;портвейну&nbsp;и&nbsp;на&nbsp;зуб&nbsp;не&nbsp;капал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           H7   Em </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;так&nbsp;как&nbsp;пил&nbsp;заграничный&nbsp;коньяк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span>
-<span class="txt"> Он&nbsp;отчалил&nbsp;к&nbsp;заботам&nbsp;семейным,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am    H7   Em </span>
-<span class="txt"> стало&nbsp;пусто&nbsp;в&nbsp;собраньи&nbsp;партейном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C          Hm </span>
-<span class="txt"> но&nbsp;портвейном&nbsp;тут&nbsp;пахло,&nbsp;портвейном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em    G7   Hm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;уж&nbsp;там,&nbsp;очевидно,&nbsp;никак!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   F#    F#7  Hm </span>
+<span class="line"><span class="txt"> Председатель&nbsp;в&nbsp;тоске&nbsp;плюнул&nbsp;на&nbsp;пол,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Hm         Em </span></span>
+<span class="line"><span class="txt"> почесал&nbsp;себе&nbsp;лоб,&nbsp;поцарапал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span></span>
+<span class="line"><span class="txt"> Он&nbsp;портвейну&nbsp;и&nbsp;на&nbsp;зуб&nbsp;не&nbsp;капал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">           H7   Em </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;так&nbsp;как&nbsp;пил&nbsp;заграничный&nbsp;коньяк.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     F#         Hm </span></span>
+<span class="line"><span class="txt"> Он&nbsp;отчалил&nbsp;к&nbsp;заботам&nbsp;семейным,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Am    H7   Em </span></span>
+<span class="line"><span class="txt"> стало&nbsp;пусто&nbsp;в&nbsp;собраньи&nbsp;партейном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     C          Hm </span></span>
+<span class="line"><span class="txt"> но&nbsp;портвейном&nbsp;тут&nbsp;пахло,&nbsp;портвейном,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     Em    G7   Hm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;уж&nbsp;там,&nbsp;очевидно,&nbsp;никак!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G   F#    F#7  Hm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

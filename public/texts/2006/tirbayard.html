@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,20 +433,20 @@ span.c {
 data-key="Am"><span class="txt"> ТИР&nbsp;"БОЯРД" </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вст.&nbsp;(=&nbsp;пр.)&nbsp; </span><span class="ch"> Am  Am/C  E7/G#  bass: 5H 6G# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/C  E7/G#  bass: 5H 6G# </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  A7/C#  Dm    bass: 4F 5A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7/G#  bass: 5H 6G#  Am </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вст.&nbsp;(=&nbsp;пр.)&nbsp; </span><span class="ch"> Am  Am/C  E7/G#  bass: 5H 6G# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Am/C  E7/G#  bass: 5H 6G# </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  A7/C#  Dm    bass: 4F 5A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7/G#  bass: 5H 6G#  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> Хорошо&nbsp;было&nbsp;Жан-Поль&nbsp;Сартру.&nbsp;Existence&nbsp;изо&nbsp;всех&nbsp;фрамуг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7/G# Am E7/G# Am </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> Чуть&nbsp;предлог,&nbsp;на&nbsp;засов&nbsp;мансарду&nbsp;-&nbsp;и&nbsp;твори&nbsp;без&nbsp;помех&nbsp;про&nbsp;мух.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C A7/C# Dm F7/Eb Am/E E Am </span>
+<span class="txt"> &nbsp;,&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> Хорошо&nbsp;было&nbsp;Жан-Поль&nbsp;Сартру.&nbsp;Existence&nbsp;изо&nbsp;всех&nbsp;фрамуг.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am E7/G# Am E7/G# Am </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> Чуть&nbsp;предлог,&nbsp;на&nbsp;засов&nbsp;мансарду&nbsp;-&nbsp;и&nbsp;твори&nbsp;без&nbsp;помех&nbsp;про&nbsp;мух.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C A7/C# Dm F7/Eb Am/E E Am </span></span>
 <span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> А&nbsp;попробуй-ка&nbsp;без&nbsp;засовов&nbsp;под&nbsp;густой&nbsp;коммунальный&nbsp;лай,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E Am E Am G C A7/C# Dm </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> за&nbsp;ночь&nbsp;вымокнув&nbsp;и&nbsp;засохнув,&nbsp;четверть&nbsp;текста&nbsp;наутро&nbsp;сдай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B Am B E Am </span>
+<span class="line"><span class="txt"> А&nbsp;попробуй-ка&nbsp;без&nbsp;засовов&nbsp;под&nbsp;густой&nbsp;коммунальный&nbsp;лай,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E Am E Am G C A7/C# Dm </span></span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> за&nbsp;ночь&nbsp;вымокнув&nbsp;и&nbsp;засохнув,&nbsp;четверть&nbsp;текста&nbsp;наутро&nbsp;сдай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B Am B E Am </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
@@ -449,7 +457,7 @@ data-key="Am"><span class="txt"> ТИР&nbsp;"БОЯРД" </span>
 <span class="txt"> Может,&nbsp;высохнув&nbsp;и&nbsp;намокнув,&nbsp;четверть&nbsp;суммы&nbsp;получишь&nbsp;в&nbsp;срок. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> пр. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пр. </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Впору&nbsp;плакать,&nbsp;а&nbsp;ты&nbsp;не&nbsp;плачешь,&nbsp;а&nbsp;ты&nbsp;песни&nbsp;поёшь&nbsp;без&nbsp;нот. </span>
@@ -464,13 +472,13 @@ data-key="Am"><span class="txt"> ТИР&nbsp;"БОЯРД" </span>
 <span class="txt"> Это&nbsp;промысел&nbsp;твой&nbsp;безгрешный,&nbsp;это&nbsp;твой&nbsp;клавикорд,&nbsp;Моцарт! </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> пр. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пр. </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Только&nbsp;в&nbsp;тире&nbsp;по&nbsp;крайней&nbsp;мере&nbsp;так&nbsp;уместны&nbsp;ружье&nbsp;и&nbsp;ты, </span>
 <span class="txt"> плюс&nbsp;мишени&nbsp;-&nbsp;морские&nbsp;звери:&nbsp;чудо-скаты&nbsp;и&nbsp;чудо-киты. </span>
 <span class="txt"> То-то&nbsp;ты,&nbsp;подходя&nbsp;к&nbsp;"Боярду",&nbsp;машешь&nbsp;крыльями&nbsp;-&nbsp;будто&nbsp;сам </span>
-<span class="txt"> завтра&nbsp;тоже&nbsp;себе&nbsp;мансарду&nbsp;купишь&nbsp;с&nbsp;видом&nbsp;на&nbsp;&nbsp;Notre-Dame. </span><span class="ch">  </span>
+<span class="line"><span class="txt"> завтра&nbsp;тоже&nbsp;себе&nbsp;мансарду&nbsp;купишь&nbsp;с&nbsp;видом&nbsp;на&nbsp;&nbsp;Notre-Dame. </span><span class="ch">  </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> На&nbsp;четыре&nbsp;косых&nbsp;сажени&nbsp;отступив&nbsp;от&nbsp;подводных&nbsp;чуд, </span>
@@ -479,7 +487,7 @@ data-key="Am"><span class="txt"> ТИР&nbsp;"БОЯРД" </span>
 <span class="txt"> Скат&nbsp;чернильным&nbsp;сочится&nbsp;током.&nbsp;Лобстер&nbsp;делает&nbsp;всем&nbsp;клешнёй... </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> пр. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пр. </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> То-то&nbsp;чудо,&nbsp;когда&nbsp;в&nbsp;два&nbsp;счёта&nbsp;ты&nbsp;из&nbsp;ста&nbsp;выбиваешь&nbsp;сто! </span>
@@ -489,7 +497,7 @@ data-key="Am"><span class="txt"> ТИР&nbsp;"БОЯРД" </span>
 <span class="txt">  </span>
  <br />
 <span class="txt"> Часом&nbsp;позже,&nbsp;в&nbsp;аэроплане,&nbsp;засыпаешь&nbsp;и&nbsp;смотришь&nbsp;сон, </span>
-<span class="txt"> как&nbsp;(с&nbsp;большим&nbsp;porte-monnaie&nbsp;в&nbsp;кармане)&nbsp;принимаешь&nbsp;парад&nbsp;ООН. </span><span class="ch">  </span>
+<span class="line"><span class="txt"> как&nbsp;(с&nbsp;большим&nbsp;porte-monnaie&nbsp;в&nbsp;кармане)&nbsp;принимаешь&nbsp;парад&nbsp;ООН. </span><span class="ch">  </span></span>
 <span class="txt"> Как&nbsp;вдоль&nbsp;танковых&nbsp;и&nbsp;пехотных&nbsp;войск&nbsp;идёшь&nbsp;ты,&nbsp;чеканя&nbsp;шаг. </span>
 <span class="txt"> Дескать,&nbsp;тот&nbsp;ещё&nbsp;сам&nbsp;охотник.&nbsp;Только&nbsp;спрятанный&nbsp;под&nbsp;пиджак. </span>
 <span class="txt">  </span>
@@ -497,18 +505,11 @@ data-key="Am"><span class="txt"> ТИР&nbsp;"БОЯРД" </span>
 <span class="txt"> ...&nbsp;Рдеют&nbsp;цифры&nbsp;на&nbsp;мониторе:&nbsp;минус&nbsp;семьдесят&nbsp;за&nbsp;бортом. </span>
 <span class="txt"> И&nbsp;в&nbsp;окне&nbsp;голубое&nbsp;море&nbsp;покрывается&nbsp;снегом&nbsp;и&nbsp;льдом. </span>
 <span class="txt"> Стерлядь-чудо&nbsp;златым,&nbsp;как&nbsp;уголь,&nbsp;глазом&nbsp;блещет&nbsp;из&nbsp;полыньи. </span>
-<span class="txt"> Турбулентность&nbsp;идёт&nbsp;на&nbsp;убыль.&nbsp;Notre-Dame&nbsp;говорит&nbsp;"bonne&nbsp;nuit" </span><span class="ch">  </span>
+<span class="line"><span class="txt"> Турбулентность&nbsp;идёт&nbsp;на&nbsp;убыль.&nbsp;Notre-Dame&nbsp;говорит&nbsp;"bonne&nbsp;nuit" </span><span class="ch">  </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
- <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2006</span>                                                            ок. (= пр.)
+<pre><span class="year">2006</span>                                                            ок. (= пр.)
 
 
   Am/C            E7/G#           A7/C#           F7/Eb        Am6 (иногда вместо Am)
@@ -522,8 +523,8 @@ data-key="Am"><span class="txt"> ТИР&nbsp;"БОЯРД" </span>
 
 
 
-
 </pre>
+
 
                 </div>
         </div>

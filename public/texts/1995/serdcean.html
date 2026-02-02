@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,89 +423,78 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">СЕРДЦЕ АНГЕЛА</span>
+data-key="Am"><h1>СЕРДЦЕ АНГЕЛА</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;календари&nbsp;не&nbsp;занесён,&nbsp;не&nbsp;изловим&nbsp;арканом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span>
-<span class="txt"> наверняка&nbsp;слабоголос,&nbsp;исключено,&nbsp;что&nbsp;груб,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span>
-<span class="txt"> по&nbsp;вековой&nbsp;лесостепи,&nbsp;по&nbsp;молодым&nbsp;барханам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span>
-<span class="txt"> точно&nbsp;в&nbsp;бреду&nbsp;гробовщика,&nbsp;двигаюсь&nbsp;я,&nbsp;как&nbsp;труп.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span>
+<span class="line"><span class="txt"> В&nbsp;календари&nbsp;не&nbsp;занесён,&nbsp;не&nbsp;изловим&nbsp;арканом,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span></span>
+<span class="line"><span class="txt"> наверняка&nbsp;слабоголос,&nbsp;исключено,&nbsp;что&nbsp;груб,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span></span>
+<span class="line"><span class="txt"> по&nbsp;вековой&nbsp;лесостепи,&nbsp;по&nbsp;молодым&nbsp;барханам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span></span>
+<span class="line"><span class="txt"> точно&nbsp;в&nbsp;бреду&nbsp;гробовщика,&nbsp;двигаюсь&nbsp;я,&nbsp;как&nbsp;труп.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Солончаки,&nbsp;известняки,&nbsp;торсы&nbsp;в&nbsp;броне&nbsp;и&nbsp;в&nbsp;перьях,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span>
-<span class="txt"> Аничков&nbsp;мост,&nbsp;Трокадеро,&nbsp;улица&nbsp;Жабр&nbsp;и&nbsp;Фибр&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span>
-<span class="txt"> спутались&nbsp;так,&nbsp;что&nbsp;иногда&nbsp;в&nbsp;американский&nbsp;берег&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span>
-<span class="txt"> взор&nbsp;уперев,&nbsp;я&nbsp;узнавал,&nbsp;скажем,&nbsp;Тайланд&nbsp;и&nbsp;Кипр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span>
+<span class="line"><span class="txt"> Солончаки,&nbsp;известняки,&nbsp;торсы&nbsp;в&nbsp;броне&nbsp;и&nbsp;в&nbsp;перьях,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span></span>
+<span class="line"><span class="txt"> Аничков&nbsp;мост,&nbsp;Трокадеро,&nbsp;улица&nbsp;Жабр&nbsp;и&nbsp;Фибр&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span></span>
+<span class="line"><span class="txt"> спутались&nbsp;так,&nbsp;что&nbsp;иногда&nbsp;в&nbsp;американский&nbsp;берег&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span></span>
+<span class="line"><span class="txt"> взор&nbsp;уперев,&nbsp;я&nbsp;узнавал,&nbsp;скажем,&nbsp;Тайланд&nbsp;и&nbsp;Кипр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Волей&nbsp;моей&nbsp;произошли&nbsp;и&nbsp;ордена,&nbsp;и&nbsp;кланы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span>
-<span class="txt"> Разве&nbsp;что&nbsp;в&nbsp;тех&nbsp;двух&nbsp;областях&nbsp;я&nbsp;не&nbsp;завёл&nbsp;семьи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span>
-<span class="txt"> где&nbsp;только&nbsp;снег,&nbsp;только&nbsp;зима&nbsp;-&nbsp;и&nbsp;никакой&nbsp;рекламы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span>
-<span class="txt"> На&nbsp;остальных&nbsp;материках&nbsp;семьдесят&nbsp;стран&nbsp;-&nbsp;мои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span>
+<span class="line"><span class="txt"> Волей&nbsp;моей&nbsp;произошли&nbsp;и&nbsp;ордена,&nbsp;и&nbsp;кланы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span></span>
+<span class="line"><span class="txt"> Разве&nbsp;что&nbsp;в&nbsp;тех&nbsp;двух&nbsp;областях&nbsp;я&nbsp;не&nbsp;завёл&nbsp;семьи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span></span>
+<span class="line"><span class="txt"> где&nbsp;только&nbsp;снег,&nbsp;только&nbsp;зима&nbsp;-&nbsp;и&nbsp;никакой&nbsp;рекламы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span></span>
+<span class="line"><span class="txt"> На&nbsp;остальных&nbsp;материках&nbsp;семьдесят&nbsp;стран&nbsp;-&nbsp;мои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Жители&nbsp;сёл,&nbsp;жители&nbsp;скал&nbsp;-&nbsp;лодыри&nbsp;все&nbsp;и&nbsp;воры.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span>
-<span class="txt"> Сборщики&nbsp;трав,&nbsp;рубщики&nbsp;верб&nbsp;-&nbsp;к&nbsp;общему&nbsp;всех&nbsp;клейму.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span>
-<span class="txt"> Семьдесят&nbsp;лет&nbsp;чары&nbsp;свои&nbsp;в&nbsp;хижины&nbsp;к&nbsp;ним&nbsp;и&nbsp;норы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B     Hm7-5 Am </span>
-<span class="txt"> я&nbsp;приносил,&nbsp;но&nbsp;применить&nbsp;не&nbsp;находил,&nbsp;к&nbsp;кому.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    D7/F# F  E  Am </span>
+<span class="line"><span class="txt"> Жители&nbsp;сёл,&nbsp;жители&nbsp;скал&nbsp;-&nbsp;лодыри&nbsp;все&nbsp;и&nbsp;воры.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span></span>
+<span class="line"><span class="txt"> Сборщики&nbsp;трав,&nbsp;рубщики&nbsp;верб&nbsp;-&nbsp;к&nbsp;общему&nbsp;всех&nbsp;клейму.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span></span>
+<span class="line"><span class="txt"> Семьдесят&nbsp;лет&nbsp;чары&nbsp;свои&nbsp;в&nbsp;хижины&nbsp;к&nbsp;ним&nbsp;и&nbsp;норы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B     Hm7-5 Am </span></span>
+<span class="line"><span class="txt"> я&nbsp;приносил,&nbsp;но&nbsp;применить&nbsp;не&nbsp;находил,&nbsp;к&nbsp;кому.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    D7/F# F  E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> С&nbsp;кем&nbsp;ни&nbsp;сойдись,&nbsp;либо&nbsp;рождён,&nbsp;либо&nbsp;взращён&nbsp;калекой.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span>
-<span class="txt"> Каждый&nbsp;второй&nbsp;слеп&nbsp;или&nbsp;нем,&nbsp;или&nbsp;разут,&nbsp;раздет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span>
-<span class="txt"> Слышал&nbsp;бы&nbsp;кто,&nbsp;что&nbsp;за&nbsp;латынь&nbsp;им&nbsp;я&nbsp;внушал,&nbsp;как&nbsp;лекарь.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span>
-<span class="txt"> Видел&nbsp;бы&nbsp;кто,&nbsp;сколько&nbsp;ножей&nbsp;щерилось&nbsp;мне&nbsp;в&nbsp;ответ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span>
+<span class="line"><span class="txt"> С&nbsp;кем&nbsp;ни&nbsp;сойдись,&nbsp;либо&nbsp;рождён,&nbsp;либо&nbsp;взращён&nbsp;калекой.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span></span>
+<span class="line"><span class="txt"> Каждый&nbsp;второй&nbsp;слеп&nbsp;или&nbsp;нем,&nbsp;или&nbsp;разут,&nbsp;раздет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span></span>
+<span class="line"><span class="txt"> Слышал&nbsp;бы&nbsp;кто,&nbsp;что&nbsp;за&nbsp;латынь&nbsp;им&nbsp;я&nbsp;внушал,&nbsp;как&nbsp;лекарь.&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span></span>
+<span class="line"><span class="txt"> Видел&nbsp;бы&nbsp;кто,&nbsp;сколько&nbsp;ножей&nbsp;щерилось&nbsp;мне&nbsp;в&nbsp;ответ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Ключницами&nbsp;в&nbsp;монастырях,&nbsp;мойщицами&nbsp;в&nbsp;тавернах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span>
-<span class="txt"> от&nbsp;рядовой&nbsp;кинозвезды&nbsp;до&nbsp;золотой&nbsp;швеи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span>
-<span class="txt"> исключено,&nbsp;что&nbsp;неземных,&nbsp;наверняка&nbsp;неверных,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span>
-<span class="txt"> ладных&nbsp;собой&nbsp;семьдесят&nbsp;жён&nbsp;в&nbsp;разных&nbsp;краях&nbsp;-&nbsp;мои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span>
+<span class="line"><span class="txt"> Ключницами&nbsp;в&nbsp;монастырях,&nbsp;мойщицами&nbsp;в&nbsp;тавернах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span></span>
+<span class="line"><span class="txt"> от&nbsp;рядовой&nbsp;кинозвезды&nbsp;до&nbsp;золотой&nbsp;швеи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span></span>
+<span class="line"><span class="txt"> исключено,&nbsp;что&nbsp;неземных,&nbsp;наверняка&nbsp;неверных,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span></span>
+<span class="line"><span class="txt"> ладных&nbsp;собой&nbsp;семьдесят&nbsp;жён&nbsp;в&nbsp;разных&nbsp;краях&nbsp;-&nbsp;мои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;устремлюсь&nbsp;от&nbsp;мятежа&nbsp;толку&nbsp;искать&nbsp;в&nbsp;жандармах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span>
-<span class="txt"> Выйдет&nbsp;луна&nbsp;-&nbsp;не&nbsp;восхищусь,&nbsp;я&nbsp;не&nbsp;люблю&nbsp;луны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span>
-<span class="txt"> В&nbsp;музыке&nbsp;сфер&nbsp;прежде&nbsp;я&nbsp;чтил&nbsp;сольный&nbsp;рефрен&nbsp;ударных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B     Hm7-5 Am </span>
-<span class="txt"> Ныне&nbsp;он&nbsp;мил&nbsp;чуть&nbsp;ли&nbsp;не&nbsp;всем,&nbsp;что&nbsp;до&nbsp;меня&nbsp;-&nbsp;увы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    D7/F# F  E  Am </span>
+<span class="line"><span class="txt"> Не&nbsp;устремлюсь&nbsp;от&nbsp;мятежа&nbsp;толку&nbsp;искать&nbsp;в&nbsp;жандармах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span></span>
+<span class="line"><span class="txt"> Выйдет&nbsp;луна&nbsp;-&nbsp;не&nbsp;восхищусь,&nbsp;я&nbsp;не&nbsp;люблю&nbsp;луны.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span></span>
+<span class="line"><span class="txt"> В&nbsp;музыке&nbsp;сфер&nbsp;прежде&nbsp;я&nbsp;чтил&nbsp;сольный&nbsp;рефрен&nbsp;ударных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B     Hm7-5 Am </span></span>
+<span class="line"><span class="txt"> Ныне&nbsp;он&nbsp;мил&nbsp;чуть&nbsp;ли&nbsp;не&nbsp;всем,&nbsp;что&nbsp;до&nbsp;меня&nbsp;-&nbsp;увы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    D7/F# F  E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> К&nbsp;облаку&nbsp;взмыл&nbsp;белый&nbsp;орёл,&nbsp;тронулась&nbsp;вглубь&nbsp;сардина,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span>
-<span class="txt"> бравый&nbsp;капрал&nbsp;Наполеон&nbsp;завоевал&nbsp;Москву.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span>
-<span class="txt"> Ведал&nbsp;бы&nbsp;кто,&nbsp;как&nbsp;это&nbsp;всё,&nbsp;как&nbsp;это&nbsp;мне&nbsp;противно!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span>
-<span class="txt"> Семьдесят&nbsp;жён,&nbsp;семьдесят&nbsp;стран,&nbsp;семьдесят&nbsp;лет&nbsp;живу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span>
+<span class="line"><span class="txt"> К&nbsp;облаку&nbsp;взмыл&nbsp;белый&nbsp;орёл,&nbsp;тронулась&nbsp;вглубь&nbsp;сардина,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span></span>
+<span class="line"><span class="txt"> бравый&nbsp;капрал&nbsp;Наполеон&nbsp;завоевал&nbsp;Москву.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span></span>
+<span class="line"><span class="txt"> Ведал&nbsp;бы&nbsp;кто,&nbsp;как&nbsp;это&nbsp;всё,&nbsp;как&nbsp;это&nbsp;мне&nbsp;противно!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span></span>
+<span class="line"><span class="txt"> Семьдесят&nbsp;жён,&nbsp;семьдесят&nbsp;стран,&nbsp;семьдесят&nbsp;лет&nbsp;живу.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Соло&nbsp;литавр&nbsp;гибнет&nbsp;в&nbsp;бою&nbsp;за&nbsp;чистоту&nbsp;звучанья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span>
-<span class="txt"> Зыблется&nbsp;твердь,&nbsp;морщится&nbsp;дол,&nbsp;тянется&nbsp;вспять&nbsp;вода.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span>
-<span class="txt"> Да,&nbsp;это&nbsp;он,&nbsp;верхний&nbsp;предел,&nbsp;апофеоз&nbsp;отчаянья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B     Hm7-5 Am </span>
-<span class="txt"> Ныне&nbsp;ему&nbsp;мало&nbsp;кто&nbsp;рад,&nbsp;что&nbsp;до&nbsp;меня&nbsp;-&nbsp;я&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    D7/F# F  E  Am </span>
+<span class="line"><span class="txt"> Соло&nbsp;литавр&nbsp;гибнет&nbsp;в&nbsp;бою&nbsp;за&nbsp;чистоту&nbsp;звучанья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span></span>
+<span class="line"><span class="txt"> Зыблется&nbsp;твердь,&nbsp;морщится&nbsp;дол,&nbsp;тянется&nbsp;вспять&nbsp;вода.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gdim D     Dm    Am </span></span>
+<span class="line"><span class="txt"> Да,&nbsp;это&nbsp;он,&nbsp;верхний&nbsp;предел,&nbsp;апофеоз&nbsp;отчаянья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   B     Hm7-5 Am </span></span>
+<span class="line"><span class="txt"> Ныне&nbsp;ему&nbsp;мало&nbsp;кто&nbsp;рад,&nbsp;что&nbsp;до&nbsp;меня&nbsp;-&nbsp;я&nbsp;да.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F    D7/F# F  E  Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Это&nbsp;не&nbsp;жизнь,&nbsp;это&nbsp;не&nbsp;казнь,&nbsp;это&nbsp;сумбур&nbsp;и&nbsp;брызги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span>
-<span class="txt"> Раз&nbsp;уж&nbsp;ты&nbsp;есть,&nbsp;музыка&nbsp;сфер,&nbsp;не&nbsp;прозевай,&nbsp;развей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span>
-<span class="txt"> распредели&nbsp;перечень&nbsp;сей&nbsp;в&nbsp;рёве&nbsp;своём&nbsp;и&nbsp;визге.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span>
-<span class="txt"> Установи,&nbsp;кто&nbsp;я&nbsp;такой,&nbsp;что&nbsp;я&nbsp;за&nbsp;тварь,&nbsp;за&nbsp;зверь!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span>
+<span class="line"><span class="txt"> Это&nbsp;не&nbsp;жизнь,&nbsp;это&nbsp;не&nbsp;казнь,&nbsp;это&nbsp;сумбур&nbsp;и&nbsp;брызги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   F7    Am </span></span>
+<span class="line"><span class="txt"> Раз&nbsp;уж&nbsp;ты&nbsp;есть,&nbsp;музыка&nbsp;сфер,&nbsp;не&nbsp;прозевай,&nbsp;развей,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7/G D </span></span>
+<span class="line"><span class="txt"> распредели&nbsp;перечень&nbsp;сей&nbsp;в&nbsp;рёве&nbsp;своём&nbsp;и&nbsp;визге.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   Hm7-5 F7    Am </span></span>
+<span class="line"><span class="txt"> Установи,&nbsp;кто&nbsp;я&nbsp;такой,&nbsp;что&nbsp;я&nbsp;за&nbsp;тварь,&nbsp;за&nbsp;зверь!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm   F7    E7    Am </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1995</span>
-
+<pre><span class="year">1995</span>
 
 
 
@@ -507,6 +504,7 @@ data-key="Am"><span class="sng-title">СЕРДЦЕ АНГЕЛА</span>
 
 
 </pre>
+
 
                 </div>
         </div>

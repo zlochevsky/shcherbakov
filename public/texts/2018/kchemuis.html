@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,59 +423,56 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="G"><span class="txt"> К&nbsp;чему&nbsp;искать&nbsp;ночлег,&nbsp;покуда&nbsp;не&nbsp;стемнело?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Em   G </span>
-<span class="txt"> Скакать&nbsp;бы&nbsp;дальше,&nbsp;да&nbsp;кибитка&nbsp;устарела.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    Am </span>
-<span class="txt"> Хватило&nbsp;ей&nbsp;кривых&nbsp;дорог.&nbsp;Ободья&nbsp;сбились.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     H7 </span>
-<span class="txt"> Попутной&nbsp;песне&nbsp;вышел&nbsp;срок.&nbsp;Слова&nbsp;забылись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   D7 </span>
+data-key="G"><span class="line"><span class="txt"> К&nbsp;чему&nbsp;искать&nbsp;ночлег,&nbsp;покуда&nbsp;не&nbsp;стемнело?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Em   G </span></span>
+<span class="line"><span class="txt"> Скакать&nbsp;бы&nbsp;дальше,&nbsp;да&nbsp;кибитка&nbsp;устарела.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    Am </span></span>
+<span class="line"><span class="txt"> Хватило&nbsp;ей&nbsp;кривых&nbsp;дорог.&nbsp;Ободья&nbsp;сбились.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     H7 </span></span>
+<span class="line"><span class="txt"> Попутной&nbsp;песне&nbsp;вышел&nbsp;срок.&nbsp;Слова&nbsp;забылись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Умолкнет&nbsp;скоро&nbsp;и&nbsp;мотив&nbsp;за&nbsp;нотой&nbsp;нота.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C  D7 G D G </span>
-<span class="txt"> Уже&nbsp;он&nbsp;дольше&nbsp;срока&nbsp;прожил&nbsp;для&nbsp;чего-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C  D7 G7  C </span>
-<span class="txt"> Зачем-то&nbsp;случай&nbsp;уберёг&nbsp;его&nbsp;и&nbsp;пеплом&nbsp;не&nbsp;занёс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Am H7 C E Am </span>
-<span class="txt"> отмерив&nbsp;нотам&nbsp;век&nbsp;иной,&nbsp;чем&nbsp;у&nbsp;словес&nbsp;и&nbsp;у&nbsp;колёс.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   G  D7  Em </span>
+<span class="line"><span class="txt"> Умолкнет&nbsp;скоро&nbsp;и&nbsp;мотив&nbsp;за&nbsp;нотой&nbsp;нота.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C  D7 G D G </span></span>
+<span class="line"><span class="txt"> Уже&nbsp;он&nbsp;дольше&nbsp;срока&nbsp;прожил&nbsp;для&nbsp;чего-то.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C  D7 G7  C </span></span>
+<span class="line"><span class="txt"> Зачем-то&nbsp;случай&nbsp;уберёг&nbsp;его&nbsp;и&nbsp;пеплом&nbsp;не&nbsp;занёс,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Am H7 C E Am </span></span>
+<span class="line"><span class="txt"> отмерив&nbsp;нотам&nbsp;век&nbsp;иной,&nbsp;чем&nbsp;у&nbsp;словес&nbsp;и&nbsp;у&nbsp;колёс.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   G  D7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сегодня,&nbsp;вслушиваясь&nbsp;в&nbsp;ноты&nbsp;эти&nbsp;снова,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Em   G </span>
-<span class="txt"> напев&nbsp;кузнечика&nbsp;я&nbsp;вспомнил&nbsp;непростого.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    Am </span>
-<span class="txt"> Не&nbsp;одного&nbsp;из&nbsp;рядовых&nbsp;зелёной&nbsp;братии,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 </span>
-<span class="txt"> но&nbsp;легендарного&nbsp;из&nbsp;школьной&nbsp;хрестоматии.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   D7 </span>
+<span class="line"><span class="txt"> Сегодня,&nbsp;вслушиваясь&nbsp;в&nbsp;ноты&nbsp;эти&nbsp;снова,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Em   G </span></span>
+<span class="line"><span class="txt"> напев&nbsp;кузнечика&nbsp;я&nbsp;вспомнил&nbsp;непростого.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    Am </span></span>
+<span class="line"><span class="txt"> Не&nbsp;одного&nbsp;из&nbsp;рядовых&nbsp;зелёной&nbsp;братии,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 </span></span>
+<span class="line"><span class="txt"> но&nbsp;легендарного&nbsp;из&nbsp;школьной&nbsp;хрестоматии.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Земною&nbsp;он&nbsp;в&nbsp;полях&nbsp;заботою&nbsp;не&nbsp;скован,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C  D7 G D G </span>
-<span class="txt"> Он&nbsp;на&nbsp;полях&nbsp;пером&nbsp;умелым&nbsp;нарисован.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C  D7 G7  C </span>
-<span class="txt"> Двойник&nbsp;художника,&nbsp;но&nbsp;лучше,&nbsp;чем&nbsp;художник,&nbsp;потому,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Am H7 C E Am </span>
-<span class="txt"> что&nbsp;никого&nbsp;не&nbsp;просит&nbsp;ни&nbsp;о&nbsp;чём,&nbsp;не&nbsp;должен&nbsp;никому.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   G  D7  Em </span>
+<span class="line"><span class="txt"> Земною&nbsp;он&nbsp;в&nbsp;полях&nbsp;заботою&nbsp;не&nbsp;скован,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C  D7 G D G </span></span>
+<span class="line"><span class="txt"> Он&nbsp;на&nbsp;полях&nbsp;пером&nbsp;умелым&nbsp;нарисован.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C  D7 G7  C </span></span>
+<span class="line"><span class="txt"> Двойник&nbsp;художника,&nbsp;но&nbsp;лучше,&nbsp;чем&nbsp;художник,&nbsp;потому,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Am H7 C E Am </span></span>
+<span class="line"><span class="txt"> что&nbsp;никого&nbsp;не&nbsp;просит&nbsp;ни&nbsp;о&nbsp;чём,&nbsp;не&nbsp;должен&nbsp;никому.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   G  D7  Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> С&nbsp;годами&nbsp;контур&nbsp;потускнел.&nbsp;Черты&nbsp;не&nbsp;те&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Em   G </span>
-<span class="txt"> Ещё&nbsp;звучит&nbsp;напев,&nbsp;но&nbsp;тише&nbsp;стал&nbsp;и&nbsp;реже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    Am </span>
-<span class="txt"> Во&nbsp;всём&nbsp;оркестре&nbsp;он&nbsp;-&nbsp;малейший&nbsp;подголосок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 </span>
-<span class="txt"> набросок,&nbsp;стёршийся,&nbsp;как&nbsp;песня&nbsp;о&nbsp;колёсах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   D7 </span>
+<span class="line"><span class="txt"> С&nbsp;годами&nbsp;контур&nbsp;потускнел.&nbsp;Черты&nbsp;не&nbsp;те&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    Em   G </span></span>
+<span class="line"><span class="txt"> Ещё&nbsp;звучит&nbsp;напев,&nbsp;но&nbsp;тише&nbsp;стал&nbsp;и&nbsp;реже.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em   G    Am </span></span>
+<span class="line"><span class="txt"> Во&nbsp;всём&nbsp;оркестре&nbsp;он&nbsp;-&nbsp;малейший&nbsp;подголосок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      H7 </span></span>
+<span class="line"><span class="txt"> набросок,&nbsp;стёршийся,&nbsp;как&nbsp;песня&nbsp;о&nbsp;колёсах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Am   D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;потоке&nbsp;шумном&nbsp;капля&nbsp;он,&nbsp;иголка&nbsp;в&nbsp;стоге,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C  D7 G D G </span>
-<span class="txt"> и&nbsp;завтра&nbsp;вновь&nbsp;его&nbsp;не&nbsp;&nbsp;вспомню&nbsp;я&nbsp;в&nbsp;дороге.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C  D7 G7  C </span>
-<span class="txt"> Не&nbsp;различу&nbsp;в&nbsp;ночи,&nbsp;сверяя&nbsp;курс&nbsp;по&nbsp;звёздам&nbsp;и&nbsp;луне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Am H7 C E Am </span>
-<span class="txt"> когда&nbsp;послышится&nbsp;в&nbsp;тональности&nbsp;привычной&nbsp;или&nbsp;вне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   G  D7 </span>
+<span class="line"><span class="txt"> В&nbsp;потоке&nbsp;шумном&nbsp;капля&nbsp;он,&nbsp;иголка&nbsp;в&nbsp;стоге,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G C  D7 G D G </span></span>
+<span class="line"><span class="txt"> и&nbsp;завтра&nbsp;вновь&nbsp;его&nbsp;не&nbsp;&nbsp;вспомню&nbsp;я&nbsp;в&nbsp;дороге.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">   C  D7 G7  C </span></span>
+<span class="line"><span class="txt"> Не&nbsp;различу&nbsp;в&nbsp;ночи,&nbsp;сверяя&nbsp;курс&nbsp;по&nbsp;звёздам&nbsp;и&nbsp;луне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G Am H7 C E Am </span></span>
+<span class="line"><span class="txt"> когда&nbsp;послышится&nbsp;в&nbsp;тональности&nbsp;привычной&nbsp;или&nbsp;вне,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7   G  D7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> попутный,&nbsp;встречный&nbsp;ли&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   D7 </span>
-<span class="txt"> сверчка&nbsp;ли,&nbsp;кузнечика&nbsp;ли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   D7 </span>
-<span class="txt"> привет&nbsp;всему&nbsp;оркестру&nbsp;или&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    D7 Em  G </span>
- <br />
-
+<span class="line"><span class="txt"> попутный,&nbsp;встречный&nbsp;ли&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   D7 </span></span>
+<span class="line"><span class="txt"> сверчка&nbsp;ли,&nbsp;кузнечика&nbsp;ли,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am   D7 </span></span>
+<span class="line"><span class="txt"> привет&nbsp;всему&nbsp;оркестру&nbsp;или&nbsp;мне.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G    D7 Em  G </span></span>
 </div>
 <pre>
-    
-
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,91 +423,89 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Сm"><span class="sng-title">ЕЩЁ ЗАКЛИНАНИЕ</span>
+data-key="Сm"><h1>ЕЩЁ ЗАКЛИНАНИЕ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> Длятся&nbsp;стансы,&nbsp;шьются.&nbsp;Клякса,&nbsp;прочерк,&nbsp;штрих.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> Трефы,&nbsp;бубны,&nbsp;шар&nbsp;лотерейный,&nbsp;счастье&nbsp;с&nbsp;блюдца.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> Милые&nbsp;эти&nbsp;фанты,&nbsp;люблю&nbsp;я&nbsp;их.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt">  </span>
- <br />
-<span class="txt">  </span>
- <br />
-<span class="txt"> Лепишь,&nbsp;вроде,&nbsp;лепет.&nbsp;Ловишь&nbsp;воздух&nbsp;ртом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span>
-<span class="txt"> Вроде&nbsp;вздор.&nbsp;Но&nbsp;чу:&nbsp;в&nbsp;парадном&nbsp;шаги&nbsp;и&nbsp;трепет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Вот&nbsp;оно,&nbsp;заклинанье-то,&nbsp;было&nbsp;в&nbsp;чем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt">  </span>
- <br />
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> Кто&nbsp;там?&nbsp;Гости?&nbsp;Здрасте.&nbsp;Встанешь,&nbsp;глянешь.&nbsp;Ах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Abm B  Ebm </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> Лунным&nbsp;бликом&nbsp;дама&nbsp;входит,&nbsp;неясной&nbsp;масти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Eb7 </span>
-<span class="txt"> ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
-<span class="txt"> новость&nbsp;несёт,&nbsp;волнуется.&nbsp;Вся&nbsp;как&nbsp;взмах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch">  Cm </span>
+<span class="txt"> &nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> Длятся&nbsp;стансы,&nbsp;шьются.&nbsp;Клякса,&nbsp;прочерк,&nbsp;штрих.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span></span>
+<span class="txt"> &nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> Трефы,&nbsp;бубны,&nbsp;шар&nbsp;лотерейный,&nbsp;счастье&nbsp;с&nbsp;блюдца.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="txt"> &nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> Милые&nbsp;эти&nbsp;фанты,&nbsp;люблю&nbsp;я&nbsp;их.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt">  </span>
  <br />
 <span class="txt">  </span>
  <br />
-<span class="txt"> Новость&nbsp;-&nbsp;чистый&nbsp;триллер.&nbsp;Бойня&nbsp;номер&nbsp;пять.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span>
-<span class="txt"> Есть,&nbsp;мол,&nbsp;некий&nbsp;гангстер.&nbsp;Мюллер&nbsp;по&nbsp;кличке&nbsp;«Шиллер».&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Он-де&nbsp;намеревался&nbsp;меня&nbsp;взорвать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="line"><span class="txt"> Лепишь,&nbsp;вроде,&nbsp;лепет.&nbsp;Ловишь&nbsp;воздух&nbsp;ртом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span></span>
+<span class="line"><span class="txt"> Вроде&nbsp;вздор.&nbsp;Но&nbsp;чу:&nbsp;в&nbsp;парадном&nbsp;шаги&nbsp;и&nbsp;трепет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;оно,&nbsp;заклинанье-то,&nbsp;было&nbsp;в&nbsp;чем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Шиллер?&nbsp;Как&nbsp;же,&nbsp;знаю.&nbsp;Был&nbsp;здесь&nbsp;только&nbsp;что.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span>
-<span class="txt"> Мебель&nbsp;в&nbsp;норме.&nbsp;Разве&nbsp;чуть&nbsp;обгорела&nbsp;с&nbsp;краю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Он&nbsp;положил&nbsp;взрывчатку&nbsp;не&nbsp;в&nbsp;то&nbsp;кашпо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="txt"> &nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> Кто&nbsp;там?&nbsp;Гости?&nbsp;Здрасте.&nbsp;Встанешь,&nbsp;глянешь.&nbsp;Ах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Abm B  Ebm </span></span>
+<span class="txt"> &nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> Лунным&nbsp;бликом&nbsp;дама&nbsp;входит,&nbsp;неясной&nbsp;масти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Eb7 </span></span>
+<span class="txt"> &nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, </span>
+<span class="line"><span class="txt"> новость&nbsp;несёт,&nbsp;волнуется.&nbsp;Вся&nbsp;как&nbsp;взмах.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch">  Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Альфа,&nbsp;бета,&nbsp;гамма.&nbsp;Крибле,&nbsp;крабле,&nbsp;бумс.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span>
-<span class="txt"> Гнаться?&nbsp;Драться?&nbsp;Снять&nbsp;с&nbsp;него&nbsp;скальп?&nbsp;Ну&nbsp;что&nbsp;вы,&nbsp;дама!&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Он&nbsp;уже&nbsp;сел&nbsp;в&nbsp;метро&nbsp;или&nbsp;троллейбус.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Взвесьте,&nbsp;дама,&nbsp;дважды.&nbsp;Это&nbsp;ж&nbsp;был&nbsp;бы&nbsp;мрак,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Abm B  Ebm </span>
-<span class="txt"> если&nbsp;б,&nbsp;то&nbsp;есть,&nbsp;я&nbsp;-&nbsp;вот&nbsp;тут&nbsp;же,&nbsp;сейчас,&nbsp;при&nbsp;вас&nbsp;же&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Eb7 </span>
-<span class="txt"> взял&nbsp;бы&nbsp;алмазный&nbsp;круг&nbsp;и&nbsp;точил&nbsp;тесак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch">  Cm </span>
+<span class="line"><span class="txt"> Новость&nbsp;-&nbsp;чистый&nbsp;триллер.&nbsp;Бойня&nbsp;номер&nbsp;пять.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span></span>
+<span class="line"><span class="txt"> Есть,&nbsp;мол,&nbsp;некий&nbsp;гангстер.&nbsp;Мюллер&nbsp;по&nbsp;кличке&nbsp;«Шиллер».&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Он-де&nbsp;намеревался&nbsp;меня&nbsp;взорвать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Факты&nbsp;против,&nbsp;факты.&nbsp;Люди,&nbsp;годы,&nbsp;жизнь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span>
-<span class="txt"> Мне&nbsp;ли&nbsp;мчаться&nbsp;вскачь,&nbsp;кого-то&nbsp;хватать&nbsp;за&nbsp;фалды?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm         </span>
-<span class="txt"> Ах&nbsp;ты,&nbsp;кричать,&nbsp;пиноккио!&nbsp;Ну,&nbsp;держись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm              </span>
-<span class="txt">  </span>
-<span class="txt"> Альфа,&nbsp;бета,&nbsp;гамма.&nbsp;Квинтер,&nbsp;финтер,&nbsp;жес.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Abm B  Ebm </span>
-<span class="txt"> Раз&nbsp;уж&nbsp;драма,&nbsp;то&nbsp;не&nbsp;гиньоль,&nbsp;умоляю,&nbsp;дама.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Eb7 </span>
-<span class="txt"> Пусть&nbsp;водевиль,&nbsp;уж&nbsp;если&nbsp;нельзя&nbsp;без&nbsp;пьес.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch">  Cm </span>
+<span class="line"><span class="txt"> Шиллер?&nbsp;Как&nbsp;же,&nbsp;знаю.&nbsp;Был&nbsp;здесь&nbsp;только&nbsp;что.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span></span>
+<span class="line"><span class="txt"> Мебель&nbsp;в&nbsp;норме.&nbsp;Разве&nbsp;чуть&nbsp;обгорела&nbsp;с&nbsp;краю.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Он&nbsp;положил&nbsp;взрывчатку&nbsp;не&nbsp;в&nbsp;то&nbsp;кашпо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Факты,&nbsp;фанты.&nbsp;Ладно.&nbsp;Люди,&nbsp;годы.&nbsp;Пусть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span>
-<span class="txt"> Бросьте,&nbsp;дама,&nbsp;всё&nbsp;ли&nbsp;под&nbsp;этой&nbsp;луной&nbsp;досадно?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Выпьемте&nbsp;«Bloody&nbsp;Mary»,&nbsp;забудем&nbsp;грусть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="line"><span class="txt"> Альфа,&nbsp;бета,&nbsp;гамма.&nbsp;Крибле,&nbsp;крабле,&nbsp;бумс.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span></span>
+<span class="line"><span class="txt"> Гнаться?&nbsp;Драться?&nbsp;Снять&nbsp;с&nbsp;него&nbsp;скальп?&nbsp;Ну&nbsp;что&nbsp;вы,&nbsp;дама!&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Он&nbsp;уже&nbsp;сел&nbsp;в&nbsp;метро&nbsp;или&nbsp;троллейбус.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пять&nbsp;ли&nbsp;действий&nbsp;в&nbsp;пьесе,&nbsp;шесть&nbsp;ли,&nbsp;после&nbsp;-&nbsp;тьма.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span>
-<span class="txt"> Пусть&nbsp;мы,&nbsp;дама,&nbsp;лучше&nbsp;сперва&nbsp;потеряем&nbsp;в&nbsp;весе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> А&nbsp;уж&nbsp;потом,&nbsp;извольте,&nbsp;сойдём&nbsp;с&nbsp;ума.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="line"><span class="txt"> Взвесьте,&nbsp;дама,&nbsp;дважды.&nbsp;Это&nbsp;ж&nbsp;был&nbsp;бы&nbsp;мрак,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Abm B  Ebm </span></span>
+<span class="line"><span class="txt"> если&nbsp;б,&nbsp;то&nbsp;есть,&nbsp;я&nbsp;-&nbsp;вот&nbsp;тут&nbsp;же,&nbsp;сейчас,&nbsp;при&nbsp;вас&nbsp;же&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Eb7 </span></span>
+<span class="line"><span class="txt"> взял&nbsp;бы&nbsp;алмазный&nbsp;круг&nbsp;и&nbsp;точил&nbsp;тесак.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch">  Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Длится&nbsp;шепот,&nbsp;вьётся.&nbsp;Снится&nbsp;гному&nbsp;гном.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span>
-<span class="txt"> Он&nbsp;же&nbsp;-&nbsp;джокер,&nbsp;Шиллер,&nbsp;Мюллер&nbsp;и&nbsp;кто&nbsp;придётся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> Вот&nbsp;оно,&nbsp;заклинанье-то,&nbsp;было&nbsp;в&nbsp;чём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="line"><span class="txt"> Факты&nbsp;против,&nbsp;факты.&nbsp;Люди,&nbsp;годы,&nbsp;жизнь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span></span>
+<span class="line"><span class="txt"> Мне&nbsp;ли&nbsp;мчаться&nbsp;вскачь,&nbsp;кого-то&nbsp;хватать&nbsp;за&nbsp;фалды?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm         </span></span>
+<span class="line"><span class="txt"> Ах&nbsp;ты,&nbsp;кричать,&nbsp;пиноккио!&nbsp;Ну,&nbsp;держись.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm              </span></span>
+<span class="txt">  </span>
+<span class="line"><span class="txt"> Альфа,&nbsp;бета,&nbsp;гамма.&nbsp;Квинтер,&nbsp;финтер,&nbsp;жес.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Abm B  Ebm </span></span>
+<span class="line"><span class="txt"> Раз&nbsp;уж&nbsp;драма,&nbsp;то&nbsp;не&nbsp;гиньоль,&nbsp;умоляю,&nbsp;дама.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch"> Ebm  Eb7 </span></span>
+<span class="line"><span class="txt"> Пусть&nbsp;водевиль,&nbsp;уж&nbsp;если&nbsp;нельзя&nbsp;без&nbsp;пьес.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abm&nbsp;B&nbsp; </span><span class="ch">  Cm </span></span>
 <span class="txt">  </span>
  <br />
-
+<span class="line"><span class="txt"> Факты,&nbsp;фанты.&nbsp;Ладно.&nbsp;Люди,&nbsp;годы.&nbsp;Пусть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span></span>
+<span class="line"><span class="txt"> Бросьте,&nbsp;дама,&nbsp;всё&nbsp;ли&nbsp;под&nbsp;этой&nbsp;луной&nbsp;досадно?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Выпьемте&nbsp;«Bloody&nbsp;Mary»,&nbsp;забудем&nbsp;грусть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="txt">  </span>
+ <br />
+<span class="line"><span class="txt"> Пять&nbsp;ли&nbsp;действий&nbsp;в&nbsp;пьесе,&nbsp;шесть&nbsp;ли,&nbsp;после&nbsp;-&nbsp;тьма.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span></span>
+<span class="line"><span class="txt"> Пусть&nbsp;мы,&nbsp;дама,&nbsp;лучше&nbsp;сперва&nbsp;потеряем&nbsp;в&nbsp;весе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> А&nbsp;уж&nbsp;потом,&nbsp;извольте,&nbsp;сойдём&nbsp;с&nbsp;ума.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="txt">  </span>
+ <br />
+<span class="line"><span class="txt"> Длится&nbsp;шепот,&nbsp;вьётся.&nbsp;Снится&nbsp;гному&nbsp;гном.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm   B   G  Cm </span></span>
+<span class="line"><span class="txt"> Он&nbsp;же&nbsp;-&nbsp;джокер,&nbsp;Шиллер,&nbsp;Мюллер&nbsp;и&nbsp;кто&nbsp;придётся.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;оно,&nbsp;заклинанье-то,&nbsp;было&nbsp;в&nbsp;чём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fm&nbsp;G&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="txt">  </span>
+ <br />
 </div>
-<pre>
-    <span class="year">1996</span>
-
+<pre><span class="year">1996</span>
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,73 +423,71 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="G#m"><span class="txt"> НОЧНОЙ&nbsp;ДОЗОР </span>
+data-key="G#m"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;НОЧНОЙ&nbsp;ДОЗОР </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bass:&nbsp; </span><span class="ch"> G#  H   C#  E </span>
-<span class="txt"> На&nbsp;бок&nbsp;бы&nbsp;теперь&nbsp;и&nbsp;наповал.&nbsp;Но&nbsp;нет.&nbsp;Никак&nbsp;нельзя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Рокот&nbsp;в&nbsp;перепонках&nbsp;начеку:&nbsp;не&nbsp;сметь,&nbsp;не&nbsp;спать,&nbsp;моргать.&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Отдых&nbsp;-&nbsp;привилегия&nbsp;глухих.&nbsp;А&nbsp;ты&nbsp;не&nbsp;спи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span>
-<span class="txt"> Ты&nbsp;слушай&nbsp;длинные&nbsp;гудки.&nbsp;Покуда&nbsp;кратких&nbsp;не&nbsp;черёд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bass:&nbsp; </span><span class="ch"> G#  H   C#  E </span></span>
+<span class="line"><span class="txt"> На&nbsp;бок&nbsp;бы&nbsp;теперь&nbsp;и&nbsp;наповал.&nbsp;Но&nbsp;нет.&nbsp;Никак&nbsp;нельзя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Рокот&nbsp;в&nbsp;перепонках&nbsp;начеку:&nbsp;не&nbsp;сметь,&nbsp;не&nbsp;спать,&nbsp;моргать.&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Отдых&nbsp;-&nbsp;привилегия&nbsp;глухих.&nbsp;А&nbsp;ты&nbsp;не&nbsp;спи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;слушай&nbsp;длинные&nbsp;гудки.&nbsp;Покуда&nbsp;кратких&nbsp;не&nbsp;черёд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Томная&nbsp;соседка&nbsp;по&nbsp;купе.&nbsp;Но&nbsp;нет.&nbsp;Никак&nbsp;нельзя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Тысяча&nbsp;резонов&nbsp;не&nbsp;велят.&nbsp;Согнись,&nbsp;уткнись&nbsp;в&nbsp;окно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Важное&nbsp;в&nbsp;потёмках&nbsp;что-нибудь&nbsp;увидишь&nbsp;там.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span>
-<span class="txt"> Хотя&nbsp;скорее&nbsp;проглядишь.&nbsp;Да&nbsp;вот,&nbsp;уже&nbsp;и&nbsp;проглядел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span>
+<span class="line"><span class="txt"> Томная&nbsp;соседка&nbsp;по&nbsp;купе.&nbsp;Но&nbsp;нет.&nbsp;Никак&nbsp;нельзя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Тысяча&nbsp;резонов&nbsp;не&nbsp;велят.&nbsp;Согнись,&nbsp;уткнись&nbsp;в&nbsp;окно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Важное&nbsp;в&nbsp;потёмках&nbsp;что-нибудь&nbsp;увидишь&nbsp;там.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span></span>
+<span class="line"><span class="txt"> Хотя&nbsp;скорее&nbsp;проглядишь.&nbsp;Да&nbsp;вот,&nbsp;уже&nbsp;и&nbsp;проглядел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Отдых&nbsp;-&nbsp;привилегия&nbsp;слепых.&nbsp;Не&nbsp;спи,&nbsp;моргай,&nbsp;танцуй.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Ноги-руки,&nbsp;думаешь,&nbsp;зачем?&nbsp;Затем.&nbsp;Нам&nbsp;лучше&nbsp;знать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> В&nbsp;чём&nbsp;и&nbsp;правда,&nbsp;если&nbsp;не&nbsp;в&nbsp;ногах?&nbsp;Не&nbsp;в&nbsp;крыльях&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span>
-<span class="txt"> А&nbsp;мелкой&nbsp;меди,&nbsp;так&nbsp;и&nbsp;быть,&nbsp;возьми.&nbsp;Но&nbsp;больше&nbsp;не&nbsp;воруй.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span>
+<span class="line"><span class="txt"> Отдых&nbsp;-&nbsp;привилегия&nbsp;слепых.&nbsp;Не&nbsp;спи,&nbsp;моргай,&nbsp;танцуй.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Ноги-руки,&nbsp;думаешь,&nbsp;зачем?&nbsp;Затем.&nbsp;Нам&nbsp;лучше&nbsp;знать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> В&nbsp;чём&nbsp;и&nbsp;правда,&nbsp;если&nbsp;не&nbsp;в&nbsp;ногах?&nbsp;Не&nbsp;в&nbsp;крыльях&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;мелкой&nbsp;меди,&nbsp;так&nbsp;и&nbsp;быть,&nbsp;возьми.&nbsp;Но&nbsp;больше&nbsp;не&nbsp;воруй.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Яблок&nbsp;бы&nbsp;сюда&nbsp;и&nbsp;коньяку.&nbsp;Но&nbsp;нет.&nbsp;Пардон,&nbsp;гарсон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Каждому&nbsp;понятно,&nbsp;что&nbsp;нельзя.&nbsp;Моргай,&nbsp;считай&nbsp;гудки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Либо&nbsp;и&nbsp;подавно&nbsp;не&nbsp;заснёшь.&nbsp;Не&nbsp;разрешат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span>
-<span class="txt"> Ни&nbsp;этой&nbsp;шаткой&nbsp;тишины.&nbsp;Ни&nbsp;той,&nbsp;иной,&nbsp;иной,&nbsp;иной...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span>
+<span class="line"><span class="txt"> Яблок&nbsp;бы&nbsp;сюда&nbsp;и&nbsp;коньяку.&nbsp;Но&nbsp;нет.&nbsp;Пардон,&nbsp;гарсон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Каждому&nbsp;понятно,&nbsp;что&nbsp;нельзя.&nbsp;Моргай,&nbsp;считай&nbsp;гудки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Либо&nbsp;и&nbsp;подавно&nbsp;не&nbsp;заснёшь.&nbsp;Не&nbsp;разрешат.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span></span>
+<span class="line"><span class="txt"> Ни&nbsp;этой&nbsp;шаткой&nbsp;тишины.&nbsp;Ни&nbsp;той,&nbsp;иной,&nbsp;иной,&nbsp;иной...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Важное&nbsp;в&nbsp;потёмках&nbsp;что-нибудь.&nbsp;Фантом,&nbsp;какой&nbsp;ни&nbsp;есть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Хочешь&nbsp;игнорировать&nbsp;его?&nbsp;Не&nbsp;сметь.&nbsp;Молчать.&nbsp;Моргать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Сказано&nbsp;же&nbsp;русским&nbsp;языком:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;никак&nbsp;нельзя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span>
-<span class="txt"> Уж&nbsp;тут&nbsp;не&nbsp;то&nbsp;что&nbsp;Боже&nbsp;мой.&nbsp;А&nbsp;просто&nbsp;мамочки&nbsp;мои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span>
+<span class="line"><span class="txt"> Важное&nbsp;в&nbsp;потёмках&nbsp;что-нибудь.&nbsp;Фантом,&nbsp;какой&nbsp;ни&nbsp;есть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Хочешь&nbsp;игнорировать&nbsp;его?&nbsp;Не&nbsp;сметь.&nbsp;Молчать.&nbsp;Моргать.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Сказано&nbsp;же&nbsp;русским&nbsp;языком:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;никак&nbsp;нельзя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span></span>
+<span class="line"><span class="txt"> Уж&nbsp;тут&nbsp;не&nbsp;то&nbsp;что&nbsp;Боже&nbsp;мой.&nbsp;А&nbsp;просто&nbsp;мамочки&nbsp;мои.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Конница&nbsp;того&nbsp;гляди&nbsp;мелькнёт.&nbsp;Спроси:&nbsp;а&nbsp;сколько&nbsp;вас?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Чайки&nbsp;налетят&nbsp;-&nbsp;не&nbsp;оплошай.&nbsp;Сочти,&nbsp;сочти&nbsp;число.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span>
-<span class="txt"> Станут&nbsp;обращаться&nbsp;во&nbsp;слонов.&nbsp;И&nbsp;тех&nbsp;сочти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span>
-<span class="txt"> Их&nbsp;легче&nbsp;лёгкого&nbsp;считать.&nbsp;&nbsp;Они&nbsp;летают&nbsp;не&nbsp;ахти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span>
+<span class="line"><span class="txt"> Конница&nbsp;того&nbsp;гляди&nbsp;мелькнёт.&nbsp;Спроси:&nbsp;а&nbsp;сколько&nbsp;вас?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Чайки&nbsp;налетят&nbsp;-&nbsp;не&nbsp;оплошай.&nbsp;Сочти,&nbsp;сочти&nbsp;число.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Станут&nbsp;обращаться&nbsp;во&nbsp;слонов.&nbsp;И&nbsp;тех&nbsp;сочти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H   E   C#m G#m </span></span>
+<span class="line"><span class="txt"> Их&nbsp;легче&nbsp;лёгкого&nbsp;считать.&nbsp;&nbsp;Они&nbsp;летают&nbsp;не&nbsp;ахти.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m G#m C#m H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> &nbsp;&nbsp;&nbsp;Был&nbsp;бы&nbsp;пальмой.&nbsp;Рос&nbsp;бы&nbsp;стройно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m C#m G#m C#m G#m C#m </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;Жил&nbsp;бы&nbsp;долго.&nbsp;Спал&nbsp;бы&nbsp;крепко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m C#m G#m C#m G#m C#m </span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;Был&nbsp;бы&nbsp;пальмой.&nbsp;Рос&nbsp;бы&nbsp;стройно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m C#m G#m C#m G#m C#m </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;Жил&nbsp;бы&nbsp;долго.&nbsp;Спал&nbsp;бы&nbsp;крепко.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m C#m G#m C#m G#m C#m G#m C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Трудности&nbsp;у&nbsp;сотого&nbsp;слона:&nbsp;болит&nbsp;плечо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  H   E   C#m G#m </span>
-<span class="txt"> Ещё&nbsp;немного,&nbsp;милый&nbsp;зверь,&nbsp;&nbsp;и&nbsp;можешь&nbsp;дальше&nbsp;не&nbsp;лететь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C#m G#m C#m H </span>
+<span class="line"><span class="txt"> Трудности&nbsp;у&nbsp;сотого&nbsp;слона:&nbsp;болит&nbsp;плечо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  H   E   C#m G#m </span></span>
+<span class="line"><span class="txt"> Ещё&nbsp;немного,&nbsp;милый&nbsp;зверь,&nbsp;&nbsp;и&nbsp;можешь&nbsp;дальше&nbsp;не&nbsp;лететь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C#m G#m C#m H </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Есть&nbsp;ещё&nbsp;лекарство,&nbsp;говорят.&nbsp;Глотнул&nbsp;-&nbsp;и&nbsp;как&nbsp;нырнул.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  G#m C#m G#m </span>
-<span class="txt"> Сразу&nbsp;в&nbsp;перепонках&nbsp;никого.&nbsp;Гудков&nbsp;-&nbsp;ничьих&nbsp;нигде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  G#m C#m G#m </span>
-<span class="txt"> Что-то&nbsp;лишь&nbsp;такое&nbsp;о&nbsp;любви.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Едва-едва.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  H   E   C#m G#m </span>
-<span class="txt"> Об&nbsp;этой&nbsp;-&nbsp;около,&nbsp;в&nbsp;слезах.&nbsp;И&nbsp;той,&nbsp;иной,&nbsp;иной,&nbsp;иной...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C#m G#m C#m H </span>
+<span class="line"><span class="txt"> Есть&nbsp;ещё&nbsp;лекарство,&nbsp;говорят.&nbsp;Глотнул&nbsp;-&nbsp;и&nbsp;как&nbsp;нырнул.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Сразу&nbsp;в&nbsp;перепонках&nbsp;никого.&nbsp;Гудков&nbsp;-&nbsp;ничьих&nbsp;нигде.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  G#m C#m G#m </span></span>
+<span class="line"><span class="txt"> Что-то&nbsp;лишь&nbsp;такое&nbsp;о&nbsp;любви.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Едва-едва.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  H   E   C#m G#m </span></span>
+<span class="line"><span class="txt"> Об&nbsp;этой&nbsp;-&nbsp;около,&nbsp;в&nbsp;слезах.&nbsp;И&nbsp;той,&nbsp;иной,&nbsp;иной,&nbsp;иной...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">  C#m G#m C#m H </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1998</span>
-
+<pre><span class="year">1998</span>
 </pre>
+
 
                 </div>
         </div>

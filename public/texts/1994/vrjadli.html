@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,40 +433,34 @@ span.c {
 data-key="Dm"><span class="txt"> РОМАНС </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вряд&nbsp;ли&nbsp;собой&nbsp;хороша,&nbsp;но&nbsp;скромна&nbsp;и&nbsp;нарядна;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm+7  Dm7  Gm6  Dm </span>
-<span class="txt"> вряд&nbsp;ли&nbsp;вполне&nbsp;молода,&nbsp;но&nbsp;о&nbsp;том&nbsp;не&nbsp;речем,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm+7  Dm7  Gm6  Dm </span>
-<span class="txt"> где-то&nbsp;в&nbsp;предместье&nbsp;она&nbsp;так&nbsp;и&nbsp;живёт,&nbsp;вероятно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm    Gm6  Dm   A# </span>
-<span class="txt"> Чем&nbsp;занята,&nbsp;Бог&nbsp;весть.&nbsp;Может,&nbsp;совсем&nbsp;ничем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm    Gm   B7   A </span>
+<span class="line"><span class="txt"> Вряд&nbsp;ли&nbsp;собой&nbsp;хороша,&nbsp;но&nbsp;скромна&nbsp;и&nbsp;нарядна;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm+7  Dm7  Gm6  Dm </span></span>
+<span class="line"><span class="txt"> вряд&nbsp;ли&nbsp;вполне&nbsp;молода,&nbsp;но&nbsp;о&nbsp;том&nbsp;не&nbsp;речем,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm+7  Dm7  Gm6  Dm </span></span>
+<span class="line"><span class="txt"> где-то&nbsp;в&nbsp;предместье&nbsp;она&nbsp;так&nbsp;и&nbsp;живёт,&nbsp;вероятно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm    Gm6  Dm   A# </span></span>
+<span class="line"><span class="txt"> Чем&nbsp;занята,&nbsp;Бог&nbsp;весть.&nbsp;Может,&nbsp;совсем&nbsp;ничем.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm    Gm   B7   A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Может&nbsp;быть,&nbsp;к&nbsp;зеркалу&nbsp;профиль&nbsp;приблизив&nbsp;негордый,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm+7  Dm7  Gm6  Dm </span>
-<span class="txt"> локон&nbsp;непышный&nbsp;на&nbsp;разные&nbsp;крутит&nbsp;лады.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm+7  Dm7  Gm6  Dm </span>
-<span class="txt"> Или&nbsp;цветок&nbsp;чуть&nbsp;живой&nbsp;ставит&nbsp;в&nbsp;кувшин&nbsp;узкогорлый,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm    Gm6  Dm   A# </span>
-<span class="txt"> в&nbsp;озере&nbsp;только&nbsp;что&nbsp;свежей&nbsp;набрав&nbsp;воды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm    Gm   B7   A </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span>
-<span class="txt"> Может&nbsp;быть,&nbsp;этот&nbsp;цветок&nbsp;называется&nbsp;розой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em+7  Em7  Am   Em </span>
-<span class="txt"> Может&nbsp;быть,&nbsp;он&nbsp;ей&nbsp;подарен&nbsp;с&nbsp;неделю&nbsp;тому&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em+7  Em7  Am   Em </span>
-<span class="txt"> рослым&nbsp;красавцем&nbsp;таким,&nbsp;с&nbsp;белой&nbsp;такой&nbsp;папиросой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am    Am6  Em   C </span>
-<span class="txt"> Близ&nbsp;городских&nbsp;ворот.&nbsp;Бог&nbsp;весть,&nbsp;за&nbsp;что,&nbsp;к&nbsp;чему.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em    Am   C7   H7 </span>
+<span class="line"><span class="txt"> Может&nbsp;быть,&nbsp;к&nbsp;зеркалу&nbsp;профиль&nbsp;приблизив&nbsp;негордый,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm+7  Dm7  Gm6  Dm </span></span>
+<span class="line"><span class="txt"> локон&nbsp;непышный&nbsp;на&nbsp;разные&nbsp;крутит&nbsp;лады.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm+7  Dm7  Gm6  Dm </span></span>
+<span class="line"><span class="txt"> Или&nbsp;цветок&nbsp;чуть&nbsp;живой&nbsp;ставит&nbsp;в&nbsp;кувшин&nbsp;узкогорлый,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7  Gm    Gm6  Dm   A# </span></span>
+<span class="line"><span class="txt"> в&nbsp;озере&nbsp;только&nbsp;что&nbsp;свежей&nbsp;набрав&nbsp;воды.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Dm    Gm   B7   A </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 </span></span>
+<span class="line"><span class="txt"> Может&nbsp;быть,&nbsp;этот&nbsp;цветок&nbsp;называется&nbsp;розой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em+7  Em7  Am   Em </span></span>
+<span class="line"><span class="txt"> Может&nbsp;быть,&nbsp;он&nbsp;ей&nbsp;подарен&nbsp;с&nbsp;неделю&nbsp;тому&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em+7  Em7  Am   Em </span></span>
+<span class="line"><span class="txt"> рослым&nbsp;красавцем&nbsp;таким,&nbsp;с&nbsp;белой&nbsp;такой&nbsp;папиросой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am    Am6  Em   C </span></span>
+<span class="line"><span class="txt"> Близ&nbsp;городских&nbsp;ворот.&nbsp;Бог&nbsp;весть,&nbsp;за&nbsp;что,&nbsp;к&nbsp;чему.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am  Em    Am   C7   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всё&nbsp;ни&nbsp;к&nbsp;чему.&nbsp;Никаких&nbsp;никогда&nbsp;не&nbsp;бывает&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em+7  Em7  Am   Em </span>
-<span class="txt"> рослых&nbsp;с&nbsp;цветами&nbsp;красавцев&nbsp;у&nbsp;врат&nbsp;городских.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em+7  Em7  Am   Em </span>
-<span class="txt"> Ну,&nbsp;вот&nbsp;и&nbsp;плачет&nbsp;она,&nbsp;вот&nbsp;и&nbsp;кувшин&nbsp;разбивает&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am    Am6  Em   C </span>
-<span class="txt"> на&nbsp;семь&nbsp;иль&nbsp;шесть&nbsp;-&nbsp;Бог&nbsp;весть&nbsp;-&nbsp;мёртвых&nbsp;частей&nbsp;таких.&nbsp;&nbsp; </span><span class="ch"> Am  Em    Am   C7   H7 </span>
+<span class="line"><span class="txt"> Всё&nbsp;ни&nbsp;к&nbsp;чему.&nbsp;Никаких&nbsp;никогда&nbsp;не&nbsp;бывает&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em+7  Em7  Am   Em </span></span>
+<span class="line"><span class="txt"> рослых&nbsp;с&nbsp;цветами&nbsp;красавцев&nbsp;у&nbsp;врат&nbsp;городских.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em+7  Em7  Am   Em </span></span>
+<span class="line"><span class="txt"> Ну,&nbsp;вот&nbsp;и&nbsp;плачет&nbsp;она,&nbsp;вот&nbsp;и&nbsp;кувшин&nbsp;разбивает&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  Am    Am6  Em   C </span></span>
+<span class="line"><span class="txt"> на&nbsp;семь&nbsp;иль&nbsp;шесть&nbsp;-&nbsp;Бог&nbsp;весть&nbsp;-&nbsp;мёртвых&nbsp;частей&nbsp;таких.&nbsp;&nbsp; </span><span class="ch"> Am  Em    Am   C7   H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Может&nbsp;быть,&nbsp;этот&nbsp;цветок&nbsp;называется&nbsp;розой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em+7  Em7  Am6  Em </span>
+<span class="line"><span class="txt"> Может&nbsp;быть,&nbsp;этот&nbsp;цветок&nbsp;называется&nbsp;розой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em  Em+7  Em7  Am6  Em </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1994</span>
+<pre><span class="year">1994</span>
 
 Вступление:
 
@@ -476,8 +478,8 @@ data-key="Dm"><span class="txt"> РОМАНС </span>
 |-----------|-----------|
 |-0---------|-----------|
 |-----------|-----------|
-
 </pre>
+
 
                 </div>
         </div>

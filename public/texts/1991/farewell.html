@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,63 +423,60 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Hm"><span class="sng-title">FAREWELL</span>
+data-key="Hm"><h1>FAREWELL</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всё.&nbsp;Хватит&nbsp;мук,&nbsp;довольно&nbsp;склок.&nbsp;Заткнитесь,&nbsp;ветры&nbsp;ада.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span>
-<span class="txt"> Раз&nbsp;больше&nbsp;я&nbsp;тебе&nbsp;не&nbsp;мил&nbsp;-&nbsp;расторгнем&nbsp;нашу&nbsp;связь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span>
-<span class="txt"> Вон&nbsp;Бог,&nbsp;а&nbsp;вон&nbsp;порог.&nbsp;Не&nbsp;любишь,&nbsp;и&nbsp;не&nbsp;надо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span>
-<span class="txt"> Без&nbsp;лишней&nbsp;траты&nbsp;сил&nbsp;-&nbsp;расстанемся&nbsp;смеясь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm </span>
+<span class="line"><span class="txt"> Всё.&nbsp;Хватит&nbsp;мук,&nbsp;довольно&nbsp;склок.&nbsp;Заткнитесь,&nbsp;ветры&nbsp;ада.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span></span>
+<span class="line"><span class="txt"> Раз&nbsp;больше&nbsp;я&nbsp;тебе&nbsp;не&nbsp;мил&nbsp;-&nbsp;расторгнем&nbsp;нашу&nbsp;связь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span></span>
+<span class="line"><span class="txt"> Вон&nbsp;Бог,&nbsp;а&nbsp;вон&nbsp;порог.&nbsp;Не&nbsp;любишь,&nbsp;и&nbsp;не&nbsp;надо.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span></span>
+<span class="line"><span class="txt"> Без&nbsp;лишней&nbsp;траты&nbsp;сил&nbsp;-&nbsp;расстанемся&nbsp;смеясь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Да,&nbsp;так&nbsp;вот&nbsp;прямо&nbsp;и&nbsp;ступай.&nbsp;Пусть&nbsp;видят&nbsp;все&nbsp;соседи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span>
-<span class="txt"> как&nbsp;я&nbsp;сломаю&nbsp;на&nbsp;куски&nbsp;двуспальную&nbsp;тахту.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span>
-<span class="txt"> Ты&nbsp;влезешь&nbsp;в&nbsp;свой&nbsp;трамвай,&nbsp;он&nbsp;лязгнет&nbsp;и&nbsp;уедет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span>
-<span class="txt"> А&nbsp;средство&nbsp;от&nbsp;тоски&nbsp;я&nbsp;вмиг&nbsp;изобрету.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm </span>
+<span class="line"><span class="txt"> Да,&nbsp;так&nbsp;вот&nbsp;прямо&nbsp;и&nbsp;ступай.&nbsp;Пусть&nbsp;видят&nbsp;все&nbsp;соседи,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span></span>
+<span class="line"><span class="txt"> как&nbsp;я&nbsp;сломаю&nbsp;на&nbsp;куски&nbsp;двуспальную&nbsp;тахту.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span></span>
+<span class="line"><span class="txt"> Ты&nbsp;влезешь&nbsp;в&nbsp;свой&nbsp;трамвай,&nbsp;он&nbsp;лязгнет&nbsp;и&nbsp;уедет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span></span>
+<span class="line"><span class="txt"> А&nbsp;средство&nbsp;от&nbsp;тоски&nbsp;я&nbsp;вмиг&nbsp;изобрету.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Чтоб,&nbsp;значит,&nbsp;действовать&nbsp;верней,&nbsp;в&nbsp;обход&nbsp;ошибок&nbsp;трудных,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span>
-<span class="txt"> сдам&nbsp;я&nbsp;последний&nbsp;макинтош&nbsp;в&nbsp;какой-нибудь&nbsp;ломбард.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span>
-<span class="txt"> Вот&nbsp;вам&nbsp;и&nbsp;сто&nbsp;рублей,&nbsp;плюс&nbsp;пять&nbsp;рублей&nbsp;подспудных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span>
-<span class="txt"> Всё,&nbsp;чай,&nbsp;не&nbsp;медный&nbsp;грош.&nbsp;Хотя&nbsp;и&nbsp;не&nbsp;мильярд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm </span>
+<span class="line"><span class="txt"> Чтоб,&nbsp;значит,&nbsp;действовать&nbsp;верней,&nbsp;в&nbsp;обход&nbsp;ошибок&nbsp;трудных,&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span></span>
+<span class="line"><span class="txt"> сдам&nbsp;я&nbsp;последний&nbsp;макинтош&nbsp;в&nbsp;какой-нибудь&nbsp;ломбард.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;вам&nbsp;и&nbsp;сто&nbsp;рублей,&nbsp;плюс&nbsp;пять&nbsp;рублей&nbsp;подспудных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span></span>
+<span class="line"><span class="txt"> Всё,&nbsp;чай,&nbsp;не&nbsp;медный&nbsp;грош.&nbsp;Хотя&nbsp;и&nbsp;не&nbsp;мильярд.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> На&nbsp;сто&nbsp;рублей&nbsp;куплю&nbsp;вина,&nbsp;на&nbsp;пять&nbsp;рублей&nbsp;закуски.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span>
-<span class="txt"> И&nbsp;сяду&nbsp;пить&nbsp;в&nbsp;дезабилье,&nbsp;что,&nbsp;прямо&nbsp;скажем,&nbsp;блажь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span>
-<span class="txt"> Но&nbsp;блажь-то&nbsp;и&nbsp;нужна&nbsp;для&nbsp;нравственной&nbsp;разгрузки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span>
-<span class="txt"> Тут&nbsp;дело&nbsp;не&nbsp;в&nbsp;питье,&nbsp;тут&nbsp;важен&nbsp;антураж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm </span>
+<span class="line"><span class="txt"> На&nbsp;сто&nbsp;рублей&nbsp;куплю&nbsp;вина,&nbsp;на&nbsp;пять&nbsp;рублей&nbsp;закуски.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span></span>
+<span class="line"><span class="txt"> И&nbsp;сяду&nbsp;пить&nbsp;в&nbsp;дезабилье,&nbsp;что,&nbsp;прямо&nbsp;скажем,&nbsp;блажь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span></span>
+<span class="line"><span class="txt"> Но&nbsp;блажь-то&nbsp;и&nbsp;нужна&nbsp;для&nbsp;нравственной&nbsp;разгрузки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span></span>
+<span class="line"><span class="txt"> Тут&nbsp;дело&nbsp;не&nbsp;в&nbsp;питье,&nbsp;тут&nbsp;важен&nbsp;антураж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Эх,&nbsp;а&nbsp;как&nbsp;выпью,&nbsp;да&nbsp;заем&nbsp;-&nbsp;по&nbsp;жилам&nbsp;кровь&nbsp;поскачет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span>
-<span class="txt"> В&nbsp;глубь&nbsp;сердца,&nbsp;где&nbsp;тяжёлый&nbsp;мрак,&nbsp;проникнет&nbsp;легкий&nbsp;хмель.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span>
-<span class="txt"> Зов&nbsp;плоти&nbsp;станет&nbsp;нем,&nbsp;зато&nbsp;душа&nbsp;заплачет&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span>
-<span class="txt"> протяжно,&nbsp;звонко&nbsp;так,&nbsp;как&nbsp;никогда&nbsp;досель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm </span>
+<span class="line"><span class="txt"> Эх,&nbsp;а&nbsp;как&nbsp;выпью,&nbsp;да&nbsp;заем&nbsp;-&nbsp;по&nbsp;жилам&nbsp;кровь&nbsp;поскачет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span></span>
+<span class="line"><span class="txt"> В&nbsp;глубь&nbsp;сердца,&nbsp;где&nbsp;тяжёлый&nbsp;мрак,&nbsp;проникнет&nbsp;легкий&nbsp;хмель.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span></span>
+<span class="line"><span class="txt"> Зов&nbsp;плоти&nbsp;станет&nbsp;нем,&nbsp;зато&nbsp;душа&nbsp;заплачет&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span></span>
+<span class="line"><span class="txt"> протяжно,&nbsp;звонко&nbsp;так,&nbsp;как&nbsp;никогда&nbsp;досель.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И,&nbsp;весь&nbsp;расслабленный&nbsp;вполне,&nbsp;весь&nbsp;смирный,&nbsp;как&nbsp;святоша,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span>
-<span class="txt"> я,&nbsp;вдруг&nbsp;внезапно&nbsp;восскорбя,&nbsp;завою&nbsp;сам&nbsp;не&nbsp;свой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span>
-<span class="txt"> Так&nbsp;жалко&nbsp;станет&nbsp;мне&nbsp;тебя&nbsp;и&nbsp;макинтоша,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span>
-<span class="txt"> а&nbsp;пуще&nbsp;всех&nbsp;себя&nbsp;-&nbsp;раба&nbsp;Фортуны&nbsp;злой...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm E </span>
+<span class="line"><span class="txt"> И,&nbsp;весь&nbsp;расслабленный&nbsp;вполне,&nbsp;весь&nbsp;смирный,&nbsp;как&nbsp;святоша,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em Hm F# Hm </span></span>
+<span class="line"><span class="txt"> я,&nbsp;вдруг&nbsp;внезапно&nbsp;восскорбя,&nbsp;завою&nbsp;сам&nbsp;не&nbsp;свой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">    Em Hm F# Em </span></span>
+<span class="line"><span class="txt"> Так&nbsp;жалко&nbsp;станет&nbsp;мне&nbsp;тебя&nbsp;и&nbsp;макинтоша,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# Em </span></span>
+<span class="line"><span class="txt"> а&nbsp;пуще&nbsp;всех&nbsp;себя&nbsp;-&nbsp;раба&nbsp;Фортуны&nbsp;злой...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm F# E  Em Hm E </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Злой!&nbsp;Злой!&nbsp;Чур!&nbsp;Прочь!&nbsp;Сгинь!&nbsp;Исчезни&nbsp;навсегда!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em Hm </span>
+<span class="line"><span class="txt"> Злой!&nbsp;Злой!&nbsp;Чур!&nbsp;Прочь!&nbsp;Сгинь!&nbsp;Исчезни&nbsp;навсегда!..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">      Em Hm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1991</span>
-
+<pre><span class="year">1991</span>
 
 </pre>
+
 
                 </div>
         </div>

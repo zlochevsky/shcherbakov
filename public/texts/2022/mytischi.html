@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,95 +423,92 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Cm"><span class="sng-title">МЫТИЩИ</span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  G </span>
-<span class="txt"> С&nbsp;одной&nbsp;славянкой&nbsp;всё&nbsp;не&nbsp;ладилось&nbsp;у&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Abdim </span>
-<span class="txt"> Она&nbsp;упрёками&nbsp;встречала&nbsp;каждый&nbsp;раз&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  C7 </span>
-<span class="txt"> (а&nbsp;через&nbsp;раз&nbsp;—&nbsp;ещё&nbsp;почище),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm </span>
-<span class="txt"> как&nbsp;только&nbsp;к&nbsp;ночи&nbsp;добирался&nbsp;я&nbsp;подчас&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  B7  Fm </span>
-<span class="txt"> в&nbsp;её&nbsp;Мытищи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+data-key="Cm"><h1>МЫТИЩИ</h1>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  G </span></span>
+<span class="line"><span class="txt"> С&nbsp;одной&nbsp;славянкой&nbsp;всё&nbsp;не&nbsp;ладилось&nbsp;у&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Abdim </span></span>
+<span class="line"><span class="txt"> Она&nbsp;упрёками&nbsp;встречала&nbsp;каждый&nbsp;раз&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  C7 </span></span>
+<span class="line"><span class="txt"> (а&nbsp;через&nbsp;раз&nbsp;—&nbsp;ещё&nbsp;почище),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm </span></span>
+<span class="line"><span class="txt"> как&nbsp;только&nbsp;к&nbsp;ночи&nbsp;добирался&nbsp;я&nbsp;подчас&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  B7  Fm </span></span>
+<span class="line"><span class="txt"> в&nbsp;её&nbsp;Мытищи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Вменялось&nbsp;мне&nbsp;и&nbsp;то,&nbsp;что&nbsp;поздно&nbsp;приезжал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Abdim </span>
-<span class="txt"> и&nbsp;что&nbsp;в&nbsp;минуты&nbsp;страсти&nbsp;нежной&nbsp;выражал&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  C7 </span>
-<span class="txt"> всё&nbsp;больше&nbsp;страсть,&nbsp;а&nbsp;меньше&nbsp;нежность.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm </span>
-<span class="txt"> И,&nbsp;значит,&nbsp;будто&nbsp;бы&nbsp;не&nbsp;личность&nbsp;уважал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  B7  Fm </span>
-<span class="txt"> а&nbsp;только&nbsp;внешность.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="line"><span class="txt"> Вменялось&nbsp;мне&nbsp;и&nbsp;то,&nbsp;что&nbsp;поздно&nbsp;приезжал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Abdim </span></span>
+<span class="line"><span class="txt"> и&nbsp;что&nbsp;в&nbsp;минуты&nbsp;страсти&nbsp;нежной&nbsp;выражал&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  C7 </span></span>
+<span class="line"><span class="txt"> всё&nbsp;больше&nbsp;страсть,&nbsp;а&nbsp;меньше&nbsp;нежность.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm </span></span>
+<span class="line"><span class="txt"> И,&nbsp;значит,&nbsp;будто&nbsp;бы&nbsp;не&nbsp;личность&nbsp;уважал,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  B7  Fm </span></span>
+<span class="line"><span class="txt"> а&nbsp;только&nbsp;внешность.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Меж&nbsp;тем&nbsp;как&nbsp;эта&nbsp;личность&nbsp;и&nbsp;во&nbsp;тьме&nbsp;была&nbsp;видна:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Gm/F# Gm/F Gm/E </span>
-<span class="txt"> всегда&nbsp;в&nbsp;порыве&nbsp;жертвенном,&nbsp;всегда&nbsp;устремлена&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/E Dm/F Dm/F#  </span>
-<span class="txt"> в&nbsp;огонь&nbsp;шагнуть&nbsp;и&nbsp;в&nbsp;реку&nbsp;прыгнуть...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Cm </span>
-<span class="txt"> А&nbsp;что&nbsp;пожара&nbsp;нет&nbsp;нигде&nbsp;и&nbsp;жертва&nbsp;не&nbsp;нужна&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab  Cm6/A  Ab D7/F# </span>
-<span class="txt"> того&nbsp;она&nbsp;была&nbsp;не&nbsp;в&nbsp;состоянии&nbsp;постигнуть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  Cm/A  Gm </span>
-<span class="txt"> Была&nbsp;не&nbsp;в&nbsp;состоянии...&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7/F#   Gm /G </span>
+<span class="line"><span class="txt"> Меж&nbsp;тем&nbsp;как&nbsp;эта&nbsp;личность&nbsp;и&nbsp;во&nbsp;тьме&nbsp;была&nbsp;видна:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Gm/F# Gm/F Gm/E </span></span>
+<span class="line"><span class="txt"> всегда&nbsp;в&nbsp;порыве&nbsp;жертвенном,&nbsp;всегда&nbsp;устремлена&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/E Dm/F Dm/F#  </span></span>
+<span class="line"><span class="txt"> в&nbsp;огонь&nbsp;шагнуть&nbsp;и&nbsp;в&nbsp;реку&nbsp;прыгнуть...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Cm </span></span>
+<span class="line"><span class="txt"> А&nbsp;что&nbsp;пожара&nbsp;нет&nbsp;нигде&nbsp;и&nbsp;жертва&nbsp;не&nbsp;нужна&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab  Cm6/A  Ab D7/F# </span></span>
+<span class="line"><span class="txt"> того&nbsp;она&nbsp;была&nbsp;не&nbsp;в&nbsp;состоянии&nbsp;постигнуть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  Cm/A  Gm </span></span>
+<span class="line"><span class="txt"> Была&nbsp;не&nbsp;в&nbsp;состоянии...&nbsp;она.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7/F#   Gm /G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Домой&nbsp;вернувшись&nbsp;как-то&nbsp;утром,&nbsp;цел&nbsp;пока,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Abdim </span>
-<span class="txt"> я&nbsp;вдруг&nbsp;подумал:&nbsp;не&nbsp;пора&nbsp;ли&nbsp;в&nbsp;облака&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  C7 </span>
-<span class="txt"> (не&nbsp;то&nbsp;и&nbsp;впрямь&nbsp;запахнет&nbsp;жертвой)?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm </span>
-<span class="txt"> И&nbsp;накопления&nbsp;извлёк&nbsp;из&nbsp;тайника&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  B7  Fm </span>
-<span class="txt"> за&nbsp;этажеркой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="line"><span class="txt"> Домой&nbsp;вернувшись&nbsp;как-то&nbsp;утром,&nbsp;цел&nbsp;пока,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Abdim </span></span>
+<span class="line"><span class="txt"> я&nbsp;вдруг&nbsp;подумал:&nbsp;не&nbsp;пора&nbsp;ли&nbsp;в&nbsp;облака&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  C7 </span></span>
+<span class="line"><span class="txt"> (не&nbsp;то&nbsp;и&nbsp;впрямь&nbsp;запахнет&nbsp;жертвой)?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm </span></span>
+<span class="line"><span class="txt"> И&nbsp;накопления&nbsp;извлёк&nbsp;из&nbsp;тайника&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  B7  Fm </span></span>
+<span class="line"><span class="txt"> за&nbsp;этажеркой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И,&nbsp;хоть&nbsp;со&nbsp;школьных&nbsp;лет&nbsp;чуждался&nbsp;авантюр&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Abdim </span>
-<span class="txt"> и&nbsp;географию&nbsp;любил&nbsp;не&nbsp;чересчур&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  C7 </span>
-<span class="txt"> (поскольку&nbsp;был&nbsp;не&nbsp;вундеркиндом),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm </span>
-<span class="txt"> в&nbsp;агентстве&nbsp;я&nbsp;себе&nbsp;купил&nbsp;короткий&nbsp;тур&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  B7  Fm </span>
-<span class="txt"> в&nbsp;Юнайтед&nbsp;Кингдом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
+<span class="line"><span class="txt"> И,&nbsp;хоть&nbsp;со&nbsp;школьных&nbsp;лет&nbsp;чуждался&nbsp;авантюр&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Abdim </span></span>
+<span class="line"><span class="txt"> и&nbsp;географию&nbsp;любил&nbsp;не&nbsp;чересчур&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  C7 </span></span>
+<span class="line"><span class="txt"> (поскольку&nbsp;был&nbsp;не&nbsp;вундеркиндом),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm </span></span>
+<span class="line"><span class="txt"> в&nbsp;агентстве&nbsp;я&nbsp;себе&nbsp;купил&nbsp;короткий&nbsp;тур&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  B7  Fm </span></span>
+<span class="line"><span class="txt"> в&nbsp;Юнайтед&nbsp;Кингдом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Решил,&nbsp;похоже,&nbsp;тоже&nbsp;в&nbsp;неизвестное&nbsp;шагнуть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Gm/F# Gm/F Gm/E </span>
-<span class="txt"> Не&nbsp;так,&nbsp;чтобы&nbsp;славянку&nbsp;в&nbsp;сердце&nbsp;честное&nbsp;кольнуть,&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/E Dm/F Dm/F#  </span>
-<span class="txt"> но&nbsp;—&nbsp;щегольнуть,&nbsp;покрасоваться.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Cm </span>
-<span class="txt"> А&nbsp;мог&nbsp;ведь&nbsp;и&nbsp;остаться&nbsp;там,&nbsp;на&nbsp;Темзе&nbsp;где-нибудь...&nbsp;&nbsp; </span><span class="ch"> Ab  Cm6/A  Ab D7/F# </span>
-<span class="txt"> Прикидывал,&nbsp;не&nbsp;скрою.&nbsp;Но&nbsp;решил&nbsp;не&nbsp;оставаться.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  Cm/A  Gm </span>
-<span class="txt"> Вы&nbsp;спросите,&nbsp;жалею&nbsp;ли?&nbsp;Отнюдь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7/F#   Gm /G </span>
+<span class="line"><span class="txt"> Решил,&nbsp;похоже,&nbsp;тоже&nbsp;в&nbsp;неизвестное&nbsp;шагнуть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  Gm/F# Gm/F Gm/E </span></span>
+<span class="line"><span class="txt"> Не&nbsp;так,&nbsp;чтобы&nbsp;славянку&nbsp;в&nbsp;сердце&nbsp;честное&nbsp;кольнуть,&nbsp;&nbsp; </span><span class="ch"> Dm  Dm/E Dm/F Dm/F#  </span></span>
+<span class="line"><span class="txt"> но&nbsp;—&nbsp;щегольнуть,&nbsp;покрасоваться.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G  Cm </span></span>
+<span class="line"><span class="txt"> А&nbsp;мог&nbsp;ведь&nbsp;и&nbsp;остаться&nbsp;там,&nbsp;на&nbsp;Темзе&nbsp;где-нибудь...&nbsp;&nbsp; </span><span class="ch"> Ab  Cm6/A  Ab D7/F# </span></span>
+<span class="line"><span class="txt"> Прикидывал,&nbsp;не&nbsp;скрою.&nbsp;Но&nbsp;решил&nbsp;не&nbsp;оставаться.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  Cm/A  Gm </span></span>
+<span class="line"><span class="txt"> Вы&nbsp;спросите,&nbsp;жалею&nbsp;ли?&nbsp;Отнюдь.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D7/F#   Gm /G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Куда&nbsp;беспечнее,&nbsp;чем&nbsp;если&nbsp;б&nbsp;новосёл,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Abdim </span>
-<span class="txt"> я&nbsp;сутки&nbsp;в&nbsp;Лондоне&nbsp;гуляючи&nbsp;провёл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  C7 </span>
-<span class="txt"> Узрел&nbsp;Сент-Пол.&nbsp;Биг-Бен&nbsp;услышал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm </span>
-<span class="txt"> В&nbsp;Музей&nbsp;Альберта&nbsp;и&nbsp;Виктории&nbsp;зашёл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  B7  Fm </span>
-<span class="txt"> И&nbsp;сразу&nbsp;вышел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab </span>
-<span class="txt"> Внезапно&nbsp;понял&nbsp;я,&nbsp;что&nbsp;мир&nbsp;непоправим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m  Adim </span>
-<span class="txt"> что&nbsp;никаким&nbsp;себя&nbsp;мы&nbsp;общемировым&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m  C#7 </span>
-<span class="txt"> не&nbsp;усмирим&nbsp;ориентиром.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C#m </span>
-<span class="txt"> Все&nbsp;люди&nbsp;врозь,&nbsp;хотя&nbsp;и&nbsp;мазаны&nbsp;одним,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  H7  F#m </span>
-<span class="txt"> опять&nbsp;же,&nbsp;миром.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
+<span class="line"><span class="txt"> Куда&nbsp;беспечнее,&nbsp;чем&nbsp;если&nbsp;б&nbsp;новосёл,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  Abdim </span></span>
+<span class="line"><span class="txt"> я&nbsp;сутки&nbsp;в&nbsp;Лондоне&nbsp;гуляючи&nbsp;провёл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm  C7 </span></span>
+<span class="line"><span class="txt"> Узрел&nbsp;Сент-Пол.&nbsp;Биг-Бен&nbsp;услышал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Fm  Cm </span></span>
+<span class="line"><span class="txt"> В&nbsp;Музей&nbsp;Альберта&nbsp;и&nbsp;Виктории&nbsp;зашёл.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb  B7  Fm </span></span>
+<span class="line"><span class="txt"> И&nbsp;сразу&nbsp;вышел.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Cm </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Ab </span></span>
+<span class="line"><span class="txt"> Внезапно&nbsp;понял&nbsp;я,&nbsp;что&nbsp;мир&nbsp;непоправим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m  Adim </span></span>
+<span class="line"><span class="txt"> что&nbsp;никаким&nbsp;себя&nbsp;мы&nbsp;общемировым&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m  C#7 </span></span>
+<span class="line"><span class="txt"> не&nbsp;усмирим&nbsp;ориентиром.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C#m </span></span>
+<span class="line"><span class="txt"> Все&nbsp;люди&nbsp;врозь,&nbsp;хотя&nbsp;и&nbsp;мазаны&nbsp;одним,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  H7  F#m </span></span>
+<span class="line"><span class="txt"> опять&nbsp;же,&nbsp;миром.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;как&nbsp;не&nbsp;понял&nbsp;бы,&nbsp;не&nbsp;стал&nbsp;бы&nbsp;я&nbsp;умней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m  Adim  </span>
-<span class="txt"> ещё&nbsp;плутал&nbsp;бы&nbsp;меж&nbsp;потёмок&nbsp;и&nbsp;огней&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m  C#7 </span>
-<span class="txt"> и&nbsp;всё&nbsp;бы&nbsp;к&nbsp;ней,&nbsp;славянке&nbsp;нежной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C#m </span>
-<span class="txt"> не&nbsp;доезжал&nbsp;в&nbsp;её&nbsp;Мытищи&nbsp;от&nbsp;моей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  H7  F#m </span>
-<span class="txt"> Левобережной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span>
+<span class="line"><span class="txt"> А&nbsp;как&nbsp;не&nbsp;понял&nbsp;бы,&nbsp;не&nbsp;стал&nbsp;бы&nbsp;я&nbsp;умней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m  Adim  </span></span>
+<span class="line"><span class="txt"> ещё&nbsp;плутал&nbsp;бы&nbsp;меж&nbsp;потёмок&nbsp;и&nbsp;огней&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m  C#7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;всё&nbsp;бы&nbsp;к&nbsp;ней,&nbsp;славянке&nbsp;нежной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#m  C#m </span></span>
+<span class="line"><span class="txt"> не&nbsp;доезжал&nbsp;в&nbsp;её&nbsp;Мытищи&nbsp;от&nbsp;моей&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E  H7  F#m </span></span>
+<span class="line"><span class="txt"> Левобережной.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C#m </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Незнамо&nbsp;сколько&nbsp;вёрст&nbsp;ещё&nbsp;пришлось&nbsp;бы&nbsp;одолеть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m  G#m/G G#m/F# G#m/F </span>
-<span class="txt"> на&nbsp;стыках&nbsp;изнемочь,&nbsp;от&nbsp;полустанков&nbsp;ошалеть&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m  D#7/G </span>
-<span class="txt"> и,&nbsp;лишь&nbsp;прибыв&nbsp;на&nbsp;предпоследний,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C#m </span>
-<span class="txt"> за&nbsp;пять&nbsp;минут&nbsp;до&nbsp;выхода&nbsp;вполне&nbsp;уразуметь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A C#m/A# A D#7/G </span>
-<span class="txt"> что&nbsp;трясся&nbsp;мой&nbsp;вагон&nbsp;едва&nbsp;ли&nbsp;больше,&nbsp;чем&nbsp;соседний.&nbsp; </span><span class="ch"> E  C#m  G#m </span>
-<span class="txt"> А&nbsp;стало&nbsp;быть,&nbsp;и&nbsp;не&nbsp;о&nbsp;чем&nbsp;жалеть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#7/G  G#m </span>
+<span class="line"><span class="txt"> Незнамо&nbsp;сколько&nbsp;вёрст&nbsp;ещё&nbsp;пришлось&nbsp;бы&nbsp;одолеть,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#m  G#m/G G#m/F# G#m/F </span></span>
+<span class="line"><span class="txt"> на&nbsp;стыках&nbsp;изнемочь,&nbsp;от&nbsp;полустанков&nbsp;ошалеть&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#m  D#7/G </span></span>
+<span class="line"><span class="txt"> и,&nbsp;лишь&nbsp;прибыв&nbsp;на&nbsp;предпоследний,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G#  C#m </span></span>
+<span class="line"><span class="txt"> за&nbsp;пять&nbsp;минут&nbsp;до&nbsp;выхода&nbsp;вполне&nbsp;уразуметь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A C#m/A# A D#7/G </span></span>
+<span class="line"><span class="txt"> что&nbsp;трясся&nbsp;мой&nbsp;вагон&nbsp;едва&nbsp;ли&nbsp;больше,&nbsp;чем&nbsp;соседний.&nbsp; </span><span class="ch"> E  C#m  G#m </span></span>
+<span class="line"><span class="txt"> А&nbsp;стало&nbsp;быть,&nbsp;и&nbsp;не&nbsp;о&nbsp;чем&nbsp;жалеть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#7/G  G#m </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2022</span>
-
+<pre><span class="year">2022</span>
 
 </pre>
+
 
                 </div>
         </div>

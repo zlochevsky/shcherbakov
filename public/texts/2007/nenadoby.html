@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,65 +423,62 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">Не надо было думать, что само...</span>
+data-key="Dm"><h1>Не надо было думать, что само...</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Не&nbsp;надо&nbsp;было&nbsp;думать,&nbsp;что&nbsp;само&nbsp;растает&nbsp;наважденье&nbsp;к&nbsp;лету,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  </span>
-<span class="txt"> что&nbsp;призрак&nbsp;этот&nbsp;канет&nbsp;в&nbsp;лету&nbsp;сам&nbsp;без&nbsp;помощи&nbsp;властей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span>
-<span class="txt"> Вот&nbsp;если&nbsp;бы,&nbsp;едва&nbsp;пришёл&nbsp;он&nbsp;к&nbsp;нам,&nbsp;его&nbsp;мы&nbsp;посадили&nbsp;в&nbsp;клетку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm B7/Ab </span>
-<span class="txt"> тогда&nbsp;бы&nbsp;ни&nbsp;скандала,&nbsp;ни&nbsp;страстей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/A A </span>
+<span class="line"><span class="txt"> Не&nbsp;надо&nbsp;было&nbsp;думать,&nbsp;что&nbsp;само&nbsp;растает&nbsp;наважденье&nbsp;к&nbsp;лету,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  </span></span>
+<span class="line"><span class="txt"> что&nbsp;призрак&nbsp;этот&nbsp;канет&nbsp;в&nbsp;лету&nbsp;сам&nbsp;без&nbsp;помощи&nbsp;властей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span></span>
+<span class="line"><span class="txt"> Вот&nbsp;если&nbsp;бы,&nbsp;едва&nbsp;пришёл&nbsp;он&nbsp;к&nbsp;нам,&nbsp;его&nbsp;мы&nbsp;посадили&nbsp;в&nbsp;клетку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm B7/Ab </span></span>
+<span class="line"><span class="txt"> тогда&nbsp;бы&nbsp;ни&nbsp;скандала,&nbsp;ни&nbsp;страстей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/A A </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;нынче&nbsp;впору&nbsp;в&nbsp;область&nbsp;почту&nbsp;слать,&nbsp;явился,&nbsp;мол,&nbsp;пришелец&nbsp;нервный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      </span>
-<span class="txt"> которому&nbsp;не&nbsp;то&nbsp;что&nbsp;"Руки&nbsp;вверх!",&nbsp;но&nbsp;скажешь&nbsp;только&nbsp;"Эй!",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm   </span>
-<span class="txt"> и&nbsp;он&nbsp;уже&nbsp;шумит,&nbsp;как&nbsp;море,&nbsp;а&nbsp;море&nbsp;миру&nbsp;недруг&nbsp;верный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm B7/Ab </span>
-<span class="txt"> и&nbsp;призрак&nbsp;тоже&nbsp;недруг,&nbsp;знать&nbsp;бы&nbsp;чей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/A A        -- Em </span>
+<span class="line"><span class="txt"> А&nbsp;нынче&nbsp;впору&nbsp;в&nbsp;область&nbsp;почту&nbsp;слать,&nbsp;явился,&nbsp;мол,&nbsp;пришелец&nbsp;нервный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm      </span></span>
+<span class="line"><span class="txt"> которому&nbsp;не&nbsp;то&nbsp;что&nbsp;"Руки&nbsp;вверх!",&nbsp;но&nbsp;скажешь&nbsp;только&nbsp;"Эй!",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm   </span></span>
+<span class="line"><span class="txt"> и&nbsp;он&nbsp;уже&nbsp;шумит,&nbsp;как&nbsp;море,&nbsp;а&nbsp;море&nbsp;миру&nbsp;недруг&nbsp;верный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm B7/Ab </span></span>
+<span class="line"><span class="txt"> и&nbsp;призрак&nbsp;тоже&nbsp;недруг,&nbsp;знать&nbsp;бы&nbsp;чей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/A A        -- Em </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Хотя&nbsp;бы&nbsp;знать,&nbsp;умён&nbsp;ли,&nbsp;глуп&nbsp;ли&nbsp;он,&nbsp;повадлив&nbsp;на&nbsp;какие&nbsp;плутни,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> Из&nbsp;тех&nbsp;ли&nbsp;он,&nbsp;бразды&nbsp;при&nbsp;ком&nbsp;не&nbsp;взрой&nbsp;и&nbsp;сотки&nbsp;не&nbsp;засей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7/B Em/H E Am </span>
-<span class="txt"> Кто&nbsp;наши&nbsp;все&nbsp;початки&nbsp;прекратит,&nbsp;отменит&nbsp;черенки&nbsp;и&nbsp;клубни,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C7/B </span>
-<span class="txt"> вкушай&nbsp;потом&nbsp;объедки,&nbsp;латки&nbsp;шей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/H H7 </span>
+<span class="line"><span class="txt"> Хотя&nbsp;бы&nbsp;знать,&nbsp;умён&nbsp;ли,&nbsp;глуп&nbsp;ли&nbsp;он,&nbsp;повадлив&nbsp;на&nbsp;какие&nbsp;плутни,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> Из&nbsp;тех&nbsp;ли&nbsp;он,&nbsp;бразды&nbsp;при&nbsp;ком&nbsp;не&nbsp;взрой&nbsp;и&nbsp;сотки&nbsp;не&nbsp;засей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C7/B Em/H E Am </span></span>
+<span class="line"><span class="txt"> Кто&nbsp;наши&nbsp;все&nbsp;початки&nbsp;прекратит,&nbsp;отменит&nbsp;черенки&nbsp;и&nbsp;клубни,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C7/B </span></span>
+<span class="line"><span class="txt"> вкушай&nbsp;потом&nbsp;объедки,&nbsp;латки&nbsp;шей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/H H7 </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пытались&nbsp;проходимца&nbsp;лестью&nbsp;взять,&nbsp;мол,&nbsp;очень&nbsp;ты&nbsp;шумишь&nbsp;искусно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span>
-<span class="txt"> Надеялись,&nbsp;размякнет&nbsp;недруг,&nbsp;но&nbsp;сказали&nbsp;только&nbsp;"Эй!",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am </span>
-<span class="txt"> и&nbsp;он&nbsp;уже&nbsp;молчит,&nbsp;как&nbsp;камень,&nbsp;а&nbsp;камню&nbsp;никогда&nbsp;не&nbsp;грустно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C7/B </span>
-<span class="txt"> ему&nbsp;заботы&nbsp;нет&nbsp;ни&nbsp;до&nbsp;кого,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/H H7 </span>
-<span class="txt"> его&nbsp;пренебреженье&nbsp;таково,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A </span>
-<span class="txt"> его&nbsp;предупрежденье&nbsp;грозово,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span>
-<span class="txt"> не&nbsp;надо&nbsp;было&nbsp;думать,&nbsp;что&nbsp;само.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#                Hm <- </span>
+<span class="line"><span class="txt"> Пытались&nbsp;проходимца&nbsp;лестью&nbsp;взять,&nbsp;мол,&nbsp;очень&nbsp;ты&nbsp;шумишь&nbsp;искусно.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em </span></span>
+<span class="line"><span class="txt"> Надеялись,&nbsp;размякнет&nbsp;недруг,&nbsp;но&nbsp;сказали&nbsp;только&nbsp;"Эй!",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;он&nbsp;уже&nbsp;молчит,&nbsp;как&nbsp;камень,&nbsp;а&nbsp;камню&nbsp;никогда&nbsp;не&nbsp;грустно,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am C7/B </span></span>
+<span class="line"><span class="txt"> ему&nbsp;заботы&nbsp;нет&nbsp;ни&nbsp;до&nbsp;кого,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em/H H7 </span></span>
+<span class="line"><span class="txt"> его&nbsp;пренебреженье&nbsp;таково,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A </span></span>
+<span class="line"><span class="txt"> его&nbsp;предупрежденье&nbsp;грозово,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> C </span></span>
+<span class="line"><span class="txt"> не&nbsp;надо&nbsp;было&nbsp;думать,&nbsp;что&nbsp;само.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#                Hm <- </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;надо&nbsp;было&nbsp;белый,&nbsp;что&nbsp;ли,&nbsp;флаг&nbsp;пошить&nbsp;из&nbsp;лоскутов&nbsp;и&nbsp;латок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span>
-<span class="txt"> послать&nbsp;уведомленье&nbsp;в&nbsp;область,&nbsp;пусть&nbsp;готовят&nbsp;толмачей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em </span>
-<span class="txt"> Одеться&nbsp;максимально&nbsp;скромно,&nbsp;остаться&nbsp;без&nbsp;щитов,&nbsp;не&nbsp;в&nbsp;латах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G7/F </span>
-<span class="txt"> забыть&nbsp;на&nbsp;время&nbsp;злость&nbsp;и&nbsp;доблесть&nbsp;и&nbsp;кинуться&nbsp;пришельцу&nbsp;в&nbsp;ноги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F# F# E G   -- Dm </span>
+<span class="line"><span class="txt"> А&nbsp;надо&nbsp;было&nbsp;белый,&nbsp;что&nbsp;ли,&nbsp;флаг&nbsp;пошить&nbsp;из&nbsp;лоскутов&nbsp;и&nbsp;латок,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm </span></span>
+<span class="line"><span class="txt"> послать&nbsp;уведомленье&nbsp;в&nbsp;область,&nbsp;пусть&nbsp;готовят&nbsp;толмачей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm Em </span></span>
+<span class="line"><span class="txt"> Одеться&nbsp;максимально&nbsp;скромно,&nbsp;остаться&nbsp;без&nbsp;щитов,&nbsp;не&nbsp;в&nbsp;латах,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Em G7/F </span></span>
+<span class="line"><span class="txt"> забыть&nbsp;на&nbsp;время&nbsp;злость&nbsp;и&nbsp;доблесть&nbsp;и&nbsp;кинуться&nbsp;пришельцу&nbsp;в&nbsp;ноги.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Hm/F# F# E G   -- Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сказать&nbsp;ему,&nbsp;что&nbsp;самый&nbsp;острый&nbsp;меч&nbsp;повинной&nbsp;головы&nbsp;не&nbsp;рубит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
-<span class="txt"> мол,&nbsp;если&nbsp;мы&nbsp;не&nbsp;правы,&nbsp;что&nbsp;ж,&nbsp;казни,&nbsp;но&nbsp;лучше&nbsp;пожалей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span>
-<span class="txt"> А&nbsp;он&nbsp;опять&nbsp;шумит,&nbsp;как&nbsp;море,&nbsp;а&nbsp;море&nbsp;никого&nbsp;не&nbsp;любит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm B7/Ab </span>
-<span class="txt"> а&nbsp;море&nbsp;не&nbsp;жалеет&nbsp;никого&nbsp;уже&nbsp;по&nbsp;той&nbsp;причине,&nbsp;что&nbsp;оно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/A A G Gm6 </span>
-<span class="txt"> море.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span>
+<span class="line"><span class="txt"> Сказать&nbsp;ему,&nbsp;что&nbsp;самый&nbsp;острый&nbsp;меч&nbsp;повинной&nbsp;головы&nbsp;не&nbsp;рубит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
+<span class="line"><span class="txt"> мол,&nbsp;если&nbsp;мы&nbsp;не&nbsp;правы,&nbsp;что&nbsp;ж,&nbsp;казни,&nbsp;но&nbsp;лучше&nbsp;пожалей.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span></span>
+<span class="line"><span class="txt"> А&nbsp;он&nbsp;опять&nbsp;шумит,&nbsp;как&nbsp;море,&nbsp;а&nbsp;море&nbsp;никого&nbsp;не&nbsp;любит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm B7/Ab </span></span>
+<span class="line"><span class="txt"> а&nbsp;море&nbsp;не&nbsp;жалеет&nbsp;никого&nbsp;уже&nbsp;по&nbsp;той&nbsp;причине,&nbsp;что&nbsp;оно&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm/A A G Gm6 </span></span>
+<span class="line"><span class="txt"> море.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2007</span>                                                                    Нотитровка усреднённая
+<pre><span class="year">2007</span>                                                                    Нотитровка усреднённая
                                                                         по исполнениям <span class="year">2007</span> и <span class="year">2010</span> г.
 
-
 </pre>
+
 
                 </div>
         </div>

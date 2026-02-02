@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,82 +423,80 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">СВЕРЧКИ-КУЗНЕЧИКИ</span>
+data-key="Am"><h1>СВЕРЧКИ-КУЗНЕЧИКИ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> То&nbsp;ли&nbsp;дело&nbsp;прежде!&nbsp;Крым,&nbsp;Кавказ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> Что&nbsp;ни&nbsp;похвали&nbsp;-&nbsp;твоё&nbsp;тотчас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
-<span class="txt"> Чином&nbsp;рядовой,&nbsp;лицом&nbsp;министр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> Беден,&nbsp;да&nbsp;не&nbsp;жаден,&nbsp;глуп,&nbsp;да&nbsp;быстр...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Нынче&nbsp;ж&nbsp;и&nbsp;умён,&nbsp;да&nbsp;звон&nbsp;другой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Сколько&nbsp;ни&nbsp;склоняйся&nbsp;над&nbsp;струной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;может,&nbsp;и&nbsp;сведётся&nbsp;гамма&nbsp;к&nbsp;до,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;да&nbsp;не&nbsp;отзовётся&nbsp;знамо&nbsp;кто...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
+<span class="line"><span class="txt"> То&nbsp;ли&nbsp;дело&nbsp;прежде!&nbsp;Крым,&nbsp;Кавказ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> Что&nbsp;ни&nbsp;похвали&nbsp;-&nbsp;твоё&nbsp;тотчас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
+<span class="line"><span class="txt"> Чином&nbsp;рядовой,&nbsp;лицом&nbsp;министр.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> Беден,&nbsp;да&nbsp;не&nbsp;жаден,&nbsp;глуп,&nbsp;да&nbsp;быстр...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Нынче&nbsp;ж&nbsp;и&nbsp;умён,&nbsp;да&nbsp;звон&nbsp;другой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Сколько&nbsp;ни&nbsp;склоняйся&nbsp;над&nbsp;струной,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;может,&nbsp;и&nbsp;сведётся&nbsp;гамма&nbsp;к&nbsp;до,&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;да&nbsp;не&nbsp;отзовётся&nbsp;знамо&nbsp;кто...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Где&nbsp;теперь&nbsp;увидишь&nbsp;нас&nbsp;вдвоём?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> Разве&nbsp;что&nbsp;во&nbsp;сне,&nbsp;и&nbsp;то&nbsp;-&nbsp;в&nbsp;моём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
-<span class="txt"> Что&nbsp;теперь&nbsp;ей&nbsp;Крым,&nbsp;Кавказ,&nbsp;Багдад?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> Нынешний&nbsp;приют&nbsp;её&nbsp;богат&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;долог&nbsp;в&nbsp;ширину,&nbsp;широк&nbsp;в&nbsp;длину...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Там&nbsp;она,&nbsp;должно&nbsp;быть,&nbsp;как&nbsp;в&nbsp;плену,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;посреди&nbsp;гардин&nbsp;и&nbsp;хризантем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;так&nbsp;и&nbsp;пропадает,&nbsp;знамо&nbsp;с&nbsp;кем...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
+<span class="line"><span class="txt"> Где&nbsp;теперь&nbsp;увидишь&nbsp;нас&nbsp;вдвоём?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> Разве&nbsp;что&nbsp;во&nbsp;сне,&nbsp;и&nbsp;то&nbsp;-&nbsp;в&nbsp;моём.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
+<span class="line"><span class="txt"> Что&nbsp;теперь&nbsp;ей&nbsp;Крым,&nbsp;Кавказ,&nbsp;Багдад?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> Нынешний&nbsp;приют&nbsp;её&nbsp;богат&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;долог&nbsp;в&nbsp;ширину,&nbsp;широк&nbsp;в&nbsp;длину...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Там&nbsp;она,&nbsp;должно&nbsp;быть,&nbsp;как&nbsp;в&nbsp;плену,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;посреди&nbsp;гардин&nbsp;и&nbsp;хризантем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;так&nbsp;и&nbsp;пропадает,&nbsp;знамо&nbsp;с&nbsp;кем...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Рассеку&nbsp;подкладку&nbsp;по&nbsp;стежку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> перстень&nbsp;обручальный&nbsp;извлеку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
-<span class="txt"> Осмотрю&nbsp;его,&nbsp;вздохну&nbsp;над&nbsp;ним&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> и&nbsp;зашью&nbsp;обратно&nbsp;швом&nbsp;двойным.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Вы,&nbsp;сверчки-кузнечики&nbsp;в&nbsp;ночи!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Всякий&nbsp;до&nbsp;утра&nbsp;своё&nbsp;кричи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Пусть&nbsp;под&nbsp;вашу&nbsp;песню&nbsp;в&nbsp;три&nbsp;ручья&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;пленница&nbsp;заплачет,&nbsp;знамо&nbsp;чья...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
+<span class="line"><span class="txt"> Рассеку&nbsp;подкладку&nbsp;по&nbsp;стежку,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> перстень&nbsp;обручальный&nbsp;извлеку.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
+<span class="line"><span class="txt"> Осмотрю&nbsp;его,&nbsp;вздохну&nbsp;над&nbsp;ним&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;зашью&nbsp;обратно&nbsp;швом&nbsp;двойным.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Вы,&nbsp;сверчки-кузнечики&nbsp;в&nbsp;ночи!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Всякий&nbsp;до&nbsp;утра&nbsp;своё&nbsp;кричи.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Пусть&nbsp;под&nbsp;вашу&nbsp;песню&nbsp;в&nbsp;три&nbsp;ручья&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;пленница&nbsp;заплачет,&nbsp;знамо&nbsp;чья...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;дают&nbsp;кузнечики&nbsp;концерт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> и&nbsp;поют&nbsp;сверчки&nbsp;на&nbsp;весь&nbsp;райцентр,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
-<span class="txt"> и&nbsp;под&nbsp;эту&nbsp;песню&nbsp;в&nbsp;три&nbsp;ручья&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> сам,&nbsp;однако,&nbsp;первый&nbsp;плачу&nbsp;я.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Плачу&nbsp;о&nbsp;безумствах&nbsp;давних&nbsp;дней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;о&nbsp;себе&nbsp;тогдашнем&nbsp;и&nbsp;о&nbsp;ней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;о&nbsp;кольце,&nbsp;зашитом&nbsp;на&nbsp;два&nbsp;шва,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;ещё&nbsp;о&nbsp;том,&nbsp;что&nbsp;жизнь&nbsp;прошла...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
+<span class="line"><span class="txt"> И&nbsp;дают&nbsp;кузнечики&nbsp;концерт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> и&nbsp;поют&nbsp;сверчки&nbsp;на&nbsp;весь&nbsp;райцентр,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
+<span class="line"><span class="txt"> и&nbsp;под&nbsp;эту&nbsp;песню&nbsp;в&nbsp;три&nbsp;ручья&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> сам,&nbsp;однако,&nbsp;первый&nbsp;плачу&nbsp;я.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Плачу&nbsp;о&nbsp;безумствах&nbsp;давних&nbsp;дней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;о&nbsp;себе&nbsp;тогдашнем&nbsp;и&nbsp;о&nbsp;ней,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;о&nbsp;кольце,&nbsp;зашитом&nbsp;на&nbsp;два&nbsp;шва,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;ещё&nbsp;о&nbsp;том,&nbsp;что&nbsp;жизнь&nbsp;прошла...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;наутро&nbsp;морщусь&nbsp;вкось&nbsp;и&nbsp;вкривь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> дымчатым&nbsp;стеклом&nbsp;глаза&nbsp;прикрыв.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
-<span class="txt"> Между&nbsp;тем&nbsp;как&nbsp;пленница&nbsp;горда&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> вот&nbsp;уж&nbsp;кто&nbsp;не&nbsp;плачет&nbsp;никогда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;окне&nbsp;решётка,&nbsp;дверь&nbsp;с&nbsp;замком&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;она&nbsp;не&nbsp;плачет&nbsp;ни&nbsp;о&nbsp;ком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Ни&nbsp;к&nbsp;чему&nbsp;ей&nbsp;тёмные&nbsp;очки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Что&nbsp;же&nbsp;вы,&nbsp;кузнечики-сверчки?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
+<span class="line"><span class="txt"> А&nbsp;наутро&nbsp;морщусь&nbsp;вкось&nbsp;и&nbsp;вкривь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> дымчатым&nbsp;стеклом&nbsp;глаза&nbsp;прикрыв.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
+<span class="line"><span class="txt"> Между&nbsp;тем&nbsp;как&nbsp;пленница&nbsp;горда&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> вот&nbsp;уж&nbsp;кто&nbsp;не&nbsp;плачет&nbsp;никогда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;На&nbsp;окне&nbsp;решётка,&nbsp;дверь&nbsp;с&nbsp;замком&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;а&nbsp;она&nbsp;не&nbsp;плачет&nbsp;ни&nbsp;о&nbsp;ком.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Ни&nbsp;к&nbsp;чему&nbsp;ей&nbsp;тёмные&nbsp;очки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Что&nbsp;же&nbsp;вы,&nbsp;кузнечики-сверчки?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Прежде-то,&nbsp;известно,&nbsp;чуть&nbsp;хандра&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span>
-<span class="txt"> не&nbsp;жалей&nbsp;вина&nbsp;до&nbsp;дна&nbsp;ведра.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
-<span class="txt"> Нынче&nbsp;ж&nbsp;и&nbsp;бальзам&nbsp;ценой&nbsp;в&nbsp;брильянт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span>
-<span class="txt"> еле&nbsp;пригубив,&nbsp;верну&nbsp;в&nbsp;сервант.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Древний&nbsp;со&nbsp;стены&nbsp;кинжал&nbsp;возьму,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;паутину-пыль&nbsp;с&nbsp;него&nbsp;сниму.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Лезвие&nbsp;протру&nbsp;и&nbsp;рукоять&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;повешу&nbsp;на&nbsp;стену&nbsp;опять.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span>
+<span class="line"><span class="txt"> Прежде-то,&nbsp;известно,&nbsp;чуть&nbsp;хандра&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Em </span></span>
+<span class="line"><span class="txt"> не&nbsp;жалей&nbsp;вина&nbsp;до&nbsp;дна&nbsp;ведра.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
+<span class="line"><span class="txt"> Нынче&nbsp;ж&nbsp;и&nbsp;бальзам&nbsp;ценой&nbsp;в&nbsp;брильянт,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7 Dm </span></span>
+<span class="line"><span class="txt"> еле&nbsp;пригубив,&nbsp;верну&nbsp;в&nbsp;сервант.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> H7 E7 (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Древний&nbsp;со&nbsp;стены&nbsp;кинжал&nbsp;возьму,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;паутину-пыль&nbsp;с&nbsp;него&nbsp;сниму.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am (бас a h c c#) </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;Лезвие&nbsp;протру&nbsp;и&nbsp;рукоять&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Dm6 Am </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;повешу&nbsp;на&nbsp;стену&nbsp;опять.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7 Am </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">2000</span>
-
+<pre><span class="year">2000</span>
 </pre>
+
 
                 </div>
         </div>

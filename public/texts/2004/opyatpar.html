@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,90 +423,86 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Am"><span class="sng-title">Paris encore</span>
+data-key="Am"><h1>Paris encore</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Потом,&nbsp;не&nbsp;завтра,&nbsp;нет.&nbsp;Зимой,&nbsp;зимой,&nbsp;не&nbsp;раньше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm </span>
-<span class="txt"> Прозрев&nbsp;и&nbsp;устремив&nbsp;к&nbsp;былому&nbsp;взгляд&nbsp;и&nbsp;разум,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E7 Am </span>
-<span class="txt"> в&nbsp;былом&nbsp;найдёшь&nbsp;ты&nbsp;ад.&nbsp;Конечно,&nbsp;ад.&nbsp;Не&nbsp;рай&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A Dm </span>
-<span class="txt"> Глубин&nbsp;тщеты&nbsp;коснёшься&nbsp;ты&nbsp;и&nbsp;разумом&nbsp;и&nbsp;глазом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E Am </span>
-<span class="txt"> Но&nbsp;тем&nbsp;верней&nbsp;метнёшься&nbsp;к&nbsp;ней,&nbsp;в&nbsp;ущерб&nbsp;всему&nbsp;и&nbsp;разом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E Am   --Dm </span>
+<span class="line"><span class="txt"> Потом,&nbsp;не&nbsp;завтра,&nbsp;нет.&nbsp;Зимой,&nbsp;зимой,&nbsp;не&nbsp;раньше.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am Dm </span></span>
+<span class="line"><span class="txt"> Прозрев&nbsp;и&nbsp;устремив&nbsp;к&nbsp;былому&nbsp;взгляд&nbsp;и&nbsp;разум,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm E7 Am </span></span>
+<span class="line"><span class="txt"> в&nbsp;былом&nbsp;найдёшь&nbsp;ты&nbsp;ад.&nbsp;Конечно,&nbsp;ад.&nbsp;Не&nbsp;рай&nbsp;же.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am A Dm </span></span>
+<span class="line"><span class="txt"> Глубин&nbsp;тщеты&nbsp;коснёшься&nbsp;ты&nbsp;и&nbsp;разумом&nbsp;и&nbsp;глазом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E Am </span></span>
+<span class="line"><span class="txt"> Но&nbsp;тем&nbsp;верней&nbsp;метнёшься&nbsp;к&nbsp;ней,&nbsp;в&nbsp;ущерб&nbsp;всему&nbsp;и&nbsp;разом.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Am E Am   --Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Начнёшь,&nbsp;забыв&nbsp;комфорт,&nbsp;разъяв&nbsp;капкан&nbsp;престижа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span>
-<span class="txt"> блуждать&nbsp;среди&nbsp;теней&nbsp;во&nbsp;временах&nbsp;богемных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A Dm </span>
-<span class="txt"> В&nbsp;дымах&nbsp;и&nbsp;облаках,&nbsp;на&nbsp;чердаках&nbsp;Парижа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm D Gm </span>
-<span class="txt"> в&nbsp;чумных&nbsp;пирах,&nbsp;в&nbsp;иных&nbsp;мирах&nbsp;-&nbsp;подлунных&nbsp;и&nbsp;подземных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm A Dm </span>
-<span class="txt"> И&nbsp;вместе&nbsp;с&nbsp;тем&nbsp;-&nbsp;меж&nbsp;серых&nbsp;стен,&nbsp;больничных&nbsp;и&nbsp;тюремных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm A Dm     Am<- </span>
+<span class="line"><span class="txt"> Начнёшь,&nbsp;забыв&nbsp;комфорт,&nbsp;разъяв&nbsp;капкан&nbsp;престижа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm Gm </span></span>
+<span class="line"><span class="txt"> блуждать&nbsp;среди&nbsp;теней&nbsp;во&nbsp;временах&nbsp;богемных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm A Dm </span></span>
+<span class="line"><span class="txt"> В&nbsp;дымах&nbsp;и&nbsp;облаках,&nbsp;на&nbsp;чердаках&nbsp;Парижа,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm D Gm </span></span>
+<span class="line"><span class="txt"> в&nbsp;чумных&nbsp;пирах,&nbsp;в&nbsp;иных&nbsp;мирах&nbsp;-&nbsp;подлунных&nbsp;и&nbsp;подземных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm A Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;вместе&nbsp;с&nbsp;тем&nbsp;-&nbsp;меж&nbsp;серых&nbsp;стен,&nbsp;больничных&nbsp;и&nbsp;тюремных.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm Dm A Dm     Am<- </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Уйдёшь,&nbsp;уйдёшь&nbsp;к&nbsp;теням,&nbsp;в&nbsp;аррондисман&nbsp;вчерашний,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Уйдёшь,&nbsp;уйдёшь&nbsp;к&nbsp;теням,&nbsp;в&nbsp;аррондисман&nbsp;вчерашний,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> к&nbsp;дверям,&nbsp;что&nbsp;всё&nbsp;скрипят&nbsp;(никто&nbsp;никак&nbsp;не&nbsp;смажет). </span>
 <span class="txt"> Они&nbsp;не&nbsp;на&nbsp;замке,&nbsp;за&nbsp;ними&nbsp;зверь&nbsp;домашний. </span>
 <span class="txt"> Качнётся&nbsp;дверь,&nbsp;очнётся&nbsp;зверь,&nbsp;но&nbsp;ничего&nbsp;не&nbsp;скажет. </span>
 <span class="txt"> Хвостом&nbsp;вильнёт,&nbsp;потом&nbsp;зевнёт.&nbsp;И&nbsp;спать&nbsp;опять&nbsp;заляжет. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Входи,&nbsp;однако&nbsp;знай:&nbsp;нельзя&nbsp;войти&nbsp;в&nbsp;те&nbsp;воды,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span>
+<span class="line"><span class="txt"> Входи,&nbsp;однако&nbsp;знай:&nbsp;нельзя&nbsp;войти&nbsp;в&nbsp;те&nbsp;воды,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span></span>
 <span class="txt"> в&nbsp;каких&nbsp;уже&nbsp;тонул.&nbsp;Река&nbsp;течёт&nbsp;исправно. </span>
 <span class="txt"> Темна&nbsp;страна&nbsp;теней.&nbsp;Оттуда&nbsp;жди&nbsp;невзгоды. </span>
 <span class="txt"> Оттуда&nbsp;звук&nbsp;-&nbsp;уже&nbsp;испуг,&nbsp;а&nbsp;если&nbsp;знак&nbsp;-&nbsp;подавно. </span>
 <span class="txt"> А&nbsp;если&nbsp;блик&nbsp;-&nbsp;то&nbsp;лишь&nbsp;на&nbsp;миг,&nbsp;неясно&nbsp;и&nbsp;неявно. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сверкнёт&nbsp;былой&nbsp;хрусталь,&nbsp;и&nbsp;звон&nbsp;его&nbsp;хвалёный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Сверкнёт&nbsp;былой&nbsp;хрусталь,&nbsp;и&nbsp;звон&nbsp;его&nbsp;хвалёный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> на&nbsp;миг&nbsp;вернёт&nbsp;тебе&nbsp;пиры,&nbsp;костры,&nbsp;гаремы. </span>
 <span class="txt"> Камзол&nbsp;блеснёт&nbsp;златой...&nbsp;мелькнёт&nbsp;берет&nbsp;зелёный... </span>
 <span class="txt"> И&nbsp;-&nbsp;снова&nbsp;тьма.&nbsp;Зима,&nbsp;зима.&nbsp;И&nbsp;никакой&nbsp;богемы. </span>
 <span class="txt"> Вот&nbsp;и&nbsp;ответ.&nbsp;Её&nbsp;ведь&nbsp;нет.&nbsp;И&nbsp;значит,&nbsp;нет&nbsp;проблемы. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;в&nbsp;том,&nbsp;что&nbsp;пуст&nbsp;архив&nbsp;и&nbsp;каталог&nbsp;бессвязен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span>
+<span class="line"><span class="txt"> А&nbsp;в&nbsp;том,&nbsp;что&nbsp;пуст&nbsp;архив&nbsp;и&nbsp;каталог&nbsp;бессвязен,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span></span>
 <span class="txt"> Париж&nbsp;не&nbsp;виноват.&nbsp;Уж&nbsp;он&nbsp;давно&nbsp;не&nbsp;рядом. </span>
 <span class="txt"> Давно&nbsp;не&nbsp;помнишь&nbsp;ты,&nbsp;как&nbsp;он&nbsp;спесив&nbsp;и&nbsp;грязен. </span>
 <span class="txt"> Но&nbsp;помнишь&nbsp;ты&nbsp;-&nbsp;мосты,&nbsp;мосты...&nbsp;В&nbsp;саду&nbsp;фонтан&nbsp;с&nbsp;каскадом. </span>
 <span class="txt"> И&nbsp;постамент...&nbsp;и&nbsp;монумент,&nbsp;воздевший&nbsp;длань&nbsp;над&nbsp;садом. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Пред&nbsp;ним,&nbsp;облюбовав&nbsp;одну&nbsp;из&nbsp;трёх&nbsp;ступенек,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> Пред&nbsp;ним,&nbsp;облюбовав&nbsp;одну&nbsp;из&nbsp;трёх&nbsp;ступенек,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> стоят&nbsp;седой&nbsp;старик&nbsp;и&nbsp;мальчик-воробейчик. </span>
 <span class="txt"> Слепых&nbsp;не&nbsp;щуря&nbsp;глаз,&nbsp;поют&nbsp;они&nbsp;для&nbsp;денег. </span>
 <span class="txt"> У&nbsp;старика&nbsp;гармоника,&nbsp;у&nbsp;мальчика&nbsp;бубенчик. </span>
 <span class="txt"> Пять&nbsp;первых&nbsp;нот&nbsp;-&nbsp;и&nbsp;вот&nbsp;он,&nbsp;вот&nbsp;-&nbsp;мотивчик&nbsp;тот...&nbsp;рефренчик. </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> А&nbsp;ты&nbsp;уже&nbsp;не&nbsp;слеп.&nbsp;Уже&nbsp;ты&nbsp;сам&nbsp;из&nbsp;тех,&nbsp;кто&nbsp;платит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span>
+<span class="line"><span class="txt"> А&nbsp;ты&nbsp;уже&nbsp;не&nbsp;слеп.&nbsp;Уже&nbsp;ты&nbsp;сам&nbsp;из&nbsp;тех,&nbsp;кто&nbsp;платит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm... </span></span>
 <span class="txt"> Скучай&nbsp;хоть&nbsp;вечер&nbsp;весь&nbsp;в&nbsp;бистро,&nbsp;один&nbsp;среди&nbsp;стекла&nbsp;и&nbsp;пробок. </span>
 <span class="txt"> Анкор,&nbsp;опять&nbsp;анкор.&nbsp;Третий&nbsp;стакан...&nbsp;шестой,&nbsp;седьмой, </span>
-<span class="txt"> восьмой...&nbsp;хватит. </span>
+<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;восьмой...&nbsp;хватит. </span>
 <span class="txt"> Не&nbsp;хочет&nbsp;твой&nbsp;близнец&nbsp;былой&nbsp;ни&nbsp;устриц,&nbsp;ни&nbsp;похлёбок. </span>
 <span class="txt"> (Он&nbsp;-&nbsp;тень&nbsp;в&nbsp;толпе,&nbsp;но&nbsp;с&nbsp;ним&nbsp;тебе&nbsp;всё&nbsp;так&nbsp;и&nbsp;жить&nbsp;бок&nbsp;о&nbsp;бок.) </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> ...Гарсон&nbsp;возник&nbsp;из&nbsp;тьмы.&nbsp;Принёс&nbsp;ещё&nbsp;спиртного.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span>
+<span class="line"><span class="txt"> ...Гарсон&nbsp;возник&nbsp;из&nbsp;тьмы.&nbsp;Принёс&nbsp;ещё&nbsp;спиртного.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Am... </span></span>
 <span class="txt"> Спросил,&nbsp;подать&nbsp;ли&nbsp;счёт.&nbsp;И&nbsp;отошёл,&nbsp;не&nbsp;понят. </span>
 <span class="txt"> А&nbsp;те&nbsp;слепые&nbsp;два&nbsp;-&nbsp;то&nbsp;замолчат,&nbsp;то&nbsp;снова: </span>
-<span class="txt"> "la&nbsp;boheme...&nbsp;la&nbsp;boheme..."&nbsp;А&nbsp;дальше&nbsp;слов&nbsp;не&nbsp;помнят. </span><span class="ch">  </span>
+<span class="line"><span class="txt"> "la&nbsp;boheme...&nbsp;la&nbsp;boheme..."&nbsp;А&nbsp;дальше&nbsp;слов&nbsp;не&nbsp;помнят. </span><span class="ch">  </span></span>
 <span class="txt"> Мммм... </span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">2004</span>                                                        Нотировка по исполнению <span class="year">2004</span> года.
-
+<pre><span class="year">2004</span>                                                        Нотировка по исполнению <span class="year">2004</span> года.
 
 
 </pre>
+
 
                 </div>
         </div>

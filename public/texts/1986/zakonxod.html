@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,92 +423,90 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="Dm"><span class="sng-title">ЗАКОН ХОДЬБЫ</span>
+data-key="Dm"><h1>ЗАКОН ХОДЬБЫ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Порядок&nbsp;вечный&nbsp;мне&nbsp;незнаком,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span>
-<span class="txt"> неведом&nbsp;расчёт&nbsp;судьбы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> Мне&nbsp;внятен&nbsp;только&nbsp;один&nbsp;закон&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span>
-<span class="txt"> великий&nbsp;закон&nbsp;ходьбы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> От&nbsp;первых&nbsp;дней&nbsp;до&nbsp;последних&nbsp;лет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span>
-<span class="txt"> до&nbsp;старческого&nbsp;горба&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span>
-<span class="txt"> нас&nbsp;вводит&nbsp;в&nbsp;курс&nbsp;и&nbsp;выводит&nbsp;в&nbsp;свет&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span>
-<span class="txt"> и&nbsp;сводит&nbsp;на&nbsp;нет&nbsp;ходьба.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span>
+<span class="line"><span class="txt"> Порядок&nbsp;вечный&nbsp;мне&nbsp;незнаком,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span></span>
+<span class="line"><span class="txt"> неведом&nbsp;расчёт&nbsp;судьбы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> Мне&nbsp;внятен&nbsp;только&nbsp;один&nbsp;закон&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span></span>
+<span class="line"><span class="txt"> великий&nbsp;закон&nbsp;ходьбы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> От&nbsp;первых&nbsp;дней&nbsp;до&nbsp;последних&nbsp;лет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span></span>
+<span class="line"><span class="txt"> до&nbsp;старческого&nbsp;горба&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span></span>
+<span class="line"><span class="txt"> нас&nbsp;вводит&nbsp;в&nbsp;курс&nbsp;и&nbsp;выводит&nbsp;в&nbsp;свет&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;сводит&nbsp;на&nbsp;нет&nbsp;ходьба.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Томятся&nbsp;истины&nbsp;под&nbsp;замком,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span>
-<span class="txt"> трещат&nbsp;от&nbsp;загадок&nbsp;лбы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> Но&nbsp;всем&nbsp;доступен&nbsp;простой&nbsp;закон&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span>
-<span class="txt"> всеобщий&nbsp;закон&nbsp;ходьбы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> Царит&nbsp;ходьба,&nbsp;не&nbsp;щадит&nbsp;потоп&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span>
-<span class="txt"> ни&nbsp;цезаря,&nbsp;ни&nbsp;раба.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span>
-<span class="txt"> Идёт&nbsp;вразнос&nbsp;и&nbsp;бурлит&nbsp;взахлёб&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span>
-<span class="txt"> во&nbsp;веки&nbsp;веков&nbsp;ходьба.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span>
+<span class="line"><span class="txt"> Томятся&nbsp;истины&nbsp;под&nbsp;замком,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span></span>
+<span class="line"><span class="txt"> трещат&nbsp;от&nbsp;загадок&nbsp;лбы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;всем&nbsp;доступен&nbsp;простой&nbsp;закон&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span></span>
+<span class="line"><span class="txt"> всеобщий&nbsp;закон&nbsp;ходьбы.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> Царит&nbsp;ходьба,&nbsp;не&nbsp;щадит&nbsp;потоп&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span></span>
+<span class="line"><span class="txt"> ни&nbsp;цезаря,&nbsp;ни&nbsp;раба.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span></span>
+<span class="line"><span class="txt"> Идёт&nbsp;вразнос&nbsp;и&nbsp;бурлит&nbsp;взахлёб&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span></span>
+<span class="line"><span class="txt"> во&nbsp;веки&nbsp;веков&nbsp;ходьба.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Нам&nbsp;всё&nbsp;по&nbsp;силам,&nbsp;хотим&nbsp;-&nbsp;шаля,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span>
-<span class="txt"> сравняем&nbsp;излом&nbsp;реки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> Хотим&nbsp;-&nbsp;леса&nbsp;превратим&nbsp;в&nbsp;поля,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span>
-<span class="txt"> поля&nbsp;превратим&nbsp;в&nbsp;пески.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> Ведь&nbsp;даже&nbsp;смерть&nbsp;не&nbsp;пугает&nbsp;нас&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span>
-<span class="txt"> чужая&nbsp;или&nbsp;своя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span>
-<span class="txt"> И&nbsp;в&nbsp;этой&nbsp;битве&nbsp;за&nbsp;часом&nbsp;час&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span>
-<span class="txt"> всё&nbsp;более&nbsp;крепок&nbsp;я...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span>
+<span class="line"><span class="txt"> Нам&nbsp;всё&nbsp;по&nbsp;силам,&nbsp;хотим&nbsp;-&nbsp;шаля,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span></span>
+<span class="line"><span class="txt"> сравняем&nbsp;излом&nbsp;реки.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> Хотим&nbsp;-&nbsp;леса&nbsp;превратим&nbsp;в&nbsp;поля,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span></span>
+<span class="line"><span class="txt"> поля&nbsp;превратим&nbsp;в&nbsp;пески.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> Ведь&nbsp;даже&nbsp;смерть&nbsp;не&nbsp;пугает&nbsp;нас&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span></span>
+<span class="line"><span class="txt"> чужая&nbsp;или&nbsp;своя.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;в&nbsp;этой&nbsp;битве&nbsp;за&nbsp;часом&nbsp;час&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span></span>
+<span class="line"><span class="txt"> всё&nbsp;более&nbsp;крепок&nbsp;я...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Я&nbsp;твёрд&nbsp;и&nbsp;строен,&nbsp;и&nbsp;как&nbsp;никто,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span>
-<span class="txt"> исполнен&nbsp;любви&nbsp;к&nbsp;речам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> и&nbsp;вновь&nbsp;"спасибо"&nbsp;кричу&nbsp;за&nbsp;то,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span>
-<span class="txt"> за&nbsp;что&nbsp;и&nbsp;всегда&nbsp;кричал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> Но,&nbsp;Боже&nbsp;правый,&nbsp;как&nbsp;быть,&nbsp;когда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span>
-<span class="txt"> всё&nbsp;чаще&nbsp;меж&nbsp;строгих&nbsp;схем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span>
-<span class="txt"> торчит&nbsp;проклятый&nbsp;вопрос&nbsp;"куда?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span>
-<span class="txt"> и&nbsp;подлый&nbsp;вопрос&nbsp;"зачем?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span>
+<span class="line"><span class="txt"> Я&nbsp;твёрд&nbsp;и&nbsp;строен,&nbsp;и&nbsp;как&nbsp;никто,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span></span>
+<span class="line"><span class="txt"> исполнен&nbsp;любви&nbsp;к&nbsp;речам,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> и&nbsp;вновь&nbsp;"спасибо"&nbsp;кричу&nbsp;за&nbsp;то,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span></span>
+<span class="line"><span class="txt"> за&nbsp;что&nbsp;и&nbsp;всегда&nbsp;кричал.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> Но,&nbsp;Боже&nbsp;правый,&nbsp;как&nbsp;быть,&nbsp;когда&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span></span>
+<span class="line"><span class="txt"> всё&nbsp;чаще&nbsp;меж&nbsp;строгих&nbsp;схем&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span></span>
+<span class="line"><span class="txt"> торчит&nbsp;проклятый&nbsp;вопрос&nbsp;"куда?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;подлый&nbsp;вопрос&nbsp;"зачем?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Сочтём&nbsp;итоги&nbsp;в&nbsp;конце&nbsp;пути,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span>
-<span class="txt"> не&nbsp;стоит&nbsp;теперь&nbsp;труда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> Но&nbsp;скоро&nbsp;я&nbsp;не&nbsp;смогу&nbsp;идти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span>
-<span class="txt"> пока&nbsp;не&nbsp;пойму&nbsp;-&nbsp;куда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> Воспряну&nbsp;духом,&nbsp;лекарство&nbsp;съем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span>
-<span class="txt"> постигну&nbsp;-&nbsp;как&nbsp;быть,&nbsp;кем&nbsp;быть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span>
-<span class="txt"> Но&nbsp;даже&nbsp;если&nbsp;пойму&nbsp;-&nbsp;зачем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span>
-<span class="txt"> едва&nbsp;ли&nbsp;смогу&nbsp;убить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span>
+<span class="line"><span class="txt"> Сочтём&nbsp;итоги&nbsp;в&nbsp;конце&nbsp;пути,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span></span>
+<span class="line"><span class="txt"> не&nbsp;стоит&nbsp;теперь&nbsp;труда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;скоро&nbsp;я&nbsp;не&nbsp;смогу&nbsp;идти,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span></span>
+<span class="line"><span class="txt"> пока&nbsp;не&nbsp;пойму&nbsp;-&nbsp;куда.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> Воспряну&nbsp;духом,&nbsp;лекарство&nbsp;съем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span></span>
+<span class="line"><span class="txt"> постигну&nbsp;-&nbsp;как&nbsp;быть,&nbsp;кем&nbsp;быть.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;даже&nbsp;если&nbsp;пойму&nbsp;-&nbsp;зачем,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span></span>
+<span class="line"><span class="txt"> едва&nbsp;ли&nbsp;смогу&nbsp;убить.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> И&nbsp;так&nbsp;ли&nbsp;важно,&nbsp;чья&nbsp;сторона&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span>
-<span class="txt"> сильна,&nbsp;и&nbsp;резон&nbsp;на&nbsp;чьей?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> Ведь&nbsp;вот,&nbsp;к&nbsp;примеру,&nbsp;идёт&nbsp;весна,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span>
-<span class="txt"> и&nbsp;кто&nbsp;помешает&nbsp;ей?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> Над&nbsp;полем&nbsp;сладкий&nbsp;апрельский&nbsp;дым,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span>
-<span class="txt"> и&nbsp;птичий&nbsp;в&nbsp;лесах&nbsp;галдёж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span>
-<span class="txt"> И&nbsp;мир,&nbsp;похоже,&nbsp;не&nbsp;стал&nbsp;другим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span>
-<span class="txt"> чуть-чуть&nbsp;похуже,&nbsp;так&nbsp;что&nbsp;ж!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span>
+<span class="line"><span class="txt"> И&nbsp;так&nbsp;ли&nbsp;важно,&nbsp;чья&nbsp;сторона&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span></span>
+<span class="line"><span class="txt"> сильна,&nbsp;и&nbsp;резон&nbsp;на&nbsp;чьей?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> Ведь&nbsp;вот,&nbsp;к&nbsp;примеру,&nbsp;идёт&nbsp;весна,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;кто&nbsp;помешает&nbsp;ей?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> Над&nbsp;полем&nbsp;сладкий&nbsp;апрельский&nbsp;дым,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;птичий&nbsp;в&nbsp;лесах&nbsp;галдёж.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;мир,&nbsp;похоже,&nbsp;не&nbsp;стал&nbsp;другим,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span></span>
+<span class="line"><span class="txt"> чуть-чуть&nbsp;похуже,&nbsp;так&nbsp;что&nbsp;ж!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Всё&nbsp;то&nbsp;же&nbsp;чудо&nbsp;в&nbsp;сиянье&nbsp;глаз,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span>
-<span class="txt"> и&nbsp;прелесть&nbsp;в&nbsp;изгибах&nbsp;рта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> И&nbsp;жизнь&nbsp;как&nbsp;будто&nbsp;едва&nbsp;началась,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span>
-<span class="txt"> а&nbsp;вроде,&nbsp;почти&nbsp;прожита.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span>
-<span class="txt"> И&nbsp;солнце&nbsp;рождается&nbsp;вновь&nbsp;и&nbsp;вновь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span>
-<span class="txt"> и&nbsp;гаснет&nbsp;опять&nbsp;и&nbsp;опять...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span>
-<span class="txt"> Зачем&nbsp;же&nbsp;портить&nbsp;друг&nbsp;другу&nbsp;кровь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span>
-<span class="txt"> зачем&nbsp;же&nbsp;кровь&nbsp;проливать?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span>
+<span class="line"><span class="txt"> Всё&nbsp;то&nbsp;же&nbsp;чудо&nbsp;в&nbsp;сиянье&nbsp;глаз,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Dm  E7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;прелесть&nbsp;в&nbsp;изгибах&nbsp;рта.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;жизнь&nbsp;как&nbsp;будто&nbsp;едва&nbsp;началась,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> A7  Dm  E7 </span></span>
+<span class="line"><span class="txt"> а&nbsp;вроде,&nbsp;почти&nbsp;прожита.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  A7  Dm </span></span>
+<span class="line"><span class="txt"> И&nbsp;солнце&nbsp;рождается&nbsp;вновь&nbsp;и&nbsp;вновь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Eb7 </span></span>
+<span class="line"><span class="txt"> и&nbsp;гаснет&nbsp;опять&nbsp;и&nbsp;опять...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm6 Dm </span></span>
+<span class="line"><span class="txt"> Зачем&nbsp;же&nbsp;портить&nbsp;друг&nbsp;другу&nbsp;кровь,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm  B7 </span></span>
+<span class="line"><span class="txt"> зачем&nbsp;же&nbsp;кровь&nbsp;проливать?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> E7  A7  Dm </span></span>
 <span class="txt">  </span>
  <br />
-
 </div>
-<pre>
-    <span class="year">1986</span>
-
+<pre><span class="year">1986</span>
 </pre>
+
 
                 </div>
         </div>

@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,7 +423,7 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
@@ -425,48 +433,46 @@ span.c {
 data-key="Hm"><span class="txt"> *&nbsp;*&nbsp;* </span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Когда&nbsp;бы&nbsp;ты&nbsp;была&nbsp;великой&nbsp;королевой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span>
-<span class="txt"> служил&nbsp;бы&nbsp;я&nbsp;тогда&nbsp;поэтом&nbsp;при&nbsp;дворе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span>
-<span class="txt"> Я&nbsp;б&nbsp;оды&nbsp;сочинял&nbsp;направо&nbsp;и&nbsp;налево,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span>
-<span class="txt"> я&nbsp;б&nbsp;гимны&nbsp;сочинял&nbsp;и&nbsp;ел&nbsp;на&nbsp;серебре.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Творил&nbsp;бы&nbsp;я&nbsp;легко,&nbsp;отважно&nbsp;и&nbsp;с&nbsp;любовью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;песенки&nbsp;мои&nbsp;запел&nbsp;бы&nbsp;весь&nbsp;народ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;самый&nbsp;высший&nbsp;свет,&nbsp;и&nbsp;среднее&nbsp;сословье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D#7   D     Dm    E7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;разный&nbsp;прочий&nbsp;люд,&nbsp;и&nbsp;даже&nbsp;всякий&nbsp;сброд.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G     A#    A7    D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A7    D     F#7   G C Hm </span>
-<span class="txt"> Не&nbsp;знаю,&nbsp;сколько&nbsp;дней&nbsp;блаженство&nbsp;бы&nbsp;продлилось,&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span>
-<span class="txt"> но&nbsp;знаю,&nbsp;что&nbsp;финал&nbsp;печален&nbsp;и&nbsp;смешон:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span>
-<span class="txt"> увы!&nbsp;настал&nbsp;бы&nbsp;час,&nbsp;когда&nbsp;монаршья&nbsp;милость&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span>
-<span class="txt"> сменилась&nbsp;бы&nbsp;на&nbsp;гнев,&nbsp;и&nbsp;я&nbsp;бы&nbsp;был&nbsp;казнён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;есть&nbsp;тому&nbsp;резон,&nbsp;и&nbsp;есть&nbsp;на&nbsp;то&nbsp;причина:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;раз&nbsp;я&nbsp;придворный&nbsp;бард,&nbsp;обязанность&nbsp;моя&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;воспеть&nbsp;тебя,&nbsp;тебя,&nbsp;прекрасная&nbsp;regina,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D#7   D     Dm    E7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;этого&nbsp;как&nbsp;раз&nbsp;не&nbsp;стал&nbsp;бы&nbsp;делать&nbsp;я.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G     A#    A7    D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A7    D     F#7   G C Hm </span>
-<span class="txt"> Творя&nbsp;и&nbsp;день&nbsp;и&nbsp;ночь,&nbsp;я&nbsp;мог&nbsp;бы,&nbsp;пункт&nbsp;за&nbsp;пунктом,&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span>
-<span class="txt"> восславить&nbsp;всех&nbsp;и&nbsp;вся,&nbsp;и&nbsp;только&nbsp;о&nbsp;тебе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span>
-<span class="txt"> ни&nbsp;слова&nbsp;б&nbsp;я&nbsp;не&nbsp;спел,&nbsp;а&nbsp;это&nbsp;пахнет&nbsp;бунтом!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span>
-<span class="txt"> И&nbsp;вздёрнули&nbsp;б&nbsp;меня&nbsp;на&nbsp;первом&nbsp;же&nbsp;столбе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;всё&nbsp;лишь&nbsp;от&nbsp;того,&nbsp;что&nbsp;вряд&nbsp;ли&nbsp;во&nbsp;Вселенной&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;для&nbsp;оды&nbsp;в&nbsp;честь&nbsp;твою&nbsp;есть&nbsp;должный&nbsp;слог&nbsp;и&nbsp;тон. </span><span class="ch">     D7          Gm    Gm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;будь&nbsp;я&nbsp;хоть&nbsp;Гомер&nbsp;-&nbsp;ты&nbsp;лучше,&nbsp;чем&nbsp;Елена.&nbsp;&nbsp;&nbsp; </span><span class="ch">     D#7   D     Dm    E7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;будь&nbsp;я&nbsp;хоть&nbsp;Шекспир&nbsp;-&nbsp;ты&nbsp;краше&nbsp;Дездемон!&nbsp;&nbsp;&nbsp; </span><span class="ch">     G     A#    A7    D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A7    D     F#7   G C Hm </span>
-<span class="txt"> Пусть&nbsp;не&nbsp;царица&nbsp;ты,&nbsp;а&nbsp;я&nbsp;не&nbsp;твой&nbsp;придворный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span>
-<span class="txt"> и&nbsp;пусть&nbsp;меня&nbsp;никто&nbsp;пока&nbsp;что&nbsp;не&nbsp;казнит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span>
-<span class="txt"> а&nbsp;всё&nbsp;ж,&nbsp;едва&nbsp;лишь&nbsp;я&nbsp;твой&nbsp;образ&nbsp;непокорный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span>
-<span class="txt"> Возьмусь&nbsp;живописать,&nbsp;перо&nbsp;моё&nbsp;дрожит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё&nbsp;более&nbsp;любить,&nbsp;всё&nbsp;более&nbsp;немея,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;придётся&nbsp;мне&nbsp;всю&nbsp;жизнь,&nbsp;покорствуя&nbsp;судьбе.&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;если&nbsp;я&nbsp;не&nbsp;прав,&nbsp;пускай&nbsp;меня&nbsp;немедля,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D#7   D     Dm    E7 </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;сегодня&nbsp;же&nbsp;казнят&nbsp;на&nbsp;первом&nbsp;же&nbsp;столбе!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G     A#    A7    D </span>
-<span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A7    D     F#7   G C Hm </span>
-
+<span class="line"><span class="txt"> Когда&nbsp;бы&nbsp;ты&nbsp;была&nbsp;великой&nbsp;королевой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span></span>
+<span class="line"><span class="txt"> служил&nbsp;бы&nbsp;я&nbsp;тогда&nbsp;поэтом&nbsp;при&nbsp;дворе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span></span>
+<span class="line"><span class="txt"> Я&nbsp;б&nbsp;оды&nbsp;сочинял&nbsp;направо&nbsp;и&nbsp;налево,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span></span>
+<span class="line"><span class="txt"> я&nbsp;б&nbsp;гимны&nbsp;сочинял&nbsp;и&nbsp;ел&nbsp;на&nbsp;серебре.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Творил&nbsp;бы&nbsp;я&nbsp;легко,&nbsp;отважно&nbsp;и&nbsp;с&nbsp;любовью,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;песенки&nbsp;мои&nbsp;запел&nbsp;бы&nbsp;весь&nbsp;народ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;самый&nbsp;высший&nbsp;свет,&nbsp;и&nbsp;среднее&nbsp;сословье,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D#7   D     Dm    E7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;разный&nbsp;прочий&nbsp;люд,&nbsp;и&nbsp;даже&nbsp;всякий&nbsp;сброд.&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G     A#    A7    D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A7    D     F#7   G C Hm </span></span>
+<span class="line"><span class="txt"> Не&nbsp;знаю,&nbsp;сколько&nbsp;дней&nbsp;блаженство&nbsp;бы&nbsp;продлилось,&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span></span>
+<span class="line"><span class="txt"> но&nbsp;знаю,&nbsp;что&nbsp;финал&nbsp;печален&nbsp;и&nbsp;смешон:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span></span>
+<span class="line"><span class="txt"> увы!&nbsp;настал&nbsp;бы&nbsp;час,&nbsp;когда&nbsp;монаршья&nbsp;милость&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span></span>
+<span class="line"><span class="txt"> сменилась&nbsp;бы&nbsp;на&nbsp;гнев,&nbsp;и&nbsp;я&nbsp;бы&nbsp;был&nbsp;казнён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;есть&nbsp;тому&nbsp;резон,&nbsp;и&nbsp;есть&nbsp;на&nbsp;то&nbsp;причина:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;раз&nbsp;я&nbsp;придворный&nbsp;бард,&nbsp;обязанность&nbsp;моя&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;воспеть&nbsp;тебя,&nbsp;тебя,&nbsp;прекрасная&nbsp;regina,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D#7   D     Dm    E7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А&nbsp;этого&nbsp;как&nbsp;раз&nbsp;не&nbsp;стал&nbsp;бы&nbsp;делать&nbsp;я.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G     A#    A7    D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A7    D     F#7   G C Hm </span></span>
+<span class="line"><span class="txt"> Творя&nbsp;и&nbsp;день&nbsp;и&nbsp;ночь,&nbsp;я&nbsp;мог&nbsp;бы,&nbsp;пункт&nbsp;за&nbsp;пунктом,&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span></span>
+<span class="line"><span class="txt"> восславить&nbsp;всех&nbsp;и&nbsp;вся,&nbsp;и&nbsp;только&nbsp;о&nbsp;тебе&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span></span>
+<span class="line"><span class="txt"> ни&nbsp;слова&nbsp;б&nbsp;я&nbsp;не&nbsp;спел,&nbsp;а&nbsp;это&nbsp;пахнет&nbsp;бунтом!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span></span>
+<span class="line"><span class="txt"> И&nbsp;вздёрнули&nbsp;б&nbsp;меня&nbsp;на&nbsp;первом&nbsp;же&nbsp;столбе.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;всё&nbsp;лишь&nbsp;от&nbsp;того,&nbsp;что&nbsp;вряд&nbsp;ли&nbsp;во&nbsp;Вселенной&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;для&nbsp;оды&nbsp;в&nbsp;честь&nbsp;твою&nbsp;есть&nbsp;должный&nbsp;слог&nbsp;и&nbsp;тон. </span><span class="ch">     D7          Gm    Gm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;будь&nbsp;я&nbsp;хоть&nbsp;Гомер&nbsp;-&nbsp;ты&nbsp;лучше,&nbsp;чем&nbsp;Елена.&nbsp;&nbsp;&nbsp; </span><span class="ch">     D#7   D     Dm    E7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И&nbsp;будь&nbsp;я&nbsp;хоть&nbsp;Шекспир&nbsp;-&nbsp;ты&nbsp;краше&nbsp;Дездемон!&nbsp;&nbsp;&nbsp; </span><span class="ch">     G     A#    A7    D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A7    D     F#7   G C Hm </span></span>
+<span class="line"><span class="txt"> Пусть&nbsp;не&nbsp;царица&nbsp;ты,&nbsp;а&nbsp;я&nbsp;не&nbsp;твой&nbsp;придворный,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span></span>
+<span class="line"><span class="txt"> и&nbsp;пусть&nbsp;меня&nbsp;никто&nbsp;пока&nbsp;что&nbsp;не&nbsp;казнит,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> F#7 Hm A  Hm    C     Hm </span></span>
+<span class="line"><span class="txt"> а&nbsp;всё&nbsp;ж,&nbsp;едва&nbsp;лишь&nbsp;я&nbsp;твой&nbsp;образ&nbsp;непокорный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span></span>
+<span class="line"><span class="txt"> Возьмусь&nbsp;живописать,&nbsp;перо&nbsp;моё&nbsp;дрожит.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D Gm6 D     A7    D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Всё&nbsp;более&nbsp;любить,&nbsp;всё&nbsp;более&nbsp;немея,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;придётся&nbsp;мне&nbsp;всю&nbsp;жизнь,&nbsp;покорствуя&nbsp;судьбе.&nbsp;&nbsp;&nbsp; </span><span class="ch">     D7          Gm    Gm6 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но&nbsp;если&nbsp;я&nbsp;не&nbsp;прав,&nbsp;пускай&nbsp;меня&nbsp;немедля,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     D#7   D     Dm    E7 </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;сегодня&nbsp;же&nbsp;казнят&nbsp;на&nbsp;первом&nbsp;же&nbsp;столбе!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     G     A#    A7    D </span></span>
+<span class="line"><span class="txt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch">     A7    D     F#7   G C Hm </span></span>
 </div>
-<pre>
-    <span class="year">1985</span>
-
+<pre><span class="year">1985</span>
 </pre>
+
 
                 </div>
         </div>

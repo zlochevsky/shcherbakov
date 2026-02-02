@@ -336,29 +336,38 @@ span.c {
     background: url('../../Images/note2.gif') 0 0 no-repeat no-repeat;
 }
 
-.sng-title {
-    font-weight: bold;
-    padding-bottom: 5px;
+/* .sng-title {
+      font-weight: bold;
+      padding-bottom: 5px;*/ /*Zlo: Deprecate, replacing with H1 
 }
-
+*/
+H1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .song {
     font-family: monospace;
 }
 @media only screen and (width <= 70em) {
     .ch, .txt {
-        display: flow;
-    }
-    .txt {
         display:block;
         word-wrap:break-word;
     }
     .song {
         display: block;
     }
+    .line {
+        display: flex;
+        flex-direction: column-reverse; /* аккорды сверху */
+    }
 
 }
 @media only screen and (width > 70em) {
-    .ch, .txt {
+.line {
+        display: contents;
+    }
+.ch, .txt {
         display: inline;
         grid-column: 2;
     }
@@ -378,9 +387,8 @@ span.c {
 </style>
 </head>
 <body>
-<header>
-	<p><b>Песни Михаила Щербакова</b></p>
-	<p><small><em>неофициальная страница</em></small></p>
+<header style="margin-bottom: 18px">
+	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">Песни Михаила Щербакова</a></p>
 </header>
     <nav>
     <div>
@@ -415,72 +423,68 @@ span.c {
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
                     
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>Траспонировать</summary>
+                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
                         <span class="transpose-wrapper">
 
                         </span>
                     </details></p>
 
                     <div class="song"
-data-key="G"><span class="sng-title">ДРУГАЯ ЖИЗНЬ</span>
+data-key="G"><h1>ДРУГАЯ ЖИЗНЬ</h1>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Другая&nbsp;жизнь&nbsp;в&nbsp;цвету.&nbsp;В&nbsp;ином&nbsp;цвету,&nbsp;чем&nbsp;тот,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> что&nbsp;цвёл&nbsp;до&nbsp;сей&nbsp;поры&nbsp;и&nbsp;ныне&nbsp;-&nbsp;всё&nbsp;цветёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span>
-<span class="txt"> Не&nbsp;просто&nbsp;взгляд&nbsp;другой&nbsp;при&nbsp;внешнем&nbsp;сходстве&nbsp;лиц&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> другая&nbsp;как&nbsp;бы&nbsp;связь&nbsp;волокон,&nbsp;ткань&nbsp;частиц.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span>
-<span class="txt"> В&nbsp;декоративный&nbsp;плющ&nbsp;витой&nbsp;чугун&nbsp;вплетён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span>
-<span class="txt"> На&nbsp;вековой&nbsp;скамье&nbsp;-&nbsp;в&nbsp;восьми&nbsp;томах&nbsp;Платон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Складной,&nbsp;без&nbsp;дров,&nbsp;очаг&nbsp;-&nbsp;наивный&nbsp;враг&nbsp;зимы...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  A7  D7 </span>
-<span class="txt"> Итак,&nbsp;при&nbsp;чём&nbsp;тут&nbsp;мы?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
+<span class="line"><span class="txt"> Другая&nbsp;жизнь&nbsp;в&nbsp;цвету.&nbsp;В&nbsp;ином&nbsp;цвету,&nbsp;чем&nbsp;тот,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> что&nbsp;цвёл&nbsp;до&nbsp;сей&nbsp;поры&nbsp;и&nbsp;ныне&nbsp;-&nbsp;всё&nbsp;цветёт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span></span>
+<span class="line"><span class="txt"> Не&nbsp;просто&nbsp;взгляд&nbsp;другой&nbsp;при&nbsp;внешнем&nbsp;сходстве&nbsp;лиц&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> другая&nbsp;как&nbsp;бы&nbsp;связь&nbsp;волокон,&nbsp;ткань&nbsp;частиц.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span></span>
+<span class="line"><span class="txt"> В&nbsp;декоративный&nbsp;плющ&nbsp;витой&nbsp;чугун&nbsp;вплетён.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span></span>
+<span class="line"><span class="txt"> На&nbsp;вековой&nbsp;скамье&nbsp;-&nbsp;в&nbsp;восьми&nbsp;томах&nbsp;Платон.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Складной,&nbsp;без&nbsp;дров,&nbsp;очаг&nbsp;-&nbsp;наивный&nbsp;враг&nbsp;зимы...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  A7  D7 </span></span>
+<span class="line"><span class="txt"> Итак,&nbsp;при&nbsp;чём&nbsp;тут&nbsp;мы?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Другая&nbsp;жизнь&nbsp;в&nbsp;цвету.&nbsp;В&nbsp;цвету&nbsp;не&nbsp;прежнем,&nbsp;нет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> ни&nbsp;даже&nbsp;в&nbsp;нынешнем.&nbsp;А&nbsp;в&nbsp;новом,&nbsp;что&nbsp;грядет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span>
-<span class="txt"> Но&nbsp;ты&nbsp;уже&nbsp;жива.&nbsp;Ты&nbsp;в&nbsp;световой&nbsp;поток&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> уже&nbsp;вошла,&nbsp;и&nbsp;он&nbsp;сменяет&nbsp;свой&nbsp;виток.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span>
-<span class="txt"> Какой-то&nbsp;новый&nbsp;знак&nbsp;ты&nbsp;подаёшь&nbsp;рукой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span>
-<span class="txt"> на&nbsp;ней&nbsp;не&nbsp;тот&nbsp;браслет,&nbsp;на&nbsp;нём&nbsp;узор&nbsp;другой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Его&nbsp;я&nbsp;знать&nbsp;не&nbsp;мог,&nbsp;но&nbsp;вздрогнул&nbsp;-&nbsp;почему?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  A7  D7 </span>
-<span class="txt"> В&nbsp;свой&nbsp;срок&nbsp;пойму...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
+<span class="line"><span class="txt"> Другая&nbsp;жизнь&nbsp;в&nbsp;цвету.&nbsp;В&nbsp;цвету&nbsp;не&nbsp;прежнем,&nbsp;нет,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> ни&nbsp;даже&nbsp;в&nbsp;нынешнем.&nbsp;А&nbsp;в&nbsp;новом,&nbsp;что&nbsp;грядет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span></span>
+<span class="line"><span class="txt"> Но&nbsp;ты&nbsp;уже&nbsp;жива.&nbsp;Ты&nbsp;в&nbsp;световой&nbsp;поток&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> уже&nbsp;вошла,&nbsp;и&nbsp;он&nbsp;сменяет&nbsp;свой&nbsp;виток.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span></span>
+<span class="line"><span class="txt"> Какой-то&nbsp;новый&nbsp;знак&nbsp;ты&nbsp;подаёшь&nbsp;рукой,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span></span>
+<span class="line"><span class="txt"> на&nbsp;ней&nbsp;не&nbsp;тот&nbsp;браслет,&nbsp;на&nbsp;нём&nbsp;узор&nbsp;другой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Его&nbsp;я&nbsp;знать&nbsp;не&nbsp;мог,&nbsp;но&nbsp;вздрогнул&nbsp;-&nbsp;почему?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  A7  D7 </span></span>
+<span class="line"><span class="txt"> В&nbsp;свой&nbsp;срок&nbsp;пойму...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> Итак,&nbsp;другая&nbsp;жизнь,&nbsp;в&nbsp;другом&nbsp;ряду&nbsp;планет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> Она&nbsp;же&nbsp;-&nbsp;взгляд&nbsp;извне,&nbsp;не&nbsp;меньше&nbsp;чем&nbsp;сквозь&nbsp;цвет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span>
-<span class="txt"> И&nbsp;вместе&nbsp;с&nbsp;тем&nbsp;она&nbsp;-&nbsp;не&nbsp;больше,&nbsp;чем&nbsp;простой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> литературный&nbsp;трюк,&nbsp;шарада,&nbsp;звук&nbsp;пустой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span>
-<span class="txt"> В&nbsp;восьми&nbsp;частях&nbsp;роман&nbsp;из&nbsp;односложных&nbsp;слов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span>
-<span class="txt"> Чугун&nbsp;пустил&nbsp;ростки,&nbsp;очаг&nbsp;горит&nbsp;без&nbsp;дров,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> Платон&nbsp;нейдёт&nbsp;на&nbsp;ум,&nbsp;рука&nbsp;дрожит&nbsp;в&nbsp;руке...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  A7  D7 </span>
-<span class="txt"> Warum,&nbsp;pourquoi,&nbsp;perche?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
+<span class="line"><span class="txt"> Итак,&nbsp;другая&nbsp;жизнь,&nbsp;в&nbsp;другом&nbsp;ряду&nbsp;планет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> Она&nbsp;же&nbsp;-&nbsp;взгляд&nbsp;извне,&nbsp;не&nbsp;меньше&nbsp;чем&nbsp;сквозь&nbsp;цвет.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span></span>
+<span class="line"><span class="txt"> И&nbsp;вместе&nbsp;с&nbsp;тем&nbsp;она&nbsp;-&nbsp;не&nbsp;больше,&nbsp;чем&nbsp;простой&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> литературный&nbsp;трюк,&nbsp;шарада,&nbsp;звук&nbsp;пустой.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span></span>
+<span class="line"><span class="txt"> В&nbsp;восьми&nbsp;частях&nbsp;роман&nbsp;из&nbsp;односложных&nbsp;слов.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span></span>
+<span class="line"><span class="txt"> Чугун&nbsp;пустил&nbsp;ростки,&nbsp;очаг&nbsp;горит&nbsp;без&nbsp;дров,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> Платон&nbsp;нейдёт&nbsp;на&nbsp;ум,&nbsp;рука&nbsp;дрожит&nbsp;в&nbsp;руке...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  A7  D7 </span></span>
+<span class="line"><span class="txt"> Warum,&nbsp;pourquoi,&nbsp;perche?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;свой&nbsp;срок&nbsp;поймёшь&nbsp;и&nbsp;ты,&nbsp;что&nbsp;вплетена,&nbsp;как&nbsp;я,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> в&nbsp;милетский&nbsp;говор&nbsp;ос,&nbsp;в&nbsp;аркадский&nbsp;звон&nbsp;ручья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span>
-<span class="txt"> Меж&nbsp;изогнувших&nbsp;мост&nbsp;разновеликих&nbsp;свай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> "Да&nbsp;это&nbsp;рай&nbsp;земной",&nbsp;-&nbsp;ты&nbsp;скажешь.&nbsp;Нет,&nbsp;не&nbsp;рай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span>
-<span class="txt"> Скорей,&nbsp;другая&nbsp;жизнь,&nbsp;где&nbsp;ос&nbsp;убьёт&nbsp;зима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span>
-<span class="txt"> где&nbsp;нас&nbsp;убьёт&nbsp;любовь,&nbsp;потом&nbsp;умрёт&nbsp;сама,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span>
-<span class="txt"> вода&nbsp;убьёт&nbsp;-&nbsp;не&nbsp;то&nbsp;преломит&nbsp;-&nbsp;стать&nbsp;вещей...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  A7  D7 </span>
-<span class="txt"> Но&nbsp;кто&nbsp;убьёт&nbsp;ручей?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
+<span class="line"><span class="txt"> В&nbsp;свой&nbsp;срок&nbsp;поймёшь&nbsp;и&nbsp;ты,&nbsp;что&nbsp;вплетена,&nbsp;как&nbsp;я,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> в&nbsp;милетский&nbsp;говор&nbsp;ос,&nbsp;в&nbsp;аркадский&nbsp;звон&nbsp;ручья.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span></span>
+<span class="line"><span class="txt"> Меж&nbsp;изогнувших&nbsp;мост&nbsp;разновеликих&nbsp;свай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> "Да&nbsp;это&nbsp;рай&nbsp;земной",&nbsp;-&nbsp;ты&nbsp;скажешь.&nbsp;Нет,&nbsp;не&nbsp;рай.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span></span>
+<span class="line"><span class="txt"> Скорей,&nbsp;другая&nbsp;жизнь,&nbsp;где&nbsp;ос&nbsp;убьёт&nbsp;зима,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> B </span></span>
+<span class="line"><span class="txt"> где&nbsp;нас&nbsp;убьёт&nbsp;любовь,&nbsp;потом&nbsp;умрёт&nbsp;сама,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> Gm </span></span>
+<span class="line"><span class="txt"> вода&nbsp;убьёт&nbsp;-&nbsp;не&nbsp;то&nbsp;преломит&nbsp;-&nbsp;стать&nbsp;вещей...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  A7  D7 </span></span>
+<span class="line"><span class="txt"> Но&nbsp;кто&nbsp;убьёт&nbsp;ручей?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
 <span class="txt">  </span>
  <br />
-<span class="txt"> В&nbsp;его&nbsp;поток&nbsp;войти,&nbsp;как&nbsp;в&nbsp;световой&nbsp;поток,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> и&nbsp;согласиться&nbsp;с&nbsp;ним&nbsp;придётся&nbsp;нам&nbsp;в&nbsp;свой&nbsp;срок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span>
-<span class="txt"> И&nbsp;ужаснуться,&nbsp;вняв&nbsp;(хоть&nbsp;и&nbsp;не&nbsp;вдруг,&nbsp;не&nbsp;враз),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span>
-<span class="txt"> как&nbsp;изменился&nbsp;мир,&nbsp;пока&nbsp;он&nbsp;был&nbsp;вне&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span>
+<span class="line"><span class="txt"> В&nbsp;его&nbsp;поток&nbsp;войти,&nbsp;как&nbsp;в&nbsp;световой&nbsp;поток,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> и&nbsp;согласиться&nbsp;с&nbsp;ним&nbsp;придётся&nbsp;нам&nbsp;в&nbsp;свой&nbsp;срок.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span></span>
+<span class="line"><span class="txt"> И&nbsp;ужаснуться,&nbsp;вняв&nbsp;(хоть&nbsp;и&nbsp;не&nbsp;вдруг,&nbsp;не&nbsp;враз),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> G </span></span>
+<span class="line"><span class="txt"> как&nbsp;изменился&nbsp;мир,&nbsp;пока&nbsp;он&nbsp;был&nbsp;вне&nbsp;нас.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ch"> D#  Cm6/A  Gm </span></span>
 <span class="txt">  </span>
  <br />
- <br />
- <br />
-
 </div>
-<pre>
-    <span class="year">1992</span>
-
+<pre><span class="year">1992</span>
 
 
 </pre>
+
 
                 </div>
         </div>
