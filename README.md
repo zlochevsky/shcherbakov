@@ -7,8 +7,8 @@ The goal of the project is to create a responsive layout for the website while p
 1. Convert current set of the whole website's pages into HUGO project manually.
 2. Update the website's markup to be more friendly to modern browsers and seach engines.
 3. Make the layout responsive for convenient use on various devices.
-4. Improve the overall user experience and interface, while preserving the style and intent of the website's creators as much as possible.
-5. Maintain the simplicity and appearance of the current version: avoid excessive CSS complexity, refrain from overloading the user interface, optimize the graphic elements, and, where possible, avoid using JavaScript on pages.
+4. Improve the overall user experience and interface, while preserving the style and intent of the website's creators. Add functionality, e.g. in the chords pages.
+5. Maintain the simplicity and appearance of the current version: avoid excessive CSS complexity, refrain from overloading the user interface, optimize the graphic elements.
 
 Thus, the website is intended to be developed in a retro, old-fashioned, style, while striving for elegance and usability. I hope that after successfully achieving the set objectives, the website will become easier to develop, and new goals will become possible, such as integrating a full-text search mechanism and implementing multilingual support.
 
@@ -25,8 +25,7 @@ Main configuration file is hugo.json in the root directory. All the directories 
 - archetypes -- contains so called *archetypes* -- small template files, that configure Hugo's behaviour while creating new pages with no content yet;
 - content -- directory, where all the content files are placed by Hugo and to be placed by developer/editor. These are .md files in *markdown* format, which contain the html markup as well, with the main page content. Hugo converts them to the .html pages on the build stage. At the top of each .md file there is so called *front matter* -- set of page parameters, stored in JSON (or TOML/YAML) format;
 - public -- the directory, where Hugo places all the ready-to-upload site, built with all the static stuff.
-- themes -- contains subdirectories with the site *themes*. Each theme is a site layout, that contains templates files. The project develops `blackalpinist` theme for the site. In theory, it is possible to create an alternative design for the site with another theme.
-- workfiles -- contains files, used for creating current theme and content: images, song catalogue table etc.
+- workfiles -- contains files, used for creating current face and content: images, song catalogue table etc.
 
 # Installation
 
