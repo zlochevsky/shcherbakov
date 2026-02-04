@@ -7,7 +7,7 @@ The goal of the project is to create a responsive layout for the website while p
 1. Convert current set of the whole website's pages into HUGO project manually.
 2. Update the website's markup to be more friendly to modern browsers and seach engines.
 3. Make the layout responsive for convenient use on various devices.
-4. Improve the overall user experience and interface, while preserving the style and intent of the website's creators. Add functionality, e.g. in the chords pages.
+4. Improve the overall user experience and interface, while preserving the style and intent of the website's creators. Add functionality, e.g. in the chords pages. Use JavaScript where appropriate.
 5. Maintain the simplicity and appearance of the current version: avoid excessive CSS complexity, refrain from overloading the user interface, optimize the graphic elements.
 
 Thus, the website is intended to be developed in a retro, old-fashioned, style, while striving for elegance and usability. I hope that after successfully achieving the set objectives, the website will become easier to develop, and new goals will become possible, such as integrating a full-text search mechanism and implementing multilingual support.
