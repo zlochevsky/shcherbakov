@@ -3,6 +3,8 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ with .Params.name }}{{ printf "%s. %s" site.Title . }}{{ else }}{{ printf "%s. %s" site.Title .Title }}{{ end }}{{ end }}</title>
 <!--{{ partialCached "head/css.html" . }}-->
 <style>
-{{ partial "css/basic.css.html" | safeCSS }}
+{{ with resources.Get "css/basic.css" }}
+	{{ .Content | safeCSS }}
+{{ end }}
 </style>
 {{ partialCached "head/js.html" . }}

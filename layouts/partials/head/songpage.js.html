@@ -3,16 +3,12 @@
 {{- with resources.Get . }}
   {{- if eq hugo.Environment "development" }}
     {{- with . | js.Build }}
-      <script  type="text/javascript">
-        {{ .Content | safeJS }}
-      </script>
+      <script type="text/javascript" src="{{ .RelPermalink }}"></script>
     {{- end }}
   {{- else }}
     {{- $opts := dict "minify" true }}
     {{- with . | js.Build $opts | fingerprint }}
-      <script  integrity="{{- .Data.Integrity }}" crossorigin="anonymous" type="text/javascript">
-        {{ .Content | safeJS }}
-      </script>
+      <script  integrity="{{- .Data.Integrity }}" crossorigin="anonymous" type="text/javascript" src="{{ .RelPermalink }}"></script>
     {{- end }}
   {{- end }}
 {{- end }}

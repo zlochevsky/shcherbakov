@@ -5,9 +5,15 @@
 <meta name="viewport" content="width=device-width">
 <title>{{ printf "%s. %s" site.Title .Title }}</title>
 <style>
-{{- partial "css/common.html" | safeCSS -}}
-{{ partial "css/catalogue.css.html" | safeCSS }}
-{{ partial "css/songpage.css" | safeCSS }}
+{{ with resources.Get "css/common.css" }} 
+	{{ .Content | safeCSS -}}
+{{ end }} 
+{{ with resources.Get "css/catalogue.css" }} 
+	{{ .Content | safeCSS }}
+{{ end }} 
+{{ with resources.Get "css/songpage.css" }}
+	{{ .Content | safeCSS }}
+{{ end }} 
 </style>
 </head>
 <body>

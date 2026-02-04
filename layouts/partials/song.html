@@ -1,12 +1,13 @@
+{{- $pageParams := . -}}
 {{- $newLines := slice -}}
 {{- $newLinesAfter := slice -}} 
 {{- $tonality := "Hm" -}}
 {{- $path := printf "texts/%s.txt" .id -}}
-{{- if os.FileExists $path -}}
-    {{- $cont := os.ReadFile $path -}}
 
-    {{- if compare.Ne .tonality "" -}}
-        {{- $tonality = .tonality -}}
+{{- with resources.Get $path -}}
+    {{- $cont := .Content -}}
+    {{- if and (isset $pageParams "tonality") (ne $pageParams.tonality "") -}}
+        {{- $tonality = $pageParams.tonality -}}
     {{- else -}}
         {{- $reg := `(?s)[A-H][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*(\/[A-H][b\#]*)*` -}}
         {{- $tonality = delimit ( findRE $reg $cont 1 ) "" -}}
@@ -14,15 +15,15 @@
 
     {{- $lines := split $cont "\n" -}}
     {{- $lastIndex := math.Sub (len $lines) 1 -}}
-    {{- $pos := math.Max 0 (sub (int .chordsStartAt)  1) -}}
+    {{- $pos := math.Max 0 (sub (int $pageParams.chordsStartAt)  1) -}}
     {{- range $k, $v := $lines -}}
         {{- $line := trim $v "\r\n" -}}
-        {{- if (and (gt 2 $k) (hasPrefix (lower $line) (lower $.title) ) ) -}}
+        {{- if (and (gt 2 $k) (hasPrefix (lower $line) (lower $pageParams.title) ) ) -}}
 	{{- $line = printf "%s%s%s" "<h1>" $line "</h1>" -}}
             {{- $newLines = $newLines | append (println $line | safeHTML) -}}
         {{- else -}}
 
-            {{- if (or (ge $k $.textFinishAtLine) (eq $k $lastIndex)) -}}
+            {{- if (or (ge $k $pageParams.textFinishAtLine) (eq $k $lastIndex)) -}}
                 {{- $line = replaceRE `([0-9]{4})` "<span class=\"year\">$1</span>" $line -}}
                 {{- $newLinesAfter = $newLinesAfter | append (println $line | safeHTML ) -}}
             {{- else -}}

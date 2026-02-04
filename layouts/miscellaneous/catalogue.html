@@ -5,8 +5,12 @@
 <meta name="viewport" content="width=device-width">
 <title>{{ with .Params.name }}{{ . }}{{ else }}{{ printf "%s. %s" site.Title .Title }}{{ end }}</title>
 <style>
-{{- partial "css/common.html" | safeCSS -}}
-{{ partial "css/catalogue.css.html" | safeCSS }}
+	{{- with resources.Get "css/common.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+	{{ with resources.Get "css/catalogue.css" }}
+		{{ .Content | safeCSS }}
+	{{ end }}
 </style>
 {{ partialCached "head/js.html" . }}
 </head>
