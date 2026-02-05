@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="G"><span class="line"><span class="txt"> К чему искать ночлег, покуда не стемнело?               </span><span class="ch"> G    Em   G </span></span>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="G"><span class="line"><span class="txt"> К чему искать ночлег, покуда не стемнело?               </span><span class="ch"> G    Em   G </span></span>
 <span class="line"><span class="txt"> Скакать бы дальше, да кибитка устарела.                 </span><span class="ch"> Em   G    Am </span></span>
 <span class="line"><span class="txt"> Хватило ей кривых дорог. Ободья сбились.                </span><span class="ch">     H7 </span></span>
 <span class="line"><span class="txt"> Попутной песне вышел срок. Слова забылись.              </span><span class="ch">      Am   D7 </span></span>
@@ -482,9 +498,13 @@ data-key="G"><span class="line"><span class="txt"> К чему искать но
 <span class="line"><span class="txt"> сверчка ли, кузнечика ли,                               </span><span class="ch"> Am   D7 </span></span>
 <span class="line"><span class="txt"> привет всему оркестру или мне.                          </span><span class="ch"> G    D7 Em  G </span></span>
 </div>
-<pre>
+    <pre>
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

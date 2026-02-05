@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Em"><h1>МАЛЕНЬКАЯ ХОЗЯЙКА</h1>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Em"><h1>МАЛЕНЬКАЯ ХОЗЯЙКА</h1>
 <span class="txt">  </span>
  <br />
 <span class="line"><span class="txt"> Никто из нас не знал надёжнее лазейки                    </span><span class="ch"> Em  Am Em </span></span>
@@ -487,9 +503,13 @@ data-key="Em"><h1>МАЛЕНЬКАЯ ХОЗЯЙКА</h1>
 <span class="txt">  </span>
  <br />
 </div>
-<pre><span class="year">1984</span>
+    <pre><span class="year">1984</span>
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

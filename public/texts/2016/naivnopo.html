@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Hm"><span class="txt"> Наивно поверив... </span>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Hm"><span class="txt"> Наивно поверив... </span>
 <span class="txt"> 	 </span>
 <span class="line"><span class="txt">                                           intro:  </span><span class="ch">  (Hm) G/(A-G) G/(A-G) Hm/F# F# Hm </span></span>
 <span class="txt"> 	 </span>
@@ -529,14 +545,18 @@ data-key="Hm"><span class="txt"> Наивно поверив... </span>
 <span class="line"><span class="txt">  Но делают с миром не всё, что взбредёт.          </span><span class="ch">  G#dim G Hm/F# F# Hm F#-Hm </span></span>
 <span class="txt"> 	 </span>
 </div>
-<pre> 
+    <pre> 
 
                                              fin (=пр.)
 	
 
 <span class="year">2016</span>
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

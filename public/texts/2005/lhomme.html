@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Dm"><h1>L'Homme a la Moto</h1>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Dm"><h1>L'Homme a la Moto</h1>
 <span class="line"><span class="txt">                                                     intro: (= пр.)  </span><span class="ch"> Dm Dm11 Dm Dm9 Dm Dm11 Dm Dm9 Dm6 </span></span>
 <span class="txt">  </span>
  <br />
@@ -552,12 +568,16 @@ data-key="Dm"><h1>L'Homme a la Moto</h1>
 <span class="line"><span class="txt">                                                               fin:  </span><span class="ch"> Fm Fm11 Fm Fm9 Fm Fm11 Fm Fm9 </span></span>
 <span class="line"><span class="txt">                                                                     </span><span class="ch"> Fm </span></span>
 </div>
-<pre><span class="year">2005</span>
+    <pre><span class="year">2005</span>
                                                                    Условная гармония по исполнению <span class="year">2005</span> года
                                                                   (диск &#171;<a href="../../Disks/raycentr.html">Райцентр</a>&#187;).
 
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

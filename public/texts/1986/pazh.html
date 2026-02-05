@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Am"><h1>ПЕСНЯ ПАЖА</h1>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Am"><h1>ПЕСНЯ ПАЖА</h1>
 <span class="txt">  </span>
  <br />
 <span class="line"><span class="txt"> Вот так пропел небесный шансонье,              </span><span class="ch"> Am      H7 </span></span>
@@ -496,9 +512,13 @@ data-key="Am"><h1>ПЕСНЯ ПАЖА</h1>
 <span class="txt">  </span>
  <br />
 </div>
-<pre><span class="year">1980</span>, <span class="year">1986</span>
+    <pre><span class="year">1980</span>, <span class="year">1986</span>
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Gm"><h1>ОПИЛКИ</h1>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Gm"><h1>ОПИЛКИ</h1>
 <span class="txt">             Если я чешу в затылке - не беда! </span>
 <span class="txt">             В голове моей опилки, да-да-да! </span>
 <span class="txt">  </span>
@@ -480,9 +496,13 @@ data-key="Gm"><h1>ОПИЛКИ</h1>
 <span class="txt">  </span>
  <br />
 </div>
-<pre><span class="year">1983</span>
+    <pre><span class="year">1983</span>
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

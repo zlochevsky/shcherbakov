@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Am"><span class="txt"> ВЕТЕР </span>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Am"><span class="txt"> ВЕТЕР </span>
 <span class="txt">  </span>
  <br />
 <span class="line"><span class="txt"> Ковыляет по курганам колымага за конём.                </span><span class="ch"> Am   Dm    E7   Am </span></span>
@@ -466,10 +482,14 @@ data-key="Am"><span class="txt"> ВЕТЕР </span>
 <span class="line"><span class="txt"> наши души по курганам будут вечно ковылять...          </span><span class="ch"> Am   F     C    Dm </span></span>
 <span class="line"><span class="txt">                                                        </span><span class="ch"> Am   E7    Am   E7   Am </span></span>
 </div>
-<pre><<span class="year">1980</span>>
+    <pre><<span class="year">1980</span>>
 
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

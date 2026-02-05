@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Hm"><h1>Не бывает</h1>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Hm"><h1>Не бывает</h1>
 <span class="txt">  </span>
  <br />
 <span class="line"><span class="txt">                                                                  </span><span class="ch">  Hm </span></span>
@@ -499,7 +515,7 @@ data-key="Hm"><h1>Не бывает</h1>
 <span class="line"><span class="txt">                                                      Fin (бас):  </span><span class="ch"> F#-G C    G-B G# </span></span>
 <span class="line"><span class="txt"> 2000                                                             </span><span class="ch">  F#-G C    G-B G# etc </span></span>
 </div>
-<pre>
+    <pre>
 
                                                                  Условная нотировка по исп. <span class="year">2015</span> года.
 
@@ -508,7 +524,11 @@ data-key="Hm"><h1>Не бывает</h1>
                                                                 (по куплетам: Bm-Bm-Hm-Cm-Bm-Hm).
 
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

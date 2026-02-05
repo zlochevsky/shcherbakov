@@ -17,15 +17,18 @@
 </style>
 </head>
 <body>
-<header style="margin-bottom: 18px">
+<header style="margin-bottom: 18px" class="c-screen-content">
 	<p style="font-size: 1.6em; margin-bottom: 0"><a href="../../index.html" style="font-weight: 700; text-decoration: none; color: #333380">{{ .Site.Title }}</a></p>
 </header>
+<span class="c-screen-content">
 {{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" .) }}
+</span>
 <main>
 <div>
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     {{ if gt (int .Params.chordsStartAt) 0 }}
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -36,6 +39,7 @@
 
                         </span>
                     </details></p>
+                    </span>
 
                     {{ partial "song.html" .Params }}
 

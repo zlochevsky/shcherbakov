@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Dm"><h1>Павловск</h1>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Dm"><h1>Павловск</h1>
 <span class="txt">  </span>
  <br />
 <span class="line"><span class="txt"> И полдень, и вокзал, и справочная - всё уместно было, кроме нас.       </span><span class="ch"> Dm Am </span></span>
@@ -489,11 +505,15 @@ data-key="Dm"><h1>Павловск</h1>
  <br />
 <span class="line"><span class="txt">                                                           fin. (= пр.) </span><span class="ch">  Dm </span></span>
 </div>
-<pre>
+    <pre>
 <span class="year">2013</span>                                                                  Условная нотировка по исполнению <span class="year">2013</span> года.
 
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

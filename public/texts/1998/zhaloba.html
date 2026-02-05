@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Hm"><h1>Жалоба</h1>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Hm"><h1>Жалоба</h1>
 <span class="txt">  </span>
  <br />
 <span class="line"><span class="txt"> Когда б не сто вольт сквозь пасть, я вряд ли теперь украсть     </span><span class="ch"> Hm Em </span></span>
@@ -500,12 +516,16 @@ data-key="Hm"><h1>Жалоба</h1>
 <span class="txt">  </span>
  <br />
 </div>
-<pre><span class="year">1998</span>                                                           Нотировка по исполнению <span class="year">1998</span> года                         
+    <pre><span class="year">1998</span>                                                           Нотировка по исполнению <span class="year">1998</span> года                         
                                                                (диск &#171;<a href="../../Disks/fauxpas.html">Faux pas</a>&#187;).
 
 
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

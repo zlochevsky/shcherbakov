@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Em"><h1>AD LEUCONOEN</h1>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Em"><h1>AD LEUCONOEN</h1>
 <span class="txt">  </span>
  <br />
 <span class="line"><span class="txt"> Не кричи, глашатай, не труби сбора.               </span><span class="ch"> Em H7 Em Am </span></span>
@@ -473,10 +489,14 @@ data-key="Em"><h1>AD LEUCONOEN</h1>
 <span class="line"><span class="txt"> что меня убьют на войне.                          </span><span class="ch"> Em6   H7+9    Em </span></span>
 <span class="line"><span class="txt">                                                   </span><span class="ch"> H7+9  Em6 Am  Em6 H7+9 Em6 H7 </span></span>
 </div>
-<pre><span class="year">1987</span>
+    <pre><span class="year">1987</span>
 
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>

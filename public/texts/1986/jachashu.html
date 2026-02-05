@@ -356,6 +356,19 @@ H1 {
 .song {
     font-family: monospace;
 }
+.c-print {
+    display:none;
+}
+@media print { 
+    .c-print {
+        display:block;
+    }
+
+    .c-screen_chrd_two_columns, c-screen-content {
+        display:none;
+    }
+ }
+
 @media only screen and (width <= 70em) {
     .ch, .txt {
         display:block;
@@ -430,6 +443,7 @@ H1 {
 
         <div class="wrapper">
                 <div>
+                    <span class="c-screen-content">
                     <div id="settings">
                     
                         <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
@@ -440,9 +454,11 @@ H1 {
 
                         </span>
                     </details></p>
+                    </span>
 
-                    <div class="song"
-data-key="Hm"><span class="txt"> * * * </span>
+                    <div class="c-screen_chrd_two_columns">
+    <div class="song"
+    data-key="Hm"><span class="txt"> * * * </span>
 <span class="txt">  </span>
  <br />
 <span class="line"><span class="txt"> Я чашу свою осушил до предела;              </span><span class="ch">      Hm    Em    Em6 </span></span>
@@ -464,9 +480,13 @@ data-key="Hm"><span class="txt"> * * * </span>
 <span class="line"><span class="txt"> останься со мной на Земле.                  </span><span class="ch">      Hm/F# F#    G     H7/F# </span></span>
 <span class="line"><span class="txt">                                             </span><span class="ch">      Em    Em6   Hm/F# F#      Hm </span></span>
 </div>
-<pre><span class="year">1986</span>
+    <pre><span class="year">1986</span>
 </pre>
+</div>
 
+<div class="c-print">
+    <pre></pre>
+</div>
 
                 </div>
         </div>
