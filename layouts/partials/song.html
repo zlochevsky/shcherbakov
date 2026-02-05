@@ -30,12 +30,12 @@
                 {{- if gt $pos 0 -}}
                       {{- if and (gt (len $line) $pos) ( gt (len (delimit ( findRE `(?s)[A-Ha-hm#0-9]*` $line) "")) 0) -}}
                         {{- $p1 := substr $line 0 $pos -}}
-                        {{- $p1 = replaceRE `([\s])` "&nbsp;" $p1 -}}
+            
                         {{- $p2 := substr $line $pos -}}
                         {{- $p2 = replaceRE `([\r\n])` "<br />" (replace $p2 ">" "-") -}}
 			{{- $newLines = $newLines | append (println "<span class=\"line\"><span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span></span>" | safeHTML) -}}
                       {{- else -}}
-                        {{- $newLines = $newLines | append (println "<span class=\"txt\">" (replaceRE `([\s])` "&nbsp;" (replaceRE ` +$` "" $line)) "</span>" | safeHTML) -}}
+                        {{- $newLines = $newLines | append (println "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>" | safeHTML) -}}
                       {{- end -}}
                 {{- else -}}
                     {{- $newLines = $newLines | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) -}}
