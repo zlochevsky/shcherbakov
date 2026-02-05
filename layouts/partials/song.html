@@ -3,11 +3,9 @@
 {{- $newLinesAfter := slice -}} 
 {{- $tonality := "Hm" -}}
 {{- $path := printf "texts/%s.txt" .id -}}
-{{- hugo.Store.Set "plainSource" "" -}}
 
 {{- with resources.Get $path -}}
     {{- $cont := .Content -}}
-    {{- hugo.Store.Set "plainSource" .Content -}}
     {{- if and (isset $pageParams "tonality") (ne $pageParams.tonality "") -}}
         {{- $tonality = $pageParams.tonality -}}
     {{- else -}}
@@ -53,13 +51,7 @@
     {{- $newLines = $newLines | append (printf "Файл с аккордами не найден (%s)" .id) -}}
 {{- end -}}
 
-<div class="c-screen_chrd_two_columns">
-    <div class="song"
-    data-key="{{- $tonality -}}">{{- delimit $newLines "" | safeHTML -}}
-    </div>
-    <pre>{{- delimit $newLinesAfter "" | safeHTML -}}</pre>
+<div class="song"
+data-key="{{- $tonality -}}">{{- delimit $newLines "" | safeHTML -}}
 </div>
-
-<div class="c-print">
-    <pre>{{ hugo.Store.Get "plainSource" }}</pre>
-</div>
+<pre>{{- delimit $newLinesAfter "" | safeHTML -}}</pre>
