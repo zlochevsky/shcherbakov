@@ -1,11 +1,10 @@
-{{ $url := printf "%s%s?%s&%s&%s&%s&%s"
+{{ $url := printf "%s%s?%s&%s&%s&%s"
 		site.Params.directus.url
-		site.Params.directus.songs
+		"items/sets_entries/"
 		site.Params.directus.token
-		site.Params.directus.limit
-		site.Params.directus.fields
-		site.Params.directus.sort
-		site.Params.directus.cache
+		"limit=-1"
+		"fields=perfs_id.works_id,sets_id.id,sets_id.title,sets_id.is_album"
+		"filter[sets_id][is_album][_eq]=true"
 		}}
 {{ $data := dict }}
 {{ with try (resources.GetRemote $url) }}

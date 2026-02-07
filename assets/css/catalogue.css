@@ -100,6 +100,68 @@ div.wrapper ul {
 	display: inline-block;
 	margin-left: .5em;
 }
+
+.albums {
+	display: inline-block;
+	margin-left: .5em;
+}
+
+/* Balloon tooltip styles */
+[data-balloon] {
+	position: relative;
+	cursor: help;
+}
+
+[data-balloon]:before,
+[data-balloon]:after {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s ease-out;
+}
+
+[data-balloon]:after {
+	content: attr(data-balloon);
+	padding: 0.5em 1em;
+	background: rgba(0, 0, 0, 0.9);
+	color: white;
+	font-size: 0.85em;
+	white-space: nowrap;
+	border-radius: 3px;
+	z-index: 10;
+}
+
+[data-balloon]:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	z-index: 10;
+}
+
+[data-balloon]:hover:before,
+[data-balloon]:hover:after {
+	opacity: 1;
+}
+
+/* Position: up */
+[data-balloon-pos="up"]:after {
+	bottom: 100%;
+	left: 50%;
+	transform: translate(-50%, -10px);
+	margin-bottom: 5px;
+}
+
+[data-balloon-pos="up"]:before {
+	bottom: 100%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+[data-balloon-pos="up"]:hover:after {
+	transform: translate(-50%, 0);
+}
 .search {
         display: block;
 }

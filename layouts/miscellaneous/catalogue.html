@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>{{ with .Params.name }}{{ . }}{{ else }}{{ printf "%s. %s" .Title .site.Title }}{{ end }}</title>
+<title>{{ with .Params.name }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
 <style>
 	{{- with resources.Get "css/common.css" }}
 		{{ .Content | safeCSS -}}
@@ -16,8 +16,8 @@
 </head>
 <body>
 <header>
-<h1>{{ .Params.name }}</h1>
-<h2>{{- .Params.subtitle -}}</h2>
+{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+{{ with .Params.subtitle }}<h2>{{- . -}}</h2>{{ end -}}
 </header>
 {{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" .) }}
 <main>
@@ -34,6 +34,21 @@
                                 <button id="chronological">по годам</button>
                         </div>
 {{ $songs := partial "directus.html" }}
+{{ $albumPerfs := partial "directus-albums.html" }}
+{{- $albumsByWork := dict -}}
+{{- range $albumPerfs.data -}}
+	{{- $entry := . -}}
+	{{- with .perfs_id -}}
+		{{- $workId := .works_id -}}
+		{{- with $entry.sets_id -}}
+			{{- if .is_album -}}
+				{{- $existing := index $albumsByWork $workId | default slice -}}
+				{{- $albumInfo := dict "id" .id "title" .title -}}
+				{{- $albumsByWork = merge $albumsByWork (dict $workId ($existing | append $albumInfo)) -}}
+			{{- end -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
 <ul id="artlist">
 {{- range $songs.data -}}
 {{- if not .hidden -}}
@@ -72,19 +87,22 @@
 			{{- $name -}}
 		{{- else -}}
 			{{- .incipit -}}
-<<<<<<< HEAD:layouts/miscellaneous/catalogue.html
 		{{- end }}">
 	<!-- <a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>-->
 	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>
 	</span>
-=======
-		{{- end }}"
-	data-disc=""><a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a></span> 
->>>>>>> songpage:themes/blackalpinist/layouts/miscellaneous/catalogue.html
 	{{ if .name -}}
 		(<span id="begin">{{ .fincipit }}</a></span>)
 	{{- end -}}
 	{{- if $date }}	<span class="year">{{ $date -}}{{- if .edit -}}, {{ .edit -}}</span>{{- end -}}
+	{{- end -}}
+	{{- $workAlbums := index $albumsByWork .id -}}
+	{{- if $workAlbums -}}
+		{{- $uniqueAlbums := dict -}}
+		{{- range $workAlbums -}}
+			{{- $uniqueAlbums = merge $uniqueAlbums (dict .id .title) -}}
+		{{- end -}}
+		<span class="albums">{{- range $id, $title := $uniqueAlbums }} <span class="{{ $id }}" data-balloon="{{ $title }}" data-balloon-pos="up"></span>{{- end -}}</span>
 	{{- end -}}
 	</a></li>
 
