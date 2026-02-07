@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>{{ with .Params.name }}{{ . }}{{ else }}{{ printf "%s. %s" site.Title .Title }}{{ end }}</title>
+<title>{{ with .Params.name }}{{ . }}{{ else }}{{ printf "%s. %s" .Title .site.Title }}{{ end }}</title>
 <style>
 	{{- with resources.Get "css/common.css" }}
 		{{ .Content | safeCSS -}}
@@ -72,10 +72,15 @@
 			{{- $name -}}
 		{{- else -}}
 			{{- .incipit -}}
+<<<<<<< HEAD:layouts/miscellaneous/catalogue.html
 		{{- end }}">
 	<!-- <a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>-->
 	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>
 	</span>
+=======
+		{{- end }}"
+	data-disc=""><a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a></span> 
+>>>>>>> songpage:themes/blackalpinist/layouts/miscellaneous/catalogue.html
 	{{ if .name -}}
 		(<span id="begin">{{ .fincipit }}</a></span>)
 	{{- end -}}
