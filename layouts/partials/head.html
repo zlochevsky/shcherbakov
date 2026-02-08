@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ with .Params.name }}{{ . }}{{ else }}{{ printf "%s. %s" site.Title .Title }}{{ end }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ with .Params.name }}{{ . }}{{ else }}{{ .Title }}{{ end }}{{ end }}</title>
 <style>
 	{{ with resources.Get "css/common.css" }}
 		{{- .Content | safeCSS -}}

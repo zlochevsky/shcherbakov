@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:26+00:00",
-    "title": "\u0422\u0438\u0440 \u0411\u043e\u044f\u0440\u0434",
+    "title": "Тир Боярд",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

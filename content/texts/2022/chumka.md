@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:24+00:00",
-    "title": "\u0427\u0443\u043c\u043a\u0430",
+    "title": "Чумка",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

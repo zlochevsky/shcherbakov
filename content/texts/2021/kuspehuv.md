@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:25+00:00",
-    "title": "\u0427\u0451\u0442-\u043d\u0435\u0447\u0435\u0442",
+    "title": "Чёт-нечет",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

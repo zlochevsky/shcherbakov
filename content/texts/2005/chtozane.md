@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:24+00:00",
-    "title": "\u041f\u0430\u0440\u043e\u043c",
+    "title": "Паром",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

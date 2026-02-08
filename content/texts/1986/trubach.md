@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:26+00:00",
-    "title": "\u0422\u0440\u0443\u0431\u0430\u0447",
+    "title": "Трубач",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

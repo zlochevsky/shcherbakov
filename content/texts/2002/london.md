@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:25+00:00",
-    "title": "\u041b\u043e\u043d\u0434\u043e\u043d",
+    "title": "Лондон",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

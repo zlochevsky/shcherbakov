@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:25+00:00",
-    "title": "\u041f\u044c\u0435\u0441\u0430",
+    "title": "Пьеса",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

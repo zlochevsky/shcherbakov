@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:25+00:00",
-    "title": "\u0425\u043e\u0440\u043e\u0432\u043e\u0434",
+    "title": "Хоровод",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:25+00:00",
-    "title": "\u041f\u0443\u043d\u043a\u0442 M",
+    "title": "Пункт M",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

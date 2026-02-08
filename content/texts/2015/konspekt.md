@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:25+00:00",
-    "title": "\u041a\u043e\u043d\u0441\u043f\u0435\u043a\u0442",
+    "title": "Конспект",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

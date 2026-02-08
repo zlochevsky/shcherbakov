@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:25+00:00",
-    "title": "\u0421\u043a\u0440\u0438\u043f\u0430\u0447 \u0438 \u043a\u043e\u043d\u043a\u0430",
+    "title": "Скрипач и конка",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

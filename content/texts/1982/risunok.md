@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:26+00:00",
-    "title": "\u0420\u0438\u0441\u0443\u043d\u043e\u043a",
+    "title": "Рисунок",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

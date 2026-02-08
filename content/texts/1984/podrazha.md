@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:25+00:00",
-    "title": "\u041f\u043e\u0434\u0440\u0430\u0436\u0430\u043d\u0438\u0435 \u0413\u0430\u043b\u0438\u0447\u0443",
+    "title": "Подражание Галичу",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

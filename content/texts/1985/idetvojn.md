@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:24+00:00",
-    "title": "\u0418\u0434\u0451\u0442 \u0432\u043e\u0439\u043d\u0430...",
+    "title": "Идёт война...",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

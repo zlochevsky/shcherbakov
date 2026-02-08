@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:24+00:00",
-    "title": "\u0410\u043f\u0442\u0435\u043a\u0430",
+    "title": "Аптека",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

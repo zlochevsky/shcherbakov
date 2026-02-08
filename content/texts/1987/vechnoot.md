@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:26+00:00",
-    "title": "\u0412\u0435\u0447\u043d\u043e \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439...",
+    "title": "Вечно открытый...",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

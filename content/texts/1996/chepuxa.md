@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:24+00:00",
-    "title": "\u0427\u0435\u043f\u0443\u0445\u0430. \u0427\u0435\u043f\u0443\u0445\u0430...",
+    "title": "Чепуха. Чепуха...",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

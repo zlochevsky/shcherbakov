@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:24+00:00",
-    "title": "\u0414\u0443\u044d\u0442",
+    "title": "Дуэт",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {
