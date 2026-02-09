@@ -38,6 +38,11 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Create config with Directus token
+        run: |
+          mkdir -p config/_default
+          echo '{"directus":{"token":"${{ secrets.DIRECTUS_TOKEN }}"}}' > config/_default/params.json
+
       - name: Build
         run: hugo --minify -d public
 
