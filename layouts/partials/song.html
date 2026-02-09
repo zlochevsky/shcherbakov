@@ -13,35 +13,35 @@
         {{- $tonality = delimit ( findRE $reg $cont 1 ) "" -}}
     {{- end -}}
 
-    {{- $lines := split $cont "\n" -}}
-    {{- $lastIndex := math.Sub (len $lines) 1 -}}
-    {{- $pos := math.Max 0 (sub (int $pageParams.chordsStartAt)  1) -}}
-    {{- range $k, $v := $lines -}}
-        {{- $line := trim $v "\r\n" -}}
-        {{- if (and (gt 2 $k) (hasPrefix (lower $line) (lower $pageParams.title) ) ) -}}
-	{{- $line = printf "%s%s%s" "<h1>" $line "</h1>" -}}
-            {{- $newLines = $newLines | append (println $line | safeHTML) -}}
+    {{- $lines := split $cont "\n" -}}                                          {{/* массив строк $lines из $cont разбитого по \n */}}
+    {{- $lastIndex := math.Sub (len $lines) 1 -}}                               {{/* преобразование количества строк в 0-based */}}
+    {{- $pos := int ( math.Max 0 (sub (int $pageParams.chordsStartAt)  1) ) -}} {{/* позиция старта аккордов в строке (с защитой от отр.) */}}
+    {{- range $k, $v := $lines -}}                                              {{/* проход по строкам */}}
+        {{- $line := trim $v "\r\n" -}}                                         {{/* удаление знаков конца перевода строк с записью в $line */}}
+        {{- if (and (lt $k 2) (hasPrefix (lower $line) (lower $pageParams.title) ) ) -}} {{/* если строка первая или вторая и начинается с title */}}
+	        {{- $line = printf "%s%s%s" "<h1>" $line "</h1>" -}}                         {{/* оборачивание в H1 */}}
+            {{- $newLines = $newLines | append (println $line | safeHTML) -}}    {{/* добавляем перевод строки */}}
         {{- else -}}
 
-            {{- if (or (ge $k $pageParams.textFinishAtLine) (eq $k $lastIndex)) -}}
-                {{- $line = replaceRE `([0-9]{4})` "<span class=\"year\">$1</span>" $line -}}
-                {{- $newLinesAfter = $newLinesAfter | append (println $line | safeHTML ) -}}
+            {{- if (or (ge $k $pageParams.textFinishAtLine) (eq $k $lastIndex)) -}} {{/* если последняя строка текста */}}
+                {{- $line = replaceRE `([0-9]{4})` "<span class=\"year\">$1</span>" $line -}} {{/* обернуть год в span */}}
+                {{- $newLinesAfter = $newLinesAfter | append (println $line | safeHTML ) -}} {{/* добавляем строку в $newLinesAfter + перевод строки */}}
             {{- else -}}
                 {{- if gt $pos 0 -}}
-                      {{- if and (gt (len $line) $pos) ( gt (len (delimit ( findRE `(?s)[A-Ha-hm#0-9]*` $line) "")) 0) -}}
-                        {{- $p1 := substr $line 0 $pos -}}
-            
-                        {{- $p2 := substr $line $pos -}}
-                        {{- $p2 = replaceRE `([\r\n])` "<br />" (replace $p2 ">" "-") -}}
-			{{- $newLines = $newLines | append (println "<span class=\"line\"><span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span></span>" | safeHTML) -}}
-                      {{- else -}}
-                        {{- $newLines = $newLines | append (println "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>" | safeHTML) -}}
+                    {{- if and (gt (len $line) $pos) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}} {{/* если строка длиннее $pos, то разбить её по $pos */}}
+                        {{- $p1 := substr $line 0 $pos -}}                          {{/* формирует первую подстроку до $pos */}}
+                        {{- $p2 := substr $line $pos -}}                            {{/* формирует вторую подстроку от $pos */}}
+                        {{- $p2 = replaceRE `([^-])>` "$1-" $p2 -}}                 {{/* замена > на - */}}
+                        {{- $p2 = replaceRE `([\r\n])` "<br />" $p2 -}}             {{/* вставка br */}}
+			            {{- $newLines = $newLines | append (println "<span class=\"line\"><span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span></span>" | safeHTML) -}} {{/* добавл строки в срез $newLines, в .ch и .txt */}}
+                    {{- else -}}
+                        {{- $newLines = $newLines | append (println "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>" | safeHTML) -}} {{/* добавл строки в срез $newLines, в .txt */}}
                       {{- end -}}
                 {{- else -}}
-                    {{- $newLines = $newLines | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) -}}
+                    {{- $newLines = $newLines | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) -}} {{/* оборачиваем строку в span .ch */}}
                 {{- end -}}
-            {{- if gt 2 (len $v) -}}
-                {{- $newLines = $newLines | append (println $line "<br />"  | safeHTML) -}}
+            {{- if lt (len $v) 2 -}}                                                {{/* если строка меньше трёх символов*/}}
+                {{- $newLines = $newLines | append (println $line "<br />"  | safeHTML) -}} {{/* ставим br */}}
             {{- end -}}
             {{- end -}}
 
@@ -51,7 +51,18 @@
     {{- $newLines = $newLines | append (printf "Файл с аккордами не найден (%s)" .id) -}}
 {{- end -}}
 
-<div class="song"
-data-key="{{- $tonality -}}">{{- delimit $newLines "" | safeHTML -}}
+
+<div class="viewtype-source song">
+    {{- with resources.Get $path -}}
+        <pre>
+            {{- .Content -}}
+        </pre>    
+    {{end}}
 </div>
-<pre>{{- delimit $newLinesAfter "" | safeHTML -}}</pre>
+
+<div class="viewtype-side song" data-key="{{- $tonality -}}">
+    {{- delimit $newLines "" | safeHTML -}}
+<pre>
+    {{- delimit $newLinesAfter "" | safeHTML -}}
+</pre>
+</div>

@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ .Title }} - текст, аккорды</title>
+<style>
+    .viewtype-source {
+        display: block;
+    }
+    .viewtype-side, #settings {
+        display: none;
+    }
+</style>
 {{ with resources.Get "css/common.css" -}} 
 	<link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end -}} 
@@ -25,16 +33,17 @@
         <div class="wrapper">
                 <div>
                     <div id="settings">
-                    {{ if gt (int .Params.chordsStartAt) 0 }}
-                        <span id="toggleChords" class="note1" title="Скрыть/показать аккорды"></span>
-                    {{ end }}
+                        {{ if gt (int .Params.chordsStartAt) 0 }}
+                            <span id="toggleChords" class="note1" title="скрыть/показать аккорды"></span>
+                        {{ end }}
+
+                        <p style="display:inline";>
+                            <details style="display:inline;">
+                                <summary>траспонировать</summary>
+                                <span class="transpose-wrapper"></span>
+                            </details>
+                        </p>
                     </div>
-                    <p style="display:inline";><details style="display:inline;"><summary>траспонировать</summary>
-                        <span class="transpose-wrapper">
-
-                        </span>
-                    </details></p>
-
                     {{ partial "song.html" .Params }}
 
                 </div>
