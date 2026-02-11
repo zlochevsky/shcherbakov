@@ -3,12 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
 <title>{{ .Title }} - текст, аккорды</title>
 <style>
+    /* По умолчанию (без JS) показываем только source */
+    .view-container {
+        display: none;
+    }
     .viewtype-source {
         display: block;
     }
-    .viewtype-side, #settings {
+    #settings {
         display: none;
     }
 </style>
@@ -21,6 +26,9 @@
 {{ with resources.Get "css/transpose.css" -}}
     <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{- end }}
+{{ with resources.Get "js/viewtype.js" -}}
+    <script type="text/javascript" src="{{ .RelPermalink }}"></script>
+{{ end }}
 </head>
 <body>
 <header style="margin-bottom: 18px">
@@ -28,11 +36,13 @@
 </header>
 {{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" .) }}
 <main>
-<div>
 
         <div class="wrapper">
-                <div>
                     <div id="settings">
+                    <button id="side">акк. справа</button>
+                    <button id="above">акк. сверху</button>
+                    <button id="text">текст</button>
+                    <button id="source">исходник</button>
                         {{ if gt (int .Params.chordsStartAt) 0 }}
                             <span id="toggleChords" class="note1" title="скрыть/показать аккорды"></span>
                         {{ end }}
@@ -45,10 +55,8 @@
                         </p>
                     </div>
                     {{ partial "song.html" .Params }}
-
-                </div>
+                    <noscript>To use more friendly view turn on javascript.</noscript>
         </div>
-</div>
 </main>
 
 {{ partial "head/songpage.js.html" . }}

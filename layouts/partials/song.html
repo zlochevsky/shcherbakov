@@ -33,7 +33,7 @@
                         {{- $p2 := substr $line $pos -}}                            {{/* формирует вторую подстроку от $pos */}}
                         {{- $p2 = replaceRE `([^-])>` "$1-" $p2 -}}                 {{/* замена > на - */}}
                         {{- $p2 = replaceRE `([\r\n])` "<br />" $p2 -}}             {{/* вставка br */}}
-			            {{- $newLines = $newLines | append (println "<span class=\"line\"><span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span></span>" | safeHTML) -}} {{/* добавл строки в срез $newLines, в .ch и .txt */}}
+			            {{- $newLines = $newLines | append (println "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span>" | safeHTML) -}} {{/* добавл строки в срез $newLines, в .ch и .txt */}}
                     {{- else -}}
                         {{- $newLines = $newLines | append (println "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>" | safeHTML) -}} {{/* добавл строки в срез $newLines, в .txt */}}
                       {{- end -}}
@@ -52,7 +52,7 @@
 {{- end -}}
 
 
-<div class="viewtype-source song">
+<div class="view-container viewtype-source song">
     {{- with resources.Get $path -}}
         <pre>
             {{- .Content -}}
@@ -60,9 +60,7 @@
     {{end}}
 </div>
 
-<div class="viewtype-side song" data-key="{{- $tonality -}}">
-    {{- delimit $newLines "" | safeHTML -}}
-<pre>
-    {{- delimit $newLinesAfter "" | safeHTML -}}
-</pre>
+<div class="viewtype-side song view-container" data-key="{{- $tonality -}}">
+<pre>{{- delimit $newLines "" | safeHTML -}}
+{{- delimit $newLinesAfter "" | safeHTML -}}</pre>
 </div>

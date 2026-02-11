@@ -13,8 +13,8 @@
         {{- $tonality = delimit ( findRE $reg $cont 1 ) "" -}}
     {{- end -}}
 
-    {{- $lines := split $cont "\n" -}}
-    {{- $lastIndex := math.Sub (len $lines) 1 -}}
+    {{- $lines := split $cont "\n" -}}                                              
+    {{- $lastIndex := math.Sub (len $lines) 1 -}}                                   {{/*  */}}
     {{- $pos := math.Max 0 (sub (int $pageParams.chordsStartAt)  1) -}}
     {{- range $k, $v := $lines -}}
         {{- $line := trim $v "\r\n" -}}
