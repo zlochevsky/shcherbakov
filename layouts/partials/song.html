@@ -27,22 +27,23 @@
                 {{- $line = replaceRE `([0-9]{4})` "<span class=\"year\">$1</span>" $line -}} {{/* обернуть год в span */}}
                 {{- $newLinesAfter = $newLinesAfter | append (println $line | safeHTML ) -}} {{/* добавляем строку в $newLinesAfter + перевод строки */}}
             {{- else -}}
-                {{- if gt $pos 0 -}}
-                    {{- if and (gt (len $line) $pos) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}} {{/* если строка длиннее $pos, то разбить её по $pos */}}
-                        {{- $p1 := substr $line 0 $pos -}}                          {{/* формирует первую подстроку до $pos */}}
-                        {{- $p2 := substr $line $pos -}}                            {{/* формирует вторую подстроку от $pos */}}
-                        {{- $p2 = replaceRE `([^-])>` "$1-" $p2 -}}                 {{/* замена > на - */}}
-                        {{- $p2 = replaceRE `([\r\n])` "<br />" $p2 -}}             {{/* вставка br */}}
+                {{- if gt (len (trim $line " \t")) 0 -}}                                {{/* пропускаем пустые строки */}}
+                    {{- if gt $pos 0 -}}
+                        {{- if and (gt (len $line) $pos) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}} {{/* если строка длиннее $pos, то разбить её по $pos */}}
+                            {{- $p1 := substr $line 0 $pos -}}                          {{/* формирует первую подстроку до $pos */}}
+                            {{- $p2 := substr $line $pos -}}                            {{/* формирует вторую подстроку от $pos */}}
+                            {{- $p2 = replaceRE `([^-])>` "$1-" $p2 -}}                 {{/* замена > на - */}}
+                            {{- $p2 = replaceRE `([\r\n])` "<br />" $p2 -}}             {{/* вставка br */}}
 			            {{- $newLines = $newLines | append (println "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span>" | safeHTML) -}} {{/* добавл строки в срез $newLines, в .ch и .txt */}}
+                        {{- else -}}
+                            {{- $newLines = $newLines | append (println "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>" | safeHTML) -}} {{/* добавл строки в срез $newLines, в .txt */}}
+                          {{- end -}}
                     {{- else -}}
-                        {{- $newLines = $newLines | append (println "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>" | safeHTML) -}} {{/* добавл строки в срез $newLines, в .txt */}}
-                      {{- end -}}
+                        {{- $newLines = $newLines | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) -}} {{/* оборачиваем строку в span .ch */}}
+                    {{- end -}}
                 {{- else -}}
-                    {{- $newLines = $newLines | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) -}} {{/* оборачиваем строку в span .ch */}}
+                    {{- $newLines = $newLines | append "\n" -}}                         {{/* добавляем пустую строку для разделения куплетов */}}
                 {{- end -}}
-            {{- if lt (len $v) 2 -}}                                                {{/* если строка меньше трёх символов*/}}
-                {{- $newLines = $newLines | append (println $line "<br />"  | safeHTML) -}} {{/* ставим br */}}
-            {{- end -}}
             {{- end -}}
 
         {{- end -}}
