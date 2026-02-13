@@ -33,35 +33,26 @@ H1 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
-.song {
-	font-family: monospace;
-}
+
 .c-print {
 	display:none;
 }
-@media print { 
-	.c-print {
-		display:block;
+@media screen {
+	.ch {
+		font-weight: bold;
+    	color: #2159D6;
 	}
-	.c-screen_chrd_two_columns, .c-screen-content {
-		display:none;
+}
+@media print {
+	.view-container:not(.c-print) {
+		display: none !important;
+	}
+	.c-print {
+		display:block !important;
 	}
  }
 
 @media only screen and (width <= 70em) {
-	.ch, .txt {
-		display:block;
-		word-wrap:break-word;
-		white-space: pre;
-		font-family: monospace;
-	}
-	.song {
-		display: block;
-	}
-	.line {
-		display: flex;
-		flex-direction: column-reverse; /* аккорды сверху */
-	}
 	body {
 		font-size: 32px/48px;
 	  }
@@ -89,12 +80,6 @@ H1 {
 	.line {
 		display: contents;
 	}
-	.ch, .txt {
-		display: inline;
-		grid-column: 2;
-		white-space: pre;
-		font-family: monospace;
-	}
 	body {
 		font-size: 16px;
 	}
@@ -118,9 +103,6 @@ H1 {
 	div.wrapper ul {
 		list-style-type: square;
 		font: normal 1em/1.5em serif;
-	}
-	.ch, .txt {
-		display: inline;
 	}
 }
 @media only screen and (width <= 70em) {
