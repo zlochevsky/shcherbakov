@@ -23,7 +23,7 @@
     {{- end -}}
     {{- $pos := int ( math.Max 0 (sub (int $pageParams.chordsStartAt)  1) ) -}}{{/* позиция старта аккордов в строке (с защитой от отриц.) */}}
     {{- range $k, $v := $lines -}}{{/* проход по строкам */}}
-        {{- $line := trim $v "\r\n" -}}{{/* удаление знаков конца перевода строк с записью в $line */}}
+        {{- $line := cond (lt $k $pageParams.textFinishAtLine) (trim $v "\r\n") $v -}}{{/* удаление знаков конца перевода строк с записью в $line */}}
         {{- if (and (lt $k 2) (hasPrefix (lower $line) (lower $pageParams.title) ) ) -}}{{/* если строка первая или вторая и начинается с title */}}
 	        {{- $line = printf "%s%s%s" "<h1>" $line "</h1>" -}}{{/* оборачивание в H1 */}}
             {{- $linesSide = $linesSide | append (println $line | safeHTML) -}}{{/* после H1 добавляем перевод строки */}}
