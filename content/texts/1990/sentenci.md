@@ -8,6 +8,6 @@
         "tonality": "Em",
         "year": "1990",
         "chordsStartAt": 63,
-        "textFinishAtLine": 41
+        "textFinishAtLine": 43
     }
 }

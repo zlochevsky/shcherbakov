@@ -8,6 +8,6 @@
         "tonality": "Ebm",
         "year": "1998",
         "chordsStartAt": 40,
-        "textFinishAtLine": 35
+        "textFinishAtLine": 37
     }
 }

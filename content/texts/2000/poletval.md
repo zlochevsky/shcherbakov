@@ -8,6 +8,6 @@
         "tonality": "Cm",
         "year": "2000",
         "chordsStartAt": 63,
-        "textFinishAtLine": 52
+        "textFinishAtLine": 54
     }
 }

@@ -8,6 +8,6 @@
         "tonality": "Gm",
         "year": "1982",
         "chordsStartAt": 55,
-        "textFinishAtLine": 48
+        "textFinishAtLine": 50
     }
 }

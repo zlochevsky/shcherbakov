@@ -250,10 +250,14 @@ chordReplaceRegex: /([A-Ha-h][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7
 jQuery.noConflict();
 
 function toggleChords() {
-    jQuery("span.ch").each(function(i, el) {
+    console.log('toggleChords called');
+    var chords = jQuery("span.ch");
+    console.log('Found span.ch elements:', chords.length);
+    chords.each(function(i, el) {
+        console.log('Toggling element', i, el);
         jQuery(el).toggle();
-        jQuery(".transpose-keys").toggle();
     });
+    jQuery(".transpose-keys").toggle();
 }
 
 jQuery(document).ready(function() {

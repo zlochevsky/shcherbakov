@@ -8,6 +8,6 @@
         "tonality": "G#m",
         "year": "2023",
         "chordsStartAt": 58,
-        "textFinishAtLine": 42
+        "textFinishAtLine": 45
     }
 }

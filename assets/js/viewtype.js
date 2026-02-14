@@ -2,14 +2,32 @@ const VALID_VIEW_TYPES = ['text', 'side', 'above', 'source'];
 const DEFAULT_VIEW_TYPE = 'side';
 const COOKIE_PARAMETERS = 'Path=/; Max-Age=31536000; SameSite=Lax';
 
+// Глобальные переменные для кнопок (инициализируются в DOMContentLoaded)
+let buttonAbove, buttonSide, buttonText, buttonSource;
+let transposeButton, transposeWrapper;
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("settings").style.display = "block";
-    const currentViewType = getViewType();
-    applyViewType(currentViewType)
-    const buttonAbove = document.getElementById('above');
-    const buttonSide = document.getElementById('side');
-    const buttonText = document.getElementById('text');
-    const buttonSource = document.getElementById('source');
+
+    // Инициализируем кнопки
+    buttonAbove = document.getElementById('above');
+    buttonSide = document.getElementById('side');
+    buttonText = document.getElementById('text');
+    buttonSource = document.getElementById('source');
+
+    const viewType = getViewType();
+    manageTransposer(viewType);
+    applyViewType(viewType);
+
+    // Обработчик для кнопки транспозера
+    transposeButton = document.getElementById('transposer');
+    transposeWrapper = document.querySelector('.transpose-wrapper');
+    if (transposeButton && transposeWrapper) {
+        transposeButton.addEventListener('click', function() {
+            transposeWrapper.classList.toggle('active');
+        });
+    }
+
     buttonSide.addEventListener('click', function() {
         setViewType('side');  // устанавливаем новый режим
     });
@@ -25,18 +43,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log(getViewType());
 });
+function manageTransposer(viewType){
+    // Скрываем транспозер в видах text и source
+    if (viewType === 'text' || viewType === 'source') {
+        if (transposeButton) transposeButton.style.display = "none";
+        if (transposeWrapper) transposeWrapper.classList.remove('active');
+    } else {
+        if (transposeButton) transposeButton.style.display = "inline-block";
+    }
+}
 
 function applyViewType(viewType) {
-    // Скрываем все контейнеры
     const containers = document.querySelectorAll('.view-container');
     containers.forEach(container => {
-        container.style.display = 'none';
+        container.classList.remove('active');
+        container.style.display = '';  // убираем inline-стиль
     });
 
-    // Показываем выбранный
+    // Убираем active у всех кнопок
+    [buttonAbove, buttonSide, buttonSource, buttonText].forEach(btn => btn.classList.remove('active'));
+
+    manageTransposer(viewType);
+
     const activeContainer = document.querySelector('.viewtype-' + viewType);
     if (activeContainer) {
-        activeContainer.style.display = 'block';
+        activeContainer.classList.add('active');
+    }
+
+    // Добавляем active к текущей кнопке
+    const activeButton = {
+        'above': buttonAbove,
+        'side': buttonSide,
+        'source': buttonSource,
+        'text': buttonText
+    }[viewType];
+
+    if (activeButton) {
+        activeButton.classList.add('active');
     }
 }
 

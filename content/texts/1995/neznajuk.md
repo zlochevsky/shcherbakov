@@ -8,6 +8,6 @@
         "tonality": "E",
         "year": "1995",
         "chordsStartAt": 71,
-        "textFinishAtLine": 51
+        "textFinishAtLine": 53
     }
 }

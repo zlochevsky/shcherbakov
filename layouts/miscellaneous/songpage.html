@@ -39,22 +39,14 @@
 
         <div class="wrapper">
                     <div id="settings">
-                    <button id="side">акк. справа</button>
-                    <button id="above">акк. сверху</button>
-                    <button id="text">текст</button>
-                    <button id="source">исходник</button>
-                        {{ if gt (int .Params.chordsStartAt) 0 }}
-                            <span id="toggleChords" class="note1" title="скрыть/показать аккорды"></span>
-                        {{ end }}
-
-                        <p style="display:inline";>
-                            <details style="display:inline;">
-                                <summary>траспонировать</summary>
-                                <span class="transpose-wrapper"></span>
-                            </details>
-                        </p>
+                        <button id="text">текст</button>
+                        <button id="side">аккорды</button>
+                        <button id="transposer">траспонировать</button>
+                        <button id="source">исходник</button>
+                        <button id="above">< wip ></button>
+                        <div class="transpose-wrapper"></div>
                     </div>
-                    {{ partial "song.html" .Params }}
+{{- partial "song.html" .Params -}}
                     <noscript>To view the page more friendly turn on javascript.</noscript>
         </div>
 </main>

@@ -34,8 +34,28 @@ H1 {
 	font-weight: 700;
 }
 
-.c-print {
-	display:none;
+.view-container {
+	display: none;
+}
+
+.view-container.active {
+    display: block !important;
+}
+
+button {
+	color: #666699;
+	border: 1px solid #fefeee;
+	border-radius: .2em;
+	background-color: inherit;
+	padding-block: .5em;
+	padding-inline: 1em;
+	margin: 0 .2em;
+}
+button.active {
+	background-color: #fefeee;
+}
+.year {
+	color:#666699;
 }
 @media screen {
 	.ch {
@@ -43,14 +63,15 @@ H1 {
     	color: #2159D6;
 	}
 }
+
 @media print {
-	.view-container:not(.c-print) {
-		display: none !important;
+    #settings {
+        display: none !important;
+    }
+	header, nav {
+		display: none;
 	}
-	.c-print {
-		display:block !important;
-	}
- }
+}
 
 @media only screen and (width <= 70em) {
 	body {
@@ -60,7 +81,6 @@ H1 {
 		padding: 5px 0;
 	}
 	nav > div, main > div > div.wrapper > div {
-		display: block;
 		padding: 2em;
 		margin: 1em;
 	}
@@ -77,9 +97,6 @@ H1 {
 }
 
 @media only screen and (width > 70em) {
-	.line {
-		display: contents;
-	}
 	body {
 		font-size: 16px;
 	}
@@ -104,11 +121,4 @@ H1 {
 		list-style-type: square;
 		font: normal 1em/1.5em serif;
 	}
-}
-@media only screen and (width <= 70em) {
-
-
-}
-@media only screen and (width > 70em) {
-
 }

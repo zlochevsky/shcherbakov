@@ -8,6 +8,6 @@
         "tonality": "A",
         "year": "2019",
         "chordsStartAt": 61,
-        "textFinishAtLine": 39
+        "textFinishAtLine": 41
     }
 }

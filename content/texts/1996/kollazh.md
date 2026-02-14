@@ -8,6 +8,6 @@
         "tonality": "C#m",
         "year": "1996",
         "chordsStartAt": 43,
-        "textFinishAtLine": 47
+        "textFinishAtLine": 49
     }
 }

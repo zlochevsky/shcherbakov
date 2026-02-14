@@ -8,6 +8,6 @@
         "tonality": "A",
         "year": "2024",
         "chordsStartAt": 46,
-        "textFinishAtLine": 34
+        "textFinishAtLine": 37
     }
 }

@@ -8,6 +8,6 @@
         "tonality": "Dm",
         "year": "2021",
         "chordsStartAt": 54,
-        "textFinishAtLine": 52
+        "textFinishAtLine": 54
     }
 }

@@ -8,6 +8,6 @@
         "tonality": "C#m",
         "year": "2022",
         "chordsStartAt": 55,
-        "textFinishAtLine": 56
+        "textFinishAtLine": 53
     }
 }

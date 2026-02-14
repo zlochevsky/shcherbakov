@@ -8,6 +8,6 @@
         "tonality": "Bm",
         "year": "2014",
         "chordsStartAt": 60,
-        "textFinishAtLine": 47
+        "textFinishAtLine": 49
     }
 }

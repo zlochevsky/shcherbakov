@@ -8,6 +8,6 @@
         "tonality": "D",
         "year": "1992",
         "chordsStartAt": 51,
-        "textFinishAtLine": 59
+        "textFinishAtLine": 61
     }
 }

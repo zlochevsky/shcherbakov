@@ -8,6 +8,6 @@
         "tonality": "Dm",
         "year": "1981",
         "chordsStartAt": 44,
-        "textFinishAtLine": 42
+        "textFinishAtLine": 44
     }
 }
