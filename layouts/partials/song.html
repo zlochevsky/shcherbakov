@@ -14,18 +14,21 @@
         {{- $tonality = delimit ( findRE $reg $cont 1 ) "" -}}
     {{- end -}}
     {{- $lines := split $cont "\n" -}}{{/* массив строк $lines из $cont разбитого по \n */}}
-    {{- $lastIndex := math.Sub (len $lines) 1 -}}{{/* преобразование количества строк в 0-based */}}
+    {{- $lastIndex := math.Sub (len $lines) 1 -}}{{/* rebase to 0-based */}}
     {{- $lastNonEmptyIndex := 0 -}}
+
     {{- range $k, $v := $lines -}}
         {{- if gt (len (trim $v " \t\r\n")) 0 -}}
             {{- $lastNonEmptyIndex = $k -}}
         {{- end -}}
     {{- end -}}
+
     {{- $pos := int ( math.Max 0 (sub (int $pageParams.chordsStartAt)  1) ) -}}{{/* позиция старта аккордов в строке (с защитой от отриц.) */}}
+
     {{- range $k, $v := $lines -}}{{/* проход по строкам */}}
         {{- $line := cond (lt $k $pageParams.textFinishAtLine) (trim $v "\r\n") $v -}}{{/* удаление знаков конца перевода строк с записью в $line */}}
         {{- if (and (lt $k 2) (hasPrefix (lower $line) (lower $pageParams.title) ) ) -}}{{/* если строка первая или вторая и начинается с title */}}
-	        {{- $line = printf "%s%s%s" "<h1>" $line "</h1>" -}}{{/* оборачивание в H1 */}}
+	        {{- $line = print "<h1>" $line "</h1>" -}}
             {{- $linesSide = $linesSide | append (println $line | safeHTML) -}}{{/* после H1 добавляем перевод строки */}}
             {{- $linesAbove = $linesAbove | append (println $line | safeHTML) -}}{{/* после H1 добавляем перевод строки */}}
             {{- $linesText = $linesText | append (println $line | safeHTML) -}}{{/* после H1 добавляем перевод строки */}}
@@ -43,7 +46,7 @@
                     {{- end -}}
                 {{- end -}}
                 {{- if $shouldWrapYear -}}
-                    {{- $line = replaceRE `(\d{4})` "<span class=\"year\">$1</span>" $line -}}{{/* Универсальный regex для года: просто 4 цифры, игнорируя окружающий текст и скобки */}}
+                    {{- $line = replaceRE `(<?\s*\d{4}(?:,\s*\d{4})*\s*>?)` "<span class=\"year\">$1</span>" $line -}}{{/* Универсальный regex для года: просто 4 цифры, игнорируя окружающий текст и скобки */}}
                 {{- end -}}{{/* Теперь проверяем, должна ли строка идти в $newLinesAfter (ПОСЛЕ обёртки года) */}}
                 {{- if (or (ge $k $pageParams.textFinishAtLine) (eq $k $lastIndex)) -}}{{/* если $k >= $textFinishAtLine или это последняя строка текста */}}
                     {{- $newLinesAfter = $newLinesAfter | append (println $line | safeHTML ) -}}{{/* добавляем строку в $newLinesAfter + перевод строки */}}
@@ -54,21 +57,25 @@
                             {{- $p2 := substr $line $pos -}}{{/* формирует вторую подстроку от $pos */}}
                             {{- $p2 = replaceRE `([^-])>` "$1-" $p2 -}}{{/* для -> замена > на - */}}
                             {{- $p2 = replaceRE `([\r\n])` "<br />" $p2 -}}{{/* вставка br */}}
-                            {{- $linesSide = $linesSide | append (println "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span>" | safeHTML) -}}
-                            {{- $linesAbove = $linesAbove | append (println "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span>" | safeHTML) -}}
-                            {{- $linesText = $linesText | append (println "<span class=\"txt\">" $p1 "</span>" | safeHTML) -}}
+                            {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "\n</span>" | safeHTML) -}}
+                            {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "\n</span>" | safeHTML) -}}
+                            {{- $linesText = $linesText | append (print "<span class=\"txt\">" $p1 "\n</span>" | safeHTML) -}}
                         {{- else -}}
-                            {{- $linesSide = $linesSide | append (println "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>" | safeHTML) -}}{{/* добавл строки в срез $newLines, в .txt */}}
-                            {{- $linesAbove = $linesAbove | append (println "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>" | safeHTML) -}}{{/* добавл строки в срез $newLines, в .txt */}}
-                            {{- $linesText = $linesText | append (println "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>" | safeHTML) -}}{{/* добавл строки в срез $newLines, в .txt */}}                            
+                            {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "\n</span>" | safeHTML) -}}{{/* добавл строки в срез $newLines, в .txt */}}
+                            {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "\n</span>" | safeHTML) -}}{{/* добавл строки в срез $newLines, в .txt */}}
+                            {{- $linesText = $linesText | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "\n</span>" | safeHTML) -}}{{/* добавл строки в срез $newLines, в .txt */}}                            
                         {{- end -}}
                     {{- else -}}
-                        {{- $linesSide = $linesSide | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) -}}
-                        {{- $linesAbove = $linesAbove | append (println "<span class=\"ch\">" $line "</span>" | safeHTML) -}}
+                        {{- $linesSide = $linesSide | append (print "<span class=\"ch\">" $line "\n</span>" | safeHTML) -}}
+                        {{- $linesAbove = $linesAbove | append (print "<span class=\"ch\">" $line "\n</span>" | safeHTML) -}}
                     {{- end -}}
                 {{- end -}}
             {{- else -}}
-                {{- if  (le $k $pageParams.textFinishAtLine) -}}{{- $linesSide = $linesSide | append "\n" -}}{{- $linesAbove = $linesAbove | append "\n" -}}{{- $linesText = $linesText | append "\n" -}}{{- end -}}
+                {{- if  (le $k $pageParams.textFinishAtLine) -}}
+                    {{- $linesSide = $linesSide | append "\n" -}}
+                    {{- $linesAbove = $linesAbove | append "\n" -}}
+                    {{- $linesText = $linesText | append "\n" -}}
+                {{- end -}}
             {{- end -}}
         {{- end -}}
     {{- end -}}

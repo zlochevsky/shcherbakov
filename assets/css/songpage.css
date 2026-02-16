@@ -15,6 +15,9 @@ nav > div, main > div > div.wrapper > div {
 		border-style: solid;
 		padding: 5px;
 }
+#settings {
+	margin-bottom: .3em
+}
 nav > div {
 		text-align: center;
 		}
@@ -34,28 +37,68 @@ H1 {
 	font-weight: 700;
 }
 
+pre {
+	max-width: 100%;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	box-sizing: border-box;
+}
+
 .view-container {
 	display: none;
+	padding: 0 20px !important;
 }
 
 .view-container.active {
     display: block !important;
 }
 
-button {
-	color: #666699;
+.button-viewtype {
 	border: 1px solid #fefeee;
 	border-radius: .2em;
 	background-color: inherit;
 	padding-block: .5em;
-	padding-inline: 1em;
-	margin: 0 .2em;
+	padding-inline: 1.5em;
+	margin: .2em 0 .2em .1em;
+	font-size: .8em;
+	color: #333333;
 }
-button.active {
+.button-viewtype.active {
 	background-color: #fefeee;
 }
+.button-group {
+	display: inline-block;
+	border: 0 solid #fefeee;
+	border-radius: .2em;
+	background-color: inherit;
+	padding-inline: .5em;
+	padding-block: .3em;
+	margin: .5em .2em .5em .1em;
+	color: #666666;
+}
+.button-group .button-viewtype {
+	margin: .2em 0;
+	padding-inline: .6em;
+}
+.button-label {
+	margin: 0 .3em 0 .3em;
+	font-family: sans-serif;
+	font-size: .8em;
+}
+#transposer:hover,
+#transposer:active
+ {
+	background-color: #fefeee;
+}
+.button-viewtype:hover {
+	cursor: pointer;
+}
+.button-viewtype.active:hover {
+	cursor:default; 
+}
 .year {
-	color:#666699;
+	color:#666666;
 }
 @media screen {
 	.ch {
@@ -75,7 +118,8 @@ button.active {
 
 @media only screen and (width <= 70em) {
 	body {
-		font-size: 32px/48px;
+		font-size: 1em;
+		line-height: 1.2;
 	  }
 	nav, main {
 		padding: 5px 0;

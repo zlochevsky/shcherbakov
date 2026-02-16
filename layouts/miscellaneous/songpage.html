@@ -2,7 +2,7 @@
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 <title>{{ .Title }} - текст, аккорды</title>
 <style>
@@ -39,11 +39,14 @@
 
         <div class="wrapper">
                     <div id="settings">
-                        <button id="text">текст</button>
-                        <button id="side">аккорды</button>
-                        <button id="transposer">траспонировать</button>
-                        <button id="source">исходник</button>
-                        <button id="above">< wip ></button>
+                        <button id="text" class="button-viewtype">текст</button>
+                        <div class="button-group">
+                            <span class="button-label">аккорды</span>
+                            <button id="side" class="button-viewtype">справа</button>
+                            <button id="above" class="button-viewtype">над строкой</button>
+                        </div>
+                        <button id="source" class="button-viewtype">исходник</button>
+                        <button id="transposer" class="button-viewtype">траспонировать</button>
                         <div class="transpose-wrapper"></div>
                     </div>
 {{- partial "song.html" .Params -}}
