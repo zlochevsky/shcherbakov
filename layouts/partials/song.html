@@ -54,7 +54,7 @@
                         {{- if and (gt (len $line) $pos) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}}{{/* если строка длиннее $pos и в ней найдены аккорды */}}
                             {{- $p1 := substr $line 0 $pos -}}{{/* формирует первую подстроку до $pos */}}
                             {{- $p2 := substr $line $pos -}}{{/* формирует вторую подстроку от $pos */}}
-                            {{- $p2 = replaceRE `([^-])>` "$1&gt;" $p2 -}}{{/* знак "->"  */}}
+                            {{- $p2 = replaceRE `->` "&#151;&gt;" $p2 -}}{{/* знак "->"  */}}
                             {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}
                             {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span>\n" | safeHTML) -}}
                             {{- $linesText = $linesText | append (print "<span class=\"txt\">" $p1 "</span>\n" | safeHTML) -}}

@@ -44,7 +44,7 @@ jobs:
           echo '{"directus":{"token":"${{ secrets.DIRECTUS_TOKEN }}"}}' > config/_default/params.json
 
       - name: Build
-        run: hugo --minify -d public
+        run: hugo -d public
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
