@@ -24,7 +24,7 @@ Main configuration file is hugo.json in the root directory. All the directories 
 
 - archetypes -- contains so called *archetypes* -- small template files, that configure Hugo's behaviour while creating new pages with no content yet;
 - content -- directory, where all the content files are placed by Hugo and to be placed by developer/editor. These are .md files in *markdown* format, which contain the html markup as well, with the main page content. Hugo converts them to the .html pages on the build stage. At the top of each .md file there is so called *front matter* -- set of page parameters, stored in JSON (or TOML/YAML) format;
-- prod -- (by default -- public) the directory, where Hugo places all the ready-to-upload site, built with all the static stuff.
+- public -- the directory, where Hugo places all the ready-to-upload site, built with all the static stuff.
 - workfiles -- contains files, used for creating current face and content: images, song catalogue table etc.
 
 # Installation
