@@ -4,8 +4,10 @@
 {{- $linesSide := slice -}}
 {{- $linesAbove := slice -}}
 {{- $linesHeader := slice -}}
-{{- $newLinesAfter := slice -}} 
+{{- $newLinesAfter := slice -}}
 {{- $tonality := "Hm" -}}
+{{- $stressLine := "" -}}
+{{- $hasStress := false -}}
 {{- with resources.Get $path -}}
     {{- $cont := .Content -}}
     {{- if and (isset $pageParams "tonality") (ne $pageParams.tonality "") -}}
@@ -55,16 +57,30 @@
                             {{- $p1 := substr $line 0 $pos -}}{{/* формирует первую подстроку до $pos */}}
                             {{- $p2 := substr $line $pos -}}{{/* формирует вторую подстроку от $pos */}}
                             {{- $p2 = replaceRE `->` "&#151;&gt;" $p2 -}}{{/* знак "->"  */}}
+                            {{- $stressPositions := "" -}}
+                            {{- if ne $stressLine "" -}}{{/* если в предыдущей строке были найдены ударения */}}
+                                {{- $positions := slice -}}
+                                {{- $chars := split $stressLine "" -}}
+                                {{- range $i, $c := $chars -}}
+                                    {{- if eq $c "," -}}
+                                        {{- $positions = $positions | append $i -}}
+                                    {{- end -}}
+                                {{- end -}}
+                                {{- $stressPositions = delimit $positions "," -}}
+                                {{- $stressLine = "" -}}{{/* обнуляем переменную после использования */}}
+                            {{- end -}}
+                            {{- $dataAttr := cond (ne $stressPositions "") (printf " data-positions=\"%s\"" $stressPositions) "" -}}
                             {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}
-                            {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span>\n" | safeHTML) -}}
+                            {{- $linesAbove = $linesAbove | append (printf "<span class=\"ch\"%s>%s</span><br>\n<span class=\"txt\">%s</span><br>\n" $dataAttr $p2 (strings.TrimRight " " $p1) | safeHTML) -}}
                             {{- $linesText = $linesText | append (print "<span class=\"txt\">" $p1 "</span>\n" | safeHTML) -}}
                         {{- else -}}
                             {{- if findRE `^[\s,]+$` $line -}}
+                                {{- $stressLine = $line -}}
+                                {{- $hasStress = true -}}
                                 {{- $linesSide = $linesSide | append (print "<span class=\"strss\">" (replaceRE ` +$` "" $line) "<br></span>\n" | safeHTML) -}}
-                                {{- $linesAbove = $linesAbove | append (print "<span class=\"strss\">" (replaceRE ` +$` "" $line) "</span>\n" | safeHTML) -}}
                             {{- else -}}
-                                {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span><br>\n" | safeHTML) -}}{{/* добавл строки в срез $newLines без trailing spaces, в .txt */}}
-                                {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>\n" | safeHTML) -}}
+                                {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span><br>\n" | safeHTML) -}}{{/* добавл строки в срез $newLines, в .txt */}}
+                                {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span><br>\n" | safeHTML) -}}
                                 {{- $linesText = $linesText | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>\n" | safeHTML) -}}
                             {{- end -}}
                         {{- end -}}
@@ -76,7 +92,7 @@
             {{- else -}}
                 {{- if  (le $k $pageParams.textFinishAtLine) -}}
                     {{- $linesSide = $linesSide | append "<br>\n" -}}
-                    {{- $linesAbove = $linesAbove | append "\n" -}}
+                    {{- $linesAbove = $linesAbove | append "<br>\n" -}}
                     {{- $linesText = $linesText | append "\n" -}}
                 {{- end -}}
             {{- end -}}
@@ -96,10 +112,10 @@
 <div class="view-container viewtype-text">
 {{- delimit $linesHeader "" | safeHTML -}}<pre>{{- delimit $linesText "" | safeHTML -}}</pre>
 </div>
-<div class="view-container viewtype-side  song" data-key="{{- $tonality -}}">
+<div class="view-container viewtype-side  song" data-key="{{- $tonality -}}" data-has-stress="{{- $hasStress -}}">
 {{- delimit $linesHeader "" | safeHTML -}}
 {{- delimit $linesSide "" | safeHTML -}}<pre>{{- delimit $newLinesAfter "" | safeHTML -}}</pre>
 </div>
-<div class="view-container viewtype-above">
-{{- delimit $linesHeader "" | safeHTML -}}<pre>{{- delimit $linesAbove "" | safeHTML -}}{{- delimit $newLinesAfter "" | safeHTML -}}</pre>
+<div class="view-container viewtype-above" data-key="{{- $tonality -}}">
+{{- delimit $linesHeader "" | safeHTML -}}{{- delimit $linesAbove "" | safeHTML -}}<pre>{{- delimit $newLinesAfter "" | safeHTML -}}</pre>
 </div>

@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     buttonSide = document.getElementById('side');
     buttonText = document.getElementById('text');
     buttonSource = document.getElementById('source');
+    buttonStress = document.getElementById('stress');
 
     const viewType = getViewType();
     manageTransposer(viewType);
@@ -40,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
     buttonSource.addEventListener('click', function() {
         setViewType('source');  // устанавливаем новый режим
     });
-
+    buttonStress.addEventListener('click', toggleStress);
+    
     console.log(getViewType());
 });
 function manageTransposer(viewType){
@@ -50,6 +52,19 @@ function manageTransposer(viewType){
         if (transposeWrapper) transposeWrapper.classList.remove('active');
     } else {
         if (transposeButton) transposeButton.style.display = "inline-block";
+    }
+}
+
+function manageStressButton(viewType){
+    // Показываем кнопку stress только для вида side И если в песне есть ударения
+    if (viewType === 'side') {
+        const sideContainer = document.querySelector('.viewtype-side');
+        const hasStress = sideContainer && sideContainer.dataset.hasStress === 'true';
+        if (buttonStress) {
+            buttonStress.style.display = hasStress ? "inline-block" : "none";
+        }
+    } else {
+        if (buttonStress) buttonStress.style.display = "none";
     }
 }
 
@@ -64,6 +79,7 @@ function applyViewType(viewType) {
     [buttonAbove, buttonSide, buttonSource, buttonText].forEach(btn => btn.classList.remove('active'));
 
     manageTransposer(viewType);
+    manageStressButton(viewType);
 
     const activeContainer = document.querySelector('.viewtype-' + viewType);
     if (activeContainer) {
@@ -75,9 +91,8 @@ function applyViewType(viewType) {
         'above': buttonAbove,
         'side': buttonSide,
         'source': buttonSource,
-        'text': buttonText
+        'text': buttonText,
     }[viewType];
-
     if (activeButton) {
         activeButton.classList.add('active');
     }
@@ -99,4 +114,11 @@ function setViewType(viewType){
     applyViewType(validatedViewType);
 }
 
+function toggleStress(){
+    document.querySelectorAll('.strss').forEach(el => {
+        const isHidden = window.getComputedStyle(el).visibility === 'hidden';
+        el.style.visibility = isHidden ? 'visible' : 'hidden';
+    });
+    document.querySelector('#stress').classList.toggle('active');
 
+}
