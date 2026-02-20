@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
     buttonSource = document.getElementById('source');
     buttonStress = document.getElementById('stress');
 
+    // Инициализируем транспозер ДО вызова функций, которые его используют
+    transposeButton = document.getElementById('transposer');
+    transposeWrapper = document.querySelector('.transpose-wrapper');
+
     const viewType = getViewType();
     manageTransposer(viewType);
     applyViewType(viewType);
-
-    // Обработчик для кнопки транспозера
-    transposeButton = document.getElementById('transposer');
-    transposeWrapper = document.querySelector('.transpose-wrapper');
     if (transposeButton && transposeWrapper) {
         transposeButton.addEventListener('click', function() {
             transposeWrapper.classList.toggle('active');
