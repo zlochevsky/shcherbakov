@@ -195,15 +195,22 @@ class ChordTransposer {
         // ВАЖНО: Всегда транспонируем от ИСХОДНОЙ тональности, а не от текущей!
         elements.forEach(element => {
             this.transposeElement(element, this.initialKey, toKey);
+            // Удаляем атрибут позиционирования, чтобы аккорды переформатировались
+            element.removeAttribute('data-positioned');
         });
 
         this.currentKey = toKey;
+
+        // Переформатируем аккорды для вида above
+        if (typeof positionChordsAbove === 'function') {
+            positionChordsAbove();
+        }
     }
 
     /**
      * Создать UI для выбора тональности
      */
-    createUI(container, initialKey) {
+    createUI(initialKey) {
         this.currentKey = initialKey;
 
         const wrapper = document.createElement('div');
@@ -235,8 +242,11 @@ class ChordTransposer {
                 // Выделяем текущий
                 link.classList.add('selected');
 
-                // Транспонируем
-                this.transposeAll(container.closest('.song'), keyName);
+                // Транспонируем все контейнеры .song на странице
+                const allSongs = document.querySelectorAll('.song[data-key]');
+                allSongs.forEach(song => {
+                    this.transposeAll(song, keyName);
+                });
             });
 
             wrapper.appendChild(link);
@@ -261,8 +271,11 @@ class ChordTransposer {
         // Найти контейнер для UI
         const uiContainer = songElement.closest('.wrapper')?.querySelector('.transpose-wrapper');
         if (uiContainer) {
-            const ui = this.createUI(songElement, initialKey);
-            uiContainer.appendChild(ui);
+            // Проверяем, не создан ли уже UI (чтобы избежать дублирования)
+            if (!uiContainer.querySelector('.transpose-keys')) {
+                const ui = this.createUI(initialKey);
+                uiContainer.appendChild(ui);
+            }
         }
     }
 }
