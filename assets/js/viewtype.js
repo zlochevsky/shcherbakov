@@ -86,6 +86,11 @@ function applyViewType(viewType) {
         activeContainer.classList.add('active');
     }
 
+    // Позиционируем аккорды для вида above
+    if (viewType === 'above') {
+        positionChordsAbove();
+    }
+
     // Добавляем active к текущей кнопке
     const activeButton = {
         'above': buttonAbove,
@@ -120,5 +125,88 @@ function toggleStress(){
         el.style.visibility = isHidden ? 'visible' : 'hidden';
     });
     document.querySelector('#stress').classList.toggle('active');
+}
 
+function positionChordsAbove() {
+    const viewtypeAbove = document.querySelector('.viewtype-above');
+    if (!viewtypeAbove) return;
+
+    // Находим все span.ch с data-positions в viewtype-above
+    const chordSpans = viewtypeAbove.querySelectorAll('.ch[data-positions]');
+
+    chordSpans.forEach(span => {
+        // Проверяем, не были ли уже позиционированы аккорды
+        if (span.hasAttribute('data-positioned')) return;
+
+        const positionsStr = span.getAttribute('data-positions');
+        if (!positionsStr || positionsStr.trim() === '') return;
+
+        // 1. Парсим позиции в массив чисел (1-based из Hugo)
+        const positions = positionsStr.split(',').map(p => parseInt(p.trim(), 10));
+
+        // 2. Разбираем аккорды по пробелам
+        const chordText = span.textContent.trim();
+        const chords = chordText.split(/\s+/).filter(c => c.length > 0);
+
+        // Проверяем совпадение количества
+        if (chords.length !== positions.length) {
+            span.classList.add('chord-position-error');
+            return;
+        }
+
+        // Массив для хранения информации об аккордах
+        const chordInfos = [];
+
+        chords.forEach((chord, index) => {
+            const originalPos = positions[index]; // 1-based
+            const chordLen = chord.length;
+
+            // 3. Вычисляем смещение для центрирования
+            const offset = Math.ceil(chordLen / 2);
+            let desiredPos = originalPos - offset + 2; // 1-based, сдвиг на 1 вправо
+
+            // 4. Проверка выхода за левую границу
+            if (index === 0) {
+                if (desiredPos < 1) {
+                    desiredPos = 1;
+                }
+            }
+
+            // 5. Проверка коллизии с предыдущим аккордом
+            if (index > 0) {
+                const prevChord = chordInfos[index - 1];
+                const prevEnd = prevChord.endPos;
+                if (desiredPos <= prevEnd + 1) {
+                    desiredPos = prevEnd + 2;
+                }
+            }
+
+            // 6. Вычисляем позицию конца аккорда
+            const endPos = desiredPos + chordLen - 1;
+
+            chordInfos.push({
+                chord: chord,
+                pos: desiredPos,
+                endPos: endPos
+            });
+        });
+
+        // 7. Формируем строку с правильными пробелами
+        let result = '';
+        let currentPos = 1; // 1-based
+
+        chordInfos.forEach(info => {
+            // Добавляем пробелы до позиции аккорда
+            const spacesNeeded = info.pos - currentPos;
+            if (spacesNeeded > 0) {
+                result += ' '.repeat(spacesNeeded);
+            }
+            result += info.chord;
+            currentPos = info.endPos + 1;
+        });
+
+        // Обновляем содержимое span и помечаем как позиционированный
+        span.textContent = result;
+        span.setAttribute('data-positioned', 'true');
+    });
 }
