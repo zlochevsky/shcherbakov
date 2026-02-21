@@ -7,7 +7,7 @@
         "id": "itakvope",
         "tonality": "Hm",
         "year": "2021",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "chordsStartAt": 60,
+        "textFinishAtLine": 55
     }
 }

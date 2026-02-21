@@ -7,7 +7,7 @@
         "id": "desyatpe",
         "tonality": "Am",
         "year": "2007",
-        "chordsStartAt": 0,
+        "chordsStartAt": 70,
         "textFinishAtLine": 46
     }
 }

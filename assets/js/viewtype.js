@@ -145,7 +145,7 @@ function positionChordsAbove() {
         const positions = positionsStr.split(',').map(p => parseInt(p.trim(), 10));
 
         // 2. Разбираем аккорды по пробелам
-        const chordText = span.textContent.trim();
+        const chordText = span.textContent.trim().replace(/[|0-9]/g, '');
         const chords = chordText.split(/\s+/).filter(c => c.length > 0);
 
         // Проверяем совпадение количества
