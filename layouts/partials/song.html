@@ -62,6 +62,12 @@
                         {{/* split line into text and chords at position */}}
                         {{- if and (gt (len $line) $pos) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}}
                             {{- $p1 := substr $line 0 $pos -}}{{/* text substring */}}
+                            {{- $p1 = replaceRE `(^|[\s\(—])"` "$1«" $p1 -}}{{/* opening quotes */}}
+                            {{- $p1 = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $p1 -}}{{/* closing quotes before space/punctuation */}}
+                            {{- $p1 = replaceRE `([!?;:\.…,])"` "$1»" $p1 -}}{{/* closing quotes after punctuation */}}
+                            {{- $p1 = replaceRE `^- ` "— " $p1 -}}{{/* dash at line start (direct speech) */}}
+                            {{- $p1 = replaceRE `, - ` ", — " $p1 -}}{{/* dash after comma */}}
+                            {{- $p1 = replaceRE ` - ` "&nbsp;— " $p1 -}}{{/* space-dash-space with non-breaking space */}}
                             {{- $p2 := substr $line $pos -}}{{/* chords substring */}}
                             {{- $stressPositions := "" -}}
                             {{- if ne $stressLine "" -}}
@@ -79,7 +85,7 @@
                             {{/* append text and chords to view arrays */}}
                             {{- $dataAttr := cond (ne $stressPositions "") (printf " data-positions=\"%s\"" $stressPositions) "" -}}
                             {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}
-                            {{/* more clean chords without stressed AboveView */}}
+                            {{/* non stressed AboveView: replace multiple spaces */}}
                             {{- $p2Clean := $p2 -}}
                             {{- if eq $hasStress false -}}                                
                                 {{- $p2Clean = strings.TrimLeft " " $p2 -}}
@@ -94,10 +100,17 @@
                                 {{- $hasStress = true -}}
                                 {{- $linesSide = $linesSide | append (print "<span class=\"strss\">" (replaceRE ` +$` "" $line) "<br></span>\n" | safeHTML) -}}
                             {{- else -}}
-                                {{/* text-only line: trim trailing spaces, append to all views */}}
-                                {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span><br>\n" | safeHTML) -}}
-                                {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span><br>\n" | safeHTML) -}}
-                                {{- $linesText = $linesText | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>\n" | safeHTML) -}}
+                                {{/* text-only line: trim trailing spaces, replace quotes then dashes, append to all views */}}
+                                {{- $lineClean := replaceRE ` +$` "" $line -}}
+                                {{- $lineClean = replaceRE `(^|[\s\(—])"` "$1«" $lineClean -}}{{/* opening quotes */}}
+                                {{- $lineClean = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $lineClean -}}{{/* closing quotes before space/punctuation */}}
+                                {{- $lineClean = replaceRE `([!?;:\.…,])"` "$1»" $lineClean -}}{{/* closing quotes after punctuation */}}
+                                {{- $lineClean = replaceRE `^- ` "— " $lineClean -}}{{/* dash at line start */}}
+                                {{- $lineClean = replaceRE `, - ` ", — " $lineClean -}}{{/* dash after comma */}}
+                                {{- $lineClean = replaceRE ` - ` "&nbsp;— " $lineClean -}}
+                                {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
+                                {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
+                                {{- $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) -}}
                             {{- end -}}
                         {{- end -}}
                     {{- else -}}
@@ -107,10 +120,17 @@
                             {{- $linesSide = $linesSide | append (print "<span class=\"ch\">" $line "</span><br>\n" | safeHTML) -}}
                             {{- $linesAbove = $linesAbove | append (print "<span class=\"ch\">" $line "</span><br>\n" | safeHTML) -}}
                         {{- else -}}
-                            {{/* text line */}}
-                            {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span><br>\n" | safeHTML) -}}
-                            {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span><br>\n" | safeHTML) -}}
-                            {{- $linesText = $linesText | append (print "<span class=\"txt\">" (replaceRE ` +$` "" $line) "</span>\n" | safeHTML) -}}
+                            {{/* text line: trim trailing spaces, replace quotes then dashes */}}
+                            {{- $lineClean := replaceRE ` +$` "" $line -}}
+                            {{- $lineClean = replaceRE `(^|[\s\(—])"` "$1«" $lineClean -}}{{/* opening quotes */}}
+                            {{- $lineClean = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $lineClean -}}{{/* closing quotes before space/punctuation */}}
+                            {{- $lineClean = replaceRE `([!?;:\.…,])"` "$1»" $lineClean -}}{{/* closing quotes after punctuation */}}
+                            {{- $lineClean = replaceRE `^- ` "— " $lineClean -}}{{/* dash at line start */}}
+                            {{- $lineClean = replaceRE `, - ` ", — " $lineClean -}}{{/* dash after comma */}}
+                            {{- $lineClean = replaceRE ` - ` "&nbsp;— " $lineClean -}}
+                            {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
+                            {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
+                            {{- $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) -}}
                         {{- end -}}
                     {{- end -}}
                 {{- end -}}
