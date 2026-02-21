@@ -79,10 +79,16 @@
                             {{/* append text and chords to view arrays */}}
                             {{- $dataAttr := cond (ne $stressPositions "") (printf " data-positions=\"%s\"" $stressPositions) "" -}}
                             {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}
-                            {{- $linesAbove = $linesAbove | append (printf "<span class=\"ch\"%s>%s</span><br>\n<span class=\"txt\">%s</span><br>\n" $dataAttr (cond (not $hasStress) (strings.TrimLeft " " $p2) $p2) (strings.TrimRight " " $p1) | safeHTML) -}}
+                            {{/* more clean chords without stressed AboveView */}}
+                            {{- $p2Clean := $p2 -}}
+                            {{- if eq $hasStress false -}}                                
+                                {{- $p2Clean = strings.TrimLeft " " $p2 -}}
+                                {{- $p2Clean = replaceRE `\s+` " " $p2Clean -}}
+                            {{- end -}}
+                            {{- $linesAbove = $linesAbove | append (printf "<span class=\"ch\"%s>%s</span><br>\n<span class=\"txt\">%s</span><br>\n" $dataAttr $p2Clean (strings.TrimRight " " $p1) | safeHTML) -}}
                             {{- $linesText = $linesText | append (print "<span class=\"txt\">" $p1 "</span>\n" | safeHTML) -}}
                         {{- else -}}
-                            {{- if findRE `^[\s,\|0-9]+$` $line -}}
+                            {{- if and (findRE `^[\s,\|0-9]+$` $line) (findRE `,` $line) (not (findRE `\d{4}` $line)) -}}
                                 {{/* save stress line for next iteration, add to side view */}}
                                 {{- $stressLine = $line -}}
                                 {{- $hasStress = true -}}
