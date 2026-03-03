@@ -8,10 +8,11 @@ Renders a menu for the given menu ID.
 
 {{- $page := .page }}
 {{- $menuID := .menuID }}
+{{- $navClass := default "" .navClass }}
 
 
 {{- with index site.Menus $menuID }}
-    <nav>
+    <nav class="{{ $navClass }}">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </nav>
 {{- end }}

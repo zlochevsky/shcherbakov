@@ -27,7 +27,50 @@ a:link.announce {
 }
 .datum {color: red;}
 
+#menu-toggle {
+        display: none;
+}
+@media only screen and (max-width: 70em) {
+        .burger {
+                cursor: pointer;
+                display: inline-block;
+                background-color: #ddddcc;
+                box-sizing: content-box;
+                padding: .3em;
+        }
 
+        .top-burger {
+                width: 32px;
+                height: 4px;
+                border: 1px solid black;
+                border-bottom: none; /* скрываем нижнюю */
+        }
+
+        .middle-burger {
+                width: 30px;
+                height: 1px;
+                background: black;
+                margin: .7em 3px; /* вертикальные отступы */
+        }
+
+        .bottom-burger {
+                width: 32px;
+                height: 4px;
+                border: 1px solid black;
+                border-top: none; /* скрываем верхнюю */
+        }
+        .burger-wrapper {
+                border: 1px solid white;
+                padding: 1.5em;
+        }
+        nav.top-menu {
+                display: none;
+        }
+        
+        #menu-toggle:checked~nav.top-menu {
+                display: block;
+        }
+}
 
 main,nav,header,footer {
         width: 100%;
@@ -107,8 +150,15 @@ nav > div, main > div.wrapper > div {
     <h2>(неофициальная страница)</h2>
     <ul class="announce">
       <li>Ближайший концерт Михаила Щербакова в Москве состоится в среду, 8 января в <a href="https://gnezdogluharya.ru/concerts/mikhail-scherbakov-8-1-2025-5923">Гнезде Глухаря</a></li>
-    </ul>
-    <nav>
+    </ul><input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="burger">
+  <div class="burger-wrapper">
+  <div class="top-burger"></div>
+  <div class="middle-burger"></div>
+  <div class="bottom-burger"></div>
+  </div>
+</label>
+    <nav class="top-menu">
     <div>
       <div class="bordered">
         <a href="/shcherbakov/bio.html">О Михаиле Щербакове</a>
@@ -161,7 +211,7 @@ nav > div, main > div.wrapper > div {
   </main>
   <footer>
     
-    <nav>
+    <nav class="bottom-menu">
     <div>
       <div class="bordered">
         <a>Картинки</a>

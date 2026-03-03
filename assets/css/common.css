@@ -19,7 +19,50 @@ a:link.announce {
 }
 .datum {color: red;}
 
+#menu-toggle {
+        display: none;
+}
+@media only screen and (max-width: 70em) {
+        .burger {
+                cursor: pointer;
+                display: inline-block;
+                background-color: #ddddcc;
+                box-sizing: content-box;
+                padding: .3em;
+        }
 
+        .top-burger {
+                width: 32px;
+                height: 4px;
+                border: 1px solid black;
+                border-bottom: none; /* скрываем нижнюю */
+        }
+
+        .middle-burger {
+                width: 30px;
+                height: 1px;
+                background: black;
+                margin: .7em 3px; /* вертикальные отступы */
+        }
+
+        .bottom-burger {
+                width: 32px;
+                height: 4px;
+                border: 1px solid black;
+                border-top: none; /* скрываем верхнюю */
+        }
+        .burger-wrapper {
+                border: 1px solid white;
+                padding: 1.5em;
+        }
+        nav.top-menu {
+                display: none;
+        }
+        
+        #menu-toggle:checked~nav.top-menu {
+                display: block;
+        }
+}
 
 main,nav,header,footer {
         width: 100%;
