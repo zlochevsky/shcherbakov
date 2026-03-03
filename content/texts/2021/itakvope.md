@@ -5,9 +5,9 @@
     "layout": "songpage",
     "params": {
         "id": "itakvope",
-        "tonality": "Hm",
+        "tonality": "Em",
         "year": "2021",
         "chordsStartAt": 60,
-        "textFinishAtLine": 55
+        "textFinishAtLine": 66
     }
 }
