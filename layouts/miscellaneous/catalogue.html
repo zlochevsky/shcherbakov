@@ -20,7 +20,8 @@
 {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
 {{ with .Params.subtitle }}<h2>{{- . -}}</h2>{{ end -}}
 </header>
-{{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" .) }}
+{{- partial "burger.html" }}
+{{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" . "navClass" "top-menu") }}
 <main>
 <div>
         <div class="wrapper">
@@ -89,7 +90,6 @@
 		{{- else -}}
 			{{- .incipit -}}
 		{{- end }}">
-	<!-- <a href="htmtexts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>-->
 	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>
 	</span>
 	{{ if .name -}}
