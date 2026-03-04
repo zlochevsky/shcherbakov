@@ -1,0 +1,23 @@
+{{ $url := printf "%s%s?%s&%s&%s"
+		site.Params.directus.url
+		"items/perfs/"
+		site.Params.directus.token
+		"limit=-1"
+		"fields=id,events_id,number,works_id.id,works_id.name,works_id.incipit,is_premiere,with_mls,plays_mls_keyboards,mls_instrument,sings_with_minus,sings_incomplete,sings_mls_only,is_first,is_last,is_bis,is_first_after_break,is_poem,take,note,performers,is_ensemble,has_mls_voice,plays_mls_guitar,mks_no_voice,is_pseudo_duet,has_synth"
+		}}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}

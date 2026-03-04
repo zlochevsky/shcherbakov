@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<title>{{ with .Params.name }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
+<style>
+	{{- with resources.Get "css/common.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+    {{- with resources.Get "css/concerts.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+</style>
+{{ partialCached "head/js.html" . }}
+</head>
+<body>
+<header>
+{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+{{ with .Params.subtitle }}<h2>{{- . -}}</h2>{{ end -}}
+</header>
+{{- partial "burger.html" }}
+{{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" . "navClass" "top-menu") }}
+<main>
+<div>
+    <div class="wrapper">
+        <div>
+            {{ $concerts := partial "directus-concerts.html" }}
+            {{ $perfs := partial "directus-perfs.html" }}
+            {{/* Строим dict eventId → [perfs] */}}
+            {{- $perfsByEvent := dict -}}
+            {{- range $perfs.data -}}
+                {{- $existing := index $perfsByEvent .events_id | default slice -}}
+                {{- $perfsByEvent = merge $perfsByEvent (dict .events_id ($existing | append .)) -}}
+            {{- end -}}
+
+            {{/* Выводим концерты с исполнениями */}}
+            {{- range $concerts.data -}}
+            <h2>{{ with .name }}{{ . }}{{ else }}Концерт {{ .date }}. {{ .place }}{{ end }}</h2>
+            <p class="concert-details">
+                {{ with .town }}{{ . }}. {{ end }}
+                {{ with .country }}{{ . }}. {{ end }}
+            </p>
+                <ol>{{- range index $perfsByEvent .id -}}
+                    {{- $perf := . -}}
+                    <li class="songname">{{- with .works_id.name -}}{{ . }}&ensp;<span class="song-incipit">(&#171;{{ $perf.works_id.incipit }}&#187;)</span>
+                    {{- else -}}&#171;{{ $perf.works_id.incipit }}&#187;</li>{{- end -}}
+                    {{/* поля исполнения: .works_id и т.д. */}}
+                {{- end -}}</ol>
+            {{- end -}}
+        </div>
+    </div>
+</div>
+</main>
+</body>
+</html>

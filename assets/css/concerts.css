@@ -1,0 +1,101 @@
+.songname::first-letter {
+  text-transform: uppercase;
+}
+.song-incipit {
+    font-style: italic; color: #999999;
+}
+.concert-details {
+    font-size: .8em; margin: 0;
+}
+h2 {
+    margin-bottom: .2em;
+}
+main > div {
+        width: 100%;
+        margin: 0;
+}
+
+main,nav {
+        background-color: #ddddcc;
+}
+nav > div, main > div > div.wrapper > div {
+        border-width: 1px;
+        border-color: #fefeee;
+        border-style: solid;
+        padding: 5px;
+}
+nav > div {
+        text-align: center;
+        }
+div.wrapper ul {
+        display: block;
+        margin-block-start: 1.5em;
+        margin-block-end: 1.5em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        font: normal 1em/1.5em serif;
+}
+
+@media only screen and (width <= 70em) {
+
+      body {
+                font-size: 1em;
+                line-height: 1.2;
+      }
+        nav, main {
+                padding: 5px 0;
+        }
+        nav > div, main > div > div.wrapper > div {
+                display: block;
+                padding: 2em;
+                margin: 1em;
+        }
+        ul.mob-link-block > li > a {
+                display:block;
+                border: 1px solid #fefeee;
+                margin-block-start: .5em;
+                margin-block-end: .5em;
+                padding: 1em 2em;
+        }
+        div.wrapper ul, ul.mob-link-block {
+                list-style-type: none;
+                padding-inline-start: 0;
+        }
+        .ch, .txt {
+                display: flow;
+        }
+
+}
+@media only screen and (width > 70em) {
+        body {
+                font-size: 16px;
+        }
+
+        .centered {
+
+                margin: 0 auto;
+        }
+        .centertext {
+                text-align: center;
+        }
+        nav, main > div {
+                display: table;
+                border-spacing: 5px;
+        }
+        nav > div, main > div > div.wrapper > div {
+                display: table-cell;
+                vertical-align: middle;
+        }
+        main > div > div.wrapper {
+                display: table-row;
+        }
+        div.wrapper ul {
+                list-style-type: square;
+                font: normal 1em/1.5em serif;
+
+        }
+        .ch, .txt {
+                display: inline;
+        }
+}
