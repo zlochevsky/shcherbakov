@@ -7,7 +7,7 @@
         "id": "nochnoj",
         "tonality": "G#m",
         "year": "1998",
-        "chordsStartAt": 59,
-        "textFinishAtLine": 46
+        "chordsStartAt": 57,
+        "textFinishAtLine": 47
     }
 }
