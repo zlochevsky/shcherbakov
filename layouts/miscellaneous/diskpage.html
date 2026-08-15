@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+
+<style>
+{{- with resources.Get "css/disks.css" }}
+	{{ .Content | safeCSS -}}
+{{ end }}
+a:link {
+	color: #006600;
+}
+a:visited {
+	color: #002200;
+}
+</style>
+
+</head>
+<body>
+{{- $set := dict -}}
+{{- $tracks := slice -}}
+{{- with .Params.id }}
+	{{- $setId := . -}}
+	{{- $sets := partial "directus-sets.html" -}}
+	{{- range $sets.data -}}
+		{{- if eq .id $setId }}{{ $set = . }}{{ end -}}
+	{{- end -}}
+
+	{{- $songs := partial "directus.html" -}}
+	{{- $worksById := dict -}}
+	{{- range $songs.data -}}
+		{{- $name := "" -}}
+		{{- if .name -}}
+			{{- if .fname -}}
+				{{- $name = .fname | strings.FirstUpper -}}
+			{{- else -}}
+				{{- $name = .name | strings.FirstUpper -}}
+			{{- end -}}
+		{{- else -}}
+			{{- $name = .fincipit -}}
+		{{- end -}}
+		{{- $editOrDate := .edit -}}
+		{{- if not $editOrDate -}}{{ $editOrDate = .date }}{{- end -}}
+		{{- $href := printf "texts/%v/%v.html" $editOrDate .id -}}
+		{{- $worksById = merge $worksById (dict .id (dict "name" $name "href" $href)) -}}
+	{{- end -}}
+
+	{{- $albumPerfs := partial "directus-albums.html" -}}
+	{{- $trackEntries := slice -}}
+	{{- range $albumPerfs.data -}}
+		{{- $entry := . -}}
+		{{- with .perfs_id -}}
+			{{- $workId := .works_id -}}
+			{{- with $entry.sets_id -}}
+				{{- if eq .id $setId -}}
+					{{- $trackEntries = $trackEntries | append (dict "number" $entry.number "workId" $workId) -}}
+				{{- end -}}
+			{{- end -}}
+		{{- end -}}
+	{{- end -}}
+	{{- $sorted := sort $trackEntries "number" -}}
+	{{- range $sorted -}}
+		{{- with index $worksById .workId -}}
+			{{- $tracks = $tracks | append (dict "name" .name "href" .href) -}}
+		{{- end -}}
+	{{- end -}}
+{{- end }}
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Disks/index.html" | relURL }}">Дискография</a>]</li>
+</ul>
+<header>
+<h1>{{ .Title }}</h1>
+{{- with or $set.year .Params.year }}<h4>{{ . }}</h4>{{ end }}
+</header>
+<main>
+<div class="wrapper diskpage">
+
+{{- $image := $set.album_img -}}
+{{- if not $image }}{{ $image = .Params.image }}{{ end -}}
+{{- with $image }}
+<p class="centertext"><img class="cover" src="{{ printf "Images/%s" . | relURL }}" alt="{{ $.Title }}"></p>
+{{ end }}
+
+{{- if $tracks }}
+<h3>Список песен</h3>
+<ol class="tracklist">
+{{- range $tracks }}
+	<li><a href="{{ .href | relURL }}">{{ .name }}</a></li>
+{{- end }}
+</ol>
+{{- end }}
+
+{{ .Content }}
+
+{{- with $set.comment }}
+<pre class="credits">{{ . }}</pre>
+{{ end }}
+
+</div>
+</main>
+<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Disks/index.html" | relURL }}">Дискография</a>]</li>
+</ul>
+</body>
+</html>

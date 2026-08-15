@@ -6,7 +6,7 @@
     "params": {
         "id": "deja",
         "tonality": "Em",
-        "year": "1998",
+        "year": "2000",
         "chordsStartAt": 47,
         "textFinishAtLine": 70
     }

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+
+<style>
+{{- with resources.Get "css/disks.css" }}
+	{{ .Content | safeCSS -}}
+{{ end }}
+a:link {
+	color: #006600;
+}
+a:visited {
+	color: #002200;
+}
+</style>
+
+</head>
+<body>
+{{- $book := dict -}}
+{{- $tracks := slice -}}
+{{- with .Params.id }}
+	{{- $bookId := . -}}
+	{{- $books := partial "directus-books-list.html" -}}
+	{{- range $books.data -}}
+		{{- if eq .id $bookId }}{{ $book = . }}{{ end -}}
+	{{- end -}}
+
+	{{- $songs := partial "directus.html" -}}
+	{{- $worksById := dict -}}
+	{{- range $songs.data -}}
+		{{- $name := "" -}}
+		{{- if .name -}}
+			{{- if .fname -}}
+				{{- $name = .fname | strings.FirstUpper -}}
+			{{- else -}}
+				{{- $name = .name | strings.FirstUpper -}}
+			{{- end -}}
+		{{- else -}}
+			{{- $name = .fincipit -}}
+		{{- end -}}
+		{{- $editOrDate := .edit -}}
+		{{- if not $editOrDate -}}{{ $editOrDate = .date }}{{- end -}}
+		{{- $href := printf "texts/%v/%v.html" $editOrDate .id -}}
+		{{- $worksById = merge $worksById (dict .id (dict "name" $name "href" $href)) -}}
+	{{- end -}}
+
+	{{- $bookEntries := partial "directus-books.html" -}}
+	{{- $trackEntries := slice -}}
+	{{- range $bookEntries.data -}}
+		{{- $entry := . -}}
+		{{- with .books_id -}}
+			{{- if eq .id $bookId -}}
+				{{- $trackEntries = $trackEntries | append (dict "page" $entry.page "workId" $entry.works_id) -}}
+			{{- end -}}
+		{{- end -}}
+	{{- end -}}
+	{{- $sorted := sort $trackEntries "page" -}}
+	{{- range $sorted -}}
+		{{- $trackEntry := . -}}
+		{{- with index $worksById .workId -}}
+			{{- $tracks = $tracks | append (dict "name" .name "href" .href "page" $trackEntry.page) -}}
+		{{- end -}}
+	{{- end -}}
+{{- end }}
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Books/index.html" | relURL }}">Библиография</a>]</li>
+</ul>
+<header>
+<h1>{{ .Title }}</h1>
+{{- with $book.year }}<h4>{{ . }}</h4>{{ end }}
+</header>
+<main>
+<div class="wrapper diskpage">
+
+<p class="centertext"><img class="cover" src="{{ printf "Images/bkp/%s.jpg" .Params.id | relURL }}" alt="{{ .Title }}"></p>
+
+{{- if $tracks }}
+<h3>Список песен</h3>
+<ol class="tracklist">
+{{- range $tracks }}
+	<li><a href="{{ .href | relURL }}">{{ .name }}</a> <span class="disk-year">с.&#8239;{{ .page }}</span></li>
+{{- end }}
+</ol>
+{{- end }}
+
+{{ .Content }}
+
+{{- with $book.annotation }}
+<p>{{ . }}</p>
+{{ end }}
+
+<pre class="credits">{{ with $book.fullname }}{{ . }}
+{{ end -}}
+{{- with $book.publisher }}{{ . }}, {{ $book.year }}
+{{ end -}}
+{{- with $book.pages }}{{ . }} с.
+{{ end -}}
+{{- with $book.isbn }}ISBN {{ . }}
+{{ end -}}
+{{- with $book.bibliography }}{{ . }}
+{{ end -}}</pre>
+
+{{- with .Params.buyUrl }}
+<p class="centertext"><a href="{{ . }}">Страница издания на сайте издательства</a></p>
+{{ end }}
+
+</div>
+</main>
+<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Books/index.html" | relURL }}">Библиография</a>]</li>
+</ul>
+</body>
+</html>

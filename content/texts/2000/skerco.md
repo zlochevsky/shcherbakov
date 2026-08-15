@@ -6,7 +6,7 @@
     "params": {
         "id": "skerco",
         "tonality": "Am",
-        "year": "1998",
+        "year": "2000",
         "chordsStartAt": 57,
         "textFinishAtLine": 46
     }

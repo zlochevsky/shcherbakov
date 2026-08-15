@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+
+<style>
+{{- with resources.Get "css/disks.css" }}
+	{{ .Content | safeCSS -}}
+{{ end }}
+a:link {
+	color: #006600;
+}
+a:visited {
+	color: #002200;
+}
+</style>
+
+</head>
+<body>
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Books/index.html" | relURL }}">Библиография</a>]</li>
+	<li>[<a href="{{ "catalogue.html" | relURL }}">Каталог песен</a>]</li>
+</ul>
+<header>
+<h1>{{ .Title }}</h1>
+</header>
+<main>
+<div class="wrapper">
+{{ .Content }}
+
+{{ $sets := partial "directus-sets.html" }}
+<h2>Студийные записи</h2>
+<ul class="disk-gallery">
+{{- range $sets.data }}
+	{{- $disk := . }}
+	<li>
+		<a href="{{ printf "Disks/%s.html" .id | relURL }}">
+		{{- with .album_img }}<img src="{{ printf "Images/%s" . | relURL }}" alt="{{ $disk.title }}">{{ end }}
+		<span class="disk-title">{{ .title }}</span>
+		{{- with .year }}<span class="disk-year">{{ . }}</span>{{ end }}
+		</a>
+	</li>
+{{- end }}
+</ul>
+
+<h2>Концертные записи</h2>
+<ul class="disk-gallery">
+{{- range where site.RegularPages "Params.concert" true }}
+	{{- $page := . }}
+	<li>
+		<a href="{{ .RelPermalink }}">
+		{{- with .Params.image }}<img src="{{ printf "Images/%s" . | relURL }}" alt="{{ $page.Title }}">{{ end }}
+		<span class="disk-title">{{ .Title }}</span>
+		{{- with .Params.year }}<span class="disk-year">{{ . }}</span>{{ end }}
+		</a>
+	</li>
+{{- end }}
+</ul>
+
+</div>
+</main>
+<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Books/index.html" | relURL }}">Библиография</a>]</li>
+	<li>[<a href="{{ "catalogue.html" | relURL }}">Каталог песен</a>]</li>
+</ul>
+</body>
+</html>

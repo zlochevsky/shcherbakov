@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+
+<style>
+{{- with resources.Get "css/disks.css" }}
+	{{ .Content | safeCSS -}}
+{{ end }}
+a:link {
+	color: #006600;
+}
+a:visited {
+	color: #002200;
+}
+</style>
+
+</head>
+<body>
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Disks/index.html" | relURL }}">Дискография</a>]</li>
+	<li>[<a href="{{ "catalogue.html" | relURL }}">Каталог песен</a>]</li>
+</ul>
+<header>
+<h1>{{ .Title }}</h1>
+</header>
+<main>
+<div class="wrapper">
+{{ .Content }}
+
+{{ $books := partial "directus-books-list.html" }}
+<ul class="disk-gallery">
+{{- range $books.data }}
+	{{- $book := . }}
+	<li>
+		<a href="{{ printf "Books/%s.html" .id | relURL }}">
+		<img src="{{ printf "Images/bkp/%s.jpg" .id | relURL }}" alt="{{ $book.name }}">
+		<span class="disk-title">{{ .name }}</span>
+		{{- with .year }}<span class="disk-year">{{ . }}</span>{{ end }}
+		</a>
+	</li>
+{{- end }}
+</ul>
+
+</div>
+</main>
+<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Disks/index.html" | relURL }}">Дискография</a>]</li>
+	<li>[<a href="{{ "catalogue.html" | relURL }}">Каталог песен</a>]</li>
+</ul>
+</body>
+</html>

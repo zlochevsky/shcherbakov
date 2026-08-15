@@ -80,7 +80,7 @@ nav > div, main > div > div.wrapper > div {
 nav > div {
         text-align: center;
         }
-div.wrapper ul {
+div.wrapper ul, div.wrapper ol {
         display: block;
         margin-block-start: 1.5em;
         margin-block-end: 1.5em;
@@ -101,15 +101,24 @@ div.wrapper ul {
 	margin-left: .5em;
 }
 
-.albums {
+.albums, .books {
 	display: inline-block;
 	margin-left: .5em;
+}
+
+.books {
+	font-size: .8em;
+	color: #667099;
 }
 
 /* Balloon tooltip styles */
 [data-balloon] {
 	position: relative;
 	cursor: help;
+}
+
+a [data-balloon] {
+	cursor: pointer;
 }
 
 [data-balloon]:before,
@@ -184,7 +193,7 @@ div.wrapper ul {
         display: none !important ;
 }
 
-#artlist li {
+#artlist li, #album-matches li {
         padding: .25em ;
 	text-align: left;
 }
@@ -226,6 +235,9 @@ div.wrapper ul {
         div.wrapper ul, ul.mob-link-block {
                 list-style-type: none;
                 padding-inline-start: 0;
+        }
+        div.wrapper ol {
+                padding-inline-start: 1.5em;
         }
         .ch, .txt {
                 display: flow;

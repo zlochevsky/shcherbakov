@@ -37,7 +37,10 @@
                         </div>
 {{ $songs := partial "directus.html" }}
 {{ $albumPerfs := partial "directus-albums.html" }}
+{{ $bookEntries := partial "directus-books.html" }}
 {{- $albumsByWork := dict -}}
+{{- $albumTitles := dict -}}
+{{- $albumTrackEntries := dict -}}
 {{- range $albumPerfs.data -}}
 	{{- $entry := . -}}
 	{{- with .perfs_id -}}
@@ -47,10 +50,24 @@
 				{{- $existing := index $albumsByWork $workId | default slice -}}
 				{{- $albumInfo := dict "id" .id "title" .title -}}
 				{{- $albumsByWork = merge $albumsByWork (dict $workId ($existing | append $albumInfo)) -}}
+				{{- $albumTitles = merge $albumTitles (dict .id .title) -}}
+				{{- $existingTracks := index $albumTrackEntries .id | default slice -}}
+				{{- $trackEntry := dict "number" $entry.number "workId" $workId -}}
+				{{- $albumTrackEntries = merge $albumTrackEntries (dict .id ($existingTracks | append $trackEntry)) -}}
 			{{- end -}}
 		{{- end -}}
 	{{- end -}}
 {{- end -}}
+{{- $booksByWork := dict -}}
+{{- range $bookEntries.data -}}
+	{{- $entry := . -}}
+	{{- with .books_id -}}
+		{{- $existing := index $booksByWork $entry.works_id | default slice -}}
+		{{- $bookInfo := dict "id" .id "name" .name "page" $entry.page -}}
+		{{- $booksByWork = merge $booksByWork (dict $entry.works_id ($existing | append $bookInfo)) -}}
+	{{- end -}}
+{{- end -}}
+{{- $worksById := dict -}}
 <ul id="artlist">
 {{- range $songs.data -}}
 {{- if not .hidden -}}
@@ -80,8 +97,10 @@
 	{{- $name = .fincipit }}
 {{- end -}}
 
+{{- $worksById = merge $worksById (dict .id true) -}}
 
 <li class="opus-entry"
+	data-id="{{ .id }}"
 	data-sort="{{ .sort }}"
 	data-datum="{{- $datesrc -}}{{ with .edit }} {{ . }}{{ end }}"
 	data-begin="{{ .fincipit }}"
@@ -95,7 +114,7 @@
 	{{ if .name -}}
 		(<span id="begin">{{ .fincipit }}</a></span>)
 	{{- end -}}
-	{{- if $date }}	<span class="year">{{ $date -}}{{- if .edit -}}, {{ .edit -}}</span>{{- end -}}
+	{{- if $date }}	<span class="year">{{ $date -}}{{- if .edit -}}, {{ .edit -}}{{- end -}}</span>
 	{{- end -}}
 	{{- $workAlbums := index $albumsByWork .id -}}
 	{{- if $workAlbums -}}
@@ -103,7 +122,11 @@
 		{{- range $workAlbums -}}
 			{{- $uniqueAlbums = merge $uniqueAlbums (dict .id .title) -}}
 		{{- end -}}
-		<span class="albums">{{- range $id, $title := $uniqueAlbums }} <span class="{{ $id }}" data-balloon="{{ $title }}" data-balloon-pos="up"></span>{{- end -}}</span>
+		<span class="albums">{{- range $id, $title := $uniqueAlbums }} <a href="{{ printf "Disks/%s.html" $id | relURL }}"><span class="{{ $id }}" data-balloon="{{ $title }}" data-balloon-pos="up"></span></a>{{- end -}}</span>
+	{{- end -}}
+	{{- $workBooks := index $booksByWork .id -}}
+	{{- if $workBooks -}}
+		<span class="books">{{- range $workBooks }} <a href="{{ printf "Books/%s.html" .id | relURL }}"><span class="{{ .id }}" data-balloon="{{ .name }}" data-balloon-pos="up"></span></a> с.&#8239;{{ .page }}{{- end -}}</span>
 	{{- end -}}
 	</a></li>
 
@@ -111,6 +134,21 @@
 {{- end -}}
 {{- end -}}
 			</ul>
+{{- $albumsData := slice -}}
+{{- range $albumId, $tracks := $albumTrackEntries -}}
+	{{- $sorted := sort $tracks "number" -}}
+	{{- $trackIds := slice -}}
+	{{- range $sorted -}}
+		{{- if index $worksById .workId -}}
+			{{- $trackIds = $trackIds | append .workId -}}
+		{{- end -}}
+	{{- end -}}
+	{{- if $trackIds -}}
+		{{- $albumsData = $albumsData | append (dict "title" (index $albumTitles $albumId) "tracks" $trackIds) -}}
+	{{- end -}}
+{{- end -}}
+			<div id="album-matches"></div>
+			<script type="application/json" id="albums-data">{{ $albumsData | jsonify | safeJS }}</script>
                 </div>
         </div>
 </div>
@@ -130,27 +168,63 @@ document.addEventListener("DOMContentLoaded", () => {
   const alphabButton = document.getElementById("alphabetical");
   const alphanButton = document.getElementById("alphabetname");
   const chronoButton = document.getElementById("chronological");
+  const albumMatches = document.getElementById("album-matches");
+  const albumsDataEl = document.getElementById("albums-data");
+  const albumsData = albumsDataEl ? JSON.parse(albumsDataEl.textContent || "[]") : [];
+  const songsById = new Map();
+  songs.forEach(opus => songsById.set(opus.dataset.id, opus));
 
   var nameAndBeginSwapped = false;
   var nameSorted = true;
   var beginSorted = false;
   var dateSorted = false;
 
+  function normalize(text) {
+    return text.toLowerCase().trim().normalize('NFD').replace(/\p{Diacritic}/gu, "").replace(/"ё"/gu, "е");
+  }
+
+  function renderAlbumMatches(searchTerms) {
+    albumMatches.innerHTML = "";
+    albumsData.forEach(album => {
+      const title = normalize(album.title || "");
+      if (!searchTerms.every(term => title.includes(term))) return;
+      const section = document.createElement("div");
+      const heading = document.createElement("h3");
+      heading.textContent = `Найденные песни с диска ${album.title}`;
+      section.appendChild(heading);
+      const list = document.createElement("ol");
+      album.tracks.forEach(trackId => {
+        const opus = songsById.get(trackId);
+        if (!opus) return;
+        const clone = opus.cloneNode(true);
+        clone.hidden = false;
+        clone.removeAttribute("hidden");
+        list.appendChild(clone);
+      });
+      section.appendChild(list);
+      albumMatches.appendChild(section);
+    });
+  }
+
   search.addEventListener("input", () => {
     // grab search input value
-    const searchText = search.value.toLowerCase().trim().normalize('NFD').replace(/\p{Diacritic}/gu, "").replace(/"ё"/gu, "е");
+    const searchText = normalize(search.value);
     const searchTerms = searchText.split(" ");
     const hasFilter = searchText.length > 0;
 //   artlist.classList.toggle("list-searched", hasFilter);
     // for each opus hide all but matched
     songs.forEach(function(opus) {
-            const searchString = `${opus.textContent} ${opus.dataset.name} ${opus.dataset.begin} ${opus.dataset.datum} ${opus.dataset.disk} ${opus.dataset.printed}`
-            .toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "").replace(/"ё"/gu, "е");
-            console.log(searchString);
+            const searchString = normalize(`${opus.textContent} ${opus.dataset.name} ${opus.dataset.begin} ${opus.dataset.datum} ${opus.dataset.disk} ${opus.dataset.printed}`);
       const isMatch = searchTerms.every(term => searchString.includes(term));
       opus.hidden = !isMatch;
 //      opus.classList.toggle("matched-opus", hasFilter && isMatch);
     });
+
+    if (hasFilter) {
+      renderAlbumMatches(searchTerms);
+    } else {
+      albumMatches.innerHTML = "";
+    }
   });
 
   clearSearch.addEventListener("click", () => {
@@ -160,6 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
       opus.hidden = false;
 //      opus.classList.remove("matched-opus");
     });
+    albumMatches.innerHTML = "";
 
 //    artlist.classList.remove("list-searched");
   });

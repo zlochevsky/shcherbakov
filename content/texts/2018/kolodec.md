@@ -6,7 +6,7 @@
     "params": {
         "id": "kolodec",
         "tonality": "Hm",
-        "year": "2019",
+        "year": "2018",
         "chordsStartAt": 57,
         "textFinishAtLine": 25
     }
