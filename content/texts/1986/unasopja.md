@@ -7,7 +7,7 @@
         "id": "unasopja",
         "tonality": "Gm",
         "year": "1986",
-        "chordsStartAt": 48,
+        "chordsStartAt": 43,
         "textFinishAtLine": 32
     }
 }

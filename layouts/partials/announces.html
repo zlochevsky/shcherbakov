@@ -1,0 +1,39 @@
+{{- /*
+Builds the list of currently active concert announces, ready to render as <li> content:
+1. dynamic announces from Directus (items/announces), already filtered by publish/expiry date;
+   a cancelled linked event overrides the announce text with an auto-generated cancellation notice.
+2. the legacy hand-written "announce" array in content/news.md, kept working as before.
+@returns {[]string} safe HTML strings, one per announce line.
+*/}}
+{{- $items := slice }}
+
+{{- $raw := partial "directus-announces.html" }}
+{{- range $raw.data }}
+	{{- $text := .text }}
+	{{- $link := .link }}
+	{{- $line := "" }}
+	{{- with .event }}
+		{{- $d := time.AsTime .date }}
+		{{- if eq (lower .status) "cancelled" }}
+			{{- $line = printf "Концерт %s (%s) отменён." ($d | time.Format "02.01.2006") .town }}
+		{{- else if $text }}
+			{{- $line = $text | markdownify }}
+			{{- with $link }}{{ $line = print $line " [Билеты](" . ")." | markdownify }}{{ end }}
+		{{- else }}
+			{{- $line = printf "Концерт %s (%s, %s)." ($d | time.Format "02.01.2006") .town .place }}
+			{{- with $link }}{{ $line = print $line " [Билеты](" . ")." | markdownify }}{{ end }}
+		{{- end }}
+	{{- else }}
+		{{- $line = $text | markdownify }}
+		{{- with $link }}{{ $line = print $line " [Билеты](" . ")." | markdownify }}{{ end }}
+	{{- end }}
+	{{- $items = $items | append $line }}
+{{- end }}
+
+{{- with site.GetPage "news" }}
+	{{- range .Params.announce }}
+		{{- $items = $items | append (. | markdownify) }}
+	{{- end }}
+{{- end }}
+
+{{- return $items }}

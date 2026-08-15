@@ -27,6 +27,8 @@ Main configuration file is hugo.json in the root directory. All the directories 
 - public -- the directory, where Hugo places all the ready-to-upload site, built with all the static stuff.
 - workfiles -- contains files, used for creating current face and content: images, song catalogue table etc.
 
+A part of the site's content (song catalogue, concerts, performances) is served from an external Directus database rather than from files in this repository. See [docs/directus.md](docs/directus.md) for the schema, automation (Flows), and naming conventions used there.
+
 # Installation
 
 The project requires:
@@ -38,7 +40,7 @@ The project requires:
 
 # Links
 
-Current development build of the project (literrally its `prod` directory) is viewable on our GitHub Pages:
+Current development build of the project, published automatically via GitHub Actions (see `.github/workflows/static.yml`), is viewable on our GitHub Pages:
 
 - <https://zlochevsky.github.io/shcherbakov/>
 

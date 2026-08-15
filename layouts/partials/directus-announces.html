@@ -1,0 +1,28 @@
+{{ $today := now.Format "2006-01-02" }}
+{{ $params := slice
+	site.Params.directus.token
+	"limit=-1"
+	"sort=event.date"
+	"fields=id,text,link,publish_date,expiry_date,event.date,event.town,event.place,event.status"
+	"filter[status][_eq]=published"
+	(printf "filter[publish_date][_lte]=%s" $today)
+	"filter[_or][0][expiry_date][_null]=true"
+	(printf "filter[_or][1][expiry_date][_gte]=%s" $today)
+	}}
+{{ $url := printf "%sitems/announces/?%s" site.Params.directus.url (delimit $params "&") }}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}

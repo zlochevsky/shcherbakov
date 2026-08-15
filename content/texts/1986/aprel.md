@@ -6,7 +6,8 @@
     "params": {
         "id": "aprel",
         "tonality": "Dm",
-        "year": "1986",
+        "year": "1981",
+        "edit": "1986",
         "chordsStartAt": 41,
         "textFinishAtLine": 50
     }

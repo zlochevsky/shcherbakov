@@ -6,7 +6,8 @@
     "params": {
         "id": "nazimnej",
         "tonality": "Am",
-        "year": "2012",
+        "year": "1987",
+        "edit": "2012",
         "chordsStartAt": 54,
         "textFinishAtLine": 41
     }

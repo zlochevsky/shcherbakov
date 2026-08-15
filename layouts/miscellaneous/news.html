@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
 <head>
   {{ partial "headbasic.html" . }}
 
@@ -24,10 +24,11 @@
 		  {{ if .Param "announceTitle" }}
 			  <h3>{{ .Params.announceTitle }}</h3>
 		  {{ end }}
-		  {{ if .Param "announce" }}
+		  {{ $items := partial "announces.html" }}
+		  {{ if $items }}
 		  	<ul>
-				{{ range $value := $.Params.announce }}
-				<li>{{ $value | markdownify }}</li>
+				{{ range $items }}
+				<li>{{ . }}</li>
 				{{ end }}
 			</ul>
 		  {{ else }}

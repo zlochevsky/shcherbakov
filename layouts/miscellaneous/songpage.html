@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 <title>{{ .Title }} - текст, аккорды</title>
+{{ with .Params.newerEdition }}<meta name="robots" content="noindex, follow">{{ end }}
 <style>
     /* По умолчанию (без JS) показываем только source */
     .view-container {
@@ -38,6 +39,9 @@
 <main>
 
         <div class="wrapper">
+{{ with .Params.newerEdition }}
+<div class="notice"><p>Это более ранняя редакция песни. <a href="{{ printf "texts/%s/%s.html" .year .id | relURL }}">Перейти к последней авторской редакции</a>.</p></div>
+{{ end }}
                     <div id="settings">
                         <button id="text" class="button-viewtype">текст</button>
                         <div class="button-group">

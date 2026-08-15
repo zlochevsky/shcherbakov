@@ -1,6 +1,6 @@
 {
     "date": "2025-02-13T10:13:26+00:00",
-    "title": "Сколько ни трать слов...",
+    "title": "Та же песня",
     "type": "miscellaneous",
     "layout": "songpage",
     "params": {

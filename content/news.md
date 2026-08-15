@@ -9,11 +9,7 @@
         "showAnnounce": true,
         "showAnnounceTitle": true,
         "showAnnounceOnHome": true,
-        "announce": [
-        "Ближайший концерт Михаила Щербакова в Москве состоится в среду, 8 января в [Гнезде Глухаря](https://gnezdogluharya.ru/concerts/mikhail-scherbakov-8-1-2025-5923)"
-
-
-        ]
+        "announce": []
     }
 }
 

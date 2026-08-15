@@ -6,8 +6,9 @@
     "params": {
         "id": "kladbisc",
         "tonality": "Em",
-        "year": "1986",
+        "year": "1981",
+        "edit": "1986",
         "chordsStartAt": 49,
-        "textFinishAtLine": 23
+        "textFinishAtLine": 24
     }
 }

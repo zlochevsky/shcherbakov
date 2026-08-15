@@ -1,11 +1,11 @@
 <h1>{{- site.Title }}</h1>
     <h2>({{- site.Params.Subtitle }})</h2>
-{{- with .GetPage "news" }}
+{{- with site.GetPage "news" }}
           {{- if .Param "showAnnounce" }}
-                  {{- if .Param "announce" }}
+                  {{- with partial "announces.html" }}
     <ul class="announce">
-                                {{- range $value := .Params.announce }}
-      <li>{{- $value | markdownify }}</li>
+                                {{- range . }}
+      <li>{{- . }}</li>
                                 {{- end }}
     </ul>
                   {{- end }}
