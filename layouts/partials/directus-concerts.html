@@ -1,4 +1,5 @@
-{{ $url := printf "%s%s?%s&%s&%s&%s&%s"
+{{ $today := now.Format "2006-01-02" }}
+{{ $url := printf "%s%s?%s&%s&%s&%s&%s&%s&%s"
 		site.Params.directus.url
 		"items/events/"
 		site.Params.directus.token
@@ -6,6 +7,8 @@
 		"fields=id,name,status,date,date_approximate,year,dw,country,town,state,place,day_evening,with_mls,comment,description,author_intro,plays_mls_keyboard,performers,set_id,is_studio"
 		"sort=-date"
 		"filter%5Bis_studio%5D%5B_eq%5D=false"
+		"filter%5Bstatus%5D%5B_neq%5D=cancelled"
+		(printf "filter%%5Bdate%%5D%%5B_lte%%5D=%s" $today)
 		}}
 {{ $data := dict }}
 {{ with try (resources.GetRemote $url) }}

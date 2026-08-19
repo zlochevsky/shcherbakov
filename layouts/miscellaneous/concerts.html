@@ -37,7 +37,7 @@
 
             {{/* Выводим концерты с исполнениями */}}
             {{- range $concerts.data -}}
-            <h2>{{ with .name }}{{ . }}{{ else }}{{ if .date_approximate }}Концерт, {{ .year }}. {{ .place }}{{ else }}Концерт {{ .date }}. {{ .place }}{{ end }}{{ end }}</h2>
+            <h2>{{ with .name }}{{ . }}{{ else }}{{ if .date_approximate }}Концерт, {{ .year }}. {{ .place }}{{ else }}Концерт {{ .date | time.Format "02.01.2006" }}. {{ .place }}{{ end }}{{ end }}</h2>
             <p class="concert-details">
                 {{ with .town }}{{ . }}. {{ end }}
                 {{ with .country }}{{ . }}. {{ end }}
