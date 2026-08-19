@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<title>{{ .Title }}</title>
+<style>
+	{{- with resources.Get "css/common.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+	{{- with resources.Get "css/concerts.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+	{{- with resources.Get "css/concerts-prototype.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+</style>
+{{ partialCached "head/js.html" . }}
+</head>
+<body>
+<header>
+<h1>{{ .Title }}</h1>
+</header>
+{{- partial "burger.html" }}
+{{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" . "navClass" "top-menu") }}
+<main>
+<div>
+	<div class="wrapper">
+		<div>
+
+<p class="proto-note">Это макет интерфейса без подключения к базе — все концерты и признаки ниже придуманы для демонстрации взаимодействия (поиск, радио-фильтры, свёртки, обратный порядок). Реальные данные подключим отдельно.</p>
+
+<div class="controls">
+	<div class="search-row">
+		<input type="text" id="csearch" placeholder="песня, город, страна, площадка...">
+		<button id="creset">Сбросить</button>
+		<span class="count">Найдено: <span id="ccount">8</span> из 8</span>
+	</div>
+
+	<div class="filter-groups">
+		<fieldset class="filter-group">
+			<legend>Дуэты</legend>
+			<label><input type="radio" name="f-duet" value="" checked> Все</label>
+			<label><input type="radio" name="f-duet" value="1"> Дуэты</label>
+			<label><input type="radio" name="f-duet" value="0"> Без дуэтов</label>
+		</fieldset>
+		<fieldset class="filter-group">
+			<legend>Премьеры</legend>
+			<label><input type="radio" name="f-premiere" value="" checked> Все</label>
+			<label><input type="radio" name="f-premiere" value="1"> Премьеры</label>
+			<label><input type="radio" name="f-premiere" value="0"> Без премьер</label>
+		</fieldset>
+		<fieldset class="filter-group">
+			<legend>Зарубежные</legend>
+			<label><input type="radio" name="f-foreign" value="" checked> Все</label>
+			<label><input type="radio" name="f-foreign" value="1"> Зарубежные</label>
+			<label><input type="radio" name="f-foreign" value="0"> Без зарубежных</label>
+		</fieldset>
+		<fieldset class="filter-group">
+			<legend>Домашние</legend>
+			<label><input type="radio" name="f-home" value="" checked> Все</label>
+			<label><input type="radio" name="f-home" value="1"> Домашние</label>
+			<label><input type="radio" name="f-home" value="0"> Без домашних</label>
+		</fieldset>
+		<fieldset class="filter-group">
+			<legend>Есть программа</legend>
+			<label><input type="radio" name="f-program" value="" checked> Все</label>
+			<label><input type="radio" name="f-program" value="1"> Есть программа</label>
+			<label><input type="radio" name="f-program" value="0"> Без программы</label>
+		</fieldset>
+		<fieldset class="filter-group">
+			<legend>Фото</legend>
+			<label><input type="radio" name="f-photo" value="" checked> Все</label>
+			<label><input type="radio" name="f-photo" value="1"> С фото</label>
+			<label><input type="radio" name="f-photo" value="0"> Без фото</label>
+		</fieldset>
+	</div>
+
+	<div class="view-buttons">
+		<button id="cexpand">&#9660; Развернуть всё</button>
+		<button id="ccollapse">&#9650; Свернуть всё</button>
+		<button id="creverse">&#8645; В обратном порядке</button>
+	</div>
+</div>
+
+<div id="clist">
+
+<div class="year-block" data-year="2026">
+	<p class="year-heading"><b>2026 г.</b> <button class="y-expand">&#9660;</button> <button class="y-collapse">&#9650;</button></p>
+
+	<details class="concert" data-year="2026" data-duet="0" data-premiere="0" data-foreign="0" data-home="0" data-program="0" data-photo="0">
+		<summary>20.09.2026 вс &#8211; <span class="concert-place">Санкт-Петербург, бард-клуб &laquo;Гнездо глухаря&raquo;</span></summary>
+	</details>
+
+	<details class="concert" data-year="2026" data-duet="1" data-premiere="1" data-foreign="0" data-home="0" data-program="1" data-photo="1">
+		<summary>25.07.2026 сб &#8211; <span class="concert-place">Москва, бард-клуб &laquo;Гнездо глухаря&raquo;</span><span class="tag">фото</span></summary>
+		<ol>
+			<li>Жизнь прекрасна <span class="song-incipit">(Достиг вершин…)</span> <span class="perf-tag">[2001]</span></li>
+			<li>1992 <span class="song-incipit">(Ближе к селенью…)</span> <span class="perf-tag">[1992]</span></li>
+			<li>Пейзаж <span class="song-incipit">(Имеешь право…)</span> <span class="perf-tag">[2022] премьера</span></li>
+			<li>Тема полёта <span class="song-incipit">(Ни даже в самом тайном подполье…)</span> <span class="perf-tag">[2002] дуэт (клавиши)</span></li>
+			<li>Хрусталь <span class="song-incipit">(Всё ещё праздника ждёшь…)</span> <span class="perf-tag">[2022]</span></li>
+			<li>Если <span class="song-incipit">(Если пойдёшь ты пешком…)</span> <span class="perf-tag">[2001]</span></li>
+		</ol>
+	</details>
+</div>
+
+<div class="year-block" data-year="2025">
+	<p class="year-heading"><b>2025 г.</b> <button class="y-expand">&#9660;</button> <button class="y-collapse">&#9650;</button></p>
+
+	<details class="concert" data-year="2025" data-duet="1" data-premiere="0" data-foreign="1" data-home="0" data-program="1" data-photo="1">
+		<summary>08.11.2025 сб &#8211; <span class="concert-place">Берлин, Германия</span><span class="tag">фото</span></summary>
+		<ol>
+			<li>Другая жизнь <span class="song-incipit">(Теперь на пристани толпа…)</span> <span class="perf-tag">[1994] дуэт (гитара)</span></li>
+			<li>Заклинание <span class="song-incipit">(Не ангел я, но врать не буду…)</span> <span class="perf-tag">[1991]</span></li>
+			<li>Once <span class="perf-tag">[2002]</span></li>
+		</ol>
+	</details>
+</div>
+
+<div class="year-block" data-year="2023">
+	<p class="year-heading"><b>2023 г.</b> <button class="y-expand">&#9660;</button> <button class="y-collapse">&#9650;</button></p>
+
+	<details class="concert" data-year="2023" data-duet="0" data-premiere="0" data-foreign="0" data-home="1" data-program="1" data-photo="0">
+		<summary>02.08.2023 ср &#8211; <span class="concert-place">Москва, домашняя встреча</span><span class="tag">домашний</span></summary>
+		<ol>
+			<li>Вишнёвое варенье <span class="song-incipit">(Теперь на пристани толпа…)</span> <span class="perf-tag">[1984]</span></li>
+			<li>Кибитка <span class="song-incipit">(Всё скрылось, отошло…)</span> <span class="perf-tag">[1983]</span></li>
+		</ol>
+	</details>
+</div>
+
+<div class="year-block" data-year="2003">
+	<p class="year-heading"><b>2003 г.</b> <button class="y-expand">&#9660;</button> <button class="y-collapse">&#9650;</button></p>
+
+	<details class="concert" data-year="2003" data-duet="1" data-premiere="0" data-foreign="0" data-home="0" data-program="1" data-photo="0">
+		<summary>14.03.2003 пт &#8211; <span class="concert-place">Москва, Россия</span></summary>
+		<ol>
+			<li>Не покидай меня, весна… <span class="perf-tag">[до 1988] дуэт (гитара) — с Ю. Кимом</span></li>
+			<li>Варяжская разбойничья <span class="perf-tag">[до 1988] дуэт (гитара) — с Ю. Кимом</span></li>
+		</ol>
+	</details>
+</div>
+
+<div class="year-block" data-year="1998">
+	<p class="year-heading"><b>1998 г.</b> <button class="y-expand">&#9660;</button> <button class="y-collapse">&#9650;</button></p>
+
+	<details class="concert" data-year="1998" data-duet="0" data-premiere="1" data-foreign="1" data-home="0" data-program="1" data-photo="0">
+		<summary>01.06.1998 пн &#8211; <span class="concert-place">Нью-Йорк, США</span></summary>
+		<ol>
+			<li>Ложный шаг <span class="perf-tag">[1998] премьера</span></li>
+			<li>Шансон <span class="song-incipit">(Вершит народ дела свои…)</span> <span class="perf-tag">[1982]</span></li>
+		</ol>
+	</details>
+</div>
+
+<div class="year-block" data-year="1994">
+	<p class="year-heading"><b>1994 г.</b> <button class="y-expand">&#9660;</button> <button class="y-collapse">&#9650;</button></p>
+
+	<details class="concert" data-year="1994" data-duet="0" data-premiere="0" data-foreign="0" data-home="0" data-program="1" data-photo="0">
+		<summary>20.05.1994 пт &#8211; <span class="concert-place">Москва, Россия</span></summary>
+		<ol>
+			<li>Австралия <span class="perf-tag">[1994] не играет</span></li>
+			<li>Интермедия (инструментал М. Стародубцева) <span class="perf-tag">не поёт</span></li>
+		</ol>
+	</details>
+</div>
+
+<div class="year-block" data-year="1986">
+	<p class="year-heading"><b>1986 г.</b> <button class="y-expand">&#9660;</button> <button class="y-collapse">&#9650;</button></p>
+
+	<details class="concert" data-year="1986" data-duet="1" data-premiere="0" data-foreign="1" data-home="0" data-program="1" data-photo="0">
+		<summary>07.07.1986 пн &#8211; <span class="concert-place">Минск, СССР</span></summary>
+		<ol>
+			<li>Белый марш <span class="perf-tag">[1975] дуэт (гитара) — с Ю. Кимом</span></li>
+		</ol>
+	</details>
+</div>
+
+</div>
+
+		</div>
+	</div>
+</div>
+</main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+	const search = document.getElementById("csearch");
+	const reset = document.getElementById("creset");
+	const countEl = document.getElementById("ccount");
+	const list = document.getElementById("clist");
+	const allDetails = Array.from(list.querySelectorAll("details.concert"));
+	const total = allDetails.length;
+	const flagNames = ["duet", "premiere", "foreign", "home", "program", "photo"];
+
+	function normalize(text) {
+		return text.toLowerCase().trim().normalize("NFD").replace(/\p{Diacritic}/gu, "").replace(/"ё"/gu, "е");
+	}
+
+	function activeFlagFilters() {
+		const active = {};
+		flagNames.forEach(f => {
+			const checked = document.querySelector(`input[name="f-${f}"]:checked`);
+			if (checked && checked.value !== "") active[f] = checked.value;
+		});
+		return active;
+	}
+
+	function applyFilters() {
+		const terms = normalize(search.value).split(" ").filter(Boolean);
+		const flagFilters = activeFlagFilters();
+		let visibleCount = 0;
+
+		allDetails.forEach(d => {
+			let flagOk = true;
+			for (const [flag, val] of Object.entries(flagFilters)) {
+				if (d.dataset[flag] !== val) { flagOk = false; break; }
+			}
+
+			d.querySelectorAll("li.matched").forEach(li => li.classList.remove("matched"));
+
+			let textOk = true;
+			let matchedLis = [];
+			if (terms.length) {
+				const summaryText = normalize(d.querySelector("summary").textContent);
+				const summaryMatch = terms.every(t => summaryText.includes(t));
+				Array.from(d.querySelectorAll("li")).forEach(li => {
+					const liText = normalize(li.textContent);
+					if (terms.every(t => liText.includes(t))) matchedLis.push(li);
+				});
+				textOk = summaryMatch || matchedLis.length > 0;
+			}
+
+			const show = flagOk && textOk;
+			d.hidden = !show;
+			if (show) {
+				visibleCount++;
+				if (terms.length && matchedLis.length) {
+					matchedLis.forEach(li => li.classList.add("matched"));
+					d.open = true;
+				}
+			}
+		});
+
+		countEl.textContent = visibleCount;
+	}
+
+	search.addEventListener("input", applyFilters);
+	document.querySelectorAll(".filter-group input[type=radio]").forEach(r => r.addEventListener("change", applyFilters));
+
+	reset.addEventListener("click", () => {
+		search.value = "";
+		document.querySelectorAll('.filter-group input[value=""]').forEach(r => r.checked = true);
+		allDetails.forEach(d => {
+			d.hidden = false;
+			d.querySelectorAll("li.matched").forEach(li => li.classList.remove("matched"));
+		});
+		countEl.textContent = total;
+	});
+
+	document.getElementById("cexpand").addEventListener("click", () => allDetails.forEach(d => d.open = true));
+	document.getElementById("ccollapse").addEventListener("click", () => allDetails.forEach(d => d.open = false));
+
+	document.querySelectorAll(".year-heading .y-expand").forEach(btn => {
+		btn.addEventListener("click", () => {
+			const year = btn.closest(".year-block").dataset.year;
+			list.querySelectorAll(`details.concert[data-year="${year}"]`).forEach(d => d.open = true);
+		});
+	});
+	document.querySelectorAll(".year-heading .y-collapse").forEach(btn => {
+		btn.addEventListener("click", () => {
+			const year = btn.closest(".year-block").dataset.year;
+			list.querySelectorAll(`details.concert[data-year="${year}"]`).forEach(d => d.open = false);
+		});
+	});
+
+	document.getElementById("creverse").addEventListener("click", () => {
+		const blocks = Array.from(list.querySelectorAll(".year-block")).reverse();
+		blocks.forEach(b => {
+			list.appendChild(b);
+			const ds = Array.from(b.querySelectorAll("details.concert")).reverse();
+			ds.forEach(d => b.appendChild(d));
+		});
+	});
+});
+</script>
+</body>
+</html>

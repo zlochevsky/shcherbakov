@@ -1,9 +1,10 @@
-{{ $url := printf "%s%s?%s&%s&%s&%s"
+{{ $url := printf "%s%s?%s&%s&%s&%s&%s"
 		site.Params.directus.url
 		"items/events/"
 		site.Params.directus.token
 		"limit=-1"
-		"fields=id,name,status,date,year,dw,country,town,state,place,day_evening,with_mls,comment,description,author_intro,plays_mls_keyboard,performers,set_id,is_studio"
+		"fields=id,name,status,date,date_approximate,year,dw,country,town,state,place,day_evening,with_mls,comment,description,author_intro,plays_mls_keyboard,performers,set_id,is_studio"
+		"sort=-date"
 		"filter%5Bis_studio%5D%5B_eq%5D=false"
 		}}
 {{ $data := dict }}
