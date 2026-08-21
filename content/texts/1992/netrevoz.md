@@ -5,9 +5,6 @@
     "layout": "songpage",
     "params": {
         "id": "netrevoz",
-        "tonality": "Hm",
-        "year": "1991",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "year": "1992"
     }
 }

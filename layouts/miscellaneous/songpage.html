@@ -42,17 +42,30 @@
 {{ with .Params.newerEdition }}
 <div class="notice"><p>Это более ранняя редакция песни. <a href="{{ printf "texts/%s/%s.html" .year .id | relURL }}">Перейти к последней авторской редакции</a>.</p></div>
 {{ end }}
-                    <div id="settings">
+{{- $isPoem := false }}
+{{- with partial "directus-work.html" .Params.id }}
+	{{- with index .data 0 }}
+		{{- $isPoem = .is_poem }}
+	{{- end }}
+{{- end }}
+                    <div id="settings"{{ if $isPoem }} data-poem="true"{{ end }}>
+                        {{- if $isPoem }}
+                        <span class="poem-label">стихотворение</span>
+                        {{- end }}
                         <button id="text" class="button-viewtype">текст</button>
+                        {{- if not $isPoem }}
                         <div class="button-group">
                             <span class="button-label">аккорды</span>
                             <button id="above" class="button-viewtype">над строкой</button>
                             <button id="side" class="button-viewtype">справа</button>
                         </div>
+                        {{- end }}
                         <button id="source" class="button-viewtype">исходник</button>
+                        {{- if not $isPoem }}
                         <button id="transposer" class="button-viewtype">траспонировать</button>
                         <button id="stress" class="button-viewtype">моменты</button>
                         <div class="transpose-wrapper"></div>
+                        {{- end }}
                     </div>
 {{- partial "song.html" .Params -}}
                     <noscript>Страница требует включённого javascript.</noscript>

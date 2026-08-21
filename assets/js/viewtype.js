@@ -7,9 +7,11 @@ let buttonAbove, buttonSide, buttonText, buttonSource;
 let transposeButton, transposeWrapper;
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("settings").style.display = "block";
+    const settingsEl = document.getElementById("settings");
+    settingsEl.style.display = "block";
+    const isPoem = settingsEl.dataset.poem === "true";
 
-    // Инициализируем кнопки
+    // Инициализируем кнопки (у стихотворений above/side/stress отсутствуют в разметке)
     buttonAbove = document.getElementById('above');
     buttonSide = document.getElementById('side');
     buttonText = document.getElementById('text');
@@ -20,7 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
     transposeButton = document.getElementById('transposer');
     transposeWrapper = document.querySelector('.transpose-wrapper');
 
-    const viewType = getViewType();
+    let viewType = getViewType();
+    // У стихотворений нет видов "над строкой"/"справа" — сохранённое значение трактуем как "текст"
+    if (isPoem && (viewType === 'above' || viewType === 'side')) {
+        viewType = 'text';
+    }
     manageTransposer(viewType);
     applyViewType(viewType);
     if (transposeButton && transposeWrapper) {
@@ -29,20 +35,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    buttonSide.addEventListener('click', function() {
-        setViewType('side');  // устанавливаем новый режим
-    });
-    buttonAbove.addEventListener('click', function() {
-        setViewType('above');  // устанавливаем новый режим
-    });
+    if (buttonSide) {
+        buttonSide.addEventListener('click', function() {
+            setViewType('side');  // устанавливаем новый режим
+        });
+    }
+    if (buttonAbove) {
+        buttonAbove.addEventListener('click', function() {
+            setViewType('above');  // устанавливаем новый режим
+        });
+    }
     buttonText.addEventListener('click', function() {
         setViewType('text');  // устанавливаем новый режим
     });
     buttonSource.addEventListener('click', function() {
         setViewType('source');  // устанавливаем новый режим
     });
-    buttonStress.addEventListener('click', toggleStress);
-    
+    if (buttonStress) {
+        buttonStress.addEventListener('click', toggleStress);
+    }
+
     console.log(getViewType());
 });
 function manageTransposer(viewType){
@@ -75,8 +87,8 @@ function applyViewType(viewType) {
         container.style.display = '';  // убираем inline-стиль
     });
 
-    // Убираем active у всех кнопок
-    [buttonAbove, buttonSide, buttonSource, buttonText].forEach(btn => btn.classList.remove('active'));
+    // Убираем active у всех кнопок (у стихотворений часть кнопок отсутствует)
+    [buttonAbove, buttonSide, buttonSource, buttonText].filter(Boolean).forEach(btn => btn.classList.remove('active'));
 
     manageTransposer(viewType);
     manageStressButton(viewType);

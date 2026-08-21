@@ -5,9 +5,6 @@
     "layout": "songpage",
     "params": {
         "id": "pokudani",
-        "tonality": "Hm",
-        "year": "1987",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "year": "1987"
     }
 }

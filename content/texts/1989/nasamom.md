@@ -5,9 +5,6 @@
     "layout": "songpage",
     "params": {
         "id": "nasamom",
-        "tonality": "Hm",
-        "year": "1988",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "year": "1989"
     }
 }

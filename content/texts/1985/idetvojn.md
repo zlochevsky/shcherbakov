@@ -5,9 +5,6 @@
     "layout": "songpage",
     "params": {
         "id": "idetvojn",
-        "tonality": "Hm",
-        "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "year": "1985"
     }
 }

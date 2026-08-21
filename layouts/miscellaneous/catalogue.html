@@ -112,7 +112,9 @@
 	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>
 	</span>
 	{{ if .name -}}
-		(<span id="begin">{{ .fincipit }}</a></span>)
+		(<span id="begin">{{ .fincipit }}</a></span>){{ if .is_poem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
+	{{- else if .is_poem -}}
+		 <span class="poem-tag">(стихотворение)</span>
 	{{- end -}}
 	{{- if $date }}	<span class="year">{{ $date -}}{{- if .edit -}}, {{ .edit -}}{{- end -}}</span>
 	{{- end -}}
