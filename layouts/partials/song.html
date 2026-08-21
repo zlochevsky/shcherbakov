@@ -21,6 +21,11 @@
     {{- $lines = apply $lines "trim" "." "\r" -}}{{/* remove \r from all lines */}}
     {{/* last line index */}}
     {{- $lastIndex := math.Sub (len $lines) 1 -}}
+    {{/* без chordsStartAt/textFinishAtLine в front matter (напр. у стихов без аккордов) считаем, что "основной" текст занимает весь файл */}}
+    {{- $textFinishAtLine := $lastIndex -}}
+    {{- with $pageParams.textFinishAtLine -}}
+        {{- $textFinishAtLine = . -}}
+    {{- end -}}
     {{/* determine last non-empty line index (used to detect year line) */}}
     {{- range $k, $v := $lines -}}
         {{- if gt (len (trim $v " \t")) 0 -}}
@@ -43,8 +48,8 @@
                 {{- if ge $k 2 -}}
                     {{- if eq $k $lastNonEmptyIndex -}}
                         {{- $shouldWrapYear = true -}}
-                    {{- else if $pageParams.textFinishAtLine -}}
-                        {{- $textFinish := int $pageParams.textFinishAtLine -}}
+                    {{- else -}}
+                        {{- $textFinish := int $textFinishAtLine -}}
                         {{- if and (ge $k (sub $textFinish 6)) (le $k $textFinish) -}}
                             {{- $shouldWrapYear = true -}}
                         {{- end -}}
@@ -54,7 +59,7 @@
                 {{- if $shouldWrapYear -}}
                     {{- $line = replaceRE `^\s*(<?\s*\d{4}(?:,\s*\d{4})*\s*>?)\s*$` "<span class=\"year\">$1</span>" $line -}}
                 {{- end -}}
-                {{- if (ge $k $pageParams.textFinishAtLine)  -}}
+                {{- if (ge $k $textFinishAtLine)  -}}
                     {{/* add lines to $newLinesAfter for <pre> block) */}}
                     {{- $newLinesAfter = $newLinesAfter | append (println $line | safeHTML ) -}}
                 {{- else -}}
@@ -136,7 +141,7 @@
                 {{- end -}}
             {{- else -}}
                 {{/* process empty lines */}}
-                {{- if  (le $k $pageParams.textFinishAtLine) -}}
+                {{- if  (le $k $textFinishAtLine) -}}
                     {{- $linesSide = $linesSide | append "<br>\n" -}}
                     {{- $linesAbove = $linesAbove | append "<br>\n" -}}
                     {{- $linesText = $linesText | append "\n" -}}

@@ -41,6 +41,7 @@ a:visited {
 		{{- end -}}
 		{{- $editOrDate := .edit -}}
 		{{- if not $editOrDate -}}{{ $editOrDate = .date }}{{- end -}}
+		{{- $editOrDate = math.Abs $editOrDate | int -}}
 		{{- $href := printf "texts/%v/%v.html" $editOrDate .id -}}
 		{{- $worksById = merge $worksById (dict .id (dict "name" $name "href" $href)) -}}
 	{{- end -}}

@@ -77,7 +77,7 @@
 {{- $date := "" -}}
 {{- if lt $dateint 0 -}}
 	{{- with $dateint -}}
-		{{- $datesrc := math.Abs . | int | cast.ToString -}}
+		{{- $datesrc = math.Abs . | int | cast.ToString -}}
 		{{- $date = printf "%s%s%s" "<" $datesrc ">" -}}
 	{{- end -}}
 {{- else -}}
@@ -109,7 +109,7 @@
 		{{- else -}}
 			{{- .incipit -}}
 		{{- end }}">
-	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ . }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>
+	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>
 	</span>
 	{{ if .name -}}
 		(<span id="begin">{{ .fincipit }}</a></span>)
