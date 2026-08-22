@@ -44,8 +44,8 @@
             </p>
                 <ol>{{- range index $perfsByEvent .id -}}
                     {{- $perf := . -}}
-                    <li class="songname">{{- with .works_id.name -}}{{ . }}&ensp;<span class="song-incipit">(&#171;{{ $perf.works_id.incipit }}&#187;)</span>
-                    {{- else -}}&#171;{{ $perf.works_id.incipit }}&#187;</li>{{- end -}}
+                    <li class="songname">{{- with .works_id.name -}}{{ . }}&ensp;<span class="song-incipit">(&#171;{{ $perf.works_id.fincipit }}&#187;)</span>
+                    {{- else -}}&#171;{{ $perf.works_id.fincipit }}&#187;</li>{{- end -}}
                     {{/* поля исполнения: .works_id и т.д. */}}
                 {{- end -}}</ol>
             {{- end -}}
