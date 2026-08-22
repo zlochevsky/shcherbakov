@@ -14,7 +14,7 @@ Renders a menu for the given menu ID.
 </div>
 
 {{- with index site.Menus $menuID }}
-    <nav class="{{ $navClass }}">
+    <nav class="{{ $navClass }}" data-pagefind-ignore>
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </nav>
 {{- end }}

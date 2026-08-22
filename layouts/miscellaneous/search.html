@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<title>{{ .Title }}</title>
+<style>
+	{{- with resources.Get "css/common.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+	{{- with resources.Get "css/index.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+	{{- with resources.Get "css/search.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+</style>
+{{ partialCached "head/js.html" . }}
+</head>
+<body>
+<header>
+{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+{{- partial "burger.html" }}
+{{- partial "menu.html" (dict "menuID" "searchheadermenu" "page" . "navClass" "top-menu") }}
+</header>
+<main data-pagefind-ignore>
+<div class="wrapper">
+<div>
+
+<div class="search-controls">
+	<fieldset class="search-scope">
+		<legend>Искать</legend>
+		<label><input type="radio" name="sscope" value="all" checked> По всему сайту</label>
+		<label><input type="radio" name="sscope" value="songs"> По текстам песен</label>
+	</fieldset>
+	<input type="text" id="ssearch" placeholder="что ищем...">
+	<p class="search-status"><span id="scount"></span></p>
+</div>
+
+<ul id="sresults"></ul>
+
+</div>
+</div>
+</main>
+<script type="module">
+document.addEventListener("DOMContentLoaded", async () => {
+	const search = document.getElementById("ssearch");
+	const countEl = document.getElementById("scount");
+	const results = document.getElementById("sresults");
+
+	let pagefind;
+	try {
+		pagefind = await import("{{ "pagefind/pagefind.js" | relURL }}");
+		await pagefind.init();
+	} catch (e) {
+		countEl.textContent = "Поиск временно недоступен.";
+		return;
+	}
+
+	function currentScope() {
+		const checked = document.querySelector('input[name="sscope"]:checked');
+		return checked ? checked.value : "all";
+	}
+
+	async function renderResults(searchResult) {
+		results.innerHTML = "";
+		const total = searchResult.results.length;
+		countEl.textContent = total ? `Найдено: ${total}` : "Ничего не найдено.";
+
+		const shown = searchResult.results.slice(0, 40);
+		const items = await Promise.all(shown.map(r => r.data()));
+
+		function isSong(item) {
+			return !!(item.filters && item.filters.type && item.filters.type.includes("song"));
+		}
+
+		const songs = items.filter(isSong);
+		const rest = items.filter(item => !isSong(item));
+
+		function appendItem(item) {
+			const li = document.createElement("li");
+			const a = document.createElement("a");
+			a.href = item.url;
+			a.textContent = item.meta && item.meta.title ? item.meta.title : item.url;
+			const p = document.createElement("p");
+			p.className = "search-excerpt";
+			p.innerHTML = item.excerpt;
+			li.appendChild(a);
+			li.appendChild(p);
+			results.appendChild(li);
+		}
+
+		function appendHeading(text) {
+			const h = document.createElement("li");
+			h.className = "search-group-heading";
+			h.textContent = text;
+			results.appendChild(h);
+		}
+
+		if (songs.length && rest.length) {
+			appendHeading("Тексты песен");
+			songs.forEach(appendItem);
+			appendHeading("Остальные результаты");
+			rest.forEach(appendItem);
+		} else {
+			items.forEach(appendItem);
+		}
+	}
+
+	let debounceTimer;
+	async function runSearch() {
+		const term = search.value.trim();
+		if (!term) {
+			results.innerHTML = "";
+			countEl.textContent = "";
+			return;
+		}
+		const filters = currentScope() === "songs" ? { filters: { type: ["song"] } } : {};
+		const searchResult = await pagefind.search(term, filters);
+		renderResults(searchResult);
+	}
+
+	search.addEventListener("input", () => {
+		clearTimeout(debounceTimer);
+		debounceTimer = setTimeout(runSearch, 150);
+	});
+	document.querySelectorAll('input[name="sscope"]').forEach(r => r.addEventListener("change", () => {
+		clearTimeout(debounceTimer);
+		runSearch();
+	}));
+
+	// на случай, если браузер восстановил значение поля при возврате назад
+	// (событие input при этом не генерируется само). DOMContentLoaded тут не годится:
+	// при восстановлении из bfcache он не срабатывает вовсе, а при обычной загрузке
+	// браузер иногда заполняет поле позже, чем отрабатывает DOMContentLoaded.
+	// pageshow срабатывает в обоих случаях и уже после восстановления значения.
+	window.addEventListener("pageshow", () => {
+		search.dispatchEvent(new Event("input"));
+	});
+});
+</script>
+</body>
+</html>

@@ -9,7 +9,10 @@
 	{{- with resources.Get "css/common.css" }}
 		{{ .Content | safeCSS -}}
 	{{ end }}
-    {{- with resources.Get "css/concerts.css" }}
+	{{- with resources.Get "css/concerts.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+	{{- with resources.Get "css/concerts-prototype.css" }}
 		{{ .Content | safeCSS -}}
 	{{ end }}
 </style>
@@ -26,32 +29,252 @@
 <div>
     <div class="wrapper">
         <div>
-            {{ $concerts := partial "directus-concerts.html" }}
-            {{ $perfs := partial "directus-perfs.html" }}
-            {{/* Строим dict eventId → [perfs] */}}
-            {{- $perfsByEvent := dict -}}
-            {{- range $perfs.data -}}
-                {{- $existing := index $perfsByEvent .events_id | default slice -}}
-                {{- $perfsByEvent = merge $perfsByEvent (dict .events_id ($existing | append .)) -}}
-            {{- end -}}
 
-            {{/* Выводим концерты с исполнениями */}}
-            {{- range $concerts.data -}}
-            <h2>{{ with .name }}{{ . }}{{ else }}{{ if .date_approximate }}Концерт, {{ .year }}. {{ .place }}{{ else }}Концерт {{ .date | time.Format "02.01.2006" }}. {{ .place }}{{ end }}{{ end }}</h2>
-            <p class="concert-details">
-                {{ with .town }}{{ . }}. {{ end }}
-                {{ with .country }}{{ . }}. {{ end }}
-            </p>
-                <ol>{{- range index $perfsByEvent .id -}}
-                    {{- $perf := . -}}
-                    <li class="songname">{{- with .works_id.name -}}{{ . }}&ensp;<span class="song-incipit">(&#171;{{ $perf.works_id.fincipit }}&#187;)</span>
-                    {{- else -}}&#171;{{ $perf.works_id.fincipit }}&#187;</li>{{- end -}}
-                    {{/* поля исполнения: .works_id и т.д. */}}
-                {{- end -}}</ol>
-            {{- end -}}
+{{ $concerts := partial "directus-concerts.html" }}
+{{ $perfs := partial "directus-perfs.html" }}
+{{/* Строим dict eventId → [perfs] */}}
+{{- $perfsByEvent := dict -}}
+{{- range $perfs.data -}}
+    {{- $existing := index $perfsByEvent .events_id | default slice -}}
+    {{- $perfsByEvent = merge $perfsByEvent (dict .events_id ($existing | append .)) -}}
+{{- end -}}
+{{ $total := len $concerts.data }}
+
+<div class="controls">
+	<div class="search-row">
+		<input type="text" id="csearch" placeholder="песня, город, страна, площадка...">
+		<button id="creset">Сбросить</button>
+		<span class="count">Найдено: <span id="ccount">{{ $total }}</span> из {{ $total }}</span>
+	</div>
+
+	<div class="filter-groups">
+		<fieldset class="filter-group">
+			<legend>Дуэты</legend>
+			<label><input type="radio" name="f-duet" value="" checked> Все</label>
+			<label><input type="radio" name="f-duet" value="1"> Дуэты</label>
+			<label><input type="radio" name="f-duet" value="0"> Без дуэтов</label>
+		</fieldset>
+		<fieldset class="filter-group">
+			<legend>Премьеры</legend>
+			<label><input type="radio" name="f-premiere" value="" checked> Все</label>
+			<label><input type="radio" name="f-premiere" value="1"> Премьеры</label>
+			<label><input type="radio" name="f-premiere" value="0"> Без премьер</label>
+		</fieldset>
+		<fieldset class="filter-group">
+			<legend>Зарубежные</legend>
+			<label><input type="radio" name="f-foreign" value="" checked> Все</label>
+			<label><input type="radio" name="f-foreign" value="1"> Зарубежные</label>
+			<label><input type="radio" name="f-foreign" value="0"> Без зарубежных</label>
+		</fieldset>
+		<fieldset class="filter-group">
+			<legend>Домашние</legend>
+			<label><input type="radio" name="f-home" value="" checked> Все</label>
+			<label><input type="radio" name="f-home" value="1"> Домашние</label>
+			<label><input type="radio" name="f-home" value="0"> Без домашних</label>
+		</fieldset>
+		<fieldset class="filter-group">
+			<legend>Есть программа</legend>
+			<label><input type="radio" name="f-program" value="" checked> Все</label>
+			<label><input type="radio" name="f-program" value="1"> Есть программа</label>
+			<label><input type="radio" name="f-program" value="0"> Без программы</label>
+		</fieldset>
+	</div>
+
+	<div class="view-buttons">
+		<button id="cexpand">&#9660; Развернуть всё</button>
+		<button id="ccollapse">&#9650; Свернуть всё</button>
+		<button id="creverse">&#8645; В обратном порядке</button>
+	</div>
+</div>
+
+<div id="clist">
+{{ $scratch := newScratch }}
+{{- range $concerts.data -}}
+	{{- $event := . -}}
+	{{- $eventPerfs := index $perfsByEvent .id | default slice -}}
+	{{- $year := $event.year -}}
+	{{- if not $year }}{{ $year = $event.date | time.Format "2006" }}{{ end -}}
+
+	{{- if ne ($scratch.Get "year") $year -}}
+		{{- if $scratch.Get "year" }}</div>{{ end }}
+		{{- $scratch.Set "year" $year }}
+		<div class="year-block" data-year="{{ $year }}">
+			<p class="year-heading"><b>{{ $year }} г.</b> <button class="y-expand">&#9660;</button> <button class="y-collapse">&#9650;</button></p>
+	{{- end -}}
+
+	{{- $duet := "0" -}}
+	{{- if $event.with_mls }}{{ $duet = "1" }}{{ end -}}
+	{{- $duetInstrument := "гитара" -}}
+	{{- if $event.plays_mls_keyboard }}{{ $duetInstrument = "клавиши" }}{{ end -}}
+	{{- $premiere := "0" -}}
+	{{- range $eventPerfs }}{{ if .is_premiere }}{{ $premiere = "1" }}{{ end }}{{ end -}}
+	{{- $foreign := "0" -}}
+	{{- if and $event.country (ne $event.country "Россия") (ne $event.country "СССР") }}{{ $foreign = "1" }}{{ end -}}
+	{{- $home := "0" -}}
+	{{- if $event.is_home }}{{ $home = "1" }}{{ end -}}
+	{{- $program := "0" -}}
+	{{- if gt (len $eventPerfs) 0 }}{{ $program = "1" }}{{ end -}}
+
+	{{- $place := slice -}}
+	{{- with $event.town }}{{ $place = $place | append . }}{{ end -}}
+	{{- with $event.place }}{{ $place = $place | append . }}{{ end -}}
+	{{- if and $event.country (ne $event.country "Россия") }}{{ $place = $place | append $event.country }}{{ end -}}
+	<details class="concert" data-year="{{ $year }}" data-duet="{{ $duet }}" data-premiere="{{ $premiere }}" data-foreign="{{ $foreign }}" data-home="{{ $home }}" data-program="{{ $program }}">
+		<summary>{{- with $event.name -}}{{ . }}{{- else -}}{{- if $event.date_approximate -}}{{ $event.year }} г.{{- else -}}{{ $event.date | time.Format "02.01.2006" }}{{ with $event.dw }} {{ . }}{{ end }}{{- end -}}{{- end }} &#8211; <span class="concert-place">{{ delimit $place ", " }}</span>{{ if $event.is_home }} <span class="tag">домашний</span>{{ end }}{{ if eq $duet "1" }} <span class="tag">дуэт ({{ $duetInstrument }})</span>{{ end }}</summary>
+		<ol>{{- range $eventPerfs -}}
+			{{- $perf := . -}}
+			{{- $dateint := .works_id.date -}}
+			{{- $date := "" -}}
+			{{- if lt $dateint 0 -}}
+				{{- $date = printf "<%d>" (math.Abs $dateint | int) -}}
+			{{- else -}}
+				{{- $date = $dateint | cast.ToString -}}
+			{{- end -}}
+			<li class="songname" data-premiere="{{ if .is_premiere }}1{{ else }}0{{ end }}">{{- with .works_id.name -}}{{ . }}&ensp;<span class="song-incipit">({{ $perf.works_id.fincipit }})</span>
+			{{- else -}}{{ $perf.works_id.fincipit }}
+			{{- end -}}
+			{{- if $date }} <span class="perf-year">{{ $date }}{{ if .works_id.edit }}, {{ .works_id.edit }}{{ end }}</span>{{ end }}{{ if .is_premiere }} <span class="tag">премьера</span>{{ end }}</li>
+		{{- end -}}</ol>
+	</details>
+{{- end -}}
+{{- if $scratch.Get "year" }}</div>{{ end }}
+</div>
+
         </div>
     </div>
 </div>
 </main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+	const search = document.getElementById("csearch");
+	const reset = document.getElementById("creset");
+	const countEl = document.getElementById("ccount");
+	const list = document.getElementById("clist");
+	const allDetails = Array.from(list.querySelectorAll("details.concert"));
+	const yearBlocks = Array.from(list.querySelectorAll(".year-block"));
+	const total = allDetails.length;
+	const flagNames = ["duet", "premiere", "foreign", "home", "program"];
+
+	function updateYearBlocks() {
+		yearBlocks.forEach(yb => {
+			const anyVisible = Array.from(yb.querySelectorAll("details.concert")).some(d => !d.hidden);
+			yb.hidden = !anyVisible;
+		});
+	}
+
+	function normalize(text) {
+		return text.toLowerCase().trim().normalize("NFD").replace(/\p{Diacritic}/gu, "").replace(/"ё"/gu, "е");
+	}
+
+	function activeFlagFilters() {
+		const active = {};
+		flagNames.forEach(f => {
+			const checked = document.querySelector(`input[name="f-${f}"]:checked`);
+			if (checked && checked.value !== "") active[f] = checked.value;
+		});
+		return active;
+	}
+
+	function applyFilters() {
+		const terms = search.value.trim().length >= 2 ? normalize(search.value).split(" ").filter(Boolean) : [];
+		const flagFilters = activeFlagFilters();
+		let visibleCount = 0;
+
+		allDetails.forEach(d => {
+			let flagOk = true;
+			for (const [flag, val] of Object.entries(flagFilters)) {
+				if (d.dataset[flag] !== val) { flagOk = false; break; }
+			}
+
+			d.querySelectorAll("li.matched").forEach(li => li.classList.remove("matched"));
+
+			let textOk = true;
+			let matchedLis = [];
+			if (terms.length) {
+				const summaryText = normalize(d.querySelector("summary").textContent);
+				const summaryMatch = terms.every(t => summaryText.includes(t));
+				Array.from(d.querySelectorAll("li")).forEach(li => {
+					const liText = normalize(li.textContent);
+					if (terms.every(t => liText.includes(t))) matchedLis.push(li);
+				});
+				textOk = summaryMatch || matchedLis.length > 0;
+			}
+
+			const show = flagOk && textOk;
+			d.hidden = !show;
+			if (show) {
+				visibleCount++;
+
+				let premiereLis = [];
+				if (flagFilters.premiere === "1") {
+					premiereLis = Array.from(d.querySelectorAll('li[data-premiere="1"]'));
+				}
+
+				const highlightLis = [...new Set([...matchedLis, ...premiereLis])];
+				if (highlightLis.length) {
+					highlightLis.forEach(li => li.classList.add("matched"));
+					d.open = true;
+				}
+			}
+		});
+
+		countEl.textContent = visibleCount;
+		updateYearBlocks();
+	}
+
+	let searchDebounce;
+	search.addEventListener("input", () => {
+		clearTimeout(searchDebounce);
+		searchDebounce = setTimeout(applyFilters, 150);
+	});
+	document.querySelectorAll(".filter-group input[type=radio]").forEach(r => r.addEventListener("change", applyFilters));
+
+	// на случай, если браузер восстановил значение поля при возврате назад
+	// (событие input при этом не генерируется само). DOMContentLoaded тут не годится:
+	// при восстановлении из bfcache он не срабатывает вовсе, а при обычной загрузке
+	// браузер иногда заполняет поле позже, чем отрабатывает DOMContentLoaded.
+	// pageshow срабатывает в обоих случаях и уже после восстановления значения.
+	window.addEventListener("pageshow", () => {
+		search.dispatchEvent(new Event("input"));
+	});
+
+	reset.addEventListener("click", () => {
+		clearTimeout(searchDebounce);
+		search.value = "";
+		document.querySelectorAll('.filter-group input[value=""]').forEach(r => r.checked = true);
+		allDetails.forEach(d => {
+			d.hidden = false;
+			d.querySelectorAll("li.matched").forEach(li => li.classList.remove("matched"));
+		});
+		countEl.textContent = total;
+		updateYearBlocks();
+	});
+
+	document.getElementById("cexpand").addEventListener("click", () => allDetails.forEach(d => d.open = true));
+	document.getElementById("ccollapse").addEventListener("click", () => allDetails.forEach(d => d.open = false));
+
+	document.querySelectorAll(".year-heading .y-expand").forEach(btn => {
+		btn.addEventListener("click", () => {
+			const year = btn.closest(".year-block").dataset.year;
+			list.querySelectorAll(`details.concert[data-year="${year}"]`).forEach(d => d.open = true);
+		});
+	});
+	document.querySelectorAll(".year-heading .y-collapse").forEach(btn => {
+		btn.addEventListener("click", () => {
+			const year = btn.closest(".year-block").dataset.year;
+			list.querySelectorAll(`details.concert[data-year="${year}"]`).forEach(d => d.open = false);
+		});
+	});
+
+	document.getElementById("creverse").addEventListener("click", () => {
+		const blocks = Array.from(list.querySelectorAll(".year-block")).reverse();
+		blocks.forEach(b => {
+			list.appendChild(b);
+			const ds = Array.from(b.querySelectorAll("details.concert")).reverse();
+			ds.forEach(d => b.appendChild(d));
+		});
+	});
+});
+</script>
 </body>
 </html>

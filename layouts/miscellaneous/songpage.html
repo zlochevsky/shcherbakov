@@ -38,7 +38,7 @@
 </header>
 <main>
 
-        <div class="wrapper">
+        <div class="wrapper" data-pagefind-filter="type:song" data-pagefind-meta="title:{{ .Title }} - текст, аккорды">
 {{ with .Params.newerEdition }}
 <div class="notice"><p>Это более ранняя редакция песни. <a href="{{ printf "texts/%s/%s.html" .year .id | relURL }}">Перейти к последней авторской редакции</a>.</p></div>
 {{ end }}
@@ -48,7 +48,7 @@
 		{{- $isPoem = .is_poem }}
 	{{- end }}
 {{- end }}
-                    <div id="settings"{{ if $isPoem }} data-poem="true"{{ end }}>
+                    <div id="settings"{{ if $isPoem }} data-poem="true"{{ end }} data-pagefind-ignore>
                         {{- if $isPoem }}
                         <span class="poem-label">стихотворение</span>
                         {{- end }}
