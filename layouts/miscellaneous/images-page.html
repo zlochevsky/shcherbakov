@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+
+<style>
+body { background-color: khaki; color: #333300; }
+a:link { color: #000090; }
+a:visited { color: #555522; }
+h2 { color: #333300; }
+main { max-width: 60em; margin: 0 auto; padding: 0 1em; box-sizing: border-box; }
+main img { max-width: 100%; height: auto; }
+main ul { padding-left: 1.3em; }
+main li { margin: .5em 0; }
+</style>
+
+</head>
+<body>
+<header>
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Images/index.html" | relURL }}">Картинки</a>]</li>
+	{{- $sub := .File.BaseFileName }}
+	{{- range (slice (dict "file" "photos" "name" "Фотографии") (dict "file" "illustrations" "name" "Иллюстрации") (dict "file" "afish" "name" "Афиши") (dict "file" "around-disks" "name" "Вокруг дисков")) }}
+		{{- if ne .file $sub }}
+	<li>[<a href="{{ printf "Images/%s.html" .file | relURL }}">{{ .name }}</a>]</li>
+		{{- end }}
+	{{- end }}
+	<li>[<a href="{{ "fans/index.html" | relURL }}">Фан-клуб</a>]</li>
+</ul>
+<h2>{{ .Title }}</h2>
+</header>
+<main>
+{{ .Content }}
+</main>
+<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+</ul>
+</body>
+</html>
