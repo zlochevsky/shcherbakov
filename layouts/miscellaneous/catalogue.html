@@ -229,6 +229,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // на случай, если браузер восстановил значение поля при возврате назад
+  // (событие input при этом не генерируется само). DOMContentLoaded тут не годится:
+  // при восстановлении из bfcache он не срабатывает вовсе, а при обычной загрузке
+  // браузер иногда заполняет поле позже, чем отрабатывает DOMContentLoaded.
+  // pageshow срабатывает в обоих случаях и уже после восстановления значения.
+  window.addEventListener("pageshow", () => {
+    search.dispatchEvent(new Event("input"));
+  });
+
   clearSearch.addEventListener("click", () => {
     search.value = "";
     search.focus();
