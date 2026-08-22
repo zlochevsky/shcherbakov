@@ -34,8 +34,9 @@
 <body>
 <header style="margin-bottom: 18px">
 	<p style="font-size: 1.6em; margin-bottom: 0"><a href="{{ "/" | relURL }}" style="font-weight: 700; text-decoration: none; color: #333380">{{ .Site.Title }}</a></p>
+	{{- partial "burger.html" }}
+	{{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" . "navClass" "top-menu") }}
 </header>
-{{- partial "menu.html" (dict "menuID" "ctgheadermenu" "page" .) }}
 <main>
 
         <div class="wrapper">

@@ -12,7 +12,7 @@ a:visited {
 .announce li {
 	list-style-type: none;
 	font-weight: bold;
-	margin-bottom: .3em;
+	margin: .5em;
 }
 .announce {
         padding: 0;
@@ -65,22 +65,32 @@ main > div.wrapper > div.collections > ul {
                 font-size: 1em;
                 line-height: 1.2;
         }
-        nav, main {
+        nav {
                 padding: 5px 0;
-                background-color: transparent;
         }
-        nav > div, main > div.wrapper > div {
-                margin: 5px 0;
-                background-color: #ddddcc;
+        main {
+                /* common.css задаёт main тот же padding: 5px 0 — здесь явно обнуляем
+                   именно для главной, чтобы не дублировать отступ ячейки её margin'ом */
+                padding: 0;
         }
-        .bordered {
-                border: 1px solid #fefeee;
-                margin: 0;
-                padding: 2em;
+        /* визуально переставляем меню сразу под бургер, анонсы — ниже,
+           не трогая DOM-порядок (от него зависит переключатель #menu-toggle:checked ~ nav) */
+        header {
+                display: flex;
+                flex-direction: column;
+        }
+        header h1 { order: 1; }
+        header h2 { order: 2; }
+        header .burger { order: 3; align-self: center; }
+        header nav.top-menu { order: 4; }
+        header ul.announce { order: 5; }
+        nav > div {
+                display: block;
+                padding: 1.2em;
+                margin: 1em;
         }
         main > div.wrapper > div {
-                outline: 1px solid white;
-                outline-offset: -.4em;
+                margin: 5px;
                 padding: 1em;
         }
         main > div.wrapper > div.frontimage {

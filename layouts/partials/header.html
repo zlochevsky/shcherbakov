@@ -1,5 +1,6 @@
 <h1>{{- site.Title }}</h1>
     <h2>({{- site.Params.Subtitle }})</h2>
+{{- partial "burger.html" }}
 {{- with site.GetPage "news" }}
           {{- if .Param "showAnnounce" }}
                   {{- with partial "announces.html" }}
@@ -12,5 +13,4 @@
           {{-  end }}
 
 {{- end }}
-{{- partial "burger.html" }}
 {{- partial "menu.html" (dict "menuID" "indexheadermenu" "page" . "navClass" "top-menu") }}
