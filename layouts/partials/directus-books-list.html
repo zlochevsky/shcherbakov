@@ -3,8 +3,8 @@
 		"items/books/"
 		site.Params.directus.token
 		"limit=-1"
-		"fields=id,name,fullname,pages,isbn,bibliography,publisher,year,annotation"
-		"filter[status][_eq]=published&sort=id"
+		"fields=id,name,fullname,pages,isbn,bibliography,publisher,year,annotation,sort,series.id,series.name,series.description,series.sort"
+		"filter[status][_eq]=published&sort=sort,year"
 		}}
 {{ $data := dict }}
 {{ with try (resources.GetRemote $url) }}

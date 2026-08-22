@@ -30,19 +30,58 @@ a:visited {
 <div class="wrapper">
 {{ .Content }}
 
-{{ $books := partial "directus-books-list.html" }}
+{{- $books := partial "directus-books-list.html" -}}
+
+{{- $seriesOrder := slice -}}
+{{- $seriesGroups := dict -}}
+{{- $standalone := slice -}}
+
+{{- range $books.data -}}
+	{{- with .series -}}
+		{{- $sid := printf "%v" .id -}}
+		{{- if not (in $seriesOrder $sid) -}}
+			{{- $seriesOrder = $seriesOrder | append $sid -}}
+			{{- $seriesGroups = merge $seriesGroups (dict $sid (dict "name" .name "description" .description "sort" .sort "books" slice)) -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
+
+{{- range $books.data -}}
+	{{- $book := . -}}
+	{{- if $book.series -}}
+		{{- $sid := printf "%v" $book.series.id -}}
+		{{- $grp := index $seriesGroups $sid -}}
+		{{- $grp = merge $grp (dict "books" ($grp.books | append $book)) -}}
+		{{- $seriesGroups = merge $seriesGroups (dict $sid $grp) -}}
+	{{- else -}}
+		{{- $standalone = $standalone | append $book -}}
+	{{- end -}}
+{{- end -}}
+
+{{- $seriesList := slice -}}
+{{- range $seriesOrder -}}
+	{{- $seriesList = $seriesList | append (index $seriesGroups .) -}}
+{{- end -}}
+{{- $seriesList = sort $seriesList "sort" -}}
+
+{{- range $seriesList }}
+<section class="book-series">
+	<p><b>{{ .name }}.</b>{{ with .description }} {{ . }}{{ end }}</p>
+	<ul class="disk-gallery">
+	{{- range .books }}
+		{{- partial "inline/book-card.html" . -}}
+	{{- end }}
+	</ul>
+</section>
+{{- end }}
+
+{{- with $standalone }}
 <ul class="disk-gallery">
-{{- range $books.data }}
-	{{- $book := . }}
-	<li>
-		<a href="{{ printf "Books/%s.html" .id | relURL }}">
-		<img src="{{ printf "Images/bkp/%s.jpg" .id | relURL }}" alt="{{ $book.name }}">
-		<span class="disk-title">{{ .name }}</span>
-		{{- with .year }}<span class="disk-year">{{ . }}</span>{{ end }}
-		</a>
-	</li>
+{{- range . }}
+	{{- partial "inline/book-card.html" . -}}
 {{- end }}
 </ul>
+{{- end }}
 
 </div>
 </main>
@@ -54,3 +93,13 @@ a:visited {
 </ul>
 </body>
 </html>
+
+{{- define "partials/inline/book-card.html" }}
+	<li>
+		<a href="{{ printf "Books/%s.html" .id | relURL }}">
+		<img src="{{ printf "Images/bkp/%s.jpg" .id | relURL }}" alt="{{ .name }}">
+		<span class="disk-title">{{ .name }}</span>
+		{{- with .year }}<span class="disk-year">{{ . }}</span>{{ end }}
+		</a>
+	</li>
+{{- end }}

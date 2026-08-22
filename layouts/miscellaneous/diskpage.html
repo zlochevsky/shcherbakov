@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
 <head>
-  {{ partial "headbasic.html" . }}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+{{- $title := .Title }}
+{{- if not (hasPrefix (lower $title) "cd диск") }}
+	{{- $title = printf "CD Диск %s" $title }}
+{{- end }}
+<title>{{ $title }}</title>
+<style>
+{{ with resources.Get "css/basic.css" }}
+	{{ .Content | safeCSS }}
+{{ end }}
+</style>
+{{ partialCached "head/js.html" . }}
 
 <style>
 {{- with resources.Get "css/disks.css" }}
