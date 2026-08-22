@@ -12,6 +12,7 @@ main { max-width: 60em; margin: 0 auto; padding: 0 1em; box-sizing: border-box; 
 main img { max-width: 100%; height: auto; }
 main ul { padding-left: 1.3em; }
 main li { margin: .5em 0; }
+.cornernav li.subsection { margin-left: 1.5em; }
 </style>
 
 </head>
@@ -20,11 +21,13 @@ main li { margin: .5em 0; }
 <a name="top"> </a>
 <ul class="cornernav">
 	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
-	<li>[<a href="{{ "Images/index.html" | relURL }}">Картинки</a>]</li>
 	{{- $sub := .File.BaseFileName }}
+	{{- if ne $sub "gallery" }}
+	<li>[<a href="{{ "Images/index.html" | relURL }}">Картинки</a>]</li>
+	{{- end }}
 	{{- range (slice (dict "file" "photos" "name" "Фотографии") (dict "file" "illustrations" "name" "Иллюстрации") (dict "file" "afish" "name" "Афиши") (dict "file" "around-disks" "name" "Вокруг дисков")) }}
 		{{- if ne .file $sub }}
-	<li>[<a href="{{ printf "Images/%s.html" .file | relURL }}">{{ .name }}</a>]</li>
+	<li class="subsection">[<a href="{{ printf "Images/%s.html" .file | relURL }}">{{ .name }}</a>]</li>
 		{{- end }}
 	{{- end }}
 	<li>[<a href="{{ "fans/index.html" | relURL }}">Фан-клуб</a>]</li>

@@ -10,7 +10,7 @@
 <ul>
 <li><img src="new.gif" alt="new" border="0"> <a href="illustr.html#bystrov3">Иллюстрация</a> Елены Ерофеевой к песне <a href="../texts/2001/bystrov.html">"Быстров"</a>.
 <li><a href="illustr.html#12lun">"Двенадцать лун на знамени моём"</a> (<a href="../texts/1990/vostoch1.html">Восточная песня 1</a>).
-<li><a href="illustr.html#lesgy">Иллюстрация</a> к песне <a href="../texts/2001/esli.html">Если</a>.
+<li><a href="illustr.html#leshy">Иллюстрация</a> к песне <a href="../texts/2001/esli.html">Если</a>.
 <li><a href="illustr.html#karavan">Иллюстрация</a> к песне <a href="../texts/1995/karavan.html">Караван</a>.
 <li><a href="illustr.html#eastcoast">Иллюстрация</a> к песне <a href="../texts/2005/eastcoast.html">East coast</a>.
 <li><a href="illustr.html#volxonka">Иллюстрация</a> к песне <a href="../texts/2001/volhonka.html">Волхонка</a>.
@@ -100,7 +100,7 @@
 который "не имелся в виду" Щербаковым в песне <a href="../texts/1996/volk.html">"Волк"</a>.
 
 <li>
-<a href="illustr2.html#amenhotep.jpg">Аменхотеп III.</a> Прислал М. Пасуманский</li>
+<a href="illustr2.html#amenhotep">Аменхотеп III.</a> Прислал М. Пасуманский</li>
 
 <li>
 <a href="illustr2.html#rodo1">"Уже рододендрон зацвел"</a>. Эту красоту размером 160 Кб прислала Марина Вольпе. И еще один 
