@@ -18,6 +18,18 @@ Currently, the website is created and maintained by a small Russian-speaking com
 
 The website is created and maintained by people not affiliated with the author, Mikhail Shcherbakov, although some of them know him personally. Moreover, a significant portion of the content is not approved by the author. Therefore, the website will remain inofficial in the foreseeable future. Nevertheless, it continues to be, as it has been for the past decades, the most complete collection of the author's texts on the internet, as well as materials dedicated to him.
 
+# Terminology
+
+- Performer abbreviations used throughout the database: MKS — Mikhail Konstantinovich Shcherbakov; MLS — Mikhail Leonidovich Starodubtsev.
+- The term "event" almost always refers to a concert (public or private/home) or a studio recording session (or a series of sessions).
+- The project clearly distinguishes between songs (`works` — e.g. in the song catalogue) and performances (`perfs` — e.g. on the concerts list page). Performances belong to events (both concerts and studio recordings), while songs belong to published editions. Performances are naturally linked to songs in the database, but they remain distinct entities.
+
+На русском:
+
+- Сокращения в БД для исполнителей: MKS -- Михаил Константинович Щербаков; MLS -- Михаил Леонидович Стародубцев.
+- Термин "событие" (event) в проекте почти всегда обозначает концерт (публичный или домашний) или сеанс звукозаписи в студии (серию сеансов).
+- Проект чётко различает песни (works) (напр., в каталоге песен) и исполнения (perfs), напр. на странице списка концертов. Исполнения присущи событиям (как концертам, так и студийным записям), песни присущи печатным публикациям. Исполнения естественным образом связаны с песнями в БД, но это разные сущности.
+
 # Structure
 
 Main configuration file is hugo.json in the root directory. All the directories in the root, except the `workfiles` directory, are standard Hugo project directories:
