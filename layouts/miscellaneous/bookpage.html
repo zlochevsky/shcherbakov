@@ -52,7 +52,7 @@ a:visited {
 		{{- $entry := . -}}
 		{{- with .books_id -}}
 			{{- if eq .id $bookId -}}
-				{{- $trackEntries = $trackEntries | append (dict "page" $entry.page "workId" $entry.works_id) -}}
+				{{- $trackEntries = $trackEntries | append (dict "page" (int $entry.page) "workId" $entry.works_id) -}}
 			{{- end -}}
 		{{- end -}}
 	{{- end -}}
@@ -76,7 +76,7 @@ a:visited {
 <main>
 <div class="wrapper diskpage">
 
-<p class="centertext"><img class="cover" src="{{ printf "Images/bkp/%s.jpg" .Params.id | relURL }}" alt="{{ .Title }}"></p>
+<p class="centertext"><a href="{{ printf "Images/bkp/%s-full.jpg" .Params.id | relURL }}" target="_blank" rel="noopener"><img class="cover" src="{{ printf "Images/bkp/%s.jpg" .Params.id | relURL }}" alt="{{ .Title }}"></a></p>
 
 {{- if $tracks }}
 <h3>Список песен</h3>
