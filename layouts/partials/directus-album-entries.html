@@ -1,0 +1,25 @@
+{{- $id := . -}}
+{{ $url := printf "%s%s?%s&%s&%s&%s"
+		site.Params.directus.url
+		"items/sets_entries/"
+		site.Params.directus.token
+		"limit=-1"
+		"fields=perfs_id.works_id,perfs_id.events_id.id,perfs_id.events_id.date,perfs_id.events_id.year,number"
+		(printf "filter[sets_id][id][_eq]=%s" $id)
+		}}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}
