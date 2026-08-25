@@ -34,14 +34,7 @@ a:visited {
 {{- $tracks := slice -}}
 {{- with .Params.id }}
 	{{- $setId := . -}}
-	{{- $studioSets := partial "directus-sets.html" -}}
-	{{- $liveSets := partial "directus-sets-live.html" -}}
-	{{- range $studioSets.data -}}
-		{{- if eq .id $setId }}{{ $set = . }}{{ end -}}
-	{{- end -}}
-	{{- range $liveSets.data -}}
-		{{- if eq .id $setId }}{{ $set = . }}{{ end -}}
-	{{- end -}}
+	{{- $set = partial "directus-set-by-id.html" $setId -}}
 
 	{{- $songs := partial "directus.html" -}}
 	{{- $worksById := dict -}}
@@ -63,7 +56,7 @@ a:visited {
 		{{- $worksById = merge $worksById (dict .id (dict "name" $name "href" $href)) -}}
 	{{- end -}}
 
-	{{- $albumPerfs := partial "directus-albums.html" -}}
+	{{- $albumPerfs := partial "directus-album-entries.html" $setId -}}
 	{{- $trackEntries := slice -}}
 	{{- range $albumPerfs.data -}}
 		{{- $entry := . -}}
@@ -86,11 +79,7 @@ a:visited {
 					{{- end -}}
 				{{- end -}}
 			{{- end -}}
-			{{- with $entry.sets_id -}}
-				{{- if eq .id $setId -}}
-					{{- $trackEntries = $trackEntries | append (dict "number" (int $entry.number) "workId" $workId "eventLabel" $eventLabel) -}}
-				{{- end -}}
-			{{- end -}}
+			{{- $trackEntries = $trackEntries | append (dict "number" (int $entry.number) "workId" $workId "eventLabel" $eventLabel) -}}
 		{{- end -}}
 	{{- end -}}
 	{{- $sorted := sort $trackEntries "number" -}}
