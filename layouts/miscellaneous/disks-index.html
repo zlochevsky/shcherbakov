@@ -45,15 +45,16 @@ a:visited {
 {{- end }}
 </ul>
 
+{{ $liveSets := partial "directus-sets-live.html" }}
 <h2>Концертные записи</h2>
 <ul class="disk-gallery">
-{{- range where site.RegularPages "Params.concert" true }}
-	{{- $page := . }}
+{{- range $liveSets.data }}
+	{{- $disk := . }}
 	<li>
-		<a href="{{ .RelPermalink }}">
-		{{- with .Params.image }}<img src="{{ printf "Images/%s" . | relURL }}" alt="{{ $page.Title }}">{{ end }}
-		<span class="disk-title">{{ .Title }}</span>
-		{{- with .Params.year }}<span class="disk-year">{{ . }}</span>{{ end }}
+		<a href="{{ printf "Disks/%s.html" .id | relURL }}">
+		{{- with .album_img }}<img src="{{ printf "Images/%s" . | relURL }}" alt="{{ $disk.title }}">{{ end }}
+		<span class="disk-title">{{ .title }}</span>
+		{{- with .year }}<span class="disk-year">{{ . }}</span>{{ end }}
 		</a>
 	</li>
 {{- end }}

@@ -4,9 +4,9 @@
    "layout": "diskpage",
    "url": "/Disks/minsk1.html",
    "params": {
+       "id": "minsk1",
        "concert": true,
-       "image": "minsk1.jpg",
-       "year": "1988-1989"
+       "image": "minsk1.jpg"
        }
 }
 

@@ -1,0 +1,24 @@
+{{ $url := printf "%s%s?%s&%s&%s&%s"
+		site.Params.directus.url
+		"items/sets/"
+		site.Params.directus.token
+		"limit=-1"
+		"fields=id,title,year,album_img,comment,extra_images"
+		"filter[ignore_in_catalogue][_eq]=false&filter[is_studio][_eq]=false&filter[is_live][_eq]=true&sort=year"
+		}}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}

@@ -4,9 +4,9 @@
    "layout": "diskpage",
    "url": "/Disks/minsk4.html",
    "params": {
+       "id": "minsk4",
        "concert": true,
-       "image": "minsk4-1.jpg",
-       "year": "2016"
+       "image": "minsk4-1.jpg"
        }
 }
 
@@ -28,3 +28,46 @@
 В.&nbsp;Липай
 
 Сборник объединяет записи нескольких концертов: «Минск» (1988–1989), «Fair Lawn» (2014–2015), «Минск» (10.07.2013), «Stony Brook» (24.05.2015) и разрозненные записи с 1993 года.
+
+---
+
+### Разное (1993+)
+
+1. [Надо было](../texts/2007/desyatpe.html)
+2. [Инициалы](../texts/1996/inicialy.html)
+3. [Троекуровский погост](../texts/2014/bukvynak.html)
+4. [1995](../texts/1995/1995.html)
+5. [Гадалка и ворон](../texts/2010/vsetvoic.html)
+6. [Застольная](../texts/2001/zastolnaya.html)
+7. [Жизнь прекрасна](../texts/2001/zhizn.html)
+8. [Вадемекум](../texts/1993/vademecu.html)
+9. [Тарантелла](../texts/2004/piter.html)
+10. [Менуэт](../texts/1991/menuet.html)
+11. [Напоследок](../texts/2004/proscha4.html)
+12. [Быстров](../texts/2001/bystrov.html)
+13. [Хоровод](../texts/2015/netlubez.html)
+14. [Бродяги](../texts/1992/brodjagi.html)
+15. [Пешком с востока...](../texts/1991/peshkom.html)
+16. [Сокольники](../texts/2009/sokolnik.html)
+17. [Романс-марш](../texts/1990/romansma.html)
+18. [Paris encore](../texts/2004/opyatpar.html)
+19. [Род людской...](../texts/1994/rodljuds.html)
+20. [Сентенциозные куплеты](../texts/1990/sentenci.html)
+21. [Завещание безумца](../texts/1990/zavescha.html)
+22. [Тир Боярд](../texts/2006/tirbayard.html)
+23. [Без названья](../texts/2001/udachny.html)
+24. [Завтра, вчера, всегда: завтра](../texts/2008/neumeesh.html)
+25. [Воробьёвы горы](../texts/2004/uchitel.html)
+26. [Паром](../texts/2005/chtozane.html)
+27. [Это должно случиться...](../texts/1992/etodolzh.html)
+28. [Я чашу свою...](../texts/1986/jachashu.html)
+29. [Суставы](../texts/1990/sustavy.html)
+30. [Это не я](../texts/1996/etoneja.html)
+31. [Калейдоскоп детский](../texts/1993/kalejdos.html)
+32. [Посещение](../texts/1993/posesche.html)
+
+### Вопросы-ответы
+
+1. 03.03.13
+2. 10.03.13
+3. 09.14.08
