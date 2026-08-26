@@ -10,7 +10,9 @@
 		{{ .Content | safeCSS -}}
 	{{ end }}
 	{{ with resources.Get "css/catalogue.css" }}
-		{{ .Content | safeCSS }}
+		{{ with . | resources.ExecuteAsTemplate "css/catalogue.css" $ }}
+			{{ .Content | safeCSS }}
+		{{ end }}
 	{{ end }}
 </style>
 {{ partialCached "head/js.html" . }}

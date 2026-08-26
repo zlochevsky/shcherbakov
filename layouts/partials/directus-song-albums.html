@@ -1,0 +1,26 @@
+{{- $workId := . -}}
+{{ $url := printf "%s%s?%s&%s&%s&%s&%s"
+		site.Params.directus.url
+		"items/sets_entries/"
+		site.Params.directus.token
+		"limit=-1"
+		"fields=sets_id.id,sets_id.title,sets_id.year,sets_id.description,sets_id.is_studio,sets_id.is_live,perfs_id.events_id.year"
+		"filter[sets_id][is_album][_eq]=true&filter[sets_id][ignore_in_catalogue][_eq]=false"
+		(printf "filter[perfs_id][works_id][_eq]=%s" $workId)
+		}}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}

@@ -24,6 +24,11 @@
 {{ with resources.Get "css/songpage.css" -}}
 	<link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{- end }}
+{{ with resources.Get "css/catalogue.css" -}}
+	{{ with . | resources.ExecuteAsTemplate "css/catalogue.css" $ -}}
+		<link rel="stylesheet" href="{{ .RelPermalink }}" />
+	{{- end }}
+{{- end }}
 {{ with resources.Get "css/transpose.css" -}}
     <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{- end }}
@@ -69,6 +74,56 @@
                     </div>
 {{- partial "song.html" .Params -}}
                     <noscript>Страница требует включённого javascript.</noscript>
+{{- $songAlbums := partial "directus-song-albums.html" .Params.id }}
+{{- $albumRows := slice }}
+{{- range $songAlbums.data }}
+	{{- $set := .sets_id }}
+	{{- $format := "" }}
+	{{- with $set.description }}{{ $format = . | lower | strings.TrimSpace }}{{ end }}
+	{{- $perfYear := "" }}
+	{{- with .perfs_id.events_id.year }}{{ $perfYear = . }}{{ end }}
+	{{- $albumRows = $albumRows | append (dict "id" $set.id "title" $set.title "albumYear" $set.year "format" $format "isStudio" $set.is_studio "isLive" $set.is_live "perfYear" $perfYear) }}
+{{- end }}
+{{- $cdRows := slice }}
+{{- $mp3Rows := slice }}
+{{- $otherRows := slice }}
+{{- range $albumRows }}
+	{{- if eq .format "audio cd" }}
+		{{- $cdRows = $cdRows | append . }}
+	{{- else if eq .format "mp3" }}
+		{{- $mp3Rows = $mp3Rows | append . }}
+	{{- else }}
+		{{- $otherRows = $otherRows | append . }}
+	{{- end }}
+{{- end }}
+{{- $cdStudioRows := slice }}
+{{- $cdLiveRows := slice }}
+{{- $cdOtherRows := slice }}
+{{- range $cdRows }}
+	{{- if eq .isStudio true }}
+		{{- $cdStudioRows = $cdStudioRows | append . }}
+	{{- else if eq .isLive true }}
+		{{- $cdLiveRows = $cdLiveRows | append . }}
+	{{- else }}
+		{{- $cdOtherRows = $cdOtherRows | append . }}
+	{{- end }}
+{{- end }}
+{{- $cdStudioRows = sort $cdStudioRows "albumYear" "desc" }}
+{{- $cdLiveRows = sort $cdLiveRows "albumYear" "desc" }}
+{{- $mp3Rows = sort $mp3Rows "albumYear" "desc" }}
+{{- $orderedAlbumRows := slice }}
+{{- range $cdStudioRows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
+{{- range $cdLiveRows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
+{{- range $cdOtherRows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
+{{- range $mp3Rows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
+{{- range $otherRows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
+{{- if $orderedAlbumRows }}
+                    <div id="song-albums">
+{{- range $orderedAlbumRows }}
+                        <p><a href="{{ printf "Disks/%s.html" .id | relURL }}"><span class="{{ .id }}"></span></a> <a href="{{ printf "Disks/%s.html" .id | relURL }}">{{ .title }}</a>{{ with .perfYear }} <span class="perf-source">(запись {{ . }} года)</span>{{ end }}</p>
+{{- end }}
+                    </div>
+{{- end }}
         </div>
 </main>
 
