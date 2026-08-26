@@ -48,9 +48,9 @@
 		{{- with $entry.sets_id -}}
 			{{- if .is_album -}}
 				{{- $existing := index $albumsByWork $workId | default slice -}}
-				{{- $albumInfo := dict "id" .id "title" .title -}}
+				{{- $albumInfo := dict "id" .id "title" .title "shortTitle" (or .short_title .title) "year" .year -}}
 				{{- $albumsByWork = merge $albumsByWork (dict $workId ($existing | append $albumInfo)) -}}
-				{{- $albumTitles = merge $albumTitles (dict .id .title) -}}
+				{{- $albumTitles = merge $albumTitles (dict .id (dict "title" .title "year" .year)) -}}
 				{{- $existingTracks := index $albumTrackEntries .id | default slice -}}
 				{{- $trackEntry := dict "number" $entry.number "workId" $workId -}}
 				{{- $albumTrackEntries = merge $albumTrackEntries (dict .id ($existingTracks | append $trackEntry)) -}}
@@ -122,9 +122,9 @@
 	{{- if $workAlbums -}}
 		{{- $uniqueAlbums := dict -}}
 		{{- range $workAlbums -}}
-			{{- $uniqueAlbums = merge $uniqueAlbums (dict .id .title) -}}
+			{{- $uniqueAlbums = merge $uniqueAlbums (dict .id (dict "shortTitle" .shortTitle "year" .year)) -}}
 		{{- end -}}
-		<span class="albums">{{- range $id, $title := $uniqueAlbums }} <a href="{{ printf "Disks/%s.html" $id | relURL }}"><span class="{{ $id }}" data-balloon="{{ $title }}" data-balloon-pos="up"></span></a>{{- end -}}</span>
+		<span class="albums">{{- range $id, $album := $uniqueAlbums }} <a href="{{ printf "Disks/%s.html" $id | relURL }}"><span class="{{ $id }}" data-balloon="{{ $album.shortTitle }} ({{ $album.year }})" data-balloon-pos="up"></span></a>{{- end -}}</span>
 	{{- end -}}
 	{{- $workBooks := index $booksByWork .id -}}
 	{{- if $workBooks -}}
@@ -146,7 +146,8 @@
 		{{- end -}}
 	{{- end -}}
 	{{- if $trackIds -}}
-		{{- $albumsData = $albumsData | append (dict "title" (index $albumTitles $albumId) "tracks" $trackIds) -}}
+		{{- $albumInfo := index $albumTitles $albumId -}}
+		{{- $albumsData = $albumsData | append (dict "title" $albumInfo.title "year" $albumInfo.year "tracks" $trackIds) -}}
 	{{- end -}}
 {{- end -}}
 			<div id="album-matches"></div>
