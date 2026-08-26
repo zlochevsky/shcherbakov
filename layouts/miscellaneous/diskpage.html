@@ -111,6 +111,19 @@ a:visited {
 	MP3
 </div>
 {{- end }}
+{{- if or $set.spotify_url $set.apple_music_url $set.mkshchcom_url }}
+<div class="disk-banners">
+	{{- with $set.spotify_url }}
+	<a href="{{ . }}" target="_blank" rel="noopener"><img src="{{ "Logos/spotify/Spotify-Black-Logo.wine.svg" | relURL }}" alt="Spotify"></a>
+	{{- end }}
+	{{- with $set.apple_music_url }}
+	<a href="{{ . }}" target="_blank" rel="noopener"><img src="{{ "Logos/apple/mono-black.svg" | relURL }}" alt="Apple Music"></a>
+	{{- end }}
+	{{- with $set.mkshchcom_url }}
+	<a href="{{ . }}" target="_blank" rel="noopener"><img src="{{ "Logos/mkshchcom/mkshch-logo.svg" | relURL }}" alt="mkshch.com"></a>
+	{{- end }}
+</div>
+{{- end }}
 </header>
 <main>
 <div class="wrapper diskpage">
