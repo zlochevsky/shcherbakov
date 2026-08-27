@@ -78,15 +78,6 @@ a:visited {
 
 <p class="centertext"><a href="{{ printf "Images/bkp/%s-full.jpg" .Params.id | relURL }}" target="_blank" rel="noopener"><img class="cover" src="{{ printf "Images/bkp/%s.jpg" .Params.id | relURL }}" alt="{{ .Title }}"></a></p>
 
-{{- if $tracks }}
-<h3>Список песен</h3>
-<ol class="tracklist">
-{{- range $tracks }}
-	<li><a href="{{ .href | relURL }}">{{ .name }}</a> <span class="disk-year">с.&#8239;{{ .page }}</span></li>
-{{- end }}
-</ol>
-{{- end }}
-
 {{ .Content }}
 
 {{- with $book.annotation }}
@@ -105,8 +96,17 @@ a:visited {
 {{ end -}}</pre>
 
 {{- with .Params.buyUrl }}
-<p class="centertext"><a href="{{ . }}">Страница издания на сайте издательства</a></p>
+<p class="centertext"><a href="{{ . }}">Книга на сайте издательства</a></p>
 {{ end }}
+
+{{- if $tracks }}
+<h3 class="tracklist-heading">Список песен</h3>
+<ol class="tracklist">
+{{- range $tracks }}
+	<li><a href="{{ .href | relURL }}">{{ .name }}</a> <span class="disk-year">с.&#8239;{{ .page }}</span></li>
+{{- end }}
+</ol>
+{{- end }}
 
 </div>
 </main>

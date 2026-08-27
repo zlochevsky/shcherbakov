@@ -1,0 +1,26 @@
+{{- $workId := . -}}
+{{ $url := printf "%s%s?%s&%s&%s&%s&%s"
+		site.Params.directus.url
+		"items/books_entries/"
+		site.Params.directus.token
+		"limit=-1"
+		"fields=works_id,books_id.id,books_id.name,books_id.range_years,page"
+		"filter[books_id][status][_eq]=published&filter[books_id][show_on_songpage][_eq]=true"
+		(printf "filter[works_id][_eq]=%s" $workId)
+		}}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}

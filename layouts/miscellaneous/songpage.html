@@ -74,6 +74,13 @@
                     </div>
 {{- partial "song.html" .Params -}}
                     <noscript>Страница требует включённого javascript.</noscript>
+{{- $songBooks := partial "directus-song-books.html" .Params.id }}
+{{- $bookRows := slice }}
+{{- range $songBooks.data }}
+	{{- $book := .books_id }}
+	{{- $bookRows = $bookRows | append (dict "id" $book.id "name" $book.name "rangeYears" $book.range_years "page" .page) }}
+{{- end }}
+{{- $bookRows = sort $bookRows "page" }}
 {{- $songAlbums := partial "directus-song-albums.html" .Params.id }}
 {{- $albumRows := slice }}
 {{- range $songAlbums.data }}
@@ -117,8 +124,11 @@
 {{- range $cdOtherRows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
 {{- range $mp3Rows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
 {{- range $otherRows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
-{{- if $orderedAlbumRows }}
+{{- if or $bookRows $orderedAlbumRows }}
                     <div id="song-albums">
+{{- range $bookRows }}
+                        <p><a href="{{ printf "Books/%s.html" .id | relURL }}"><span class="{{ .id }}"></span></a> <a href="{{ printf "Books/%s.html" .id | relURL }}">{{ .name }}. ({{ .rangeYears }}). Стр. {{ .page }}</a></p>
+{{- end }}
 {{- range $orderedAlbumRows }}
                         <p><a href="{{ printf "Disks/%s.html" .id | relURL }}"><span class="{{ .id }}"></span></a> <a href="{{ printf "Disks/%s.html" .id | relURL }}">{{ .title }}</a>{{ with .perfYear }} <span class="perf-source">(запись {{ . }} года)</span>{{ end }}</p>
 {{- end }}
