@@ -7,12 +7,15 @@
 body { background-color: khaki; color: #333300; }
 a:link { color: #000090; }
 a:visited { color: #555522; }
-h2 { color: #333300; }
+h1, h2 { color: #333300; }
 main { max-width: 60em; margin: 0 auto; padding: 0 1em; box-sizing: border-box; }
 main img { max-width: 100%; height: auto; }
 main ul { padding-left: 1.3em; }
 main li { margin: .5em 0; }
-.cornernav li.subsection { margin-left: 1.5em; }
+.page-subtitle { font-style: italic; color: #666644; margin-top: .2em; padding-left: 0; }
+{{ if .Params.centerText }}
+main p, main h2 { text-align: center; padding-left: 0; }
+{{ end }}
 </style>
 
 </head>
@@ -21,18 +24,12 @@ main li { margin: .5em 0; }
 <a name="top"> </a>
 <ul class="cornernav">
 	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
-	{{- $sub := .File.BaseFileName }}
-	{{- if ne $sub "gallery" }}
 	<li>[<a href="{{ "Images/index.html" | relURL }}">Картинки</a>]</li>
-	{{- end }}
-	{{- range (slice (dict "file" "photos" "name" "Фотографии") (dict "file" "illustrations" "name" "Иллюстрации") (dict "file" "afish" "name" "Афиши") (dict "file" "around-disks" "name" "Вокруг дисков")) }}
-		{{- if ne .file $sub }}
-	<li class="subsection">[<a href="{{ printf "Images/%s.html" .file | relURL }}">{{ .name }}</a>]</li>
-		{{- end }}
-	{{- end }}
 	<li>[<a href="{{ "fans/index.html" | relURL }}">Фан-клуб</a>]</li>
+	<li>[<a href="{{ "Disks/index.html" | relURL }}">Дискография</a>]</li>
 </ul>
-<h2>{{ .Title }}</h2>
+<h1>{{ .Title }}</h1>
+{{ with .Params.subtitle }}<p class="page-subtitle">{{- . -}}</p>{{ end -}}
 </header>
 <main>
 {{ .Content }}
