@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+{{- if .Params.noindex }}
+<meta name="robots" content="noindex, follow">
+{{- end }}
+<title>{{ .Title }}</title>
+<style>
+{{ with resources.Get "css/basic.css" }}
+	{{ .Content | safeCSS }}
+{{ end }}
+</style>
+{{ partialCached "head/js.html" . }}
+</head>
+<body>
+{{- $cycle := dict -}}
+{{- $items := slice -}}
+{{- with .Params.id }}
+	{{- $cycleId := . -}}
+	{{- $cycle = partial "directus-cycle-by-id.html" $cycleId -}}
+
+	{{- $songs := partial "directus.html" -}}
+	{{- $worksById := dict -}}
+	{{- range $songs.data -}}
+		{{- $name := "" -}}
+		{{- if .name -}}
+			{{- if .fname -}}
+				{{- $name = .fname | strings.FirstUpper -}}
+			{{- else -}}
+				{{- $name = .name | strings.FirstUpper -}}
+			{{- end -}}
+		{{- else -}}
+			{{- $name = .fincipit -}}
+		{{- end -}}
+		{{- $worksById = merge $worksById (dict .id (dict "name" $name "date" .date "edit" .edit)) -}}
+	{{- end -}}
+
+	{{- $entries := partial "directus-cycle-entries.html" $cycleId -}}
+	{{- range $entries.data -}}
+		{{- $entry := . -}}
+		{{- with index $worksById $entry.work_id -}}
+			{{- $pageId := $entry.work_id -}}
+			{{- $year := .edit -}}
+			{{- if not $year -}}{{ $year = .date }}{{- end -}}
+			{{- if $entry.page_id -}}
+				{{- $pageId = $entry.page_id -}}
+				{{- $year = .date -}}
+			{{- end -}}
+			{{- $year = math.Abs $year | int -}}
+			{{- $href := printf "texts/%v/%v.html" $year $pageId -}}
+			{{- $items = $items | append (dict "number" (int $entry.number) "name" .name "href" $href) -}}
+		{{- end -}}
+	{{- end -}}
+	{{- $items = sort $items "number" -}}
+{{- end }}
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "catalogue.html" | relURL }}">Каталог песен</a>]</li>
+	<li>[<a href="{{ "fans/index.html" | relURL }}">Фан-клуб</a>]</li>
+</ul>
+<header>
+<h1>{{ .Title }}</h1>
+</header>
+<main>
+<div class="wrapper">
+
+{{- if $items }}
+<ol class="tracklist">
+{{- range $items }}
+	<li><a href="{{ .href | relURL }}">{{ .name }}</a></li>
+{{- end }}
+</ol>
+{{- end }}
+
+{{ .Content }}
+
+{{- with $cycle.comment }}
+<div class="description">{{ . | markdownify }}</div>
+{{ end }}
+
+</div>
+</main>
+<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "catalogue.html" | relURL }}">Каталог песен</a>]</li>
+	<li>[<a href="{{ "fans/index.html" | relURL }}">Фан-клуб</a>]</li>
+</ul>
+</body>
+</html>

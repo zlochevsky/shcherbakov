@@ -1,0 +1,25 @@
+{{- $id := . -}}
+{{ $url := printf "%s%s?%s&%s&%s&%s"
+		site.Params.directus.url
+		"items/cycles_entries/"
+		site.Params.directus.token
+		"limit=-1"
+		"fields=work_id,page_id,number"
+		(printf "filter[cycle_id][_eq]=%s" $id)
+		}}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}
