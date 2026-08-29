@@ -1,0 +1,197 @@
+main > div {
+	width: 100%;
+	margin: 0;
+}
+main, nav {
+	background-color: #f0f0d6; /* ddddcc*/
+}
+main > div > div.wrapper > div {
+	border-width: 1px;
+	border-color: #fefeee;
+	border-style: solid;
+	padding: 5px;
+}
+nav > div {
+	text-align: center;
+}
+
+.preamble-toggle {
+	margin-bottom: 1em;
+	text-align: center;
+}
+.preamble-toggle summary {
+	cursor: pointer;
+	list-style: none;
+	color: #667099;
+	font-style: italic;
+}
+.preamble-toggle summary::-webkit-details-marker { display: none; }
+.preamble-toggle .label-open { display: none; }
+.preamble-toggle[open] .label-open { display: inline; }
+.preamble-toggle[open] .label-closed { display: none; }
+.preamble {
+	font: normal 1em/1.5em serif;
+	text-align: left;
+	margin: 1em 0;
+}
+.preamble-hide-link {
+	display: block;
+	text-align: center;
+	font-style: italic;
+	color: #667099;
+}
+
+.search {
+	display: block;
+	text-align: center;
+}
+#search, #clear-search {
+	height: 3em;
+	padding: .5em;
+	box-sizing: border-box;
+	color: #444444;
+	border-color: #666666;
+	border-style: solid;
+	margin: 0.5rem auto 0.5rem;
+}
+#search:focus {
+	border: 3px solid #666666;
+}
+#search-count {
+	font-size: .85em;
+	color: #667099;
+}
+
+.js-only { display: none; }
+
+#artlist {
+	font: normal 1em/1.5em serif;
+}
+
+.comment-entry {
+	border-bottom: 1px solid #c9c9b3;
+	padding: .6em 0;
+}
+.comment-entry[open] {
+	background: #fefeee;
+	border-radius: 4px;
+	padding: .6em .6em;
+	margin: 0 -.6em;
+}
+.comment-entry summary {
+	cursor: pointer;
+	list-style: none;
+	border-radius: 3px;
+	padding: .15em .3em;
+	margin: 0 -.3em;
+}
+.comment-entry summary::-webkit-details-marker { display: none; }
+.comment-entry summary::before {
+	content: "▸ ";
+	color: #667099;
+}
+.comment-entry[open] summary::before {
+	content: "▾ ";
+}
+/* Hovering the row signals "click expands"; the song link keeps its own
+   distinct link color/underline throughout, so which part of the row is a
+   real hyperlink reads clearly regardless of hover state, not just on it. */
+.comment-entry summary:hover {
+	background: #cfcfae;
+}
+.comment-entry summary .song-name {
+	font-weight: bold;
+	color: #1a4fa0;
+	text-decoration: underline;
+}
+.comment-entry summary a:hover .song-name {
+	color: #0d2f6b;
+	text-decoration-thickness: 2px;
+}
+.comment-entry summary .song-begin {
+	font-style: italic;
+}
+.comment-entry summary .year,
+.poem-tag {
+	font-size: .8em;
+	color: #667099;
+	margin-left: .5em;
+}
+
+.comment-body {
+	margin-top: .5em;
+	padding-left: 1.2em;
+}
+.comment-note + .comment-note {
+	margin-top: .8em;
+	padding-top: .8em;
+	border-top: 1px dotted #c9c9b3;
+}
+.comment-body blockquote {
+	margin-left: 1.5em;
+	color: #333;
+}
+.comment-body .excerpt {
+	font-style: italic;
+	margin-bottom: .3em;
+}
+
+.entry-date {
+	color: #ff0000;
+	font-size: .9em;
+}
+.reader-quote {
+	color: #556b2f;
+}
+.editor-aside {
+	color: #667099;
+	font-style: italic;
+}
+.centered {
+	text-align: center;
+}
+
+mark.search-hit {
+	background: #ffe985;
+	color: inherit;
+	padding: 0 .1em;
+}
+
+@media only screen and (width <= 70em) {
+	body { font-size: 1em; line-height: 1.2; }
+	nav > div { display: block; padding: 1.2em; margin: 1em; }
+	main > div > div.wrapper > div { display: block; padding: 1.5em; margin: 0 5px; }
+}
+@media only screen and (width > 70em) {
+	body { font-size: 16px; }
+	header { margin-bottom: 5px; }
+	nav, main > div { display: table; border-spacing: 5px; }
+	nav > div, main > div > div.wrapper > div { display: table-cell; vertical-align: middle; }
+	main > div > div.wrapper { display: table-row; }
+	/* basic.css sets main's desktop padding to 0 120px, sized for single-column
+	   prose pages; kom.html's list benefits more from columns than from that
+	   much fixed inset, so it gets a smaller value here instead. */
+	main { padding: 0 40px; }
+}
+
+/* Column layout for the collapsed-card list, mirroring catalogue.html's
+   #artlist breakpoints. Columns rebalance around any open card via
+   column-span, which reshuffles neighbouring cards unpredictably - so JS
+   adds .no-columns to #artlist whenever at least one card is open, and these
+   rules simply don't apply then (see the "toggle"/search handling in the
+   script below). */
+.comment-entry {
+	break-inside: avoid;
+}
+#artlist.no-columns {
+	column-count: 1 !important;
+}
+@media (min-width: 100em) { #artlist { column-count: 2; column-gap: 2em; } }
+@media (min-width: 150em) { #artlist { column-count: 3; } }
+@media (min-width: 200em) { #artlist { column-count: 4; } }
+@media (min-width: 250em) { #artlist { column-count: 5; } }
+@media (min-width: 300em) { #artlist { column-count: 6; } }
+@media (min-width: 350em) { #artlist { column-count: 7; } }
+@media (min-width: 400em) { #artlist { column-count: 8; } }
+@media (min-width: 450em) { #artlist { column-count: 9; } }
+@media (min-width: 500em) { #artlist { column-count: 10; } }

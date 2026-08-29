@@ -1,0 +1,23 @@
+{{ $url := printf "%s%s?%s&%s&%s"
+		site.Params.directus.url
+		"items/comments/"
+		site.Params.directus.token
+		"limit=-1"
+		"fields=id,work_id,excerpt,body,author_name,author_contact,date_added,legacy_anchor,sort_order"
+		}}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}

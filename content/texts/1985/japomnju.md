@@ -3,11 +3,16 @@
     "title": "Я помню клевер...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
         "id": "japomnju",
         "tonality": "A",
         "year": "1985",
         "chordsStartAt": 50,
-        "textFinishAtLine": 41
+        "textFinishAtLine": 41,
+        "newerEdition": {
+            "year": "1986",
+            "id": "mojarabo"
+        }
     }
 }

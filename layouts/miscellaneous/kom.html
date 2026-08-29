@@ -1,45 +1,315 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
 <head>
-  {{ partial "headbasic.html" . }}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<title>{{ with .Params.name }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
 <style>
-body { color: #000000; }
-.h1 { font-weight: bold; }
-.epi { text-align:right; margin-top: 20px;}
-.cornernav { text-align: left; }
-.epiwrapper:after { content: ''; display: block; clear: both; vertical-align: bottom;}
-@media only screen and (min-width: 961px) {
-.cornernav { float: left;}
-.epi { float: none; text-align: right; font-style: italic; }
-}
+	{{- with resources.Get "css/basic.css" }}
+		{{ .Content | safeCSS }}
+	{{ end }}
+	{{ with resources.Get "css/kom.css" }}
+		{{ .Content | safeCSS }}
+	{{ end }}
 </style>
+{{ partialCached "head/js.html" . }}
 </head>
 <body>
-<a name="top"> </a>
+{{- $songs := partial "directus.html" -}}
+{{- $comments := partial "directus-comments.html" -}}
 
-<div class="epiwrapper">
+{{- $worksById := dict -}}
+{{- range $songs.data -}}
+	{{- $name := "" -}}
+	{{- if .name -}}
+		{{- if .fname -}}
+			{{- $name = .fname | strings.FirstUpper -}}
+		{{- else -}}
+			{{- $name = .name | strings.FirstUpper -}}
+		{{- end -}}
+	{{- else -}}
+		{{- $name = .fincipit -}}
+	{{- end -}}
+	{{- $year := "" -}}
+	{{- with .date -}}
+		{{- $year = math.Abs . | int -}}
+	{{- end -}}
+	{{- $urlYear := $year -}}
+	{{- $yearDisplay := $year -}}
+	{{- with .edit -}}
+		{{- $urlYear = . -}}
+		{{- $yearDisplay = printf "%v, %v" $year . -}}
+	{{- end -}}
+	{{- $worksById = merge $worksById (dict .id (dict "name" $name "hasName" (not (not .name)) "incipit" .incipit "fincipit" .fincipit "year" $yearDisplay "urlYear" $urlYear "sort" .sort "isPoem" .is_poem)) -}}
+{{- end -}}
+
+{{- $commentsByWork := dict -}}
+{{- range $comments.data -}}
+	{{- $entry := . -}}
+	{{- with .work_id -}}
+		{{- $existing := index $commentsByWork . | default slice -}}
+		{{- $commentsByWork = merge $commentsByWork (dict . ($existing | append $entry)) -}}
+	{{- end -}}
+{{- end -}}
+
+{{- $cards := slice -}}
+{{- range $workId, $workComments := $commentsByWork -}}
+	{{- with index $worksById $workId -}}
+		{{- $sortedComments := sort $workComments "sort_order" -}}
+		{{- $cards = $cards | append (dict "workId" $workId "work" . "comments" $sortedComments) -}}
+	{{- end -}}
+{{- end -}}
+{{- $cards = sort $cards "work.sort" -}}
+
+<a id="top"></a>
 <ul class="cornernav">
-        <li>[<a href="../index.html">На главную страницу</a>]</li>
-        <li>[<a href="fans/index.html">Фан-клуб</a>]</li>
-        <li>[<a href="../catalogue.html">Каталог песен</a>]</li>
-        <li>[<a href="fans/kom2.html">"Словарь заморских слов", часть 2</a>]</li>
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "catalogue.html" | relURL }}">Каталог песен</a>]</li>
+	<li>[<a href="{{ "fans/index.html" | relURL }}">Фан-клуб</a>]</li>
 </ul>
-<aside class="epi">
-	...опасность, которая подстерегает комментаторов &ndash; иногда мы сталкиваемся с результатами этого комментаторского самопопустительства &ndash; это все-таки дать волю своему воображению и поделиться с читателем в рамках комментариев своими достаточно вольными ассоциациями по поводу прочитанного текста. Это можно делать где угодно, но только не в комментариях, в которых мы должны служить читателю...<br>(<a href="http://br00.narod.ru/10660166.htm">Лев Лосев</a>)
-</aside>
-</div>
 <header>
-	  <h1>{{ .Title }}</h1>
-	  {{ if .Param "subtitle" }}<h2 style="font-size: 1.3em; font-weight: normal; margin-top: .3em; margin-bottom: 2.2em">{{ .Params.subtitle }}</h2>{{ end }}
+<h1>{{ .Title }}</h1>
+{{ with .Params.subtitle }}<h2>{{ . }}</h2>{{ end }}
 </header>
-  <main>
-    {{ .Content }}
-  </main>
-	<ul class="cornernav">
-        <li>[<a href="../index.html">На главную страницу</a>]</li>
-        <li>[<a href="fans/index.html">Фан-клуб</a>]</li>
-        <li>[<a href="../catalogue.html">Каталог песен</a>]</li>
-        <li>[<a href="fans/kom2.html">"Словарь заморских слов", часть 2</a>]</li>
+<main>
+<div class="wrapper">
+
+<details class="preamble-toggle">
+	<summary>
+		<span class="label-closed">Прочесть перед первым использованием</span>
+		<span class="label-open">Скрыть</span>
+	</summary>
+	<div class="preamble">
+	{{ .Content }}
+	</div>
+	<a href="#" class="preamble-hide-link">Скрыть</a>
+</details>
+
+<div class="search js-only centertext">
+	Задать фильтр:
+	<input type="text" id="search" placeholder="песня, год, слово из заметки..." autofocus>
+	<button id="clear-search">сброс</button>
+	<div id="search-count"></div>
+</div>
+
+<div id="artlist">
+{{- range $cards }}
+	{{- $work := .work }}
+	{{- $href := printf "texts/%v/%v.html" $work.urlYear .workId | relURL }}
+	<details class="comment-entry" data-id="{{ .workId }}">
+		<summary data-name="{{ or $work.name $work.incipit }}" data-begin="{{ $work.fincipit }}" data-year="{{ $work.year }}" title="Развернуть/свернуть комментарии">
+			<a href="{{ $href }}" title="Перейти к тексту песни"><span class="song-name">{{ or $work.name $work.incipit }}</span></a>
+			{{- if $work.hasName }} (<span class="song-begin">{{ $work.fincipit }}</span>){{ if $work.isPoem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
+			{{- else if $work.isPoem }} <span class="poem-tag">(стихотворение)</span>
+			{{- end }}
+			{{- with $work.year }} <span class="year">{{ . }}</span>{{ end }}
+		</summary>
+		<div class="comment-body">
+		{{- range .comments }}
+			{{- $comment := . -}}
+			{{- $dateDisplay := "" -}}
+			{{- with .date_added -}}
+				{{- $parts := split . "-" -}}
+				{{- if eq (len $parts) 3 -}}
+					{{- $dateDisplay = printf "%s.%s.%s." (index $parts 2) (index $parts 1) (index $parts 0) -}}
+				{{- end -}}
+			{{- end -}}
+			<div class="comment-note">
+				{{- with .excerpt }}<div class="excerpt">{{ . | safeHTML }}</div>{{ end }}
+				<div class="note-text">{{ .body | safeHTML }}{{ if or $comment.author_name $dateDisplay }} ({{ with $comment.author_name }}{{ if $comment.author_contact }}<a href="{{ $comment.author_contact }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ if $dateDisplay }}, {{ end }}{{ end }}{{ with $dateDisplay }}<span class="entry-date">{{ . }}</span>{{ end }}){{ end }}</div>
+			</div>
+		{{- end }}
+		</div>
+	</details>
+{{- end }}
+</div>
+
+</div>
+</main>
+<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "catalogue.html" | relURL }}">Каталог песен</a>]</li>
+	<li>[<a href="{{ "fans/index.html" | relURL }}">Фан-клуб</a>]</li>
 </ul>
 </body>
+<script>
+// @license magnet:?xt=urn:btih:5ac446d35272cc2e4e85e4325b146d0b7ca8f50c&dn=unlicense.txt Unlicense
+document.addEventListener("DOMContentLoaded", () => {
+	for (const e of document.getElementsByClassName("js-only")) {
+		e.classList.remove("js-only");
+	}
+
+	const preambleDetails = document.querySelector(".preamble-toggle");
+	const preambleHideLink = document.querySelector(".preamble-hide-link");
+	if (preambleDetails && preambleHideLink) {
+		preambleHideLink.addEventListener("click", (e) => {
+			e.preventDefault();
+			preambleDetails.open = false;
+			preambleDetails.scrollIntoView({ behavior: "instant", block: "start" });
+		});
+	}
+
+	const artlist = document.getElementById("artlist");
+	const cards = Array.from(document.querySelectorAll("#artlist .comment-entry"));
+	const search = document.getElementById("search");
+	const clearSearch = document.getElementById("clear-search");
+	const searchCount = document.getElementById("search-count");
+
+	function normalize(text) {
+		return (text || "").toLowerCase().trim().normalize("NFD").replace(/\p{Diacritic}/gu, "").replace(/ё/g, "е");
+	}
+
+	// Same folding as normalize(), but without trim(): highlightInBody maps
+	// positions in the concatenated string back to offsets in each raw text
+	// node, so every node's folded text must stay exactly as long as the
+	// original - trimming a node with leading/trailing whitespace would
+	// shift that mapping and highlight the wrong slice of the next node.
+	function normalizeKeepLength(text) {
+		return (text || "").toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "").replace(/ё/g, "е");
+	}
+
+	// Per-card plain-text search index (song name/incipit/year + full note text).
+	cards.forEach(card => {
+		const summary = card.querySelector("summary");
+		const body = card.querySelector(".comment-body");
+		const bits = [summary.dataset.name, summary.dataset.begin, summary.dataset.year, body.textContent];
+		card.dataset.search = normalize(bits.join(" "));
+		card.dataset.wasOpen = card.open ? "1" : "0";
+	});
+
+	// Column layout rebalances around any open card via column-span, which
+	// reshuffles neighbouring cards to a different column mid-read. Simplest
+	// predictable fix: while at least one card is open, drop to one column.
+	function updateColumnState() {
+		artlist.classList.toggle("no-columns", cards.some(card => card.open));
+	}
+	cards.forEach(card => card.addEventListener("toggle", () => {
+		updateColumnState();
+		// Collapsing to one column can move a card far from where it was
+		// clicked (e.g. second-column cards land far down the single flow).
+		// Only for a direct manual open, not while search is auto-expanding
+		// several matches at once - jumping to just one of those would be
+		// arbitrary and fight the search box staying in view.
+		if (card.open && !search.value.trim()) {
+			card.scrollIntoView({ behavior: "instant", block: "start" });
+		}
+	}));
+
+	function clearHighlights(root) {
+		root.querySelectorAll("mark.search-hit").forEach(m => {
+			const parent = m.parentNode;
+			parent.replaceChild(document.createTextNode(m.textContent), m);
+			parent.normalize();
+		});
+	}
+
+	// Cross-tag highlighting: walk all text nodes of a card's body, build one
+	// normalized string spanning node boundaries, locate every match, then
+	// wrap the matching slice of each overlapping text node in <mark>.
+	function highlightInBody(body, terms) {
+		clearHighlights(body);
+		if (!terms.length) return;
+		const walker = document.createTreeWalker(body, NodeFilter.SHOW_TEXT, {
+			acceptNode(node) {
+				return node.nodeValue && node.nodeValue.trim().length ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+			}
+		});
+		const nodes = [];
+		let n;
+		while ((n = walker.nextNode())) nodes.push(n);
+		if (!nodes.length) return;
+
+		let full = "";
+		const offsets = []; // offsets[i] = start index of nodes[i] in `full`
+		nodes.forEach(node => {
+			offsets.push(full.length);
+			full += normalizeKeepLength(node.nodeValue);
+		});
+
+		const ranges = [];
+		terms.forEach(term => {
+			if (!term) return;
+			let from = 0;
+			while (true) {
+				const idx = full.indexOf(term, from);
+				if (idx === -1) break;
+				ranges.push([idx, idx + term.length]);
+				from = idx + term.length;
+			}
+		});
+		if (!ranges.length) return;
+		ranges.sort((a, b) => a[0] - b[0]);
+		const merged = [];
+		ranges.forEach(r => {
+			if (merged.length && r[0] <= merged[merged.length - 1][1]) {
+				merged[merged.length - 1][1] = Math.max(merged[merged.length - 1][1], r[1]);
+			} else {
+				merged.push(r.slice());
+			}
+		});
+
+		// Apply per node, from last node to first so earlier offsets stay valid.
+		for (let i = nodes.length - 1; i >= 0; i--) {
+			const node = nodes[i];
+			const nodeStart = offsets[i];
+			const nodeEnd = nodeStart + node.nodeValue.length;
+			const overlaps = merged.filter(([s, e]) => s < nodeEnd && e > nodeStart);
+			if (!overlaps.length) continue;
+			let text = node.nodeValue;
+			const frag = document.createDocumentFragment();
+			let cursor = text.length;
+			for (let j = overlaps.length - 1; j >= 0; j--) {
+				const [s, e] = overlaps[j];
+				const localStart = Math.max(0, s - nodeStart);
+				const localEnd = Math.min(text.length, e - nodeStart);
+				if (localEnd < cursor) {
+					frag.prepend(document.createTextNode(text.slice(localEnd, cursor)));
+				}
+				const mark = document.createElement("mark");
+				mark.className = "search-hit";
+				mark.textContent = text.slice(localStart, localEnd);
+				frag.prepend(mark);
+				cursor = localStart;
+			}
+			if (cursor > 0) {
+				frag.prepend(document.createTextNode(text.slice(0, cursor)));
+			}
+			node.parentNode.replaceChild(frag, node);
+		}
+	}
+
+	function runSearch() {
+		const raw = normalize(search.value);
+		const terms = raw.split(/\s+/).filter(Boolean);
+		const hasFilter = terms.length > 0;
+		let shown = 0;
+		cards.forEach(card => {
+			const isMatch = !hasFilter || terms.every(term => card.dataset.search.includes(term));
+			card.hidden = !isMatch;
+			if (isMatch) shown++;
+			const body = card.querySelector(".comment-body");
+			if (hasFilter && isMatch) {
+				card.open = true;
+				highlightInBody(body, terms);
+			} else {
+				clearHighlights(body);
+				if (!hasFilter) card.open = card.dataset.wasOpen === "1";
+			}
+		});
+		searchCount.textContent = hasFilter ? `Найдено: ${shown}` : "";
+		updateColumnState();
+	}
+
+	search.addEventListener("input", runSearch);
+	window.addEventListener("pageshow", runSearch);
+	clearSearch.addEventListener("click", () => {
+		search.value = "";
+		runSearch();
+		search.focus();
+	});
+});
+// @license-end
+</script>
 </html>
