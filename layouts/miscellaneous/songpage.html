@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 <title>{{ .Title }} - текст, аккорды</title>
-{{ with .Params.newerEdition }}<meta name="robots" content="noindex, follow">{{ end }}
+{{ if or .Params.newerEdition .Params.noindex }}<meta name="robots" content="noindex, follow">{{ end }}
 <style>
     /* По умолчанию (без JS) показываем только source */
     .view-container {
