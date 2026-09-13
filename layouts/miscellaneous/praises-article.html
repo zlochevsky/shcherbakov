@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<title>{{ .Title }}</title>
+<style>
+	{{- with resources.Get "css/basic.css" }}
+		{{ .Content | safeCSS }}
+	{{ end }}
+	{{- with resources.Get "css/praises-article.css" }}
+		{{ .Content | safeCSS }}
+	{{ end }}
+</style>
+{{ partialCached "head/js.html" . }}
+</head>
+<body>
+<a id="top"></a>
+<ul class="cornernav">
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "praises.html" | relURL }}">Отзывы</a>]</li>
+</ul>
+<header>
+<h1>{{ .Title }}</h1>
+{{ with .Params.subtitle }}<p class="subtitle">{{ . | safeHTML }}</p>{{ end }}
+{{ with .Params.author }}<p class="byline">{{ . }}</p>{{ end }}
+</header>
+<main>
+{{ .Content }}
+</main>
+<ul class="cornernav">
+	<li>[<a href="{{ "praises.html" | relURL }}">Отзывы</a>]</li>
+	<li>[<a href="#top">Наверх</a>]</li>
+</ul>
+</body>
+</html>

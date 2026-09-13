@@ -18,6 +18,16 @@
 	 {{ end }}
   </header>
   <main>
+    {{ $logdata := partial "directus-log.html" }}
+    {{ $scratch := newScratch }}
+    {{- range $logdata.data }}
+    	{{- $year := time.AsTime .date | time.Format "2006" }}
+    	{{- if ne ($scratch.Get "year") $year }}
+    		{{- $scratch.Set "year" $year }}
+    <h2 id="{{ $year }}">{{ $year }}</h2>
+    	{{- end }}
+    <p>{{ time.AsTime .date | time.Format "02.01." }} {{ .text | markdownify }}</p>
+    {{- end }}
     {{ .Content }}
   </main>
 <ul class="cornernav">

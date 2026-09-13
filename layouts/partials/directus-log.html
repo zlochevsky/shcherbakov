@@ -1,0 +1,24 @@
+{{ $params := slice
+	site.Params.directus.token
+	"limit=-1"
+	"sort=-date"
+	"fields=id,date,text,related_event.date,related_event.town,related_event.place"
+	"filter[status][_eq]=published"
+	}}
+{{ $url := printf "%sitems/log_entries/?%s" site.Params.directus.url (delimit $params "&") }}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}
