@@ -36,6 +36,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Archive expired announces in Directus
+        run: |
+          curl -sf -X PATCH "https://db.sch.com.ru/items/announces" \
+            -H "Authorization: Bearer ${{ secrets.DIRECTUS_ANNOUNCES_ARCHIVER_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"query":{"filter":{"_and":[{"status":{"_eq":"published"}},{"expiry_date":{"_lt":"$NOW"}}]}},"data":{"status":"archived"}}'
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
