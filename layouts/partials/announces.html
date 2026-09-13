@@ -24,20 +24,24 @@ Builds the list of currently active concert announces, ready to render as <li> c
 			{{- if eq .day_evening "дневной" }}{{ $prefix = "Дневной концерт" }}
 			{{- else if eq .day_evening "вечерний" }}{{ $prefix = "Вечерний концерт" }}
 			{{- end }}
-			{{- $line = printf "%s Михаила Щербакова" $prefix }}
-			{{- if .with_mls }}{{ $line = print $line " и Михаила Стародубцева" }}{{ end }}
-			{{- $line = print $line " " ($d | time.Format "02.01.2006") }}
-			{{- with .time }}{{ $line = print $line " в " (printf "%.5s" .) }}{{ end }}
-			{{- $line = print $line "." }}
-			{{- with .town }}{{ $line = print $line " " . }}{{ end }}
-			{{- with .place }}{{ $line = print $line " в " . }}{{ end }}
+			{{- $partA := printf "%s Михаила Щербакова" $prefix }}
+			{{- if .with_mls }}{{ $partA = print $partA " и Михаила Стародубцева" }}{{ end }}
+			{{- $partA = print $partA " " ($d | time.Format "02.01.2006") }}
+			{{- with .time }}{{ $partA = print $partA " в " (printf "%.5s" .) }}{{ end }}
+			{{- $partB := "" }}
+			{{- with .town }}{{ $partB = . }}{{ end }}
+			{{- with .place }}{{ $partB = print $partB ", " . }}{{ end }}
 			{{- if .country }}
-				{{- if .state }}{{ $line = print $line " (" .state ", " .country ")" }}
-				{{- else }}{{ $line = print $line " (" .country ")" }}
+				{{- if .state }}{{ $partB = print $partB " (" .state ", " .country ")" }}
+				{{- else }}{{ $partB = print $partB " (" .country ")" }}
 				{{- end }}
 			{{- end }}
-			{{- $line = print $line "." }}
-			{{- with $link }}{{ $line = printf `<a href="%s">%s</a>` (htmlEscape .) $line | safeHTML }}{{ end }}
+			{{- $partB = print $partB "." }}
+			{{- if $link }}
+				{{- $line = printf `%s: <a href="%s">%s</a>` $partA (htmlEscape $link) $partB | safeHTML }}
+			{{- else }}
+				{{- $line = printf "%s: %s" $partA $partB }}
+			{{- end }}
 		{{- end }}
 	{{- else }}
 		{{- $line = $text | markdownify }}
