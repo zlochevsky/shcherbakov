@@ -3,7 +3,7 @@
 	site.Params.directus.token
 	"limit=-1"
 	"sort=event.date"
-	"fields=id,text,link,publish_date,expiry_date,event.date,event.town,event.place,event.status"
+	"fields=id,text,link,publish_date,expiry_date,event.date,event.time,event.town,event.place,event.state,event.country,event.day_evening,event.with_mls,event.status"
 	"filter[status][_eq]=published"
 	(printf "filter[publish_date][_lte]=%s" $today)
 	"filter[_or][0][expiry_date][_null]=true"

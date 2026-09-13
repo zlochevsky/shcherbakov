@@ -20,7 +20,23 @@ Builds the list of currently active concert announces, ready to render as <li> c
 			{{- $line = $text | markdownify }}
 			{{- with $link }}{{ $line = print $line " [Билеты](" . ")." | markdownify }}{{ end }}
 		{{- else }}
-			{{- $line = printf "Концерт %s (%s, %s)." ($d | time.Format "02.01.2006") .town .place }}
+			{{- $prefix := "Концерт" }}
+			{{- if eq .day_evening "дневной" }}{{ $prefix = "Дневной концерт" }}
+			{{- else if eq .day_evening "вечерний" }}{{ $prefix = "Вечерний концерт" }}
+			{{- end }}
+			{{- $line = printf "%s Михаила Щербакова" $prefix }}
+			{{- if .with_mls }}{{ $line = print $line " и Михаила Стародубцева" }}{{ end }}
+			{{- $line = print $line " (" ($d | time.Format "02.01.2006") ")" }}
+			{{- with .time }}{{ $line = print $line " в " (printf "%.5s" .) }}{{ end }}
+			{{- $line = print $line "." }}
+			{{- with .town }}{{ $line = print $line " " . }}{{ end }}
+			{{- with .place }}{{ $line = print $line " в " . }}{{ end }}
+			{{- if .country }}
+				{{- if .state }}{{ $line = print $line " (" .state ", " .country ")" }}
+				{{- else }}{{ $line = print $line " (" .country ")" }}
+				{{- end }}
+			{{- end }}
+			{{- $line = print $line "." }}
 			{{- with $link }}{{ $line = print $line " [Билеты](" . ")." | markdownify }}{{ end }}
 		{{- end }}
 	{{- else }}
