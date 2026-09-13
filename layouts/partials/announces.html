@@ -18,7 +18,7 @@ Builds the list of currently active concert announces, ready to render as <li> c
 			{{- $line = printf "Концерт %s (%s) отменён." ($d | time.Format "02.01.2006") .town }}
 		{{- else if $text }}
 			{{- $line = $text | markdownify }}
-			{{- with $link }}{{ $line = print $line " [Билеты](" . ")." | markdownify }}{{ end }}
+			{{- with $link }}{{ $line = printf `<a href="%s">%s</a>` (htmlEscape .) $line | safeHTML }}{{ end }}
 		{{- else }}
 			{{- $prefix := "Концерт" }}
 			{{- if eq .day_evening "дневной" }}{{ $prefix = "Дневной концерт" }}
@@ -26,7 +26,7 @@ Builds the list of currently active concert announces, ready to render as <li> c
 			{{- end }}
 			{{- $line = printf "%s Михаила Щербакова" $prefix }}
 			{{- if .with_mls }}{{ $line = print $line " и Михаила Стародубцева" }}{{ end }}
-			{{- $line = print $line " (" ($d | time.Format "02.01.2006") ")" }}
+			{{- $line = print $line " " ($d | time.Format "02.01.2006") }}
 			{{- with .time }}{{ $line = print $line " в " (printf "%.5s" .) }}{{ end }}
 			{{- $line = print $line "." }}
 			{{- with .town }}{{ $line = print $line " " . }}{{ end }}
@@ -37,11 +37,11 @@ Builds the list of currently active concert announces, ready to render as <li> c
 				{{- end }}
 			{{- end }}
 			{{- $line = print $line "." }}
-			{{- with $link }}{{ $line = print $line " [Билеты](" . ")." | markdownify }}{{ end }}
+			{{- with $link }}{{ $line = printf `<a href="%s">%s</a>` (htmlEscape .) $line | safeHTML }}{{ end }}
 		{{- end }}
 	{{- else }}
 		{{- $line = $text | markdownify }}
-		{{- with $link }}{{ $line = print $line " [Билеты](" . ")." | markdownify }}{{ end }}
+		{{- with $link }}{{ $line = printf `<a href="%s">%s</a>` (htmlEscape .) $line | safeHTML }}{{ end }}
 	{{- end }}
 	{{- $items = $items | append $line }}
 {{- end }}
