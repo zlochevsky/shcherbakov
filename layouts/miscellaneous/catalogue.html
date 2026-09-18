@@ -113,6 +113,7 @@
 		{{- end }}">
 	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>
 	</span>
+	{{- if .is_new }}<span class="new" data-balloon="новое" data-balloon-pos="up"></span>{{ end -}}
 	{{ if .name -}}
 		(<span id="begin">{{ .fincipit }}</a></span>){{ if .is_poem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
 	{{- else if .is_poem -}}
