@@ -79,10 +79,10 @@ a:visited {
 					{{- end -}}
 				{{- end -}}
 			{{- end -}}
-			{{- $trackEntries = $trackEntries | append (dict "number" (int $entry.number) "workId" $workId "eventLabel" $eventLabel) -}}
+			{{- $trackEntries = $trackEntries | append (dict "num" (int $entry.num) "workId" $workId "eventLabel" $eventLabel) -}}
 		{{- end -}}
 	{{- end -}}
-	{{- $sorted := sort $trackEntries "number" -}}
+	{{- $sorted := sort $trackEntries "num" -}}
 	{{- range $sorted -}}
 		{{- $eventLabel := .eventLabel -}}
 		{{- with index $worksById .workId -}}
@@ -98,19 +98,7 @@ a:visited {
 <header>
 <h1>{{ .Title }}</h1>
 {{- with or .Params.year $set.year }}<h4>{{ . }}</h4>{{ end }}
-{{- $format := "" }}
-{{- with $set.description }}{{ $format = . | lower | strings.TrimSpace }}{{ end }}
-{{- if eq $format "audio cd" }}
-<div class="disk-format-badge disk-format-cd">
-	<svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true"><circle cx="7.5" cy="7.5" r="6.2" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="7.5" r="1.6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
-	Audio CD
-</div>
-{{- else if eq $format "mp3" }}
-<div class="disk-format-badge disk-format-mp3">
-	<svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true"><circle cx="7.5" cy="7.5" r="6.2" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="7.5" cy="7.5" r="1.6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
-	MP3
-</div>
-{{- end }}
+{{- with $set.description }}{{ with partial "disk-format.html" . }}<div>{{ partial "disk-format-badge.html" (dict "key" .key "label" .full) }}</div>{{ end }}{{ end }}
 {{- if or $set.spotify_url $set.apple_music_url $set.mkshchcom_url }}
 <div class="disk-banners">
 	{{- with $set.spotify_url }}

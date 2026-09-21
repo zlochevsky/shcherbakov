@@ -24,7 +24,7 @@
 
 ### Отзывы в печати.
 
-- **Косолапов&nbsp;Б.** [Какого вкуса знаки зодиака?](https://deniskhin.ru/scherbakov/Praises/kosolapov.html) // Новое русское слово. 1996. &#8470;&nbsp;30 (216), 31 мая. С.&nbsp;34. <span class="datum">[03.11.24]</span>
+- **Косолапов&nbsp;Б.** [Какого вкуса знаки зодиака?](Praises/kosolapov.html) // Новое русское слово. 1996. &#8470;&nbsp;30 (216), 31 мая. С.&nbsp;34. <span class="datum">[03.11.24]</span>
 - **В. В. Биткинова**["Образы русской культуры XVIII-XIX веков в бардовской поэзии"](https://www.calameo.com/read/001277039bd8ed9f3503c)
 Учебное пособие по спецкурсу и спецсеминару для студентов, обучающихся по направлению "Филология. Отечественная филология". Саратов, ИЦ "НАУКА", 2012 г.
 Песни Михаила Щербакова упоминаются в разделе "Образы Карамзина и декабристов в бардовской поэзии" на страницах 195-198. <span class="datum">[25.10.24]</span>
@@ -54,7 +54,7 @@
 - **Татьяна Вольтская**, ["По дивным песенкам твоим..."](Praises/divnym.html) статья из газеты "Невское время" (Санкт-Петербург), 02.08.1997. Прислала [Змейка](mailto:zmeyka-lm@narod.ru) <span class="datum"> [14.02.03]</span>
 - **Роман Гуревич**. ["Необычное интервью в Абу-Торе"](Praises/Vesti.html). Статья из Иерусалимской газеты "Вести" от 16 мая 1996. Написано скверно, но информативно. Прислал  [Михаил Палатник.](mailto:misha@amil.co.il) 
 - **О.&nbsp;Елисеев**. [Поэт с гитарой не вымер](Praises/izv-mar03.html). Заметка из газеты "Известия" от 26 марта 2003 года. Прислал [Леонид Блехер](mailto:leonid-blekher@mtu-net.ru) <span class="datum">[29.03.03]</span>.
-- <a name="erofeev"></a>!(/Images/new.gif") **Александр&nbsp;Ерофеев**. [Детали и дали](https://ridero.ru/books/detali_i_dali/). В книгу вошли опубликованные на нашем сайте эссе ["Про Щербакова, авторскую песню и чудеса"](fans/erofeev.html") и ["Неправда всё вокруг"](fans/erofeev2.html") ([иллюстрация](Images/illustr.html#bystrov3) из книги) <span class="datum">[03.08.20]</span>.
+- <a name="erofeev"></a><img src="Images/new.gif" alt="new"> **Александр&nbsp;Ерофеев**. [Детали и дали](https://ridero.ru/books/detali_i_dali/). В книгу вошли опубликованные на нашем сайте эссе ["Про Щербакова, авторскую песню и чудеса"](Praises/erofeev.html) и ["Неправда всё вокруг"](Praises/erofeev2.html) ([иллюстрация](Images/illustr.html#bystrov3) из книги) <span class="datum">[03.08.20]</span>.
 - **Борис Жуков**, журналист, автор многих работ об авторской песне. Статьи и заметки, по-видимому, публикуются в Интернете впервые.
   - [Три письма об одном авторе (Из переписки с воображаемым другом, покинувшим страну 15 лет назад)](FOM/zhukov.html) // Cборник ["Как варяг, наблюдающий нравы славян..."](FOM/index.html). Издание Фонда "Общественное мнение", 1996.
   - ["...в сравнении со смертью и любовью".](Praises/zhukov.html) Cтатья из журнала "Библиография", No. 4, 1996. Прислал [Игорь Грызлов](mailto:apksp@narod.ru). <span class="datum"> [01.12.99]</span>  
@@ -106,7 +106,7 @@
   - [**Алексей Тугарев**](mailto:tugarev@yandex.ru). ["Метрический репертуар Михаила Щербакова"](fans/utf/metrica.html) <span class="datum">[26.11.24]</span>.
   - [**Алексей Тугарев**](mailto:tugarev@yandex.ru). ["Чужая музыка: песни на заимствованные мелодии и музыкальные цитаты"](fans/utf/alien.html) <span class="datum">[26.11.24]</span>.
 - [**Елена Бурд**](mailto:l_burd@mail.ru). [&laquo;Прописные истины&raquo;](Praises/burd.html) &mdash; эссе. <span class="datum">[7.06.04]</span>
-- !(/Images/new.gif") **[Александр Ерофеев](mailto:sashayerofeyev@rambler.ru)**. [Про Щербакова, авторскую песню и чудеса](/Praises/erofeev.html).
+- <img src="Images/new.gif" alt="new"> **[Александр Ерофеев](mailto:sashayerofeyev@rambler.ru)**. [Про Щербакова, авторскую песню и чудеса](Praises/erofeev.html).
 <span class="datum">[24.03.15]</span>
 <!-- li> <img src="./Images/new.gif" alt="new" border="0"> **[Мария Ерохина](mailto:marierre@yandex.ru)**. [Михаил Щербаков: миры, которые он создает](./Praises/fidelity.html).
 <span class="datum">[18.06.09]</span></LI-->

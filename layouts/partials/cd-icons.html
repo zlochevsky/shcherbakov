@@ -1,0 +1,18 @@
+{{- /* Одним CSS-файлом (с data-URI) все SVG-иконки дисков из assets/svg/cd; класс = имя файла */ -}}
+{{- $css := "" -}}
+{{- range resources.Match "svg/cd/*.svg" -}}
+	{{- $svg := .Content -}}
+	{{- range slice (slice "\"" "'") (slice "#" "%23") (slice "<" "%3C") (slice ">" "%3E") (slice "\n" "") (slice "\r" "") -}}
+		{{- $svg = replace $svg (index . 0) (index . 1) -}}
+	{{- end -}}
+	{{- /* Ширина по пропорциям viewBox при высоте 24px из catalogue.css: значок может быть шире диска */ -}}
+	{{- $width := 24 -}}
+	{{- with findRESubmatch `viewBox=["']\s*[-\d.]+[\s,]+[-\d.]+[\s,]+([\d.]+)[\s,]+([\d.]+)` $svg 1 -}}
+		{{- $m := index . 0 -}}
+		{{- $width = div (mul 24 (float (index $m 1))) (float (index $m 2)) -}}
+	{{- end -}}
+	{{- $css = printf "%s.%s{width:%.2fpx;background:url(\"data:image/svg+xml,%s\") center/contain no-repeat}\n" $css (path.BaseName .Name) $width $svg -}}
+{{- end -}}
+{{- with resources.FromString "css/cd-icons.css" $css | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{- end -}}

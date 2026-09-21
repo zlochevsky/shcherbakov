@@ -16,10 +16,12 @@
 {{ partialCached "head/js.html" . }}
 </head>
 <body>
+{{- $backUrl := .Params.backUrl | default "praises.html" }}
+{{- $backTitle := .Params.backTitle | default "Отзывы" }}
 <a id="top"></a>
 <ul class="cornernav">
 	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
-	<li>[<a href="{{ "praises.html" | relURL }}">Отзывы</a>]</li>
+	<li>[<a href="{{ $backUrl | relURL }}">{{ $backTitle }}</a>]</li>
 </ul>
 <header>
 <h1>{{ .Title }}</h1>
@@ -30,7 +32,7 @@
 {{ .Content }}
 </main>
 <ul class="cornernav">
-	<li>[<a href="{{ "praises.html" | relURL }}">Отзывы</a>]</li>
+	<li>[<a href="{{ $backUrl | relURL }}">{{ $backTitle }}</a>]</li>
 	<li>[<a href="#top">Наверх</a>]</li>
 </ul>
 </body>

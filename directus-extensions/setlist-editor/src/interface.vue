@@ -11,7 +11,7 @@ const PERF_COLLECTION = 'perfs';   // коллекция исполнений
 const WORK_COLLECTION = 'works';   // справочник песен
 const EVENT_FK         = 'events_id'; // FK исполнения -> концерт (events)
 const WORK_FK          = 'works_id';  // FK исполнения -> песня (works)
-const NUMBER_FIELD     = 'number';    // порядок в программе — НЕ отправляем при
+const NUMBER_FIELD     = 'num';       // порядок в программе — НЕ отправляем при
                                        // создании: Flow «Auto perf id» сам
                                        // проставляет id и number (max+1), если
                                        // они не пришли в payload. Если слать

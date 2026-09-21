@@ -1,5 +1,5 @@
 {
-   "title": "«Сверчки-кузнечики» («Цыганочка»)",
+   "title": "Щербаков, «Сверчки-кузнечики» («Цыганочка»)",
    "type": "miscellaneous",
    "layout": "praises-article",
    "url": "/Praises/gipsy.html",

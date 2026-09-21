@@ -6,7 +6,7 @@
    "lastmod": "2007-12-30"
 }
 
-<p><img src="/Images/mksch.gif" width="172" height="252" style="float:left; margin: 0 20px 10px 0;"></p>
+<p><img src="../Images/mksch.gif" width="172" height="252" style="float:left; margin: 0 20px 10px 0;"></p>
 
 <p><i>Это первая книга, посвященная творчеству Михаила Щербакова, в ней собраны критические статьи, литературные эссе и исследования, освещающие его творчество с самых разных точек зрения.</i></p>
 
@@ -21,29 +21,29 @@ ISBN 9785942824556<br>
 <p><i>Примечание: ссылки даны на материалы, опубликованные на нашем сайте и послужившие основой для текстов сборника. Исключение составляют текст предисловия, статьи И.Вайсмана, А.Казанцева и А.Карташова, любезно присланные О.Савоскул, и результаты лексического анализа Л.Блехера. Эти материалы размещены на сайте уже после выхода сборника. &copy; Все права принадлежат авторам</i></p>
 
 <ul>
-<li><b>Оксана Савоскул</b>. <a href="/Praises/predislo.html">Михаил Щербаков: постмодернистское лицо авторской песни</a> (Вместо предисловия)&nbsp;&mdash; c.7.</li>
-<li><b>Лев Аннинский</b>. <a href="/Praises/annin.html">Заговаривающий бездну</a>&nbsp;&mdash; c.15.</li>
-<li><b>Дмитрий Быков</b>. <a href="/Praises/bykov_pejzazh.html">Пейзаж с Щербаковым</a>&nbsp;&mdash; c.24.</li>
-<li><b>Анатолий Черняков</b>. <a href="/Praises/chern-annin.html">Пространство Щербакова, или Немного о бездне</a>&nbsp;&mdash; c.35.</li>
-<li><b>Екатерина Зотова</b>. <a href="/Praises/katja-annin.html">Что такое критика...</a> (Несколько замечаний к статье Л. Аннинского &laquo;Заговаривающий бездну&raquo;)&nbsp;&mdash; c.38.</li>
-<li><b>Георгий Хазагеров</b>. <a href="/Praises/xazagerov.html">О поэтике Михаила Щербакова</a>&nbsp;&mdash; c.42.</li>
-<li><b>Оксана Савоскул</b>. <a href="/fans/Demiurg/index.html">Мир Демиурга Щ.</a> (продолжение разговора после концерта)&nbsp;&mdash; c.63.</li>
-<li><b>Георгий Хазагеров, Светлана Хазагерова</b>. <a href="/Praises/xazagerov4.html">От корабля к рыбе</a>&nbsp;&mdash; c.155.</li>
+<li><b>Оксана Савоскул</b>. <a href="../Praises/predislo.html">Михаил Щербаков: постмодернистское лицо авторской песни</a> (Вместо предисловия)&nbsp;&mdash; c.7.</li>
+<li><b>Лев Аннинский</b>. <a href="../Praises/annin.html">Заговаривающий бездну</a>&nbsp;&mdash; c.15.</li>
+<li><b>Дмитрий Быков</b>. <a href="../Praises/bykov_pejzazh.html">Пейзаж с Щербаковым</a>&nbsp;&mdash; c.24.</li>
+<li><b>Анатолий Черняков</b>. <a href="../Praises/chern-annin.html">Пространство Щербакова, или Немного о бездне</a>&nbsp;&mdash; c.35.</li>
+<li><b>Екатерина Зотова</b>. <a href="../Praises/katja-annin.html">Что такое критика...</a> (Несколько замечаний к статье Л. Аннинского &laquo;Заговаривающий бездну&raquo;)&nbsp;&mdash; c.38.</li>
+<li><b>Георгий Хазагеров</b>. <a href="../Praises/xazagerov.html">О поэтике Михаила Щербакова</a>&nbsp;&mdash; c.42.</li>
+<li><b>Оксана Савоскул</b>. <a href="../fans/Demiurg/index.html">Мир Демиурга Щ.</a> (продолжение разговора после концерта)&nbsp;&mdash; c.63.</li>
+<li><b>Георгий Хазагеров, Светлана Хазагерова</b>. <a href="../Praises/xazagerov4.html">От корабля к рыбе</a>&nbsp;&mdash; c.155.</li>
 <li><b>Георгий Хазагеров, Светлана Хазагерова</b>. Рыба&nbsp;&mdash; c.159.</li>
-<li><b>Оксана Савоскул</b>. <a href="/fans/Demiurg/disappointment.html">Тема разочарования в поэзии Михаила Щербакова</a>&nbsp;&mdash; c.166.</li>
-<li><b>Алексей Карташов</b>. <a href="/Praises/kartashov.html">&laquo;Chinatown&raquo;: как это делается</a>&nbsp;&mdash; c.205.</li>
-<li><b>Иосиф Вайсман</b>. <a href="/Praises/weisman.html">Чайнатаун, Житомир, Олимп: палимпсесты Михаила Щербакова</a>&nbsp;&mdash; c.209.</li>
-<li><b>Ксения Павленко</b>. <a href="/Praises/baudelaire.html">Бодлеровская атмосфера в песне Щербакова &laquo;Опять Париж&raquo;</a>&nbsp;&mdash; c.216.</li>
-<li><b>Анна Копылова</b>. <a href="/Praises/fridrikh.html">Куда идет Фридрих?</a> (анализ текста песни М. Щербакова &laquo;Фридрих идет&raquo;)&nbsp;&mdash; c.218.</li>
-<li><b>Артем Казанцев</b>. <a href="/Praises/kazanzev.html">Ружье имени Чехова, кинжал имени Щербакова</a>&nbsp;&mdash; c.231.</li>
-<li><b>Александра Спиглазова</b>. <a href="/Praises/polemika.html">Полемика с литературной традицией в диптихе М. Щербакова &laquo;Мой несчастный друг&raquo;&raquo;</a>&nbsp;&mdash; c.236.</li>
-<li><b>Георгий Хазагеров</b>. <a href="/Praises/xazagerov3.html">Парабола и парадигма в творчестве Высоцкого, Окуджавы, Щербакова</a>&nbsp;&mdash; c.242.</li>
-<li><b>Оксана Савоскул</b>. <a href="/Praises/savoskul2.html">Любовь и смерть в поэзии как выходы в метафизическое пространство</a>&nbsp;&mdash; c.249.</li>
-<li><b>Алексей Тугарев</b>. <a href="/Praises/tugarev.html">Михаил Щербаков и возможности русского стиха</a>&nbsp;&mdash; c.289.</li>
-<li><b>Леонид Блехер</b>. <a href="/Praises/rabota.html">Некоторые результаты лексического анализа песенной лирики Михаила Щербакова</a>&nbsp;&mdash; c.292.</li>
-<li><b>Михаил Капустин</b>. <a href="/Praises/kapustin.html">Усилитель на 1000 ватт</a> (Музыка в песнях Михаила Щербакова)&nbsp;&mdash; c.295.</li>
-<li><b>Григорий Сапов</b>. <a href="/Praises/sapov.html">Оправдание Цинцинната</a> (Размышления о Щербакове)&nbsp;&mdash; c.299.</li>
-<li><b>Владимир Смирнов</b>. Ad memoriam. <a href="/fans/smirnov/97-predpolo.txt">Отрывки из переписки</a> по поводу песни &laquo;Предположим, герой...&raquo;&nbsp;&mdash; c.308.</li>
+<li><b>Оксана Савоскул</b>. <a href="../fans/Demiurg/disappointment.html">Тема разочарования в поэзии Михаила Щербакова</a>&nbsp;&mdash; c.166.</li>
+<li><b>Алексей Карташов</b>. <a href="../Praises/kartashov.html">&laquo;Chinatown&raquo;: как это делается</a>&nbsp;&mdash; c.205.</li>
+<li><b>Иосиф Вайсман</b>. <a href="../Praises/weisman.html">Чайнатаун, Житомир, Олимп: палимпсесты Михаила Щербакова</a>&nbsp;&mdash; c.209.</li>
+<li><b>Ксения Павленко</b>. <a href="../Praises/baudelaire.html">Бодлеровская атмосфера в песне Щербакова &laquo;Опять Париж&raquo;</a>&nbsp;&mdash; c.216.</li>
+<li><b>Анна Копылова</b>. <a href="../Praises/fridrikh.html">Куда идет Фридрих?</a> (анализ текста песни М. Щербакова &laquo;Фридрих идет&raquo;)&nbsp;&mdash; c.218.</li>
+<li><b>Артем Казанцев</b>. <a href="../Praises/kazanzev.html">Ружье имени Чехова, кинжал имени Щербакова</a>&nbsp;&mdash; c.231.</li>
+<li><b>Александра Спиглазова</b>. <a href="../Praises/polemika.html">Полемика с литературной традицией в диптихе М. Щербакова &laquo;Мой несчастный друг&raquo;&raquo;</a>&nbsp;&mdash; c.236.</li>
+<li><b>Георгий Хазагеров</b>. <a href="../Praises/xazagerov3.html">Парабола и парадигма в творчестве Высоцкого, Окуджавы, Щербакова</a>&nbsp;&mdash; c.242.</li>
+<li><b>Оксана Савоскул</b>. <a href="../Praises/savoskul2.html">Любовь и смерть в поэзии как выходы в метафизическое пространство</a>&nbsp;&mdash; c.249.</li>
+<li><b>Алексей Тугарев</b>. <a href="../Praises/tugarev.html">Михаил Щербаков и возможности русского стиха</a>&nbsp;&mdash; c.289.</li>
+<li><b>Леонид Блехер</b>. <a href="../Praises/rabota.html">Некоторые результаты лексического анализа песенной лирики Михаила Щербакова</a>&nbsp;&mdash; c.292.</li>
+<li><b>Михаил Капустин</b>. <a href="../Praises/kapustin.html">Усилитель на 1000 ватт</a> (Музыка в песнях Михаила Щербакова)&nbsp;&mdash; c.295.</li>
+<li><b>Григорий Сапов</b>. <a href="../Praises/sapov.html">Оправдание Цинцинната</a> (Размышления о Щербакове)&nbsp;&mdash; c.299.</li>
+<li><b>Владимир Смирнов</b>. Ad memoriam. <a href="../fans/smirnov/97-predpolo.html">Отрывки из переписки</a> по поводу песни &laquo;Предположим, герой...&raquo;&nbsp;&mdash; c.308.</li>
 </ul>
 
 <p class="center">Книгу можно купить в Москве в сети ОГИ, в Билингве, в Торговом Доме Книги <a href="http://www.moscowbooks.ru/book.asp?id=389479">&laquo;МОСКВА&raquo;</a>, заказать в интернет-магазине <a href="http://www.labirint-shop.ru/authors/49040/">&laquo;Лабиринт&raquo;</a>.</p>

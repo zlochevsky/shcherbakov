@@ -1,0 +1,9 @@
+{{- /* Формат диска по sets.description: возвращает dict key/short/full; по умолчанию Audio CD */ -}}
+{{- $desc := lower (strings.TrimSpace (. | default "")) -}}
+{{- $res := dict "key" "cd" "short" "CD" "full" "Audio CD" -}}
+{{- range $key, $f := site.Data.disk_formats -}}
+	{{- if eq $f.description $desc -}}
+		{{- $res = dict "key" $key "short" $f.short "full" $f.full -}}
+	{{- end -}}
+{{- end -}}
+{{- return $res -}}

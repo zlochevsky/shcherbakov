@@ -50,11 +50,11 @@
 		{{- with $entry.sets_id -}}
 			{{- if .is_album -}}
 				{{- $existing := index $albumsByWork $workId | default slice -}}
-				{{- $albumInfo := dict "id" .id "title" .title "shortTitle" (or .short_title .title) "year" .year -}}
+				{{- $albumInfo := dict "id" .id "title" .title "shortTitle" (or .short_title .title) "year" .year "format" .description "abbrev" .abbrev -}}
 				{{- $albumsByWork = merge $albumsByWork (dict $workId ($existing | append $albumInfo)) -}}
 				{{- $albumTitles = merge $albumTitles (dict .id (dict "title" .title "year" .year)) -}}
 				{{- $existingTracks := index $albumTrackEntries .id | default slice -}}
-				{{- $trackEntry := dict "number" $entry.number "workId" $workId -}}
+				{{- $trackEntry := dict "num" (int $entry.num) "workId" $workId -}}
 				{{- $albumTrackEntries = merge $albumTrackEntries (dict .id ($existingTracks | append $trackEntry)) -}}
 			{{- end -}}
 		{{- end -}}
@@ -125,9 +125,20 @@
 	{{- if $workAlbums -}}
 		{{- $uniqueAlbums := dict -}}
 		{{- range $workAlbums -}}
-			{{- $uniqueAlbums = merge $uniqueAlbums (dict .id (dict "shortTitle" .shortTitle "year" .year)) -}}
+			{{- $uniqueAlbums = merge $uniqueAlbums (dict .id (dict "shortTitle" .shortTitle "year" .year "format" .format "abbrev" .abbrev)) -}}
 		{{- end -}}
-		<span class="albums">{{- range $id, $album := $uniqueAlbums }} <a href="{{ printf "Disks/%s.html" $id | relURL }}"><span class="{{ $id }}" data-balloon="{{ $album.shortTitle }} ({{ $album.year }})" data-balloon-pos="up"></span></a>{{- end -}}</span>
+		{{- $groups := dict -}}
+		{{- range $id, $album := $uniqueAlbums -}}
+			{{- $f := partial "disk-format.html" $album.format -}}
+			{{- $items := index $groups $f.key | default slice -}}
+			{{- $groups = merge $groups (dict $f.key ($items | append (dict "id" $id "album" $album))) -}}
+		{{- end -}}
+		<span class="albums">
+		{{- range slice "cd" "mp3" "da" -}}
+			{{- $key := . -}}
+			{{- with index $groups $key }} <span class="album-group">{{ partial "disk-format-badge.html" (dict "key" $key "label" (index site.Data.disk_formats $key).short) }} {{ range $i, $g := . }}{{ if $i }} {{ end }}<a href="{{ printf "Disks/%s.html" $g.id | relURL }}"><span data-balloon="{{ (index site.Data.disk_formats $key).full }}&#10;{{ $g.album.shortTitle }} ({{ $g.album.year }})" data-balloon-break data-balloon-pos="up">{{ $g.album.abbrev | default $g.id }}</span></a>{{ end }}</span>{{ end -}}
+		{{- end -}}
+		</span>
 	{{- end -}}
 	{{- $workBooks := index $booksByWork .id -}}
 	{{- if $workBooks -}}
@@ -141,7 +152,7 @@
 			</ul>
 {{- $albumsData := slice -}}
 {{- range $albumId, $tracks := $albumTrackEntries -}}
-	{{- $sorted := sort $tracks "number" -}}
+	{{- $sorted := sort $tracks "num" -}}
 	{{- $trackIds := slice -}}
 	{{- range $sorted -}}
 		{{- if index $worksById .workId -}}
