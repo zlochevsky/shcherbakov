@@ -136,7 +136,7 @@
 		<span class="albums">
 		{{- range slice "cd" "mp3" "da" -}}
 			{{- $key := . -}}
-			{{- with index $groups $key }} <span class="album-group">{{ partial "disk-format-badge.html" (dict "key" $key "label" (index site.Data.disk_formats $key).short) }} {{ range $i, $g := . }}{{ if $i }} {{ end }}<a href="{{ printf "Disks/%s.html" $g.id | relURL }}"><span data-balloon="{{ (index site.Data.disk_formats $key).full }}&#10;{{ $g.album.shortTitle }} ({{ $g.album.year }})" data-balloon-break data-balloon-pos="up">{{ $g.album.abbrev | default $g.id }}</span></a>{{ end }}</span>{{ end -}}
+			{{- with index $groups $key }} <span class="album-group">{{ partial "disk-format-badge.html" (dict "key" $key "label" (index hugo.Data.disk_formats $key).short) }} {{ range $i, $g := . }}{{ if $i }} {{ end }}<a href="{{ printf "Disks/%s.html" $g.id | relURL }}"><span data-balloon="{{ (index hugo.Data.disk_formats $key).full }}&#10;{{ $g.album.shortTitle }} ({{ $g.album.year }})" data-balloon-break data-balloon-pos="up">{{ $g.album.abbrev | default $g.id }}</span></a>{{ end }}</span>{{ end -}}
 		{{- end -}}
 		</span>
 	{{- end -}}

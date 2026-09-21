@@ -130,7 +130,8 @@
                         <p><a href="{{ printf "Books/%s.html" .id | relURL }}"><span class="{{ .id }}"></span></a> <a href="{{ printf "Books/%s.html" .id | relURL }}">{{ .name }}. ({{ .rangeYears }}). Стр. {{ .page }}</a></p>
 {{- end }}
 {{- range $orderedAlbumRows }}
-                        <p><a href="{{ printf "Disks/%s.html" .id | relURL }}"><span class="{{ .id }}"></span></a> <a href="{{ printf "Disks/%s.html" .id | relURL }}">{{ .title }}</a>{{ with .perfYear }} <span class="perf-source">(запись {{ . }} года)</span>{{ end }}</p>
+                        {{- $f := partial "disk-format.html" .format }}
+                        <p><a href="{{ printf "Disks/%s.html" .id | relURL }}">{{ partial "disk-format-badge.html" (dict "key" $f.key "label" $f.short) }}</a> <a href="{{ printf "Disks/%s.html" .id | relURL }}">{{ .title }}</a>{{ with .perfYear }} <span class="perf-source">(запись {{ . }} года)</span>{{ end }}</p>
 {{- end }}
                     </div>
 {{- end }}

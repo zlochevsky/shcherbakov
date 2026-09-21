@@ -235,7 +235,12 @@
       "Bash(python3 /tmp/aud/audit.py content/fans/fans-index.md content/fans/Demiurg/about.md content/fans/Demiurg/demiurg-index.md content/FOM/znanie.md content/FOM/10.md)",
       "Bash(iconv -f KOI8-R -t UTF-8 /mnt/nas/diskh/sch/sch.com.ru.responsive/FOM/10.html)",
       "Bash(python3 /tmp/aud/audit.py content/Praises/*.md content/FOM/*.md content/fans/*.md content/fans/utf/*.md content/fans/Demiurg/*.md content/fans/smirnov/*.md)",
-      "Bash(curl -s 'https://db.sch.com.ru/items/works/?__CMDSUB_OUTPUT__&limit=-1&fields=*' -o /tmp/works.json)"
+      "Bash(curl -s 'https://db.sch.com.ru/items/works/?__CMDSUB_OUTPUT__&limit=-1&fields=*' -o /tmp/works.json)",
+      "Bash(curl -s -m 30 -o /dev/null -w \"dev server: %{http_code}\\\\n\" http://localhost:1313/shcherbakov/texts/2026/podrugim.html)",
+      "Bash(grep -o '.\\\\{0,10\\\\}disk-format-badge[^}]*}' public/texts/2026/podrugim.html)",
+      "Bash(grep -rnE '\\\\.?[Ss]ite\\\\.Data|site\\\\.Data|\\\\$\\\\.Site\\\\.Data' layouts themes)",
+      "Bash(curl -s -m 60 http://localhost:1313/shcherbakov/catalogue.html)",
+      "Bash(curl -s -m 60 http://localhost:1313/shcherbakov/texts/2026/podrugim.html)"
     ],
     "additionalDirectories": [
       "/home/sergius/schugo/config/_default",
