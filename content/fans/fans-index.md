@@ -10,7 +10,7 @@
 }
 
 <ul>
-<li><a href="../Banners/index.html">Баннеры</a></li>
+<li><a href="../Images/banners.html">Баннеры</a></li>
 <li><a href="index.html#articles">Эссе и стихи</a> 21.02.21</li>
 <li><a href="index.html#transl">Переводы</a> 10.10.21</li>
 </ul>

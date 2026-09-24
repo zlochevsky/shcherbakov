@@ -2,9 +2,11 @@
 <html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
 <head>
   {{ partial "headbasic.html" . }}
+  <link rel="canonical" href="{{ .Permalink }}">
 
 <style>
 body { background-color: khaki; color: #333300; }
+{{ with .Params.bgColor }}body { background-color: {{ . | safeCSS }}; }{{ end }}
 a:link { color: #000090; }
 a:visited { color: #555522; }
 h1, h2 { color: #333300; }
@@ -13,6 +15,12 @@ main img { max-width: 100%; height: auto; }
 main ul { padding-left: 1.3em; }
 main li { margin: .5em 0; }
 .page-subtitle { font-style: italic; color: #666644; margin-top: .2em; padding-left: 0; }
+.banner { margin: 1.5em auto; max-width: 40em; text-align: center; }
+.banner + .banner { border-top: 2px solid #b9b96b; padding-top: 1.5em; }
+.banner img { display: block; margin: .8em auto; }
+.banner figcaption { text-align: right; font-size: smaller; }
+.banner-row { text-align: center; margin: 1em 0; padding-left: 0; }
+.banner-row img { margin: .6em; vertical-align: middle; }
 {{ if .Params.centerText }}
 main p, main h2 { text-align: center; padding-left: 0; }
 {{ end }}
@@ -25,6 +33,9 @@ main p, main h2 { text-align: center; padding-left: 0; }
 <ul class="cornernav">
 	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
 	<li>[<a href="{{ "Images/index.html" | relURL }}">Картинки</a>]</li>
+	{{- with .Params.parentUrl }}
+	<li>[<a href="{{ . | relURL }}">{{ $.Params.parentTitle | default "Выше" }}</a>]</li>
+	{{- end }}
 	<li>[<a href="{{ "fans/index.html" | relURL }}">Фан-клуб</a>]</li>
 	<li>[<a href="{{ "Disks/index.html" | relURL }}">Дискография</a>]</li>
 </ul>
