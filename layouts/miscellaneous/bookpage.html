@@ -18,51 +18,42 @@ a:visited {
 </head>
 <body>
 {{- $book := dict -}}
-{{- $tracks := slice -}}
+{{- $groups := slice -}}
 {{- with .Params.id }}
 	{{- $bookId := . -}}
-	{{- $books := partial "directus-books-list.html" -}}
+	{{- $books := partialCached "directus-books-list.html" "books-list" -}}
 	{{- range $books.data -}}
 		{{- if eq .id $bookId }}{{ $book = . }}{{ end -}}
 	{{- end -}}
 
-	{{- $songs := partial "directus.html" -}}
-	{{- $worksById := dict -}}
-	{{- range $songs.data -}}
-		{{- $name := "" -}}
-		{{- if .name -}}
-			{{- if .fname -}}
-				{{- $name = .fname | strings.FirstUpper -}}
-			{{- else -}}
-				{{- $name = .name | strings.FirstUpper -}}
-			{{- end -}}
-		{{- else -}}
-			{{- $name = .fincipit -}}
-		{{- end -}}
-		{{- $editOrDate := .edit -}}
-		{{- if not $editOrDate -}}{{ $editOrDate = .date }}{{- end -}}
-		{{- $editOrDate = math.Abs $editOrDate | int -}}
-		{{- $href := printf "texts/%v/%v.html" $editOrDate .id -}}
-		{{- $worksById = merge $worksById (dict .id (dict "name" $name "href" $href)) -}}
-	{{- end -}}
+	{{- $worksById := partialCached "works-by-id.html" "works-by-id" -}}
 
-	{{- $bookEntries := partial "directus-books.html" -}}
+	{{- /* Содержание: порядок — по num (если задан), иначе по номеру страницы; разделы (section) идут подряд */ -}}
+	{{- $bookEntries := partialCached "directus-books.html" "books-entries" -}}
 	{{- $trackEntries := slice -}}
 	{{- range $bookEntries.data -}}
 		{{- $entry := . -}}
 		{{- with .books_id -}}
 			{{- if eq .id $bookId -}}
-				{{- $trackEntries = $trackEntries | append (dict "page" (int $entry.page) "workId" $entry.works_id) -}}
+				{{- $key := int (or $entry.num $entry.page 0) -}}
+				{{- $trackEntries = $trackEntries | append (dict "key" $key "page" $entry.page "section" ($entry.section | default "") "workId" $entry.works_id) -}}
 			{{- end -}}
 		{{- end -}}
 	{{- end -}}
-	{{- $sorted := sort $trackEntries "page" -}}
-	{{- range $sorted -}}
+	{{- $curTitle := "" -}}
+	{{- $cur := slice -}}
+	{{- range sort $trackEntries "key" -}}
 		{{- $trackEntry := . -}}
 		{{- with index $worksById .workId -}}
-			{{- $tracks = $tracks | append (dict "name" .name "href" .href "page" $trackEntry.page) -}}
+			{{- if and $cur (ne $trackEntry.section $curTitle) -}}
+				{{- $groups = $groups | append (dict "title" $curTitle "items" $cur) -}}
+				{{- $cur = slice -}}
+			{{- end -}}
+			{{- $curTitle = $trackEntry.section -}}
+			{{- $cur = $cur | append (dict "name" .name "href" .href "page" $trackEntry.page) -}}
 		{{- end -}}
 	{{- end -}}
+	{{- with $cur }}{{ $groups = $groups | append (dict "title" $curTitle "items" .) }}{{ end -}}
 {{- end }}
 <a name="top"> </a>
 <ul class="cornernav">
@@ -76,9 +67,11 @@ a:visited {
 <main>
 <div class="wrapper diskpage">
 
-<p class="centertext"><a href="{{ printf "Images/bkp/%s-full.jpg" .Params.id | relURL }}" target="_blank" rel="noopener"><img class="cover" src="{{ printf "Images/bkp/%s.jpg" .Params.id | relURL }}" alt="{{ .Title }}"></a></p>
-
-{{ .Content }}
+{{- $photo := $book.photo | default (printf "bkp/%s.jpg" .Params.id) }}
+{{- $ext := path.Ext $photo }}
+{{- $fullFile := printf "%s-full%s" (strings.TrimSuffix $ext $photo) $ext }}
+{{- $hasFull := os.FileExists (printf "static/Images/%s" $fullFile) }}
+<p class="centertext">{{ if $hasFull }}<a href="{{ printf "Images/%s" $fullFile | relURL }}" target="_blank" rel="noopener">{{ end }}<img class="cover" src="{{ printf "Images/%s" $photo | relURL }}" alt="{{ .Title }}">{{ if $hasFull }}</a>{{ end }}</p>
 
 {{- with $book.annotation }}
 <p>{{ . }}</p>
@@ -99,14 +92,24 @@ a:visited {
 <p class="centertext"><a href="{{ . }}">Книга на сайте издательства</a></p>
 {{ end }}
 
-{{- if $tracks }}
+{{- if $groups }}
 <h3 class="tracklist-heading">Список песен</h3>
-<ol class="tracklist">
-{{- range $tracks }}
-	<li><a href="{{ .href | relURL }}">{{ .name }}</a> <span class="disk-year">с.&#8239;{{ .page }}</span></li>
+{{- $offset := 0 }}
+{{- range $groups }}
+{{- with .title }}
+<h4 class="tracklist-section">{{ . }}</h4>
+{{- end }}
+<ol class="tracklist"{{ if $offset }} start="{{ add $offset 1 }}"{{ end }}>
+{{- range .items }}
+	<li><a href="{{ .href | relURL }}">{{ .name }}</a>{{ with .page }} <span class="disk-year">с.&#8239;{{ . }}</span>{{ end }}</li>
 {{- end }}
 </ol>
+{{- $offset = add $offset (len .items) }}
 {{- end }}
+{{- end }}
+
+
+{{ .Content }}
 
 </div>
 </main>

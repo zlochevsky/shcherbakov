@@ -203,8 +203,10 @@ america99,europe2000,usa2001,usa2003}.md` (шаблон `layouts/miscellaneous/a
 `Praises/xazagpre`, `kniga_pamyati` из текста индекса внесены в `ALLOW`. `Tapes/` (шаблон, статьи,
 наполнение БД) — отдельная задача на потом.
 
+**Книги — выполнено 2026-09-25.** Перенесены `Books/{vv,yad,dz,13d,kn,kn2,fb,pk,pk2}` (шаблон `bookpage.html`): книги — в Directus `books` (`show_on_songpage`/`show_on_catalogpage` = false, чтобы не менять страницы песен), содержание — в `books_entries` (721 запись; новые поля `num` и `section`), `kn`, `kn2`, `fb`, `pk`, `pk2` — в серии «Ковчег неутомимый и После Ковчега». Страницы `*_cont.html` — алиасы. Не перенесён список «Другие публикации» (журналы, газеты, альманахи) из старого `Books/index.html`.
+
 Вне этого плана (отдельные задачи): слой переводов (§3а, включая `English/`),
-`Tapes` (остальные 7: `index`, `04–08`, `ozon`), `Books` (`vv`, `dz`, `13d` и др. — 10 целей),
+`Tapes` (остальные: `index`, `ozon`), 
 `Disks` (`krym`, `else`, `other`), страницы годов `texts/*` и `htmtexts/*`.
 
 ## 4. Как проверять каждую партию

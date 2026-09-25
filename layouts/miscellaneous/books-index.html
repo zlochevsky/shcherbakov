@@ -58,28 +58,47 @@ a:visited {
 	{{- end -}}
 {{- end -}}
 
-{{- $seriesList := slice -}}
+{{- /* Серии и книги без серии вперемешку, по году в обратном порядке; год серии — год её самой поздней книги.
+       Ключ сортировки: год*10000 - порядковый номер (при равных годах сохраняется порядок sort,year из Directus). */ -}}
+{{- $items := slice -}}
+{{- $idx := 0 -}}
 {{- range $seriesOrder -}}
-	{{- $seriesList = $seriesList | append (index $seriesGroups .) -}}
+	{{- $grp := index $seriesGroups . -}}
+	{{- $year := 0 -}}
+	{{- range $grp.books }}{{ $year = math.Max $year (int (.year | default 0)) }}{{ end -}}
+	{{- $idx = add $idx 1 -}}
+	{{- $items = $items | append (dict "key" (sub (mul (int $year) 10000) $idx) "series" $grp) -}}
 {{- end -}}
-{{- $seriesList = sort $seriesList "sort" -}}
+{{- range $standalone -}}
+	{{- $idx = add $idx 1 -}}
+	{{- $items = $items | append (dict "key" (sub (mul (int (.year | default 0)) 10000) $idx) "book" .) -}}
+{{- end -}}
+{{- $items = sort $items "key" "desc" -}}
 
-{{- range $seriesList }}
+{{- $open := false -}}
+{{- range $items }}
+{{- if .series }}
+{{- if $open }}
+</ul>
+{{- $open = false }}
+{{- end }}
 <section class="book-series">
-	<p><b>{{ .name }}.</b>{{ with .description }} {{ . }}{{ end }}</p>
+	<p><b>{{ .series.name }}.</b>{{ with .series.description }} {{ . }}{{ end }}</p>
 	<ul class="disk-gallery">
-	{{- range .books }}
+	{{- range .series.books }}
 		{{- partial "inline/book-card.html" . -}}
 	{{- end }}
 	</ul>
 </section>
-{{- end }}
-
-{{- with $standalone }}
+{{- else }}
+{{- if not $open }}
 <ul class="disk-gallery">
-{{- range . }}
-	{{- partial "inline/book-card.html" . -}}
+{{- $open = true }}
 {{- end }}
+	{{- partial "inline/book-card.html" .book -}}
+{{- end }}
+{{- end }}
+{{- if $open }}
 </ul>
 {{- end }}
 
@@ -97,7 +116,7 @@ a:visited {
 {{- define "partials/inline/book-card.html" }}
 	<li>
 		<a href="{{ printf "Books/%s.html" .id | relURL }}">
-		<img src="{{ printf "Images/bkp/%s.jpg" .id | relURL }}" alt="{{ .name }}">
+		<img src="{{ .photo | default (printf "bkp/%s.jpg" .id) | printf "Images/%s" | relURL }}" alt="{{ .name }}">
 		<span class="disk-title">{{ .name }}</span>
 		{{- with .year }}<span class="disk-year">{{ . }}</span>{{ end }}
 		</a>
