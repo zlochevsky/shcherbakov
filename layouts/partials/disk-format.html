@@ -1,9 +1,9 @@
-{{- /* Формат диска по sets.description: возвращает dict key/short/full; по умолчанию Audio CD */ -}}
-{{- $desc := lower (strings.TrimSpace (. | default "")) -}}
-{{- $res := dict "key" "cd" "short" "CD" "full" "Audio CD" -}}
-{{- range $key, $f := hugo.Data.disk_formats -}}
-	{{- if eq $f.description $desc -}}
-		{{- $res = dict "key" $key "short" $f.short "full" $f.full -}}
+{{- /* Формат диска по ключу sets.format (справочник — Directus, disk_formats): возвращает dict key/short/full/path; по умолчанию Audio CD */ -}}
+{{- $want := $ | default "cd" -}}
+{{- $res := dict "key" "cd" "short" "CD" "full" "Audio CD" "path" "Disks" -}}
+{{- range partialCached "directus-disk-formats.html" "disk-formats" -}}
+	{{- if eq .id $want -}}
+		{{- $res = dict "key" .id "short" .short "full" .full "path" (.path | default "Disks") -}}
 	{{- end -}}
 {{- end -}}
 {{- return $res -}}

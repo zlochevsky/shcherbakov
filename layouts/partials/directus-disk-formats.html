@@ -1,13 +1,13 @@
-{{- $id := . -}}
+{{- /* Справочник форматов дисков из Directus (коллекция disk_formats), по порядку sort: список dict id/short/full/path */ -}}
 {{ $url := printf "%s%s?%s&%s&%s&%s"
 		site.Params.directus.url
-		"items/sets_entries/"
+		"items/disk_formats/"
 		site.Params.directus.token
 		"limit=-1"
-		"fields=perfs_id.works_id,perfs_id.events_id.id,perfs_id.events_id.date,perfs_id.events_id.year,num,side"
-		(printf "filter[sets_id][id][_eq]=%s" $id)
+		"fields=id,short,full,path"
+		"sort=sort"
 		}}
-{{ $data := dict }}
+{{ $data := slice }}
 {{ with try (resources.GetRemote $url) }}
 	{{ with .Err }}
 		{{ errorf "Unable to get remote resource %q" $url }}
@@ -16,7 +16,7 @@
 			{{ with .Err }}
 				{{ errorf "%s" . }}
 			{{ else with .Value }}
-				{{ $data = . }}
+				{{ $data = .data }}
 			{{ end }}
 		{{ end }}
 	{{ end }}

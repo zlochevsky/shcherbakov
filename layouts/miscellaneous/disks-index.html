@@ -30,13 +30,26 @@ a:visited {
 <div class="wrapper">
 {{ .Content }}
 
-{{ $sets := partial "directus-sets.html" }}
-<h2>Студийные записи</h2>
+{{- /* Три раздела: студийные и концертные записи (кроме кассет) и кассеты.
+       Кассета — набор, чей формат ведёт в раздел Tapes (disk_formats.path). */ -}}
+{{ $sections := slice
+	(dict "title" "Студийные альбомы" "sets" (partial "directus-sets.html").data)
+	(dict "title" "Концертные альбомы" "sets" (partial "directus-sets-live.html").data)
+	(dict "title" "Кассеты" "sets" (partial "directus-sets-tapes.html").data) }}
+{{- range $sections }}
+{{- $tapes := eq .title "Кассеты" }}
+{{- $items := slice }}
+{{- range .sets }}
+	{{- $isTape := eq (.format.path | default "Disks") "Tapes" }}
+	{{- if eq $isTape $tapes }}{{ $items = $items | append . }}{{ end }}
+{{- end }}
+{{- if $items }}
+<h2>{{ .title }}</h2>
 <ul class="disk-gallery">
-{{- range $sets.data }}
+{{- range $items }}
 	{{- $disk := . }}
 	<li>
-		<a href="{{ printf "Disks/%s.html" .id | relURL }}">
+		<a href="{{ partial "set-url.html" (dict "id" .id "format" (.format.id | default "")) | relURL }}">
 		{{- with .album_img }}<img src="{{ printf "Images/%s" . | relURL }}" alt="{{ $disk.title }}">{{ end }}
 		<span class="disk-title">{{ .title }}</span>
 		{{- with .year }}<span class="disk-year">{{ . }}</span>{{ end }}
@@ -44,21 +57,8 @@ a:visited {
 	</li>
 {{- end }}
 </ul>
-
-{{ $liveSets := partial "directus-sets-live.html" }}
-<h2>Концертные записи</h2>
-<ul class="disk-gallery">
-{{- range $liveSets.data }}
-	{{- $disk := . }}
-	<li>
-		<a href="{{ printf "Disks/%s.html" .id | relURL }}">
-		{{- with .album_img }}<img src="{{ printf "Images/%s" . | relURL }}" alt="{{ $disk.title }}">{{ end }}
-		<span class="disk-title">{{ .title }}</span>
-		{{- with .year }}<span class="disk-year">{{ . }}</span>{{ end }}
-		</a>
-	</li>
 {{- end }}
-</ul>
+{{- end }}
 
 </div>
 </main>

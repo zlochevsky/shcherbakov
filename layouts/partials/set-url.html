@@ -1,0 +1,5 @@
+{{- /* Адрес страницы набора (диск, кассета…) относительно корня сайта, без relURL.
+       Аргумент: dict "id" <sets.id> "format" <sets.format, ключ disk_formats или пусто>.
+       Раздел (Disks / Tapes) берётся из disk_formats.path. */ -}}
+{{- $f := partial "disk-format.html" .format -}}
+{{- return printf "%s/%s.html" $f.path .id -}}

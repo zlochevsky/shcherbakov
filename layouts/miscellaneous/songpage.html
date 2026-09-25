@@ -86,7 +86,7 @@
 {{- range $songAlbums.data }}
 	{{- $set := .sets_id }}
 	{{- $format := "" }}
-	{{- with $set.description }}{{ $format = . | lower | strings.TrimSpace }}{{ end }}
+	{{- with $set.format }}{{ $format = . }}{{ end }}
 	{{- $perfYear := "" }}
 	{{- with .perfs_id.events_id.year }}{{ $perfYear = . }}{{ end }}
 	{{- $albumRows = $albumRows | append (dict "id" $set.id "title" $set.title "albumYear" $set.year "format" $format "isStudio" $set.is_studio "isLive" $set.is_live "perfYear" $perfYear) }}
@@ -95,7 +95,7 @@
 {{- $mp3Rows := slice }}
 {{- $otherRows := slice }}
 {{- range $albumRows }}
-	{{- if eq .format "audio cd" }}
+	{{- if eq .format "cd" }}
 		{{- $cdRows = $cdRows | append . }}
 	{{- else if eq .format "mp3" }}
 		{{- $mp3Rows = $mp3Rows | append . }}
@@ -131,7 +131,7 @@
 {{- end }}
 {{- range $orderedAlbumRows }}
                         {{- $f := partial "disk-format.html" .format }}
-                        <p><a href="{{ printf "Disks/%s.html" .id | relURL }}">{{ partial "disk-format-badge.html" (dict "key" $f.key "label" $f.short) }}</a> <a href="{{ printf "Disks/%s.html" .id | relURL }}">{{ .title }}</a>{{ with .perfYear }} <span class="perf-source">(запись {{ . }} года)</span>{{ end }}</p>
+                        <p><a href="{{ partial "set-url.html" (dict "id" .id "format" .format) | relURL }}">{{ partial "disk-format-badge.html" (dict "key" $f.key "label" $f.short) }}</a> <a href="{{ partial "set-url.html" (dict "id" .id "format" .format) | relURL }}">{{ .title }}</a>{{ with .perfYear }} <span class="perf-source">(запись {{ . }} года)</span>{{ end }}</p>
 {{- end }}
                     </div>
 {{- end }}

@@ -304,7 +304,14 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code} \" http://localhost:1313/shcherbakov/Tapes/02.html)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:1313/shcherbakov/Archive/usa2001.html?a=1\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/shcherbakov/Tapes/03.html)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/shcherbakov/Archive/index.html)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/shcherbakov/Archive/index.html)",
+      "Bash(grep -n -B2 -A25 \"^  - collection: sets$\\\\|collection: sets$\" /home/sergius/schugo-directus-extensions/schema/snapshot.yaml)",
+      "Bash(grep -n \"^  - collection: sets$\" -A40 /home/sergius/schugo-directus-extensions/schema/snapshot.yaml)",
+      "Bash(scp -q /tmp/bf.sql bgm:/tmp/bf.sql)",
+      "Bash(time hugo --destination /tmp/claude-1000/-home-sergius-schugo/74d79cb2-aaf8-4949-b57e-25f68181bde6/scratchpad/out)",
+      "Bash(scp -q /tmp/q.sql bgm:/tmp/q.sql)",
+      "Bash(sed 's/filter\\\\[ignore_in_catalogue\\\\]\\\\[_eq\\\\]=false&filter\\\\[is_studio\\\\]\\\\[_eq\\\\]=false&filter\\\\[is_live\\\\]\\\\[_eq\\\\]=true&sort=-year/filter[ignore_in_catalogue][_eq]=false\\\\&filter[format][path][_eq]=Tapes\\\\&sort=year,id/; s/extra_images,format\"/extra_images,format.id,format.path\"/' layouts/partials/directus-sets-live.html)",
+      "Bash(sed -i 's/extra_images,format\"/extra_images,format.id,format.path\"/' layouts/partials/directus-sets.html layouts/partials/directus-sets-live.html)"
     ],
     "additionalDirectories": [
       "/home/sergius/schugo/config/_default",

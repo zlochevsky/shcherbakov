@@ -50,7 +50,7 @@
 		{{- with $entry.sets_id -}}
 			{{- if .is_album -}}
 				{{- $existing := index $albumsByWork $workId | default slice -}}
-				{{- $albumInfo := dict "id" .id "title" .title "shortTitle" (or .short_title .title) "year" .year "format" .description "abbrev" .abbrev -}}
+				{{- $albumInfo := dict "id" .id "title" .title "shortTitle" (or .short_title .title) "year" .year "format" .format "abbrev" .abbrev -}}
 				{{- $albumsByWork = merge $albumsByWork (dict $workId ($existing | append $albumInfo)) -}}
 				{{- $albumTitles = merge $albumTitles (dict .id (dict "title" .title "year" .year)) -}}
 				{{- $existingTracks := index $albumTrackEntries .id | default slice -}}
@@ -134,9 +134,9 @@
 			{{- $groups = merge $groups (dict $f.key ($items | append (dict "id" $id "album" $album))) -}}
 		{{- end -}}
 		<span class="albums">
-		{{- range slice "cd" "mp3" "da" -}}
-			{{- $key := . -}}
-			{{- with index $groups $key }} <span class="album-group">{{ partial "disk-format-badge.html" (dict "key" $key "label" (index hugo.Data.disk_formats $key).short) }} {{ range $i, $g := . }}{{ if $i }} {{ end }}<a href="{{ printf "Disks/%s.html" $g.id | relURL }}"><span data-balloon="{{ (index hugo.Data.disk_formats $key).full }}&#10;{{ $g.album.shortTitle }} ({{ $g.album.year }})" data-balloon-break data-balloon-pos="up">{{ $g.album.abbrev | default $g.id }}</span></a>{{ end }}</span>{{ end -}}
+		{{- range partialCached "directus-disk-formats.html" "disk-formats" -}}
+			{{- $fmt := . -}}
+			{{- with index $groups $fmt.id }} <span class="album-group">{{ partial "disk-format-badge.html" (dict "key" $fmt.id "label" $fmt.short) }} {{ range $i, $g := . }}{{ if $i }} {{ end }}<a href="{{ partial "set-url.html" (dict "id" $g.id "format" $fmt.id) | relURL }}"><span data-balloon="{{ $fmt.full }}&#10;{{ $g.album.shortTitle }} ({{ $g.album.year }})" data-balloon-break data-balloon-pos="up">{{ $g.album.abbrev | default $g.id }}</span></a>{{ end }}</span>{{ end -}}
 		{{- end -}}
 		</span>
 	{{- end -}}
