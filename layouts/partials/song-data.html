@@ -1,0 +1,47 @@
+{{- /* Данные для страниц песен, загружаемые ОДИН РАЗ за сборку (вызывать через
+       partialCached "song-data.html" "song-data"): вместо трёх запросов к Directus
+       на каждую из ~500 песен — три запроса на весь сайт, разбор по id песни в памяти.
+       Возвращает dict:
+         "albums" — id песни -> список записей sets_entries (форма как у directus-song-albums.html: .sets_id, .perfs_id.events_id.year)
+         "books"  — id песни -> список записей books_entries (форма как у directus-song-books.html)
+         "poems"  — id песни -> true, если песня помечена как стихотворение (works.is_poem)
+       Фильтры те же, что были в отдельных запросах. */ -}}
+{{- $base := site.Params.directus.url -}}
+{{- $token := site.Params.directus.token -}}
+
+{{- $albumsUrl := printf "%sitems/sets_entries/?%s&limit=-1&fields=sets_id.id,sets_id.title,sets_id.year,sets_id.format,sets_id.is_studio,sets_id.is_live,perfs_id.works_id,perfs_id.events_id.year&filter[sets_id][is_album][_eq]=true&filter[sets_id][ignore_in_catalogue][_eq]=false" $base $token -}}
+{{- $booksUrl := printf "%sitems/books_entries/?%s&limit=-1&fields=works_id,books_id.id,books_id.name,books_id.range_years,page&filter[books_id][status][_eq]=published&filter[books_id][show_on_songpage][_eq]=true" $base $token -}}
+
+{{- $albumsData := slice -}}
+{{- with try (resources.GetRemote $albumsUrl) -}}
+	{{- with .Err }}{{ errorf "Unable to get remote resource %q" $albumsUrl }}
+	{{- else with .Value }}{{ with try (. | transform.Unmarshal) }}{{ with .Err }}{{ errorf "%s" . }}{{ else with .Value }}{{ $albumsData = .data }}{{ end }}{{ end }}{{ end -}}
+{{- end -}}
+{{- $booksData := slice -}}
+{{- with try (resources.GetRemote $booksUrl) -}}
+	{{- with .Err }}{{ errorf "Unable to get remote resource %q" $booksUrl }}
+	{{- else with .Value }}{{ with try (. | transform.Unmarshal) }}{{ with .Err }}{{ errorf "%s" . }}{{ else with .Value }}{{ $booksData = .data }}{{ end }}{{ end }}{{ end -}}
+{{- end -}}
+
+{{- $albums := newScratch -}}
+{{- range $albumsData -}}
+	{{- $e := . -}}
+	{{- with .perfs_id -}}{{- with .works_id -}}
+		{{- $albums.Set . (($albums.Get .) | default slice | append $e) -}}
+	{{- end -}}{{- end -}}
+{{- end -}}
+
+{{- $books := newScratch -}}
+{{- range $booksData -}}
+	{{- $e := . -}}
+	{{- with .works_id -}}
+		{{- $books.Set . (($books.Get .) | default slice | append $e) -}}
+	{{- end -}}
+{{- end -}}
+
+{{- $poems := newScratch -}}
+{{- range (partial "directus.html").data -}}
+	{{- if .is_poem }}{{ $poems.Set .id true }}{{ end -}}
+{{- end -}}
+
+{{- return dict "albums" $albums.Values "books" $books.Values "poems" $poems.Values -}}

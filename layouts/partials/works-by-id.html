@@ -1,0 +1,20 @@
+{{- /* Справочник песен для списков треков (partialCached "works-by-id.html" "works-by-id"):
+       id песни -> dict "name" (заголовок как в каталоге) "href" (адрес страницы песни, относительно корня). */ -}}
+{{- $worksById := newScratch -}}
+{{- range (partial "directus.html").data -}}
+	{{- $name := "" -}}
+	{{- if .name -}}
+		{{- if .fname -}}
+			{{- $name = .fname | strings.FirstUpper -}}
+		{{- else -}}
+			{{- $name = .name | strings.FirstUpper -}}
+		{{- end -}}
+	{{- else -}}
+		{{- $name = .fincipit -}}
+	{{- end -}}
+	{{- $editOrDate := .edit -}}
+	{{- if not $editOrDate -}}{{ $editOrDate = .date }}{{- end -}}
+	{{- $editOrDate = math.Abs $editOrDate | int -}}
+	{{- $worksById.Set .id (dict "name" $name "href" (printf "texts/%v/%v.html" $editOrDate .id)) -}}
+{{- end -}}
+{{- return $worksById.Values -}}

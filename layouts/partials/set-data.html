@@ -1,0 +1,33 @@
+{{- /* Данные страниц дисков и кассет, загружаемые ОДИН РАЗ за сборку
+       (partialCached "set-data.html" "set-data"). Вместо двух запросов на каждый набор —
+       два запроса на весь сайт, разбор по id набора в памяти.
+       Возвращает dict:
+         "sets"    — id набора -> запись sets (форма как у directus-set-by-id.html)
+         "entries" — id набора -> список записей sets_entries (форма как у directus-album-entries.html: .perfs_id.works_id, .perfs_id.events_id, .num, .side) */ -}}
+{{- $base := site.Params.directus.url -}}
+{{- $token := site.Params.directus.token -}}
+
+{{- $setsUrl := printf "%sitems/sets/?%s&limit=-1&fields=id,title,year,album_img,comment,extra_images,format,spotify_url,apple_music_url,mkshchcom_url" $base $token -}}
+{{- $entriesUrl := printf "%sitems/sets_entries/?%s&limit=-1&fields=sets_id,perfs_id.works_id,perfs_id.events_id.id,perfs_id.events_id.date,perfs_id.events_id.year,num,side" $base $token -}}
+
+{{- $setsData := slice -}}
+{{- with try (resources.GetRemote $setsUrl) -}}
+	{{- with .Err }}{{ errorf "Unable to get remote resource %q" $setsUrl }}
+	{{- else with .Value }}{{ with try (. | transform.Unmarshal) }}{{ with .Err }}{{ errorf "%s" . }}{{ else with .Value }}{{ $setsData = .data }}{{ end }}{{ end }}{{ end -}}
+{{- end -}}
+{{- $entriesData := slice -}}
+{{- with try (resources.GetRemote $entriesUrl) -}}
+	{{- with .Err }}{{ errorf "Unable to get remote resource %q" $entriesUrl }}
+	{{- else with .Value }}{{ with try (. | transform.Unmarshal) }}{{ with .Err }}{{ errorf "%s" . }}{{ else with .Value }}{{ $entriesData = .data }}{{ end }}{{ end }}{{ end -}}
+{{- end -}}
+
+{{- $sets := newScratch -}}
+{{- range $setsData }}{{ $sets.Set .id . }}{{ end -}}
+
+{{- $entries := newScratch -}}
+{{- range $entriesData -}}
+	{{- $e := . -}}
+	{{- with .sets_id }}{{ $entries.Set . (($entries.Get .) | default slice | append $e) }}{{ end -}}
+{{- end -}}
+
+{{- return dict "sets" $sets.Values "entries" $entries.Values -}}
