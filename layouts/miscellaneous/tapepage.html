@@ -33,29 +33,11 @@ a:visited {
 {{- $sides := dict -}}
 {{- with .Params.id }}
 	{{- $setId := . -}}
-	{{- $set = partial "directus-set-by-id.html" $setId -}}
+	{{- $setData := partialCached "set-data.html" "set-data" -}}
+	{{- $set = index $setData.sets $setId | default dict -}}
+	{{- $worksById := partialCached "works-by-id.html" "works-by-id" -}}
 
-	{{- $songs := partial "directus.html" -}}
-	{{- $worksById := dict -}}
-	{{- range $songs.data -}}
-		{{- $name := "" -}}
-		{{- if .name -}}
-			{{- if .fname -}}
-				{{- $name = .fname | strings.FirstUpper -}}
-			{{- else -}}
-				{{- $name = .name | strings.FirstUpper -}}
-			{{- end -}}
-		{{- else -}}
-			{{- $name = .fincipit -}}
-		{{- end -}}
-		{{- $editOrDate := .edit -}}
-		{{- if not $editOrDate -}}{{ $editOrDate = .date }}{{- end -}}
-		{{- $editOrDate = math.Abs $editOrDate | int -}}
-		{{- $href := printf "texts/%v/%v.html" $editOrDate .id -}}
-		{{- $worksById = merge $worksById (dict .id (dict "name" $name "href" $href)) -}}
-	{{- end -}}
-
-	{{- $albumPerfs := partial "directus-album-entries.html" $setId -}}
+	{{- $albumPerfs := dict "data" (index $setData.entries $setId | default slice) -}}
 	{{- $trackEntries := slice -}}
 	{{- range $albumPerfs.data -}}
 		{{- $entry := . -}}

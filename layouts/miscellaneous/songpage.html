@@ -48,11 +48,8 @@
 <div class="notice"><p>Это более ранняя редакция песни. <a href="{{ printf "texts/%s/%s.html" .year .id | relURL }}">Перейти к последней авторской редакции</a>.</p></div>
 {{ end }}
 {{- $isPoem := false }}
-{{- with partial "directus-work.html" .Params.id }}
-	{{- with index .data 0 }}
-		{{- $isPoem = .is_poem }}
-	{{- end }}
-{{- end }}
+{{- $songData := partialCached "song-data.html" "song-data" }}
+{{- $isPoem = index $songData.poems .Params.id | default false }}
                     <div id="settings"{{ if $isPoem }} data-poem="true"{{ end }} data-pagefind-ignore>
                         {{- if $isPoem }}
                         <span class="poem-label">стихотворение</span>
@@ -74,14 +71,14 @@
                     </div>
 {{- partial "song.html" .Params -}}
                     <noscript>Страница требует включённого javascript.</noscript>
-{{- $songBooks := partial "directus-song-books.html" .Params.id }}
+{{- $songBooks := dict "data" (index $songData.books .Params.id | default slice) }}
 {{- $bookRows := slice }}
 {{- range $songBooks.data }}
 	{{- $book := .books_id }}
 	{{- $bookRows = $bookRows | append (dict "id" $book.id "name" $book.name "rangeYears" $book.range_years "page" .page) }}
 {{- end }}
 {{- $bookRows = sort $bookRows "page" }}
-{{- $songAlbums := partial "directus-song-albums.html" .Params.id }}
+{{- $songAlbums := dict "data" (index $songData.albums .Params.id | default slice) }}
 {{- $albumRows := slice }}
 {{- range $songAlbums.data }}
 	{{- $set := .sets_id }}
