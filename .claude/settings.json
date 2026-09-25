@@ -294,7 +294,17 @@
       "Bash(curl -s --max-time 30 http://localhost:1313/shcherbakov/Banners/fooksman.html)",
       "Bash(break)",
       "Bash(python3 scripts/check-links.py --all)",
-      "Bash(curl -s -o /dev/null -w \"news.html -> %{http_code}\\\\n\" --max-time 120 http://localhost:1313/shcherbakov/news.html)"
+      "Bash(curl -s -o /dev/null -w \"news.html -> %{http_code}\\\\n\" --max-time 120 http://localhost:1313/shcherbakov/news.html)",
+      "Bash(file *)",
+      "Bash(iconv -f KOI8-R -t UTF-8 03.html)",
+      "Bash(iconv -f KOI8-R -t UTF-8 2000.html)",
+      "Bash(mkdir -p *)",
+      "Bash(curl -s http://localhost:1313/shcherbakov/Archive/usa2001.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/shcherbakov/Archive/usa2001.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} \" http://localhost:1313/shcherbakov/Tapes/02.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:1313/shcherbakov/Archive/usa2001.html?a=1\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/shcherbakov/Tapes/03.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:1313/shcherbakov/Archive/index.html)"
     ],
     "additionalDirectories": [
       "/home/sergius/schugo/config/_default",
@@ -303,7 +313,8 @@
       "/mnt/nas/diskh/sch/sch.com.ru/www/fans",
       "/mnt/nas/diskh/sch/sch.com.ru.responsive/fans/utf",
       "/dev",
-      "/home/sergius/schugo-directus-extensions"
+      "/home/sergius/schugo-directus-extensions",
+      "/mnt/nas/diskh/sch/sch.com.ru/www/Tapes"
     ]
   }
 }

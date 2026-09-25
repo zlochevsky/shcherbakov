@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ .Params.lang | default site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+  <link rel="canonical" href="{{ .Permalink }}">
+
+<style>
+body { background-color: #FEFEEF; }
+a:link { color: #006600; }
+main { max-width: 60em; margin: 0 auto; padding: 0 1em; box-sizing: border-box; }
+main img { max-width: 100%; height: auto; }
+main p { margin: 0 0 1.2em; padding-left: 0; }
+main ul { padding-left: 1.3em; }
+.page-subtitle { font-style: italic; margin-top: .2em; padding-left: 0; }
+.details { margin: -.6em 0 1.2em 2em; }
+</style>
+
+</head>
+<body>
+<header>
+<a name="top"> </a>
+<ul class="cornernav">
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "news.html" | relURL }}">Новости</a>]</li>
+	{{- if not .Params.isIndex }}
+	<li>[<a href="{{ "Archive/index.html" | relURL }}">Архив</a>]</li>
+	{{- end }}
+	<li>[<a href="{{ "log.html" | relURL }}">Лог</a>]</li>
+</ul>
+<h1>{{ .Title }}</h1>
+{{ with .Params.subtitle }}<p class="page-subtitle">{{- . -}}</p>{{ end -}}
+</header>
+<main>
+{{ .Content }}
+</main>
+<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	{{- if not .Params.isIndex }}
+	<li>[<a href="{{ "Archive/index.html" | relURL }}">Архив</a>]</li>
+	{{- end }}
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+</ul>
+</body>
+</html>

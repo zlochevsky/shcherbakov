@@ -86,19 +86,20 @@
 </figure>
 
 <figure class="banner">
-<img src="../Banners/fbanner.gif" width="468" height="60" alt="Баннер">
+<img src="../Banners/fooksman/ship1.gif" width="468" height="60" alt="Баннер">
 <figcaption>design &copy; <a href="http://nikak.net/">Валера Фуксман</a></figcaption>
 </figure>
 
 <p style="margin-top: 5em">Другие баннеры Валеры Фуксмана, также отмеченные милым юмором и незаурядным художественным мастерством<br>(<a href="http://nikak.net/mks/">оригиналы здесь</a>).</p>
 
-<!--<p class="banner-row"><a href="../index.html"><img src="../Banners/fooksman/ship.gif" width="468" height="60" alt="Баннер"></a></p>-->
+<!--<p class="banner-row"><a href="../index.html"><img src="../Banners/fbanner.gif" width="468" height="60" alt="Баннер"></a></p>-->
+
 <p class="banner-row" style="border-top: 2px solid #b9b96b; padding-top: 1.5em; max-width: 40em; text-align: center; margin: 0 auto"><a href="../index.html"><img src="../Banners/fooksman/fish_1.jpg" width="100" height="100" alt="Рыба, шепни два слова..."></a><a href="../index.html"><img src="../Banners/fooksman/fish_2.jpg" width="100" height="100" alt="...взмахни руками"></a><a href="../index.html"><img src="../Banners/fooksman/fish_3.jpg" width="100" height="100" alt="...мне очень плохо"></a><a href="../index.html"><img src="../Banners/fooksman/brussel_boy.jpg" width="100" height="100" alt="Встань, делай как я, ни от кого не завись!"></a><a href="../index.html"><img src="../Banners/fooksman/guillotine.jpg" width="100" height="100" alt="Да нет, не надо, я шучу..."></a></p>
 
 <p class="banner-row"><a href="../index.html"><img src="../Banners/fooksman/Vityaz.jpg" width="100" height="100" alt="Значит едем вспять"></a><a href="../index.html"><img src="../Banners/fooksman/dentist.jpg" width="100" height="100" alt="Мосты потом, вколотить бы сваю."></a><a href="../index.html"><img src="../Banners/fooksman/dog.jpg" width="100" height="100" alt="...охота начнётся на днях..."></a><a href="../index.html"><img src="../Banners/fooksman/electric_chair.jpg" width="100" height="100" alt="...во-первых не хватило электричества..."></a><a href="../index.html"><img src="../Banners/fooksman/black_light_bulb.jpg" width="100" height="100" alt="...во-первых, не хватило электричества..."></a></p>
 
-<p class="banner-row"><a href="../index.html"><img src="../Banners/fooksman/whip.jpg" width="100" height="95" alt="Баннер"></a><a href="../index.html"><img src="../Banners/fooksman/tick.jpg" width="100" height="100" alt="Баннер"></a><a href="../index.html"><img src="../Banners/fooksman/tankman.jpg" width="100" height="100" alt="Баннер"></a><a href="../index.html"><img src="../Banners/fooksman/necklace.jpg" width="100" height="100" alt="Баннер"></a><a href="../index.html"><img src="../Banners/fooksman/fruits.jpg" width="100" height="100" alt="Баннер"></a></p>
+<p class="banner-row"><a href="../index.html"><img src="../Banners/fooksman/whip.jpg" width="100" height="95" alt="А если что-то надо объяснять..."></a><a href="../index.html"><img src="../Banners/fooksman/tick.jpg" width="100" height="100" alt="Это такая вещь."></a><a href="../index.html"><img src="../Banners/fooksman/tankman.jpg" width="100" height="100" alt="С днём танкиста, господа!"></a><a href="../index.html"><img src="../Banners/fooksman/necklace.jpg" width="100" height="100" alt="Если что и жмёт мне шею..."></a><a href="../index.html"><img src="../Banners/fooksman/fruits.jpg" width="100" height="100" alt="Всевозможная картофель."></a></p>
 
-<p class="banner-row"><a href="../index.html"><img src="../Banners/fooksman/clown.jpg" width="100" height="100" alt="Баннер"></a><a href="../index.html"><img src="../Banners/fooksman/crawling_girl.jpg" width="100" height="100" alt="Баннер"></a><a href="../index.html"><img src="../Banners/fooksman/reincarnation.jpg" width="100" height="100" alt="Баннер"></a><a href="../index.html"><img src="../Banners/fooksman/leonardo_man.jpg" width="100" height="100" alt="Баннер"></a><a href="../index.html"><img src="../Banners/fooksman/thinking_monkey.jpg" width="100" height="100" alt="Баннер"></a></p>
+<p class="banner-row"><a href="../index.html"><img src="../Banners/fooksman/clown.jpg" width="100" height="100" alt="Немощь моя -- бубенец шутовсокй, уа-уа."></a><a href="../index.html"><img src="../Banners/fooksman/crawling_girl.jpg" width="100" height="100" alt="Ладно, попробуем по-пластунски. Авось."></a><a href="../index.html"><img src="../Banners/fooksman/reincarnation.jpg" width="100" height="100" alt="...жизнь - она и вовсе одна, второй не будет..."></a><a href="../index.html"><img src="../Banners/fooksman/leonardo_man.jpg" width="100" height="100" alt="всеми руками четырьмя"></a><a href="../index.html"><img src="../Banners/fooksman/thinking_monkey.jpg" width="100" height="100" alt="...задумчивао сплетая пальцы ног..."></a></p>
 
 <p class="banner-row"><small>&copy; 2001–2004 В.&nbsp;Фуксман. Использование этих баннеров возможно по согласованию с автором.</small></p>

@@ -3,7 +3,7 @@
    "title": "Журнал изменений",
    "type": "miscellaneous",
    "layout": "log",
-   "lastmod": "2024-04-01",
+   "lastmod": "2026-08-30",
    "params": {
         "name": "Log"
         }
