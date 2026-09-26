@@ -62,13 +62,13 @@ Cоздатель коллекции трагически <A HREF="http://blacka
 
 - <A HREF="mailto:deniskhin@gmail.com">Денис Милохин</A>. С сентября 2021 года занимается поддержкой и оформлением страниц, а также сбором материалов. **<i>Новые материалы следует слать ему</i>**.
 - <A HREF="mailto:l_meirovich@hotmail.com">Лев Меерович</A>. Почётный (по чётным и нечётным) редактор (и редуктор). Находится на заслуженном отдыхе, но продолжает присматривать за сайтом и консультировать редколлегию. <!--<LI><A href="mailto:kari_ok@mail.ru">Карина Алексеева</A>. Мастер-оформитель. Занимается оформлением страниц, редактированием картинок и проч.-->
-- <A HREF="mailto:akazantsev@ncaccesscare.org">Артем Казанцев</A>. Консультант.<!--, веб-мастер. Поддерживает, помимо прочего, <a href="search.html">поиск</a>.--> <!--A HREF="mailto:kapustin@scph.mipt.ru">Михаил Капустин</A>, <A HREF="mailto:vpalt@online.ru">Владимир Палт</A>,-->
+- <A HREF="mailto:akazantsev@ncaccesscare.org">Артем Казанцев</A>. Консультант.<!--, веб-мастер. Поддерживает, помимо прочего, <a href="search.html">поиск</a>.--> <!--A HREF="mailto:kapustin@scph.mipt.ru">Михаил Капустин</A>, <A HREF="mailto:paltvlad@gmail.com">Владимир Палт</A>,-->
 - <a href="mailto:sergey@zlochevsky.com">Сергей Злочевский</a>. Отвечает за совершенствование музыкальной части коллекции.
 <!--LI><A HREF="mailto:tugarev@yandex.ru">Алексей Тугарев</A>, 
 <A HREF="mailto:Kopylova@scph.mipt.ru">Анна Копылова</A>,
-<A HREF="mailto:deniskin@mail333.com">Денис Милохин</A>, 
+<A HREF="mailto:deniskhin@gmail.com">Денис Милохин</A>, 
 <A HREF="mailto:mpele@yandex.ru">Марина Пелепец</A>, 
-<A HREF="mailto:vpalt@online.ru">Владимир Палт</A>. 
+<A HREF="mailto:paltvlad@gmail.com">Владимир Палт</A>. 
 Занимаются поддержкой коллекции текстов Щербакова
 (cм. <a href="./alphabetic.html">алфавитный</a> и <a href="./htmtexts/1981/index.html">хронологический</a> каталоги песен), 
 выправкой текстов в соответствии с авторским синтаксисом, орфографией, пунктуацией и проч.-->

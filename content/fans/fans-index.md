@@ -174,12 +174,12 @@ Cоздан и прислан <a href="mailto:Boris@as.ru">Б.Богдановы
 <a href="mailto:l_meirovich@hotmail.com">Л.Мееровичем</a>,
 <a href="mailto:laura9947@hotmail.com">Л.Шульц</a>,
 <a href="mailto:volevich@yahoo.com">В. Волевичем</a>,
-<a href="mailto:deniskin@mailru.com">Денискиным</a>,
+<a href="mailto:deniskhin@gmail.com">Денискиным</a>,
 <a href="mailto:OMostovlyansky@iba.by">Олегом Мостовлянским</a>,
 <a href="mailto:orekhov@opten.ru">Алексеем Ореховым</a>. Дополнения
 <a href="mailto:l_meirovich@hotmail.com">принимаются</a>. (06.12.12).</li>
 <li><a href="herbary.html">Гербарий</a>, составленный по произведениям М.Щербакова.
-Составители: <a href="mailto:deniskin@mailru.com">Денискин</a>, <a href="mailto:tema@bigfoot.com">А.Казанцев</a>,
+Составители: <a href="mailto:deniskhin@gmail.com">Денискин</a>, <a href="mailto:tema@bigfoot.com">А.Казанцев</a>,
 <a href="mailto:Yul@ugo.com">Юл Вассерман</a>, <a href="mailto:f_koala@ua.fm">Павло Славинский</a>,
 <a href="mailto:vnedelsky@mail.ru">Владислав Николаенко</a>, <a href="mailto:ashanka@inbox.ru">Аша</a>,
 <a href="mailto:l_meirovich@hotmail.com">Лев Меерович</a>, <a href="mailto:laura9947@hotmail.com">Лариса Шульц</a>,
@@ -204,7 +204,7 @@ Cоздан и прислан <a href="mailto:Boris@as.ru">Б.Богдановы
 (1.04.05)
 <!--<li>По <a href="http://deniskhin.ru/vitrail/">этому адресу</a> находится 
 "официальный сайт альбома &laquo;Пёстрый витраж&raquo;, посвящённого юбилею Михаила Щербакова", 
-автор &mdash; <A HREF="mailto:deniskin@mailru.com">Денискин</A>. (<FONT color="#C71585">10.04.03</FONT>)-->
+автор &mdash; <A HREF="mailto:deniskhin@gmail.com">Денискин</A>. (<FONT color="#C71585">10.04.03</FONT>)-->
 </li>
 <li><a href="krossvord.html">Кроссворды.</a> О, фанатизм... Cм. также <a href="http://www.aha.ru/~karish/kross.html">кроссворд
 Кари</a> (и <a href="crossword.html">вот здесь</a>&nbsp;&mdash; локальная копия)&nbsp;&mdash; изящное оформление + ответы.</li>

@@ -66,12 +66,12 @@
 <a href="../texts/2000/allegro.html">"Аллегро"</a>. Прислал <a href="mailto:vrm@bk.ru">В. Медведев</a>.
 
 <li><a href="VV_pic.html">Иллюстрации</a> из книжки <a href="../Books/vv.html">"Вишневое варенье"</a> 
-(Оформил <a href="mailto:deniskin@mailru.com">Денискин</a>).</li>
+(Оформил <a href="mailto:deniskhin@gmail.com">Денискин</a>).</li>
 
 <li><a href="illustr.html#Muzika">"Музыка в Тюильри"</a> - картина 
 <a href="http://nikiforovsp.narod.ru/Painting/Mane/mane.htm">Эдуарда Мане</a> 
 (к песне <a href="../texts/1993/avtoparo.html">"Автопародия"</a>).
-(Прислал <a href="mailto:deniskin@mailru.com">Денискин</a>).</li>
+(Прислал <a href="mailto:deniskhin@gmail.com">Денискин</a>).</li>
 
 <li> Гигантский <a href="http://kotomsk.narod.ru/zoo/lyambda2.htm">муравьед</a>
 по имени Лямбда - вероятно, тот самый - из <a href="../texts/1994/avstrali.html">"Австралии"</a>.</li>

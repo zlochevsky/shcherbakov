@@ -129,7 +129,7 @@
   -  ["Парабола и парадигма в творчестве Окуджавы, Высоцкого и Щербакова"](Praises/xazagerov3.html). <span class="datum">[8.11.98]</span> (Прислал [Леонид Блехер](mailto:blekher@aha.ru))
   -  ["Рыба и ястреб"](Praises/xazagerov2.html) (в соавторстве с С.Хазагеровой). Отрывок из большой работы, еще не законченной. Написано несколько менее филологично, чем другие статьи. <span class="datum">[8.11.98]</span> (Прислал [Леонид Блехер](mailto:blekher@aha.ru))
   -  ["От корабля к рыбе"](Praises/xazagerov4.html) (в соавторстве с С.Хазагеровой). <span class="datum">[01.12.99]</span> (Прислал [Леонид Блехер](mailto:blekher@aha.ru))
-  -  ["Категория меры в поэтике Михаила Щербакова"](Praises/xazagerov5.html) . <span class="datum">[26.04.05]</span> (Прислал [В.Палт](mailto:vpalt@online.ru))
+  -  ["Категория меры в поэтике Михаила Щербакова"](Praises/xazagerov5.html) . <span class="datum">[26.04.05]</span> (Прислал [В.Палт](mailto:paltvlad@gmail.com))
 - [**Лариса Шульц**](mailto:larissa.shultz@gmail.com). [&laquo;Ночной дозор&raquo;](Praises/nightwatch.html) <span class="datum">[21.03.11]</span>
 
 <UL><A HREF="praises.html#top"><FONT SIZE=-1>[Наверх]</FONT></A></UL>
@@ -153,7 +153,7 @@
 - **Ольга Коган**. [Михаил Щербаков в поддержку &quot;Иерусалимского журнала&quot;](Praises/jerjor04.html) (рецензия на выступление 2004 г. в Иерусалиме). [Опубликовано](http://www.aen.ru/culture/story-id=252/) в январе 2004 на сайте [АЕН](http://www.aen.ru). Ссылку прислала [Татьяна Темкина](mailto:ttemkina@mail.ru). <span class="datum">[29.12.06]</span>
 - **Марина Лидис**. [Волнуемый лишь смертью и любовью](http://kids.sch.in.ua/2013/03/27/volnuemy-j-lish-smert-yu-i-lyubov-yu/). Опубликовано 27.03.2013 на [сайте](http://kids.sch.in.ua/) "Блог проекта Study Planner Харьков". <span class="datum">[04.11.15]</span>
 - **Лев Наумов**. [Михаил Щербаков &mdash; &quot;Райцентр&quot;](Praises/raycentr.html). Рецензия опубликована на сайте проекта ["Наш НеФормат"](http://www.nneformat.ru/project/). Оригинал [здесь](http://www.nneformat.ru/reviews/?id=3316). Ссылку прислала [Лариса Шульц](mailto:laura9947@hotmail.com). <span class="datum">[11.11.06]</span>
-- **Ванкарем Никифорович** (Чикаго). ["Опять остается спасение в слове..."](http://www.vestnik.com/issues/2001/0619/win/nikiforovich.htm) &mdash; статья  из американского журнала "Вестник" от  19 июня 2001 г. Ссылку прислал [В.Палт](mailto:vpalt@online.ru) <span class="datum">[17.11.03]</span> ([Локальная копия](Praises/nikiforovich.html) статьи)</li>
+- **Ванкарем Никифорович** (Чикаго). ["Опять остается спасение в слове..."](http://www.vestnik.com/issues/2001/0619/win/nikiforovich.htm) &mdash; статья  из американского журнала "Вестник" от  19 июня 2001 г. Ссылку прислал [В.Палт](mailto:paltvlad@gmail.com) <span class="datum">[17.11.03]</span> ([Локальная копия](Praises/nikiforovich.html) статьи)</li>
 - <strong>Таисия Овская, Сергей Петровский.</strong> [Чужой среди своих. Михаилу Щербакову &ndash; 55](https://godliteratury.ru/projects/chuzhoy-sredi-svoikh-mikhailu-shherbakovu)  (Портал ГодЛитературы.РФ 2018, ссылку прислала [Татьяна Акивис](http://tata-akivis.livejournal.com/)). <span class="datum">[22.07.18]</span></li>
 - **Булат Окуджава**. [Отрывок из интервью](Praises/bo2.html), взятого Ириной Карпинос. "Зеркало недели" &#8470;1(14) 6-13 января 1995. [Ссылку](http://www.zn.ua/3000/3680/43335/) прислала [Лариса Шульц](mailto:laura9947@hotmail.com). <span class="datum">[03.01.08]</span> 
 - **Игорь Резников**. [Барды и не только. Михаил Щербаков.](https://proza.ru/2020/04/11/1178) Ссылку прислала Инна Измайлова. <span class="datum">[07.05.21]</span></li>
@@ -189,7 +189,7 @@
 ### Учебники, энциклопедии, словари...
 
 - Из книги ["Авторская песня: книга для ученика и учителя".](Praises/pesnya.html) М.: Олимп; АСТ. 1997 (Школа классики). Прислал [Alexander Devskij](mailto:devskij@yandex.ru). <span class="datum">[3.02.03]</span>
-- ["Авторская песня"](Praises/avanta.html) &mdash; статья из Энциклопедии для детей, Том 9 "Русская литература", Часть 2. М.:"Аванта +", 1999. Прислал [Deniskin](mailto:deniskin@mailru.com). <span class="datum">[8.02.03]</span>
+- ["Авторская песня"](Praises/avanta.html) &mdash; статья из Энциклопедии для детей, Том 9 "Русская литература", Часть 2. М.:"Аванта +", 1999. Прислал [Deniskin](mailto:deniskhin@gmail.com). <span class="datum">[8.02.03]</span>
 - [Статья](https://ru.wikipedia.org/wiki/%D0%A9%D0%B5%D1%80%D0%B1%D0%B0%D0%BA%D0%BE%D0%B2,_%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB_%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D0%B8%D1%87) о Михаиле Щербакове в ["Википедии"](http://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0).
 
 <a name="zefi" /> </a>
