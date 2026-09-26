@@ -92,7 +92,7 @@ a:visited {
 </section>
 {{- else }}
 {{- if not $open }}
-<ul class="disk-gallery">
+<ul class="disk-gallery standalone-books">
 {{- $open = true }}
 {{- end }}
 	{{- partial "inline/book-card.html" .book -}}
@@ -101,6 +101,10 @@ a:visited {
 {{- if $open }}
 </ul>
 {{- end }}
+
+
+{{- /* «Другие публикации» (журналы, антологии, нотные издания) — контент-файл Books/other-publications.md, сам не рендерится */ -}}
+{{ with site.GetPage "/Books/other-publications" }}{{ .Content }}{{ end }}
 
 </div>
 </main>

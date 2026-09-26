@@ -64,9 +64,12 @@
 {{- range $bookEntries.data -}}
 	{{- $entry := . -}}
 	{{- with .books_id -}}
-		{{- $existing := index $booksByWork $entry.works_id | default slice -}}
-		{{- $bookInfo := dict "id" .id "name" .name "page" $entry.page -}}
-		{{- $booksByWork = merge $booksByWork (dict $entry.works_id ($existing | append $bookInfo)) -}}
+		{{- /* в строке песни — только книги с show_on_catalogpage = true */ -}}
+		{{- if .show_on_catalogpage -}}
+			{{- $existing := index $booksByWork $entry.works_id | default slice -}}
+			{{- $bookInfo := dict "id" .id "name" .name "page" $entry.page "icon" (.catalog_icon | default .id) -}}
+			{{- $booksByWork = merge $booksByWork (dict $entry.works_id ($existing | append $bookInfo)) -}}
+		{{- end -}}
 	{{- end -}}
 {{- end -}}
 {{- $worksById := dict -}}
@@ -142,7 +145,26 @@
 	{{- end -}}
 	{{- $workBooks := index $booksByWork .id -}}
 	{{- if $workBooks -}}
-		<span class="books">{{- range $workBooks }} <a href="{{ printf "Books/%s.html" .id | relURL }}"><span class="{{ .id }}" data-balloon="{{ .name }}" data-balloon-pos="up"></span></a> с.&#8239;{{ .page }}{{- end -}}</span>
+		{{- /* один значок на книгу или на группу книг с общим значком (серия «Ковчег…»); у группы номера страниц — в подсказке */ -}}
+		{{- $byIcon := newScratch -}}
+		{{- $iconOrder := slice -}}
+		{{- range $workBooks -}}
+			{{- if not (in $iconOrder .icon) }}{{ $iconOrder = $iconOrder | append .icon }}{{ end -}}
+			{{- $byIcon.Set .icon (($byIcon.Get .icon) | default slice | append .) -}}
+		{{- end -}}
+		<span class="books">
+		{{- range $iconOrder }}
+			{{- $icon := . -}}
+			{{- $group := $byIcon.Get $icon -}}
+			{{- $first := index $group 0 }} <a href="{{ printf "Books/%s.html" $first.id | relURL }}">
+			{{- if eq (len $group) 1 -}}
+				<span class="{{ $icon }}" data-balloon="{{ $first.name }}" data-balloon-pos="up"></span></a>{{ with $first.page }} с.&#8239;{{ . }}{{ end }}
+			{{- else -}}
+				{{- $lines := slice -}}
+				{{- range $group }}{{ $line := .name }}{{ with .page }}{{ $line = printf "%s, с. %v" $line . }}{{ end }}{{ $lines = $lines | append $line }}{{ end -}}
+				<span class="{{ $icon }}" data-balloon="{{ delimit $lines "\n" }}" data-balloon-break data-balloon-pos="up"></span></a>
+			{{- end -}}
+		{{- end -}}</span>
 	{{- end -}}
 	</a></li>
 
