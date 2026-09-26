@@ -17,10 +17,10 @@
 |---|---|---|---|
 | `fans/` хаб `index` | 1 | перенесён (`content/fans/fans-index.md`, url `/fans/index.html`) | ссылки на ~22 дочерние страницы битые → Волна 1; финальная проверка → Волна 7 |
 | `fans/smirnov`, `fans/Demiurg`, `fans/utf` (3), `crossword`, `krossvord` | 46 файлов в `content/fans/` (на NAS от `smirnov` только 5 страниц — остальное взято с внешнего зеркала) | перенесены | — |
-| `fans/*.html` прочие | 55 не перенесено | нет | Волны 1–2 (для клуба реально ~44, см. ниже) |
+| `fans/*.html` прочие | 55 не перенесено | **перенесены 2026-09-26** (43 страницы клуба) | остались переводы (§3а) и `kom2` |
 | **Переводы** (`fans/utf/{esperanto,german,hebrew,ukrain,francais}`, корневые дубли `esperanto`, `hebrew`, `ukrain`, `English/` 60 страниц) | 8 + 60 | нет | **вынесены из клуба в отдельный слой** — §3а; не переносить, пока не решены URL и модель |
-| `Parodies/` | 63 файла, 348 КБ | нет | Волна 3 |
-| `SCH2/` | 4 файла, 68 КБ | нет | Волна 4 (публикуем как на старом сайте) |
+| `Parodies/` | 63 файла, 348 КБ | **перенесены 2026-09-26** | — |
+| `SCH2/` | 4 файла, 68 КБ | **перенесены 2026-09-26** | — |
 | `Archive/` (**витрина**, «Концерты», не клуб) | 6 файлов, ~46 КБ | **перенесён 2026-09-25** (Волна 8, см. ниже) | — |
 | `Images/` | 79 страниц | **страницы объединены**, переносить не нужно | Волна 5 (проверка + 11 ссылок из лога) |
 | Словарь (`kom.html`/`kom2.html`) | 284 статьи | в Directus **14 из 284** (пилот) | отдельная линия, `docs/slovar-migration.md`, Волна 6 |
@@ -206,6 +206,48 @@ america99,europe2000,usa2001,usa2003}.md` (шаблон `layouts/miscellaneous/a
 `Tapes/index` (хаб «Кассеты») и `Tapes/ozon` не перенесены.
 
 **Книги — выполнено 2026-09-25.** Перенесены `Books/{vv,yad,dz,13d,kn,kn2,fb,pk,pk2}` (шаблон `bookpage.html`): книги — в Directus `books` (`show_on_songpage`/`show_on_catalogpage` = false, чтобы не менять страницы песен), содержание — в `books_entries` (721 запись; новые поля `num` и `section`), `kn`, `kn2`, `fb`, `pk`, `pk2` — в серии «Ковчег неутомимый и После Ковчега». Страницы `*_cont.html` — алиасы. Список «Другие публикации» (журналы, антологии, нотные издания — 30 пунктов) перенесён 2026-09-26 на страницу «Библиография» (`content/Books/other-publications.md`, выводится шаблоном `books-index.html` под галереей; статичный текст, без БД). Блок «Интервью» (2 пункта) перенесён 2026-09-26 туда же; ссылка на `Praises/nyradio.html` внесена в `ALLOW` по решению владельца. Ссылки `13d`→`Praises/xazagpre` и `dz`→`Praises/zhukovdz` внесены в `ALLOW` (решение владельца 2026-09-26). `vv`→`Images/VV_pic` тоже в `ALLOW` (2026-09-26): у `check-separation.py` по книгам предупреждений не осталось.
+
+**Волны 1–2 (`fans/`) — выполнено 2026-09-26.** Перенесено 43 страницы клуба (без переводов): `andr2`, `andrianov`,
+`andr-rusalka`, `andr-rusalka-d`, `answer`, `bes`, `bestiar`, `bom-bram`, `brahms`, `chgk`, `chgkizb`, `discussion`, `elfy`,
+`eslinado`, `fedenkova`, `herbary`, `horatius`, `izvraty`, `julia`, `katrin`, `kogolublu`, `lirika`, `mandlsh2`, `mandlsht`,
+`memory`, `metafora`, `mueller`, `nikst-glaza`, `oncetran`, `parabola`, `polkovnik`, `potop`, `rakety`, `rechisty`,
+`rubcov-doroga`, `sardanapal`, `shuty`, `suzy1`, `szs-intrm4`, `zhandarov`, `comix/comix`, `memo/podborka`,
+`memo/schneider`, `utf/crocodile`, `utf/covers` (последняя — скачана с `lambda.mkshch.com`, на NAS нет). Итог: `check-links.py`
+по `fans` — 5 битых целей (все — переводы), всего 106 → 67; `check-separation.py` — 0 нарушений.
+- **Конвертер** — `scripts/legacy-convert/` (README там же): годится для `Parodies/` и `SCH2/`.
+- **Навигация (Волна 0).** `praises-article.html`: страница из `content/fans/**` без явного `backUrl` получает «Фан-клуб →
+  `fans/index.html`». «Назад» ведёт на якорь хаба (`#articles`, `#creative`), как в старых страницах; страницы, поясняющие песни
+  «Словаря», — на `fans/kom.html#<id песни>` («Словарь заморских слов»; старый якорь `xxxxxxxx1995` → `xxxxxxxx`); `answer` — на
+  `crossword`; `memo/podborka` — на `memo/schneider`. Угловая навигация — как везде: `[На главную страницу] [назад]` сверху,
+  `[назад] [Наверх]` снизу; собственные `[Наверх]`-ссылки внутри `herbary`/`bestiar` остались.
+- **Меню главной.** В подвале «Фан-клуб» теперь живая ссылка (`hugo.json`, `pageRef: fans/fans-index.md`).
+- **Типографика** — по правилам «Отзывов»; исключение — `katrin` (пьеса; по замечанию хаба «орфография, пунктуация и HTML —
+  авторские»: тире и кавычки не тронуты), `potop` (в блоках с непарными кавычками остались прямые `"`). Непарные кавычки в
+  источнике, которые пришлось дописать: `andr2`, `chgk`, `discussion`, `eslinado`, `izvraty`, `answer`.
+  Латинские двойники букв в русских словах исправлены (`andr-rusalka` 61, `szs-intrm4` 6, `bestiar` 4, …).
+- **Ссылки на песни.** Старые `htmtexts/1980/…` вели на ранние песни, которые теперь лежат под 1978/1979 — год исправлен по
+  id; переименованные (`krym1→krym10`, `pustye→pustyjeb`, `nazimnej0→nazimne0`, `onceinou→once`, `obrasche→obraschx`, …) —
+  вручную. Без ссылки оставлены (текст на месте): песни, которых нет на новом сайте (`Песенка` 1989, `Контрреволюционный этюд`,
+  `Романс`), и месячные песни «Дорожного календаря» (кроме `Апрель` и `Июль`); циклы `monologi` по-прежнему не связаны.
+- **Своя разметка.** Спойлеры ответов в `chgk`/`chgkizb` — `span.spoiler` (невидимы, пока не выделишь мышью, как на старом сайте);
+  подсвеченные рифмы в `kogolublu` — `span.rhyme`; цветные даты (`discussion`, `eslinado`, `lirika`) — `span.datum`; стихи в
+  `<br>` — `p.verse`, `<pre>` — шрифт страницы. Стили — `assets/css/praises-article.css`.
+- **Руками, не конвертером:** `memo/schneider` (макет из вложенных таблиц), `memory`. В `memo/schneider` сохранены реквизиты
+  мемориального фонда (2001 г.; банковский счёт клуба «Город» и телефоны организаторов) — как на старом сайте; решение, оставлять
+  ли, — за владельцем.
+- **Не перенесено из `fans/`:** переводы (`utf/{esperanto,german,hebrew,ukrain,francais}` — §3а), `kom2` (Словарь, Волна 6),
+  `erofeev*` (уже в `Praises`). Хаб `fans/index` ссылается ещё на `Parodies/` (Волна 3), `English/trans`, `Disks/krym|else`.
+
+**Волны 3–4 и правки — выполнено 2026-09-26 (позже в тот же день).**
+- **`Parodies/`** — 62 страницы (`content/Parodies/`, хаб `parodies-index.md` с `url: /Parodies/index.html`), **`SCH2/`** — 4 страницы
+  (`content/SCH2/`; `gb/index`, `profiles` → `/SCH2/profiles.html`, старый адрес без расширения GitHub Pages отдаёт сам; профили и e-mail респондентов
+  оставлены, как решил владелец 2026-09-24). Конвертер запускается как `SECTION=Parodies python3 build.py` / `SECTION=SCH2 …` (таблицы метаданных
+  `meta_Parodies.py`, `meta_SCH2.py`). Инверсии и фривольные переводы ведут «назад» на якоря `#inv` / `#free` хаба «Пародий». `check-links.py`:
+  `Parodies` и `SCH2` — 0 битых целей, всего 61; `check-separation.py` — 0 нарушений.
+- **Типографика всех страниц `fans/`** (в т.ч. `katrin`, `potop`, где сначала кавычки не трогали): прямые кавычки → «ёлочки», вложенные → „лапки“,
+  третий уровень → ‘одиночные’; уже стоявшие в источнике `&laquo;` тоже переразмечаются по глубине; ` - ` → `&nbsp;&mdash;`.
+- **Ссылки на песни:** добавлены соответствия `pesenka→1989/vpoxodny`, `kontrrev→1989/kupljubi`, `romans→1994/vrjadli`, `akoekto→1988/akoektop`.
+  Без ссылки остались только месячные песни «Дорожного календаря» (`aug dec jun mar oct novdec febmar`): в Directus они `hidden=true`, страниц у них нет.
 
 Вне этого плана (отдельные задачи): слой переводов (§3а, включая `English/`),
 `Tapes` (остальные: `index`, `ozon`), 

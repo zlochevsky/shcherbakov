@@ -16,8 +16,14 @@
 {{ partialCached "head/js.html" . }}
 </head>
 <body>
-{{- $backUrl := .Params.backUrl | default "praises.html" }}
-{{- $backTitle := .Params.backTitle | default "Отзывы" }}
+{{- $backUrl := .Params.backUrl }}
+{{- $backTitle := .Params.backTitle }}
+{{- if and (not $backUrl) (hasPrefix .File.Dir "fans/") }}
+	{{- $backUrl = "fans/index.html" }}
+	{{- $backTitle = $backTitle | default "Фан-клуб" }}
+{{- end }}
+{{- $backUrl = $backUrl | default "praises.html" }}
+{{- $backTitle = $backTitle | default "Отзывы" }}
 <a id="top"></a>
 <ul class="cornernav">
 	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
