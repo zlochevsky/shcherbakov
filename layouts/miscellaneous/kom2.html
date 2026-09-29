@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<title>{{ .Title }}</title>
+<link rel="canonical" href="{{ "fans/kom.html" | relURL }}">
+{{- if .Params.noindex }}
+<meta name="robots" content="noindex, follow">
+{{- end }}
+<meta http-equiv="refresh" content="0; url={{ "fans/kom.html" | relURL }}">
+</head>
+<body>
+<!-- "Словарь заморских слов" был разбит на две страницы (kom.html/kom2.html);
+     теперь это одна страница kom.html, а kom2.html оставлена как переадресация
+     для старых внешних ссылок вида kom2.html#slug. Обычный Hugo alias (meta
+     refresh на постоянный URL) якорь из адресной строки не подхватывает, а
+     нам нужно сохранить #slug при переходе - отсюда JS вместо aliases. -->
+<script>
+location.replace("{{ "fans/kom.html" | relURL }}" + location.hash);
+</script>
+<p>Эта страница объединена со <a href="{{ "fans/kom.html" | relURL }}">«Словарём заморских слов»</a>.
+Если переход не произошёл автоматически, перейдите по ссылке выше.</p>
+</body>
+</html>

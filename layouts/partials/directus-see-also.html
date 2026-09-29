@@ -1,0 +1,23 @@
+{{ $url := printf "%s%s?%s&%s&%s"
+		site.Params.directus.url
+		"items/works_see_also/"
+		site.Params.directus.token
+		"limit=-1"
+		"fields=work_id,related_work_id"
+		}}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}

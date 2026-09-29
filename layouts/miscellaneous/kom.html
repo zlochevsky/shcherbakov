@@ -18,6 +18,7 @@
 <body>
 {{- $songs := partial "directus.html" -}}
 {{- $comments := partial "directus-comments.html" -}}
+{{- $seeAlso := partial "directus-see-also.html" -}}
 
 {{- $worksById := dict -}}
 {{- range $songs.data -}}
@@ -53,11 +54,28 @@
 	{{- end -}}
 {{- end -}}
 
+{{- $seeAlsoByWork := dict -}}
+{{- range $seeAlso.data -}}
+	{{- $relatedId := .related_work_id -}}
+	{{- with .work_id -}}
+		{{- $existing := index $seeAlsoByWork . | default slice -}}
+		{{- $seeAlsoByWork = merge $seeAlsoByWork (dict . ($existing | append $relatedId)) -}}
+	{{- end -}}
+{{- end -}}
+
 {{- $cards := slice -}}
 {{- range $workId, $workComments := $commentsByWork -}}
 	{{- with index $worksById $workId -}}
 		{{- $sortedComments := sort $workComments "sort_order" -}}
-		{{- $cards = $cards | append (dict "workId" $workId "work" . "comments" $sortedComments) -}}
+		{{- $seeAlsoIds := index $seeAlsoByWork $workId | default slice -}}
+		{{- $seeAlsoWorks := slice -}}
+		{{- range $seeAlsoIds -}}
+			{{- $relId := . -}}
+			{{- with index $worksById $relId -}}
+				{{- $seeAlsoWorks = $seeAlsoWorks | append (dict "id" $relId "name" .name) -}}
+			{{- end -}}
+		{{- end -}}
+		{{- $cards = $cards | append (dict "workId" $workId "work" . "comments" $sortedComments "seeAlso" $seeAlsoWorks) -}}
 	{{- end -}}
 {{- end -}}
 {{- $cards = sort $cards "work.sort" -}}
@@ -97,7 +115,7 @@
 {{- range $cards }}
 	{{- $work := .work }}
 	{{- $href := printf "texts/%v/%v.html" $work.urlYear .workId | relURL }}
-	<details class="comment-entry" data-id="{{ .workId }}">
+	<details class="comment-entry" id="{{ .workId }}" data-id="{{ .workId }}">
 		<summary data-name="{{ or $work.name $work.incipit }}" data-begin="{{ $work.fincipit }}" data-year="{{ $work.year }}" title="Развернуть/свернуть комментарии">
 			<a href="{{ $href }}" title="Перейти к тексту песни"><span class="song-name">{{ or $work.name $work.incipit }}</span></a>
 			{{- if $work.hasName }} (<span class="song-begin">{{ $work.fincipit }}</span>){{ if $work.isPoem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
@@ -119,6 +137,9 @@
 				{{- with .excerpt }}<div class="excerpt">{{ . | safeHTML }}</div>{{ end }}
 				<div class="note-text">{{ .body | safeHTML }}{{ if or $comment.author_name $dateDisplay }} ({{ with $comment.author_name }}{{ if $comment.author_contact }}<a href="{{ $comment.author_contact }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ if $dateDisplay }}, {{ end }}{{ end }}{{ with $dateDisplay }}<span class="entry-date">{{ . }}</span>{{ end }}){{ end }}</div>
 			</div>
+		{{- end }}
+		{{- range .seeAlso }}
+			<p class="see-also">См. также <a href="#{{ .id }}">комментарий к «{{ .name }}»</a>.</p>
 		{{- end }}
 		</div>
 	</details>

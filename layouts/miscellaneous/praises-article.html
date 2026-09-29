@@ -12,6 +12,9 @@
 	{{- with resources.Get "css/praises-article.css" }}
 		{{ .Content | safeCSS }}
 	{{ end }}
+	{{- with .Params.bgColor }}
+		body { background-color: {{ . | safeCSS }}; }
+	{{ end }}
 </style>
 {{ partialCached "head/js.html" . }}
 </head>

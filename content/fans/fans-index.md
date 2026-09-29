@@ -5,7 +5,8 @@
    "url": "/fans/index.html",
    "params": {
         "backUrl": "index.html",
-        "backTitle": "На главную"
+        "backTitle": "На главную",
+        "bgColor": "#E0FFFF"
    }
 }
 

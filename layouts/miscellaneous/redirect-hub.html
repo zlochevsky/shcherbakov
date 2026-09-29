@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8">
+<link rel="canonical" href="{{ .Params.default }}">
+{{- if .Params.noindex }}
+<meta name="robots" content="noindex, follow">
+{{- end }}
+<meta http-equiv="refresh" content="0; url={{ .Params.default }}">
+<script>
+var map = {{ .Params.map | jsonify | safeJS }};
+var key = location.hash.replace(/^#/, "");
+var suffix = map[key] || {{ .Params.default | jsonify | safeJS }};
+location.replace(suffix);
+</script>
