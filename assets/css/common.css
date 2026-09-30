@@ -113,6 +113,15 @@ nav > div, main > div.wrapper > div {
 	list-style-type: none;
 	line-height: 150%;
 	}
+nav summary {
+	cursor: pointer;
+}
+nav > div:has(.toggle-child) {
+	display: none;
+}
+nav.bottom-menu > div:has(> details[open]) ~ div:has(.toggle-child) {
+	display: table-cell;
+}
 @media only screen and (width <= 70em) {
 
         nav, main {
@@ -120,7 +129,33 @@ nav > div, main > div.wrapper > div {
         }
         nav > div, main > div.wrapper > div {
                 padding: 20px;
+        }
+        main > div.wrapper > div {
                 margin: 5px;
+        }
+        /* No margin-top on nav > div: nav.top-menu can become a CSS multi-column list
+           (see #menu-toggle:checked ~ nav.top-menu below) wherever this breakpoint
+           applies — catalogue/concerts/search/songpage headers included, not just the
+           home page. Margins don't collapse across a column break, so a symmetric
+           margin here would show up in full (uncollapsed) on whichever box a column
+           happens to start with. One-sided margin-bottom avoids that entirely. */
+        nav > div {
+                margin: 0 5px 5px 5px;
+        }
+        footer nav.bottom-menu {
+                display: none;
+        }
+        nav.top-menu > div:has(> details[open]) ~ div:has(.toggle-child) {
+                display: block;
+        }
+        nav.top-menu .datum {
+                display: none;
+        }
+        .short-name {
+                display: inline;
+        }
+        .full-name {
+                display: none;
         }
 }
 @media only screen and (width > 70em) {
@@ -129,6 +164,27 @@ nav > div, main > div.wrapper > div {
         }
         .centertext {
                 text-align: center;
+        }
+        nav.top-menu .mobile-only {
+                display: none;
+        }
+        nav.top-menu > div:has(.mobile-only) {
+                display: none;
+        }
+        .short-name {
+                display: none;
+        }
+        .full-name {
+                display: inline;
+        }
+}
+@media only screen and (25em <= width <= 70em) {
+        #menu-toggle:checked ~ nav.top-menu {
+                column-count: 2;
+                column-gap: 0;
+        }
+        #menu-toggle:checked ~ nav.top-menu .bordered {
+                break-inside: avoid-column;
         }
 }
 @media only screen and (min-width: 1600px) {

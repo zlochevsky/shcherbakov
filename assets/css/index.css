@@ -85,10 +85,14 @@ main > div.wrapper > div.collections > ul {
         header .burger { order: 3; align-self: center; }
         header nav.top-menu { order: 4; }
         header ul.announce { order: 5; }
+        /* No margin-top: nav.top-menu becomes a CSS multi-column list (see
+           #menu-toggle:checked ~ nav.top-menu in common.css), and margins don't
+           collapse across a column break — a symmetric margin here would show up
+           in full, uncollapsed, on whichever box happens to start a new column. */
         nav > div {
                 display: block;
                 padding: 1.2em;
-                margin: 1em;
+                margin: 0 1em 1em 1em;
         }
         main > div.wrapper > div {
                 margin: 5px;
@@ -112,8 +116,11 @@ main > div.wrapper > div.collections > ul {
                 margin-top: 0;
                 margin-bottom: 0;
         }
+        nav {
+                table-layout: fixed;
+        }
         nav > div {
-        	width: 16.6%;
+        	width: auto;
 	}
         nav > div, main > div.wrapper > div {
                 display: table-cell;

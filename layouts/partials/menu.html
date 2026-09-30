@@ -38,15 +38,35 @@ Renders a menu for the given menu ID.
         {{- $name = . }} 
       {{- end }}
     {{- end }}
+    {{- $label := $name }}
+    {{- with .Params.shortName }}
+      {{- $label = printf `<span class="full-name">%s</span><span class="short-name">%s</span>` $name . | safeHTML }}
+    {{- end }}
+    {{- $boxClass := printf "bordered%s%s" (cond (eq .Params.mobileOnly "yes") " mobile-only" "") (cond (eq .Params.toggleChild "yes") " toggle-child" "") }}
+    {{- if eq .Params.collapsible "yes" }}
     <div>
-      <div class="bordered">
+      <details class="{{ $boxClass }}">
+        <summary>{{ .Pre | markdownify }}{{ $label }}{{ .Post | markdownify }}</summary>
+      </details>
+    </div>
+{{- /* Children of a collapsible entry render as flat sibling "nav > div" cells right
+       after this one (same as the top-level call in menu.html), not nested inside a <ul>
+       here — so they show up as new menu cells between this entry and the next one,
+       toggled purely by CSS reacting to the <details>'s [open] state (see .toggle-child
+       in common.css). */}}
+    {{- with .Children }}
+      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+    {{- end }}
+    {{- else }}
+    <div>
+      <div class="{{ $boxClass }}">
         {{ .Pre | markdownify }}<a
         {{- range $k, $v := $attrs }}
           {{- with $v }}
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}
           {{- end }}
         {{- end -}}
-      >{{ $name }}</a>{{ .Post | markdownify }}
+      >{{ $label }}</a>{{ .Post | markdownify }}
 {{- /* If set in site config ("isDateToPrint"), print update timestamp after the menu entry.
        If set in site config, ("frontmatter" > "lastmod" > [lastmod,:fileModTime]),
        update timestamp is taken from "lastmod" site config param in the following order:
@@ -65,8 +85,6 @@ Renders a menu for the given menu ID.
         {{- else }}{{ with .Page }} <span class="datum">{{ .Lastmod | time.Format "02.01.06" }}</span>{{ end }}
         {{- end }}
       {{- end }}
-     
-      
       {{- with .Children }}
         <ul>
           {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
@@ -74,5 +92,6 @@ Renders a menu for the given menu ID.
       {{- end }}
       </div>
     </div>
+    {{- end }}
   {{- end }}
 {{- end }}

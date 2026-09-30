@@ -10,35 +10,28 @@
    }
 }
 
-<ul>
-<li><a href="../Images/banners.html">Баннеры</a></li>
-<li><a href="index.html#articles">Эссе и стихи</a> 21.02.21</li>
-<li><a href="index.html#transl">Переводы</a> 10.10.21</li>
-</ul>
-
-<blockquote>
-<p>Растленных тройка есть певцов&nbsp;&mdash;<br>
-Набоков, Бродский, Щербаков.<br>
-Тройное скопище пороков&nbsp;&mdash;<br>
-Наш Бродский, Щербаков, Набоков.<br>
-Кто ж самый из троих уродский?<br>
-Набоков, Щербаков и Бродский.</p>
-<p class="right"><small>(А.Черняков&nbsp;&mdash; В.Альтшуллер;<br>в качестве отклика на <a href="../FOM/iska.html">вот это.</a>)</small></p>
-</blockquote>
-
-<p class="center"><img src="../Images/marsh-krotov2.gif" alt="" width="350"></p>
-
 <h2>Мемориальные страницы</h2>
 <ul>
 <li><a href="smirnov/index.html">О Володе Смирнове</a>&nbsp;&mdash; создателе клуба и этого сайта</li>
 <li><a href="memo/schneider.html">Памяти Вити Шнейдера</a></li>
 </ul>
 
+<blockquote>
+<p><i>Большинство материалов на этих страницах относятся к категории &laquo;спойлеров&raquo;.
+То есть, если вы недостаточно хорошо знакомы с текстами Щербакова,
+то чтением этих материалов вы можете испортить себе удовольствие и от
+песен, и от собственно материалов.</i></p>
+</blockquote>
+
 <ul>
-<li><a href="../Parodies/index.html">Пародии</a> 20.06.20</li>
-<li><a href="discussion.html">Обсуждения</a> 07.08.22</li>
+<li><a href="index.html#articles">Эссе и стихи</a> 21.02.21</li>
+<li><a href="index.html#transl">Переводы</a> 10.10.21</li>
 <li><a href="index.html#performance">Представления</a> 22.02.22</li>
 <li><a href="index.html#creative">Иное творчество фанатов</a> 14.08.21</li>
+<li><a href="index.html#pictures">Картинки</a></li>
+<li><a href="index.html#sociology-fans">Социология</a></li>
+<li><a href="../Parodies/index.html">Пародии</a> 20.06.20</li>
+<li><a href="discussion.html">Обсуждения</a> 07.08.22</li>
 <li><a href="../no.html">Нужно!</a></li>
 </ul>
 
@@ -67,12 +60,15 @@
 <li>Михаил Щербаков на Bards.ru: <a href="http://www.bards.ru/person.php?id=363">www.bards.ru/person.php?id=363</a>.</li>
 </ul>
 
-<blockquote>
-<p><i>Большинство материалов на этих страницах относятся к категории &laquo;спойлеров&raquo;.
-То есть, если вы недостаточно хорошо знакомы с текстами Щербакова,
-то чтением этих материалов вы можете испортить себе удовольствие и от
-песен, и от собственно материалов.</i></p>
-</blockquote>
+<h2 id="pictures">Картинки</h2>
+<p><a href="../Images/index.html">Фотографии, иллюстрации, афиши, баннеры и другие материалы</a>.</p>
+
+<h2 id="sociology-fans">Социология</h2>
+<ul>
+<li>С чего все началось. <a href="../FOM/znanie.html">Круглый стол в журнале "Знание - сила"</a> за 08.1994.</li>
+<li><a href="../FOM/index.html">"Как варяг, наблюдающий нравы славян..."</a> Исследование, проведенное <a href="http://www.fom.ru">Фондом "Общественное Мнение"</a> в 1996 году. Помимо результатов опроса, читайте там интервью с известными и не очень деятелями авторской песни, статьи, "Круглый стол".</li>
+<li><a href="../SCH2/index.html">Материалы проекта Щ-2</a>: Целых 8 блоков разных вопросов о творчестве Щербакова, и ответы респондентов на них. Это совместный проект того же  <a href="http://www.fom.ru">Фонда "Общественное Мнение"</a> и <a href="index.html">Фан-Клуба</a>.</li>
+</ul>
 
 <h2 id="articles">Эссе и стихи</h2>
 <ul>
@@ -225,6 +221,18 @@ Cоздан и прислан <a href="mailto:Boris@as.ru">Б.Богдановы
 &copy; Nakolenke Pictures Studio, 2010 
 (<A HREF="http://community.livejournal.com/m_sch/288223.html">здесь</A> &mdash; обсуждение в ЖЖ, <FONT color="#C71585">19.03.10</FONT>).
 -->
+
+<blockquote>
+<p>Растленных тройка есть певцов&nbsp;&mdash;<br>
+Набоков, Бродский, Щербаков.<br>
+Тройное скопище пороков&nbsp;&mdash;<br>
+Наш Бродский, Щербаков, Набоков.<br>
+Кто ж самый из троих уродский?<br>
+Набоков, Щербаков и Бродский.</p>
+<p><small>(А.Черняков&nbsp;&mdash; В.Альтшуллер;<br>в качестве отклика на <a href="../FOM/iska.html">вот это.</a>)</small></p>
+</blockquote>
+
+<p class="center"><img src="../Images/marsh-krotov2.gif" alt="" width="350"></p>
 
 <p>(см. также <a href="../Images/index.html#ill">Иллюстрации</a>)</p>
 

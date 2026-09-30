@@ -30,7 +30,9 @@
 <a id="top"></a>
 <ul class="cornernav">
 	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	{{- if ne $backUrl "index.html" }}
 	<li>[<a href="{{ $backUrl | relURL }}">{{ $backTitle }}</a>]</li>
+	{{- end }}
 </ul>
 <header>
 <h1>{{ .Title }}</h1>
