@@ -124,23 +124,36 @@ nav.bottom-menu > div:has(> details[open]) ~ div:has(.toggle-child) {
 }
 @media only screen and (width <= 70em) {
 
-        nav, main {
+        main {
                 padding: 5px 0;
         }
-        nav > div, main > div.wrapper > div {
-                padding: 20px;
-        }
         main > div.wrapper > div {
+                padding: 20px;
                 margin: 5px;
         }
-        /* No margin-top on nav > div: nav.top-menu can become a CSS multi-column list
-           (see #menu-toggle:checked ~ nav.top-menu below) wherever this breakpoint
-           applies — catalogue/concerts/search/songpage headers included, not just the
-           home page. Margins don't collapse across a column break, so a symmetric
-           margin here would show up in full (uncollapsed) on whichever box a column
-           happens to start with. One-sided margin-bottom avoids that entirely. */
+        /* Shared nav/nav>div spacing for every page with a burger + nav.top-menu
+           (home, catalogue, concerts(-prototype), search, songpage) — single source
+           of truth, do not re-duplicate per page-specific stylesheet.
+           nav gets symmetric padding since nav > div below has no left/right margin
+           of its own (that's what used to provide the outer horizontal inset). */
+        nav {
+                padding: .5em;
+        }
+        /* No margin-top, no left/right margin on nav > div: nav.top-menu can become
+           a CSS multi-column list (see #menu-toggle:checked ~ nav.top-menu below).
+           Margins don't collapse across a column break, so a symmetric margin here
+           would show up in full (uncollapsed) on whichever box a column happens to
+           start with. Horizontal spacing between columns comes from column-gap
+           instead; the outer inset on all sides comes from nav's own padding above,
+           so it can't stack with this item margin at the edges. */
         nav > div {
-                margin: 0 5px 5px 5px;
+                padding: 1.2em;
+                margin: 0 0 .5em 0;
+        }
+        /* The very last item would otherwise add its own margin-bottom on top of
+           nav's padding-bottom at the end of the list. */
+        nav.top-menu > div:last-child {
+                margin-bottom: 0;
         }
         footer nav.bottom-menu {
                 display: none;
@@ -181,7 +194,7 @@ nav.bottom-menu > div:has(> details[open]) ~ div:has(.toggle-child) {
 @media only screen and (25em <= width <= 70em) {
         #menu-toggle:checked ~ nav.top-menu {
                 column-count: 2;
-                column-gap: 0;
+                column-gap: .5em;
         }
         #menu-toggle:checked ~ nav.top-menu .bordered {
                 break-inside: avoid-column;

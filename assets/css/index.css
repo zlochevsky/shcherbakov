@@ -66,9 +66,6 @@ main > div.wrapper > div.collections > ul {
                 font-size: 1em;
                 line-height: 1.2;
         }
-        nav {
-                padding: .5em;
-        }
         main {
                 /* common.css задаёт main тот же padding: 5px 0 — здесь явно обнуляем
                    именно для главной, чтобы не дублировать отступ ячейки её margin'ом */
@@ -85,27 +82,8 @@ main > div.wrapper > div.collections > ul {
         header .burger { order: 3; align-self: center; }
         header nav.top-menu { order: 4; }
         header ul.announce { order: 5; }
-        /* No margin-top, no left/right margin: nav.top-menu becomes a CSS
-           multi-column list (see #menu-toggle:checked ~ nav.top-menu below),
-           and margins don't collapse across a column break — a symmetric margin
-           here would show up in full, uncollapsed, on whichever box happens to
-           start a new column. Horizontal spacing between the two columns comes
-           from column-gap instead (below); the outer inset on all four sides
-           comes from nav's own padding (above), not from this item margin, so
-           it can't stack with it at the edges. */
-        nav > div {
-                display: block;
-                padding: 1.2em;
-                margin: 0 0 .5em 0;
-        }
-        /* The very last item would otherwise add its own margin-bottom on top of
-           nav's padding-bottom at the end of the list. */
-        nav.top-menu > div:last-child {
-                margin-bottom: 0;
-        }
-        #menu-toggle:checked ~ nav.top-menu {
-                column-gap: .5em;
-        }
+        /* nav / nav > div padding, margin, column-gap are all shared defaults now —
+           see assets/css/common.css, don't redeclare them per page. */
         main > div.wrapper > div {
                 margin: 5px;
                 padding: 1em;
