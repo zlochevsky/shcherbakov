@@ -116,12 +116,35 @@ nav > div, main > div.wrapper > div {
 nav summary {
 	cursor: pointer;
 }
+/* В закрытом виде — нативный маркер слева, как и раньше (устраивает).
+   В открытом — маркер того же вида (как у закрытого, тот же "▶", не
+   поворачивающийся в "▾") переносим после текста, ближе к раскрывшимся
+   siblings подменю, вместо нативного (который всегда слева). */
+nav details[open] > summary {
+	list-style: none;
+}
+nav details[open] > summary::-webkit-details-marker {
+	display: none;
+}
+nav details[open] > summary::after {
+	content: "▶";
+	margin-left: .3em;
+}
 nav > div:has(.toggle-child) {
 	display: none;
 }
 nav.bottom-menu > div:has(> details[open]) ~ div:has(.toggle-child) {
 	display: table-cell;
 }
+.bordered.toggle-child {
+	display: list-item;
+	list-style: none;
+}
+.bordered.toggle-child::before {
+        content: "▪";
+        margin-right: .2em;
+        vertical-align: middle;
+}      
 @media only screen and (width <= 70em) {
 
         main {
