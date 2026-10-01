@@ -3,11 +3,10 @@
     "title": "Дело было страшное...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "delobylo",
-        "tonality": "Hm",
-        "year": "1984",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "year": "1984"
     }
 }

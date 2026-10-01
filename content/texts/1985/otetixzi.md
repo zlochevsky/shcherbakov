@@ -3,7 +3,9 @@
     "title": "От этих зимних зорь...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "otetixzi",
         "tonality": "Hm",
         "year": "1985",

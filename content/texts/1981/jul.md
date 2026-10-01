@@ -5,6 +5,7 @@
     "layout": "songpage",
     "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "jul",
         "year": "1981"
     }

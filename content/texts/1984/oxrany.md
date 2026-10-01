@@ -3,7 +3,9 @@
     "title": "Песня внутренней службы охраны",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "oxrany",
         "tonality": "Dm",
         "year": "1984",

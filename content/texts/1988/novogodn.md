@@ -3,7 +3,6 @@
     "title": "Вот - начинается музыка...",
     "type": "miscellaneous",
     "layout": "songpage",
-    "sitemap": {"disable": true},
     "params": {
         "id": "novogodn",
         "year": "1988",

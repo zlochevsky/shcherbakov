@@ -3,7 +3,9 @@
     "title": "Ой, не троньте...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "ojnetron",
         "tonality": "Hm",
         "year": "1986",

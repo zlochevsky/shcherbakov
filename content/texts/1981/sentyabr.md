@@ -3,7 +3,9 @@
     "title": "Сентябрь",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "sentyabr",
         "tonality": "Dm",
         "year": "1981",

@@ -2,6 +2,7 @@
     "date": "2025-02-13T10:13:24+00:00",
     "title": "Апрель",
     "type": "miscellaneous",
+    "aliases": ["/texts/1981/aprel.html"],
     "layout": "songpage",
     "sitemap": {"disable": true},
     "params": {

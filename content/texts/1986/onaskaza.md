@@ -3,11 +3,10 @@
     "title": "Она сказала мне...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "onaskaza",
-        "tonality": "Hm",
-        "year": "1986",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "year": "1986"
     }
 }

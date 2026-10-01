@@ -3,7 +3,9 @@
     "title": "Ковыляет по курганам...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "veter",
         "tonality": "Am",
         "year": "1980",

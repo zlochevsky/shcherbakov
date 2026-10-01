@@ -3,11 +3,10 @@
     "title": "Посмотрите, вот идёт...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "posmotri",
-        "tonality": "Hm",
-        "year": "1984",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "year": "1984"
     }
 }

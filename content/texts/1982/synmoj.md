@@ -3,7 +3,9 @@
     "title": "Сын мой! Будь умней, чем отец твой...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "synmoj",
         "tonality": "Hm",
         "year": "1982",

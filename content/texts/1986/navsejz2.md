@@ -3,7 +3,9 @@
     "title": "На всей Земле 2",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "navsejz2",
         "tonality": "Am",
         "year": "1986",

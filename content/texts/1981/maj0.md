@@ -2,6 +2,7 @@
     "date": "2025-02-13T10:13:25+00:00",
     "title": "Май",
     "type": "miscellaneous",
+    "aliases": ["/texts/1981/maj.html"],
     "layout": "songpage",
     "sitemap": {"disable": true},
     "params": {

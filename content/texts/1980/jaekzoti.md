@@ -3,7 +3,9 @@
     "title": "Я - экзотик",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "jaekzoti",
         "tonality": "Dm",
         "year": "1980",

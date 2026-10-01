@@ -3,7 +3,9 @@
     "title": "Никакого нет спасенья...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "nikakogo",
         "tonality": "Hm",
         "year": "1984",

@@ -3,7 +3,9 @@
     "title": "Художник — толпе",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "xudozhni",
         "tonality": "Hm",
         "year": "1987",

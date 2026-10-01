@@ -3,11 +3,10 @@
     "title": "Чем без дела ошиваться...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "chembez",
-        "tonality": "Hm",
-        "year": "1983",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "year": "1983"
     }
 }

@@ -3,7 +3,9 @@
     "title": "Просыпаюсь...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "prosypaj",
         "tonality": "Dm",
         "year": "1986",

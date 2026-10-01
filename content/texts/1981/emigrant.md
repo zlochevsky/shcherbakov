@@ -3,7 +3,9 @@
     "title": "Песенка эмигранта",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "emigrant",
         "tonality": "Em",
         "year": "1981",

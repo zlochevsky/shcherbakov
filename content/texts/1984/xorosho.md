@@ -3,7 +3,9 @@
     "title": "Хорошо жилось Сократу...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "xorosho",
         "tonality": "Hm",
         "year": "1984",

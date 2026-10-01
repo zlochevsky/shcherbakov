@@ -3,7 +3,9 @@
     "title": "Прошу вниманья, государь!...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "proshuvn",
         "tonality": "Hm",
         "year": "1986",

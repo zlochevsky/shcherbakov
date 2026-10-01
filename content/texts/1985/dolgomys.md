@@ -3,11 +3,10 @@
     "title": "Долго мы скакали полем...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "dolgomys",
-        "tonality": "Hm",
-        "year": "1985",
-        "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "year": "1985"
     }
 }

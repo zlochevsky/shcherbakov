@@ -3,7 +3,9 @@
     "title": "Про ненадетые браслеты",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "pronenad",
         "tonality": "Em",
         "year": "1981",

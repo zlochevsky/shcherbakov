@@ -3,7 +3,9 @@
     "title": "А когда, государь, ты умрёшь...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "akogdago",
         "tonality": "F#m",
         "year": "1986",

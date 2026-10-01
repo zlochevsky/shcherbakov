@@ -3,7 +3,9 @@
     "title": "Мне этот берег вечно мил...",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "mneetotb",
         "tonality": "Hm",
         "year": "1985",

@@ -3,7 +3,9 @@
     "title": "По поводу очередных реформ",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "popovodu",
         "tonality": "Hm",
         "year": "1985",

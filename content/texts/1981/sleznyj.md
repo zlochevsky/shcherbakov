@@ -3,7 +3,9 @@
     "title": "Слёзный звон",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "sleznyj",
         "tonality": "Hm",
         "year": "1981",

@@ -3,7 +3,9 @@
     "title": "Апрель",
     "type": "miscellaneous",
     "layout": "songpage",
+    "sitemap": {"disable": true},
     "params": {
+        "noindex": true,
         "id": "aprel",
         "tonality": "Dm",
         "year": "1981",
