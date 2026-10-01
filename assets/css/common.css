@@ -184,13 +184,25 @@ nav.bottom-menu > div:has(> details[open]) ~ div:has(.toggle-child) {
         nav.top-menu > div:has(> details[open]) ~ div:has(.toggle-child) {
                 display: block;
         }
-        nav.top-menu .datum {
-                display: none;
-        }
         .short-name {
                 display: inline;
         }
         .full-name {
+                display: none;
+        }
+}
+/* Дата обновления на мобильном видна по умолчанию, кроме двух узких зон,
+   где colonnes/пункт теснее всего и текст с датой чаще всего переносится:
+   чуть выше порога двух колонок (25em) и совсем узкие экраны (<=15em).
+   Это эвристика по ширине вьюпорта, не измерение реального переноса —
+   границы подбираются визуально под конкретные тексты пунктов. */
+@media only screen and (25em < width <= 30em) {
+        nav.top-menu .datum {
+                display: none;
+        }
+}
+@media only screen and (width <= 15em) {
+        nav.top-menu .datum {
                 display: none;
         }
 }
