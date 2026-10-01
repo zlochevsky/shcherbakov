@@ -1,25 +1,14 @@
 {
-    "date": "2025-02-13T10:13:24+00:00",
-    "title": "Апрель",
-    "type": "miscellaneous",
-    "aliases": ["/texts/1981/aprel.html"],
-    "layout": "songpage",
-    "sitemap": {"disable": true},
+    "aliases": [
+        "/texts/1981/aprel.html"
+    ],
     "params": {
-        "id": "aprel0",
         "tonality": "Dm",
-        "year": "1981",
-        "edit": "1986",
         "chordsStartAt": 41,
-        "textFinishAtLine": 50,
-        "newerEdition": {
-            "id": "aprel",
-            "year": "1986"
-            }
+        "textFinishAtLine": 48,
+        "editionOf": "aprel"
     }
 }
-АПРЕЛЬ
-
 Секунды сделали своё,
 за океан ушла метель,
 и в наше хмурое житьё

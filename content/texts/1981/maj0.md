@@ -1,26 +1,14 @@
 {
-    "date": "2025-02-13T10:13:25+00:00",
-    "title": "Май",
-    "type": "miscellaneous",
-    "aliases": ["/texts/1981/maj.html"],
-    "layout": "songpage",
-    "sitemap": {"disable": true},
+    "aliases": [
+        "/texts/1981/maj.html"
+    ],
     "params": {
-        "id": "maj0",
         "tonality": "Hm",
-        "year": "1981",
         "chordsStartAt": 36,
-        "textFinishAtLine": 56,
-        "newerEdition":
-    	{
-    	    "year": "1986",
-    	    "id": "maj",
-    	    "tonality": "Am"
-    	}
+        "textFinishAtLine": 54,
+        "editionOf": "maj"
     }
 }
-МАЙ
-
 Ах, я, точно тополь, рос,
 и был неказист и прост,
 склонялся от бурь и гроз,

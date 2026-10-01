@@ -4,6 +4,13 @@
    "title": "Песни Михаила Щербакова",
    "uglyURLs": true,
    "relativeURLs": false,
+   "cascade": [
+	   {
+		   "target": {"path": "{/texts/**}"},
+		   "type": "miscellaneous",
+		   "layout": "songpage"
+	   }
+   ],
    "caches": {
 	   "getresource": {
 		   "maxAge": "10m"
@@ -15,7 +22,7 @@
 		   "url": "https://db.sch.com.ru/",
 		   "songs" : "items/works/",
 		   "limit": "limit=-1",
-		   "fields": "fields=id,sort,incipit,fincipit,name,fname,date,edit,hidden,is_poem,is_new",
+		   "fields": "fields=id,sort,incipit,fincipit,name,fname,date,edit,hidden,is_poem,is_new,noindex",
 		   "sort": "sort=sort",
 		   "cache": "cache=false"
 	   }

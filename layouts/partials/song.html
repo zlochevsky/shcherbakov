@@ -1,21 +1,20 @@
-{{- /* Контекст — страница песни. Текст берётся из тела .md, а пока песня не перенесена — из assets/texts/<id>.txt */ -}}
-{{- $pageParams := .Params -}}
-{{- $path := printf "texts/%s.txt" $pageParams.id -}}
-{{- $cont := "" -}}
-{{- $found := false -}}
-{{- if strings.TrimSpace .RawContent -}}
-    {{- $cont = .RawContent -}}
-    {{- $found = true -}}
-{{- else -}}
-    {{- with resources.Get $path -}}
-        {{- $cont = .Content -}}
-        {{- $found = true -}}
-    {{- end -}}
-{{- end -}}
+{{- /* Контекст — dict "page" (страница песни) "info" (song-page-info.html). Текст песни — тело .md (без строки-заголовка),
+       заголовок <h1> — из базы (info.h1); у песни без названия — «* * *» с невидимой первой строкой для экранного доступа. */ -}}
+{{- $page := .page -}}
+{{- $info := .info -}}
+{{- $pageParams := $page.Params -}}
+{{- $cont := $page.RawContent -}}
+{{- $found := gt (len (strings.TrimSpace $cont)) 0 -}}
 {{- $linesText := slice -}}
+{{- $h1 := "" -}}
+{{- with $info.h1 -}}
+    {{- $h1 = printf "<h1>%s</h1>" (. | htmlEscape) -}}
+{{- else -}}
+    {{- $h1 = printf "<h1><span aria-hidden=\"true\">* * *</span><span class=\"visually-hidden\">%s</span></h1>" ($info.title | htmlEscape) -}}
+{{- end -}}
 {{- $linesSide := slice -}}
 {{- $linesAbove := slice -}}
-{{- $linesHeader := slice -}}
+{{- $linesHeader := slice (println $h1 | safeHTML) -}}
 {{- $newLinesAfter := slice -}}
 {{- $tonality := "Hm" -}}
 {{- $stressLine := "" -}}
@@ -47,96 +46,71 @@
     {{- $pos := int ( math.Max 0 (sub (int $pageParams.chordsStartAt)  1) ) -}}
     {{- range $k, $v := $lines -}}
         {{- $line := $v -}}
-        {{- if (and (lt $k 2) (hasPrefix (lower $line) (lower $pageParams.title) ) ) -}}
-            {{/* wrap title in <h1> */}}
-	        {{- $line = print "<h1>" $line "</h1>" -}}
-            {{- $linesHeader = $linesHeader | append (println $line | safeHTML) -}}
-        {{- else -}}
-            {{/* non-empty lines */}}
-            {{- if gt (len (trim $line " \t")) 0 -}}
-                {{/* determine if line should have year wrapped (skip first 2 lines) */}}
-                {{- $shouldWrapYear := false -}}
-                {{- if ge $k 2 -}}
-                    {{- if eq $k $lastNonEmptyIndex -}}
+        {{/* non-empty lines */}}
+        {{- if gt (len (trim $line " \t")) 0 -}}
+            {{/* determine if line should have year wrapped (skip first 2 lines) */}}
+            {{- $shouldWrapYear := false -}}
+            {{- if ge $k 2 -}}
+                {{- if eq $k $lastNonEmptyIndex -}}
+                    {{- $shouldWrapYear = true -}}
+                {{- else -}}
+                    {{- $textFinish := int $textFinishAtLine -}}
+                    {{- if and (ge $k (sub $textFinish 6)) (le $k $textFinish) -}}
                         {{- $shouldWrapYear = true -}}
-                    {{- else -}}
-                        {{- $textFinish := int $textFinishAtLine -}}
-                        {{- if and (ge $k (sub $textFinish 6)) (le $k $textFinish) -}}
-                            {{- $shouldWrapYear = true -}}
-                        {{- end -}}
                     {{- end -}}
                 {{- end -}}
-                {{/* wrap year in <span> using Regex */}}
-                {{- if $shouldWrapYear -}}
-                    {{- $line = replaceRE `^\s*(<?\s*\d{4}(?:,\s*\d{4})*\s*>?)\s*$` "<span class=\"year\">$1</span>" $line -}}
-                {{- end -}}
-                {{- if (ge $k $textFinishAtLine)  -}}
-                    {{/* add lines to $newLinesAfter for <pre> block) */}}
-                    {{- $newLinesAfter = $newLinesAfter | append (println $line | safeHTML ) -}}
-                {{- else -}}
-                    {{- if gt $pos 0 -}}
-                        {{/* split line into text and chords at position */}}
-                        {{- if and (gt (len $line) $pos) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}}
-                            {{- $p1 := substr $line 0 $pos -}}{{/* text substring */}}
-                            {{- $p1 = replaceRE `(^|[\s\(—])"` "$1«" $p1 -}}{{/* opening quotes */}}
-                            {{- $p1 = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $p1 -}}{{/* closing quotes before space/punctuation */}}
-                            {{- $p1 = replaceRE `([!?;:\.…,])"` "$1»" $p1 -}}{{/* closing quotes after punctuation */}}
-                            {{- $p1 = replaceRE `^- ` "— " $p1 -}}{{/* dash at line start (direct speech) */}}
-                            {{- $p1 = replaceRE `, - ` ", — " $p1 -}}{{/* dash after comma */}}
-                            {{- $p1 = replaceRE ` - ` "&nbsp;— " $p1 -}}{{/* space-dash-space with non-breaking space */}}
-                            {{- $p2 := substr $line $pos -}}{{/* chords substring */}}
-                            {{- $stressPositions := "" -}}
-                            {{- if ne $stressLine "" -}}
-                                {{/* parse stress positions from previous line */}}
-                                {{- $positions := slice -}}
-                                {{- $chars := split $stressLine "" -}}
-                                {{- range $i, $c := $chars -}}
-                                    {{- if eq $c "," -}}
-                                        {{- $positions = $positions | append $i -}}
-                                    {{- end -}}
+            {{- end -}}
+            {{/* wrap year in <span> using Regex */}}
+            {{- if $shouldWrapYear -}}
+                {{- $line = replaceRE `^\s*(<?\s*\d{4}(?:,\s*\d{4})*\s*>?)\s*$` "<span class=\"year\">$1</span>" $line -}}
+            {{- end -}}
+            {{- if (ge $k $textFinishAtLine)  -}}
+                {{/* add lines to $newLinesAfter for <pre> block) */}}
+                {{- $newLinesAfter = $newLinesAfter | append (println $line | safeHTML ) -}}
+            {{- else -}}
+                {{- if gt $pos 0 -}}
+                    {{/* split line into text and chords at position */}}
+                    {{- if and (gt (len $line) $pos) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}}
+                        {{- $p1 := substr $line 0 $pos -}}{{/* text substring */}}
+                        {{- $p1 = replaceRE `(^|[\s\(—])"` "$1«" $p1 -}}{{/* opening quotes */}}
+                        {{- $p1 = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $p1 -}}{{/* closing quotes before space/punctuation */}}
+                        {{- $p1 = replaceRE `([!?;:\.…,])"` "$1»" $p1 -}}{{/* closing quotes after punctuation */}}
+                        {{- $p1 = replaceRE `^- ` "— " $p1 -}}{{/* dash at line start (direct speech) */}}
+                        {{- $p1 = replaceRE `, - ` ", — " $p1 -}}{{/* dash after comma */}}
+                        {{- $p1 = replaceRE ` - ` "&nbsp;— " $p1 -}}{{/* space-dash-space with non-breaking space */}}
+                        {{- $p2 := substr $line $pos -}}{{/* chords substring */}}
+                        {{- $stressPositions := "" -}}
+                        {{- if ne $stressLine "" -}}
+                            {{/* parse stress positions from previous line */}}
+                            {{- $positions := slice -}}
+                            {{- $chars := split $stressLine "" -}}
+                            {{- range $i, $c := $chars -}}
+                                {{- if eq $c "," -}}
+                                    {{- $positions = $positions | append $i -}}
                                 {{- end -}}
-                                {{- $stressPositions = delimit $positions "," -}}
-                                {{- $stressLine = "" -}}
                             {{- end -}}
-                            {{/* append text and chords to view arrays */}}
-                            {{- $dataAttr := cond (ne $stressPositions "") (printf " data-positions=\"%s\"" $stressPositions) "" -}}
-                            {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}
-                            {{/* non stressed AboveView: replace multiple spaces */}}
-                            {{- $p2Clean := $p2 -}}
-                            {{- if eq $hasStress false -}}                                
-                                {{- $p2Clean = strings.TrimLeft " " $p2 -}}
-                                {{- $p2Clean = replaceRE `\s+` " " $p2Clean -}}
-                            {{- end -}}
-                            {{- $linesAbove = $linesAbove | append (printf "<span class=\"ch\"%s>%s</span><br>\n<span class=\"txt\">%s</span><br>\n" $dataAttr $p2Clean (strings.TrimRight " " $p1) | safeHTML) -}}
-                            {{- $linesText = $linesText | append (print "<span class=\"txt\">" $p1 "</span>\n" | safeHTML) -}}
-                        {{- else -}}
-                            {{- if and (findRE `^[\s,\|0-9]+$` $line) (findRE `,` $line) (not (findRE `\d{4}` $line)) -}}
-                                {{/* save stress line for next iteration, add to side view */}}
-                                {{- $stressLine = $line -}}
-                                {{- $hasStress = true -}}
-                                {{- $linesSide = $linesSide | append (print "<span class=\"strss\">" (replaceRE ` +$` "" $line) "<br></span>\n" | safeHTML) -}}
-                            {{- else -}}
-                                {{/* text-only line: trim trailing spaces, replace quotes then dashes, append to all views */}}
-                                {{- $lineClean := replaceRE ` +$` "" $line -}}
-                                {{- $lineClean = replaceRE `(^|[\s\(—])"` "$1«" $lineClean -}}{{/* opening quotes */}}
-                                {{- $lineClean = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $lineClean -}}{{/* closing quotes before space/punctuation */}}
-                                {{- $lineClean = replaceRE `([!?;:\.…,])"` "$1»" $lineClean -}}{{/* closing quotes after punctuation */}}
-                                {{- $lineClean = replaceRE `^- ` "— " $lineClean -}}{{/* dash at line start */}}
-                                {{- $lineClean = replaceRE `, - ` ", — " $lineClean -}}{{/* dash after comma */}}
-                                {{- $lineClean = replaceRE ` - ` "&nbsp;— " $lineClean -}}
-                                {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
-                                {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
-                                {{- $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) -}}
-                            {{- end -}}
+                            {{- $stressPositions = delimit $positions "," -}}
+                            {{- $stressLine = "" -}}
                         {{- end -}}
+                        {{/* append text and chords to view arrays */}}
+                        {{- $dataAttr := cond (ne $stressPositions "") (printf " data-positions=\"%s\"" $stressPositions) "" -}}
+                        {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}
+                        {{/* non stressed AboveView: replace multiple spaces */}}
+                        {{- $p2Clean := $p2 -}}
+                        {{- if eq $hasStress false -}}                                
+                            {{- $p2Clean = strings.TrimLeft " " $p2 -}}
+                            {{- $p2Clean = replaceRE `\s+` " " $p2Clean -}}
+                        {{- end -}}
+                        {{- $linesAbove = $linesAbove | append (printf "<span class=\"ch\"%s>%s</span><br>\n<span class=\"txt\">%s</span><br>\n" $dataAttr $p2Clean (strings.TrimRight " " $p1) | safeHTML) -}}
+                        {{- $linesText = $linesText | append (print "<span class=\"txt\">" $p1 "</span>\n" | safeHTML) -}}
                     {{- else -}}
-                        {{/* $pos == 0: detect if line is chords-only or text */}}
-                        {{- if findRE `^\s*(?:[1-6]?[A-Ha-h][b#]?(?:2|4|5|6|7|9|11|13|6\/9|7-5|7-9|7#5|7#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)?(?:\/[1-6]?[A-Ha-h][b#]?(?:-[1-6]?[A-Ha-h][b#]?)*)?(?:\s+|$))+$` $line -}}
-                            {{/* chords only */}}
-                            {{- $linesSide = $linesSide | append (print "<span class=\"ch\">" $line "</span><br>\n" | safeHTML) -}}
-                            {{- $linesAbove = $linesAbove | append (print "<span class=\"ch\">" $line "</span><br>\n" | safeHTML) -}}
+                        {{- if and (findRE `^[\s,\|0-9]+$` $line) (findRE `,` $line) (not (findRE `\d{4}` $line)) -}}
+                            {{/* save stress line for next iteration, add to side view */}}
+                            {{- $stressLine = $line -}}
+                            {{- $hasStress = true -}}
+                            {{- $linesSide = $linesSide | append (print "<span class=\"strss\">" (replaceRE ` +$` "" $line) "<br></span>\n" | safeHTML) -}}
                         {{- else -}}
-                            {{/* text line: trim trailing spaces, replace quotes then dashes */}}
+                            {{/* text-only line: trim trailing spaces, replace quotes then dashes, append to all views */}}
                             {{- $lineClean := replaceRE ` +$` "" $line -}}
                             {{- $lineClean = replaceRE `(^|[\s\(—])"` "$1«" $lineClean -}}{{/* opening quotes */}}
                             {{- $lineClean = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $lineClean -}}{{/* closing quotes before space/punctuation */}}
@@ -149,24 +123,43 @@
                             {{- $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) -}}
                         {{- end -}}
                     {{- end -}}
-                {{- end -}}
-            {{- else -}}
-                {{/* process empty lines */}}
-                {{- if  (le $k $textFinishAtLine) -}}
-                    {{- $linesSide = $linesSide | append "<br>\n" -}}
-                    {{- $linesAbove = $linesAbove | append "<br>\n" -}}
-                    {{- $linesText = $linesText | append "\n" -}}
                 {{- else -}}
-                    {{- $newLinesAfter = $newLinesAfter | append "\n" -}}
+                    {{/* $pos == 0: detect if line is chords-only or text */}}
+                    {{- if findRE `^\s*(?:[1-6]?[A-Ha-h][b#]?(?:2|4|5|6|7|9|11|13|6\/9|7-5|7-9|7#5|7#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)?(?:\/[1-6]?[A-Ha-h][b#]?(?:-[1-6]?[A-Ha-h][b#]?)*)?(?:\s+|$))+$` $line -}}
+                        {{/* chords only */}}
+                        {{- $linesSide = $linesSide | append (print "<span class=\"ch\">" $line "</span><br>\n" | safeHTML) -}}
+                        {{- $linesAbove = $linesAbove | append (print "<span class=\"ch\">" $line "</span><br>\n" | safeHTML) -}}
+                    {{- else -}}
+                        {{/* text line: trim trailing spaces, replace quotes then dashes */}}
+                        {{- $lineClean := replaceRE ` +$` "" $line -}}
+                        {{- $lineClean = replaceRE `(^|[\s\(—])"` "$1«" $lineClean -}}{{/* opening quotes */}}
+                        {{- $lineClean = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $lineClean -}}{{/* closing quotes before space/punctuation */}}
+                        {{- $lineClean = replaceRE `([!?;:\.…,])"` "$1»" $lineClean -}}{{/* closing quotes after punctuation */}}
+                        {{- $lineClean = replaceRE `^- ` "— " $lineClean -}}{{/* dash at line start */}}
+                        {{- $lineClean = replaceRE `, - ` ", — " $lineClean -}}{{/* dash after comma */}}
+                        {{- $lineClean = replaceRE ` - ` "&nbsp;— " $lineClean -}}
+                        {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
+                        {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
+                        {{- $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) -}}
+                    {{- end -}}
                 {{- end -}}
+            {{- end -}}
+        {{- else -}}
+            {{/* process empty lines */}}
+            {{- if  (le $k $textFinishAtLine) -}}
+                {{- $linesSide = $linesSide | append "<br>\n" -}}
+                {{- $linesAbove = $linesAbove | append "<br>\n" -}}
+                {{- $linesText = $linesText | append "\n" -}}
+            {{- else -}}
+                {{- $newLinesAfter = $newLinesAfter | append "\n" -}}
             {{- end -}}
         {{- end -}}
     {{- end -}}
 
 {{- else -}}
-    {{- $linesSide = $linesSide | append (printf "Файл с аккордами не найден (%s)" $pageParams.id) -}}
-    {{- $linesAbove = $linesAbove | append (printf "Файл с аккордами не найден (%s)" $pageParams.id) -}}
-    {{- $linesText = $linesText | append (printf "Файл с текстом не найден (%s)" $pageParams.id) -}}
+    {{- $linesSide = $linesSide | append (printf "Текст песни пока не добавлен (%s)" $info.id) -}}
+    {{- $linesAbove = $linesAbove | append (printf "Текст песни пока не добавлен (%s)" $info.id) -}}
+    {{- $linesText = $linesText | append (printf "Текст песни пока не добавлен (%s)" $info.id) -}}
 {{- end -}}
 
 

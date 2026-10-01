@@ -1,0 +1,44 @@
+{{- /* Вычисляемые свойства страницы песни (контекст — страница). Имя файла страницы = id песни;
+       у ранней редакции params.editionOf = id актуальной, заголовок и год берутся по нему.
+       Свой title во front matter заменяет заголовок из базы; title «* * *» — без названия, тогда <title> и
+       description берутся из первой строки собственного текста (у ранней редакции она может отличаться).
+       Возвращает dict:
+         "id"       — id страницы (имя файла)
+         "h1"       — заголовок на странице; пусто — песня без названия («* * *»)
+         "title"    — для <title>: заголовок, иначе fincipit
+         "incipit"  — для <meta name="description">
+         "noindex"  — ранняя редакция или works.noindex
+         "newer"    — адрес актуальной редакции (только у ранней редакции) */ -}}
+{{- $id := .File.ContentBaseName -}}
+{{- $workId := .Params.editionOf | default $id -}}
+{{- $m := index (partialCached "song-meta.html" "song-meta") $workId | default dict -}}
+{{- $h1 := .Params.title | default $m.name | default "" -}}
+{{- $fincipit := $m.fincipit | default "" -}}
+{{- $incipit := $m.incipit | default "" -}}
+{{- if eq $h1 "* * *" -}}
+	{{- $h1 = "" -}}
+	{{- $cs := int (.Params.chordsStartAt | default 0) -}}
+	{{- $done := false -}}
+	{{- range split .RawContent "\n" -}}
+		{{- if not $done -}}
+			{{- $l := . -}}
+			{{- if and (gt $cs 0) (ge (len $l) $cs) }}{{ $l = substr $l 0 (sub $cs 1) }}{{ end -}}
+			{{- $l = strings.TrimSpace $l -}}
+			{{- with $l -}}
+				{{- $incipit = printf "%s..." (strings.TrimRight " ,.;:!?—-" .) -}}
+				{{- $fincipit = $incipit -}}
+				{{- $done = true -}}
+			{{- end -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
+{{- $newer := "" -}}
+{{- $isEdition := false -}}
+{{- with .Params.editionOf }}{{ $newer = printf "texts/%v/%s.html" $m.year . }}{{ $isEdition = true }}{{ end -}}
+{{- return dict
+	"id" $id
+	"h1" $h1
+	"title" ($h1 | default $fincipit | default "* * *")
+	"incipit" $incipit
+	"noindex" (or $isEdition ($m.noindex | default false))
+	"newer" $newer -}}

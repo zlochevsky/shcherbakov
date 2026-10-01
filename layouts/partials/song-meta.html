@@ -1,0 +1,16 @@
+{{- /* Справочник песен для страниц песен и sitemap.xml (вызывать через partialCached "song-meta.html" "song-meta"):
+       id песни (works.id) -> dict
+         "name"     — заголовок: fname или name с заглавной буквы; пусто, если у песни нет названия (тогда на странице «* * *»)
+         "fincipit" — короткая первая строка (для <title> песен без названия)
+         "incipit"  — полная первая строка (для <meta name="description">)
+         "noindex"  — works.noindex: закрыть от поисковиков и не включать в sitemap.xml
+         "year"     — год актуальной редакции (edit, иначе date) — папка её страницы */ -}}
+{{- $meta := newScratch -}}
+{{- range (partial "directus.html").data -}}
+	{{- $name := "" -}}
+	{{- with or .fname .name -}}{{ $name = . | strings.TrimSpace | strings.FirstUpper }}{{ end -}}
+	{{- $year := or .edit .date -}}
+	{{- with $year }}{{ $year = math.Abs . | int }}{{ end -}}
+	{{- $meta.Set .id (dict "name" $name "fincipit" (.fincipit | default "") "incipit" (.incipit | default "") "noindex" (.noindex | default false) "year" $year) -}}
+{{- end -}}
+{{- return $meta.Values -}}

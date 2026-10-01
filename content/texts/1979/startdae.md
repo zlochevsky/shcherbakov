@@ -1,14 +1,13 @@
-{
-    "date": "2026-08-29T09:09:07+00:00",
-    "title": "Старт даёт Москва - pourquoi, pourquoi?..",
-    "type": "miscellaneous",
-    "layout": "songpage",
-    "sitemap": {
-        "disable": true
-    },
-    "params": {
-        "id": "startdae",
-        "year": "1979",
-        "noindex": true
-    }
-}
+{}
+Старт даёт Москва - pourquoi, pourquoi?
+Общества каприз - and what is this?
+Мир весьма польщён - Danke schoen!
+Разных тьма фигур - O, l'amour!
+Ты мне плоть свою - I love you.
+Я тебе взамен - Oui, tres bien!
+Хочешь ли забав? - No, my love.
+- Может, ты и прав... - Yes, my love.
+Я хочу забот - O, mein Gott!
+Вспухла голова - pourquoi, pourquoi?..
+
+<1979>

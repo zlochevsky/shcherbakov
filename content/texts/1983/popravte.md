@@ -1,18 +1,10 @@
 {
-    "date": "2025-02-13T10:13:25+00:00",
-    "title": "Поправьте пюпитры...",
-    "type": "miscellaneous",
-    "layout": "songpage",
     "params": {
-        "id": "popravte",
         "tonality": "D",
-        "year": "1983",
         "chordsStartAt": 51,
-        "textFinishAtLine": 29
+        "textFinishAtLine": 27
     }
 }
-* * *
-
 Поправьте пюпитры, закончен антракт.                   D Em A7   D
 Десятая цифра, двенадцатый такт.                  (A7) D Em A7   D
 Кивнёмте друг другу, начнемте скорей.                  D7 Gm Gm6 D

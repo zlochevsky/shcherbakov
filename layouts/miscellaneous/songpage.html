@@ -4,8 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
-<title>{{ .Title }} - текст, аккорды</title>
-{{ if or .Params.newerEdition .Params.noindex }}<meta name="robots" content="noindex, follow">{{ end }}
+{{- $info := partial "song-page-info.html" . }}
+<title>{{ $info.title }} - текст, аккорды</title>
+{{- with $info.incipit }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+{{ if $info.noindex }}<meta name="robots" content="noindex, follow">{{ end }}
 <style>
     /* По умолчанию (без JS) показываем только source */
     .view-container {
@@ -43,13 +47,13 @@
 </header>
 <main>
 
-        <div class="wrapper" data-pagefind-filter="type:song" data-pagefind-meta="title:{{ .Title }} - текст, аккорды">
-{{ with .Params.newerEdition }}
-<div class="notice"><p>Это более ранняя редакция песни. <a href="{{ printf "texts/%s/%s.html" .year .id | relURL }}">Перейти к последней авторской редакции</a>.</p></div>
+        <div class="wrapper" data-pagefind-filter="type:song" data-pagefind-meta="title:{{ $info.title }} - текст, аккорды">
+{{ with $info.newer }}
+<div class="notice"><p>Это более ранняя редакция песни. <a href="{{ . | relURL }}">Перейти к последней авторской редакции</a>.</p></div>
 {{ end }}
 {{- $isPoem := false }}
 {{- $songData := partialCached "song-data.html" "song-data" }}
-{{- $isPoem = index $songData.poems .Params.id | default false }}
+{{- $isPoem = index $songData.poems $info.id | default false }}
                     <div id="settings"{{ if $isPoem }} data-poem="true"{{ end }} data-pagefind-ignore>
                         {{- if $isPoem }}
                         <span class="poem-label">стихотворение</span>
@@ -69,16 +73,16 @@
                         <div class="transpose-wrapper"></div>
                         {{- end }}
                     </div>
-{{- partial "song.html" . -}}
+{{- partial "song.html" (dict "page" . "info" $info) -}}
                     <noscript>Страница требует включённого javascript.</noscript>
-{{- $songBooks := dict "data" (index $songData.books .Params.id | default slice) }}
+{{- $songBooks := dict "data" (index $songData.books $info.id | default slice) }}
 {{- $bookRows := slice }}
 {{- range $songBooks.data }}
 	{{- $book := .books_id }}
 	{{- $bookRows = $bookRows | append (dict "id" $book.id "name" $book.name "rangeYears" $book.range_years "page" .page) }}
 {{- end }}
 {{- $bookRows = sort $bookRows "page" }}
-{{- $songAlbums := dict "data" (index $songData.albums .Params.id | default slice) }}
+{{- $songAlbums := dict "data" (index $songData.albums $info.id | default slice) }}
 {{- $albumRows := slice }}
 {{- range $songAlbums.data }}
 	{{- $set := .sets_id }}

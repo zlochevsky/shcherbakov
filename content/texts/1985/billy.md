@@ -1,18 +1,10 @@
 {
-    "date": "2025-02-13T10:13:24+00:00",
-    "title": "Билли",
-    "type": "miscellaneous",
-    "layout": "songpage",
     "params": {
-        "id": "billy",
         "tonality": "Cm",
-        "year": "1985",
         "chordsStartAt": 57,
-        "textFinishAtLine": 44
+        "textFinishAtLine": 42
     }
 }
-БИЛЛИ
-
 Где-то в горах высоких или в песках далёких             Cm   Fm
 Билли - один из многих славных ребят.                   Cm   D7  G  Cm  G
 К пыли давно привычный, Билли - солдат обычный,         Cm   Fm

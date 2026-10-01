@@ -1,13 +1,35 @@
 {
-    "date": "2025-02-13T10:13:25+00:00",
-    "title": "Плач",
-    "type": "miscellaneous",
-    "layout": "songpage",
     "params": {
-        "id": "plach",
         "tonality": "Cm",
-        "year": "2023",
         "chordsStartAt": 39,
-        "textFinishAtLine": 30
+        "textFinishAtLine": 29
     }
 }
+                                      Cm/
+                             (мелодия c-eb-g c-eb-g c-d
+                                      c-eb-g c-eb-g c-d)
+Возьми, Варшава, взамен залога,       Cm/(c-c-c-d-c)  Fm/(f-f-f-d-d-f) Cm/(eb-eb)
+с меня по счёту — поклон душевный.    Cm/(c-c-h) Eb/b F/(a-a) Fm/(ab-c-f-d) Cm/(c-c)
+Недолго пробыл. Не тратил много.      C/(c-c#-c-e) Fm/(f-f) D7/(f#-f#-f#) G/(g-d-h)
+Исход печальный, но не плачевный.     C/(c-e-c) C7/b Fm/(ab-ab) Cm/(g-c-c) B Cm/
+                                      (c-eb-g c-d   
+                                      c-eb-g c-eb-g c-d)
+Сошлись бы тесно — тужил бы слёзно.   Cm/(c-c-c-d-c)  Fm/(f-f-f-d-d-f) Cm/(eb-eb)
+Кто жарче любит, тот горше плачет.    Cm/(c-c-h) Eb/b F/(a-a) Fm/(ab-c-f-d) Cm/(c-c)
+Кого невзгода размечет розно,         C/(c-c#-c-e) Fm/(f-f) D7/(f#-f#-f#) G/(g-d-h)
+любовь разыщет, спасёт и спрячет.     C/(c-e-c) C7/b Fm/(ab-ab) Cm/(g-c-c) B Cm/
+                                      (c-eb-g c-d   
+                                      c-eb-g c-eb-g c-d)
+Невзгода всюду в обличье сменном.     Cm/(c-c-c-d-c)  Fm/(f-f-f-d-d-f) Cm/(eb-eb)
+Большие деньги, чужие земли.          Cm/(c-c-h) Eb/b F/(a-a) Fm/(ab-c-f-d) Cm/(c-c)
+Сведенье счётов привычно всем нам.    C/(c-c#-c-e) Fm/(f-f) D7/(f#-f#-f#) G/(g-d-h)
+Но после все ли вернутся в семьи?     C/(c-e-c) C7/b Fm/(ab-ab) Cm/(g-c-c) B Cm/
+                                      (c-eb-g c-d   
+                                      c-eb-g c-eb-g c-d)
+Без выгод общий исход бесславный:     Cm/(c-c-c-d-c)  Fm/(f-f-f-d-d-f) Cm/(eb-eb)
+в остатке быть нам при медном гроше.  Cm/(c-c-h) Eb/b F/(a-a) Fm/(ab-c-f-d) Cm/(c-c)
+Один душевный расход не равный.       C/(c-c#-c-e) Fm/(f-f) D7/(f#-f#-f#) G/(g-d-h)
+Кто любит жарче, тот плачет горше.    C/(c-e-c) C7/b Fm/(ab-ab) Cm/(g-c-c) B Cm/
+                                      (c-eb-g c-d   
+                                      c-eb-g c-eb-g c-d)
+2023

@@ -1,17 +1,10 @@
 {
-    "date": "2025-02-13T10:13:26+00:00",
-    "title": "Зоосад",
-    "type": "miscellaneous",
-    "layout": "songpage",
     "params": {
-        "id": "zoosad",
         "tonality": "Hm",
-        "year": "2024",
         "chordsStartAt": 50,
-        "textFinishAtLine": 48
+        "textFinishAtLine": 47
     }
 }
-ЗООСАД
 В далёком девятьсот тринадцатом году
 трудящимся не всем платили по труду.
 И мало кто вокруг товарищ был и брат.
