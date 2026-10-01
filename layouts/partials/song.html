@@ -1,5 +1,17 @@
-{{- $path := printf "texts/%s.txt" .id -}}
-{{- $pageParams := . -}}
+{{- /* Контекст — страница песни. Текст берётся из тела .md, а пока песня не перенесена — из assets/texts/<id>.txt */ -}}
+{{- $pageParams := .Params -}}
+{{- $path := printf "texts/%s.txt" $pageParams.id -}}
+{{- $cont := "" -}}
+{{- $found := false -}}
+{{- if strings.TrimSpace .RawContent -}}
+    {{- $cont = .RawContent -}}
+    {{- $found = true -}}
+{{- else -}}
+    {{- with resources.Get $path -}}
+        {{- $cont = .Content -}}
+        {{- $found = true -}}
+    {{- end -}}
+{{- end -}}
 {{- $linesText := slice -}}
 {{- $linesSide := slice -}}
 {{- $linesAbove := slice -}}
@@ -9,8 +21,7 @@
 {{- $stressLine := "" -}}
 {{- $hasStress := false -}}
 {{- $lastNonEmptyIndex := 0 -}}
-{{- with resources.Get $path -}}
-    {{- $cont := .Content -}}
+{{- if $found -}}
     {{- if and (isset $pageParams "tonality") (ne $pageParams.tonality "") -}}
         {{- $tonality = $pageParams.tonality -}}
     {{- else -}}
@@ -153,19 +164,19 @@
     {{- end -}}
 
 {{- else -}}
-    {{- $linesSide = $linesSide | append (printf "Файл с аккордами не найден (%s)" .id) -}}
-    {{- $linesAbove = $linesAbove | append (printf "Файл с аккордами не найден (%s)" .id) -}}
-    {{- $linesText = $linesText | append (printf "Файл с текстом не найден (%s)" .id) -}}
+    {{- $linesSide = $linesSide | append (printf "Файл с аккордами не найден (%s)" $pageParams.id) -}}
+    {{- $linesAbove = $linesAbove | append (printf "Файл с аккордами не найден (%s)" $pageParams.id) -}}
+    {{- $linesText = $linesText | append (printf "Файл с текстом не найден (%s)" $pageParams.id) -}}
 {{- end -}}
 
 
 
 
 <div class="view-container viewtype-source">
-    {{- with resources.Get $path -}}
+    {{- if $found -}}
         <pre>
-            {{- .Content -}}
-        </pre>    
+            {{- $cont -}}
+        </pre>
     {{- end -}}
 </div>
 <div class="view-container viewtype-text" data-pagefind-ignore>

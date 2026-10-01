@@ -2,6 +2,7 @@
     "date": "2025-02-13T10:13:25+00:00",
     "title": "Песня кладбищенских сторожей",
     "type": "miscellaneous",
+    "aliases": ["/texts/1980/kladbisc.html"],
     "layout": "songpage",
     "sitemap": {"disable": true},
     "params": {

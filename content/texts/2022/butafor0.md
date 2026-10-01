@@ -5,6 +5,7 @@
         "disable": true
     },
     "type": "miscellaneous",
+    "aliases": ["/texts/2022/butafor.html"],
     "layout": "songpage",
     "params": {
         "id": "butafor0",

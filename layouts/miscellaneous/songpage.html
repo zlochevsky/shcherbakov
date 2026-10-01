@@ -69,7 +69,7 @@
                         <div class="transpose-wrapper"></div>
                         {{- end }}
                     </div>
-{{- partial "song.html" .Params -}}
+{{- partial "song.html" . -}}
                     <noscript>Страница требует включённого javascript.</noscript>
 {{- $songBooks := dict "data" (index $songData.books .Params.id | default slice) }}
 {{- $bookRows := slice }}

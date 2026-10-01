@@ -2,6 +2,7 @@
     "date": "2025-02-13T10:13:26+00:00",
     "title": "У нас опять зима...",
     "type": "miscellaneous",
+    "aliases": ["/texts/1980/unasopja.html"],
     "layout": "songpage",
     "sitemap": {"disable": true},
     "params": {

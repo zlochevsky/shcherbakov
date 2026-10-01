@@ -11,7 +11,7 @@
         "year": "1982",
         "newerEdition": {
             "year": "1982",
-            "id": "krym"
+            "id": "krym1"
         }
     }
 }
