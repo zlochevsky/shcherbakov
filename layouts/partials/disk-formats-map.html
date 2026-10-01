@@ -1,0 +1,6 @@
+{{- /* Справочник форматов дисков как dict id → dict key/short/full/path; вызывать через partialCached */ -}}
+{{- $map := dict -}}
+{{- range partialCached "directus-disk-formats.html" "disk-formats" -}}
+	{{- $map = merge $map (dict .id (dict "key" .id "short" .short "full" .full "path" (.path | default "Disks"))) -}}
+{{- end -}}
+{{- return $map -}}
