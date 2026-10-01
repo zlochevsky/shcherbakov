@@ -1,3 +1,4 @@
 {{- /* Формат диска по ключу sets.format (справочник — Directus, disk_formats): возвращает dict key/short/full/path; по умолчанию Audio CD */ -}}
 {{- $res := index (partialCached "disk-formats-map.html" "disk-formats-map") ($ | default "cd") -}}
-{{- return $res | default (dict "key" "cd" "short" "CD" "full" "Audio CD" "path" "Disks") -}}
+{{- $res = $res | default (dict "key" "cd" "short" "CD" "full" "Audio CD" "path" "Disks") -}}
+{{- return $res -}}
