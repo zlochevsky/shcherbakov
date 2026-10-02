@@ -20,9 +20,7 @@
 7. [Изыскания](praises.html#investigations)
 
 
-<a name="pech" /> </a>
-
-### Отзывы в печати.
+### Отзывы в печати. {#pech}
 
 - **Косолапов&nbsp;Б.** [Какого вкуса знаки зодиака?](Praises/kosolapov.html) // Новое русское слово. 1996. &#8470;&nbsp;30 (216), 31 мая. С.&nbsp;34. <span class="datum">[03.11.24]</span>
 - **В. В. Биткинова**["Образы русской культуры XVIII-XIX веков в бардовской поэзии"](https://www.calameo.com/read/001277039bd8ed9f3503c)
@@ -54,7 +52,7 @@
 - **Татьяна Вольтская**, ["По дивным песенкам твоим..."](Praises/divnym.html) статья из газеты "Невское время" (Санкт-Петербург), 02.08.1997. Прислала [Змейка](mailto:zmeyka-lm@narod.ru) <span class="datum"> [14.02.03]</span>
 - **Роман Гуревич**. ["Необычное интервью в Абу-Торе"](Praises/Vesti.html). Статья из Иерусалимской газеты "Вести" от 16 мая 1996. Написано скверно, но информативно. Прислал  [Михаил Палатник.](mailto:misha@amil.co.il) 
 - **О.&nbsp;Елисеев**. [Поэт с гитарой не вымер](Praises/izv-mar03.html). Заметка из газеты "Известия" от 26 марта 2003 года. Прислал [Леонид Блехер](mailto:leonid-blekher@mtu-net.ru) <span class="datum">[29.03.03]</span>.
-- <a name="erofeev"></a><img src="Images/new.gif" alt="new"> **Александр&nbsp;Ерофеев**. [Детали и дали](https://ridero.ru/books/detali_i_dali/). В книгу вошли опубликованные на нашем сайте эссе ["Про Щербакова, авторскую песню и чудеса"](Praises/erofeev.html) и ["Неправда всё вокруг"](Praises/erofeev2.html) ([иллюстрация](Images/illustr.html#bystrov3) из книги) <span class="datum">[03.08.20]</span>.
+- <span id="erofeev"></span><img src="Images/new.gif" alt="new"> **Александр&nbsp;Ерофеев**. [Детали и дали](https://ridero.ru/books/detali_i_dali/). В книгу вошли опубликованные на нашем сайте эссе ["Про Щербакова, авторскую песню и чудеса"](Praises/erofeev.html) и ["Неправда всё вокруг"](Praises/erofeev2.html) ([иллюстрация](Images/illustr.html#bystrov3) из книги) <span class="datum">[03.08.20]</span>.
 - **Борис Жуков**, журналист, автор многих работ об авторской песне. Статьи и заметки, по-видимому, публикуются в Интернете впервые.
   - [Три письма об одном авторе (Из переписки с воображаемым другом, покинувшим страну 15 лет назад)](FOM/zhukov.html) // Cборник ["Как варяг, наблюдающий нравы славян..."](FOM/index.html). Издание Фонда "Общественное мнение", 1996.
   - ["...в сравнении со смертью и любовью".](Praises/zhukov.html) Cтатья из журнала "Библиография", No. 4, 1996. Прислал [Игорь Грызлов](mailto:apksp@narod.ru). <span class="datum"> [01.12.99]</span>  
@@ -85,9 +83,7 @@
 - **Александр Л. Шапиро**, [Слова и строки](Praises/shapiro.html) // [&laquo;Новый Берег&raquo; 2011, &#8470;31](http://magazines.russ.ru/bereg/2011/31/). <span class="datum">[12.04.11]</span>
 - [Публикация](Praises/spb-shanson.html) о Щербакове из петербургского журнала **"Шансон"**. Автор не указан. Прислал [В.&nbsp;Добрецов.](mailto:vd@KD3074.spb.edu) <span class="datum">[8.01.99]</span> 
 
-<a name="notext"> </a>
-
-### <span style="color: #aa00aa">Тексты, которыми мы не располагаем (и будем благодарны приславшим!)</span>:
+### <span style="color: #aa00aa">Тексты, которыми мы не располагаем (и будем благодарны приславшим!)</span>: {#notext}
 
 -  Щербаков М.: "Эволюция продолжается..." / Интервью подгот. Грызлов&nbsp;И. // Менестрель. 1989, &#8470;&nbsp;1(39), январь-март. С.&nbsp;15 ([отсюда](http://m-sch.livejournal.com/443849.html)).
 -  Малинский&nbsp;Л. Бард послебардовского поколения // Новая газета. 1996. 9 апреля. С.&nbsp;5.
@@ -96,9 +92,7 @@
 
 <A HREF="praises.html#top"><FONT SIZE=-1>[Наверх]</FONT></A>
 
-<a name="opub"> </a>
-
-### Опубликовано на нашем сайте
+### Опубликовано на нашем сайте {#opub}
 
 - **Лев Аннинский**. ["Бездна звезд"](Praises/anninskij.html). Отклик на сборник "МКЩ", ответы оппонентам. Статья выложена в сеть [Игорем Грызловым](http://gryzlov.livejournal.com/87138.htm). <span class="datum">[21.01.09]</span>
 - "Бемоля и ямба гибриды" (стиховедческие и музыковедческие комментарии)
@@ -134,9 +128,7 @@
 
 <UL><A HREF="praises.html#top"><FONT SIZE=-1>[Наверх]</FONT></A></UL>
 
-<a name="sete"> </a>
-
-### Сетевые публикации о Щербакове...
+### Сетевые публикации о Щербакове... {#sete}
 
 - [Анонс](Praises/concert0305.html) концерта 19 марта 2005 в Питере <span class="datum">[21.03.05]</span>
 - **Сергей Бережной**. [ "Да ни словечка в простоте..."](http://barros.rusf.ru/article004.html). О том, что песни Щербакова &mdash; это очень простые песни. Свежее и довольно оригинальное мнение. <span class="datum">[19.04.00]</span> (Материал написан в апреле 2000 года. [Опубликован](http://www.ozon.ru/context/detail/id/197525/) впервые на сайте интернет-магазина "оЗон". [Локальная копия](Praises/berezhnoy.html) статьи).
@@ -169,9 +161,7 @@
 - [Щербаков, "Интермедия-5"](Praises/essay.html) ("Маросейка") &mdash; анонимное эссе из [ЖЖ](http://www.livejournal.com/community/m_sch/15490.html?nc=2) <span class="datum">[10.09.03]</span>.
 - [О стихотворении Михаила Щербакова "CHINATOWN"](http://www.igraigr.com/kartashov.htm) <span class="datum">[02.07.24]</span>.
 
-<a name="inet"> </a>
-
-### ... и не только
+### ... и не только {#inet}
 
 - **Соломон Воложин**. [Айвазовский. Картины. Щербаков. Песни. Художественный смысл](http://art-otkrytie.narod.ru/aivazovsky.htm). Ссылку прислал(а) [ad_leuconoen](http://ad_leuconoen.livejournal.com/). <span class="datum">[16.11.16]</span></li>
 - **Никита Елисеев**. [Три трудности. О Самуиле Лурье](http://seance.ru/blog/xronika/samuil_lourie/) // СЕАНС, 15 сентября, 2015. См. раздел "Современный Лермонтов". Ссылку прислала [Татьяна Акивис](http://tata-akivis.livejournal.com/) ([обсуждение](http://m-sch.livejournal.com/548419.html)). <span class="datum">[26.10.16]</span>
@@ -184,24 +174,18 @@
 
 <A HREF="praises.html#top"><FONT SIZE=-1>[Наверх]</FONT></A>
 
-<a name="uche" /> </a>
-
-### Учебники, энциклопедии, словари...
+### Учебники, энциклопедии, словари... {#uche}
 
 - Из книги ["Авторская песня: книга для ученика и учителя".](Praises/pesnya.html) М.: Олимп; АСТ. 1997 (Школа классики). Прислал [Alexander Devskij](mailto:devskij@yandex.ru). <span class="datum">[3.02.03]</span>
 - ["Авторская песня"](Praises/avanta.html) &mdash; статья из Энциклопедии для детей, Том 9 "Русская литература", Часть 2. М.:"Аванта +", 1999. Прислал [Deniskin](mailto:deniskhin@gmail.com). <span class="datum">[8.02.03]</span>
 - [Статья](https://ru.wikipedia.org/wiki/%D0%A9%D0%B5%D1%80%D0%B1%D0%B0%D0%BA%D0%BE%D0%B2,_%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB_%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D0%B8%D1%87) о Михаиле Щербакове в ["Википедии"](http://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0).
 
-<a name="zefi" /> </a>
-
-### Зефир струит эфир.
+### Зефир струит эфир. {#zefi}
 
 - [Передача](Praises/fullmoon.html) иркутской студии "Полнолуние" о творчестве Михаила Щербакова &mdash; прямой эфир, звонки слушателей... Оригинал [здесь](http://polnolunie.baikal.ru/articles/pered_4.htm"). <span class="datum">[27.06.03]</span></li>
 - [Интервью](Praises/nyradio.html) на радио "Новая Жизнь" 620 АМ в Нью-Йорке. Взято 6.05.03. <span class="datum">[16.03.05]</span>
 
-<a name="investigations"> </a>
-
-### Изыскания
+### Изыскания {#investigations}
 
 - **С.&nbsp;В.&nbsp;Артеменко**. [От малого до великого: мотив маленького человека  в песнях Михаила Щербакова](Praises/artemenko.html) // Текст: филологический, социокультурный, региональный и методический аспекты : материалы V Международной научной конференции (Тольятти, 15-17 апреля 2015 года). &mdash; Тольятти : Изд-во ТГУ, 2015. &mdash; C. 112-119. <span class="datum">[19.01.16]</span> 
 - **И.&nbsp;Г.&nbsp;Гулякова**. [Фразеографический комментарий к словоупотреблению в поэзии Михаила Щербакова](Praises/gulyakova.html) // Die slawische Phraseographie und Par&ouml;miographie. Славянская фразеография и паремиография. Коллективная монография. Redaktion: H. Walter, V.M. Mokienko. \

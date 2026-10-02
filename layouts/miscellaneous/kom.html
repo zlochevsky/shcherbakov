@@ -71,8 +71,11 @@
 		{{- $seeAlsoWorks := slice -}}
 		{{- range $seeAlsoIds -}}
 			{{- $relId := . -}}
+			{{- /* «См. также» — только если у песни-цели есть своя карточка (комментарии), иначе якорь битый */ -}}
+			{{- if index $commentsByWork $relId -}}
 			{{- with index $worksById $relId -}}
 				{{- $seeAlsoWorks = $seeAlsoWorks | append (dict "id" $relId "name" .name) -}}
+			{{- end -}}
 			{{- end -}}
 		{{- end -}}
 		{{- $cards = $cards | append (dict "workId" $workId "work" . "comments" $sortedComments "seeAlso" $seeAlsoWorks) -}}
