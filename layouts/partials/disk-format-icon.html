@@ -1,0 +1,9 @@
+{{- /* Значок формата носителя (ключ cd|mp3|da|mc) — встроенный SVG: золотой диск, серебряный (MP3),
+       зелёный (цифровой альбом), кассета (тот же tape.svg, что в каталоге). Размер задаёт CSS (.disk-format-icon svg) */ -}}
+{{- $files := dict "cd" "svg/format/disc.svg" "mp3" "svg/format/disc-silver.svg" "da" "svg/format/disc-green.svg" "mc" "svg/cd/tape.svg" -}}
+{{- with resources.Get (index $files . | default "svg/format/disc.svg") -}}
+<span class="disk-format-icon">{{- /* у корня <svg> убираем id (повторялся бы на странице) и width/height (размер из CSS); у вложенных фигур не трогаем */ -}}
+{{ $svg := .Content -}}
+{{- range seq 3 }}{{ $svg = replaceRE `(<svg[^>]*?)\s(?:id|width|height)="[^"]*"` "$1" $svg }}{{ end -}}
+{{- replace $svg "<svg " `<svg aria-hidden="true" ` | safeHTML }}</span>
+{{- end -}}
