@@ -124,10 +124,6 @@ div.wrapper ul, div.wrapper ol {
 	color: #667099;
 }
 
-.albums + .books {
-	margin-left: 1.4em;
-}
-
 /* Balloon tooltip styles */
 [data-balloon] {
 	position: relative;
@@ -156,6 +152,7 @@ a [data-balloon] {
 	color: black;
 	font-size: 0.85em;
 	white-space: nowrap;
+	line-height: 1.3; /* своя: у ссылок на значки альбомов line-height: 0 */
 	border-radius: 3px;
 	z-index: 10;
 }
@@ -300,30 +297,42 @@ a [data-balloon] {
         }
 }
 
-/* Формат диска в каталоге: значок + аббревиатуры через запятую */
-.albums .disk-format-badge {
-	display: inline-flex;
+/* Значки альбомов (SVG из assets/svg/cd, ширина и картинка — из cd-icons.css):
+   колонка постоянной ширины слева от названия, значки прижаты к названию; на телефоне — под названием */
+.cd-icon {
+	display: inline-block;
+	height: 20px;
+	vertical-align: middle;
+}
+#artlist {
+	list-style: none;
+}
+#artlist > li {
+	display: grid;
+	grid-template-columns: calc(7 * 20px + 6 * 4px) 1fr;
+	column-gap: .75em;
 	align-items: center;
-	gap: 3.6px;
-	padding: 0 7.2px 0 3.6px;
-	border: 1px solid #bbbbbb;
-	border-radius: 1em;
-	color: #667099;
-	font: 500 .84em sans-serif;
-	vertical-align: -2px;
+	break-inside: avoid;
 }
-.albums .disk-format-badge svg {
-	width: 13.2px;
-	height: 13.2px;
+#artlist > li[hidden] {
+	display: none;
 }
-.album-group + .album-group {
-	margin-left: .6em;
+#artlist .albums {
+	display: flex;
+	justify-content: flex-end;
+	gap: 4px;
+	margin-left: 0;
 }
-.album-group a,
-.album-group a:visited {
-	font-size: .9em;
-	color: #999999;
+#artlist .albums a {
+	line-height: 0;
 }
-.album-group a:hover {
-	color: #666666;
+@media (max-width: 35em) {
+	#artlist > li {
+		grid-template-columns: 1fr;
+		row-gap: 2px;
+	}
+	#artlist .albums {
+		order: 2;
+		justify-content: flex-start;
+	}
 }

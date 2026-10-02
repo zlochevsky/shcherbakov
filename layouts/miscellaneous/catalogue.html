@@ -16,6 +16,7 @@
 	{{ end }}
 </style>
 {{ partialCached "head/js.html" . }}
+{{ partialCached "cd-icons.html" "cd-icons" }}
 </head>
 <body>
 <header>
@@ -104,44 +105,43 @@
 
 {{- $worksById = merge $worksById (dict .id true) -}}
 
+{{- /* альбомы песни: по году выхода, кассеты в конце; значок — SVG из assets/svg/cd, класс = id альбома (у кассет общий tape) */ -}}
+{{- $albumList := slice -}}
+{{- $seen := dict -}}
+{{- range index $albumsByWork .id -}}
+	{{- if not (index $seen .id) -}}
+		{{- $seen = merge $seen (dict .id true) -}}
+		{{- $f := partial "disk-format.html" .format -}}
+		{{- $order := printf "%04d-%s" (cond (eq $f.key "mc") 9999 (int .year)) .id -}}
+		{{- $albumList = $albumList | append (dict "id" .id "order" $order "shortTitle" .shortTitle "year" .year "abbrev" (.abbrev | default .id) "fmt" $f) -}}
+	{{- end -}}
+{{- end -}}
+{{- $albumList = sort $albumList "order" -}}
+{{- $diskSearch := slice -}}
+{{- range $albumList }}{{ $diskSearch = $diskSearch | append .abbrev .shortTitle }}{{ end -}}
+
 <li class="opus-entry"
 	data-id="{{ .id }}"
 	data-sort="{{ .sort }}"
 	data-datum="{{- $datesrc -}}{{ with .edit }} {{ . }}{{ end }}"
 	data-begin="{{ .fincipit }}"
+	data-disk="{{ delimit $diskSearch " " }}"
 	data-name="{{ with .name -}}
 			{{- $name -}}
 		{{- else -}}
 			{{- .incipit -}}
 		{{- end }}">
-	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</a>
+	<span class="albums">
+	{{- range $albumList }}<a href="{{ partial "set-url.html" (dict "id" .id "format" .fmt.key) | relURL }}"><span class="cd-icon {{ cond (eq .fmt.key "mc") "tape" .id }}" data-balloon="{{ if ne .fmt.key "mc" }}{{ .fmt.full }}&#10;{{ end }}{{ .shortTitle }} ({{ .year }})" data-balloon-break data-balloon-pos="up"></span></a>{{ end -}}
 	</span>
+	<span class="entry">
+	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</span></a>
 	{{- if .is_new }}<span class="new" data-balloon="новое" data-balloon-pos="up"></span>{{ end -}}
-	{{ if .name -}}
-		(<span id="begin">{{ .fincipit }}</a></span>){{ if .is_poem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
+	{{- if .name }} (<span id="begin">{{ .fincipit }}</span>){{ if .is_poem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
 	{{- else if .is_poem -}}
 		 <span class="poem-tag">(стихотворение)</span>
 	{{- end -}}
 	{{- if $date }}	<span class="year">{{ $date -}}{{- if .edit -}}, {{ .edit -}}{{- end -}}</span>
-	{{- end -}}
-	{{- $workAlbums := index $albumsByWork .id -}}
-	{{- if $workAlbums -}}
-		{{- $uniqueAlbums := dict -}}
-		{{- range $workAlbums -}}
-			{{- $uniqueAlbums = merge $uniqueAlbums (dict .id (dict "shortTitle" .shortTitle "year" .year "format" .format "abbrev" .abbrev)) -}}
-		{{- end -}}
-		{{- $groups := dict -}}
-		{{- range $id, $album := $uniqueAlbums -}}
-			{{- $f := partial "disk-format.html" $album.format -}}
-			{{- $items := index $groups $f.key | default slice -}}
-			{{- $groups = merge $groups (dict $f.key ($items | append (dict "id" $id "album" $album))) -}}
-		{{- end -}}
-		<span class="albums">
-		{{- range partialCached "directus-disk-formats.html" "disk-formats" -}}
-			{{- $fmt := . -}}
-			{{- with index $groups $fmt.id }} <span class="album-group">{{ partial "disk-format-badge.html" (dict "key" $fmt.id "label" $fmt.short) }} {{ range $i, $g := . }}{{ if $i }} {{ end }}<a href="{{ partial "set-url.html" (dict "id" $g.id "format" $fmt.id) | relURL }}"><span data-balloon="{{ $fmt.full }}&#10;{{ $g.album.shortTitle }} ({{ $g.album.year }})" data-balloon-break data-balloon-pos="up">{{ $g.album.abbrev | default $g.id }}</span></a>{{ end }}</span>{{ end -}}
-		{{- end -}}
-		</span>
 	{{- end -}}
 	{{- $workBooks := index $booksByWork .id -}}
 	{{- if $workBooks -}}
@@ -166,7 +166,7 @@
 			{{- end -}}
 		{{- end -}}</span>
 	{{- end -}}
-	</a></li>
+	</span></li>
 
 
 {{- end -}}
