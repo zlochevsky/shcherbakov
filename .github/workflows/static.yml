@@ -49,10 +49,10 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Create config with Directus token
-        run: |
-          mkdir -p config/_default
-          echo '{"directus":{"token":"${{ secrets.DIRECTUS_TOKEN }}"}}' > config/_default/params.json
+      # Публичный токен только для чтения (опубликован в params.json.example): сайт с ним
+      # собирается так же, как с приватным, поэтому отдельный секрет не нужен.
+      - name: Create config with the public Directus token
+        run: cp config/_default/params.json.example config/_default/params.json
 
       - name: Build
         run: hugo -d public --cleanDestinationDir
