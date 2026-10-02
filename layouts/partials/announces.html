@@ -2,13 +2,19 @@
 Builds the list of currently active concert announces, ready to render as <li> content:
 1. dynamic announces from Directus (items/announces), already filtered by publish/expiry date;
    a cancelled linked event overrides the announce text with an auto-generated cancellation notice.
+   Sorted by the event date; an announce without a linked event (e.g. one text for several concerts)
+   sorts by its expiry_date, else publish_date — Directus' sort=event.date would put it last (NULLS LAST).
 2. the legacy hand-written "announce" array in content/news.md, kept working as before.
 @returns {[]string} safe HTML strings, one per announce line.
 */}}
 {{- $items := slice }}
+{{- $dated := slice }}
 
 {{- $raw := partial "directus-announces.html" }}
 {{- range $raw.data }}
+	{{- $sortKey := "" }}
+	{{- with .event }}{{ $sortKey = .date }}{{ end }}
+	{{- if not $sortKey }}{{ $sortKey = .expiry_date | default .publish_date | default "" }}{{ end }}
 	{{- $text := .text }}
 	{{- $link := .link }}
 	{{- $line := "" }}
@@ -47,8 +53,9 @@ Builds the list of currently active concert announces, ready to render as <li> c
 		{{- $line = $text | markdownify }}
 		{{- with $link }}{{ $line = printf `<a href="%s">%s</a>` (htmlEscape .) $line | safeHTML }}{{ end }}
 	{{- end }}
-	{{- $items = $items | append $line }}
+	{{- $dated = $dated | append (dict "key" (printf "%.10s" $sortKey) "line" $line) }}
 {{- end }}
+{{- range sort $dated "key" }}{{ $items = $items | append .line }}{{ end }}
 
 {{- with site.GetPage "news" }}
 	{{- range .Params.announce }}
