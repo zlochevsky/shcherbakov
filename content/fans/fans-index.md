@@ -196,8 +196,8 @@ Cоздан и прислан <a href="mailto:Boris@as.ru">Б.Богдановы
 &laquo;Гарри Поттера&raquo; и &laquo;Звездных войн&raquo;&nbsp;&mdash; автор <a href="mailto:grethen123@yandex.ru">Lamilla</a>,
 ссылку прислала <a href="mailto:laura9947@hotmail.com">Лариса Шульц</a>. (02.10.05).</li>
 <li>&laquo;Несуществующие диски&raquo;&nbsp;&mdash; работа &laquo;Первоапрельской студии&raquo;:
-<a href="../Disks/krym.html">&laquo;Крым&raquo;</a> (<a href="mailto:Yul@ugo.com">Юл Вассерман</a> и др.),
-<a href="../Disks/else.html">&laquo;Else&raquo;</a> (<a href="mailto:kari_ok@mail.ru">Кари</a>).
+<a href="../Images/around-disks.html#krym">&laquo;Крым&raquo;</a> (<a href="mailto:Yul@ugo.com">Юл Вассерман</a> и др.),
+<a href="../Images/around-disks.html#else">&laquo;Else&raquo;</a> (<a href="mailto:kari_ok@mail.ru">Кари</a>).
 (1.04.05)
 <!--<li>По <a href="http://deniskhin.ru/vitrail/">этому адресу</a> находится 
 "официальный сайт альбома &laquo;Пёстрый витраж&raquo;, посвящённого юбилею Михаила Щербакова", 
