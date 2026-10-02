@@ -33,9 +33,9 @@ a:visited {
 {{- /* Три раздела: студийные и концертные записи (кроме кассет) и кассеты.
        Кассета — набор, чей формат ведёт в раздел Tapes (disk_formats.path). */ -}}
 {{ $sections := slice
-	(dict "title" "Студийные альбомы" "sets" (partial "directus-sets.html").data)
-	(dict "title" "Концертные альбомы" "sets" (partial "directus-sets-live.html").data)
-	(dict "title" "Кассеты" "sets" (partial "directus-sets-tapes.html").data) }}
+	(dict "title" "Студийные альбомы" "id" "studio" "sets" (partial "directus-sets.html").data)
+	(dict "title" "Концертные альбомы" "id" "live" "sets" (partial "directus-sets-live.html").data)
+	(dict "title" "Кассеты" "id" "tapes" "sets" (partial "directus-sets-tapes.html").data) }}
 {{- range $sections }}
 {{- $tapes := eq .title "Кассеты" }}
 {{- $items := slice }}
@@ -44,7 +44,7 @@ a:visited {
 	{{- if eq $isTape $tapes }}{{ $items = $items | append . }}{{ end }}
 {{- end }}
 {{- if $items }}
-<h2>{{ .title }}</h2>
+<h2 id="{{ .id }}">{{ .title }}</h2>
 <ul class="disk-gallery">
 {{- range $items }}
 	{{- $disk := . }}
