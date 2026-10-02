@@ -3,9 +3,11 @@
 import re, sys, os, json
 from bs4 import BeautifulSoup, Comment, NavigableString, Doctype
 
-SRC = '/mnt/nas/diskh/sch/sch.com.ru/www/' + os.environ.get('SECTION', 'fans') + '/'
-OUT = os.path.dirname(os.path.abspath(__file__)) + '/out/'
-CONTENT = '/home/sergius/schugo/content/'
+HERE = os.path.dirname(os.path.abspath(__file__))
+# LEGACY_WWW — путь к локальной копии каталога www/ старого сайта (KOI8-R исходники)
+SRC = os.path.join(os.environ.get('LEGACY_WWW', ''), os.environ.get('SECTION', 'fans')) + '/'
+OUT = HERE + '/out/'
+CONTENT = os.path.normpath(os.path.join(HERE, '../../content')) + '/'
 
 INLINE = {'a','b','i','em','strong','span','sup','sub','u','small','big','br','img','s','tt','cite','code','abbr','font','nobr','strike'}
 BLOCKS = {'p','div','blockquote','ul','ol','li','h1','h2','h3','h4','h5','h6','pre','hr','table','tr','td','th','tbody','thead','dl','dt','dd','center','address'}
@@ -18,7 +20,7 @@ DEBUG = []
 KEEP_TABLES = [False]
 FONTMAP = {}
 SRC_REPLACE = []
-SRC_OVERRIDE = {'utf/covers': '/tmp/claude-1000/-home-sergius-schugo/74d79cb2-aaf8-4949-b57e-25f68181bde6/scratchpad/covers.html'}   # имя -> локальный файл, если исходника нет на NAS
+SRC_OVERRIDE = {}   # имя -> локальный файл, если исходника нет в LEGACY_WWW (например, скачанный с lambda.mkshch.com)
 SRC_FN = [None]
 SPLIT_BR2 = [False]
 RAW_QUOTES = [False]

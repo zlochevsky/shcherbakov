@@ -2,6 +2,8 @@
 import json, os, re, sys, subprocess
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import fconv
+if not os.environ.get('LEGACY_WWW'):
+    sys.exit('Укажите LEGACY_WWW — путь к локальной копии каталога www/ старого сайта')
 sys.dont_write_bytecode = True
 SECTION = os.environ.get('SECTION', 'fans')
 if SECTION == 'fans':
@@ -22,7 +24,7 @@ def OUTNAME(n):
 ENC={'brahms':'iso-8859-1', 'utf/covers':'utf-8', 'utf/crocodile':'utf-8'}
 import glob
 HAVE = {}
-for _f in glob.glob('/home/sergius/schugo/content/texts/*/*.md'):
+for _f in glob.glob(fconv.CONTENT + 'texts/*/*.md'):
     HAVE.setdefault(os.path.basename(_f)[:-3], []).append(_f.split('/')[-2])
 MANUAL = {'akoekto': '1988/akoektop', 'pesenka': '1989/vpoxodny', 'kontrrev': '1989/kupljubi', 'romans': '1994/vrjadli', 'krym1': '1982/krym10', 'pustye': '1986/pustyjeb', 'nazimnej0': '1987/nazimne0', 'onceinou': '1995/once',
           'unasopj0': '1980/unasopja', 'obrasche': '1988/obraschx', 'krajzeml': '1986/krajzem', 'voslavu': '1989/voslavug'}
@@ -36,7 +38,7 @@ def resolve_songs(body, n):
                 return '<a href="%s%s.html">%s</a>' % (pre, tgt, txt)
             DELINK.append((n, y + '/' + i + anchor))
             return txt
-        if os.path.exists('/home/sergius/schugo/content/texts/%s/%s.md' % (y, i)):
+        if os.path.exists(fconv.CONTENT + 'texts/%s/%s.md' % (y, i)):
             return m.group(0)
         if i in MANUAL:
             return '<a href="%s%s.html%s">%s</a>' % (pre, MANUAL[i], anchor, txt)
