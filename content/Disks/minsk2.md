@@ -4,9 +4,7 @@
    "layout": "diskpage",
    "url": "/Disks/minsk2.html",
    "params": {
-       "id": "minsk2",
-       "concert": true,
-       "image": "minsk2.jpg"
+       "id": "minsk2"
        }
 }
 

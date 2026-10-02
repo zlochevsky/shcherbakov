@@ -15,7 +15,7 @@ See the [Hugo front matter docs](https://gohugo.io/content-management/front-matt
 - `date`, `lastmod` — dates; `lastmod` feeds the "updated" date shown next to some menu items.
 - `"sitemap": {"disable": true}` — keep the page out of `sitemap.xml` (redirect pages, `fans/kom2`). Song pages are handled by their own rules, see below.
 - `"build": {"render": "never", "list": "never"}` — a page that is not rendered on its own, only included by another template (`Books/other-publications.md`, shown on the Books page).
-- `draft`, `publishDate`, `expiryDate` — only in `content/announces/*.md` (three hand-written announces from 2024–2026, all expired) and `archetypes/announces.md`. **Unused**: announces come from Directus now.
+- `draft`, `publishDate`, `expiryDate` — not used in content now (the hand-written `content/announces/` and its archetype were removed 2026-10-02: announces come from Directus).
 
 ## Site chrome (most page types)
 
@@ -45,8 +45,7 @@ One file per song: minimal front matter, the song text as the body (read raw wit
 ## Albums and cassettes — `content/Disks/*.md` (`diskpage`), `content/Tapes/*.md` (`tapepage`)
 
 - `params.id` — `sets.id` in Directus; title, year, format, images and track list all come from the set.
-- `params.year`, `params.image`, `params.images` — fallbacks used only when the set has no `year` / `album_img` / `extra_images`. Currently set only on `minsk1–4` and not needed there.
-- `params.concert` (bool, `minsk1–4`) — **unused**.
+- `params.year`, `params.image`, `params.images` — fallbacks used only when the set has no `year` / `album_img` / `extra_images`; no page sets them now.
 - Full-size image versions are not front matter: see «Полноразмерные изображения» under `sets` in [docs/directus.md](directus.md).
 
 ## Books — `content/Books/*.md` (`bookpage`)
@@ -103,7 +102,7 @@ Small pages that keep legacy addresses alive (`content/Images/redirects/`, `cont
 - `date`, `lastmod` — даты; `lastmod` даёт дату «обновлено» у некоторых пунктов меню.
 - `"sitemap": {"disable": true}` — не включать страницу в `sitemap.xml` (страницы-редиректы, `fans/kom2`). Для страниц песен — свои правила, см. ниже.
 - `"build": {"render": "never", "list": "never"}` — страница не выводится сама, её вставляет другой шаблон (`Books/other-publications.md` на странице «Книги»).
-- `draft`, `publishDate`, `expiryDate` — только в `content/announces/*.md` (три вручную написанных анонса 2024–2026 годов, все истекли) и `archetypes/announces.md`. **Не используется**: анонсы теперь из Directus.
+- `draft`, `publishDate`, `expiryDate` — сейчас в контенте не используются (ручные `content/announces/` и их заготовка удалены 2026-10-02: анонсы берутся из Directus).
 
 ## Общее оформление (большинство страниц)
 
@@ -133,8 +132,7 @@ Small pages that keep legacy addresses alive (`content/Images/redirects/`, `cont
 ## Альбомы и кассеты — `content/Disks/*.md` (`diskpage`), `content/Tapes/*.md` (`tapepage`)
 
 - `params.id` — `sets.id` в Directus; название, год, формат, картинки и список песен берутся из набора.
-- `params.year`, `params.image`, `params.images` — запасные значения, только если у набора пусто `year` / `album_img` / `extra_images`. Сейчас заданы лишь у `minsk1–4`, и там не нужны.
-- `params.concert` (bool, `minsk1–4`) — **не используется**.
+- `params.year`, `params.image`, `params.images` — запасные значения, только если у набора пусто `year` / `album_img` / `extra_images`; сейчас ни у одной страницы не заданы.
 - Полноразмерные версии картинок задаются не во front matter, а именем файла: см. «Полноразмерные изображения» у `sets` в [docs/directus.md](directus.md).
 
 ## Книги — `content/Books/*.md` (`bookpage`)
