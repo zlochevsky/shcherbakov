@@ -55,13 +55,13 @@
 <p>Дополнения: ссылки <a href="https://www.facebook.com/KrasnoyarskStolby/videos/1338586409524887/">раз</a> и <a href="https://www.facebook.com/alex.babiy.7/posts/770142123108871">два</a>.</p>
 <hr width="80%">
 
-<h2 id="bardru">1980-е годы. С сайта bard.ru</h2>
+<h2 id="bardru">1980-е годы. С сайта <a href="http://www.bard.ru/">bard.ru</a></h2>
 <p>Фото И. Каримова.</p>
 <p><img src="mks_BardRu2.jpg" width=640 height=462></p>
 <hr width="80%">
 
 <h2 id="bardru1">Середина 1980-х</h2>
-<p>Фотографии с сайта bard.ru, автор неизвестен.</p>
+<p>Фотографии с сайта <a href="http://www.bard.ru/">bard.ru</a>, автор неизвестен.</p>
 <p><img src="mks_BardRu3.jpg" width=336 height=500></p>
 <p><img src="mks_BardRu4.jpg" width=448 height=640></p>
 <hr width="80%">

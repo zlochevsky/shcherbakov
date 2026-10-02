@@ -54,6 +54,7 @@
 <ul>
 <li><a href="avt.html">Автографы.</a></li>
 <li><a href="cd.html">Альтернативные эскизы к обложкам дисков от Кари.</a></li>
+<li><a href="around-disks.html#bootlegs">Бутлеги.</a></li>
 </ul>
 
 <h2 id="banners">Баннеры</h2>

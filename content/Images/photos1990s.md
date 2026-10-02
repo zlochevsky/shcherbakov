@@ -23,7 +23,7 @@
 <hr width="80%">
 
 <h2 id="apksp">Вторая половина 1990-х гг., с сайта Игоря Грызлова.</h2>
-<p>Фотографии с сайта Игоря Грызлова apksp.narod.ru (с любезного разрешения автора). Фотографии будут использованы при оформлении новых дисков.</p>
+<p>Фотографии с сайта Игоря Грызлова <a href="http://apksp.narod.ru/scherbakovphotoalbum.html">apksp.narod.ru</a> (с любезного разрешения автора). Фотографии будут использованы при оформлении новых дисков.</p>
 <p><img src="apksp.jpg" width=315 height=419></p>
 <p>Питер</p>
 <p><img src="piter.jpg" width=598 height=393></p>
@@ -46,6 +46,7 @@
 <hr width="80%">
 
 <h2 id="gutkin">С концертов 1998 г. в Израиле.</h2>
+<p>Четыре фотографии Щербакова со <a href="http://earth.es.huji.ac.il/~vit/ksp/scherb.htm">страницы</a> Виталия Гуткина.</p>
 <p>Две фотографии с концерта в Иерусалиме, февраль 1998.</p>
 <p><img src="scherb98jr-1.jpg" width=506 height=443></p>
 <p><img src="scherb98jr-2.jpg" width=506 height=443></p>
@@ -55,7 +56,7 @@
 <hr width="80%">
 
 <h2 id="wash97">С гастролей 1997 г. (Вашингтон, США).</h2>
-<p>Концерт в Вашингтоне, 1997 г. Фотографии Артема Казанцева.</p>
+<p>Концерт в Вашингтоне, 1997 г. Фотографии <a href="mailto:akazantsev@ncaccesscare.org">Артема Казанцева</a>.</p>
 <p><img src="mks-97conc1.jpg" width=436 height=598></p>
 <p><img src="mks-97conc2.jpg" width=418 height=600></p>
 <hr width="80%">
@@ -82,7 +83,7 @@
 <hr width="80%">
 
 <h2>1990-е годы</h2>
-<p>Фото Игоря Каримова. С сайта bard.ru.</p>
+<p>Фото Игоря Каримова. С сайта <a href="http://www.bard.ru/">bard.ru</a>.</p>
 <p><img src="mks_BardRu1.jpg" width=357 height=469></p>
 <hr width="80%">
 
