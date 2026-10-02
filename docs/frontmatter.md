@@ -1,115 +1,173 @@
 # Content front matter reference
 
-Reference for the front matter fields (JSON block at the top of `content/**/*.md` files) actually read by the Hugo templates in `layouts/`. Compiled by grepping `layouts/` for `.Params.*` / `.Param "..."` usages and cross-checking against real content files (2026-08-21). Where a field exists in content but no template reads it, it is marked **unused**.
+Front matter fields (the JSON block at the top of `content/**/*.md`) that the templates in `layouts/` actually read. Checked against `layouts/` and all content files on 2026-10-02. Fields present in content but read by no template are marked **unused**.
 
-Not covered here: the Directus-backed collections (events/works/perfs/announces/…) — see [docs/directus.md](directus.md). Also not covered: `hugo.json`'s own `menu` entries, which carry their own `params` (`isDateToPrint`, `dynamicLastmod`) — these look identical in template code (`.Params.isDateToPrint`) but belong to the menu config in `hugo.json`, not to any content `.md` file's front matter; don't confuse the two.
+Not covered: the Directus collections (works, events, perfs, sets, books, comments, announces…) — see [docs/directus.md](directus.md); and the `params` of menu entries in `hugo.json` (`isDateToPrint`, `dynamicLastmod`, `collapsible`, `toggleChild`, `mobileOnly`, `shortName`) — they look like `.Params.*` in templates but belong to the menu config, not to any `.md` file.
 
-## Standard Hugo fields (not custom)
+## Standard Hugo fields
 
-These are native Hugo front matter keys, not project-specific — see the [Hugo front matter docs](https://gohugo.io/content-management/front-matter/) for full semantics.
+See the [Hugo front matter docs](https://gohugo.io/content-management/front-matter/).
 
-- `title` — page `<h1>`/`<title>` fallback text.
-- `date`, `lastmod` — creation/modification dates; `lastmod` also drives the "updated" badge in the menu (see `params.isDateToPrint` note above — that's a menu-config concern, not this field).
-- `draft` — excludes the page from the build when `true`.
-- `type`, `layout` — select which template in `layouts/` renders the page (this project's content almost always uses `"type": "miscellaneous"` plus an explicit `"layout"` naming the template file, e.g. `"layout": "songpage"`).
-- `publishDate`, `expiryDate` — Hugo's built-in scheduling: page is excluded from the build outside this window. Used in the `archetypes/announces.md` scaffold; note actual concert announces are Directus-driven now (see docs/directus.md), so this archetype is vestigial.
-- `url` — overrides the page's output path. Used on `content/Disks/*.md` (e.g. `"url": "/Disks/minsk3.html"`).
-- `"sitemap": {"disable": true}` — removes the page from `sitemap.xml`. Used for archived song-edition pages (see docs/directus.md, "Редакции песен").
+- `title` — page `<h1>` and fallback `<title>`.
+- `type`, `layout` — choose the template. Content uses `"type": "miscellaneous"` plus an explicit `"layout"` (template file name in `layouts/miscellaneous/`); song pages get both from the `cascade` rule in `hugo.json`.
+- `url` — the page's output path; set on almost every page to keep the legacy site's addresses (`"/Disks/minsk3.html"`).
+- `aliases` — old addresses that should redirect to this page.
+- `date`, `lastmod` — dates; `lastmod` feeds the "updated" date shown next to some menu items.
+- `"sitemap": {"disable": true}` — keep the page out of `sitemap.xml` (redirect pages, `fans/kom2`). Song pages are handled by their own rules, see below.
+- `"build": {"render": "never", "list": "never"}` — a page that is not rendered on its own, only included by another template (`Books/other-publications.md`, shown on the Books page).
+- `draft`, `publishDate`, `expiryDate` — only in `content/announces/*.md` (three hand-written announces from 2024–2026, all expired) and `archetypes/announces.md`. **Unused**: announces come from Directus now.
 
-## Site chrome overrides (most page types)
+## Site chrome (most page types)
 
-- `params.subtitle` (string) — per-page `<h2>` subtitle, rendered right under `<h1>` (e.g. `catalogue.html:21`, `concerts.html:21`). Distinct from the *site-wide* subtitle (`site.Params.Subtitle`, set once in `hugo.json`) — this one is per page and currently empty on most pages.
-- `params.name` (string) — overrides the browser-tab `<title>` text independently of the visible `.Title`/`<h1>` (`head.html:4`, `headbasic.html:4`, and duplicated inline in `catalogue.html`/`concerts.html`). Falls back to `.Title` when empty. Currently set but empty on `catalogue.md`/`concerts.md`/etc., so has no visible effect yet.
+- `params.subtitle` — per-page `<h2>` under `<h1>`. Not the site-wide `site.Params.Subtitle` from `hugo.json`.
+- `params.name` — browser-tab `<title>` independent of `<h1>`; falls back to `title`.
 
-## Homepage announce banner — `content/news.md` only
+## Announces — `content/news.md` only
 
-Actual concert announces are Directus-driven now. The section is vestigial.
+Read by `header.html` (home page) and `news.html` through `site.GetPage "news"`. The announces themselves come from the Directus `announces` collection (`partials/announces.html`).
 
-Read from both `news.html` (the news page itself) and `header.html` (the homepage banner), both via `site.GetPage "news"` — i.e. these fields live **only** in `content/news.md`, not per-page.
+- `params.showAnnounce` (bool) — show the announce list at all (home page header and news page).
+- `params.announceTitle` — heading above the list on the news page.
+- `params.announce` (array of Markdown strings) — legacy hand-written lines, appended after the Directus announces. Empty now.
+- `params.showAnnounceTitle`, `params.showAnnounceOnHome` — **unused**.
 
-- `params.showAnnounce` (bool) — master switch: show the announce banner (homepage header) / announce block (news page) at all.
-- `params.announceTitle` (string) — heading text shown above the announce list, if `showAnnounce` is on.
-- `params.announce` (array of markdown strings) — **legacy** hand-written announce lines, still merged in alongside the Directus-driven announces by `announces.html`. Currently empty (`[]`) — live announces now come from Directus's `announces` collection.
-- `params.showAnnounceTitle`, `params.showAnnounceOnHome` — present in `content/news.md` but **unused**: no template reads either. Don't rely on them; if you want to gate the title or the homepage banner separately, that logic needs to be added first.
+## Song pages — `content/texts/<year>/<id>.md`
 
-## Song text pages — `content/texts/<year>/<id>.md`
+One file per song: minimal front matter, the song text as the body (read raw with `.RawContent`, not as Markdown). The file name is the song id (`works.id`), the folder is the year of the current edition. `<h1>`, `<title>`, description and visibility come from Directus (`works.fname`/`name`/`fincipit`/`incipit`, `works.noindex`, `works.hidden`), see [docs/directus.md](directus.md).
 
-Since 2026-10-01 a song page is **one file: minimal JSON front matter + the song text as the body** (the former `assets/texts/<id>.txt` files were merged in and deleted). `type`/`layout` come from the `cascade` rule in `hugo.json`; the **file name is the song id** (`works.id` in Directus), the folder is the year of the current edition (`works.edit`, else `works.date`). The body is read raw (`.RawContent`, never rendered as Markdown) and starts right with the song — the heading line is not part of the text: `<h1>`, `<title>` and `<meta name="description">` come from Directus (`song-page-info.html`, `song-meta.html`): `<h1>` = `fname` or `name` capitalised, or «* * *» with the `fincipit` hidden for screen readers; `<title>` = the same or `fincipit`; description = `incipit`. Visibility: `noindex` and exclusion from `sitemap.xml` (own `layouts/sitemap.xml`) = `works.noindex` or an early edition; the song catalogue = `works.hidden`.
+- `params.tonality` (e.g. `"Hm"`) — base key for transposition. If empty, `song.html` guesses it from the chords; an explicit value is more reliable.
+- `params.chordsStartAt` (int, 1-based column) — where chords begin; splits lines into lyrics and chords. Omit for poems without chords.
+- `params.textFinishAtLine` (int, 0-based line of the body) — lines from here on are not lyrics and go verbatim into a `<pre>` block (tablature, notes). Default: the last line.
+- `params.editionOf` — id of the current edition; marks an early edition: noindex, not in the sitemap, title and year from the current edition, banner linking to it.
+- `title` (top level, optional) — only for an early edition with a different name (`pazh0`); `"* * *"` = untitled early edition (`japomnju`), `<title>` and description then come from its first line.
+- `aliases` — old addresses of a renamed page.
 
-- `params.tonality` (string, e.g. `"Hm"`) — chord transposition base key. If omitted, `song.html` tries to auto-detect it by regex-matching chord tokens in the text — an explicit value is more reliable.
-- `params.chordsStartAt` (int, 1-based column) — column where chords begin, used to split each line into lyrics/chords for the "above"/"side" views. Optional: if omitted, there is no chord column (poems).
-- `params.textFinishAtLine` (int, 0-based line index of the body) — lines from this one onward are not "main lyrics" and go verbatim into a trailing `<pre>` block (tablature, notes). Optional: defaults to the last line.
-- `params.editionOf` (string, id of the current edition) — marks the page as an early edition: noindex, not in the sitemap, title and year taken from the current edition, banner link to it.
-- `title` (top level, optional) — overrides the title from Directus; only for an early edition that had a different name (`pazh0`); `"* * *"` = untitled early edition (`japomnju`): `<title>` and description then come from the first line of the page's own text.
-- `aliases` (top level) — old URLs of a renamed page (redirect pages).
+## Albums and cassettes — `content/Disks/*.md` (`diskpage`), `content/Tapes/*.md` (`tapepage`)
 
-## Disc pages — `content/Disks/*.md` (`"layout": "diskpage"`)
+- `params.id` — `sets.id` in Directus; title, year, format, images and track list all come from the set.
+- `params.year`, `params.image`, `params.images` — fallbacks used only when the set has no `year` / `album_img` / `extra_images`. Currently set only on `minsk1–4` and not needed there.
+- `params.concert` (bool, `minsk1–4`) — **unused**.
+- Full-size image versions are not front matter: see «Полноразмерные изображения» under `sets` in [docs/directus.md](directus.md).
 
-- `params.id` (string) — must match a `sets.id` in Directus (the album/collection record); used to fetch the set's title/track list via `directus-sets.html` (`diskpage.html:21-23`).
-- `params.image` (string, filename only) — cover image, resolved as `Images/<value>` (`disks-index.html:54`; also used directly as `Images/bkp/<id>.jpg`-style paths elsewhere for consistency — check the specific layout).
-- `params.year` (string, may be a range like `"2000-2007"`) — display-only text on the disc listing.
-- `params.concert` (bool) — present on at least one disc (`minsk3.md`) but **unused**: no template reads it yet. Looks like a forward-looking flag ("this disc documents a specific concert") that was never wired up.
+## Books — `content/Books/*.md` (`bookpage`)
 
-## Book pages — `content/Books/*.md` (`"layout": "bookpage"`)
+- `params.id` — `books.id` in Directus. Cover: `books.photo`, else `Images/bkp/<id>.jpg`.
+- `params.buyUrl` — purchase link, shown as a button if set.
 
-- `params.id` (string) — must match a Directus `books` collection id; also reused directly as the cover image filename, `Images/bkp/<id>.jpg` (`bookpage.html:79`).
-- `params.buyUrl` (string, URL) — external purchase link, rendered as a button/link if present (`bookpage.html:107`).
+## Song cycles — `content/Cycles/*.md` (`cycle`)
+
+- `params.id` — cycle id in Directus (`cycles`).
+
+## Articles, fan club, parodies — `praises-article` (Praises, FOM, fans, Parodies, SCH2, …)
+
+- `title`, `params.subtitle`, `params.author` — heading block.
+- `params.backUrl`, `params.backTitle` — the "back" link in the corner navigation. Without them a page under `content/fans/` gets «Фан-клуб → fans/index.html»; other sections set them explicitly.
+- `params.bgColor` — page background (the fan club hub `fans/fans-index.md`).
+
+## Pictures — `content/Images/*.md` (`images-page`)
+
+- `params.subtitle`, `params.bgColor`.
+- `params.centerText` (bool) — centre the text (for pages that were centred on the legacy site).
+- `params.parentUrl`, `params.parentTitle` — an extra "up" link in the corner navigation (default title «Выше»).
+
+## Archive — `content/Archive/*.md` (`archive-page`)
+
+- `params.isIndex` (bool) — the archive hub page: no «Архив» link to itself in the corner navigation.
+- `params.lang` — page language when not Russian (`america97`: `"en"`).
+- `params.subtitle`.
+
+## Redirect pages — `redirect`, `redirect-hub`
+
+Small pages that keep legacy addresses alive (`content/Images/redirects/`, `content/redirects/`, `content/Tapes/tapes-index.md`, …). Usually with `"sitemap": {"disable": true}`.
+
+- `params.target` (`redirect`) — where to go; a **relative** address (`"photos2000-2004.html#agolyanov"`, `"../Disks/index.html#tapes"`) so the page survives a move of the site to another folder or domain without a rebuild.
+- `params.map`, `params.default` (`redirect-hub`) — for a legacy page that had several anchors: `map` = old anchor → new address, `default` = where to go without an anchor.
+- `params.noindex` (bool) — add `noindex` to the redirect page.
 
 ---
 
-# Справочник параметров front matter в контенте
+# Справочник параметров front matter
 
-Справочник по полям front matter (JSON-блок в начале `content/**/*.md`), которые реально читаются шаблонами в `layouts/`. Составлен через grep по `.Params.*`/`.Param "..."` в `layouts/` со сверкой по реальным content-файлам (2026-08-21). Если поле есть в контенте, но ни один шаблон его не читает — помечено как **не используется**.
+Поля front matter (JSON-блок в начале `content/**/*.md`), которые реально читают шаблоны из `layouts/`. Сверено с `layouts/` и всеми файлами контента 2026-10-02. Поля, которые есть в контенте, но не читаются ни одним шаблоном, помечены **не используется**.
 
-Не входит сюда: коллекции, живущие в Directus (events/works/perfs/announces/…) — см. [docs/directus.md](directus.md). Также не входит: параметры пунктов меню в `hugo.json` (`isDateToPrint`, `dynamicLastmod`) — в шаблонах выглядят один в один как поля front matter (`.Params.isDateToPrint`), но на самом деле относятся к конфигу меню в `hugo.json`, а не к front matter какого-либо `.md`-файла, поэтому не смешиваем эти два источника.
+Не входит: коллекции Directus (works, events, perfs, sets, books, comments, announces…) — см. [docs/directus.md](directus.md); `params` пунктов меню в `hugo.json` (`isDateToPrint`, `dynamicLastmod`, `collapsible`, `toggleChild`, `mobileOnly`, `shortName`) — в шаблонах они выглядят как `.Params.*`, но относятся к настройкам меню, а не к файлам `.md`.
 
-## Стандартные поля Hugo (не специфичны для проекта)
+## Стандартные поля Hugo
 
-Встроенные ключи front matter самого Hugo, не придуманные в этом проекте — полная семантика в [документации Hugo](https://gohugo.io/content-management/front-matter/).
+См. [документацию Hugo](https://gohugo.io/content-management/front-matter/).
 
-- `title` — текст `<h1>` / запасной `<title>` страницы.
-- `date`, `lastmod` — даты создания/изменения; `lastmod` также участвует в бейдже «обновлено» в меню (см. заметку про `params.isDateToPrint` выше — это уже про конфиг меню, не про это поле).
-- `draft` — при `true` страница исключается из сборки.
-- `type`, `layout` — выбирают, каким шаблоном из `layouts/` рендерится страница (в этом проекте контент почти всегда использует `"type": "miscellaneous"` плюс явный `"layout"` с именем файла шаблона, напр. `"layout": "songpage"`).
-- `publishDate`, `expiryDate` — встроенный в Hugo механизм расписания: вне этого окна страница исключается из сборки. Используется в заготовке `archetypes/announces.md`, но, поскольку реальные анонсы концертов сейчас ведутся через Directus (см. docs/directus.md), этот архетип, видимо, уже рудимент.
-- `url` — переопределяет итоговый путь страницы. Используется в `content/Disks/*.md` (напр. `"url": "/Disks/minsk3.html"`).
-- `"sitemap": {"disable": true}` — убирает страницу из `sitemap.xml`. Используется для архивных редакций песен (см. docs/directus.md, «Редакции песен»).
+- `title` — `<h1>` и запасной `<title>` страницы.
+- `type`, `layout` — выбор шаблона. В контенте — `"type": "miscellaneous"` и явный `"layout"` (имя файла шаблона в `layouts/miscellaneous/`); страницам песен оба задаёт правило `cascade` в `hugo.json`.
+- `url` — адрес страницы; стоит почти у всех страниц, чтобы сохранить адреса старого сайта (`"/Disks/minsk3.html"`).
+- `aliases` — старые адреса, которые должны вести на эту страницу.
+- `date`, `lastmod` — даты; `lastmod` даёт дату «обновлено» у некоторых пунктов меню.
+- `"sitemap": {"disable": true}` — не включать страницу в `sitemap.xml` (страницы-редиректы, `fans/kom2`). Для страниц песен — свои правила, см. ниже.
+- `"build": {"render": "never", "list": "never"}` — страница не выводится сама, её вставляет другой шаблон (`Books/other-publications.md` на странице «Книги»).
+- `draft`, `publishDate`, `expiryDate` — только в `content/announces/*.md` (три вручную написанных анонса 2024–2026 годов, все истекли) и `archetypes/announces.md`. **Не используется**: анонсы теперь из Directus.
 
-## Переопределения общего оформления (большинство типов страниц)
+## Общее оформление (большинство страниц)
 
-- `params.subtitle` (строка) — подзаголовок `<h2>` конкретной страницы, сразу под `<h1>` (напр. `catalogue.html:21`, `concerts.html:21`). Не путать с *сайтовым* подзаголовком (`site.Params.Subtitle`, задаётся один раз в `hugo.json`) — этот же — постраничный, сейчас на большинстве страниц пустой.
-- `params.name` (строка) — переопределяет текст вкладки браузера (`<title>`) независимо от видимого `.Title`/`<h1>` (`head.html:4`, `headbasic.html:4`, и продублировано инлайн в `catalogue.html`/`concerts.html`). При пустом значении используется `.Title`. Сейчас на `catalogue.md`/`concerts.md` и т.п. поле объявлено, но пустое — видимого эффекта пока нет.
+- `params.subtitle` — подзаголовок `<h2>` под `<h1>`. Не путать с общим `site.Params.Subtitle` из `hugo.json`.
+- `params.name` — текст вкладки браузера (`<title>`) независимо от `<h1>`; по умолчанию — `title`.
 
-## Баннер анонсов на главной — только `content/news.md`
+## Анонсы — только `content/news.md`
 
-Поскольку реальные анонсы концертов сейчас ведутся через Directus (см. docs/directus.md), эта секция, видимо, уже рудимент.
+Читаются `header.html` (главная) и `news.html` через `site.GetPage "news"`. Сами анонсы — из коллекции `announces` в Directus (`partials/announces.html`).
 
-Баннер аннонса читался и из `news.html` (сама страница новостей), и из `header.html` (баннер на главной) — в обоих случаях через `site.GetPage "news"`, то есть эти поля жили **только** в `content/news.md`, не на других страницах.
+- `params.showAnnounce` (bool) — показывать ли список анонсов вообще (шапка главной и страница новостей).
+- `params.announceTitle` — заголовок над списком на странице новостей.
+- `params.announce` (массив строк Markdown) — старые вручную написанные строки, добавляются после анонсов из Directus. Сейчас пусто.
+- `params.showAnnounceTitle`, `params.showAnnounceOnHome` — **не используются**.
 
-- `params.showAnnounce` (bool) — общий переключатель: показывать ли баннер анонса (шапка главной) / блок анонса (страница новостей) вообще.
-- `params.announceTitle` (строка) — заголовок над списком анонсов, если `showAnnounce` включён.
-- `params.announce` (массив markdown-строк) — старые вручную написанные строки анонса, всё ещё подмешиваются `announces.html` вместе с анонсами из Directus. Сейчас пустой (`[]`) — живые анонсы теперь берутся из коллекции `announces` в Directus.
-- `params.showAnnounceTitle`, `params.showAnnounceOnHome` — присутствуют в `content/news.md`, но **не используются**: ни один шаблон их не читает. Не полагайтесь на них; если нужно управлять заголовком или баннером на главной по отдельности — эту логику сперва придётся дописать.
+## Страницы песен — `content/texts/<год>/<id>.md`
 
-## Страницы текстов песен — `content/texts/<год>/<id>.md`
+Один файл на песню: короткий front matter, текст песни — тело файла (читается как есть, `.RawContent`, без Markdown). Имя файла — id песни (`works.id`), папка — год актуальной редакции. `<h1>`, `<title>`, description и видимость берутся из Directus (`works.fname`/`name`/`fincipit`/`incipit`, `works.noindex`, `works.hidden`), см. [docs/directus.md](directus.md).
 
-С 2026-10-01 страница песни — **один файл: минимальный JSON front matter + текст песни телом файла** (прежние `assets/texts/<id>.txt` слиты в `.md` и удалены). `type`/`layout` задаёт правило `cascade` в `hugo.json`; **имя файла — id песни** (`works.id` в Directus), папка — год актуальной редакции (`works.edit`, иначе `works.date`). Тело читается как есть (`.RawContent`, Markdown не применяется) и начинается сразу с песни — строки-заголовка в тексте нет: `<h1>`, `<title>` и `<meta name="description">` берутся из Directus (`song-page-info.html`, `song-meta.html`): `<h1>` — `fname` или `name` с заглавной буквы, иначе «* * *» с невидимым `fincipit` для экранного доступа; `<title>` — то же или `fincipit`; description — `incipit`. Видимость: `noindex` и исключение из `sitemap.xml` (свой шаблон `layouts/sitemap.xml`) — `works.noindex` или ранняя редакция; каталог песен — `works.hidden`.
+- `params.tonality` (напр. `"Hm"`) — исходная тональность для транспонирования. Если пусто, `song.html` угадывает её по аккордам; явное значение надёжнее.
+- `params.chordsStartAt` (число, столбец с 1) — где начинаются аккорды; по нему строки делятся на текст и аккорды. Для стихов без аккордов не задаётся.
+- `params.textFinishAtLine` (число, строка тела с 0) — с этой строки идёт не текст песни, а то, что выводится как есть в блоке `<pre>` (табулатуры, примечания). По умолчанию — последняя строка.
+- `params.editionOf` — id актуальной редакции; помечает раннюю редакцию: noindex, не в sitemap, заголовок и год — от актуальной редакции, плашка-ссылка на неё.
+- `title` (в корне, необязательно) — только для ранней редакции с другим названием (`pazh0`); `"* * *"` — ранняя редакция без названия (`japomnju`), тогда `<title>` и description берутся из её первой строки.
+- `aliases` — старые адреса переименованной страницы.
 
-- `params.tonality` (строка, напр. `"Hm"`) — базовая тональность для транспонирования. Если не задано, `song.html` пытается определить её по аккордам в тексте — явное значение надёжнее.
-- `params.chordsStartAt` (int, столбец с 1) — столбец, с которого начинаются аккорды; по нему строки делятся на текст и аккорды в видах «над строкой»/«справа». Необязательно: без него колонки аккордов нет (стихи).
-- `params.textFinishAtLine` (int, индекс строки тела с 0) — строки начиная с этой — не «основной» текст и выводятся как есть в блоке `<pre>` (табулатуры, примечания). Необязательно: по умолчанию — последняя строка.
-- `params.editionOf` (строка, id актуальной редакции) — страница ранней редакции: noindex, не в sitemap, заголовок и год — от актуальной редакции, плашка-ссылка на неё.
-- `title` (в корне, необязательно) — заменяет заголовок из Directus; только для ранней редакции с другим названием (`pazh0`); `"* * *"` — ранняя редакция без названия (`japomnju`): `<title>` и description тогда берутся из первой строки собственного текста страницы.
-- `aliases` (в корне) — старые адреса переименованной страницы (страницы-редиректы).
+## Альбомы и кассеты — `content/Disks/*.md` (`diskpage`), `content/Tapes/*.md` (`tapepage`)
 
-## Страницы дисков — `content/Disks/*.md` (`"layout": "diskpage"`)
+- `params.id` — `sets.id` в Directus; название, год, формат, картинки и список песен берутся из набора.
+- `params.year`, `params.image`, `params.images` — запасные значения, только если у набора пусто `year` / `album_img` / `extra_images`. Сейчас заданы лишь у `minsk1–4`, и там не нужны.
+- `params.concert` (bool, `minsk1–4`) — **не используется**.
+- Полноразмерные версии картинок задаются не во front matter, а именем файла: см. «Полноразмерные изображения» у `sets` в [docs/directus.md](directus.md).
 
-- `params.id` (строка) — должен совпадать с `sets.id` в Directus (запись альбома/коллекции); используется для получения названия и списка треков через `directus-sets.html` (`diskpage.html:21-23`).
-- `params.image` (строка, только имя файла) — обложка, путь собирается как `Images/<значение>` (`disks-index.html:54`; в других местах имя файла используется и напрямую в путях вида `Images/bkp/<id>.jpg` — сверяйтесь с конкретным шаблоном).
-- `params.year` (строка, может быть диапазоном вроде `"2000-2007"`) — чисто отображаемый текст в списке дисков.
-- `params.concert` (bool) — встречается как минимум в одном диске (`minsk3.md`), но **не используется**: ни один шаблон пока его не читает. Похоже на задел на будущее («этот диск документирует конкретный концерт»), который так и не подключили.
+## Книги — `content/Books/*.md` (`bookpage`)
 
-## Страницы книг — `content/Books/*.md` (`"layout": "bookpage"`)
+- `params.id` — `books.id` в Directus. Обложка: `books.photo`, иначе `Images/bkp/<id>.jpg`.
+- `params.buyUrl` — ссылка «купить», выводится кнопкой, если задана.
 
-- `params.id` (строка) — должен совпадать с id в коллекции `books` в Directus; также напрямую используется как имя файла обложки, `Images/bkp/<id>.jpg` (`bookpage.html:79`).
-- `params.buyUrl` (строка, URL) — внешняя ссылка «купить», рендерится как кнопка/ссылка, если задана (`bookpage.html:107`).
+## Циклы песен — `content/Cycles/*.md` (`cycle`)
+
+- `params.id` — id цикла в Directus (`cycles`).
+
+## Статьи, фан-клуб, пародии — `praises-article` (Praises, FOM, fans, Parodies, SCH2 и др.)
+
+- `title`, `params.subtitle`, `params.author` — заголовочный блок.
+- `params.backUrl`, `params.backTitle` — ссылка «назад» в угловой навигации. Без них страница из `content/fans/` получает «Фан-клуб → fans/index.html»; в остальных разделах задаются явно.
+- `params.bgColor` — фон страницы (хаб клуба `fans/fans-index.md`).
+
+## Картинки — `content/Images/*.md` (`images-page`)
+
+- `params.subtitle`, `params.bgColor`.
+- `params.centerText` (bool) — текст по центру (для страниц, которые на старом сайте были выровнены по центру).
+- `params.parentUrl`, `params.parentTitle` — дополнительная ссылка «вверх» в угловой навигации (подпись по умолчанию — «Выше»).
+
+## Архив — `content/Archive/*.md` (`archive-page`)
+
+- `params.isIndex` (bool) — главная страница архива: в угловой навигации нет ссылки «Архив» на саму себя.
+- `params.lang` — язык страницы, если не русский (`america97`: `"en"`).
+- `params.subtitle`.
+
+## Страницы-редиректы — `redirect`, `redirect-hub`
+
+Маленькие страницы, которые сохраняют адреса старого сайта (`content/Images/redirects/`, `content/redirects/`, `content/Tapes/tapes-index.md` и др.). Обычно с `"sitemap": {"disable": true}`.
+
+- `params.target` (`redirect`) — куда вести; **относительный** адрес (`"photos2000-2004.html#agolyanov"`, `"../Disks/index.html#tapes"`), чтобы страница пережила перенос сайта в другую папку или на другой домен без пересборки.
+- `params.map`, `params.default` (`redirect-hub`) — для старой страницы с несколькими якорями: `map` — старый якорь → новый адрес, `default` — куда вести без якоря.
+- `params.noindex` (bool) — добавить `noindex` странице-редиректу.
