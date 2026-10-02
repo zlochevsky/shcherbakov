@@ -128,7 +128,7 @@
 {{- if or $bookRows $orderedAlbumRows }}
                     <div id="song-albums">
 {{- range $bookRows }}
-                        <p><a href="{{ printf "Books/%s.html" .id | relURL }}"><span class="{{ .id }}"></span></a> <a href="{{ printf "Books/%s.html" .id | relURL }}">{{ .name }}. ({{ .rangeYears }}). Стр. {{ .page }}</a></p>
+                        <p><a href="{{ printf "Books/%s.html" .id | relURL }}"><span class="{{ .id }}"></span></a> <a href="{{ printf "Books/%s.html" .id | relURL }}">{{ .name }}</a>. ({{ .rangeYears }}). Стр. {{ .page }}</p>
 {{- end }}
 {{- range $orderedAlbumRows }}
                         {{- $f := partial "disk-format.html" .format }}
