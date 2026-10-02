@@ -168,6 +168,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		return text.toLowerCase().trim().normalize("NFD").replace(/\p{Diacritic}/gu, "").replace(/"ё"/gu, "е");
 	}
 
+	// Текст для поиска считается один раз. У песни — без года написания (.perf-year): иначе год
+	// находил бы не концерты этого года, а все концерты, где пели песни этого года (issue #2).
+	const summaryTexts = new Map(allDetails.map(d => [d, normalize(d.querySelector("summary").textContent)]));
+	const liTexts = new Map();
+	allDetails.forEach(d => d.querySelectorAll("li").forEach(li => {
+		const copy = li.cloneNode(true);
+		copy.querySelectorAll(".perf-year").forEach(y => y.remove());
+		liTexts.set(li, normalize(copy.textContent));
+	}));
+
 	function activeFlagFilters() {
 		const active = {};
 		flagNames.forEach(f => {
@@ -193,10 +203,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			let textOk = true;
 			let matchedLis = [];
 			if (terms.length) {
-				const summaryText = normalize(d.querySelector("summary").textContent);
+				const summaryText = summaryTexts.get(d);
 				const summaryMatch = terms.every(t => summaryText.includes(t));
 				Array.from(d.querySelectorAll("li")).forEach(li => {
-					const liText = normalize(li.textContent);
+					const liText = liTexts.get(li);
 					if (terms.every(t => liText.includes(t))) matchedLis.push(li);
 				});
 				textOk = summaryMatch || matchedLis.length > 0;
