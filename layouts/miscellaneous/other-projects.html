@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+  {{ partial "headbasic.html" . }}
+
+<style>
+{{- with resources.Get "css/disks.css" }}
+	{{ .Content | safeCSS -}}
+{{ end }}
+a:link {
+	color: #006600;
+}
+a:visited {
+	color: #002200;
+}
+</style>
+
+</head>
+<body>
+<span id="top"></span>
+<ul class="cornernav">
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Disks/index.html" | relURL }}">Дискография</a>]</li>
+</ul>
+<header>
+{{- with .Params.epigraph }}
+<aside class="epigraph">{{ . | safeHTML }}</aside>
+{{- end }}
+<h1>{{ .Title }}</h1>
+</header>
+<main class="other-projects">
+<div class="wrapper">
+{{ .Content }}
+
+{{- /* Сторонние издания из Directus (releases): разделы по releases.kind — из front matter. */ -}}
+{{ $releases := (partial "directus-releases.html").data }}
+{{ $works := partialCached "works-by-id.html" "works-by-id" }}
+<ul>
+{{- range .Params.sections }}
+	<li><a href="#{{ .id }}">{{ .title }}</a></li>
+{{- end }}
+</ul>
+
+{{- range .Params.sections }}
+{{- $kind := .kind }}
+<section id="{{ .id }}">
+<h2>{{ .title }}</h2>
+{{- range where $releases "kind" $kind }}
+{{- $r := . }}
+{{- $official := index (where (.links | default slice) "kind" "official") 0 }}
+{{- $titleHref := "" }}
+{{- with $official }}{{ $titleHref = .url }}
+{{- else }}{{ with $r.sets_id }}{{ $titleHref = partial "set-url.html" (dict "id" .id "format" (.format.id | default "")) | relURL }}{{ end }}
+{{- end }}
+{{- $authors := slice }}{{ $roles := slice }}
+{{- range sort (.performers | default slice) "num" }}
+	{{- if .role }}{{ $roles = $roles | append . }}{{ else }}{{ $authors = $authors | append . }}{{ end }}
+{{- end }}
+<article class="release" id="{{ .id }}">
+	{{- with .cover_img }}
+	{{- $ext := path.Ext . -}}
+	{{- $fullFile := printf "%s-full%s" (strings.TrimSuffix $ext .) $ext -}}
+	{{- $hasFull := os.FileExists (printf "static/Images/%s" $fullFile) }}
+	<figure>{{ if $hasFull }}<a href="{{ printf "Images/%s" $fullFile | relURL }}" target="_blank" rel="noopener">{{ end -}}
+	<img src="{{ printf "Images/%s" . | relURL }}" alt="«{{ $r.title }}»">
+	{{- if $hasFull }}</a>{{ end }}</figure>
+	{{- end }}
+	<div class="release-info">
+	{{- if and $authors (ne $kind "reissue") }}
+		<p class="release-performers">
+		{{- range $i, $p := $authors }}{{ if $i }}, {{ end }}
+			{{- $pp := $p.performers_id }}
+			{{- with index (where ($pp.links | default slice) "kind" "official") 0 }}<a href="{{ .url }}">{{ $pp.name }}</a>{{ else }}{{ $pp.name }}{{ end }}
+		{{- end }}</p>
+	{{- end }}
+		<h3>{{ with $titleHref }}<a href="{{ . }}">{{ end }}«{{ .title }}»{{ with $titleHref }}</a>{{ end }}</h3>
+	{{- if or .subtitle .publisher }}
+		<p class="release-subtitle">{{ with .subtitle }}{{ . }}{{ end }}{{ if and .subtitle .publisher }}, {{ end }}{{ with .publisher }}{{ . }}{{ end }}</p>
+	{{- end }}
+		<p class="release-year">{{ .year }}</p>
+	{{- range $roles }}
+		<p class="release-role">{{ .performers_id.name }}: {{ .role }}</p>
+	{{- end }}
+	{{- with .recordings }}
+		<ul class="release-songs">
+		{{- range sort . "num" }}
+			{{- $w := index $works (.works_id | default "") }}
+			{{- $name := .title | default ($w.name | default "") }}
+			<li>{{ with $w }}<a href="{{ .href | relURL }}">{{ $name }}</a>{{ else }}{{ $name }}{{ end }}
+			{{- with .note }} ({{ . | safeHTML }}){{ end }}
+			{{- range sort (.links | default slice) "num" }} &mdash; <a href="{{ .url }}">{{ .label | default "послушать" }}</a>{{ end }}</li>
+		{{- end }}
+		</ul>
+	{{- end }}
+	{{- with .comment }}
+		<div class="release-comment">{{ . | safeHTML }}</div>
+	{{- end }}
+	{{- $more := slice }}
+	{{- range sort (.links | default slice) "num" }}{{ if ne .kind "official" }}{{ $more = $more | append . }}{{ end }}{{ end }}
+	{{- with $more }}
+		<p class="release-links">
+		{{- range $i, $l := . }}{{ if $i }}, {{ end }}<a href="{{ $l.url }}">{{ $l.label | default $l.url }}</a>{{ end }}</p>
+	{{- end }}
+	</div>
+</article>
+{{- end }}
+<p class="to-top">[<a href="#top">Наверх</a>]</p>
+</section>
+{{- end }}
+
+{{- with .Params.credits }}
+<p class="credits">{{ . | safeHTML }}</p>
+{{- end }}
+</div>
+</main>
+<ul class="cornernav">
+	<li>[<a href="#top">Наверх</a>]</li>
+	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
+	<li>[<a href="{{ "Disks/index.html" | relURL }}">Дискография</a>]</li>
+</ul>
+</body>
+</html>
