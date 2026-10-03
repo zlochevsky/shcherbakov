@@ -70,8 +70,8 @@ function manageTransposer(viewType){
 function manageStressButton(viewType){
     // Показываем кнопку stress только для вида side И если в песне есть ударения
     if (viewType === 'side') {
-        const sideContainer = document.querySelector('.viewtype-side');
-        const hasStress = sideContainer && sideContainer.dataset.hasStress === 'true';
+        const hasStress = Array.from(document.querySelectorAll('.viewtype-side'))
+            .some(c => c.dataset.hasStress === 'true');
         if (buttonStress) {
             buttonStress.style.display = hasStress ? "inline-block" : "none";
         }
@@ -93,10 +93,8 @@ function applyViewType(viewType) {
     manageTransposer(viewType);
     manageStressButton(viewType);
 
-    const activeContainer = document.querySelector('.viewtype-' + viewType);
-    if (activeContainer) {
-        activeContainer.classList.add('active');
-    }
+    // На странице перевода два текста (перевод и оригинал) — включаем режим у обоих
+    document.querySelectorAll('.viewtype-' + viewType).forEach(c => c.classList.add('active'));
 
     // Позиционируем аккорды для вида above
     if (viewType === 'above') {
@@ -140,11 +138,8 @@ function toggleStress(){
 }
 
 function positionChordsAbove() {
-    const viewtypeAbove = document.querySelector('.viewtype-above');
-    if (!viewtypeAbove) return;
-
-    // Находим все span.ch с data-positions в viewtype-above
-    const chordSpans = viewtypeAbove.querySelectorAll('.ch[data-positions]');
+    // Находим все span.ch с data-positions во всех viewtype-above (на странице перевода их два)
+    const chordSpans = document.querySelectorAll('.viewtype-above .ch[data-positions]');
 
     chordSpans.forEach(span => {
         // Проверяем, не были ли уже позиционированы аккорды

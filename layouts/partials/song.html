@@ -1,9 +1,15 @@
-{{- /* Контекст — dict "page" (страница песни) "info" (song-page-info.html). Текст песни — тело .md (без строки-заголовка),
+{{- /* Контекст — dict "page" (страница песни) "info" (song-page-info.html; у перевода может быть "subtitle" —
+       приписка под заголовком, HTML), необязательно "rebase" (см. ниже) и "lang" (по умолчанию ru;
+       для другого языка — перевод — русская типографика: «ёлочки» и тире — не применяется). Текст песни — тело .md (без строки-заголовка),
        заголовок <h1> — из базы (info.h1); у песни без названия — «* * *» с невидимой первой строкой для экранного доступа. */ -}}
 {{- $page := .page -}}
 {{- $info := .info -}}
 {{- $pageParams := $page.Params -}}
 {{- $cont := $page.RawContent -}}
+{{- $ru := eq (.lang | default "ru") "ru" -}}
+{{- /* "rebase": текст песни выводится не со своей страницы (оригинал на странице перевода) — относительные ссылки
+       из текста, рассчитанные на texts/<год>/ («../../Disks/…»), переводим в адреса от корня сайта */ -}}
+{{- if .rebase }}{{ $cont = replaceRE `(href|src)="\.\./\.\./` (printf `$1="%s` ("" | relURL)) $cont }}{{ end -}}
 {{- $found := gt (len (strings.TrimSpace $cont)) 0 -}}
 {{- $linesText := slice -}}
 {{- $h1 := "" -}}
@@ -15,6 +21,7 @@
 {{- $linesSide := slice -}}
 {{- $linesAbove := slice -}}
 {{- $linesHeader := slice (println $h1 | safeHTML) -}}
+{{- with $info.subtitle }}{{ $linesHeader = $linesHeader | append (printf "<p class=\"translation-note\">%s</p>\n" . | safeHTML) }}{{ end -}}
 {{- $newLinesAfter := slice -}}
 {{- $tonality := "Hm" -}}
 {{- $stressLine := "" -}}
@@ -72,12 +79,14 @@
                     {{/* split line into text and chords at position */}}
                     {{- if and (gt (len $line) $pos) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}}
                         {{- $p1 := substr $line 0 $pos -}}{{/* text substring */}}
+                        {{- if $ru -}}
                         {{- $p1 = replaceRE `(^|[\s\(—])"` "$1«" $p1 -}}{{/* opening quotes */}}
                         {{- $p1 = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $p1 -}}{{/* closing quotes before space/punctuation */}}
                         {{- $p1 = replaceRE `([!?;:\.…,])"` "$1»" $p1 -}}{{/* closing quotes after punctuation */}}
                         {{- $p1 = replaceRE `^- ` "— " $p1 -}}{{/* dash at line start (direct speech) */}}
                         {{- $p1 = replaceRE `, - ` ", — " $p1 -}}{{/* dash after comma */}}
                         {{- $p1 = replaceRE ` - ` "&nbsp;— " $p1 -}}{{/* space-dash-space with non-breaking space */}}
+                        {{- end -}}
                         {{- $p2 := substr $line $pos -}}{{/* chords substring */}}
                         {{- $stressPositions := "" -}}
                         {{- if ne $stressLine "" -}}
@@ -112,12 +121,14 @@
                         {{- else -}}
                             {{/* text-only line: trim trailing spaces, replace quotes then dashes, append to all views */}}
                             {{- $lineClean := replaceRE ` +$` "" $line -}}
+                            {{- if $ru -}}
                             {{- $lineClean = replaceRE `(^|[\s\(—])"` "$1«" $lineClean -}}{{/* opening quotes */}}
                             {{- $lineClean = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $lineClean -}}{{/* closing quotes before space/punctuation */}}
                             {{- $lineClean = replaceRE `([!?;:\.…,])"` "$1»" $lineClean -}}{{/* closing quotes after punctuation */}}
                             {{- $lineClean = replaceRE `^- ` "— " $lineClean -}}{{/* dash at line start */}}
                             {{- $lineClean = replaceRE `, - ` ", — " $lineClean -}}{{/* dash after comma */}}
                             {{- $lineClean = replaceRE ` - ` "&nbsp;— " $lineClean -}}
+                            {{- end -}}
                             {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                             {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                             {{- $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) -}}
@@ -132,12 +143,14 @@
                     {{- else -}}
                         {{/* text line: trim trailing spaces, replace quotes then dashes */}}
                         {{- $lineClean := replaceRE ` +$` "" $line -}}
+                        {{- if $ru -}}
                         {{- $lineClean = replaceRE `(^|[\s\(—])"` "$1«" $lineClean -}}{{/* opening quotes */}}
                         {{- $lineClean = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $lineClean -}}{{/* closing quotes before space/punctuation */}}
                         {{- $lineClean = replaceRE `([!?;:\.…,])"` "$1»" $lineClean -}}{{/* closing quotes after punctuation */}}
                         {{- $lineClean = replaceRE `^- ` "— " $lineClean -}}{{/* dash at line start */}}
                         {{- $lineClean = replaceRE `, - ` ", — " $lineClean -}}{{/* dash after comma */}}
                         {{- $lineClean = replaceRE ` - ` "&nbsp;— " $lineClean -}}
+                        {{- end -}}
                         {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                         {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                         {{- $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) -}}

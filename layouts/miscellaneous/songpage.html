@@ -75,67 +75,7 @@
                     </div>
 {{- partial "song.html" (dict "page" . "info" $info) -}}
                     <noscript>Страница требует включённого javascript.</noscript>
-{{- $songBooks := dict "data" (index $songData.books $info.id | default slice) }}
-{{- $bookRows := slice }}
-{{- range $songBooks.data }}
-	{{- $book := .books_id }}
-	{{- $bookRows = $bookRows | append (dict "id" $book.id "name" $book.name "rangeYears" $book.range_years "page" .page) }}
-{{- end }}
-{{- $bookRows = sort $bookRows "page" }}
-{{- $songAlbums := dict "data" (index $songData.albums $info.id | default slice) }}
-{{- $albumRows := slice }}
-{{- range $songAlbums.data }}
-	{{- $set := .sets_id }}
-	{{- $format := "" }}
-	{{- with $set.format }}{{ $format = . }}{{ end }}
-	{{- $perfYear := "" }}
-	{{- with .perfs_id.events_id.year }}{{ $perfYear = . }}{{ end }}
-	{{- $albumRows = $albumRows | append (dict "id" $set.id "title" $set.title "albumYear" $set.year "format" $format "isStudio" $set.is_studio "isLive" $set.is_live "perfYear" $perfYear) }}
-{{- end }}
-{{- $cdRows := slice }}
-{{- $mp3Rows := slice }}
-{{- $otherRows := slice }}
-{{- range $albumRows }}
-	{{- if eq .format "cd" }}
-		{{- $cdRows = $cdRows | append . }}
-	{{- else if eq .format "mp3" }}
-		{{- $mp3Rows = $mp3Rows | append . }}
-	{{- else }}
-		{{- $otherRows = $otherRows | append . }}
-	{{- end }}
-{{- end }}
-{{- $cdStudioRows := slice }}
-{{- $cdLiveRows := slice }}
-{{- $cdOtherRows := slice }}
-{{- range $cdRows }}
-	{{- if eq .isStudio true }}
-		{{- $cdStudioRows = $cdStudioRows | append . }}
-	{{- else if eq .isLive true }}
-		{{- $cdLiveRows = $cdLiveRows | append . }}
-	{{- else }}
-		{{- $cdOtherRows = $cdOtherRows | append . }}
-	{{- end }}
-{{- end }}
-{{- $cdStudioRows = sort $cdStudioRows "albumYear" "desc" }}
-{{- $cdLiveRows = sort $cdLiveRows "albumYear" "desc" }}
-{{- $mp3Rows = sort $mp3Rows "albumYear" "desc" }}
-{{- $orderedAlbumRows := slice }}
-{{- range $cdStudioRows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
-{{- range $cdLiveRows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
-{{- range $cdOtherRows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
-{{- range $mp3Rows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
-{{- range $otherRows }}{{ $orderedAlbumRows = $orderedAlbumRows | append . }}{{ end }}
-{{- if or $bookRows $orderedAlbumRows }}
-                    <div id="song-albums">
-{{- range $bookRows }}
-                        <p><a href="{{ printf "Books/%s.html" .id | relURL }}"><span class="{{ .id }}"></span></a> <a href="{{ printf "Books/%s.html" .id | relURL }}">{{ .name }}</a>. ({{ .rangeYears }}). Стр. {{ .page }}</p>
-{{- end }}
-{{- range $orderedAlbumRows }}
-                        {{- $f := partial "disk-format.html" .format }}
-                        <p><a href="{{ partial "set-url.html" (dict "id" .id "format" .format) | relURL }}" title="{{ $f.full }}">{{ partial "disk-format-icon.html" $f.key }}</a> <a href="{{ partial "set-url.html" (dict "id" .id "format" .format) | relURL }}">{{ .title }}</a>{{ with .perfYear }} <span class="perf-source">(запись {{ . }} года)</span>{{ end }}</p>
-{{- end }}
-                    </div>
-{{- end }}
+{{- partial "song-albums.html" (dict "id" $info.id) }}
         </div>
 </main>
 
