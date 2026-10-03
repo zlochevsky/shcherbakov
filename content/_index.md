@@ -9,6 +9,7 @@
 <div class="abstract">
 <p>Михаил Константинович ЩЕРБАКОВ родился в&nbsp;городе Обнинске Калужской области в&nbsp;1963&nbsp;г. Окончил филологический факультет Московского университета. Живет в&nbsp;Москве. Пишет песни с&nbsp;1978 года. Выступает с&nbsp;концертами. Выпустил 27&nbsp;дисков, аудиокассеты, книги песен и&nbsp;стихов. <a href="bio.html" class="more">Более подробно о Михаиле Щербакове.</a></p>
 <p><a href="praises.html">Отзывы и критика</a></p>
+<p><a href="translations.html">Каталог переводов</a>{{< lastmod "translations" >}}</p>
 </div>
 <div class="frontimage"><img src="Images/main22.jpg" /></div>
 <div class="collections">

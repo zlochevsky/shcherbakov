@@ -5,10 +5,12 @@
        Перевод (dict):
          id, lang (dict id, name_ru, name_native, dir, sort), title, incipit, display (title, иначе incipit, иначе «* * *»),
          year, isNew, note, source, dateCreated, href (адрес страницы перевода от корня),
-         translators (slice of dict id, ru — имя для русских страниц, native — на языке переводов, hasPage),
-         work (dict id, name — заголовок как в каталоге, href, year — год создания песни),
+         translators (slice of dict id, ru — имя для русских страниц, native — на языке переводов, lat, all — все
+                      написания через пробел (для фильтра), hasPage),
+         work (dict id, name — заголовок как в каталоге, href, year — год создания песни, fincipit),
          recordings (slice). */ -}}
 {{- $works := partialCached "works-by-id.html" "works-by-id" -}}
+{{- $meta := partialCached "song-meta.html" "song-meta" -}}
 {{- $songYear := dict -}}
 {{- range (partial "directus.html").data -}}
 	{{- $id := .id -}}
@@ -26,6 +28,8 @@
 			{{- $trs = $trs | append (dict
 				"id" .id
 				"ru" (.name_ru | default .name_lat)
+				"lat" (.name_lat | default "")
+				"all" (delimit (slice (.name_ru | default "") (.name_lat | default "") (.name_native | default "")) " ")
 				"native" (.name_native | default .name_lat)
 				"hasPage" (gt (len (strings.TrimSpace (.description | default ""))) 0)) -}}
 		{{- end -}}
@@ -44,7 +48,8 @@
 		"dateCreated" (.date_created | default "")
 		"href" (printf "%s/%s.html" ($lang.id | default "xx") .id)
 		"translators" $trs
-		"work" (dict "id" $wid "name" ($w.name | default "") "href" ($w.href | default "") "year" (index $songYear $wid | default 0))
+		"work" (dict "id" $wid "name" ($w.name | default "") "href" ($w.href | default "") "year" (index $songYear $wid | default 0)
+			"fincipit" ((index $meta $wid).fincipit | default ""))
 		"recordings" (.recordings | default slice) -}}
 	{{- $list = $list | append $t -}}
 	{{- $byId = merge $byId (dict .id $t) -}}

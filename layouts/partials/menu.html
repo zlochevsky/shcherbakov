@@ -85,14 +85,14 @@ Renders a menu for the given menu ID.
        If set in site config, ("frontmatter" > "lastmod" > [lastmod,:fileModTime]),
        update timestamp is taken from "lastmod" site config param in the following order:
        1. "lastmod" param of the actual page; 2. actual page file's modification time.
-       If "dynamicLastmod" is set to a Directus collection name, the date is instead
+       If "dynamicLastmod" is set to a Directus collection name (works, translations), the date is instead
        the most recent date_created among that collection's items (eg. last song added).
 */}}
       {{- $isDateToPrint := .Params.isDateToPrint }}
       {{- $dynamicLastmod := .Params.dynamicLastmod }}
       {{- if eq $isDateToPrint "yes" }}
-        {{- if eq $dynamicLastmod "works" }}
-          {{- $latest := partial "directus-lastmod.html" }}
+        {{- with $dynamicLastmod }}
+          {{- $latest := partial "directus-lastmod.html" . }}
           {{- if $latest.data }}
             {{- with index $latest.data 0 }} <span class="datum">{{ .date_created | time.Format "02.01.06" }}</span>{{ end }}
           {{- end }}

@@ -1,0 +1,114 @@
+{{- /* Каталог переводов translations.html (русская страница, по образцу «Каталога песен»): одна строка — один
+       перевод: метка «new», значок языка (код), название или первая строка перевода с годом, переводчик (по-русски,
+       иначе как есть), название оригинала с годом песни. Фильтр одним полем (по оригиналу, переводу, переводчику во
+       всех написаниях, языку — русское слово, код, самоназвание — и годам); сортировка по году песни, оригиналу,
+       языку. Адрес с #<код языка> сразу фильтрует по языку (туда ведут старые fans/utf/*.html). */ -}}
+{{- $items := (partialCached "translations-data.html" "translations-data").list -}}
+{{- $langs := dict -}}
+{{- range $items }}{{ $langs = merge $langs (dict .lang.id .lang.name_ru) }}{{ end -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<title>{{ .Title }}</title>
+<style>
+	{{- with resources.Get "css/common.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
+	{{ with resources.Get "css/catalogue.css" }}
+		{{ with . | resources.ExecuteAsTemplate "css/catalogue.css" $ }}
+			{{ .Content | safeCSS }}
+		{{ end }}
+	{{ end }}
+	{{ with resources.Get "css/translations.css" }}
+		{{ .Content | safeCSS }}
+	{{ end }}
+</style>
+{{ partialCached "head/js.html" . }}
+</head>
+<body>
+<header>
+<h1>{{ .Title }}</h1>
+{{- with .Params.subtitle }}<h2>{{ . }}</h2>{{ end }}
+{{- partial "burger.html" }}
+{{- partial "menu.html" (dict "menuID" "trnheadermenu" "page" . "navClass" "top-menu") }}
+</header>
+<main>
+<div>
+	<div class="wrapper">
+		<div>
+			<div class="search js-only centertext">
+				Задать фильтр:
+				<input type="text" id="search" placeholder="песня, перевод, переводчик, язык, год..." autofocus>
+				<button id="clear-search">сброс</button> &emsp; &emsp;
+				Сортировать вывод:
+				<button data-sort="song" class="active">по годам песен</button>
+				<button data-sort="orig">по оригиналу</button>
+				<button data-sort="lang">по языкам</button>
+			</div>
+<ul id="trlist">
+{{- range $i, $t := sort $items "work.year" }}
+	{{- $trRu := slice }}{{ $trAll := slice }}
+	{{- range .translators }}{{ $trRu = $trRu | append .ru }}{{ $trAll = $trAll | append .all }}{{ end }}
+	{{- $search := delimit (slice .work.name .work.fincipit .display .incipit (delimit $trAll " ") .lang.id .lang.name_ru .lang.name_native (string (.year | default "")) (string .work.year)) " " }}
+	<li class="tr-entry" data-i="{{ $i }}" data-song="{{ printf "%04d" (int .work.year) }}" data-orig="{{ .work.name | lower }}" data-lang="{{ printf "%02d-%s" (int .lang.sort) .lang.id }}" data-search="{{ $search }}">
+		<span class="tr-new">{{ if .isNew }}<span class="new" data-balloon="новое" data-balloon-pos="up"></span>{{ end }}</span>
+		<span class="lang-badge" data-balloon="{{ .lang.name_ru }} ({{ .lang.name_native }})" data-balloon-pos="up">{{ .lang.id }}</span>
+		<span class="entry">
+			<a href="{{ .href | relURL }}" lang="{{ .lang.id }}" dir="auto">{{ .display }}</a>{{ with .year }} <span class="year">{{ . }}</span>{{ end }}
+			<span class="tr-translator">— {{ delimit $trRu ", " }}</span>
+			<span class="tr-original">— {{ with .work.href }}<a href="{{ . | relURL }}">{{ $t.work.name }}</a>{{ else }}{{ $t.work.name }}{{ end }}{{ with .work.year }} <span class="year">{{ . }}</span>{{ end }}</span>
+		</span>
+	</li>
+{{- end }}
+</ul>
+		</div>
+	</div>
+</div>
+</main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  for (const e of document.querySelectorAll(".js-only")) e.classList.remove("js-only");
+  const list = document.getElementById("trlist");
+  const rows = Array.from(list.children);
+  const search = document.getElementById("search");
+  const langs = {{ $langs | jsonify | safeJS }};
+
+  const normalize = text => text.toLowerCase().trim().normalize("NFD").replace(/\p{Diacritic}/gu, "").replace(/ё/gu, "е");
+  rows.forEach(r => { r.dataset.norm = normalize(`${r.dataset.search} ${r.textContent}`); });
+
+  search.addEventListener("input", () => {
+    const terms = normalize(search.value).split(/\s+/).filter(Boolean);
+    rows.forEach(r => { r.hidden = !terms.every(t => r.dataset.norm.includes(t)); });
+  });
+  document.getElementById("clear-search").addEventListener("click", () => {
+    search.value = ""; search.focus(); rows.forEach(r => { r.hidden = false; });
+  });
+
+  // ключи сортировки: год песни → оригинал → язык → исходный порядок
+  const keys = { song: ["song", "orig", "lang"], orig: ["orig", "song", "lang"], lang: ["lang", "song", "orig"] };
+  document.querySelectorAll("[data-sort]").forEach(btn => btn.addEventListener("click", () => {
+    const k = keys[btn.dataset.sort];
+    rows.sort((a, b) => {
+      for (const f of k) { const c = a.dataset[f].localeCompare(b.dataset[f], "ru"); if (c) return c; }
+      return a.dataset.i - b.dataset.i;
+    }).forEach(r => list.appendChild(r));
+    document.querySelectorAll("[data-sort]").forEach(b => b.classList.toggle("active", b === btn));
+  }));
+
+  // #<код языка> — фильтр по языку (русское название языка в поле фильтра)
+  const applyHash = () => {
+    const code = decodeURIComponent(location.hash.slice(1));
+    if (langs[code]) { search.value = langs[code]; search.dispatchEvent(new Event("input")); }
+  };
+  window.addEventListener("hashchange", applyHash);
+  // pageshow: браузер мог восстановить значение поля при возврате назад
+  window.addEventListener("pageshow", () => {
+    if (location.hash) applyHash(); else search.dispatchEvent(new Event("input"));
+  });
+});
+</script>
+</body>
+</html>

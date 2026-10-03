@@ -2,14 +2,15 @@
 
 /* Страница перевода: навигация как на языковой странице (правила basic.css; common.css её центрирует) */
 .translation-page .cornernav {
-	text-align: left;
+	text-align: start;
 	padding: 0;
 	margin: 40px 0 1.5em;
 	line-height: 130%;
 }
 
 .translation-page .cornernav > li {
-	margin: .25em 0 0 10px;
+	margin: .25em 0 0;
+	margin-inline-start: 10px;
 }
 
 @media only screen and (width <= 70em) {
@@ -19,6 +20,7 @@
 	}
 	.translation-page .cornernav > li {
 		margin: .25em 0 0 0;
+		margin-inline-start: 0;
 	}
 }
 
@@ -119,4 +121,54 @@
 .lang-mark {
 	font-size: .85em;
 	color: #667099;
+}
+
+/* Пункт меню языка, у которого ещё нет страницы */
+.nav-placeholder {
+	color: #999999;
+}
+
+/* Каталог переводов (translations.html) */
+#trlist {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+#trlist > li.tr-entry[hidden] {
+	display: none;
+}
+
+#trlist > li.tr-entry {
+	display: grid;
+	grid-template-columns: 22px 2.6em 1fr;
+	gap: 0 .4em;
+	align-items: baseline;
+	margin: .35em 0;
+}
+
+#trlist .lang-badge {
+	display: inline-block;
+	text-align: center;
+	font: .75em/1.6 sans-serif;
+	text-transform: uppercase;
+	color: #667099;
+	border: 1px solid #b8bccf;
+	border-radius: 3px;
+}
+
+#trlist .tr-translator {
+	font-style: italic;
+}
+
+#trlist .tr-original,
+#trlist .year {
+	color: #667099;
+}
+
+#trlist .tr-original a {
+	color: inherit;
+}
+
+[data-sort].active {
+	border-width: 3px;
 }

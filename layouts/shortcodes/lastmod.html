@@ -1,0 +1,5 @@
+{{- /* Дата последнего добавления в коллекцию Directus: {{< lastmod "translations" >}} → « <span class="datum">дд.мм.гг</span>»;
+       ничего, если у записей коллекции нет date_created. */ -}}
+{{- with partial "directus-lastmod.html" (.Get 0) -}}
+	{{- with .data }}{{ with index . 0 }} <span class="datum">{{ .date_created | time.Format "02.01.06" }}</span>{{ end }}{{ end -}}
+{{- end -}}
