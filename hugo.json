@@ -9,6 +9,11 @@
 		   "target": {"path": "{/texts/**}"},
 		   "type": "miscellaneous",
 		   "layout": "songpage"
+	   },
+	   {
+		   "target": {"path": "{/en/**,/eo/**,/de/**,/fr/**,/uk/**,/he/**}"},
+		   "type": "miscellaneous",
+		   "layout": "translation"
 	   }
    ],
    "caches": {
@@ -97,12 +102,32 @@
 				}
 			},
 			{
-				"name": "English",
+				"name": "Языки",
+				"identifier": "languages",
 				"weight": 55,
 			        "pre": "",
 				"post": "",
 				"params": {
-					"isDateToPrint": "no"
+					"isDateToPrint": "no",
+					"dropdown": "yes"
+				}
+			},
+			{
+				"name": "English",
+				"pageRef": "en/en-index.md",
+				"parent": "languages",
+				"weight": 10,
+				"params": {
+					"lang": "en"
+				}
+			},
+			{
+				"name": "Deutsch",
+				"pageRef": "de/de-index.md",
+				"parent": "languages",
+				"weight": 20,
+				"params": {
+					"lang": "de"
 				}
 			},
 			{

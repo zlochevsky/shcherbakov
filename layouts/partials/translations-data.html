@@ -1,0 +1,53 @@
+{{- /* Справочник переводов (вызывать через partialCached "translations-data.html" "translations-data").
+       Реестр — Directus `translations`, текст — content/<язык>/<id>.md (имя файла = id).
+       Возвращает dict:
+         "list" — все опубликованные переводы (slice of dict), "byId" — те же по id, "byWork" — slice по id песни.
+       Перевод (dict):
+         id, lang (dict id, name_ru, name_native, dir, sort), title, incipit, display (title, иначе incipit, иначе «* * *»),
+         year, isNew, note, source, dateCreated, href (адрес страницы перевода от корня),
+         translators (slice of dict id, ru — имя для русских страниц, native — на языке переводов, hasPage),
+         work (dict id, name — заголовок как в каталоге, href, year — год создания песни),
+         recordings (slice). */ -}}
+{{- $works := partialCached "works-by-id.html" "works-by-id" -}}
+{{- $songYear := dict -}}
+{{- range (partial "directus.html").data -}}
+	{{- $id := .id -}}
+	{{- with .date }}{{ $songYear = merge $songYear (dict $id (math.Abs . | int)) }}{{ end -}}
+{{- end -}}
+{{- $list := slice -}}
+{{- $byId := dict -}}
+{{- $byWork := dict -}}
+{{- range (partial "directus-translations.html").data -}}
+	{{- $wid := .works_id.id | default "" -}}
+	{{- $w := index $works $wid | default dict -}}
+	{{- $trs := slice -}}
+	{{- range sort (.translators | default slice) "num" -}}
+		{{- with .translators_id -}}
+			{{- $trs = $trs | append (dict
+				"id" .id
+				"ru" (.name_ru | default .name_lat)
+				"native" (.name_native | default .name_lat)
+				"hasPage" (gt (len (strings.TrimSpace (.description | default ""))) 0)) -}}
+		{{- end -}}
+	{{- end -}}
+	{{- $lang := .languages_id | default dict -}}
+	{{- $t := dict
+		"id" .id
+		"lang" $lang
+		"title" (.title | default "")
+		"incipit" (.incipit | default "")
+		"display" (.title | default .incipit | default "* * *")
+		"year" .year
+		"isNew" (.is_new | default false)
+		"note" (.note | default "")
+		"source" (.source | default "")
+		"dateCreated" (.date_created | default "")
+		"href" (printf "%s/%s.html" ($lang.id | default "xx") .id)
+		"translators" $trs
+		"work" (dict "id" $wid "name" ($w.name | default "") "href" ($w.href | default "") "year" (index $songYear $wid | default 0))
+		"recordings" (.recordings | default slice) -}}
+	{{- $list = $list | append $t -}}
+	{{- $byId = merge $byId (dict .id $t) -}}
+	{{- $byWork = merge $byWork (dict $wid ((index $byWork $wid | default slice) | append $t)) -}}
+{{- end -}}
+{{- return dict "list" $list "byId" $byId "byWork" $byWork -}}

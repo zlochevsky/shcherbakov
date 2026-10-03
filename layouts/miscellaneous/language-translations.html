@@ -1,0 +1,66 @@
+{{- /* Список переводов на язык /<язык>/translations.html (из Directus, translations-data.html) с именем переводчика
+       на языке переводов. Меню, подписи и признак сортировки (params.sortable) — с главной языковой страницы
+       (content/<язык>/<язык>-index.md). */ -}}
+{{- $lang := .Params.lang -}}
+{{- $main := site.GetPage (printf "/%s/%s-index" $lang $lang) -}}
+{{- $labels := $main.Params.labels | default dict -}}
+{{- $langData := dict -}}
+{{- $items := slice -}}
+{{- range (partialCached "translations-data.html" "translations-data").list -}}
+	{{- if eq .lang.id $lang }}{{ $items = $items | append . }}{{ $langData = .lang }}{{ end -}}
+{{- end -}}
+{{- $items = sort $items "work.year" -}}
+<!DOCTYPE html>
+<html lang="{{ $lang }}" dir="{{ $langData.dir | default "ltr" }}">
+<head>
+  {{ partial "headbasic.html" . }}
+<style>
+{{- with resources.Get "css/translations.css" }}
+	{{ .Content | safeCSS -}}
+{{ end }}
+</style>
+</head>
+<body class="language-page">
+<span id="top"></span>
+{{ partial "language-nav.html" (dict "nav" $main.Params.nav "page" .) }}
+<header>
+<h1>{{ $labels.translationsTitle | default .Title }}</h1>
+</header>
+<main>
+<section class="wrapper">
+{{- if $main.Params.sortable }}
+<p class="sort-buttons" data-pagefind-ignore>
+	<button type="button" data-sort="song" class="active">{{ $labels.sortSongYear }}</button>
+	<button type="button" data-sort="orig">{{ $labels.sortOriginal }}</button>
+	<button type="button" data-sort="title">{{ $labels.sortTranslation }}</button>
+	<button type="button" data-sort="translator">{{ $labels.sortTranslator }}</button>
+</p>
+{{- end }}
+<ul class="translation-list">
+{{- range $i, $t := $items }}
+	{{- $tr := slice }}{{ range .translators }}{{ $tr = $tr | append .native }}{{ end }}
+	<li data-song="{{ printf "%04d-%s" (int .work.year) .work.id }}" data-orig="{{ .work.name | lower }}" data-title="{{ .display | lower }}" data-translator="{{ delimit $tr ", " | lower }}" data-i="{{ $i }}">
+		<a href="{{ .href | relURL }}" class="tr-title">{{ .display }}</a>{{ with .year }}, {{ . }}{{ end }}
+		<span class="tr-translator">— {{ delimit $tr ", " }}</span><br>
+		<span class="tr-original" lang="ru">{{ with .work.href }}<a href="{{ . | relURL }}">{{ $t.work.name }}</a>{{ else }}{{ $t.work.name }}{{ end }}{{ with .work.year }} ({{ . }}){{ end }}</span>
+	</li>
+{{- end }}
+</ul>
+<p class="to-top">[<a href="#top">↑</a>]</p>
+</section>
+</main>
+{{ partial "language-nav.html" (dict "nav" $main.Params.nav "page" .) }}
+{{- if $main.Params.sortable }}
+<script>
+document.querySelectorAll('.sort-buttons button').forEach(btn => btn.addEventListener('click', () => {
+	const key = btn.dataset.sort;
+	const list = document.querySelector('.translation-list');
+	const items = Array.from(list.children);
+	items.sort((a, b) => (a.dataset[key] || '').localeCompare(b.dataset[key] || '') || a.dataset.i - b.dataset.i);
+	items.forEach(li => list.appendChild(li));
+	document.querySelectorAll('.sort-buttons button').forEach(b => b.classList.toggle('active', b === btn));
+}));
+</script>
+{{- end }}
+</body>
+</html>

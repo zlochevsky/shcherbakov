@@ -1,0 +1,24 @@
+{{ $url := printf "%s%s?%s&%s&%s&%s"
+		site.Params.directus.url
+		"items/translations/"
+		site.Params.directus.token
+		"limit=-1"
+		"fields=id,title,incipit,year,is_new,note,source,date_created,languages_id.id,languages_id.name_ru,languages_id.name_native,languages_id.dir,languages_id.sort,works_id.id,translators.num,translators.translators_id.id,translators.translators_id.name_lat,translators.translators_id.name_ru,translators.translators_id.name_native,translators.translators_id.description,recordings.id,recordings.year,recordings.note,recordings.performers.num,recordings.performers.role,recordings.performers.performers_id.name,recordings.links.url,recordings.links.label,recordings.links.num,recordings.releases_id.title"
+		"filter[status][_eq]=published&deep[recordings][_filter][status][_eq]=published&sort=id"
+		}}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+	{{ with .Err }}
+		{{ errorf "Unable to get remote resource %q" $url }}
+	{{ else with .Value }}
+		{{ with try ( . | transform.Unmarshal ) }}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else with .Value }}
+				{{ $data = . }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ return $data }}

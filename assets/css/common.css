@@ -130,10 +130,20 @@ nav details[open] > summary::after {
 	content: "▶";
 	margin-left: .3em;
 }
+/* Раскрывающийся список внутри ячейки (выбор языка, params.dropdown в hugo.json) */
+nav details.dropdown .dropdown-list {
+	list-style: none;
+	margin: .3em 0 0;
+	padding: 0;
+	text-align: left;
+}
+nav details.dropdown .dropdown-list li {
+	margin: .2em 0 0 .8em;
+}
 nav > div:has(.toggle-child) {
 	display: none;
 }
-nav.bottom-menu > div:has(> details[open]) ~ div:has(.toggle-child) {
+nav.bottom-menu > div:has(> details[open]:not(.dropdown)) ~ div:has(.toggle-child) {
 	display: table-cell;
 }
 .bordered.toggle-child {
@@ -181,7 +191,8 @@ nav.bottom-menu > div:has(> details[open]) ~ div:has(.toggle-child) {
         footer nav.bottom-menu {
                 display: none;
         }
-        nav.top-menu > div:has(> details[open]) ~ div:has(.toggle-child) {
+        /* :not(.dropdown) — открытый список языков не должен раскрывать пункты «Фан-клуба» */
+        nav.top-menu > div:has(> details[open]:not(.dropdown)) ~ div:has(.toggle-child) {
                 display: block;
         }
         .short-name {

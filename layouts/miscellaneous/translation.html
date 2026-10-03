@@ -1,0 +1,138 @@
+{{- /* Страница перевода content/<язык>/<id>.md (имя файла = translations.id в Directus; текст — тело файла).
+       Метаданные — из Directus (translations-data.html); подписи и меню — из params языковой страницы (content/<язык>/<язык>-index.md).
+       «Показать оригинал»: оригинал (страница песни) — справа на десктопе, ниже на мобильном; включает режим «текст»
+       (без записи в cookie), «скрыть» возвращает сохранённый режим; режимы переключаются у обоих текстов. Под текстом — исполнения перевода (recordings). */ -}}
+{{- $id := .File.ContentBaseName -}}
+{{- $t := index (partialCached "translations-data.html" "translations-data").byId $id | default dict -}}
+{{- $langId := index (split (strings.Trim .File.Dir "/") "/") 0 -}}
+{{- $sec := site.GetPage (printf "/%s/%s-index" $langId $langId) -}}
+{{- $labels := $sec.Params.labels | default dict -}}
+{{- $lang := $t.lang.id | default $langId -}}
+{{- $tr := slice }}{{ range $t.translators }}{{ $tr = $tr | append .native }}{{ end -}}
+{{- $trInfo := dict "id" $id "h1" ($t.title | default "") "title" ($t.display | default .Title) "subtitle" ($t.note | default "") -}}
+{{- $orig := "" -}}
+{{- $origInfo := dict -}}
+{{- with $t.work.href -}}
+	{{- with site.GetPage (strings.TrimSuffix ".html" .) -}}
+		{{- $orig = . -}}
+		{{- $origInfo = partial "song-page-info.html" . -}}
+	{{- end -}}
+{{- end -}}
+<!DOCTYPE html>
+<html lang="{{ $lang }}" dir="{{ $t.lang.dir | default "ltr" }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<title>{{ $t.display | default .Title }}{{ with $tr }} — {{ delimit . ", " }}{{ end }}</title>
+{{- with $t.incipit }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+<style>
+    .view-container { display: none; }
+    .viewtype-source { display: block; }
+    #settings { display: none; }
+</style>
+{{ with resources.Get "css/common.css" -}}
+	<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end -}}
+{{ with resources.Get "css/songpage.css" -}}
+	<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{- end }}
+{{ with resources.Get "css/catalogue.css" -}}
+	{{ with . | resources.ExecuteAsTemplate "css/catalogue.css" $ -}}
+		<link rel="stylesheet" href="{{ .RelPermalink }}" />
+	{{- end }}
+{{- end }}
+{{ with resources.Get "css/transpose.css" -}}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{- end }}
+{{ with resources.Get "css/translations.css" -}}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{- end }}
+{{ with resources.Get "js/viewtype.js" -}}
+    <script type="text/javascript" src="{{ .RelPermalink }}"></script>
+{{ end }}
+</head>
+<body class="translation-page">
+<span id="top"></span>
+{{ partial "language-nav.html" (dict "nav" $sec.Params.nav "page" .) }}
+<main>
+<div class="wrapper">
+<p class="translation-meta">
+	{{- with $t.work.name }}{{ $labels.original | default "Original" }}: <a href="{{ $t.work.href | relURL }}" lang="ru">{{ . }}</a>{{ with $t.work.year }} ({{ . }}){{ end }}.<br>{{ end }}
+	{{ $labels.translatedBy | default "Translated by" }} {{ delimit $tr ", " }}{{ with $t.year }}, {{ . }}{{ end }}.
+	{{- with $t.source }} <a href="{{ . }}">{{ . | strings.TrimPrefix "https://" | strings.TrimPrefix "http://" }}</a>{{ end }}
+</p>
+<div id="settings" data-pagefind-ignore>
+	<button id="text" class="button-viewtype">{{ $labels.text | default "текст" }}</button>
+	<div class="button-group">
+		<span class="button-label">{{ $labels.chords | default "аккорды" }}</span>
+		<button id="above" class="button-viewtype">{{ $labels.above | default "над строкой" }}</button>
+		<button id="side" class="button-viewtype">{{ $labels.side | default "справа" }}</button>
+	</div>
+	<button id="source" class="button-viewtype">{{ $labels.source | default "исходник" }}</button>
+	<button id="transposer" class="button-viewtype">{{ $labels.transpose | default "траспонировать" }}</button>
+	<button id="stress" class="button-viewtype">{{ $labels.stress | default "моменты" }}</button>
+	<div class="transpose-wrapper"></div>
+	{{- with $orig }}
+	<button id="show-original" class="button-viewtype" type="button" aria-expanded="false" data-show="{{ $labels.showOriginal | default "показать оригинал" }}" data-hide="{{ $labels.hideOriginal | default "скрыть оригинал" }}">{{ $labels.showOriginal | default "показать оригинал" }}</button>
+	{{- end }}
+</div>
+<div class="translation-pair">
+	<div class="translation-text">
+{{- partial "song.html" (dict "page" . "info" $trInfo "lang" $lang) -}}
+	</div>
+	{{- with $orig }}
+	<div class="original-text" id="original-text" lang="ru" dir="ltr" hidden>
+{{- partial "song.html" (dict "page" . "info" $origInfo "rebase" true) -}}
+	</div>
+	{{- end }}
+</div>
+<noscript>JavaScript is required for this page.</noscript>
+{{- with $t.work.id }}{{ partial "song-albums.html" (dict "id" . "labels" $labels) }}{{ end }}
+{{- with $t.recordings }}
+<section class="translation-recordings">
+<h2>{{ $labels.performances | default "Исполнения" }}</h2>
+<ul>
+{{- range . }}
+	{{- $names := slice }}{{ range sort (.performers | default slice) "num" }}{{ with .performers_id.name }}{{ $names = $names | append . }}{{ end }}{{ end }}
+	<li>{{ delimit $names ", " }}{{ with .year }}, {{ . }}{{ end }}{{ with .releases_id.title }} — «{{ . }}»{{ end }}{{ with .note }} ({{ . | safeHTML }}){{ end }}
+		{{- range sort (.links | default slice) "num" }} — <a href="{{ .url }}">{{ .label | default .url }}</a>{{ end }}</li>
+{{- end }}
+</ul>
+</section>
+{{- end }}
+</div>
+</main>
+{{ partial "language-nav.html" (dict "nav" $sec.Params.nav "page" .) }}
+{{- with .Params.htmlComment }}
+{{ printf "<!--%s-->" . | safeHTML }}
+{{- end }}
+{{ partial "head/songpage.js.html" . }}
+<script>
+(() => {
+	const btn = document.getElementById('show-original');
+	const orig = document.getElementById('original-text');
+	if (!btn || !orig) return;
+	const toggle = (show, scroll) => {
+		orig.hidden = !show;
+		document.querySelector('.translation-pair').classList.toggle('with-original', show);
+		btn.classList.toggle('active', show);
+		btn.setAttribute('aria-expanded', show);
+		btn.textContent = show ? btn.dataset.hide : btn.dataset.show;
+		// рядом с оригиналом — только текст: аккорды сбивают строки и мешают сравнению.
+		// Сохранённый выбор режима (cookie) не меняем; при скрытии оригинала он возвращается.
+		applyViewType(show ? 'text' : getViewType());
+		if (show && scroll && window.matchMedia('(max-width: 60em)').matches) {
+			orig.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+	};
+	btn.addEventListener('click', () => toggle(orig.hidden, true));
+	// адрес с #original открывает страницу сразу с оригиналом
+	// после обработчика viewtype.js (он подключён в <head> и применяет сохранённый режим первым)
+	if (location.hash === '#original') document.addEventListener('DOMContentLoaded', () => toggle(true, false));
+})();
+</script>
+</body>
+</html>

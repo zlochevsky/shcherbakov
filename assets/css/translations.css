@@ -1,0 +1,122 @@
+/* Слой переводов: страница перевода, языковая страница */
+
+/* Страница перевода: навигация как на языковой странице (правила basic.css; common.css её центрирует) */
+.translation-page .cornernav {
+	text-align: left;
+	padding: 0;
+	margin: 40px 0 1.5em;
+	line-height: 130%;
+}
+
+.translation-page .cornernav > li {
+	margin: .25em 0 0 10px;
+}
+
+@media only screen and (width <= 70em) {
+	.translation-page .cornernav {
+		padding: 0 12px;
+		margin-top: .5em;
+	}
+	.translation-page .cornernav > li {
+		margin: .25em 0 0 0;
+	}
+}
+
+/* Страница перевода: оригинал справа (десктоп) или ниже (мобильный) */
+.translation-meta {
+	padding-left: 1em;
+	font-size: .9em;
+	color: #667099;
+}
+
+.translation-note {
+	padding-left: 0;
+	font-style: italic;
+}
+
+.translation-pair.with-original {
+	display: grid;
+	/* перевод — по своей ширине (не больше половины), оригинал с аккордами — остальное; minmax(0, …) не даёт широкому <pre> раздвинуть страницу */
+	grid-template-columns: fit-content(50%) minmax(0, 1fr);
+	gap: 0 3em;
+	align-items: start;
+}
+
+.translation-pair > div {
+	min-width: 0;
+	overflow-x: auto;
+}
+
+.original-text {
+	border-left: 1px solid #dcd9b8;
+	padding-left: 2em;
+}
+
+@media only screen and (width <= 60em) {
+	.translation-pair.with-original {
+		display: block;
+	}
+	.original-text {
+		border-left: none;
+		border-top: 1px solid #dcd9b8;
+		padding-left: 0;
+		margin-top: 2em;
+		padding-top: 1em;
+	}
+}
+
+.translation-recordings ul {
+	padding-inline-start: 1.2em;
+}
+
+/* Языковая страница */
+.language-page .portrait {
+	float: right;
+	margin: 0 0 1em 1.5em;
+	max-width: 40%;
+	height: auto;
+}
+
+.language-text::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.translation-list {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.translation-list li {
+	margin: 0 0 .7em 0;
+}
+
+.translation-list .tr-translator {
+	font-style: italic;
+}
+
+.translation-list .tr-original {
+	font-size: .9em;
+	color: #667099;
+}
+
+.sort-buttons button {
+	font: inherit;
+	font-size: .9em;
+	margin: 0 .3em .3em 0;
+	padding: .2em .6em;
+	background: #ffffff;
+	border: 1px solid #999999;
+	cursor: pointer;
+}
+
+.sort-buttons button.active {
+	background: #dcd9b8;
+}
+
+/* Пометка «(in Russian)» у ссылок на русские страницы */
+.lang-mark {
+	font-size: .85em;
+	color: #667099;
+}

@@ -43,7 +43,21 @@ Renders a menu for the given menu ID.
       {{- $label = printf `<span class="full-name">%s</span><span class="short-name">%s</span>` $name . | safeHTML }}
     {{- end }}
     {{- $boxClass := printf "bordered%s%s" (cond (eq .Params.mobileOnly "yes") " mobile-only" "") (cond (eq .Params.toggleChild "yes") " toggle-child" "") }}
-    {{- if eq .Params.collapsible "yes" }}
+    {{- if eq .Params.dropdown "yes" }}
+{{- /* Раскрывающийся список внутри своей ячейки (выбор языка): дочерние пункты — вложенный <ul> в <details>,
+       не отдельные ячейки, как у collapsible; params.lang дочернего пункта — атрибут lang ссылки
+       (самоназвания языков). */}}
+    <div>
+      <details class="{{ $boxClass }} dropdown">
+        <summary>{{ .Pre | markdownify }}{{ $label }}{{ .Post | markdownify }}</summary>
+        <ul class="dropdown-list">
+        {{- range .Children }}
+          <li><a href="{{ .URL }}"{{ with .Params.lang }} lang="{{ . }}" dir="auto"{{ end }}>{{ .Name }}</a></li>
+        {{- end }}
+        </ul>
+      </details>
+    </div>
+    {{- else if eq .Params.collapsible "yes" }}
     <div>
       <details class="{{ $boxClass }}">
         <summary>{{ .Pre | markdownify }}{{ $label }}{{ .Post | markdownify }}</summary>
