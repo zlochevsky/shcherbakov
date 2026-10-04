@@ -48,11 +48,16 @@
          "sortTranslator": "by translator",
          "page": "P.",
          "recordedIn": "recorded in",
-         "inRussian": "in Russian"
+         "inRussian": "in Russian",
+         "language": "English",
+         "menu": "Menu",
+         "breadcrumbs": "Breadcrumb",
+         "top": "Top"
       },
       "sortable": true
    }
 }
+
 
 
 <img src="../Images/chanson_mks.jpg" width="198" height="174" alt="M. Shcherbakov" class="portrait">

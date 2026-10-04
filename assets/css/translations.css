@@ -1,34 +1,91 @@
-/* Слой переводов: страница перевода, языковая страница */
+/* Слой переводов: шапка страниц языка, страница перевода, языковая страница, каталог переводов */
 
-/* Страница перевода: навигация как на языковой странице (правила basic.css; common.css её центрирует) */
-.translation-page .cornernav {
-	text-align: start;
-	padding: 0;
-	margin: 40px 0 1.5em;
-	line-height: 130%;
+/* Раздел языков — светлее остального сайта: переопределение переменных палитры только для его страниц
+   (главная языка, список переводов, страница перевода); на светлых ячейках полосе крошек фон не нужен */
+.language-page,
+.translation-page {
+	--cell-bg: #eeeedd;
+	--crumbs-bg: transparent;
 }
 
-.translation-page .cornernav > li {
-	margin: .25em 0 0;
-	margin-inline-start: 10px;
+/* Шапка страниц языка (language-header.html): верхнее табличное меню раздела и строка крошек.
+   На странице перевода стол меню задаёт songpage.css; на главной языка и списке переводов (basic.css + common.css)
+   — правила ниже, те же, что в songpage.css. */
+.language-page nav.top-menu {
+	background-color: var(--cell-bg);
 }
 
+.language-page nav.top-menu > div {
+	text-align: center;
+}
+
+/* common.css (подключён ради меню, идёт после basic.css) на мобильном сбрасывает отступ main до 5px 0 —
+   возвращаем горизонтальный отступ basic.css, как у header */
 @media only screen and (width <= 70em) {
-	.translation-page .cornernav {
-		padding: 0 12px;
-		margin-top: .5em;
+	.language-page main {
+		padding-left: 12px;
+		padding-right: 12px;
 	}
-	.translation-page .cornernav > li {
-		margin: .25em 0 0 0;
-		margin-inline-start: 0;
+}
+
+@media only screen and (width > 70em) {
+	.language-page nav.top-menu {
+		display: table;
+		border-spacing: 5px;
 	}
+	.language-page nav.top-menu > div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+/* Пункт меню, у которого ещё нет страницы */
+nav.top-menu .nav-placeholder {
+	color: var(--subtle);
+}
+
+/* Крошки — полоса между шапкой (меню) и содержимым; разделители рисует CSS, читалка их не произносит */
+nav.breadcrumbs {
+	display: block;
+	background: var(--crumbs-bg);
+	border-bottom: 1px solid var(--crumbs-border);
+	padding: .4em 1em;
+	margin: 5px 0 1em;
+	text-align: start;
+	font-size: .9em;
+}
+
+nav.breadcrumbs ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav.breadcrumbs li {
+	display: inline;
+	margin: 0;
+}
+
+nav.breadcrumbs li + li::before {
+	content: "›";
+	margin: 0 .5em;
+	color: var(--subtle);
+}
+
+nav.breadcrumbs [aria-current] {
+	color: var(--muted);
+}
+
+.to-top {
+	padding: 0 1em;
+	text-align: start;
 }
 
 /* Страница перевода: оригинал справа (десктоп) или ниже (мобильный) */
 .translation-meta {
 	padding-left: 1em;
 	font-size: .9em;
-	color: #667099;
+	color: var(--muted);
 }
 
 .translation-note {
@@ -50,7 +107,7 @@
 }
 
 .original-text {
-	border-left: 1px solid #dcd9b8;
+	border-left: 1px solid var(--rule);
 	padding-left: 2em;
 }
 
@@ -60,7 +117,7 @@
 	}
 	.original-text {
 		border-left: none;
-		border-top: 1px solid #dcd9b8;
+		border-top: 1px solid var(--rule);
 		padding-left: 0;
 		margin-top: 2em;
 		padding-top: 1em;
@@ -92,15 +149,28 @@
 
 .translation-list li {
 	margin: 0 0 .7em 0;
+	color: var(--gray-text);
 }
 
 .translation-list .tr-translator {
 	font-style: italic;
 }
 
+/* Второстепенное — один уровень. На первой строке (год перевода, переводчик) — только цвет;
+   вторая строка (оригинал) — цвет и один шаг размера, заданный на контейнере: em считается от родителя,
+   у ссылки внутри он уменьшился бы второй раз */
+.translation-list .tr-year,
+.translation-list .tr-translator {
+	color: var(--muted);
+}
+
 .translation-list .tr-original {
 	font-size: .9em;
-	color: #667099;
+	color: var(--muted);
+}
+
+.translation-list .tr-original a {
+	color: inherit;
 }
 
 .sort-buttons button {
@@ -108,24 +178,19 @@
 	font-size: .9em;
 	margin: 0 .3em .3em 0;
 	padding: .2em .6em;
-	background: #ffffff;
-	border: 1px solid #999999;
+	background: var(--surface);
+	border: 1px solid var(--subtle);
 	cursor: pointer;
 }
 
 .sort-buttons button.active {
-	background: #dcd9b8;
+	background: var(--rule);
 }
 
 /* Пометка «(in Russian)» у ссылок на русские страницы */
 .lang-mark {
 	font-size: .85em;
-	color: #667099;
-}
-
-/* Пункт меню языка, у которого ещё нет страницы */
-.nav-placeholder {
-	color: #999999;
+	color: var(--muted);
 }
 
 /* Каталог переводов (translations.html) */
@@ -151,7 +216,7 @@
 	text-align: center;
 	font: .75em/1.6 sans-serif;
 	text-transform: uppercase;
-	color: #667099;
+	color: var(--muted);
 	border: 1px solid #b8bccf;
 	border-radius: 3px;
 }
@@ -162,7 +227,7 @@
 
 #trlist .tr-original,
 #trlist .year {
-	color: #667099;
+	color: var(--muted);
 }
 
 #trlist .tr-original a {

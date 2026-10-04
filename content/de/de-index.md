@@ -7,10 +7,22 @@
       "lang": "de",
       "heading": "Michail Schtscherbakow",
       "nav": [
-         {"label": "Russische Hauptseite", "href": "index.html"},
-         {"label": "Deutsche Hauptseite", "href": "de/index.html"},
-         {"label": "Deutsche Übersetzungen", "href": "de/translations.html"},
-         {"label": "Russischer Liederkatalog", "href": "catalogue.html"}
+         {
+            "label": "Russische Hauptseite",
+            "href": "index.html"
+         },
+         {
+            "label": "Deutsche Hauptseite",
+            "href": "de/index.html"
+         },
+         {
+            "label": "Deutsche Übersetzungen",
+            "href": "de/translations.html"
+         },
+         {
+            "label": "Russischer Liederkatalog",
+            "href": "catalogue.html"
+         }
       ],
       "labels": {
          "translations": "Übersetzungen",
@@ -29,11 +41,16 @@
          "stress": "Betonungen",
          "page": "S.",
          "recordedIn": "Aufnahme von",
-         "inRussian": "auf Russisch"
+         "inRussian": "auf Russisch",
+         "language": "Deutsch",
+         "menu": "Menü",
+         "breadcrumbs": "Brotkrumen",
+         "top": "Nach oben"
       },
       "sortable": false
    }
 }
+
 
 <img src="../Images/chanson_mks.jpg" width="198" height="174" alt="Michail Schtscherbakow" class="portrait">
 

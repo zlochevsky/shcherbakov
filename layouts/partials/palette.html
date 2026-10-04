@@ -1,0 +1,4 @@
+{{- /* Палитра сайта (assets/css/palette.css) — переменные CSS для всех стилей страницы. */ -}}
+{{- with resources.Get "css/palette.css" }}
+<style>{{ .Content | safeCSS }}</style>
+{{- end }}

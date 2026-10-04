@@ -10,7 +10,8 @@
 	{{ .Content | safeCSS }}
 {{ end }}
 </style>
-{{ partialCached "head/js.html" . }}
+{{ hugo.Generator }}
+{{ partial "palette.html" . }}
 
 <style>
 {{- with resources.Get "css/disks.css" }}
@@ -20,10 +21,10 @@
 	{{ .Content | safeCSS -}}
 {{ end }}
 a:link {
-	color: #006600;
+	color: var(--link-green);
 }
 a:visited {
-	color: #002200;
+	color: var(--link-green-visited);
 }
 </style>
 

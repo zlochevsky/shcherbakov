@@ -1,5 +1,5 @@
-{{- /* Главная языковая страница /<язык>/index.html: своё меню на своём языке (params.nav — общее для всех страниц
-       языка), основной текст (тело .md). Список переводов — отдельная страница (language-translations.html);
+{{- /* Главная языковая страница /<язык>/index.html: шапка раздела (language-header.html: меню из params.nav — общее
+       для всех страниц языка, крошки), основной текст (тело .md). Список переводов — отдельная страница (language-translations.html);
        подписи всех страниц языка — params.labels. */ -}}
 {{- $lang := .Params.lang -}}
 {{- $langData := dict -}}
@@ -11,6 +11,9 @@
 <head>
   {{ partial "headbasic.html" . }}
 <style>
+{{- with resources.Get "css/common.css" }}
+	{{ .Content | safeCSS -}}
+{{ end }}
 {{- with resources.Get "css/translations.css" }}
 	{{ .Content | safeCSS -}}
 {{ end }}
@@ -18,16 +21,15 @@
 </head>
 <body class="language-page">
 <span id="top"></span>
-{{ partial "language-nav.html" (dict "nav" .Params.nav "page" .) }}
 <header>
-<h1>{{ .Params.heading | default .Title }}</h1>
+{{ partial "language-header.html" (dict "page" . "main" .) }}
 </header>
 <main>
 <div class="wrapper language-text">
+<h1>{{ .Params.heading | default .Title }}</h1>
 {{ .Content }}
 </div>
-
+<p class="to-top">[<a href="#top" title="{{ .Params.labels.top }}">↑</a>]</p>
 </main>
-{{ partial "language-nav.html" (dict "nav" .Params.nav "page" .) }}
 </body>
 </html>

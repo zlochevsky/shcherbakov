@@ -16,7 +16,8 @@
 		{{ .Content | safeCSS -}}
 	{{ end }}
 </style>
-{{ partialCached "head/js.html" . }}
+{{ hugo.Generator }}
+{{ partial "palette.html" . }}
 </head>
 <body>
 <header>

@@ -24,6 +24,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
+{{ hugo.Generator }}
+{{ partial "palette.html" . }}
 <title>{{ $t.display | default .Title }}{{ with $tr }} — {{ delimit . ", " }}{{ end }}</title>
 {{- with $t.incipit }}
 <meta name="description" content="{{ . }}">
@@ -56,7 +58,9 @@
 </head>
 <body class="translation-page">
 <span id="top"></span>
-{{ partial "language-nav.html" (dict "nav" $sec.Params.nav "page" .) }}
+<header>
+{{ partial "language-header.html" (dict "page" . "main" $sec "crumb" ($t.display | default .Title)) }}
+</header>
 <main>
 <div class="wrapper">
 <p class="translation-meta">
@@ -105,7 +109,7 @@
 {{- end }}
 </div>
 </main>
-{{ partial "language-nav.html" (dict "nav" $sec.Params.nav "page" .) }}
+<p class="to-top">[<a href="#top" title="{{ $labels.top }}">↑</a>]</p>
 {{- with .Params.htmlComment }}
 {{ printf "<!--%s-->" . | safeHTML }}
 {{- end }}

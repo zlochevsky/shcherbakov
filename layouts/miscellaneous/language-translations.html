@@ -1,5 +1,5 @@
 {{- /* Список переводов на язык /<язык>/translations.html (из Directus, translations-data.html) с именем переводчика
-       на языке переводов. Меню, подписи и признак сортировки (params.sortable) — с главной языковой страницы
+       на языке переводов. Шапка — language-header.html; меню, подписи и признак сортировки (params.sortable) — с главной языковой страницы
        (content/<язык>/<язык>-index.md). */ -}}
 {{- $lang := .Params.lang -}}
 {{- $main := site.GetPage (printf "/%s/%s-index" $lang $lang) -}}
@@ -15,6 +15,9 @@
 <head>
   {{ partial "headbasic.html" . }}
 <style>
+{{- with resources.Get "css/common.css" }}
+	{{ .Content | safeCSS -}}
+{{ end }}
 {{- with resources.Get "css/translations.css" }}
 	{{ .Content | safeCSS -}}
 {{ end }}
@@ -22,12 +25,12 @@
 </head>
 <body class="language-page">
 <span id="top"></span>
-{{ partial "language-nav.html" (dict "nav" $main.Params.nav "page" .) }}
 <header>
-<h1>{{ $labels.translationsTitle | default .Title }}</h1>
+{{ partial "language-header.html" (dict "page" . "main" $main) }}
 </header>
 <main>
 <section class="wrapper">
+<h1>{{ $labels.translationsTitle | default .Title }}</h1>
 {{- if $main.Params.sortable }}
 <p class="sort-buttons" data-pagefind-ignore>
 	<button type="button" data-sort="song" class="active">{{ $labels.sortSongYear }}</button>
@@ -40,16 +43,15 @@
 {{- range $i, $t := $items }}
 	{{- $tr := slice }}{{ range .translators }}{{ $tr = $tr | append .native }}{{ end }}
 	<li data-song="{{ printf "%04d-%s" (int .work.year) .work.id }}" data-orig="{{ .work.name | lower }}" data-title="{{ .display | lower }}" data-translator="{{ delimit $tr ", " | lower }}" data-i="{{ $i }}">
-		<a href="{{ .href | relURL }}" class="tr-title">{{ .display }}</a>{{ with .year }}, {{ . }}{{ end }}
+		<a href="{{ .href | relURL }}" class="tr-title">{{ .display }}</a>{{ with .year }}<span class="tr-year">, {{ . }}</span>{{ end }}
 		<span class="tr-translator">— {{ delimit $tr ", " }}</span><br>
 		<span class="tr-original" lang="ru">{{ with .work.href }}<a href="{{ . | relURL }}">{{ $t.work.name }}</a>{{ else }}{{ $t.work.name }}{{ end }}{{ with .work.year }} ({{ . }}){{ end }}</span>
 	</li>
 {{- end }}
 </ul>
-<p class="to-top">[<a href="#top">↑</a>]</p>
+<p class="to-top">[<a href="#top" title="{{ $labels.top }}">↑</a>]</p>
 </section>
 </main>
-{{ partial "language-nav.html" (dict "nav" $main.Params.nav "page" .) }}
 {{- if $main.Params.sortable }}
 <script>
 document.querySelectorAll('.sort-buttons button').forEach(btn => btn.addEventListener('click', () => {

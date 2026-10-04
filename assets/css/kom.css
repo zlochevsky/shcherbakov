@@ -3,11 +3,11 @@ main > div {
 	margin: 0;
 }
 main, nav {
-	background-color: #f0f0d6; /* ddddcc*/
+	background-color: var(--cell-bg-kom); /* ddddcc*/
 }
 main > div > div.wrapper > div {
 	border-width: 1px;
-	border-color: #fefeee;
+	border-color: var(--cell-border);
 	border-style: solid;
 	padding: 5px;
 }
@@ -23,7 +23,7 @@ nav > div {
 .preamble-toggle summary {
 	cursor: pointer;
 	list-style: none;
-	color: #667099;
+	color: var(--muted);
 	font-style: italic;
 }
 .preamble-toggle summary::-webkit-details-marker { display: none; }
@@ -40,7 +40,7 @@ nav > div {
 	display: block;
 	text-align: center;
 	font-style: italic;
-	color: #667099;
+	color: var(--muted);
 }
 
 .search {
@@ -51,17 +51,17 @@ nav > div {
 	height: 3em;
 	padding: .5em;
 	box-sizing: border-box;
-	color: #444444;
-	border-color: #666666;
+	color: var(--control-text);
+	border-color: var(--control-border);
 	border-style: solid;
 	margin: 0.5rem auto 0.5rem;
 }
 #search:focus {
-	border: 3px solid #666666;
+	border: 3px solid var(--control-border);
 }
 #search-count {
 	font-size: .85em;
-	color: #667099;
+	color: var(--muted);
 }
 
 .js-only { display: none; }
@@ -71,11 +71,11 @@ nav > div {
 }
 
 .comment-entry {
-	border-bottom: 1px solid #c9c9b3;
+	border-bottom: 1px solid var(--rule-soft);
 	padding: .6em 0;
 }
 .comment-entry[open] {
-	background: #fefeee;
+	background: var(--page-bg);
 	border-radius: 4px;
 	padding: .6em .6em;
 	margin: 0 -.6em;
@@ -90,7 +90,7 @@ nav > div {
 .comment-entry summary::-webkit-details-marker { display: none; }
 .comment-entry summary::before {
 	content: "▸ ";
-	color: #667099;
+	color: var(--muted);
 }
 .comment-entry[open] summary::before {
 	content: "▾ ";
@@ -126,7 +126,7 @@ nav > div {
 .comment-entry summary .year,
 .poem-tag {
 	font-size: .85em;
-	color: #667099;
+	color: var(--muted);
 	margin-left: .5em;
 }
 
@@ -137,7 +137,7 @@ nav > div {
 .comment-note + .comment-note {
 	margin-top: .8em;
 	padding-top: .8em;
-	border-top: 1px dotted #c9c9b3;
+	border-top: 1px dotted var(--rule-soft);
 }
 .comment-body blockquote {
 	margin-left: 1.5em;
@@ -158,7 +158,7 @@ nav > div {
 
 .comment-body .see-also {
 	font-style: italic;
-	color: #667099;
+	color: var(--muted);
 	margin-top: .5em;
 }
 
@@ -170,7 +170,7 @@ nav > div {
 	color: #556b2f;
 }
 .editor-aside {
-	color: #667099;
+	color: var(--muted);
 	font-style: italic;
 }
 .centered {

@@ -44,10 +44,15 @@
          "stress": "akcentoj",
          "page": "p.",
          "recordedIn": "registrita en",
-         "inRussian": "ruslingve"
+         "inRussian": "ruslingve",
+         "language": "Esperanto",
+         "menu": "Menuo",
+         "breadcrumbs": "Paderoj",
+         "top": "Supren"
       },
       "sortable": false
    }
 }
+
 
 <!-- Служебная страница: главной страницы языка пока нет (build.render: never). Шаблоны страниц переводов берут отсюда меню и подписи; пункты меню с пустым href — заглушки без ссылки. -->

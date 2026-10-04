@@ -34,7 +34,7 @@ Standard Hugo directories:
 
 - `content` -- the pages: `.md` files whose body is mostly HTML markup. At the top of each file there is *front matter* -- page parameters in JSON. The fields the templates actually read are listed in [docs/frontmatter.md](docs/frontmatter.md);
 - `layouts` -- templates: page layouts in `layouts/miscellaneous`, shared parts in `layouts/partials`;
-- `assets` -- files processed during the build: CSS (`assets/css`) and SVG icons (`assets/svg`: album icons for the song catalogue, `svg/cd`, and format icons, `svg/format`);
+- `assets` -- files processed during the build: CSS (`assets/css`; all shared colours are CSS variables in `assets/css/palette.css`, embedded into every page by `layouts/partials/palette.html`) and SVG icons (`assets/svg`: album icons for the song catalogue, `svg/cd`, and format icons, `svg/format`);
 - `static` -- files copied to the site as they are: images, PDFs, legacy pages that are not converted yet;
 - `data`, `archetypes`, `i18n` -- Hugo data files, templates for new pages, translations of interface strings;
 - `public` -- where Hugo puts the built site. It is not stored in git: the published site is built by GitHub Actions (see below).

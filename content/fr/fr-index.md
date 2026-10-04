@@ -44,10 +44,15 @@
          "stress": "accents",
          "page": "p.",
          "recordedIn": "enregistré en",
-         "inRussian": "en russe"
+         "inRussian": "en russe",
+         "language": "Français",
+         "menu": "Menu",
+         "breadcrumbs": "Fil d’Ariane",
+         "top": "Haut de page"
       },
       "sortable": false
    }
 }
+
 
 <!-- Служебная страница: главной страницы языка пока нет (build.render: never). Шаблоны страниц переводов берут отсюда меню и подписи; пункты меню с пустым href — заглушки без ссылки. -->

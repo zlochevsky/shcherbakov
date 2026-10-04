@@ -1,0 +1,59 @@
+{{- /* Шапка страниц языка (главная языка, список переводов, страница перевода): верхнее табличное меню раздела и
+       строка «хлебных крошек», отделяющая шапку от содержимого.
+       Меню — params.nav главной страницы языка (content/<язык>/<язык>-index.md), на языке раздела, разметка как у
+       partials/menu.html (nav.top-menu, бургер на мобильном); ссылки на текущую страницу нет; пункт с пустым href
+       (страницы ещё нет) — неактивная ячейка.
+       Крошки: русская главная › язык (самоназвание) › список переводов › перевод; последний пункт — текстом
+       (aria-current), страницы, которых ещё нет, — тоже текстом.
+       Контекст — dict "page" (текущая страница) "main" (главная страница языка) "crumb" (подпись последнего
+       пункта — у страницы перевода; у главной и списка — пусто). */ -}}
+{{- $page := .page -}}
+{{- $main := .main -}}
+{{- $nav := $main.Params.nav | default slice -}}
+{{- $labels := $main.Params.labels | default dict -}}
+{{- $lang := $main.Params.lang -}}
+{{- /* адрес …/index.html Hugo записывает как …/ — сравниваем без index.html */ -}}
+{{- $here := strings.TrimSuffix "index.html" $page.RelPermalink -}}
+{{- $isHere := dict -}}
+{{- range $nav }}{{ with .href }}{{ $isHere = merge $isHere (dict . (eq (strings.TrimSuffix "index.html" (. | relURL)) $here)) }}{{ end }}{{ end -}}
+{{- partial "burger.html" }}
+<nav class="top-menu" aria-label="{{ $labels.menu | default "Menu" }}" data-pagefind-ignore>
+{{- range $nav }}
+	{{- if not .href }}
+	<div><div class="bordered nav-placeholder">{{ .label }}</div></div>
+	{{- else if not (index $isHere .href) }}
+	<div><div class="bordered"><a href="{{ .href | relURL }}">{{ .label }}</a></div></div>
+	{{- end }}
+{{- end }}
+</nav>
+{{- /* крошки: русская главная — первый пункт nav; главная языка — второй; список переводов — третий */ -}}
+{{- $root := index $nav 0 -}}
+{{- $langHome := index $nav 1 -}}
+{{- $list := index $nav 2 -}}
+{{- $steps := slice
+	(dict "label" $root.label "href" $root.href)
+	(dict "label" ($main.Params.heading | default $lang) "short" ($labels.language | default "") "href" $langHome.href)
+	(dict "label" ($labels.translations | default "") "href" $list.href) -}}
+{{- $last := 0 -}}
+{{- if index $isHere ($langHome.href | default "-") }}{{ $last = 1 }}
+{{- else if index $isHere ($list.href | default "-") }}{{ $last = 2 }}
+{{- else }}{{ $last = 3 }}{{ end -}}
+<nav class="breadcrumbs" aria-label="{{ $labels.breadcrumbs | default "Breadcrumb" }}">
+	<ol>
+	{{- range $i, $s := $steps }}
+		{{- if le $i $last }}
+		{{- $label := cond (and (eq $i 1) $s.short) $s.short $s.label }}
+		{{- if eq $i $last }}
+		<li aria-current="page">{{ $label }}</li>
+		{{- else if $s.href }}
+		<li><a href="{{ $s.href | relURL }}">{{ $label }}</a></li>
+		{{- else }}
+		<li>{{ $label }}</li>
+		{{- end }}
+		{{- end }}
+	{{- end }}
+	{{- if eq $last 3 }}
+		<li aria-current="page" dir="auto">{{ $.crumb }}</li>
+	{{- end }}
+	</ol>
+</nav>
