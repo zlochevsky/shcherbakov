@@ -6,7 +6,7 @@
       "disable": true
    },
    "params": {
-      "target": "../../translations.html#uk",
+      "target": "../../uk/translations.html",
       "noindex": true
    }
 }
