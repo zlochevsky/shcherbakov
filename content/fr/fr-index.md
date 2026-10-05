@@ -58,6 +58,8 @@ Un jour, le 22 juin 2000, Chtcherbakov a chanté à Paris, dans la grande salle
 
 Vous trouverez chez Chtcherbakov des chansons intitulées « Paris », « Paris encore », « Déjà », « Chanson » — et toutes sont en russe. Le français n’y est que dans le titre, comme une enseigne au-dessus de la porte : derrière, c’est Moscou.
 
+Il y a même trois chansons où le français va plus loin que le titre : « Supplique », « La complainte », « La non-demande » se chantent sur les mélodies de Georges Brassens — celles de <i>Supplique pour être enterré à la plage de Sète</i>, de <i>La complainte des filles de joie</i> et de <i>La non-demande en mariage</i>. On reconnaît Brassens dès les premières notes ; mais les paroles ne sont pas de lui, ni traduites de lui : elles sont de Chtcherbakov, et en russe. Des faux amis jusque dans la musique.
+
 Ces chansons ont déjà des titres français ; il ne leur manque que des textes français. Pour l’instant, une seule a été traduite : <a href="zaklinan-startsev.html">« Adjuration »</a>, par Iaroslav Startsev. Nous serions très heureux que des poètes français traduisent les chansons de Chtcherbakov, que des interprètes les chantent en français et qu’un rédacteur francophone rejoigne notre équipe.
 
 Il n’existe pas encore d’article sur Mikhaïl Chtcherbakov dans la Wikipédia francophone ; on peut lire <a href="https://en.wikipedia.org/wiki/Mikhail_Shcherbakov">l’article en anglais</a>.
