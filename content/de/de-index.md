@@ -64,6 +64,8 @@ Was Schtscherbakow auszeichnet, sind die dichten Texte seiner Lieder. Eine Lawin
 
 Wir empfehlen, die Bekanntschaft mit den Gitarrenalben zu beginnen, etwa <a href="../Disks/balagan.html">„Balagan&nbsp;2“</a> <span class="lang-mark">(auf Russisch)</span> und <a href="../Disks/izbran2.html">„Isbrannoje, Teil&nbsp;2“</a> („Ausgewählte Lieder“) <span class="lang-mark">(auf Russisch)</span>, und erst danach zu den Synthesizer-Alben überzugehen, wie <a href="../Disks/raycentr.html">„Raizentr“</a> <span class="lang-mark">(auf Russisch)</span> oder <a href="../Disks/chmuzyka1.html">„Tschuschaja musyka“</a> („Fremde Musik“, Teil&nbsp;1, 2 und&nbsp;3) <span class="lang-mark">(auf Russisch)</span>.
 
+Etwas über seine Alben erfahren Sie im <a href="https://de.wikipedia.org/wiki/Michail_Konstantinowitsch_Schtscherbakow">Artikel über Michail Schtscherbakow</a> in der deutschsprachigen Wikipedia.
+
 Außer dieser Seite und einigen Übersetzungen haben wir nichts auf Deutsch. Wir würden uns sehr wünschen, dass deutsche Dichter Schtscherbakows Lieder ins Deutsche übertragen, dass deutsche Interpreten seine Lieder auf Deutsch singen und dass unser Team einen deutschsprachigen Redakteur für die Seiten unserer Website bekommt.
 
 Diese Website ist keine offizielle Website Schtscherbakows; sie wird von einer Gemeinschaft seiner Verehrer gepflegt. Schtscherbakow hat nichts gegen ihre Existenz im Internet. Vielleicht möchten Sie <a href="https://github.com/zlochevsky/shcherbakov">auf GitHub</a> zu ihrer Entwicklung beitragen. Oder vielleicht eine Tournee Schtscherbakows in Deutschland organisieren. Auf jeden Fall können Sie uns einfach schreiben: <a href="mailto:deniskhin@gmail.com">deniskhin@gmail.com</a>.
