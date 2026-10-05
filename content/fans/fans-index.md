@@ -106,7 +106,7 @@
 <li><a href="../translations.html#he">Переводы на иврит</a> (Последнее поступление 17.04.19).</li>
 <li><a href="../de/translations.html">Переводы на немецкий</a> (Последнее поступление 09.06.17).</li>
 <li><a href="../uk/translations.html">Переводы на украинский язык</a> (Последнее поступление 05.01.23).</li>
-<li><a href="../translations.html#fr">Переводы на французский</a> (Последнее поступление 10.10.21).</li>
+<li><a href="../fr/translations.html">Переводы на французский</a> (Последнее поступление 10.10.21).</li>
 </ul>
 
 <p>(см. также: на нашем сайте&nbsp;&mdash; <a href="../Parodies/index.html#free">фривольные переводы</a>; переводы текстов  М. Щербакова на сайте <a href="https://lyricstranslate.com/en/mikhail-shcherbakov-mikhail-scherbakov-lyrics.html">LyricsTranslate</a>&nbsp;&mdash; английский, французский, украинский)</p>

@@ -1,0 +1,32 @@
+{{- /* Статья раздела языка (не перевод песни): например, мемуар Б. Остромуховой во французском разделе.
+       Шапка раздела (language-header.html, меню и подписи — с главной страницы языка), содержимое — тело файла
+       (content/<язык>/<имя>.md — готовый HTML блоками, без пустых строк внутри блока: Markdown пропускает его как есть). params: lang, crumb (подпись в крошках). */ -}}
+{{- $lang := .Params.lang -}}
+{{- $main := site.GetPage (printf "/%s/%s-index" $lang $lang) -}}
+{{- $labels := $main.Params.labels | default dict -}}
+<!DOCTYPE html>
+<html lang="{{ $lang }}" dir="ltr">
+<head>
+  {{ partial "headbasic.html" . }}
+<style>
+{{- with resources.Get "css/common.css" }}
+	{{ .Content | safeCSS -}}
+{{ end }}
+{{- with resources.Get "css/translations.css" }}
+	{{ .Content | safeCSS -}}
+{{ end }}
+</style>
+</head>
+<body class="language-page article-page">
+<span id="top"></span>
+<header>
+{{ partial "language-header.html" (dict "page" . "main" $main "crumb" (.Params.crumb | default .Title) "article" true) }}
+</header>
+<main>
+<article class="wrapper language-text">
+{{ .Content }}
+</article>
+<p class="to-top">[<a href="#top" title="{{ $labels.top }}">↑</a>]</p>
+</main>
+</body>
+</html>

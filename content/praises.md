@@ -208,7 +208,7 @@ Greifswald: Ernst-Moritz-Arndt-Universit&auml;t Greifswald, 2014. &mdash; C. 141
   - [Михаил Щербаков: инженерия смысла. Аффект, любовь, смерть в метафизике &laquo;Рождества&raquo;](Praises/rozhdest.html) <span class="datum">[06.11.14]</span>
   - [О словах, образах и звуках. Один момент в песне &laquo;Интермедия 7&raquo;](Praises/intermedia.html) <span class="datum">[04.01.20]</span>
 - **[klezmerchik](http://klezmerchik.livejournal.com/)**. [Преломление еврейских мотивов Мандельштама в поэзии Александра Ерёменко и Михаила Щербакова](Praises/mandelshtam.html) (на английском языке). <span class="datum">[13.02.10]</span> 
-- [**Bella Ostromoukhov**](mailto:ostrob@hotmail.com). Дипломная работа, выполненная на факультете славянских языков Сорбонны (руководитель проф. J.Bonamour). <br>Работа написана по-французски и носит название "La chanson d'auteur Russe d'aujourd'hui: Mikhail Scherbakov". Возможно, сей труд будет небезынтересен даже тем ценителям творчества Щербакова, которые не парлекают на языке исследования. MS Word-file, упакованный WinZip'ом &mdash; [здесь](fans/sorbonna.zip) (188 Кб). <span class="datum">[18.10.00]</span>
+- [**Bella Ostromoukhov**](mailto:ostrob@hotmail.com). Дипломная работа, выполненная на факультете славянских языков Сорбонны (руководитель проф. J.Bonamour). <br>Работа написана по-французски и носит название "La chanson d'auteur Russe d'aujourd'hui: Mikhail Scherbakov". Возможно, сей труд будет небезынтересен даже тем ценителям творчества Щербакова, которые не парлекают на языке исследования. MS Word-file, упакованный WinZip'ом &mdash; [здесь](fans/sorbonna.zip) (188 Кб). Работа выложена и [страницей сайта](fr/ostromoukhov-2000.html) во французском разделе. <span class="datum">[18.10.00]</span>
 
 ---
 

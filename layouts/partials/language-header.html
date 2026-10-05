@@ -6,7 +6,8 @@
        Крошки: русская главная › язык (самоназвание) › список переводов › перевод; последний пункт — текстом
        (aria-current), страницы, которых ещё нет, — тоже текстом.
        Контекст — dict "page" (текущая страница) "main" (главная страница языка) "crumb" (подпись последнего
-       пункта — у страницы перевода; у главной и списка — пусто). */ -}}
+       пункта — у страницы перевода и статьи; у главной и списка — пусто), "article" (true — статья раздела, не
+       перевод: в крошках нет шага «список переводов»). */ -}}
 {{- $page := .page -}}
 {{- $main := .main -}}
 {{- $nav := $main.Params.nav | default slice -}}
@@ -34,10 +35,12 @@
 	(dict "label" $root.label "href" $root.href)
 	(dict "label" ($main.Params.heading | default $lang) "short" ($labels.language | default "") "href" $langHome.href)
 	(dict "label" ($labels.translations | default "") "href" $list.href) -}}
+{{- /* статья раздела (не перевод): крошки без шага «список переводов» */ -}}
+{{- if .article }}{{ $steps = first 2 $steps }}{{ end -}}
 {{- $last := 0 -}}
 {{- if index $isHere ($langHome.href | default "-") }}{{ $last = 1 }}
 {{- else if index $isHere ($list.href | default "-") }}{{ $last = 2 }}
-{{- else }}{{ $last = 3 }}{{ end -}}
+{{- else }}{{ $last = len $steps }}{{ end -}}
 <nav class="breadcrumbs" aria-label="{{ $labels.breadcrumbs | default "Breadcrumb" }}">
 	<ol>
 	{{- range $i, $s := $steps }}
@@ -52,7 +55,7 @@
 		{{- end }}
 		{{- end }}
 	{{- end }}
-	{{- if eq $last 3 }}
+	{{- if eq $last (len $steps) }}
 		<li aria-current="page" dir="auto">{{ $.crumb }}</li>
 	{{- end }}
 	</ol>

@@ -237,3 +237,74 @@ nav.breadcrumbs [aria-current] {
 [data-sort].active {
 	border-width: 3px;
 }
+
+/* Статья раздела языка (language-article.html): мемуар Б. Остромуховой и т. п. */
+.article-page .article-title {
+	text-align: center;
+	margin: 1em 0 2em;
+}
+
+.article-page .article-title p {
+	padding-left: 0;
+}
+
+.article-page .article-author {
+	font-size: 1.2em;
+}
+
+.article-page .article-source {
+	font-size: .9em;
+	color: var(--muted);
+}
+
+.article-page h2 {
+	margin-top: 2em;
+}
+
+.article-page h5 {
+	font-size: 1em;
+	font-style: italic;
+	margin: 1.5em 0 .5em;
+}
+
+.article-toc ul {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.article-toc li {
+	margin: .2em 0;
+}
+
+.article-toc .toc-3 { margin-inline-start: 1.5em; }
+.article-toc .toc-4 { margin-inline-start: 3em; }
+.article-toc .toc-5 { margin-inline-start: 4.5em; font-size: .95em; }
+
+/* цитаты из песен: строфы, без лишнего отступа абзацев basic.css */
+/* правее обычных абзацев (у них отступ 40px из basic.css) */
+blockquote.verse {
+	margin: 1em 0 1em calc(40px + 3em);
+}
+
+blockquote.verse p {
+	padding-left: 0;
+	margin: 0 0 .8em;
+}
+
+.footnotes {
+	font-size: .9em;
+	border-top: 1px solid var(--rule);
+	margin-top: 3em;
+}
+
+.footnotes li {
+	margin: .4em 0;
+}
+
+@media only screen and (width <= 70em) {
+	blockquote.verse {
+		margin-left: calc(20px + 1.5em);
+	}
+	.article-toc .toc-4 { margin-inline-start: 2em; }
+	.article-toc .toc-5 { margin-inline-start: 3em; }
+}
