@@ -1,5 +1,9 @@
 {}
 
+         ...je vous conseille d’éviter, par mesure de prudence,
+   de traverser la lande aux heures obscures où l’esprit du mal chemine.
+                     D’un livre pour enfants (trad. A. de Jassaud)
+
 J'suis pas un saint, pourtant te dis-je:
 Le monde est sain, vas-y, voltige,
 Le monde entier, mais si t'es sage,
