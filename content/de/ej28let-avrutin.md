@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Mit achtundzwanzig ist sie schon davon besessen, -
 Bräuche, von denen ich nichts halt.

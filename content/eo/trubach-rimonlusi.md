@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Hej, nu kial do, niaj aferoj fiaskas,
 Al kia inspir' povus konduki esper'.

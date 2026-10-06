@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Eksciis oni, ke ĉeurbe en arbardensej'
 Insurgentar', ribelular'

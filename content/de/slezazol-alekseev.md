@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Die Träne aus Goldem,
 Blitz’ auf und stirb’ doch,

@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Saluton, hul-dio,
 Nu, kion vi diros?

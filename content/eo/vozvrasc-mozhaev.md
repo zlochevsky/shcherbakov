@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Hej, hej, hej, landoj de l' sudo! Foroj de l' mar...
 Ĉenoj de montoj, dezertaj sabloj, lagoj kaj riveroj...

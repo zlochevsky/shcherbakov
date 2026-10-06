@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Редактор сайта</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap">
+<style>
+/* тексты песен выровнены пробелами (аккорды справа) — поле ввода моноширинное, со своей кириллицей:
+   иначе браузер берёт русские буквы из другого шрифта, их ширина не равна ширине пробела, и аккорды съезжают */
+textarea {
+	font-family: "PT Mono", "DejaVu Sans Mono", Consolas, monospace !important;
+	letter-spacing: 0 !important;
+	word-spacing: 0 !important;
+	white-space: pre !important;
+	overflow-x: auto !important;
+}
+/* поля формы — во всю ширину панели (у Sveltia — не шире 768px): строки песен с аккордами длинные */
+section[role="group"].field > * { max-width: none !important; }
+/* светлая тема: желтоватый фон (как Solarized Light) и тёмно-красные акценты; тёмная тема — как у Sveltia.
+   Переменные — внутренние у Sveltia: если в новой версии их переименуют, вернутся стандартные цвета */
+:root[data-theme=light] {
+	--sui-background-color-1-hsl: 44 87% 97% !important;  /* поля ввода */
+	--sui-background-color-2-hsl: 44 87% 94% !important;  /* основной фон, #fdf6e3 */
+	--sui-background-color-3-hsl: 46 42% 89% !important;
+	--sui-background-color-4-hsl: 46 42% 85% !important;
+	--sui-background-color-5-hsl: 45 30% 78% !important;
+	--sui-border-color-1-hsl: 45 20% 55% !important;
+	--sui-border-color-2-hsl: 45 25% 68% !important;
+	--sui-border-color-3-hsl: 45 30% 76% !important;
+	--sui-primary-accent-color-text: hsl(0 65% 35%) !important;
+	--sui-primary-accent-color-light: hsl(0 65% 42%) !important;
+	--sui-primary-accent-color: hsl(0 65% 35%) !important;
+	--sui-primary-accent-color-dark: hsl(0 65% 28%) !important;
+	--sui-primary-accent-color-translucent: hsl(0 65% 45% / 60%) !important;
+	--sui-primary-accent-color-translucent-light: hsl(0 65% 45% / 40%) !important;
+}
+@media (prefers-color-scheme: light) {
+	:root:not([data-theme]) {
+		--sui-background-color-1-hsl: 44 87% 97% !important;
+		--sui-background-color-2-hsl: 44 87% 94% !important;
+		--sui-background-color-3-hsl: 46 42% 89% !important;
+		--sui-background-color-4-hsl: 46 42% 85% !important;
+		--sui-background-color-5-hsl: 45 30% 78% !important;
+		--sui-border-color-1-hsl: 45 20% 55% !important;
+		--sui-border-color-2-hsl: 45 25% 68% !important;
+		--sui-border-color-3-hsl: 45 30% 76% !important;
+		--sui-primary-accent-color-text: hsl(0 65% 35%) !important;
+		--sui-primary-accent-color-light: hsl(0 65% 42%) !important;
+		--sui-primary-accent-color: hsl(0 65% 35%) !important;
+		--sui-primary-accent-color-dark: hsl(0 65% 28%) !important;
+		--sui-primary-accent-color-translucent: hsl(0 65% 45% / 60%) !important;
+		--sui-primary-accent-color-translucent-light: hsl(0 65% 45% / 40%) !important;
+	}
+}
+/* поля внутри объекта (у песни — «Параметры») — в ряд, на узком экране переносятся */
+[id^="object-"][id$="-item-list"]:has(> section.field) {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding: 12px;
+}
+/* каждое поле — карточка: рамка и фон чуть темнее; разделители между полями (линии снизу) не нужны */
+[id^="object-"][id$="-item-list"] > section.field {
+	flex: 1 1 220px;
+	margin: 0 !important;
+	padding: 8px 12px 12px !important;
+	border: 1px solid hsl(var(--sui-border-color-2-hsl));
+	border-radius: 6px;
+	background: hsl(var(--sui-background-color-3-hsl));
+}
+[id^="object-"][id$="-item-list"] > section.field::after { content: none !important; }
+#caret-pos {
+	position: fixed; right: 16px; bottom: 16px; z-index: 1000;
+	padding: 4px 10px; border-radius: 4px;
+	background: #333; color: #fff; font: 13px/1.4 "PT Mono", monospace;
+	pointer-events: none;
+}
+</style>
+</head>
+<body>
+<!-- Sveltia CMS: правка текстов в репозитории через GitHub API; настройки — config.yml рядом -->
+<script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+<script>
+// Строка и символ под курсором в поле текста, оба с 1 — те же числа, что в параметрах песни:
+// «Аккорды с позиции» (chordsStartAt) — номер символа, «Последняя строка текста» (textFinishAtLine) — номер строки
+(() => {
+	// элемент создаётся при первом обращении: Sveltia при запуске может перерисовать <body>
+	const getBox = () => {
+		let b = document.getElementById('caret-pos');
+		if (!b) {
+			b = document.createElement('div');
+			b.id = 'caret-pos';
+			b.hidden = true;
+			document.body.append(b);
+		}
+		return b;
+	};
+	const update = () => {
+		const box = getBox();
+		const el = document.activeElement;
+		if (!(el instanceof HTMLTextAreaElement)) { box.hidden = true; return; }
+		const before = el.value.slice(0, el.selectionStart);
+		const line = before.split('\n').length;
+		const col = before.length - before.lastIndexOf('\n');
+		const total = el.value.split('\n').length;
+		box.textContent = `строка ${line} из ${total}, символ ${col}`;
+		box.hidden = false;
+	};
+	for (const ev of ['selectionchange', 'input', 'keyup', 'click', 'focusin', 'focusout']) {
+		document.addEventListener(ev, () => setTimeout(update), true);
+	}
+})();
+</script>
+</body>
+</html>

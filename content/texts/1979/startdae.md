@@ -1,4 +1,5 @@
-{}
+{
+}
 Старт даёт Москва - pourquoi, pourquoi?
 Общества каприз - and what is this?
 Мир весьма польщён - Danke schoen!

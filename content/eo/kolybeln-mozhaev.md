@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Dormas Kubo kaj Atenoj,
 Kaj aŭtuna ciklamen'.

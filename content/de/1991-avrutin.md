@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Die Stadt der Tränen! O mein Traum!..
 Die Polizeikontrollen stets.

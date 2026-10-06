@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Ĉu memoras vi eĉ svage
 Kiel ĉio brulis, brilis:

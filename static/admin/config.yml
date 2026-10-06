@@ -1,0 +1,137 @@
+# Sveltia CMS (https://sveltiacms.app): редактор файлов content/ прямо в репозитории; открывается по /admin/.
+# Каждое сохранение — коммит в master через GitHub API, сайт пересобирает обычный CI.
+# Правятся только тексты, которые лежат в git; данные из Directus (названия, годы, альбомы, переводчики) — в Directus.
+# Новые записи не создаются и не удаляются: имя файла = id в Directus.
+# Ключи заголовка (front matter), не описанные здесь, Sveltia сохраняет как были.
+
+backend:
+  name: github
+  repo: zlochevsky/shcherbakov
+  branch: master
+  commit_messages:
+    update: "CMS: {{collection}} {{slug}}"
+    uploadMedia: "CMS: upload {{path}}"
+    deleteMedia: "CMS: delete {{path}}"
+
+media_folder: static/Images
+public_folder: /Images
+
+output:
+  omit_empty_optional_fields: true
+  json:
+    indent_style: space
+    indent_size: 4
+
+# Тело — простой текст: пробелы, отступы и аккорды сохраняются как есть (не Markdown-редактор)
+collections:
+  - name: texts
+    label: Тексты песен
+    label_singular: Песня
+    folder: content/texts
+    path: "{{year}}/{{slug}}"
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    summary: "{{dirname}} · {{filename}}"
+    fields:
+      - label: Параметры
+        name: params
+        widget: object
+        # обязательный — без галочки «Добавить Параметры», снятие которой стёрло бы весь params (и ключи,
+        # которых здесь нет, например editionOf); поля внутри — необязательные
+        collapsed: true
+        fields:
+          - { label: Тональность, name: tonality, widget: string, required: false }
+          - { label: Аккорды с позиции (номер символа в строке), name: chordsStartAt, widget: number, value_type: int, required: false }
+          - { label: Последняя строка текста, name: textFinishAtLine, widget: number, value_type: int, required: false }
+      - { label: Текст, name: body, widget: text }
+
+  # Переводы: content/<язык>/<id>.md; страницы языка (у них есть layout) — в коллекции «Страницы языков»
+  - name: tr-en
+    label: Переводы — English
+    folder: content/en
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    fields: &trfields
+      # только для фильтра: у страниц языка layout есть, у переводов нет (пустое не записывается)
+      - { label: layout, name: layout, widget: hidden, required: false }
+      - { label: Текст, name: body, widget: text }
+  - name: tr-de
+    label: Переводы — Deutsch
+    folder: content/de
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    fields: *trfields
+  - name: tr-eo
+    label: Переводы — Esperanto
+    folder: content/eo
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    fields: *trfields
+  - name: tr-he
+    label: Переводы — עברית
+    folder: content/he
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    fields: *trfields
+  - name: tr-uk
+    label: Переводы — Українська
+    folder: content/uk
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    fields: *trfields
+  - name: tr-fr
+    label: Переводы — Français
+    folder: content/fr
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    fields: *trfields
+
+  # Страницы языков: тело — HTML; меню, подписи и прочие настройки заголовка правятся в файле
+  - name: language-pages
+    label: Страницы языков
+    format: json-frontmatter
+    files:
+      - { name: en-index, label: English — главная, file: content/en/en-index.md, fields: &pagefields [ { label: Заголовок, name: title, widget: string }, { label: Текст (HTML), name: body, widget: text } ] }
+      - { name: en-translations, label: English — список переводов, file: content/en/en-translations.md, fields: *pagefields }
+      - { name: de-index, label: Deutsch — главная, file: content/de/de-index.md, fields: *pagefields }
+      - { name: de-translations, label: Deutsch — список переводов, file: content/de/de-translations.md, fields: *pagefields }
+      - { name: uk-index, label: Українська — главная, file: content/uk/uk-index.md, fields: *pagefields }
+      - { name: uk-translations, label: Українська — список переводов, file: content/uk/uk-translations.md, fields: *pagefields }
+      - { name: fr-index, label: Français — главная, file: content/fr/fr-index.md, fields: *pagefields }
+      - { name: fr-translations, label: Français — список переводов, file: content/fr/fr-translations.md, fields: *pagefields }
+      - { name: fr-ostromoukhov, label: Français — мемуар Б. Остромуховой, file: content/fr/ostromoukhov-2000.md, fields: *pagefields }
+      - { name: eo-index, label: Esperanto — настройки (страница ещё не выводится), file: content/eo/eo-index.md, fields: *pagefields }
+      - { name: he-index, label: עברית — настройки (страница ещё не выводится), file: content/he/he-index.md, fields: *pagefields }

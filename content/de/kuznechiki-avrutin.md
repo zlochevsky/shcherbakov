@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Kein Vergleich mit Früher: Krim, Tiflis.
 Alles eilte her, was lieb mir ist.

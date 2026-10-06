@@ -35,7 +35,7 @@ Standard Hugo directories:
 - `content` -- the pages: `.md` files whose body is mostly HTML markup. At the top of each file there is *front matter* -- page parameters in JSON. The fields the templates actually read are listed in [docs/frontmatter.md](docs/frontmatter.md);
 - `layouts` -- templates: page layouts in `layouts/miscellaneous`, shared parts in `layouts/partials`;
 - `assets` -- files processed during the build: CSS (`assets/css`; all shared colours are CSS variables in `assets/css/palette.css`, embedded into every page by `layouts/partials/palette.html`) and SVG icons (`assets/svg`: album icons for the song catalogue, `svg/cd`, and format icons, `svg/format`);
-- `static` -- files copied to the site as they are: images, PDFs, legacy pages that are not converted yet;
+- `static` -- files copied to the site as they are: images, PDFs, legacy pages that are not converted yet; `static/admin` is the in-browser editor (see "Editing in the browser" below);
 - `data`, `archetypes`, `i18n` -- Hugo data files, templates for new pages, translations of interface strings;
 - `public` -- where Hugo puts the built site. It is not stored in git: the published site is built by GitHub Actions (see below).
 
@@ -75,6 +75,16 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 - on every push to `master`, on manual start, and on schedule twice a day (05:00 and 17:00 UTC), so that data changed in Directus reaches the site without a push;
 - before each build the workflow archives announces whose expiry date has passed (sets their status in Directus to `archived`);
 - the build uses the public read-only Directus token from `params.json.example`, runs Hugo, then Pagefind to make the search index.
+
+## Editing in the browser
+
+`/admin/` on the site (`static/admin/index.html` and `static/admin/config.yml`) is [Sveltia CMS](https://sveltiacms.app/), an editor for files in this repository. It does not change any other page of the site. Each save is a commit to `master` made through the GitHub API, and the usual workflow publishes it.
+
+- To sign in, choose "Sign In Using Access Token" and paste a GitHub personal access token. For a fine-grained token, give it access to this repository with the "Contents: Read and write" permission. The token stays in the browser.
+- What can be edited: song texts (`content/texts`), translations (`content/<language>/`), and the body and title of language pages. The other front matter keys are kept as they are, though the editor writes the keys it does not know in alphabetical order. Entries cannot be created or deleted there, because a file name is the record's id in Directus. Titles, years, albums and translators are edited in Directus.
+- Texts are edited as plain text, so spaces, indentation and chords stay exactly as typed.
+- The editor puts a blank line after the front matter and writes a file with empty front matter without one. `layouts/partials/song.html` ignores blank lines before the text, so the line number in `textFinishAtLine` is not shifted.
+- The text field uses a monospace font with its own Cyrillic (PT Mono), because chords are aligned with spaces. With a font that lacks Cyrillic, the browser takes the letters from another font, and the chords drift. Fields take the full width of the pane. A badge in the corner shows the line and character under the cursor, both counted from 1: the same numbers as `textFinishAtLine` and `chordsStartAt`.
 
 # Links
 

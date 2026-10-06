@@ -1,4 +1,5 @@
-{}
+{
+}
 
          ...je vous conseille d’éviter, par mesure de prudence,
    de traverser la lande aux heures obscures où l’esprit du mal chemine.

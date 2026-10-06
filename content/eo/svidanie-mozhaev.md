@@ -1,4 +1,5 @@
-{}
+{
+}
 
 Venu, kolonel', vi ĝustas ĝis frenez',
 Nigras pro maldormo kvazaŭ noktomez';
