@@ -80,7 +80,14 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 
 `/admin/` on the site (`static/admin/index.html` and `static/admin/config.yml`) is [Sveltia CMS](https://sveltiacms.app/), an editor for files in this repository. It does not change any other page of the site. Each save is a commit to `master` made through the GitHub API, and the usual workflow publishes it.
 
-- To sign in, choose "Sign In Using Access Token" and paste a GitHub personal access token. For a fine-grained token, give it access to this repository with the "Contents: Read and write" permission. The token stays in the browser.
+- To sign in, choose "Sign In with GitHub". Anyone with write access to the repository can sign in this way.
+  - Sign-in goes through an OAuth proxy, `sveltia-cms-auth` on Cloudflare Workers (`https://sveltia-cms-auth.sergey-897.workers.dev`, the `base_url` in `config.yml`). The proxy holds the GitHub OAuth App's client ID and secret in its variables, plus `ALLOWED_DOMAINS` (the site's host and `localhost`).
+  - The OAuth App is registered in the repository owner's GitHub settings, with the callback URL `<proxy>/callback`.
+  - The editor asks GitHub for the `public_repo` scope (`auth_scope`), not the default `repo`, which would also reach private repositories.
+- Another way is "Sign In Using Access Token" with a GitHub personal access token. Each editor makes their own token in their GitHub settings, and the token stays in their browser.
+  - The repository owner can use a fine-grained token: Repository access → this repository, Permissions → "Contents: Read and write".
+  - A collaborator cannot use a fine-grained token, because such a token reaches only repositories that belong to its own owner (or to an organization). A collaborator makes a classic token with the `public_repo` scope instead. It lets the editor write to every public repository they have access to, not only this one.
+  - On localhost the editor also offers to work with a local copy of the repository. In that mode "Save" writes the file to disk with no commit, and the change is committed with git as usual.
 - What can be edited: song texts (`content/texts`), translations (`content/<language>/`), and the body and title of language pages. The other front matter keys are kept as they are, though the editor writes the keys it does not know in alphabetical order. Entries cannot be created or deleted there, because a file name is the record's id in Directus. Titles, years, albums and translators are edited in Directus.
 - Texts are edited as plain text, so spaces, indentation and chords stay exactly as typed.
 - The editor puts a blank line after the front matter and writes a file with empty front matter without one. `layouts/partials/song.html` ignores blank lines before the text, so the line number in `textFinishAtLine` is not shifted.

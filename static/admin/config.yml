@@ -8,6 +8,11 @@ backend:
   name: github
   repo: zlochevsky/shcherbakov
   branch: master
+  # вход «Sign in with GitHub»: OAuth-посредник sveltia-cms-auth на Cloudflare Workers (OAuth App
+  # «Shcherbakov-sveltia-cms-auth» в настройках GitHub владельца); public_repo вместо repo по умолчанию —
+  # без доступа к приватным репозиториям. Вход по токену остаётся
+  base_url: https://sveltia-cms-auth.sergey-897.workers.dev
+  auth_scope: public_repo
   commit_messages:
     update: "CMS: {{collection}} {{slug}}"
     uploadMedia: "CMS: upload {{path}}"
