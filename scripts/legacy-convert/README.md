@@ -19,7 +19,8 @@
 `LEGACY_WWW` (например, `LEGACY_WWW=/path/to/www python3 build.py`), результат сверяется с `content/` этого репозитория.
 
 Порядок работы: прогнать `build.py`, просмотреть черновики (предупреждения о непарных кавычках, «`replace not found`»),
-дописать `meta.py`, скопировать `draft/*.md` в `content/…`, положить картинки в `static/…`, собрать сайт
+дописать `meta.py`, скопировать `draft/*.md` в `content/…`, привести их заголовки к виду редактора в браузере
+(`scripts/sveltia-normalize.py praises parodies fans`: конвертер пишет отступ 3 и свой порядок ключей), положить картинки в `static/…`, собрать сайт
 (`hugo --destination /tmp/…`), прогнать `scripts/check-links.py` и `scripts/check-separation.py`.
 Счётчик слов «исходник ↔ страница» полезен, но не ловит потерянный последний блок.
 
