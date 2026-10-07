@@ -1,12 +1,12 @@
 {
-   "title": "«Бемоля и ямба гибриды»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/bemolya.html",
-   "params": {
+    "title": "«Бемоля и ямба гибриды»",
+    "params": {
         "author": "А. Г. Копылова",
         "subtitle": "(по произведениям Михаила Щербакова)"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Praises/bemolya.html"
 }
 
 <p>Этот текст представляет собой контрольную работу, написанную в рамках курса &laquo;Семинар по современной русской литературе&raquo;, читающегося в Московском Литературном институте им. Горького на заочном отделении.</p>

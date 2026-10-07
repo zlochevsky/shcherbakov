@@ -1,13 +1,13 @@
 {
-   "title": "Бестиарий, составленный по песням М. Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/bestiar.html",
-   "lastmod": "2012-12-06",
-   "params": {
-      "backUrl": "fans/index.html#creative",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Бестиарий, составленный по песням М. Щербакова",
+    "params": {
+        "backUrl": "fans/index.html#creative",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2012-12-06",
+    "url": "/fans/bestiar.html"
 }
 
 <blockquote class="epigraph">

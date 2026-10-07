@@ -1,14 +1,14 @@
 {
-   "title": "Ответ Володи на вопрос о его предпочтениях в авторской песне",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/97-vkusy.html",
-   "lastmod": "1997-11-19",
-   "params": {
-      "author": "Владимир Смирнов",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Ответ Володи на вопрос о его предпочтениях в авторской песне",
+    "params": {
+        "author": "Владимир Смирнов",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1997-11-19",
+    "url": "/fans/smirnov/97-vkusy.html"
 }
 
 <p class="center"><i>19 ноября 1997</i></p>

@@ -1,13 +1,13 @@
 {
-   "title": "Утро в сосновом лесу",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/utro.html",
-   "params": {
-      "author": "В. Фуксман",
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Утро в сосновом лесу",
+    "params": {
+        "author": "В. Фуксман",
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Parodies/utro.html"
 }
 
 <p>Date: Mon, 5 May 1997 17:28:27 +0400 From: Valery Fouksman &lt;fv@transas.com&gt; Subject: For MKS site Вот свеженаписанное мной творение. Претендует быть пародией не то подражанием Щербакову. Использовать по усмотрению и по разумению.</p>

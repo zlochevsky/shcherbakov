@@ -1,13 +1,13 @@
 {
-   "title": "Об авторе",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/Demiurg/about.html",
-   "params": {
-      "subtitle": "Оксана Савоскул, &laquo;Мир Демиурга Щ.&raquo;",
-      "backUrl": "fans/Demiurg/index.html",
-      "backTitle": "К оглавлению"
-   }
+    "title": "Об авторе",
+    "params": {
+        "subtitle": "Оксана Савоскул, &laquo;Мир Демиурга Щ.&raquo;",
+        "backUrl": "fans/Demiurg/index.html",
+        "backTitle": "К оглавлению"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/Demiurg/about.html"
 }
 
 <p class="center"><img src="../../Images/demiurg/na_fone_slona.jpg" alt="трудности у сотого слона?"><br>

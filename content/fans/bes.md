@@ -1,12 +1,12 @@
 {
-   "title": "Вероятный генезис гостиничных сцен в «Предположим»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/bes.html",
-   "params": {
-      "backUrl": "fans/kom.html#predpolo",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "Вероятный генезис гостиничных сцен в «Предположим»",
+    "params": {
+        "backUrl": "fans/kom.html#predpolo",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/bes.html"
 }
 
 <p><i><b>Вероятный генезис гостиничных сцен в «Предположим»</b></i><br>&nbsp;<br>Описание обстоятельств самоубийства героя «Предположим» поразительно похоже на другое примечательное описание самоубийства в русской литературе:</p>

@@ -1,15 +1,15 @@
 {
-   "title": "Выдержки из обсуждения высказываний барда Владимира Капгера о творчестве М.Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/99-kapger.html",
-   "lastmod": "1999-05-10",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Обсуждение плавно перешло в дискуссию об «имитации творчества». Отрывок из интервью с Капгером, из-за которого возник этот разговор, опубликован <a href=\"../../Praises/kapger.html\">здесь</a>.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Выдержки из обсуждения высказываний барда Владимира Капгера о творчестве М.Щербакова",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Обсуждение плавно перешло в дискуссию об «имитации творчества». Отрывок из интервью с Капгером, из-за которого возник этот разговор, опубликован <a href=\"../../Praises/kapger.html\">здесь</a>.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1999-05-10",
+    "url": "/fans/smirnov/99-kapger.html"
 }
 
 <p class="center"><i>Ответ В.Смирнова на письмо NN.</i></p>

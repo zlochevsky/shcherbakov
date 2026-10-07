@@ -1,13 +1,13 @@
 {
-   "title": "Прописные истины",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/burd.html",
-   "lastmod": "2004-06-07",
-   "params": {
+    "title": "Прописные истины",
+    "params": {
         "author": "Елена Бурд",
         "subtitle": "эссе"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2004-06-07",
+    "url": "/Praises/burd.html"
 }
 
 <p class="center"><b>1</b></p>

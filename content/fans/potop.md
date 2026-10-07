@@ -1,13 +1,13 @@
 {
-   "title": "Комментарий к песням Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/potop.html",
-   "params": {
-      "author": "Дмитрий Вильмс",
-      "backUrl": "fans/index.html#creative",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Комментарий к песням Михаила Щербакова",
+    "params": {
+        "author": "Дмитрий Вильмс",
+        "backUrl": "fans/index.html#creative",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/potop.html"
 }
 
 <p>Date: Tue, 10 Mar 1998 19:33:13 +0300<br>From: «Елена Маханько» &lt;hel@kai.ru&gt;</p>

@@ -1,12 +1,12 @@
 {
-   "title": "О словах, образах и звуках. Один момент в песне «Интермедия 7»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/intermedia.html",
-   "lastmod": "2020-01-04",
-   "params": {
+    "title": "О словах, образах и звуках. Один момент в песне «Интермедия 7»",
+    "params": {
         "author": "Спиглазова А.В., Ростов-на-Дону"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2020-01-04",
+    "url": "/Praises/intermedia.html"
 }
 
 <p>Песня <a href="../texts/2008/gonistos.html">&laquo;Интермедия 7&raquo;</a> (альбом <a href="../Disks/chmuzyka1.html">&laquo;Чужая музыка и не только. Часть I&raquo;</a>, 2008г.) описывает движение по автомобильной трассе далеко за городом, время действия: <i>зима, ночь</i>.</p>

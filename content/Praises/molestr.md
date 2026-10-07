@@ -1,13 +1,13 @@
 {
-   "title": "Песни Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/molestr.html",
-   "lastmod": "2006-05-19",
-   "params": {
+    "title": "Песни Михаила Щербакова",
+    "params": {
         "author": "Л.П.Беленький",
         "subtitle": "Журнал &laquo;Молодёжная эстрада&raquo;, &#8470;5, 1988 г. С. 87."
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2006-05-19",
+    "url": "/Praises/molestr.html"
 }
 
 <p>Среди коллег по увлечению авторской песней есть и её историки (я бы сказал&nbsp;&mdash; архивариусы), добросовестно фиксирующие на бумагу все достойное упоминания: кто, что, когда сочинил, спел, опубликовал и т.п.</p>

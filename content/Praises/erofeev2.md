@@ -1,15 +1,15 @@
 {
-   "title": "Неправда всё вокруг",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/erofeev2.html",
-   "aliases": [
-      "/fans/erofeev2.html"
-   ],
-   "params": {
-      "author": "Александр Ерофеев",
-      "subtitle": "(О песне &laquo;Быстров&raquo; в контексте творчества  М.К.Щербакова)"
-   }
+    "aliases": [
+        "/fans/erofeev2.html"
+    ],
+    "title": "Неправда всё вокруг",
+    "params": {
+        "author": "Александр Ерофеев",
+        "subtitle": "(О песне &laquo;Быстров&raquo; в контексте творчества  М.К.Щербакова)"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Praises/erofeev2.html"
 }
 
 <p class="right"><b><a href="mailto:sashayerofeyev@rambler.ru">Александр Ерофеев</a></b></p>

@@ -1,12 +1,12 @@
 {
-   "title": "В присутствии любви и смерти",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/sobesednik.html",
-   "params": {
+    "title": "В присутствии любви и смерти",
+    "params": {
         "author": "Дмитрий Быков",
         "subtitle": "Статья из «Собеседника» о М.&nbsp;Щербакове (прислал Волков Федор, <a href=\"mailto:fedor@dvm.msk.ru\">fedor@dvm.msk.ru</a>)"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Praises/sobesednik.html"
 }
 
 <p><img src="../Images/standing.jpg" width="341" height="634" border="0" alt="Фото Александра Ефремова" align="left" hspace="10" vspace="10" title="Фото Александра Ефремова">

@@ -1,13 +1,13 @@
 {
-   "title": "Отрывок из программы «Один»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/bykov_echo.html",
-   "lastmod": "2016-02-07",
-   "params": {
+    "title": "Отрывок из программы «Один»",
+    "params": {
         "author": "Дмитрий Быков",
         "subtitle": "<a href=\"http://echo.msk.ru/programs/odin/1697726-echo/\">Программа</a> &laquo;Один&raquo; на &laquo;Эхо Москвы&raquo;, 22 января 2016"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2016-02-07",
+    "url": "/Praises/bykov_echo.html"
 }
 
 <p><i>&laquo;В своё время вы включили стихотворение Михаила Щербакова &bdquo;Русалка, цыганка, цикада&hellip;&ldquo; в число 100 лучших стихов русской поэзии,</i>&nbsp;&mdash; включил.&nbsp;&mdash; <i>Как вы понимаете это стихотворение? Кто такой мизерабль грандиозный, о котором говорится в последней строфе? Может быть, Иисус?&raquo;</i></p>

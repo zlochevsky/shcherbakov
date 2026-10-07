@@ -1,13 +1,13 @@
 {
-   "title": "Отрывок из интервью",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/kapger.html",
-   "lastmod": "1999-05-08",
-   "params": {
+    "title": "Отрывок из интервью",
+    "params": {
         "author": "Владимир Капгер",
         "subtitle": "интервью, данное в Германии (вопросы задавал Роман Кабаков); <a href=\"http://www.bards.de/archive/interviews/kapgint.htm\">полный текст</a> прислал Илья Тимаков"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1999-05-08",
+    "url": "/Praises/kapger.html"
 }
 
 <p>Date: Fri, 7 May 1999 21:33:01 +0200<br>

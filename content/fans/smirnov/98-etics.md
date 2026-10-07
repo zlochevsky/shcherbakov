@@ -1,15 +1,15 @@
 {
-   "title": "Об этике общения на листе клуба",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/98-etics.html",
-   "lastmod": "1998-06-21",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "А также еще о проблемах торгашества и пиратства (письмо по мотивам той же дискуссии).",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Об этике общения на листе клуба",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "А также еще о проблемах торгашества и пиратства (письмо по мотивам той же дискуссии).",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-06-21",
+    "url": "/fans/smirnov/98-etics.html"
 }
 
 <p class="center"><i>Date: Sun, 21 Jun 1998 18:52:57 -0400 (EDT)<br>

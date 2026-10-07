@@ -1,12 +1,12 @@
 {
-   "title": "Пилигрим слова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/piligrim.html",
-   "lastmod": "2005-01-15",
-   "params": {
+    "title": "Пилигрим слова",
+    "params": {
         "author": "Игнат Меренков"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2005-01-15",
+    "url": "/Praises/piligrim.html"
 }
 
 <blockquote class="epigraph">

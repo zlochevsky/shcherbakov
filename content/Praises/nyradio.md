@@ -1,13 +1,13 @@
 {
-   "title": "Философское очарование",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/nyradio.html",
-   "lastmod": "2005-03-16",
-   "params": {
+    "title": "Философское очарование",
+    "params": {
         "author": "Михаил Щербаков",
         "subtitle": "интервью на радио «Новая Жизнь» 620 AM в Нью-Йорке, 6 мая 2003"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2005-03-16",
+    "url": "/Praises/nyradio.html"
 }
 
 <p>&mdash; Миша, вы в Америке на гастролях выступаете то в еврейском центре, то еще где-то. А вообще, имеет значение, где выступать?</p>

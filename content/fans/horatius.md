@@ -1,12 +1,12 @@
 {
-   "title": "Ad Leuconoen",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/horatius.html",
-   "params": {
-      "backUrl": "fans/kom.html#adleucon",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "Ad Leuconoen",
+    "params": {
+        "backUrl": "fans/kom.html#adleucon",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/horatius.html"
 }
 
 <p>From: <a href="mailto:Berdn@MIT.EDU">Boris Berdnikov</a></p>

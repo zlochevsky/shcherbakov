@@ -1,13 +1,13 @@
 {
-   "title": "Ковчег, еще ковчег",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/eli-kovcheg.html",
-   "lastmod": "1998-07-01",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Ковчег, еще ковчег",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-07-01",
+    "url": "/Parodies/eli-kovcheg.html"
 }
 
 <p>Date: Fri, 9 May 1997 22:18:24 +0300 (IDT)<br>From: <a href="mailto:massi@cs.technion.ac.il">Eliyahu Bar-Yahalom</a></p>

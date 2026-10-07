@@ -1,13 +1,13 @@
 {
-   "title": "8 октября 2007 года",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/smirnov30.html",
-   "params": {
-      "subtitle": "создателю этого сайта Володе Смирнову исполнилось бы 37 лет.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "8 октября 2007 года",
+    "params": {
+        "subtitle": "создателю этого сайта Володе Смирнову исполнилось бы 37 лет.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/smirnov/smirnov30.html"
 }
 
 <p class="center"><img src="../../Images/smirnov/smirnov_git.jpg" width="309" height="269" alt="Володя Смирнов"></p>

@@ -1,15 +1,15 @@
 {
-   "title": "О песнях на стихи Бродского и вообще о сочинительстве песен",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/96-brodetc.html",
-   "lastmod": "1996-09-11",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Отрывки из дискуссии.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "О песнях на стихи Бродского и вообще о сочинительстве песен",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Отрывки из дискуссии.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1996-09-11",
+    "url": "/fans/smirnov/96-brodetc.html"
 }
 
 <p class="center"><i>11 сентября 1996 года</i></p>

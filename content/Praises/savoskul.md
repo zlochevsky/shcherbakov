@@ -1,13 +1,13 @@
 {
-   "title": "Михаил Щербаков: постмодернистское лицо авторской песни",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/savoskul.html",
-   "lastmod": "2007-11-27",
-   "params": {
+    "title": "Михаил Щербаков: постмодернистское лицо авторской песни",
+    "params": {
         "author": "Оксана Савоскул",
         "subtitle": "<a href=\"http://www.russ.ru/culture/teksty/mihail_scherbakov_postmodernistskoe_lico_avtorskoj_pesni\">&laquo;Русский журнал&raquo;</a>, 27 ноября 2007"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2007-11-27",
+    "url": "/Praises/savoskul.html"
 }
 
 <h2>Вместо предисловия</h2>

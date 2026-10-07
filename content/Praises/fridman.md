@@ -1,13 +1,13 @@
 {
-   "title": "Творчество М. Щербакова: короткая заметка о возможных реформах наук и искусств",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/fridman.html",
-   "lastmod": "1998-12-15",
-   "params": {
+    "title": "Творчество М. Щербакова: короткая заметка о возможных реформах наук и искусств",
+    "params": {
         "author": "Юлия Фридман",
         "subtitle": "Статья в <a href=\"http://old.russ.ru/journal/culture/98-12-10/avtor.htm\">&laquo;Русском Журнале&raquo;</a>"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-12-15",
+    "url": "/Praises/fridman.html"
 }
 
 <p><b><a href="mailto:yulya@thelema.dnttm.rssi.ru">Юля Фридман</a></b></p>

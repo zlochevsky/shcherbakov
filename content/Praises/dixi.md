@@ -1,13 +1,13 @@
 {
-   "title": "Михаил Щербаков vs «АукцЫон»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/dixi.html",
-   "lastmod": "2003-06-27",
-   "params": {
+    "title": "Михаил Щербаков vs «АукцЫон»",
+    "params": {
         "author": "Константин Крылов",
         "subtitle": "Coincidentia oppositorum"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2003-06-27",
+    "url": "/Praises/dixi.html"
 }
 
 <p>...Разумеется, никакой особенной нужды в каких-то внеочередных выпусках нет и не предвидится. Просто вот под настроение… а пуркуа бы не па.</p>

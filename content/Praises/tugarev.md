@@ -1,12 +1,12 @@
 {
-   "title": "Михаил Щербаков и возможности русского стиха",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/tugarev.html",
-   "lastmod": "2007-06-29",
-   "params": {
+    "title": "Михаил Щербаков и возможности русского стиха",
+    "params": {
         "author": "Алексей Тугарев"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2007-06-29",
+    "url": "/Praises/tugarev.html"
 }
 
 <blockquote class="epigraph">

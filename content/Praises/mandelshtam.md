@@ -1,13 +1,13 @@
 {
-   "title": "Осколки того витража: преломление еврейских мотивов Мандельштама в поэзии Александра Еременко и Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/mandelshtam.html",
-   "lastmod": "2010-02-13",
-   "params": {
+    "title": "Осколки того витража: преломление еврейских мотивов Мандельштама в поэзии Александра Еременко и Михаила Щербакова",
+    "params": {
         "author": "klezmerchik",
         "subtitle": "Chapters from a term paper in Russian Lit (Harvard, Spring 2004). <a href='http://klezmerchik.livejournal.com/'>klezmerchik</a>"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2010-02-13",
+    "url": "/Praises/mandelshtam.html"
 }
 
 <p> Mandelshtam's poetics deeply affected the creativity of many Russian poets. The phenomenon of Mandelshtam's overarching influence on young poets was noted by Anna Akhmatova in the early 1960s: "<i>Два поэта породили целые полчища учеников &mdash; Гумилёв и Мандельштам. [...] Второй &mdash; сейчас (1961); им бредит почти вся начинающая молодежь Москвы и Ленинграда</i>". Young poets continued to fall under Mandelshtam's spell long after Akhmatova's observations in 1961. To what extent did the Jewish elements in Mandelshtam's texts play a role in his influence? I will try to examine this issue using examples from two Russian poets, Aleksandr Eremenko and Mikhail Shcherbakov. They came of age in the 1970s and 1980s respectively, and it is important here that they are both ethnic Russians and did not face intrinsic Russian-Jewish dilemmas like many of their Jewish peers in Russia. Both Eremenko and Shcherbakov are among the leading Russian poets of their generations, and both have made very important literary contributions. Both poets apparently share Mandelshtam's view that "<i>Цитата не есть выписка. Цитата есть цикада. Неумолкаемость ей свойственна. Вцепившись в воздух, она его не отпускает. Эрудиция далеко не тождественна упоминательной клавиатуре, которая и составляет самую сущность образования</i>" ("Разговор о Данте") and liberally use direct (Eremenko) or hidden (Shcherbakov) quotations in their verses .</p>

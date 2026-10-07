@@ -1,13 +1,13 @@
 {
-   "title": "Анонс концерта",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/concert0305.html",
-   "lastmod": "2005-03-21",
-   "params": {
+    "title": "Анонс концерта",
+    "params": {
         "author": "Андрей Тимофеев",
         "subtitle": "Михаил Щербаков"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2005-03-21",
+    "url": "/Praises/concert0305.html"
 }
 
 <p>19 марта, суббота, 18:00.<br>

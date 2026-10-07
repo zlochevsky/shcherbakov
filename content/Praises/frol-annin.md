@@ -1,12 +1,12 @@
 {
-   "title": "«Заговоренная бездна» и ее разоблачение",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/frol-annin.html",
-   "lastmod": "2000-05-06",
-   "params": {
+    "title": "«Заговоренная бездна» и ее разоблачение",
+    "params": {
         "author": "Татьяна Фроликова"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2000-05-06",
+    "url": "/Praises/frol-annin.html"
 }
 
 <blockquote class="epigraph">

@@ -1,12 +1,12 @@
 {
-   "title": "Эти глаза напротив",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/nikst-glaza.html",
-   "params": {
-      "backUrl": "fans/kom.html#etiglaza",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "Эти глаза напротив",
+    "params": {
+        "backUrl": "fans/kom.html#etiglaza",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/nikst-glaza.html"
 }
 
 <p>From: nikst@glasnet.ru<br>Newsgroups: soc.culture.russian.moderated<br>Subject: Памяти Валерия ОБОДЗИНСКОГО&nbsp;&mdash; 4</p>

@@ -1,12 +1,12 @@
 {
-   "title": "Отрывок из интервью",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/bo2.html",
-   "lastmod": "2008-01-03",
-   "params": {
+    "title": "Отрывок из интервью",
+    "params": {
         "author": "Булат Окуджава"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2008-01-03",
+    "url": "/Praises/bo2.html"
 }
 
 <p>[...]</p>

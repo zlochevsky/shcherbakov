@@ -1,9 +1,9 @@
 {
-   "title": "Щербаков, «Интермедия-5» («Маросейка»)",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/essay.html",
-   "lastmod": "2003-09-10"
+    "title": "Щербаков, «Интермедия-5» («Маросейка»)",
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2003-09-10",
+    "url": "/Praises/essay.html"
 }
 
 <p>Самая мрачная (отвратная физиологически, въедающаяся) вещь с диска «Если». Объясню почему.</p>

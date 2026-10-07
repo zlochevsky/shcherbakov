@@ -1,13 +1,13 @@
 {
-   "title": "Обсуждения",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/discussion.html",
-   "lastmod": "2022-08-07",
-   "params": {
-      "backUrl": "fans/index.html",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Обсуждения",
+    "params": {
+        "backUrl": "fans/index.html",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2022-08-07",
+    "url": "/fans/discussion.html"
 }
 
 <p>Здесь мы собираем ссылки на интересные обсуждения различных аспектов творчества М.Щербакова&nbsp;&mdash; из <a href="https://www.livejournal.com/">Живого Журнала</a> и прочих мест.<br>Дополнения и предложения по усовершенствованию <a href="mailto:iam@deniskhin.ru">принимаются</a>.</p>

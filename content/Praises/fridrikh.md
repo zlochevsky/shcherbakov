@@ -1,13 +1,13 @@
 {
-   "title": "Куда идёт Фридрих?",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/fridrikh.html",
-   "lastmod": "2006-04-29",
-   "params": {
+    "title": "Куда идёт Фридрих?",
+    "params": {
         "author": "A.Г.Копылова",
         "subtitle": "(анализ текста песни М.Щербакова &laquo;Фридрих идёт&raquo;)"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2006-04-29",
+    "url": "/Praises/fridrikh.html"
 }
 
 <p>Этот текст представляет собой контрольную работу, написанную в рамках курса &laquo;Теория стихосложения&raquo;, читающегося в Московском Литературном институте им. Горького на заочном отделении.</p>

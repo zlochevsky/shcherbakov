@@ -1,13 +1,13 @@
 {
-   "title": "Филология в нотах и звуках.",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/rychkova.html",
-   "lastmod": "2007-10-21",
-   "params": {
+    "title": "Филология в нотах и звуках.",
+    "params": {
         "author": "Ольга Рычкова",
         "subtitle": "Михаил Щербаков: пират верхом на зебре"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2007-10-21",
+    "url": "/Praises/rychkova.html"
 }
 
 <p><strong>Михаил Щербаков. Тринадцать дисков: Тексты песен.&nbsp;&mdash; М.: Время, 2007.&nbsp;&mdash; 400 с.</strong></p>

@@ -1,15 +1,15 @@
 {
-   "title": "О диске «Ложный шаг»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/98-fauxpas.html",
-   "lastmod": "1998-06-12",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Письмо Смирнова о первых впечатлениях от услышанного.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "О диске «Ложный шаг»",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Письмо Смирнова о первых впечатлениях от услышанного.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-06-12",
+    "url": "/fans/smirnov/98-fauxpas.html"
 }
 
 <p class="center"><i>Date: Fri, 12 Jun 1998 09:47:05 -0400 (EDT)<br>

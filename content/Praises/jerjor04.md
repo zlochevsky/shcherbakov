@@ -1,13 +1,13 @@
 {
-   "title": "Михаил Щербаков в поддержку «Иерусалимского журнала»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/jerjor04.html",
-   "lastmod": "2006-12-29",
-   "params": {
+    "title": "Михаил Щербаков в поддержку «Иерусалимского журнала»",
+    "params": {
         "author": "Ольга Коган",
         "subtitle": "рецензия на выступление 2004 г. в Иерусалиме"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2006-12-29",
+    "url": "/Praises/jerjor04.html"
 }
 
 <img src="../Images/mksjj.jpg" alt="Выступление Михаила Щербакова (фото Михаила Фельдмана, АЕН)" align="right" title="Выступление Михаила Щербакова (фото Михаила Фельдмана, АЕН)" hspace="20" vspace="10">

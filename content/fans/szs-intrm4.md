@@ -1,12 +1,12 @@
 {
-   "title": "Интермедия — 4",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/szs-intrm4.html",
-   "params": {
-      "backUrl": "fans/kom.html#interme4",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "Интермедия — 4",
+    "params": {
+        "backUrl": "fans/kom.html#interme4",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/szs-intrm4.html"
 }
 
 <p>«Зачем казнили гения?»&nbsp;&mdash; Джордано Бруно (1548-1600) был сожжен на костре инквизицией за пропаганду гелиоцентрической теории Коперника.</p>

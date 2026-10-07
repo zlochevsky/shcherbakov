@@ -1,12 +1,12 @@
 {
-   "title": "БУМАЖНЫЙ СОЛДАТ, БРОНЗОВЫЙ АНГЕЛ. Булат Окуджава — Михаил Щербаков: преемственности и параллели",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/cyxapeb2.html",
-   "lastmod": "2010-04-13",
-   "params": {
+    "title": "БУМАЖНЫЙ СОЛДАТ, БРОНЗОВЫЙ АНГЕЛ. Булат Окуджава — Михаил Щербаков: преемственности и параллели",
+    "params": {
         "author": "Евгений Сухарев"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2010-04-13",
+    "url": "/Praises/cyxapeb2.html"
 }
 
 <p class="center">* * *</p>

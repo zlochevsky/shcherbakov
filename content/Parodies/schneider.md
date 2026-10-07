@@ -1,13 +1,13 @@
 {
-   "title": "Пародии Виктора Шнейдера",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/schneider.html",
-   "lastmod": "1999-11-26",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Пародии Виктора Шнейдера",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1999-11-26",
+    "url": "/Parodies/schneider.html"
 }
 
 <blockquote>

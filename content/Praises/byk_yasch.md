@@ -1,13 +1,13 @@
 {
-   "title": "Белый Ящер с белого берега",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/byk_yasch.html",
-   "lastmod": "2004-01-15",
-   "params": {
+    "title": "Белый Ящер с белого берега",
+    "params": {
         "author": "Дмитрий Быков",
         "subtitle": "Михаил Щербаков. «Если». Песни 2001&nbsp;&mdash; 2002. CD-обозрение"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2004-01-15",
+    "url": "/Praises/byk_yasch.html"
 }
 
 <p>Когда &laquo;Огонек&raquo;&nbsp;&mdash; после перемены менеджмента, собственника и редактора&nbsp;&mdash; съехал

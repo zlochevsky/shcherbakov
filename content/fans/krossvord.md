@@ -1,12 +1,12 @@
 {
-   "title": "Кроссворды",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/krossvord.html",
-   "params": {
+    "title": "Кроссворды",
+    "params": {
         "backUrl": "fans/index.html#creative",
         "backTitle": "Назад в Фан-Клуб"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/krossvord.html"
 }
 
 <h2>Кроссворд 1 (М. Пасуманский)</h2>
@@ -274,4 +274,3 @@
 <li value="38">Живущая в выдумке</li>
 <li value="39">п.37 по г., бронированный</li>
 </ol>
-

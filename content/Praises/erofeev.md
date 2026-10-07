@@ -1,15 +1,15 @@
 {
-   "title": "Про Щербакова, авторскую песню и чудеса",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/erofeev.html",
-   "lastmod": "2015-03-24",
-   "aliases": [
-      "/fans/erofeev.html"
-   ],
-   "params": {
-      "author": "Александр Ерофеев"
-   }
+    "aliases": [
+        "/fans/erofeev.html"
+    ],
+    "title": "Про Щербакова, авторскую песню и чудеса",
+    "params": {
+        "author": "Александр Ерофеев"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2015-03-24",
+    "url": "/Praises/erofeev.html"
 }
 
 <p class="right"><b><a href="mailto:sashayerofeyev@rambler.ru">Александр Ерофеев</a></b></p>

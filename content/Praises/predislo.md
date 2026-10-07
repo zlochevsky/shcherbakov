@@ -1,12 +1,12 @@
 {
-   "title": "Михаил Щербаков: постмодернистское лицо авторской песни",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/predislo.html",
-   "params": {
-      "author": "Оксана Савоскул",
-      "subtitle": "Вместо предисловия"
-   }
+    "title": "Михаил Щербаков: постмодернистское лицо авторской песни",
+    "params": {
+        "author": "Оксана Савоскул",
+        "subtitle": "Вместо предисловия"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Praises/predislo.html"
 }
 
 <p><i>МКЩ: Сборник статей о творчестве Михаила Щербакова / Сост. О.C.Савоскул.&nbsp;&mdash; М.: ОГИ, 2008.&nbsp;&mdash; 312 с. ISBN 9785942824556.</i></p>

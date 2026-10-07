@@ -1,13 +1,13 @@
 {
-   "title": "Пародии Валентина Евстафьева",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/nenado.html",
-   "lastmod": "2006-12-09",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Пародии Валентина Евстафьева",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2006-12-09",
+    "url": "/Parodies/nenado.html"
 }
 
 <hr>

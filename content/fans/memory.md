@@ -1,13 +1,13 @@
 {
-   "title": "Карточки для игры в пиксисо (мемори) по песням Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/memory.html",
-   "lastmod": "2006-01-14",
-   "params": {
-      "backUrl": "fans/index.html#creative",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Карточки для игры в пиксисо (мемори) по песням Щербакова",
+    "params": {
+        "backUrl": "fans/index.html#creative",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2006-01-14",
+    "url": "/fans/memory.html"
 }
 
 <!--TABLE cellSpacing=10 width="100%" bgColor=green>

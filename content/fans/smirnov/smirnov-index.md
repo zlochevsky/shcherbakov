@@ -1,11 +1,11 @@
 {
-   "title": "Володя Смирнов: О Щербакове и не только",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/index.html",
-   "params": {
-      "subtitle": "Мемориальные страницы"
-   }
+    "title": "Володя Смирнов: О Щербакове и не только",
+    "params": {
+        "subtitle": "Мемориальные страницы"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/smirnov/index.html"
 }
 
 <p class="center"><img src="../../Images/smirnov/smirnov.jpg" width="188" height="232" alt="Володя Смирнов"></p>

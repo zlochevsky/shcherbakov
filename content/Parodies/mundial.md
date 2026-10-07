@@ -1,13 +1,13 @@
 {
-   "title": "Пародии Евгения Рубашкина",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/mundial.html",
-   "lastmod": "2008-06-05",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Пародии Евгения Рубашкина",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2008-06-05",
+    "url": "/Parodies/mundial.html"
 }
 
 <hr>

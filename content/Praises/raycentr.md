@@ -1,12 +1,12 @@
 {
-   "title": "Михаил Щербаков — «Райцентр»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/raycentr.html",
-   "lastmod": "2006-11-11",
-   "params": {
+    "title": "Михаил Щербаков — «Райцентр»",
+    "params": {
         "author": "Лев Наумов"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2006-11-11",
+    "url": "/Praises/raycentr.html"
 }
 
 <img src="../Images/raycentr1.jpg" alt="Михаил Щербаков - Райцентр" align="left" hspace="10"><span style="font-size: 9px; line-height: normal">М. Щербаков, 2006</span>

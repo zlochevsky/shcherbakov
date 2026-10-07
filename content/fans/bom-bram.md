@@ -1,13 +1,13 @@
 {
-   "title": "бом-брам-рей-грот-шкот",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/bom-bram.html",
-   "lastmod": "1997-05-08",
-   "params": {
-      "backUrl": "fans/kom.html#neznajuk",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "бом-брам-рей-грот-шкот",
+    "params": {
+        "backUrl": "fans/kom.html#neznajuk",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1997-05-08",
+    "url": "/fans/bom-bram.html"
 }
 
 <p>Date: Thu, 8 May 1997 20:49:08 -0700<br>From: <a href="mailto:moshap@usa.net">Mosha Pasumansky</a><br>Subject: Slovar' zamorskix slov</p>

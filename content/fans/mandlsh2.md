@@ -1,12 +1,12 @@
 {
-   "title": "«Прощальный марш» и Мандельштам",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/mandlsh2.html",
-   "params": {
-      "backUrl": "fans/kom.html#proschalm",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "«Прощальный марш» и Мандельштам",
+    "params": {
+        "backUrl": "fans/kom.html#proschalm",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/mandlsh2.html"
 }
 
 <h3>О перекличке между текстом песни и стихотворениями О.&nbsp;Мандельштама</h3>

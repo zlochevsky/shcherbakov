@@ -1,12 +1,12 @@
 {
-   "title": "Бодлеровская атмосфера в песне Щербакова «Опять Париж»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/baudelaire.html",
-   "lastmod": "2004-05-15",
-   "params": {
+    "title": "Бодлеровская атмосфера в песне Щербакова «Опять Париж»",
+    "params": {
         "author": "Ксения Павленко"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2004-05-15",
+    "url": "/Praises/baudelaire.html"
 }
 
 <p>В песне Щербакова <a href="../texts/2004/opyatpar.html">«Опять Париж»</a> («Париж-2») очень много общего со стилистикой <a href="http://feb-web.ru/feb/litenc/encyclop/le1/le1-5471.htm">Шарля Бодлера</a> (французского поэта-символиста).</p>

@@ -1,15 +1,15 @@
 {
-   "title": "Снова о «несуществующих песнях»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/98-oldsongs2.html",
-   "lastmod": "1998-07-09",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Выдержки из двух разных писем.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Снова о «несуществующих песнях»",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Выдержки из двух разных писем.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-07-09",
+    "url": "/fans/smirnov/98-oldsongs2.html"
 }
 
 <p class="center"><i>Date: Mon, 8 Jun 1998 12:45:07 -0400 (EDT)<br>

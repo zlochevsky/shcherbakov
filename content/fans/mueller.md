@@ -1,12 +1,12 @@
 {
-   "title": "Gute Nacht — переводы",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/mueller.html",
-   "params": {
-      "backUrl": "fans/kom.html#eccehomo",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "Gute Nacht — переводы",
+    "params": {
+        "backUrl": "fans/kom.html#eccehomo",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/mueller.html"
 }
 
 <p>From: Ledeniov Oleg [olleg@cs.technion.ac.il]<br>Итак, текст принадлежит немецкому поэту по имени Вильгельм Мюллер и входит в цикл «Winterreise» («Зимний путь»). Шуберт написал свой песенный цикл в 1827 году. [...] Есть к нему английский перевод, вполне художественный...<br>(русские переводы <a href="#rus">ниже</a>.&nbsp;&mdash; Ред.)</p>

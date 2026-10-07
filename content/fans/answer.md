@@ -1,13 +1,13 @@
 {
-   "title": "Ответы на кроссворд по песням 1990-1994",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/answer.html",
-   "params": {
-      "author": "С. Карина",
-      "backUrl": "fans/crossword.html",
-      "backTitle": "Кроссворд"
-   }
+    "title": "Ответы на кроссворд по песням 1990-1994",
+    "params": {
+        "author": "С. Карина",
+        "backUrl": "fans/crossword.html",
+        "backTitle": "Кроссворд"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/answer.html"
 }
 
 <hr>

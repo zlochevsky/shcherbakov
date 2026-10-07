@@ -1,13 +1,13 @@
 {
-   "title": "Передача-4 (о творчестве Михаила Щербакова)",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/fullmoon.html",
-   "lastmod": "2003-06-27",
-   "params": {
+    "title": "Передача-4 (о творчестве Михаила Щербакова)",
+    "params": {
         "author": "Александр Филатов, Александр Ощепков",
         "subtitle": "Творческая студия &laquo;Полнолуние&raquo; (радио &laquo;Пик&raquo;, Иркутск)&nbsp;&mdash; прямой эфир, звонки слушателей."
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2003-06-27",
+    "url": "/Praises/fullmoon.html"
 }
 
 <hr>

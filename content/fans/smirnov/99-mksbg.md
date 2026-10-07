@@ -1,14 +1,14 @@
 {
-   "title": "Отрывок из дискуссии о различиях и сходствах между песнями М.Щербакова, композициями Б.Гребенщикова и произведениями В.Пелевина",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/99-mksbg.html",
-   "lastmod": "1999-03-14",
-   "params": {
-      "author": "Владимир Смирнов",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Отрывок из дискуссии о различиях и сходствах между песнями М.Щербакова, композициями Б.Гребенщикова и произведениями В.Пелевина",
+    "params": {
+        "author": "Владимир Смирнов",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1999-03-14",
+    "url": "/fans/smirnov/99-mksbg.html"
 }
 
 <p class="center"><i>Из ответа В.Смирнова на письмо NN.</i></p>

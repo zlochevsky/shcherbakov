@@ -1,12 +1,12 @@
 {
-   "title": "Андрей Андрианов",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/andrianov.html",
-   "params": {
-      "backUrl": "fans/index.html#articles",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Андрей Андрианов",
+    "params": {
+        "backUrl": "fans/index.html#articles",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/andrianov.html"
 }
 
 <p>Возникновение Щербакова в свое время было абсолютной сенсацией. Ходила версия «Да нет, не может такого быть, наверняка никакого Щербакова не существует, а это Ким мистифицирует народ от имени воображаемого автора с простой русской фамилией».</p>

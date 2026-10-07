@@ -1,15 +1,15 @@
 {
-   "title": "О песне «Предположим»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/97-predpolo.html",
-   "lastmod": "1997-09-23",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Текст этой песни находится <a href=\"../../texts/1995/predpolo.html\">здесь</a>.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "О песне «Предположим»",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Текст этой песни находится <a href=\"../../texts/1995/predpolo.html\">здесь</a>.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1997-09-23",
+    "url": "/fans/smirnov/97-predpolo.html"
 }
 
 <p class="center"><i>From: "Vladimir Smirnov" &lt;vladimir@atmosp.physics.utoronto.ca&gt;<br>

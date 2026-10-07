@@ -1,12 +1,12 @@
 {
-   "title": "«Прощание с Петербургом» и Мандельштам",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/mandlsht.html",
-   "params": {
-      "backUrl": "fans/kom.html#proschanie",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "«Прощание с Петербургом» и Мандельштам",
+    "params": {
+        "backUrl": "fans/kom.html#proschanie",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/mandlsht.html"
 }
 
 <h3>О связи текста «Прощания с Петербургом» со стихотворением Мандельштама</h3>

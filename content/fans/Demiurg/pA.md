@@ -1,13 +1,13 @@
 {
-   "title": "Глава 10. Заключение: игра в Бисер",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/Demiurg/pA.html",
-   "params": {
-      "author": "Оксана Савоскул",
-      "backUrl": "fans/Demiurg/index.html",
-      "backTitle": "К оглавлению"
-   }
+    "title": "Глава 10. Заключение: игра в Бисер",
+    "params": {
+        "author": "Оксана Савоскул",
+        "backUrl": "fans/Demiurg/index.html",
+        "backTitle": "К оглавлению"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/Demiurg/pA.html"
 }
 
 <p class="center"><img src="../../Images/demiurg/smallA1.jpg" alt="Экзекиас. Ахиллес и Аякс за настольной игрой. Деталь амфоры, 540-530 до н.э."></p>

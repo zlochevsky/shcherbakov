@@ -1,13 +1,13 @@
 {
-   "title": "Эвксинский понт",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/bykov_pont.html",
-   "lastmod": "2000-04-12",
-   "params": {
+    "title": "Эвксинский понт",
+    "params": {
         "author": "Дмитрий Быков",
         "subtitle": "М.&nbsp;Щербакову"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2000-04-12",
+    "url": "/Praises/bykov_pont.html"
 }
 
 <blockquote>

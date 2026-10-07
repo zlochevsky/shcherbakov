@@ -1,14 +1,14 @@
 {
-   "title": "Породии",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/filatov.html",
-   "lastmod": "2006-12-09",
-   "params": {
-      "author": "Александр Филатов",
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Породии",
+    "params": {
+        "author": "Александр Филатов",
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2006-12-09",
+    "url": "/Parodies/filatov.html"
 }
 
 <p><a href="http://polnolunie.baikal.ru/me/porodii.htm">Оригинал</a>&nbsp;&mdash; на Полнолунии</p>

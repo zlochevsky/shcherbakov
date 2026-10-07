@@ -1,14 +1,14 @@
 {
-   "title": "Одно интересное наблюдение",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/97-nabljud.html",
-   "lastmod": "1997-12-20",
-   "params": {
-      "author": "Владимир Смирнов",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Одно интересное наблюдение",
+    "params": {
+        "author": "Владимир Смирнов",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1997-12-20",
+    "url": "/fans/smirnov/97-nabljud.html"
 }
 
 <p class="center"><i>From: "Vladimir Smirnov" &lt;vladimir@atmosp.physics.utoronto.ca&gt;<br>

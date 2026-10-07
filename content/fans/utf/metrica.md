@@ -1,12 +1,12 @@
 {
-   "title": "Метрический репертуар Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/utf/metrica.html",
-   "lastmod": "2024-11-26",
-   "params": {
-      "author": "Алексей Тугарев"
-   }
+    "title": "Метрический репертуар Михаила Щербакова",
+    "params": {
+        "author": "Алексей Тугарев"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2024-11-26",
+    "url": "/fans/utf/metrica.html"
 }
 
 <h2>Введение</h2>

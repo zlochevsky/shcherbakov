@@ -1,13 +1,13 @@
 {
-   "title": "Фан-Клуб М. Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/index.html",
-   "params": {
+    "title": "Фан-Клуб М. Щербакова",
+    "params": {
         "backUrl": "index.html",
         "backTitle": "На главную",
         "bgColor": "#E0FFFF"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/index.html"
 }
 
 <h2>Мемориальные страницы</h2>

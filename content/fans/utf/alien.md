@@ -1,12 +1,12 @@
 {
-   "title": "Чужая (и своя, но ранее написанная) музыка в песнях Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/utf/alien.html",
-   "lastmod": "2024-11-26",
-   "params": {
-      "author": "Алексей Тугарев"
-   }
+    "title": "Чужая (и своя, но ранее написанная) музыка в песнях Михаила Щербакова",
+    "params": {
+        "author": "Алексей Тугарев"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2024-11-26",
+    "url": "/fans/utf/alien.html"
 }
 
 <h2>1. Песни, написанные на ранее известные мелодии</h2>

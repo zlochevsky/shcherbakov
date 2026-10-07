@@ -1,15 +1,15 @@
 {
-   "title": "О песне «Пускай...»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/98-puskaj.html",
-   "lastmod": "1998-12-14",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Текст песни см. вот <a href=\"../../texts/1993/puskaj.html\">здесь</a>.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "О песне «Пускай...»",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Текст песни см. вот <a href=\"../../texts/1993/puskaj.html\">здесь</a>.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-12-14",
+    "url": "/fans/smirnov/98-puskaj.html"
 }
 
 <p class="center"><i>Ответ В.Смирнова на письмо NN.</i></p>

@@ -1,13 +1,13 @@
 {
-   "title": "Научились дышать в безвоздушном пространстве",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/novremya.html",
-   "lastmod": "2006-05-19",
-   "params": {
+    "title": "Научились дышать в безвоздушном пространстве",
+    "params": {
         "author": "Дмитрий Быков",
         "subtitle": "Журнал &laquo;Новое время&raquo;, &#8470;&nbsp;18-19, 1994. С.&nbsp;44-46."
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2006-05-19",
+    "url": "/Praises/novremya.html"
 }
 
 <h2>Поэзии нет. Есть поэты</h2>

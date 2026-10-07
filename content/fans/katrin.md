@@ -1,15 +1,15 @@
 {
-   "title": "Витамин Щ, или Под псевдонимом Фортуны",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/katrin.html",
-   "lastmod": "2021-08-14",
-   "params": {
-      "author": "Catherine",
-      "subtitle": "Пьеса",
-      "backUrl": "fans/index.html#creative",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Витамин Щ, или Под псевдонимом Фортуны",
+    "params": {
+        "author": "Catherine",
+        "subtitle": "Пьеса",
+        "backUrl": "fans/index.html#creative",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2021-08-14",
+    "url": "/fans/katrin.html"
 }
 
 <blockquote>Неизгладимой памяти<br>Александра Кайдановского<br>в числе многих прочих<br>посвящается...</blockquote>

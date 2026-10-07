@@ -1,12 +1,12 @@
 {
-   "title": "Бездна звёзд",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/anninskij.html",
-   "lastmod": "2009-01-21",
-   "params": {
+    "title": "Бездна звёзд",
+    "params": {
         "author": "Лев Аннинский"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2009-01-21",
+    "url": "/Praises/anninskij.html"
 }
 
 <blockquote class="epigraph">

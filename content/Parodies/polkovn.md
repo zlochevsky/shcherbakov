@@ -1,14 +1,14 @@
 {
-   "title": "Полковник",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/polkovn.html",
-   "lastmod": "2009-06-25",
-   "params": {
-      "author": "Александр Воронцов",
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Полковник",
+    "params": {
+        "author": "Александр Воронцов",
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2009-06-25",
+    "url": "/Parodies/polkovn.html"
 }
 
 <h3>* * *</h3>

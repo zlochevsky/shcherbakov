@@ -1,12 +1,12 @@
 {
-   "title": "О двух песнях Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/art_2pesni.html",
-   "lastmod": "2000-04-12",
-   "params": {
+    "title": "О двух песнях Щербакова",
+    "params": {
         "author": "Артем Казанцев"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2000-04-12",
+    "url": "/Praises/art_2pesni.html"
 }
 
 <p>После прослушивания т.н. &laquo;Американской&raquo; кассеты меня не оставляло чувство, что что-то незаметно ушло из песен, то, что меня притягивает мистическим образом к творчеству Щербакова. Но вот что?</p>

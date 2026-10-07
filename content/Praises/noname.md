@@ -1,12 +1,12 @@
 {
-   "title": "Почему у песни «Без названия» такое название?",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/noname.html",
-   "lastmod": "2014-10-27",
-   "params": {
+    "title": "Почему у песни «Без названия» такое название?",
+    "params": {
         "author": "Александра Спиглазова"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2014-10-27",
+    "url": "/Praises/noname.html"
 }
 
 <blockquote class="epigraph">

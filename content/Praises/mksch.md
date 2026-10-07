@@ -1,9 +1,9 @@
 {
-   "title": "МКЩ: Сборник статей о творчестве Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/mksch.html",
-   "lastmod": "2007-12-30"
+    "title": "МКЩ: Сборник статей о творчестве Михаила Щербакова",
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2007-12-30",
+    "url": "/Praises/mksch.html"
 }
 
 <p><img src="../Images/mksch.gif" width="172" height="252" style="float:left; margin: 0 20px 10px 0;"></p>

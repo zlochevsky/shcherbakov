@@ -1,11 +1,11 @@
 {
-   "title": "«Chinatown»: как это делается",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/kartashov.html",
-   "params": {
+    "title": "«Chinatown»: как это делается",
+    "params": {
         "author": "Алексей Карташов"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Praises/kartashov.html"
 }
 
 <p>Щербакова часто упрекают в избыточности текста, в многословии и запутанности в ущерб смыслу. На примере стихотворения Chinatown мне хочется показать, как форма идеально работает на содержание.</p>

@@ -1,15 +1,15 @@
 {
-   "title": "«С оркестром или без?»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/96-orkestr.html",
-   "lastmod": "1996-09-12",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Разговор о том, как лучше звучат песни Щербакова.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "«С оркестром или без?»",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Разговор о том, как лучше звучат песни Щербакова.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1996-09-12",
+    "url": "/fans/smirnov/96-orkestr.html"
 }
 
 <p class="center"><i>12 сентября 1996 года</i></p>

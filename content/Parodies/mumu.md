@@ -1,14 +1,14 @@
 {
-   "title": "Два слова Муму",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/mumu.html",
-   "lastmod": "2007-02-03",
-   "params": {
-      "author": "Михаил Рабинович",
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Два слова Муму",
+    "params": {
+        "author": "Михаил Рабинович",
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2007-02-03",
+    "url": "/Parodies/mumu.html"
 }
 
 <p><a id="lj"></a></p>

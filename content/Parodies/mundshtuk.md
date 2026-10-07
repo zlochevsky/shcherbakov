@@ -1,12 +1,12 @@
 {
-   "title": "Мундштук",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/mundshtuk.html",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Мундштук",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Parodies/mundshtuk.html"
 }
 
 <p>Рассказывает Михаил Щербаков: «В этой песне [„Прощание Славянки“] есть такие строки:</p>

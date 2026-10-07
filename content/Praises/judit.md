@@ -1,11 +1,11 @@
 {
-   "title": "Апофеоз отчаянья",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/judit.html",
-   "params": {
+    "title": "Апофеоз отчаянья",
+    "params": {
         "author": "Иудит Аграчева"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Praises/judit.html"
 }
 
 <p>&mdash; В Израиль приезжает Михаил Щербаков, даст четыре концерта,&nbsp;&mdash; сообщили в одном из уважаемых мною домов.</p>

@@ -1,14 +1,14 @@
 {
-   "title": "О том, зачем нужны фанаты",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/98-fans.html",
-   "lastmod": "1998-11-07",
-   "params": {
-      "author": "Владимир Смирнов",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "О том, зачем нужны фанаты",
+    "params": {
+        "author": "Владимир Смирнов",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-11-07",
+    "url": "/fans/smirnov/98-fans.html"
 }
 
 <p class="center"><i>Date: Sat, 7 Nov 1998 21:45:53 -0500 (EST)<br>

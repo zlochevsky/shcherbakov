@@ -1,11 +1,11 @@
 {
-   "title": "Любовь и смерть в поэзии как способы выходы выхода в метафизическое пространство",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/savoskul2.html",
-   "params": {
+    "title": "Любовь и смерть в поэзии как способы выходы выхода в метафизическое пространство",
+    "params": {
         "author": "Оксана Савоскул"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Praises/savoskul2.html"
 }
 
 <blockquote class="epigraph">

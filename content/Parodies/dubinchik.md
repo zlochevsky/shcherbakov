@@ -1,14 +1,14 @@
 {
-   "title": "Щербакиана",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/dubinchik.html",
-   "lastmod": "1999-02-27",
-   "params": {
-      "author": "Аркадий Дубинчик",
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Щербакиана",
+    "params": {
+        "author": "Аркадий Дубинчик",
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1999-02-27",
+    "url": "/Parodies/dubinchik.html"
 }
 
 <ol>

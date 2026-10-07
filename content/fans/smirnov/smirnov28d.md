@@ -1,13 +1,13 @@
 {
-   "title": "28 декабря",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/smirnov28d.html",
-   "params": {
-      "subtitle": "годовщина со дня гибели создателя этого сайта Володи Смирнова",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "28 декабря",
+    "params": {
+        "subtitle": "годовщина со дня гибели создателя этого сайта Володи Смирнова",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/smirnov/smirnov28d.html"
 }
 
 <p class="center"><img src="../../Images/smirnov/smirnov_git.jpg" width="309" height="269" alt="Володя Смирнов"></p>

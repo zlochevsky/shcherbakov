@@ -1,12 +1,12 @@
 {
-   "title": "Крокодилиада",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/utf/crocodile.html",
-   "params": {
-      "backUrl": "fans/index.html#creative",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Крокодилиада",
+    "params": {
+        "backUrl": "fans/index.html#creative",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/utf/crocodile.html"
 }
 
 <p>Предлагаемый цикл появился в <a href="http://m-sch.livejournal.com/361450.html">ЖЖ</a> со следующим вступлением:<br><i>У нас тут случилась некоторая перекличка с коллегой&nbsp;&mdash; началось невинно с ладного лимерика, посвященного <a href="http://amigofriend.livejournal.com/1386388.html">встрече</a> другого коллеги с хищным зверем. Потом как-то незаметно свернули на тематику, которая, надеюсь, заинтересует и вас, коллеги.<br>Ну, и если кому-нибудь захочется добавить два слова (или больше)&nbsp;&mdash; welcome.</i></p>

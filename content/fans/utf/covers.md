@@ -1,14 +1,14 @@
 {
-   "title": "Каверы в исполнении Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/utf/covers.html",
-   "lastmod": "2024-04-01",
-   "params": {
-      "author": "Алексей Тугарев",
-      "backUrl": "fans/index.html#creative",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Каверы в исполнении Михаила Щербакова",
+    "params": {
+        "author": "Алексей Тугарев",
+        "backUrl": "fans/index.html#creative",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2024-04-01",
+    "url": "/fans/utf/covers.html"
 }
 
 <p>На этой странице собраны тексты песен, исполнявшихся Михаилом Щербаковым, но написанных не им.<br>Песни в разделах расставлены по дате написания текстов.<br>Даты исполнения песен на концертах&nbsp;&mdash; <a href="../../concerts.html">[в концертном каталоге]</a></p>

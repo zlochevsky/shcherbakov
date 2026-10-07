@@ -1,13 +1,13 @@
 {
-   "title": "ИЗ ПЕСНИ ... НЕ ВЫКИНЕШЬ",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/utf/manin.html",
-   "lastmod": "2012-08-04",
-   "params": {
-      "author": "Д. Ю. Манин",
-      "subtitle": "Опыт экспериментальной поэтики"
-   }
+    "title": "ИЗ ПЕСНИ ... НЕ ВЫКИНЕШЬ",
+    "params": {
+        "author": "Д. Ю. Манин",
+        "subtitle": "Опыт экспериментальной поэтики"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2012-08-04",
+    "url": "/fans/utf/manin.html"
 }
 
 <blockquote>

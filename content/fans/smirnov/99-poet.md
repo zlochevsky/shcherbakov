@@ -1,15 +1,15 @@
 {
-   "title": "Отрывок из дискуссии на тему «Поэт или не поэт?»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/99-poet.html",
-   "lastmod": "1999-01-09",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "В которой участники обсуждали актуальнейший вопрос современности: кем же все-таки следует ли считать Щербакова&nbsp;&mdash; поэтом или автором песен?",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Отрывок из дискуссии на тему «Поэт или не поэт?»",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "В которой участники обсуждали актуальнейший вопрос современности: кем же все-таки следует ли считать Щербакова&nbsp;&mdash; поэтом или автором песен?",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1999-01-09",
+    "url": "/fans/smirnov/99-poet.html"
 }
 
 <p class="center"><i>9 января 1999 г.</i></p>

@@ -1,14 +1,14 @@
 {
-   "title": "О «несуществующих» песнях",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/comments.html",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Комментарий В.Смирнова к публикации «несуществующих песен» Щербакова. Некоторое время этот текст был вывешен на сайте для всеобщего прочтения, но затем Володя снял его. К счастью, он сохранился.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "О «несуществующих» песнях",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Комментарий В.Смирнова к публикации «несуществующих песен» Щербакова. Некоторое время этот текст был вывешен на сайте для всеобщего прочтения, но затем Володя снял его. К счастью, он сохранился.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/smirnov/comments.html"
 }
 
 <!-- Meta http equivalent was here                               -->

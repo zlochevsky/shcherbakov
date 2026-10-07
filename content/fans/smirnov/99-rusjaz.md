@@ -1,13 +1,13 @@
 {
-   "title": "Из дискуссии о деформациях русского языка в эмиграции",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/99-rusjaz.html",
-   "params": {
-      "author": "Владимир Смирнов",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Из дискуссии о деформациях русского языка в эмиграции",
+    "params": {
+        "author": "Владимир Смирнов",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/smirnov/99-rusjaz.html"
 }
 
 <blockquote><blockquote>

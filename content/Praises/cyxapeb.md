@@ -1,12 +1,12 @@
 {
-   "title": "Эпические уроки Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/cyxapeb.html",
-   "lastmod": "2007-08-31",
-   "params": {
+    "title": "Эпические уроки Михаила Щербакова",
+    "params": {
         "author": "Евгений Сухарев"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2007-08-31",
+    "url": "/Praises/cyxapeb.html"
 }
 
 <h2>I</h2>

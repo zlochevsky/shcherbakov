@@ -1,13 +1,13 @@
 {
-   "title": "Виктор Шнейдер. Из последних и найденных стихов",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/memo/podborka.html",
-   "lastmod": "2002-06-17",
-   "params": {
-      "backUrl": "fans/memo/schneider.html",
-      "backTitle": "Памяти Вити Шнейдера"
-   }
+    "title": "Виктор Шнейдер. Из последних и найденных стихов",
+    "params": {
+        "backUrl": "fans/memo/schneider.html",
+        "backTitle": "Памяти Вити Шнейдера"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2002-06-17",
+    "url": "/fans/memo/podborka.html"
 }
 
 <p class="center"><img alt="Viktor Scneider" src="vschnei2.jpg"></p>

@@ -1,13 +1,13 @@
 {
-   "title": "Поэт поколения",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/ekspert11.html",
-   "lastmod": "2016-10-26",
-   "params": {
+    "title": "Поэт поколения",
+    "params": {
         "author": "Никита Елисеев",
         "subtitle": "«Эксперт Северо-Запад» №7(503), 2011"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2016-10-26",
+    "url": "/Praises/ekspert11.html"
 }
 
 <p>Изысканная, сложная мелодия, сложная строфика, необычная рифмовка&nbsp;&mdash; все это связано с одной особенностью этого барда, объединяющей его с определенным поколением и отделяющей от бардовской песни.</p>

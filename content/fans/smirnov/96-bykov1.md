@@ -1,15 +1,15 @@
 {
-   "title": "Отклик В.Смирнова на другую статью Быкова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/96-bykov1.html",
-   "lastmod": "1996-10-22",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Эта статья Быкова <a href=\"../../FOM/bykov2.html\">была опубликована</a> в исследовании Фонда «Общественное мнение» (<a href=\"../../FOM/index.html\">опрос «Щ-1»</a>, 1996 г.).",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Отклик В.Смирнова на другую статью Быкова",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Эта статья Быкова <a href=\"../../FOM/bykov2.html\">была опубликована</a> в исследовании Фонда «Общественное мнение» (<a href=\"../../FOM/index.html\">опрос «Щ-1»</a>, 1996 г.).",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1996-10-22",
+    "url": "/fans/smirnov/96-bykov1.html"
 }
 
 <p class="center"><i>Комментарии Володи Смирнова к статье Дм.Быкова из издания ФОМ.</i></p>

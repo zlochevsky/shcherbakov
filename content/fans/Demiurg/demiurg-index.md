@@ -1,12 +1,12 @@
 {
-   "title": "Мир Демиурга Щ.",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/Demiurg/index.html",
-   "params": {
-      "author": "Оксана Савоскул",
-      "subtitle": "(2-я редакция, январь 2004)"
-   }
+    "title": "Мир Демиурга Щ.",
+    "params": {
+        "author": "Оксана Савоскул",
+        "subtitle": "(2-я редакция, январь 2004)"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/Demiurg/index.html"
 }
 
 <p class="center"><a href="about.html">об авторе</a></p>

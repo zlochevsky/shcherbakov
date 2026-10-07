@@ -1,15 +1,15 @@
 {
-   "title": "О давних песнях Щербакова и их восприятии",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/98-oldsongs.html",
-   "lastmod": "1998-06-08",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Отрывок из дискуссии.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "О давних песнях Щербакова и их восприятии",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Отрывок из дискуссии.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-06-08",
+    "url": "/fans/smirnov/98-oldsongs.html"
 }
 
 <p class="center"><i>Date: Mon, 8 Jun 1998 13:28:31 -0400 (EDT)<br>

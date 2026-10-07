@@ -1,13 +1,13 @@
 {
-   "title": "Памяти Виктора Шнейдера",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/memo/schneider.html",
-   "lastmod": "2003-10-11",
-   "params": {
-      "backUrl": "fans/index.html",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Памяти Виктора Шнейдера",
+    "params": {
+        "backUrl": "fans/index.html",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2003-10-11",
+    "url": "/fans/memo/schneider.html"
 }
 
 <!-- created by Gorenstein 07.01.2001

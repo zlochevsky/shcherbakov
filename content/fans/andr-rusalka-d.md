@@ -1,13 +1,13 @@
 {
-   "title": "Обсуждение эссе А.Андрианова о песне «Русалка, цыганка, цикада...» В.Смирновым и Д.Полонским",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/andr-rusalka-d.html",
-   "lastmod": "1998-12-15",
-   "params": {
-      "backUrl": "fans/index.html#articles",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Обсуждение эссе А.Андрианова о песне «Русалка, цыганка, цикада...» В.Смирновым и Д.Полонским",
+    "params": {
+        "backUrl": "fans/index.html#articles",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-12-15",
+    "url": "/fans/andr-rusalka-d.html"
 }
 
 <blockquote>

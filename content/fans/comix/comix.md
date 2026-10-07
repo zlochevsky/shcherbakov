@@ -1,14 +1,14 @@
 {
-   "title": "Комикс по песне «Десять первых лет...»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/comix/comix.html",
-   "lastmod": "2009-02-13",
-   "params": {
-      "subtitle": "Работа <a href=\"mailto:elenamariu@mail.ru\">Лены Мариупольской</a>. Оригинал <a href=\"http://www.diary.ru/~scherbakov/p61113898.htm\">здесь</a>.",
-      "backUrl": "fans/index.html#creative",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Комикс по песне «Десять первых лет...»",
+    "params": {
+        "subtitle": "Работа <a href=\"mailto:elenamariu@mail.ru\">Лены Мариупольской</a>. Оригинал <a href=\"http://www.diary.ru/~scherbakov/p61113898.htm\">здесь</a>.",
+        "backUrl": "fans/index.html#creative",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2009-02-13",
+    "url": "/fans/comix/comix.html"
 }
 
 <p class="center"><img src="comix1.jpg" height="360" width="290" alt=""></p>

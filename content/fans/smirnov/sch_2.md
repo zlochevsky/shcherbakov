@@ -1,14 +1,14 @@
 {
-   "title": "Ответы Володи Смирнова на вопросы 2-го социологического исследования аудитории Щербакова «Щ-2»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/sch_2.html",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "(предварительное обсуждение проекта)",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Ответы Володи Смирнова на вопросы 2-го социологического исследования аудитории Щербакова «Щ-2»",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "(предварительное обсуждение проекта)",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/smirnov/sch_2.html"
 }
 
 <!-- changed by D.Polonski, 14.02.2000 --->

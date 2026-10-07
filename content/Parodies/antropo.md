@@ -1,13 +1,13 @@
 {
-   "title": "И еще нечто",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/antropo.html",
-   "lastmod": "2000-04-12",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "И еще нечто",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2000-04-12",
+    "url": "/Parodies/antropo.html"
 }
 
 <p>Прислал это Лев Евдокимов.</p>

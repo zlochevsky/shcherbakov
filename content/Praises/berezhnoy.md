@@ -1,13 +1,13 @@
 {
-   "title": "«Да ни словечка в простоте...»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/berezhnoy.html",
-   "lastmod": "2000-04-19",
-   "params": {
+    "title": "«Да ни словечка в простоте...»",
+    "params": {
         "author": "Сергей Бережной",
         "subtitle": "Материал написан в апреле 2000 года. Опубликован впервые на сайте интернет-магазина <a href=\"http://www.ozon.ru/context/detail/id/197525/\">&laquo;оЗон&raquo;</a>."
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2000-04-19",
+    "url": "/Praises/berezhnoy.html"
 }
 
 <p>Полтора десятилетия назад его гитара ясно и внятно заявила, что у авторской песни есть не только славное прошлое&nbsp;&mdash; Высоцкий и Визбор, не только настоящее продолженное&nbsp;&mdash; Ким и Иваси,&nbsp;&mdash; но и блистательное будущее.</p>

@@ -1,12 +1,12 @@
 {
-   "title": "Публикация",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/spb-shanson.html",
-   "lastmod": "1999-01-08",
-   "params": {
+    "title": "Публикация",
+    "params": {
         "subtitle": "&laquo;Шансон&raquo; &mdash; журнал о поющих поэтах и актёрах-шансонье (Санкт-Петербург, No.&nbsp;2, октябрь 1995&nbsp;г.)"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1999-01-08",
+    "url": "/Praises/spb-shanson.html"
 }
 
 <p>&laquo;Шансон&raquo;&nbsp;&mdash; &laquo;Журнал о поющих поэтах и актерах&nbsp;&mdash; шансонье&raquo; ( Санкт-Петербург, No.2, Октябрь 1995 г., Стр. 46 )</p>

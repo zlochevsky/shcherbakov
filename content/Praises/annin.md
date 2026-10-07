@@ -1,12 +1,12 @@
 {
-   "title": "Заговаривающий бездну",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/annin.html",
-   "lastmod": "2000-05-06",
-   "params": {
+    "title": "Заговаривающий бездну",
+    "params": {
         "author": "Лев Аннинский"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2000-05-06",
+    "url": "/Praises/annin.html"
 }
 
 <blockquote class="epigraph">

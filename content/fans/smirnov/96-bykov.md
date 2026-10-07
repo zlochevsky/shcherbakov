@@ -1,15 +1,15 @@
 {
-   "title": "Отрывок из дискуссии о статье Дм.Быкова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/96-bykov.html",
-   "lastmod": "1996-09-25",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "<a href=\"../../Praises/sobesednik.html\">Эта статья</a>, опубликованная в свое время в газете «Собеседник», была одной из первых публикаций о творчестве Щербакова.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Отрывок из дискуссии о статье Дм.Быкова",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "<a href=\"../../Praises/sobesednik.html\">Эта статья</a>, опубликованная в свое время в газете «Собеседник», была одной из первых публикаций о творчестве Щербакова.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1996-09-25",
+    "url": "/fans/smirnov/96-bykov.html"
 }
 
 <p class="center"><i>Отрывок из дискуссии о статье Дм.Быкова &laquo;В присутствии любви и смерти&raquo;. Текст этой статьи находится по адресу <a href="../../Praises/sobesednik.html">http://blackalpinist.com/scherbakov/Praises/sobesednik.html</a> По прошествии некоторого времени после дискуссии Володя Смирнов писал:</i></p>

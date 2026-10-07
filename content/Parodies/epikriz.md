@@ -1,14 +1,14 @@
 {
-   "title": "Эпикриз",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/epikriz.html",
-   "lastmod": "2003-05-01",
-   "params": {
-      "author": "Александр Барский",
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Эпикриз",
+    "params": {
+        "author": "Александр Барский",
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2003-05-01",
+    "url": "/Parodies/epikriz.html"
 }
 
 <p>У леща голова тоща. У моржа, говорят, рыжа.<br>А моя голова, похоже, ни на что уже не гожа.</p>

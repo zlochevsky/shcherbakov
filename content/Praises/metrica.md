@@ -1,13 +1,13 @@
 {
-   "title": "Метрический репертуар Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/metrica.html",
-   "lastmod": "2006-12-12",
-   "params": {
-      "author": "Алексей Тугарев",
-      "subtitle": "Версия 3.12 (12.12.2006)"
-   }
+    "title": "Метрический репертуар Михаила Щербакова",
+    "params": {
+        "author": "Алексей Тугарев",
+        "subtitle": "Версия 3.12 (12.12.2006)"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2006-12-12",
+    "url": "/Praises/metrica.html"
 }
 
 <blockquote class="epigraph">

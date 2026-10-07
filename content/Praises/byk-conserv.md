@@ -1,12 +1,12 @@
 {
-   "title": "Будем считать, что я здесь не",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/byk-conserv.html",
-   "lastmod": "2003-03-17",
-   "params": {
+    "title": "Будем считать, что я здесь не",
+    "params": {
         "author": "Дмитрий Быков"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2003-03-17",
+    "url": "/Praises/byk-conserv.html"
 }
 
 <p><b>Сочинителю песен Михаилу Щербакову исполняется сорок лет.</b></p>

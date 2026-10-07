@@ -1,12 +1,12 @@
 {
-   "title": "Выдержки из дискуссии по поводу статьи Ю.Фридман о песнях Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/discfrid.html",
-   "params": {
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Выдержки из дискуссии по поводу статьи Ю.Фридман о песнях Щербакова",
+    "params": {
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/smirnov/discfrid.html"
 }
 
 <p class="center"><i>Из дискуссии к статье Юли Фридман о Щербакове,</i> <br>

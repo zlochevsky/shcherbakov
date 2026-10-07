@@ -1,12 +1,12 @@
 {
-   "title": "«Ночной дозор»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/nightwatch.html",
-   "lastmod": "2011-03-21",
-   "params": {
+    "title": "«Ночной дозор»",
+    "params": {
         "author": "Лариса Шульц"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2011-03-21",
+    "url": "/Praises/nightwatch.html"
 }
 
 <p>Многие песни Михаила Щербакова посвящены &laquo;вечным&raquo; темам&nbsp;&mdash; любви, смерти, творчеству. Иногда темы эти сплетаются так искусно и причудливо, что требуется многократное перечитывание текста (одним прослушиванием не обойдешься), чтобы понять, о чем, собственно, речь. </p>

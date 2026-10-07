@@ -1,13 +1,13 @@
 {
-   "title": "Пародия Ольги Макеевой",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/makeeva.html",
-   "lastmod": "1999-02-27",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Пародия Ольги Макеевой",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1999-02-27",
+    "url": "/Parodies/makeeva.html"
 }
 
 <p><i>М. Щербакову</i></p>

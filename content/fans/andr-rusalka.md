@@ -1,14 +1,14 @@
 {
-   "title": "М. Щербаков: опыт комментария",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/andr-rusalka.html",
-   "lastmod": "1998-12-15",
-   "params": {
-      "author": "Андрей Андрианов",
-      "backUrl": "fans/index.html#articles",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "М. Щербаков: опыт комментария",
+    "params": {
+        "author": "Андрей Андрианов",
+        "backUrl": "fans/index.html#articles",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-12-15",
+    "url": "/fans/andr-rusalka.html"
 }
 
 <blockquote>Русалка, цыганка, цикада, она понимать рождена...</blockquote>

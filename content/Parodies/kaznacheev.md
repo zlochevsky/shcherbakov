@@ -1,12 +1,12 @@
 {
-   "title": "Пародии В. Казначеева, В. Фуксмана и А. Штурма",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/kaznacheev.html",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Пародии В. Казначеева, В. Фуксмана и А. Штурма",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Parodies/kaznacheev.html"
 }
 
 <pre>Автор: <a href="mailto:vlad@transas.com">Влад Казначеев</a>

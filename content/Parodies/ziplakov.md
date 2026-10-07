@@ -1,14 +1,14 @@
 {
-   "title": "Трагическое напутствие",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/ziplakov.html",
-   "lastmod": "2004-10-07",
-   "params": {
-      "author": "Г. Циплаков",
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Трагическое напутствие",
+    "params": {
+        "author": "Г. Циплаков",
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2004-10-07",
+    "url": "/Parodies/ziplakov.html"
 }
 
 <p>Можно исполнять на мелодию «Декларации». А можно просто декларировать, в смысле декламировать...</p>

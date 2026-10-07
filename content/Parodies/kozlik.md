@@ -1,13 +1,13 @@
 {
-   "title": "Пародия на песню «Новый гений»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/kozlik.html",
-   "params": {
-      "author": "Дмитрий Коломенский",
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Пародия на песню «Новый гений»",
+    "params": {
+        "author": "Дмитрий Коломенский",
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Parodies/kozlik.html"
 }
 
 <pre>    Am         Gm

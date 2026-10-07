@@ -1,15 +1,15 @@
 {
-   "title": "Одна правдивая история",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/96-bab.html",
-   "lastmod": "1996-12-26",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Произошедшая в <a href=\"http://www.sch57.msk.ru\">московской 57-й школе</a>. История эта впоследствии даже вошла в коллекцию КСП-шных <a href=\"http://www.progressor.ru/anek/\">анекдотов от Берга</a>.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Одна правдивая история",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Произошедшая в <a href=\"http://www.sch57.msk.ru\">московской 57-й школе</a>. История эта впоследствии даже вошла в коллекцию КСП-шных <a href=\"http://www.progressor.ru/anek/\">анекдотов от Берга</a>.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1996-12-26",
+    "url": "/fans/smirnov/96-bab.html"
 }
 
 <p class="center"><i>Date: Thu, 26 Dec 1996 01:22:52 -0500<br>

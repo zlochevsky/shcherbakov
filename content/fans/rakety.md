@@ -1,12 +1,12 @@
 {
-   "title": "«Мои ракеты» — трактовка",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/rakety.html",
-   "params": {
-      "backUrl": "fans/kom.html#moiraket",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "«Мои ракеты» — трактовка",
+    "params": {
+        "backUrl": "fans/kom.html#moiraket",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/rakety.html"
 }
 
 <p>... как только поглядишь на текст глазами (эх, говорили же люди мудрые&nbsp;&mdash; глазками, глазками надо смотреть!), напрашивается одна простая и стройная трактовка. То есть программная такая песенка получается, вроде <a href="../texts/1998/lunnaja.html">Лунной сонаты</a>.</p>

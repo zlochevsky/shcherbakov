@@ -1,15 +1,15 @@
 {
-   "title": "Из письма Смирнова о песне «Чепуха»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/smirnov/97-chepuxa.html",
-   "lastmod": "1997-01-17",
-   "params": {
-      "author": "Владимир Смирнов",
-      "subtitle": "Текст песни&nbsp;&mdash; <a href=\"../../texts/1996/chepuxa.html\">вот тут</a>. А статья о Щербакове в иерусалимской газете «Вести», которая упоминается в письме, находится <a href=\"../../Praises/Vesti.html\">здесь</a>.",
-      "backUrl": "fans/smirnov/index.html",
-      "backTitle": "Тексты В. Смирнова"
-   }
+    "title": "Из письма Смирнова о песне «Чепуха»",
+    "params": {
+        "author": "Владимир Смирнов",
+        "subtitle": "Текст песни&nbsp;&mdash; <a href=\"../../texts/1996/chepuxa.html\">вот тут</a>. А статья о Щербакове в иерусалимской газете «Вести», которая упоминается в письме, находится <a href=\"../../Praises/Vesti.html\">здесь</a>.",
+        "backUrl": "fans/smirnov/index.html",
+        "backTitle": "Тексты В. Смирнова"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1997-01-17",
+    "url": "/fans/smirnov/97-chepuxa.html"
 }
 
 <p class="center"><i>17 января 1997 г</i></p>

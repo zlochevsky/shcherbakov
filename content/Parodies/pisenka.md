@@ -1,14 +1,14 @@
 {
-   "title": "Пiсенька (Песенка)",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/pisenka.html",
-   "lastmod": "1999-09-05",
-   "params": {
-      "author": "Леон Позен",
-      "backUrl": "Parodies/index.html#free",
-      "backTitle": "Пародии"
-   }
+    "title": "Пiсенька (Песенка)",
+    "params": {
+        "author": "Леон Позен",
+        "backUrl": "Parodies/index.html#free",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1999-09-05",
+    "url": "/Parodies/pisenka.html"
 }
 
 <p><i>Леон Позен</i></p>

@@ -1,13 +1,13 @@
 {
-   "title": "«Ревизор»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/zhukov_revizor.html",
-   "lastmod": "2000-04-12",
-   "params": {
+    "title": "«Ревизор»",
+    "params": {
         "author": "Борис Жуков",
         "subtitle": "Эта статья была опубликована летом 1999 г. в газете &laquo;Новое Русское Слово&raquo;&nbsp;&mdash; правда, под другим названием и с небольшими сокращениями. Здесь публикуется вариант, любезно присланный автором."
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2000-04-12",
+    "url": "/Praises/zhukov_revizor.html"
 }
 
 <h2>1.</h2>

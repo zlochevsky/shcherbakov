@@ -1,12 +1,12 @@
 {
-   "title": "Его королевство",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/egokor.html",
-   "lastmod": "2017-06-10",
-   "params": {
+    "title": "Его королевство",
+    "params": {
         "subtitle": "Попытка рассказать об обычном гении"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2017-06-10",
+    "url": "/Praises/egokor.html"
 }
 
 <h2>Вторым голосом (от редактора)</h2>

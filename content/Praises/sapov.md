@@ -1,13 +1,13 @@
 {
-   "title": "Оправдание Цинцинната",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/sapov.html",
-   "lastmod": "2001-03-02",
-   "params": {
+    "title": "Оправдание Цинцинната",
+    "params": {
         "author": "Григорий Сапов",
         "subtitle": "<a href=\"http://www.sapov.ru/novoe/n00-73.htm\">«От четверга до четверга»</a> за 16 и 23 ноября 2000 года<br>(Размышления о Щербакове)"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2001-03-02",
+    "url": "/Praises/sapov.html"
 }
 
 <blockquote class="epigraph">

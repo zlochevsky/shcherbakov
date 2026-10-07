@@ -1,13 +1,13 @@
 {
-   "title": "Веселый талант мрачного человека",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/andr2.html",
-   "lastmod": "1998-12-15",
-   "params": {
-      "backUrl": "fans/index.html#articles",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Веселый талант мрачного человека",
+    "params": {
+        "backUrl": "fans/index.html#articles",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-12-15",
+    "url": "/fans/andr2.html"
 }
 
 <pre>  &nbsp;&mdash; Душа твоя тебя предупредила.

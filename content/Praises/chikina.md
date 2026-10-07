@@ -1,12 +1,12 @@
 {
-   "title": "Записка про Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/chikina.html",
-   "lastmod": "2009-04-13",
-   "params": {
+    "title": "Записка про Щербакова",
+    "params": {
         "author": "Ольга Чикина"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2009-04-13",
+    "url": "/Praises/chikina.html"
 }
 
 <blockquote class="epigraph">

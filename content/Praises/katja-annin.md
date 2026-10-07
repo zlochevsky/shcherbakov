@@ -1,13 +1,13 @@
 {
-   "title": "Что такое критика...",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/katja-annin.html",
-   "lastmod": "2000-05-06",
-   "params": {
+    "title": "Что такое критика...",
+    "params": {
         "author": "Катя Зотова",
         "subtitle": "Несколько замечаний к статье Л.&nbsp;Аннинского &laquo;Заговаривающий бездну&raquo;"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2000-05-06",
+    "url": "/Praises/katja-annin.html"
 }
 
 <blockquote class="epigraph">

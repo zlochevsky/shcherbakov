@@ -1,12 +1,12 @@
 {
-   "title": "«Этот шмель не летит...» Ирония как конструктивный принцип поэтики Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/ironia.html",
-   "lastmod": "2012-08-09",
-   "params": {
+    "title": "«Этот шмель не летит...» Ирония как конструктивный принцип поэтики Михаила Щербакова",
+    "params": {
         "author": "Александра Спиглазова"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2012-08-09",
+    "url": "/Praises/ironia.html"
 }
 
 <blockquote>Хочешь обратно деньги? вот, изволь, получи с меня. 

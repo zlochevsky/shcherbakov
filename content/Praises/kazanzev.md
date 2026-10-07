@@ -1,11 +1,11 @@
 {
-   "title": "Ружье имени Чехова, кинжал имени Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/kazanzev.html",
-   "params": {
+    "title": "Ружье имени Чехова, кинжал имени Щербакова",
+    "params": {
         "author": "Артем Казанцев"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Praises/kazanzev.html"
 }
 
 <h2>1. БАБОЧКА И РЫСЬ</h2>

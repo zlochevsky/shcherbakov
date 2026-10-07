@@ -1,13 +1,13 @@
 {
-   "title": "ВГЛЯДЫВАЯСЬ В «БУКВЫ НА КАМНЕ...». Поэтика традиционного и злободневного",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/cyxapeb3.html",
-   "lastmod": "2015-07-14",
-   "params": {
+    "title": "ВГЛЯДЫВАЯСЬ В «БУКВЫ НА КАМНЕ...». Поэтика традиционного и злободневного",
+    "params": {
         "author": "Евгений Сухарев",
         "subtitle": "Литературно-художественный альманах &laquo;Белый ворон&raquo; (Екатеринбург). Выпуск &#8470;&nbsp;2 (19). Лето 2015&nbsp;г. С.&nbsp;194-198."
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2015-07-14",
+    "url": "/Praises/cyxapeb3.html"
 }
 
 <blockquote class="epigraph">

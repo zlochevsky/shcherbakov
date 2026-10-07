@@ -1,13 +1,13 @@
 {
-   "title": "Пародии",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/index.html",
-   "lastmod": "2020-06-20",
-   "params": {
-      "backUrl": "fans/index.html",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Пародии",
+    "params": {
+        "backUrl": "fans/index.html",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2020-06-20",
+    "url": "/Parodies/index.html"
 }
 
 <blockquote><i>Штирлиц шел по улице. Вдруг ему на голову упал кирпич.<br>«Цигель,»&nbsp;&mdash; подумал Штирлиц.<br>«Цигель, цигель, абгемахт,»&nbsp;&mdash; подумал Мюллер, сбрасывая второй кирпич.</i><br><a href="mailto:grisha@mit.edu">(Гр.Гольдберг)</a></blockquote>

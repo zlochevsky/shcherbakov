@@ -1,14 +1,14 @@
 {
-   "title": "Как это было на самом деле",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/kaketo.html",
-   "lastmod": "2020-06-20",
-   "params": {
-      "author": "Александр Вольнов",
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Как это было на самом деле",
+    "params": {
+        "author": "Александр Вольнов",
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2020-06-20",
+    "url": "/Parodies/kaketo.html"
 }
 
 <blockquote>Кому: Мэтру гитары, пера и плаща<br>Михаилу Константиновичу Ща***.<br>С любовью, трепетом и вообще<br>Михаилу Константиновичу Ще***!</blockquote>

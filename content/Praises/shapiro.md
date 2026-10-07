@@ -1,13 +1,13 @@
 {
-   "title": "Слова и строки",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/shapiro.html",
-   "lastmod": "2011-04-12",
-   "params": {
+    "title": "Слова и строки",
+    "params": {
         "author": "Александр Л. Шапиро",
         "subtitle": "Опубликовано в журнале <a href=\"http://magazines.russ.ru/bereg/2011/31/\">&laquo;Новый Берег&raquo; 2011, &#8470;31</a><br><i>Примечания переводчика</i>"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2011-04-12",
+    "url": "/Praises/shapiro.html"
 }
 
 <p>В классической китайской поэзии строчки стихов часто состоят из одинакового количества иероглифов. Вот так выглядит одно из самых знаменитых китайских стихотворений&nbsp;&mdash; &laquo;Мысли тихой ночью&raquo; великого Ли Бо:</p>

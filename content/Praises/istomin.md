@@ -1,13 +1,13 @@
 {
-   "title": "Михаил Щербаков",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/istomin.html",
-   "lastmod": "2007-07-01",
-   "params": {
+    "title": "Михаил Щербаков",
+    "params": {
         "author": "Истомин С., Денисенко Д.",
         "subtitle": "Из книги: Истомин С., Денисенко Д. Самые знаменитые барды России.&nbsp;&mdash; М.: «ВЕЧЕ», 2002 г."
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2007-07-01",
+    "url": "/Praises/istomin.html"
 }
 
 <blockquote>Оставлю всех, пройду повсюду,<br>

@@ -1,12 +1,12 @@
 {
-   "title": "Рифмы и созвучия в «Кого люблю, того не встречу»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/kogolublu.html",
-   "params": {
-      "backUrl": "fans/kom.html#kogoljub",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "Рифмы и созвучия в «Кого люблю, того не встречу»",
+    "params": {
+        "backUrl": "fans/kom.html#kogoljub",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/kogolublu.html"
 }
 
 <p><a href="http://www.livejournal.com/users/a_bugaev/377037.html">a_bugaev</a><br><i><b>Рифмы и созвучия в «Кого люблю, того не встречу»</b></i></p>

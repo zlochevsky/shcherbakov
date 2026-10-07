@@ -1,11 +1,11 @@
 {
-   "title": "В жанре песни",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/smolensky.html",
-   "params": {
+    "title": "В жанре песни",
+    "params": {
         "author": "Вадим Смоленский"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Praises/smolensky.html"
 }
 
 <img src="../Images/dzsch.jpg" alt="" align="right" valign="top" height="185" hspace="20" vspace="5" width="255">

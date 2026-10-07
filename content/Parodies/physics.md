@@ -1,13 +1,13 @@
 {
-   "title": "Ещё одна пародия на «Австралию»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/physics.html",
-   "params": {
-      "author": "Лев Козлов",
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Ещё одна пародия на «Австралию»",
+    "params": {
+        "author": "Лев Козлов",
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Parodies/physics.html"
 }
 
 <h3>* * *</h3>

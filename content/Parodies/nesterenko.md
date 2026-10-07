@@ -1,13 +1,13 @@
 {
-   "title": "Пародии Юрия Нестеренко",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/nesterenko.html",
-   "lastmod": "1999-09-05",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Пародии Юрия Нестеренко",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1999-09-05",
+    "url": "/Parodies/nesterenko.html"
 }
 
 <h4>Короткие волны</h4>

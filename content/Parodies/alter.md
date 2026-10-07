@@ -1,13 +1,13 @@
 {
-   "title": "Альтернативный взгляд на ситуацию глазами действующих лиц",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/alter.html",
-   "lastmod": "2009-06-04",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Альтернативный взгляд на ситуацию глазами действующих лиц",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2009-06-04",
+    "url": "/Parodies/alter.html"
 }
 
 <h3>«Австралия» глазами муравьеда</h3>

@@ -1,13 +1,13 @@
 {
-   "title": "Запоздалое посвящение 37-летию полета Гагарина",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/gagarin.html",
-   "lastmod": "1998-07-01",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Запоздалое посвящение 37-летию полета Гагарина",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "1998-07-01",
+    "url": "/Parodies/gagarin.html"
 }
 
 <p>From: <a href="mailto:grisha@MIT.EDU">Francesco Deved</a>'</p>

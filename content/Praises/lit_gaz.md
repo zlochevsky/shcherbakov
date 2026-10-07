@@ -1,12 +1,12 @@
 {
-   "title": "Михаил Щербаков «Вишнёвое варенье» (рецензия)",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/lit_gaz.html",
-   "lastmod": "2006-05-03",
-   "params": {
+    "title": "Михаил Щербаков «Вишнёвое варенье» (рецензия)",
+    "params": {
         "subtitle": "&laquo;Литературная газета&raquo;, &#8470;&nbsp;5 от 29.01.1992 г."
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2006-05-03",
+    "url": "/Praises/lit_gaz.html"
 }
 
 <p><b>Михаил Щербаков &laquo;Вишнёвое варенье&raquo;. СП &laquo;МКС ПЛЮС&raquo;. М. 1990.</b></p>

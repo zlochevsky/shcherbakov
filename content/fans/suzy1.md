@@ -1,12 +1,12 @@
 {
-   "title": "Ария лабораторной крысы",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/suzy1.html",
-   "params": {
-      "backUrl": "fans/index.html#articles",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Ария лабораторной крысы",
+    "params": {
+        "backUrl": "fans/index.html#articles",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/suzy1.html"
 }
 
 <p><a href="mailto:suzy@actcom.co.il">Suzy</a></p>

@@ -1,12 +1,12 @@
 {
-   "title": "Неоконченное",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/kim-sketch.html",
-   "lastmod": "2005-10-02",
-   "params": {
+    "title": "Неоконченное",
+    "params": {
         "author": "Юлий Ким"
-   }
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2005-10-02",
+    "url": "/Praises/kim-sketch.html"
 }
 
 <p><i>(Написано в Красноярске во время посещения &laquo;Столбов&raquo;.<br>

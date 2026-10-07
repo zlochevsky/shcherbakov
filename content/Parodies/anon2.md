@@ -1,12 +1,12 @@
 {
-   "title": "Ещё один конспект",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Parodies/anon2.html",
-   "params": {
-      "backUrl": "Parodies/index.html",
-      "backTitle": "Пародии"
-   }
+    "title": "Ещё один конспект",
+    "params": {
+        "backUrl": "Parodies/index.html",
+        "backTitle": "Пародии"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Parodies/anon2.html"
 }
 
 <p><i>From: <a href="mailto:Dmytro.Fadeyenko@p8.f177.n463.z2.fidonet.org">Dmytro Fadeyenko</a></i></p>

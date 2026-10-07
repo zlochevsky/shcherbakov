@@ -1,8 +1,8 @@
 {
-   "title": "Отрывок из интервью с Б. Окуджавой, 1997",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/Praises/bo.html"
+    "title": "Отрывок из интервью с Б. Окуджавой, 1997",
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/Praises/bo.html"
 }
 
 <p>[...]</p>

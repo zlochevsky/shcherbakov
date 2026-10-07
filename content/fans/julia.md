@@ -1,12 +1,12 @@
 {
-   "title": "Julia Genyuk",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/julia.html",
-   "params": {
-      "backUrl": "fans/index.html#articles",
-      "backTitle": "Фан-клуб"
-   }
+    "title": "Julia Genyuk",
+    "params": {
+        "backUrl": "fans/index.html#articles",
+        "backTitle": "Фан-клуб"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/julia.html"
 }
 
 <p>Date: Fri, 25 Oct 1996 18:02:25 -0400 (EDT)<br><a href="mailto:genyuk@math.ohio-state.edu">Julia Genyuk</a></p>

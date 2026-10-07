@@ -1,12 +1,12 @@
 {
-   "title": "Застольная",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/fans/lirika.html",
-   "params": {
-      "backUrl": "fans/kom.html#zastolnaya",
-      "backTitle": "Словарь заморских слов"
-   }
+    "title": "Застольная",
+    "params": {
+        "backUrl": "fans/kom.html#zastolnaya",
+        "backTitle": "Словарь заморских слов"
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "url": "/fans/lirika.html"
 }
 
 <p><b><a href="../texts/2001/zastolnaya.html">Застольная</a></b></p>
