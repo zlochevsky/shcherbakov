@@ -124,6 +124,19 @@ collections:
     summary: "{{filename}}"
     fields: *trfields
 
+  # Отдельные страницы сайта: тело — Markdown (у tab — HTML), правится как есть, простым полем; анонсы на странице
+  # новостей — из Directus (announces), в файле news.md только «Хроника»
+  - name: pages
+    label: Страницы сайта
+    format: json-frontmatter
+    files:
+      - { name: bio, label: Биография, file: content/bio.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Текст, name: body, widget: text } ] }
+      - { name: about, label: Об этой коллекции, file: content/about.md, fields: *sitepagefields }
+      - { name: buy, label: Где купить, file: content/buy.md, fields: *sitepagefields }
+      - { name: news, label: Новости (хроника), file: content/news.md, fields: *sitepagefields }
+      - { name: no, label: Чего не хватает, file: content/no.md, fields: *sitepagefields }
+      - { name: tab, label: Что такое таблатуры, file: content/tab.md, fields: *sitepagefields }
+
   # Страницы языков: тело — HTML; меню, подписи и прочие настройки заголовка правятся в файле
   - name: language-pages
     label: Страницы языков

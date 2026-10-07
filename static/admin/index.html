@@ -7,17 +7,27 @@
 <title>Редактор сайта</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap">
 <style>
-/* тексты песен выровнены пробелами (аккорды справа) — поле ввода моноширинное, со своей кириллицей:
-   иначе браузер берёт русские буквы из другого шрифта, их ширина не равна ширине пробела, и аккорды съезжают */
+/* Поле текста ведёт себя по-разному в зависимости от коллекции (атрибут data-collection у <html> ставит скрипт
+   ниже по адресу #/collections/<имя>/…):
+   - песни (texts) и переводы (tr-*): строки выровнены пробелами (аккорды справа) — моноширинный шрифт со своей
+     кириллицей (иначе браузер берёт русские буквы из другого шрифта, их ширина не равна ширине пробела, и аккорды
+     съезжают), без переноса строк, поля во всю ширину панели (у Sveltia — не шире 768px);
+   - остальные страницы (проза): обычный шрифт, длинные строки переносятся по словам, как абзацы */
 textarea {
+	white-space: pre-wrap !important;
+	line-height: 1.6 !important;
+}
+:root[data-collection="texts"] textarea,
+:root[data-collection^="tr-"] textarea {
 	font-family: "PT Mono", "DejaVu Sans Mono", Consolas, monospace !important;
 	letter-spacing: 0 !important;
 	word-spacing: 0 !important;
+	line-height: normal !important;
 	white-space: pre !important;
 	overflow-x: auto !important;
 }
-/* поля формы — во всю ширину панели (у Sveltia — не шире 768px): строки песен с аккордами длинные */
-section[role="group"].field > * { max-width: none !important; }
+:root[data-collection="texts"] section[role="group"].field > *,
+:root[data-collection^="tr-"] section[role="group"].field > * { max-width: none !important; }
 /* светлая тема: желтоватый фон (как Solarized Light) и тёмно-красные акценты; тёмная тема — как у Sveltia.
    Переменные — внутренние у Sveltia: если в новой версии их переименуют, вернутся стандартные цвета */
 :root[data-theme=light] {
@@ -111,6 +121,18 @@ section[role="group"].field > * { max-width: none !important; }
 	for (const ev of ['selectionchange', 'input', 'keyup', 'click', 'focusin', 'focusout']) {
 		document.addEventListener(ev, () => setTimeout(update), true);
 	}
+})();
+// Имя открытой коллекции — в атрибут <html data-collection>, для стилей поля текста (см. <style>)
+(() => {
+	const mark = () => {
+		const m = location.hash.match(/^#\/collections\/([^/?]+)/);
+		document.documentElement.dataset.collection = m ? m[1] : '';
+	};
+	mark();
+	// Sveltia может менять адрес через history.pushState, без события hashchange, — поэтому ещё и проверка по таймеру
+	addEventListener('hashchange', mark);
+	addEventListener('popstate', mark);
+	setInterval(mark, 500);
 })();
 </script>
 </body>
