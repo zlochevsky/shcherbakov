@@ -130,12 +130,101 @@ collections:
     label: Страницы сайта
     format: json-frontmatter
     files:
-      - { name: bio, label: Биография, file: content/bio.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Текст, name: body, widget: text } ] }
+      # главная: тело — HTML-вёрстка блоками (abstract, frontimage, collections) и шорткод {{< lastmod … >}} — править
+      # осторожно, незакрытый тег ломает вид главной; подвал (_footer.md, на главной и страницах шаблона baseof) —
+      # только текст: заголовка у него нет (обязательное поле «Заголовок» не дало бы сохранить)
+      - { name: home, label: Главная страница, file: content/_index.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Текст, name: body, widget: text } ] }
+      - { name: footer, label: Подвал главной, file: content/_footer.md, fields: [ { label: Текст, name: body, widget: text } ] }
+      - { name: bio, label: Биография, file: content/bio.md, fields: *sitepagefields }
       - { name: about, label: Об этой коллекции, file: content/about.md, fields: *sitepagefields }
       - { name: buy, label: Где купить, file: content/buy.md, fields: *sitepagefields }
       - { name: news, label: Новости (хроника), file: content/news.md, fields: *sitepagefields }
-      - { name: no, label: Чего не хватает, file: content/no.md, fields: *sitepagefields }
+      - { name: "no", label: Чего не хватает, file: content/no.md, fields: *sitepagefields }
       - { name: tab, label: Что такое таблатуры, file: content/tab.md, fields: *sitepagefields }
+      - { name: praises-list, label: Список рецензий (Praises), file: content/praises.md, fields: *sitepagefields }
+
+  # Статьи фан-клуба (шаблон praises-article): тело — HTML. Заголовки файлов приведены к виду, в котором их пишет
+  # Sveltia (порядок ключей, отступ 4), чтобы сохранение не давало лишнего diff; поля и их порядок здесь менять
+  # вместе с этим видом (scripts/sveltia-normalize.py praises parodies fans).
+  # Создавать статьи можно: имя файла (латиницей) вводится вручную, адрес страницы — <раздел>/<имя>.html (uglyURLs,
+  # url в заголовке не нужен); type и layout — скрытые поля со значениями по умолчанию (layout ещё и для фильтра:
+  # в fans есть kom.md и переадресация kom2.md с другими шаблонами). Ссылку на новую статью вписать в список раздела:
+  # рецензии — «Страницы сайта» → «Список рецензий», пародии и фан-клуб — их оглавления (parodies-index, fans-index).
+  # Удалять нельзя: на статьи ведут ссылки из списков и других статей — удалять через git, проверив check-links.
+  - name: praises
+    label: Рецензии (Praises)
+    label_singular: Статья
+    folder: content/Praises
+    extension: md
+    format: json-frontmatter
+    create: true
+    delete: false
+    duplicate: false
+    slug: { editable: true }
+    filter: { field: layout, value: praises-article }
+    summary: "{{title}} · {{filename}}"
+    fields:
+      - { label: Заголовок, name: title, widget: string }
+      - label: Параметры
+        name: params
+        widget: object
+        fields:
+          - { label: Автор, name: author, widget: string, required: false }
+          - { label: Подзаголовок, name: subtitle, widget: string, required: false }
+      - &layoutfield { label: layout, name: layout, widget: hidden, required: false, default: praises-article }
+      - &typefield { label: type, name: type, widget: hidden, required: false, default: miscellaneous }
+      - &articlebody { label: Текст (HTML), name: body, widget: text }
+  - name: parodies
+    label: Пародии (Parodies)
+    label_singular: Пародия
+    folder: content/Parodies
+    extension: md
+    format: json-frontmatter
+    create: true
+    delete: false
+    duplicate: false
+    slug: { editable: true }
+    filter: { field: layout, value: praises-article }
+    summary: "{{title}} · {{filename}}"
+    fields:
+      - { label: Заголовок, name: title, widget: string }
+      - label: Параметры
+        name: params
+        widget: object
+        fields:
+          - { label: Автор, name: author, widget: string, required: false }
+          - { label: Подзаголовок, name: subtitle, widget: string, required: false }
+          - { label: Ссылка «назад» — адрес, name: backUrl, widget: string, required: false, default: Parodies/index.html }
+          - { label: Ссылка «назад» — подпись, name: backTitle, widget: string, required: false, default: Пародии }
+      - *layoutfield
+      - *typefield
+      - *articlebody
+  - name: fans
+    label: Фан-клуб (fans)
+    label_singular: Материал
+    folder: content/fans
+    nested: { depth: 2, subfolders: false }
+    extension: md
+    format: json-frontmatter
+    create: true
+    delete: false
+    duplicate: false
+    slug: { editable: true }
+    filter: { field: layout, value: praises-article }
+    summary: "{{title}} · {{filename}}"
+    fields:
+      - { label: Заголовок, name: title, widget: string }
+      - label: Параметры
+        name: params
+        widget: object
+        fields:
+          - { label: Автор, name: author, widget: string, required: false }
+          - { label: Подзаголовок, name: subtitle, widget: string, required: false }
+          - { label: Ссылка «назад» — адрес, name: backUrl, widget: string, required: false, default: fans/index.html }
+          - { label: Ссылка «назад» — подпись, name: backTitle, widget: string, required: false, default: Фан-клуб }
+      - *layoutfield
+      - *typefield
+      - *articlebody
 
   # Страницы языков: тело — HTML; меню, подписи и прочие настройки заголовка правятся в файле
   - name: language-pages
