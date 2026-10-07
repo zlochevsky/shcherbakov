@@ -78,26 +78,40 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 
 ## Editing in the browser
 
-`/admin/` on the site (`static/admin/index.html` and `static/admin/config.yml`) is [Sveltia CMS](https://sveltiacms.app/), an editor for files in this repository. It does not change any other page of the site. Each save is a commit to `master` made through the GitHub API, and the usual workflow publishes it.
+`/admin/` on the site is [Sveltia CMS](https://sveltiacms.app/), an editor for files in this repository: `static/admin/index.html` loads it, and `static/admin/config.yml` sets what it edits. It does not change any other page of the site. Each save is a commit to `master` made through the GitHub API, and the usual workflow publishes it. Data kept in Directus (titles, years, albums, translators, announces, comments) is edited in Directus.
 
-- To sign in, choose "Sign In with GitHub". Anyone with write access to the repository can sign in this way.
-  - Sign-in goes through an OAuth proxy, `sveltia-cms-auth` on Cloudflare Workers (`https://sveltia-cms-auth.sergey-897.workers.dev`, the `base_url` in `config.yml`). The proxy holds the GitHub OAuth App's client ID and secret in its variables, plus `ALLOWED_DOMAINS` (the site's host and `localhost`).
-  - The OAuth App is registered in the repository owner's GitHub settings, with the callback URL `<proxy>/callback`.
-  - The editor asks GitHub for the `public_repo` scope (`auth_scope`), not the default `repo`, which would also reach private repositories.
-- Another way is "Sign In Using Access Token" with a GitHub personal access token. Each editor makes their own token in their GitHub settings, and the token stays in their browser.
-  - The repository owner can use a fine-grained token: Repository access → this repository, Permissions → "Contents: Read and write".
-  - A collaborator cannot use a fine-grained token, because such a token reaches only repositories that belong to its own owner (or to an organization). A collaborator makes a classic token with the `public_repo` scope instead. It lets the editor write to every public repository they have access to, not only this one.
-  - On localhost the editor also offers to work with a local copy of the repository. In that mode "Save" writes the file to disk with no commit, and the change is committed with git as usual.
-- What can be edited: song texts (`content/texts`), translations (`content/<language>/`), the body and title of language pages, the body and title of some site pages: the home page (its body is HTML layout in blocks, so edit it with care), the footer (body only), biography, about, where to buy, news (the chronicle; announces come from Directus), what is missing, tablature, the list of reviews; and fan-club articles in `content/Praises`, `content/Parodies` and `content/fans` (title, author, subtitle, body; only pages with the `praises-article` layout, so `fans/kom.md` and the `kom2` redirect are left out). The other front matter keys are kept as they are, though the editor writes the keys it does not know in alphabetical order. New fan-club articles can be created in their sections.
-  - You type the file name in Latin letters, and the page URL is `<section>/<name>.html`.
-  - The editor fills `type` and `layout` itself. Parodies and fan-club materials also get a default "back" link.
-  - A new article then needs a link in its section's list: the list of reviews (`praises.md`, under site pages), or the parody and fan-club tables of contents.
-  - Articles cannot be deleted in the editor, because other pages link to them. Delete them with git and run `check-links.py`.
+### Signing in
 
-  The fan-club articles were brought to the editor's own layout of keys and indentation in advance, so editing one does not rewrite its whole front matter in the diff. `scripts/sveltia-normalize.py <collection>` does that, and `--check` lists the files that differ. If the fields of these collections in `config.yml` change, run it again. Songs and translations cannot be created or deleted there, because a file name is the record's id in Directus. A new song or translation is created in Directus instead. A Directus Flow then commits an empty file for its text (see [docs/directus.md](docs/directus.md)), and after the next reload the entry shows up in the editor. Titles, years, albums and translators are edited in Directus.
+- "Sign In with GitHub" works for anyone with write access to the repository. Sign-in goes through an OAuth proxy, `sveltia-cms-auth` on Cloudflare Workers (`https://sveltia-cms-auth.sergey-897.workers.dev`, the `base_url` in `config.yml`):
+  - the proxy holds the client ID and secret of the GitHub OAuth App in its variables, plus `ALLOWED_DOMAINS` (the site's host and `localhost`);
+  - the OAuth App is registered in the repository owner's GitHub settings, with the callback URL `<proxy>/callback`;
+  - the editor asks GitHub for the `public_repo` scope (`auth_scope`), not the default `repo`, which would also reach private repositories.
+- "Sign In Using Access Token" takes a GitHub personal access token that each editor makes in their own GitHub settings; the token stays in their browser:
+  - the repository owner can use a fine-grained token: Repository access → this repository, Permissions → "Contents: Read and write";
+  - a collaborator cannot use a fine-grained token, because such a token reaches only repositories of its own owner or of an organization. A collaborator makes a classic token with the `public_repo` scope instead. It can write to every public repository the collaborator has access to, not only this one.
+- On localhost the editor also offers to work with a local copy of the repository. In that mode "Save" writes the file to disk with no commit, and the change is committed with git as usual.
+
+### What can be edited
+
+- Song texts (`content/texts`) and translations (`content/<language>/`): the text, and for songs the tonality, `chordsStartAt` and `textFinishAtLine`.
+- Language pages: title and body.
+- Site pages: title and body of the home page, biography, about, where to buy, news (the chronicle; announces come from Directus), what is missing, tablature and the list of reviews (`praises.md`); the body of the footer. The home page body is HTML laid out in blocks, so edit it with care: an unclosed tag breaks the home page.
+- Fan-club articles in `content/Praises`, `content/Parodies` and `content/fans`: title, author, subtitle and body, for parodies and fan-club materials also the "back" link. Only pages with the `praises-article` layout are listed, so `fans/kom.md` (the comments page built from Directus) and the `kom2` redirect are left out.
+
+Other front matter keys are kept as they are, but the editor writes the keys it does not know in alphabetical order and indents JSON with 4 spaces. The fan-club articles were brought to this layout in advance, so editing one does not rewrite its whole front matter in the diff. `scripts/sveltia-normalize.py <collection>` does that, and `--check` lists the files that differ; run it again if the fields of these collections in `config.yml` change.
+
+### New entries
+
+- Songs and translations cannot be created or deleted in the editor, because a file name is the record's id in Directus. A new song or translation is created in Directus; a Directus Flow then commits an empty file for its text (see [docs/directus.md](docs/directus.md)), and after a reload the entry shows up in the editor.
+- Fan-club articles can be created in their sections. The file name is typed in Latin letters, and the page URL is `<section>/<name>.html`. The editor fills `type` and `layout` itself, and gives parodies and fan-club materials a default "back" link. A new article needs a link in its section's list: the list of reviews (under site pages), or the parody and fan-club tables of contents.
+- Articles cannot be deleted in the editor, because other pages link to them. Delete them with git and run `check-links.py`.
+
+### The text field
+
 - Texts are edited as plain text, so spaces, indentation and chords stay exactly as typed.
+- For songs and translations the field uses a monospace font with its own Cyrillic (PT Mono), does not wrap lines and takes the full width of the pane, because chords are aligned with spaces. With a font that lacks Cyrillic, the browser takes the letters from another font, and the chords drift. For other pages long lines wrap like paragraphs. A script on the page picks the mode from the collection in the address.
+- A badge in the corner shows the line and character under the cursor, both counted from 1: the same numbers as `textFinishAtLine` and `chordsStartAt`.
 - The editor puts a blank line after the front matter and writes a file with empty front matter without one. `layouts/partials/song.html` ignores blank lines before the text, so the line number in `textFinishAtLine` is not shifted.
-- For songs and translations, the text field uses a monospace font with its own Cyrillic (PT Mono) and does not wrap lines, because chords are aligned with spaces. For other pages, long lines wrap like paragraphs. The page script picks the mode from the collection in the address. With a font that lacks Cyrillic, the browser takes the letters from another font, and the chords drift. For songs and translations, fields take the full width of the pane. A badge in the corner shows the line and character under the cursor, both counted from 1: the same numbers as `textFinishAtLine` and `chordsStartAt`.
 
 # Links
 
