@@ -117,18 +117,24 @@ nav summary {
 	cursor: pointer;
 }
 /* В закрытом виде — нативный маркер слева, как и раньше (устраивает).
-   В открытом — маркер того же вида (как у закрытого, тот же "▶", не
-   поворачивающийся в "▾") переносим после текста, ближе к раскрывшимся
-   siblings подменю, вместо нативного (который всегда слева). */
-nav details[open] > summary {
-	list-style: none;
-}
-nav details[open] > summary::-webkit-details-marker {
-	display: none;
-}
-nav details[open] > summary::after {
-	content: "▶";
-	margin-left: .3em;
+   На десктопе подменю раскрывается вправо (ячейками в той же строке), поэтому
+   в открытом виде маркер того же вида (тот же "▶", не поворачивающийся в "▾")
+   переносим после текста, ближе к раскрывшимся пунктам, вместо нативного
+   (который всегда слева). На мобильном подменю раскрывается вниз — там
+   остаётся нативный маркер: слева, в открытом виде повёрнут вниз. Так же и у
+   выпадающего списка внутри ячейки (.dropdown, «Языки») на любой ширине: он
+   раскрывается вниз. */
+@media only screen and (width > 70em) {
+	nav details[open]:not(.dropdown) > summary {
+		list-style: none;
+	}
+	nav details[open]:not(.dropdown) > summary::-webkit-details-marker {
+		display: none;
+	}
+	nav details[open]:not(.dropdown) > summary::after {
+		content: "▶";
+		margin-left: .3em;
+	}
 }
 /* Раскрывающийся список внутри ячейки (выбор языка, params.dropdown в hugo.json) */
 nav details.dropdown .dropdown-list {

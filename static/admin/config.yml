@@ -58,85 +58,6 @@ collections:
           - { label: Последняя строка текста, name: textFinishAtLine, widget: number, value_type: int, required: false }
       - { label: Текст, name: body, widget: text }
 
-  # Группа переводов отбита в левой панели разделителями (вложенных разделов в Sveltia нет)
-  - divider: true
-
-  # Переводы: content/<язык>/<id>.md; страницы языка (у них есть layout) — в коллекции «Страницы языков»
-  - name: tr-en
-    label: Переводы — English
-    folder: content/en
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/en/{{filename}}.html"
-    fields: &trfields
-      # только для фильтра: у страниц языка layout есть, у переводов нет (пустое не записывается)
-      - { label: layout, name: layout, widget: hidden, required: false }
-      - { label: Текст, name: body, widget: text }
-  - name: tr-de
-    label: Переводы — Deutsch
-    folder: content/de
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/de/{{filename}}.html"
-    fields: *trfields
-  - name: tr-eo
-    label: Переводы — Esperanto
-    folder: content/eo
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/eo/{{filename}}.html"
-    fields: *trfields
-  - name: tr-he
-    label: Переводы — עברית
-    folder: content/he
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/he/{{filename}}.html"
-    fields: *trfields
-  - name: tr-uk
-    label: Переводы — Українська
-    folder: content/uk
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/uk/{{filename}}.html"
-    fields: *trfields
-  - name: tr-fr
-    label: Переводы — Français
-    folder: content/fr
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/fr/{{filename}}.html"
-    fields: *trfields
 
   - divider: true
 
@@ -158,6 +79,9 @@ collections:
       - { name: "no", preview_path: "shcherbakov/no.html", label: Чего не хватает, file: content/no.md, fields: *sitepagefields }
       - { name: tab, preview_path: "shcherbakov/tab.html", label: Что такое таблатуры, file: content/tab.md, fields: *sitepagefields }
       - { name: praises-list, preview_path: "shcherbakov/praises.html", label: Список рецензий (Praises), file: content/praises.md, fields: *sitepagefields }
+
+
+  - divider: true
 
   # Статьи фан-клуба (шаблон praises-article): тело — HTML. Заголовки файлов приведены к виду, в котором их пишет
   # Sveltia (порядок ключей, отступ 4), чтобы сохранение не давало лишнего diff; поля и их порядок здесь менять
@@ -191,6 +115,7 @@ collections:
       - &layoutfield { label: layout, name: layout, widget: hidden, required: false, default: praises-article }
       - &typefield { label: type, name: type, widget: hidden, required: false, default: miscellaneous }
       - &articlebody { label: Текст (HTML), name: body, widget: text }
+
   - name: parodies
     label: Пародии (Parodies)
     label_singular: Пародия
@@ -217,6 +142,7 @@ collections:
       - *layoutfield
       - *typefield
       - *articlebody
+
   - name: fans
     label: Фан-клуб (fans)
     label_singular: Материал
@@ -245,6 +171,10 @@ collections:
       - *typefield
       - *articlebody
 
+  # Языковая группа (страницы языков и переводы) отбита в левой панели разделителем (вложенных разделов в Sveltia нет)
+  - divider: true
+
+
   # Страницы языков: тело — HTML; меню, подписи и прочие настройки заголовка правятся в файле
   - name: language-pages
     label: Страницы языков
@@ -261,3 +191,86 @@ collections:
       - { name: fr-ostromoukhov, preview_path: "shcherbakov/fr/ostromoukhov-2000.html", label: Français — мемуар Б. Остромуховой, file: content/fr/ostromoukhov-2000.md, fields: *pagefields }
       - { name: eo-index, label: Esperanto — настройки (страница ещё не выводится), file: content/eo/eo-index.md, fields: *pagefields }
       - { name: he-index, label: עברית — настройки (страница ещё не выводится), file: content/he/he-index.md, fields: *pagefields }
+
+
+  # Переводы: content/<язык>/<id>.md; страницы языка (у них есть layout) — в коллекции «Страницы языков»
+  - name: tr-en
+    label: Переводы — English
+    folder: content/en
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    preview_path: "shcherbakov/en/{{filename}}.html"
+    fields: &trfields
+      # только для фильтра: у страниц языка layout есть, у переводов нет (пустое не записывается)
+      - { label: layout, name: layout, widget: hidden, required: false }
+      - { label: Текст, name: body, widget: text }
+
+  - name: tr-de
+    label: Переводы — Deutsch
+    folder: content/de
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    preview_path: "shcherbakov/de/{{filename}}.html"
+    fields: *trfields
+
+  - name: tr-eo
+    label: Переводы — Esperanto
+    folder: content/eo
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    preview_path: "shcherbakov/eo/{{filename}}.html"
+    fields: *trfields
+
+  - name: tr-he
+    label: Переводы — עברית
+    folder: content/he
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    preview_path: "shcherbakov/he/{{filename}}.html"
+    fields: *trfields
+
+  - name: tr-uk
+    label: Переводы — Українська
+    folder: content/uk
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    preview_path: "shcherbakov/uk/{{filename}}.html"
+    fields: *trfields
+
+  - name: tr-fr
+    label: Переводы — Français
+    folder: content/fr
+    extension: md
+    format: json-frontmatter
+    create: false
+    delete: false
+    duplicate: false
+    filter: { field: layout, value: null }
+    summary: "{{filename}}"
+    preview_path: "shcherbakov/fr/{{filename}}.html"
+    fields: *trfields
