@@ -103,7 +103,7 @@ def main():
     check = '--check' in sys.argv
     cfg = yaml.safe_load(CONFIG.read_text(encoding='utf-8'))
     indent = cfg.get('output', {}).get('json', {}).get('indent_size', 2)
-    cols = {c['name']: c for c in cfg['collections']}
+    cols = {c['name']: c for c in cfg['collections'] if not c.get('divider')}
     changed = 0
     for name in args:
         col = cols[name]

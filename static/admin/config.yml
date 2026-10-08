@@ -53,6 +53,9 @@ collections:
           - { label: Последняя строка текста, name: textFinishAtLine, widget: number, value_type: int, required: false }
       - { label: Текст, name: body, widget: text }
 
+  # Группа переводов отбита в левой панели разделителями (вложенных разделов в Sveltia нет)
+  - divider: true
+
   # Переводы: content/<язык>/<id>.md; страницы языка (у них есть layout) — в коллекции «Страницы языков»
   - name: tr-en
     label: Переводы — English
@@ -123,6 +126,8 @@ collections:
     filter: { field: layout, value: null }
     summary: "{{filename}}"
     fields: *trfields
+
+  - divider: true
 
   # Отдельные страницы сайта: тело — Markdown (у tab — HTML), правится как есть, простым полем; анонсы на странице
   # новостей — из Directus (announces), в файле news.md только «Хроника»
