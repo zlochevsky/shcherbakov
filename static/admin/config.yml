@@ -43,6 +43,7 @@ collections:
     create: false
     delete: false
     duplicate: false
+    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
     summary: "{{dirname}} · {{filename}}"
     preview_path: "shcherbakov/texts/{{dirname}}/{{filename}}.html"
     fields:
@@ -100,7 +101,7 @@ collections:
     create: true
     delete: false
     duplicate: false
-    slug: { editable: true }
+    slug: { editable: [create] }   # имя файла вводится только при создании; адрес статьи — её url
     filter: { field: layout, value: praises-article }
     summary: "{{title}} · {{filename}}"
     preview_path: "shcherbakov{{fields.url}}"
@@ -125,7 +126,7 @@ collections:
     create: true
     delete: false
     duplicate: false
-    slug: { editable: true }
+    slug: { editable: [create] }   # имя файла вводится только при создании; адрес статьи — её url
     filter: { field: layout, value: praises-article }
     summary: "{{title}} · {{filename}}"
     preview_path: "shcherbakov{{fields.url}}"
@@ -153,7 +154,7 @@ collections:
     create: true
     delete: false
     duplicate: false
-    slug: { editable: true }
+    slug: { editable: [create] }   # имя файла вводится только при создании; адрес статьи — её url
     filter: { field: layout, value: praises-article }
     summary: "{{title}} · {{filename}}"
     preview_path: "shcherbakov{{fields.url}}"
@@ -202,6 +203,7 @@ collections:
     create: false
     delete: false
     duplicate: false
+    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
     filter: { field: layout, value: null }
     summary: "{{filename}}"
     preview_path: "shcherbakov/en/{{filename}}.html"
@@ -218,6 +220,7 @@ collections:
     create: false
     delete: false
     duplicate: false
+    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
     filter: { field: layout, value: null }
     summary: "{{filename}}"
     preview_path: "shcherbakov/de/{{filename}}.html"
@@ -231,6 +234,7 @@ collections:
     create: false
     delete: false
     duplicate: false
+    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
     filter: { field: layout, value: null }
     summary: "{{filename}}"
     preview_path: "shcherbakov/eo/{{filename}}.html"
@@ -244,6 +248,7 @@ collections:
     create: false
     delete: false
     duplicate: false
+    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
     filter: { field: layout, value: null }
     summary: "{{filename}}"
     preview_path: "shcherbakov/he/{{filename}}.html"
@@ -257,6 +262,7 @@ collections:
     create: false
     delete: false
     duplicate: false
+    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
     filter: { field: layout, value: null }
     summary: "{{filename}}"
     preview_path: "shcherbakov/uk/{{filename}}.html"
@@ -270,6 +276,7 @@ collections:
     create: false
     delete: false
     duplicate: false
+    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
     filter: { field: layout, value: null }
     summary: "{{filename}}"
     preview_path: "shcherbakov/fr/{{filename}}.html"

@@ -102,9 +102,9 @@ Other front matter keys are kept as they are, but the editor writes the keys it 
 
 ### New entries
 
-- Songs and translations cannot be created or deleted in the editor, because a file name is the record's id in Directus. A new song or translation is created in Directus; a Directus Flow then commits an empty file for its text (see [docs/directus.md](docs/directus.md)), and after a reload the entry shows up in the editor.
+- Songs and translations cannot be created, deleted or renamed in the editor, because a file name is the record's id in Directus. A new song or translation is created in Directus; a Directus Flow then commits an empty file for its text (see [docs/directus.md](docs/directus.md)), and after a reload the entry shows up in the editor.
 - Fan-club articles can be created in their sections. The file name is typed in Latin letters, and the page URL is `<section>/<name>.html`. The editor fills `type` and `layout` itself, and gives parodies and fan-club materials a default "back" link. A new article needs a link in its section's list: the list of reviews (under site pages), or the parody and fan-club tables of contents.
-- Articles cannot be deleted in the editor, because other pages link to them. Delete them with git and run `check-links.py`.
+- Articles cannot be renamed or deleted in the editor (the file name is typed only when an article is created), because other pages link to them. Delete them with git and run `check-links.py`.
 
 ### Saving
 
