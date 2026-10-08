@@ -177,6 +177,25 @@ try {
 <!-- Sveltia CMS: правка текстов в репозитории через GitHub API; настройки — config.yml рядом -->
 <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
 <script>
+// Предпросмотр песен и переводов — как режим «исходник» на странице песни: текст в <pre> без своего шрифта,
+// то есть стандартным моноширинным шрифтом браузера (font-family: monospace — как у <pre> на сайте; в поле
+// ввода стоит PT Mono, см. <style>). Параметры песни (тональность и т. п.) в предпросмотре не показываются.
+(() => {
+	const SongSource = createClass({
+		render() {
+			return h('pre', { className: 'song-source' }, this.props.entry.getIn(['data', 'body']) || '');
+		},
+	});
+	for (const name of ['texts', 'tr-en', 'tr-de', 'tr-eo', 'tr-he', 'tr-uk', 'tr-fr']) {
+		CMS.registerPreviewTemplate(name, SongSource);
+	}
+	CMS.registerPreviewStyle(
+		'pre.song-source { font-family: monospace; white-space: pre; margin: 0; padding: 1em 0; unicode-bidi: plaintext; }',
+		{ raw: true },
+	);
+})();
+</script>
+<script>
 // Строка и символ под курсором в поле текста, оба с 1 — те же числа, что в параметрах песни:
 // «Аккорды с позиции» (chordsStartAt) — номер символа, «Последняя строка текста» (textFinishAtLine) — номер строки
 (() => {

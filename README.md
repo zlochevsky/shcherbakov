@@ -116,6 +116,7 @@ Other front matter keys are kept as they are, but the editor writes the keys it 
 
 - Texts are edited as plain text, so spaces, indentation and chords stay exactly as typed.
 - For songs and translations the field uses a monospace font with its own Cyrillic (PT Mono), does not wrap lines and takes the full width of the pane, because chords are aligned with spaces. With a font that lacks Cyrillic, the browser takes the letters from another font, and the chords drift. For other pages long lines wrap like paragraphs. A script on the page picks the mode from the collection in the address.
+- The preview of songs and translations shows the text as the "source" view of a song page does: in `<pre>`, in the browser's default monospace font (the same as on the site). Song parameters are not shown there.
 - A badge in the corner shows the line and character under the cursor, both counted from 1: the same numbers as `textFinishAtLine` and `chordsStartAt`.
 - The editor puts a blank line after the front matter and writes a file with empty front matter without one. `layouts/partials/song.html` ignores blank lines before the text, so the line number in `textFinishAtLine` is not shifted.
 
