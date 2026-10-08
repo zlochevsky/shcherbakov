@@ -106,6 +106,12 @@ Other front matter keys are kept as they are, but the editor writes the keys it 
 - Fan-club articles can be created in their sections. The file name is typed in Latin letters, and the page URL is `<section>/<name>.html`. The editor fills `type` and `layout` itself, and gives parodies and fan-club materials a default "back" link. A new article needs a link in its section's list: the list of reviews (under site pages), or the parody and fan-club tables of contents.
 - Articles cannot be deleted in the editor, because other pages link to them. Delete them with git and run `check-links.py`.
 
+### Saving
+
+- A click on "Save" opens a small confirmation box under the button: Enter or "Save" confirms, Escape or "Cancel" goes back. Ctrl+S (Cmd+S) saves at once, without the box.
+- After saving, the editor stays open on the entry. This is the editor's own setting "Close the editor after saving a draft"; the page turns it off for anyone who has not changed it, and it can be switched back in the editor's settings.
+- Both are done by a script in `static/admin/index.html` that runs before the editor loads. It recognises the button by its label on the editor toolbar, so a future editor version may need it adjusted.
+
 ### The text field
 
 - Texts are edited as plain text, so spaces, indentation and chords stay exactly as typed.

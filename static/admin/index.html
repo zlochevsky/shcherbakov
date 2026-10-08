@@ -81,6 +81,27 @@ textarea {
 	background: hsl(var(--sui-background-color-3-hsl));
 }
 [id^="object-"][id$="-item-list"] > section.field::after { content: none !important; }
+/* окно подтверждения сохранения (скрипт ниже) — под кнопкой «Сохранить», в цветах темы Sveltia */
+#save-confirm {
+	position: fixed; z-index: 2000;
+	padding: 10px 14px; border-radius: 6px;
+	background: hsl(var(--sui-background-color-1-hsl, 0 0% 100%));
+	color: hsl(var(--sui-foreground-color-1-hsl, 0 0% 5%));
+	border: 1px solid hsl(var(--sui-border-color-2-hsl, 0 0% 72%));
+	box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
+	font-size: 14px;
+}
+#save-confirm p { margin: 0 0 8px; }
+#save-confirm div { display: flex; gap: 8px; justify-content: flex-end; }
+#save-confirm button {
+	padding: 4px 12px; border-radius: 4px; cursor: pointer; font: inherit;
+	border: 1px solid hsl(var(--sui-border-color-1-hsl, 0 0% 60%));
+	background: transparent; color: inherit;
+}
+#save-confirm button[data-ok] {
+	background: var(--sui-primary-accent-color, #2a6ac8); border-color: transparent;
+	color: var(--sui-primary-accent-color-inverted, #fff);
+}
 #caret-pos {
 	position: fixed; right: 16px; bottom: 16px; z-index: 1000;
 	padding: 4px 10px; border-radius: 4px;
@@ -90,6 +111,69 @@ textarea {
 </style>
 </head>
 <body>
+<!-- Этот скрипт — до Sveltia: её настройки читаются при запуске, а обработчики клавиш, добавленные раньше, срабатывают
+     раньше её собственных (Escape в окне подтверждения не должен закрывать редактор) -->
+<script>
+// 1. После сохранения оставаться в редакторе. Это настройка Sveltia «Закрывать редактор после сохранения черновика»
+//    (по умолчанию включена); ставим «не закрывать», только если человек её ещё не трогал, — в его браузере, в
+//    localStorage, где Sveltia её и хранит (ключ sveltia-cms.prefs). Поменять можно в настройках редактора.
+try {
+	const KEY = 'sveltia-cms.prefs';
+	const prefs = JSON.parse(localStorage.getItem(KEY) || '{}') || {};
+	if (prefs.closeOnSave === undefined) {
+		prefs.closeOnSave = false;
+		localStorage.setItem(KEY, JSON.stringify(prefs));
+	}
+} catch (e) { /* без localStorage — как решит Sveltia */ }
+
+// 2. Подтверждение сохранения у кнопки «Сохранить». Только для щелчка мышью (и Enter/пробела на самой кнопке):
+//    Ctrl+S (Cmd+S) Sveltia обрабатывает так, что «нажимает» ту же кнопку программно — у такого щелчка
+//    event.isTrusted = false, и он проходит без вопроса. Кнопку узнаём по подписи на панели редактора.
+(() => {
+	const SAVE_LABELS = ['Сохранить', 'Save'];
+	let pop = null;
+
+	const close = () => { if (pop) { pop.remove(); pop = null; } };
+
+	const open = (btn) => {
+		close();
+		pop = document.createElement('div');
+		pop.id = 'save-confirm';
+		pop.setAttribute('role', 'dialog');
+		pop.setAttribute('aria-label', 'Подтверждение сохранения');
+		pop.innerHTML = '<p>Сохранить изменения?</p>'
+			+ '<div><button type="button" data-ok>Сохранить</button> <button type="button" data-cancel>Отмена</button></div>';
+		document.body.append(pop);
+		// под кнопкой, правым краем по её правому краю
+		const r = btn.getBoundingClientRect();
+		pop.style.top = (r.bottom + 6) + 'px';
+		pop.style.right = Math.max(8, document.documentElement.clientWidth - r.right) + 'px';
+		pop.querySelector('[data-ok]').addEventListener('click', () => { close(); btn.click(); });
+		pop.querySelector('[data-cancel]').addEventListener('click', () => { close(); btn.focus(); });
+		pop.querySelector('[data-ok]').focus();
+	};
+
+	document.addEventListener('click', (e) => {
+		if (pop && !pop.contains(e.target)) close();
+		if (!e.isTrusted) return;                          // Ctrl+S и наш собственный повторный щелчок
+		const btn = e.target.closest && e.target.closest('button');
+		if (!btn || btn.disabled || !btn.closest('[role="toolbar"]')) return;
+		if (!SAVE_LABELS.includes(btn.textContent.trim())) return;
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		open(btn);
+	}, true);
+
+	// Escape — отмена, Enter — подтверждение; перехватываем раньше Sveltia (Escape у неё закрывает редактор)
+	addEventListener('keydown', (e) => {
+		if (!pop) return;
+		if (e.key === 'Escape') { e.preventDefault(); e.stopImmediatePropagation(); pop.querySelector('[data-cancel]').click(); }
+		else if (e.key === 'Enter' && pop.contains(document.activeElement)) { e.preventDefault(); e.stopImmediatePropagation(); document.activeElement.click(); }
+	}, true);
+	addEventListener('resize', close);
+	addEventListener('hashchange', close);
+})();
+</script>
 <!-- Sveltia CMS: правка текстов в репозитории через GitHub API; настройки — config.yml рядом -->
 <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
 <script>

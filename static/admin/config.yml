@@ -28,6 +28,10 @@ output:
     indent_size: 4
 
 # Тело — простой текст: пробелы, отступы и аккорды сохраняются как есть (не Markdown-редактор)
+# Кнопка «открыть на сайте» в редакторе: preview_path — адрес страницы от корня домена, который Sveltia берёт из
+# адреса самой админки (localhost:1313 или zlochevsky.github.io), поэтому с префиксом shcherbakov/ — подпапкой сайта
+# на GitHub Pages (и у hugo server). Переедет сайт в корень домена — префикс убрать. Статьи — по своему url;
+# у новой статьи без url кнопки нет. У настроек eo/he страницы нет — и кнопки нет.
 collections:
   - name: texts
     label: Тексты песен
@@ -40,6 +44,7 @@ collections:
     delete: false
     duplicate: false
     summary: "{{dirname}} · {{filename}}"
+    preview_path: "shcherbakov/texts/{{dirname}}/{{filename}}.html"
     fields:
       - label: Параметры
         name: params
@@ -67,6 +72,7 @@ collections:
     duplicate: false
     filter: { field: layout, value: null }
     summary: "{{filename}}"
+    preview_path: "shcherbakov/en/{{filename}}.html"
     fields: &trfields
       # только для фильтра: у страниц языка layout есть, у переводов нет (пустое не записывается)
       - { label: layout, name: layout, widget: hidden, required: false }
@@ -81,6 +87,7 @@ collections:
     duplicate: false
     filter: { field: layout, value: null }
     summary: "{{filename}}"
+    preview_path: "shcherbakov/de/{{filename}}.html"
     fields: *trfields
   - name: tr-eo
     label: Переводы — Esperanto
@@ -92,6 +99,7 @@ collections:
     duplicate: false
     filter: { field: layout, value: null }
     summary: "{{filename}}"
+    preview_path: "shcherbakov/eo/{{filename}}.html"
     fields: *trfields
   - name: tr-he
     label: Переводы — עברית
@@ -103,6 +111,7 @@ collections:
     duplicate: false
     filter: { field: layout, value: null }
     summary: "{{filename}}"
+    preview_path: "shcherbakov/he/{{filename}}.html"
     fields: *trfields
   - name: tr-uk
     label: Переводы — Українська
@@ -114,6 +123,7 @@ collections:
     duplicate: false
     filter: { field: layout, value: null }
     summary: "{{filename}}"
+    preview_path: "shcherbakov/uk/{{filename}}.html"
     fields: *trfields
   - name: tr-fr
     label: Переводы — Français
@@ -125,6 +135,7 @@ collections:
     duplicate: false
     filter: { field: layout, value: null }
     summary: "{{filename}}"
+    preview_path: "shcherbakov/fr/{{filename}}.html"
     fields: *trfields
 
   - divider: true
@@ -138,15 +149,15 @@ collections:
       # главная: тело — HTML-вёрстка блоками (abstract, frontimage, collections) и шорткод {{< lastmod … >}} — править
       # осторожно, незакрытый тег ломает вид главной; подвал (_footer.md, на главной и страницах шаблона baseof) —
       # только текст: заголовка у него нет (обязательное поле «Заголовок» не дало бы сохранить)
-      - { name: home, label: Главная страница, file: content/_index.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Текст, name: body, widget: text } ] }
-      - { name: footer, label: Подвал главной, file: content/_footer.md, fields: [ { label: Текст, name: body, widget: text } ] }
-      - { name: bio, label: Биография, file: content/bio.md, fields: *sitepagefields }
-      - { name: about, label: Об этой коллекции, file: content/about.md, fields: *sitepagefields }
-      - { name: buy, label: Где купить, file: content/buy.md, fields: *sitepagefields }
-      - { name: news, label: Новости (хроника), file: content/news.md, fields: *sitepagefields }
-      - { name: "no", label: Чего не хватает, file: content/no.md, fields: *sitepagefields }
-      - { name: tab, label: Что такое таблатуры, file: content/tab.md, fields: *sitepagefields }
-      - { name: praises-list, label: Список рецензий (Praises), file: content/praises.md, fields: *sitepagefields }
+      - { name: home, preview_path: "shcherbakov/index.html", label: Главная страница, file: content/_index.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Текст, name: body, widget: text } ] }
+      - { name: footer, preview_path: "shcherbakov/index.html", label: Подвал главной, file: content/_footer.md, fields: [ { label: Текст, name: body, widget: text } ] }
+      - { name: bio, preview_path: "shcherbakov/bio.html", label: Биография, file: content/bio.md, fields: *sitepagefields }
+      - { name: about, preview_path: "shcherbakov/about.html", label: Об этой коллекции, file: content/about.md, fields: *sitepagefields }
+      - { name: buy, preview_path: "shcherbakov/buy.html", label: Где купить, file: content/buy.md, fields: *sitepagefields }
+      - { name: news, preview_path: "shcherbakov/news.html", label: Новости (хроника), file: content/news.md, fields: *sitepagefields }
+      - { name: "no", preview_path: "shcherbakov/no.html", label: Чего не хватает, file: content/no.md, fields: *sitepagefields }
+      - { name: tab, preview_path: "shcherbakov/tab.html", label: Что такое таблатуры, file: content/tab.md, fields: *sitepagefields }
+      - { name: praises-list, preview_path: "shcherbakov/praises.html", label: Список рецензий (Praises), file: content/praises.md, fields: *sitepagefields }
 
   # Статьи фан-клуба (шаблон praises-article): тело — HTML. Заголовки файлов приведены к виду, в котором их пишет
   # Sveltia (порядок ключей, отступ 4), чтобы сохранение не давало лишнего diff; поля и их порядок здесь менять
@@ -168,6 +179,7 @@ collections:
     slug: { editable: true }
     filter: { field: layout, value: praises-article }
     summary: "{{title}} · {{filename}}"
+    preview_path: "shcherbakov{{fields.url}}"
     fields:
       - { label: Заголовок, name: title, widget: string }
       - label: Параметры
@@ -191,6 +203,7 @@ collections:
     slug: { editable: true }
     filter: { field: layout, value: praises-article }
     summary: "{{title}} · {{filename}}"
+    preview_path: "shcherbakov{{fields.url}}"
     fields:
       - { label: Заголовок, name: title, widget: string }
       - label: Параметры
@@ -217,6 +230,7 @@ collections:
     slug: { editable: true }
     filter: { field: layout, value: praises-article }
     summary: "{{title}} · {{filename}}"
+    preview_path: "shcherbakov{{fields.url}}"
     fields:
       - { label: Заголовок, name: title, widget: string }
       - label: Параметры
@@ -236,14 +250,14 @@ collections:
     label: Страницы языков
     format: json-frontmatter
     files:
-      - { name: en-index, label: English — главная, file: content/en/en-index.md, fields: &pagefields [ { label: Заголовок, name: title, widget: string }, { label: Текст (HTML), name: body, widget: text } ] }
-      - { name: en-translations, label: English — список переводов, file: content/en/en-translations.md, fields: *pagefields }
-      - { name: de-index, label: Deutsch — главная, file: content/de/de-index.md, fields: *pagefields }
-      - { name: de-translations, label: Deutsch — список переводов, file: content/de/de-translations.md, fields: *pagefields }
-      - { name: uk-index, label: Українська — главная, file: content/uk/uk-index.md, fields: *pagefields }
-      - { name: uk-translations, label: Українська — список переводов, file: content/uk/uk-translations.md, fields: *pagefields }
-      - { name: fr-index, label: Français — главная, file: content/fr/fr-index.md, fields: *pagefields }
-      - { name: fr-translations, label: Français — список переводов, file: content/fr/fr-translations.md, fields: *pagefields }
-      - { name: fr-ostromoukhov, label: Français — мемуар Б. Остромуховой, file: content/fr/ostromoukhov-2000.md, fields: *pagefields }
+      - { name: en-index, preview_path: "shcherbakov/en/index.html", label: English — главная, file: content/en/en-index.md, fields: &pagefields [ { label: Заголовок, name: title, widget: string }, { label: Текст (HTML), name: body, widget: text } ] }
+      - { name: en-translations, preview_path: "shcherbakov/en/translations.html", label: English — список переводов, file: content/en/en-translations.md, fields: *pagefields }
+      - { name: de-index, preview_path: "shcherbakov/de/index.html", label: Deutsch — главная, file: content/de/de-index.md, fields: *pagefields }
+      - { name: de-translations, preview_path: "shcherbakov/de/translations.html", label: Deutsch — список переводов, file: content/de/de-translations.md, fields: *pagefields }
+      - { name: uk-index, preview_path: "shcherbakov/uk/index.html", label: Українська — главная, file: content/uk/uk-index.md, fields: *pagefields }
+      - { name: uk-translations, preview_path: "shcherbakov/uk/translations.html", label: Українська — список переводов, file: content/uk/uk-translations.md, fields: *pagefields }
+      - { name: fr-index, preview_path: "shcherbakov/fr/index.html", label: Français — главная, file: content/fr/fr-index.md, fields: *pagefields }
+      - { name: fr-translations, preview_path: "shcherbakov/fr/translations.html", label: Français — список переводов, file: content/fr/fr-translations.md, fields: *pagefields }
+      - { name: fr-ostromoukhov, preview_path: "shcherbakov/fr/ostromoukhov-2000.html", label: Français — мемуар Б. Остромуховой, file: content/fr/ostromoukhov-2000.md, fields: *pagefields }
       - { name: eo-index, label: Esperanto — настройки (страница ещё не выводится), file: content/eo/eo-index.md, fields: *pagefields }
       - { name: he-index, label: עברית — настройки (страница ещё не выводится), file: content/he/he-index.md, fields: *pagefields }
