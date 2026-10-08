@@ -35,9 +35,9 @@
                                 <input type="text" id="search" placeholder="название, диск, год..." autofocus>
                                 <button id="clear-search">сброс</button> &emsp; &emsp;
                                 Сортировать вывод:
-                                <button id="alphabetname">по названиям</button>
-                                <button id="alphabetical">по первым словам</button>
-                                <button id="chronological">по годам</button>
+                                <button id="alphabetname" aria-pressed="true">по названиям</button>
+                                <button id="alphabetical" aria-pressed="false">по первым словам</button>
+                                <button id="chronological" aria-pressed="false">по годам</button>
                         </div>
 {{ $songs := partial "directus.html" }}
 {{ $albumPerfs := partial "directus-albums.html" }}
@@ -136,9 +136,9 @@
 	{{- range $albumList }}<a href="{{ partial "set-url.html" (dict "id" .id "format" .fmt.key) | relURL }}"><span class="cd-icon {{ cond (eq .fmt.key "mc") "tape" .id }}" data-balloon="{{ if ne .fmt.key "mc" }}{{ .fmt.full }}&#10;{{ end }}{{ .shortTitle }} ({{ .year }})" data-balloon-break data-balloon-pos="up"></span></a>{{ end -}}
 	</span>
 	<span class="entry">
-	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span id="name">{{ $name }}</span></a>
+	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span class="opus-name">{{ $name }}</span></a>
 	{{- if .is_new }}<span class="new" data-balloon="новое" data-balloon-pos="up"></span>{{ end -}}
-	{{- if .name }} (<span id="begin">{{ .fincipit }}</span>){{ if .is_poem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
+	{{- if .name }} (<span class="opus-begin">{{ .fincipit }}</span>){{ if .is_poem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
 	{{- else if .is_poem -}}
 		 <span class="poem-tag">(стихотворение)</span>
 	{{- end -}}
@@ -215,9 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
   songs.forEach(opus => songsById.set(opus.dataset.id, opus));
 
   var nameAndBeginSwapped = false;
-  var nameSorted = true;
-  var beginSorted = false;
-  var dateSorted = false;
 
   function normalize(text) {
     return text.toLowerCase().trim().normalize('NFD').replace(/\p{Diacritic}/gu, "").replace(/"ё"/gu, "е");
@@ -288,80 +285,28 @@ document.addEventListener("DOMContentLoaded", () => {
 //    artlist.classList.remove("list-searched");
   });
 
-  function comparatorDatum(a, b) {
-    if (
-	    a.dataset.datum < b.dataset.datum
-    ) 
-	  return -1;
-    if (
-	    a.dataset.datum > b.dataset.datum
-    )
-	  return 1;
-    return 0;
+  // Сортировка: ключ (поле data-*) и направление: 1 — по возрастанию, -1 — по убыванию
+  function sortBy(attr, dir) {
+    // только строки самого списка: копии в «Найденные песни с диска» (#album-matches) не трогаем
+    const items = Array.from(artlist.querySelectorAll(':scope > li[data-' + attr + ']'));
+    items.sort((a, b) => {
+      const x = a.dataset[attr], y = b.dataset[attr];
+      return x < y ? -dir : x > y ? dir : 0;
+    });
+    items.forEach(e => artlist.appendChild(e));
   }
-
-  function comparatorName(a, b) {
-    if (a.dataset.sort < b.dataset.sort) return -1;
-    if (a.dataset.sort > b.dataset.sort) return 1;
-    return 0;
-  }
-
-  function comparatorBegin(a, b) {
-    if (a.dataset.begin < b.dataset.begin) return -1;
-    if (a.dataset.begin > b.dataset.begin) return 1;
-    return 0;
-  }
-
-  function SortDate() {
-    var dates = document.querySelectorAll('[data-datum]');
-    var datesArray = Array.from(dates);
-    let sorted = datesArray.sort(comparatorDatum);
-    sorted.forEach(function(e) {
-      document.querySelector("#artlist").appendChild(e)
-      });
-    dateSorted = true;
-  }
-
-  function SortName() {
-          if (nameAndBeginSwapped == true) {
-    swapNameAndBegin();
-          }
-    var names = document.querySelectorAll('[data-sort]');
-    var namesArray = Array.from(names);
-    let sorted = namesArray.sort(comparatorName);
-    sorted.forEach(function(e) {
-      document.querySelector("#artlist").appendChild(e)
-      });
-    nameSorted = true;
-    beginSorted = false;
-  }
-
-
-  function SortBegin() {
-    if (nameAndBeginSwapped == false) {
-      swapNameAndBegin();
-    }
-    var begins = document.querySelectorAll('[data-begin]');
-    var beginsArray = Array.from(begins);
-    let sorted = beginsArray.sort(comparatorBegin);
-    sorted.forEach(function(e) {
-      document.querySelector("#artlist").appendChild(e)
-      });
-    nameSorted = false;
-    beginSorted = true;
- }
 
   function swapNameAndBegin() {
     songs.forEach(function(e) {
 
-     let opusName = e.querySelector("#name");
+     let opusName = e.querySelector(".opus-name");
 
      if (opusName != null) {
        let opusNameContent = opusName.textContent;
 
-       let opusBegin = e.querySelector("#begin");
+       let opusBegin = e.querySelector(".opus-begin");
 
-         if (opusBegin != null) { //swap #begin and #name, only if the opus has a #begin entity
+         if (opusBegin != null) { //swap .opus-begin and .opus-name, only if the opus has an .opus-begin
 
          let opusBeginContent = opusBegin.textContent;
          let nameCopy = opusName.textContent;
@@ -380,25 +325,52 @@ document.addEventListener("DOMContentLoaded", () => {
    }
   }
 
-  alphanButton.addEventListener("click", () => {
-    if(nameSorted == false || dateSorted == true)
-      SortName() && setBorderWidth("3px","1px","1px");
-  });
+  // Кнопки сортировки. Активная — aria-pressed="true" (жирную обводку даёт CSS, catalogue.css) и стрелка направления
+  // после названия; повторное нажатие на неё меняет направление, нажатие на другую включает её направление
+  // по умолчанию: названия и первые слова — по возрастанию (А→Я), годы — по убыванию (сначала новые).
+  // «По первым словам» показывает в строке первую строку вместо названия (swapNameAndBegin).
+  const sorts = [
+    { button: alphanButton, attr: "sort",  defaultDir: 1,  begin: false },
+    { button: alphabButton, attr: "begin", defaultDir: 1,  begin: true },
+    { button: chronoButton, attr: "datum", defaultDir: -1, begin: false },
+  ];
+  let current = sorts[0];
+  let currentDir = 1;
 
-  alphabButton.addEventListener("click", () => {
-          if(beginSorted == false || dateSorted == true)
-            SortBegin() && setBorderWidth("1px","3px","1px");
-  });
-
-  chronoButton.addEventListener("click", () => {
-    SortDate() && setBorderWidth("1px","1px","3px");
-  });
-
-  function setBorderWidth(alphanVal,alphabVal,chronoVal) {
-    alphanButton.style.borderWidth = alphanVal;
-    alphabButton.style.borderWidth = alphabVal;
-    chronoButton.style.borderWidth = chronoVal;
+  function render() {
+    sorts.forEach(o => {
+      const active = o === current;
+      o.button.setAttribute("aria-pressed", active ? "true" : "false");
+      let mark = o.button.querySelector(".sort-dir");
+      if (active) {
+        if (!mark) {
+          mark = document.createElement("span");
+          mark.className = "sort-dir";
+          o.button.append(mark);
+        }
+        mark.textContent = currentDir === 1 ? " ↑" : " ↓";
+        o.button.title = currentDir === 1 ? "по возрастанию; нажмите ещё раз — по убыванию"
+                                          : "по убыванию; нажмите ещё раз — по возрастанию";
+      } else {
+        if (mark) mark.remove();
+        o.button.removeAttribute("title");
+      }
+    });
   }
+
+  function apply(o, dir) {
+    if (o.begin !== nameAndBeginSwapped) swapNameAndBegin();
+    sortBy(o.attr, dir);
+    current = o;
+    currentDir = dir;
+    render();
+  }
+
+  sorts.forEach(o => o.button.addEventListener("click", () => {
+    apply(o, o === current ? -currentDir : o.defaultDir);
+  }));
+
+  render();
 
 });
 

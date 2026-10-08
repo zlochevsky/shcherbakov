@@ -103,10 +103,6 @@ div.wrapper ul, div.wrapper ol {
         font: normal 1em/1.5em serif;
 }
 
-#name:first-letter {
-	text-transform: capitalize;
-}
-
 .year, .poem-tag {
 	font-size: .8em;
 	color: var(--muted);
@@ -143,6 +139,13 @@ a [data-balloon] {
 	position: absolute;
 	opacity: 0;
 	pointer-events: none;
+}
+/* Невидимые подсказки не строятся вовсе, пока на значок не навели: иначе при каждой сортировке каталога
+   браузер заново раскладывает тысячи скрытых блоков с текстом (замер 2026-10-08: щелчок ~200 мс → ~120 мс).
+   content-visibility: auto у строк дал бы ~40 мс, но обрезает подсказки, выходящие за строку (paint containment). */
+[data-balloon]:not(:hover):before,
+[data-balloon]:not(:hover):after {
+	display: none;
 }
 
 [data-balloon]:after {
@@ -208,7 +211,9 @@ a [data-balloon] {
         border-color: var(--control-border);
         border-style: solid;
 }
-#search:focus, #alphabetname {
+/* поле поиска в фокусе и кнопка активной сортировки (aria-pressed="true" ставит скрипт каталога) — жирная обводка */
+#search:focus,
+#alphabetname[aria-pressed="true"], #alphabetical[aria-pressed="true"], #chronological[aria-pressed="true"] {
         border: 3px solid var(--control-border);
 }
 
