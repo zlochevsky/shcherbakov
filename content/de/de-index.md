@@ -68,4 +68,6 @@ Etwas über seine Alben erfahren Sie im <a href="https://de.wikipedia.org/wiki/M
 
 Außer dieser Seite und einigen Übersetzungen haben wir nichts auf Deutsch. Wir würden uns sehr wünschen, dass deutsche Dichter Schtscherbakows Lieder ins Deutsche übertragen, dass deutsche Interpreten seine Lieder auf Deutsch singen und dass unser Team einen deutschsprachigen Redakteur für die Seiten unserer Website bekommt.
 
+Alle deutschen Übersetzungen finden Sie auf der Seite <a href="translations.html">„Deutsche Übersetzungen“</a>.
+
 Diese Website ist keine offizielle Website Schtscherbakows; sie wird von einer Gemeinschaft seiner Verehrer gepflegt. Schtscherbakow hat nichts gegen ihre Existenz im Internet. Vielleicht möchten Sie <a href="https://github.com/zlochevsky/shcherbakov">auf GitHub</a> zu ihrer Entwicklung beitragen. Oder vielleicht eine Tournee Schtscherbakows in Deutschland organisieren. Auf jeden Fall können Sie uns einfach schreiben: <a href="mailto:deniskhin@gmail.com">deniskhin@gmail.com</a>.

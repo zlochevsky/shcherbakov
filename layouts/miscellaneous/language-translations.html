@@ -1,6 +1,8 @@
 {{- /* Список переводов на язык /<язык>/translations.html (из Directus, translations-data.html) с именем переводчика
        на языке переводов. Шапка — language-header.html; меню, подписи и признак сортировки (params.sortable) — с главной языковой страницы
-       (content/<язык>/<язык>-index.md). */ -}}
+       (content/<язык>/<язык>-index.md). Подписи кнопок сортировки — labels.sortSongYear/sortOriginal/sortTranslation/sortTranslator,
+       подсказка у активной кнопки — labels.sortAscending/sortDescending (необязательные, по умолчанию по-английски);
+       все подписи — в docs/frontmatter.md. */ -}}
 {{- $lang := .Params.lang -}}
 {{- $main := site.GetPage (printf "/%s/%s-index" $lang $lang) -}}
 {{- $labels := $main.Params.labels | default dict -}}
@@ -33,10 +35,10 @@
 <h1>{{ $labels.translationsTitle | default .Title }}</h1>
 {{- if $main.Params.sortable }}
 <p class="sort-buttons" data-pagefind-ignore>
-	<button type="button" data-sort="song" class="active">{{ $labels.sortSongYear }}</button>
-	<button type="button" data-sort="orig">{{ $labels.sortOriginal }}</button>
-	<button type="button" data-sort="title">{{ $labels.sortTranslation }}</button>
-	<button type="button" data-sort="translator">{{ $labels.sortTranslator }}</button>
+	<button type="button" data-sort="song" class="active" aria-pressed="true">{{ $labels.sortSongYear }}</button>
+	<button type="button" data-sort="orig" aria-pressed="false">{{ $labels.sortOriginal }}</button>
+	<button type="button" data-sort="title" aria-pressed="false">{{ $labels.sortTranslation }}</button>
+	<button type="button" data-sort="translator" aria-pressed="false">{{ $labels.sortTranslator }}</button>
 </p>
 {{- end }}
 <ul class="translation-list">
@@ -54,14 +56,44 @@
 </main>
 {{- if $main.Params.sortable }}
 <script>
-document.querySelectorAll('.sort-buttons button').forEach(btn => btn.addEventListener('click', () => {
-	const key = btn.dataset.sort;
+// Сортировка списка: активная кнопка — класс active и aria-pressed, после подписи — стрелка направления (↑ по
+// возрастанию, ↓ по убыванию); повторное нажатие меняет направление, нажатие на другую кнопку — по возрастанию.
+// Как кнопки сортировки в «Каталоге песен» (catalogue.html). Изначально список — по году песни, по возрастанию.
+(() => {
+	const buttons = Array.from(document.querySelectorAll('.sort-buttons button'));
 	const list = document.querySelector('.translation-list');
-	const items = Array.from(list.children);
-	items.sort((a, b) => (a.dataset[key] || '').localeCompare(b.dataset[key] || '') || a.dataset.i - b.dataset.i);
-	items.forEach(li => list.appendChild(li));
-	document.querySelectorAll('.sort-buttons button').forEach(b => b.classList.toggle('active', b === btn));
-}));
+	const titles = { 1: {{ $labels.sortAscending | default "ascending; click again to reverse" }},
+	                 '-1': {{ $labels.sortDescending | default "descending; click again to reverse" }} };
+	let current = buttons.find(b => b.classList.contains('active')) || buttons[0];
+	let dir = 1;
+	function render() {
+		buttons.forEach(b => {
+			const active = b === current;
+			b.classList.toggle('active', active);
+			b.setAttribute('aria-pressed', active ? 'true' : 'false');
+			let mark = b.querySelector('.sort-dir');
+			if (active) {
+				if (!mark) { mark = document.createElement('span'); mark.className = 'sort-dir'; b.append(mark); }
+				mark.textContent = dir === 1 ? ' ↑' : ' ↓';
+				b.title = titles[dir];
+			} else {
+				if (mark) mark.remove();
+				b.removeAttribute('title');
+			}
+		});
+	}
+	buttons.forEach(btn => btn.addEventListener('click', () => {
+		dir = btn === current ? -dir : 1;
+		current = btn;
+		const key = btn.dataset.sort;
+		const items = Array.from(list.children);
+		// при равных ключах — исходный порядок (data-i), в обоих направлениях
+		items.sort((a, b) => dir * (a.dataset[key] || '').localeCompare(b.dataset[key] || '') || a.dataset.i - b.dataset.i);
+		items.forEach(li => list.appendChild(li));
+		render();
+	}));
+	render();
+})();
 </script>
 {{- end }}
 </body>

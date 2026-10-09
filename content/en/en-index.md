@@ -76,4 +76,6 @@ At present, we don't have much information in English, but hopefully there will 
 
 Presented here is a catalog of Mikhail Scherbakov's songs along with some English translations. The translations are not authoritative; we cannot vouch for their accuracy, but we tried to do our best. Some translations were made by professional translators Tanya Jean Wolfson from San Diego, CA, and Genia Gurarie. There are also translations by Larisa Schultz (Jerusalem), Galit Gontar, Pavel Dolganov, Re-Miel, Asya Vaisman, Alexei Minayev, Ekaterina Chapiro and others.
 
+All English translations are listed on the <a href="translations.html">English translations</a> page.
+
 Songs and albums of Mikhail Shcherbakov in digital form can be purchased at the online store <a href="https://mkshch.com/">mkshch.com</a> <span class="lang-mark">(in Russian)</span>.
