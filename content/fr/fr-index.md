@@ -66,6 +66,6 @@ Il n’existe pas encore d’article sur Mikhaïl Chtcherbakov dans la Wikipédi
 
 En français, il existe une étude universitaire sur Chtcherbakov : le mémoire de maîtrise de <a href="https://lettres.sorbonne-universite.fr/personnes/bella-delacroix-ostromooukhova">Bella Ostromoukhov</a>, <a href="ostromoukhov-2000.html">« La chanson d’auteur russe aujourd’hui : Mikhaïl Scherbakov »</a> (Université de la Sorbonne, sous la direction du professeur Jean Bonamour, octobre 2000) ; le <a href="../fans/sorbonna.zip">fichier Word d’origine</a> (188 Ko) reste disponible.
 
-Les traductions françaises sont réunies sur la page <a href="translations.html">« Traductions françaises »</a>.
+Les traductions françaises sont réunies sur la page <a href="translations.html">« Traductions françaises »</a>{{< translations-count >}}.
 
 Ce site n’est pas le site officiel de Chtcherbakov ; il est entretenu par une communauté de ses admirateurs. Chtcherbakov ne s’oppose pas à son existence. Peut-être aimeriez-vous contribuer à son développement <a href="https://github.com/zlochevsky/shcherbakov">sur GitHub</a> ? Ou organiser une tournée de Chtcherbakov en France ? Dans tous les cas, vous pouvez simplement nous écrire : <a href="mailto:deniskhin@gmail.com">deniskhin@gmail.com</a>.

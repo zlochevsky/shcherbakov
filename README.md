@@ -33,7 +33,7 @@ Hugo's configuration is `hugo.json` in the root directory (site parameters, menu
 Standard Hugo directories:
 
 - `content` -- the pages: `.md` files whose body is mostly HTML markup. At the top of each file there is *front matter* -- page parameters in JSON. The fields the templates actually read are listed in [docs/frontmatter.md](docs/frontmatter.md);
-- `layouts` -- templates: page layouts in `layouts/miscellaneous`, shared parts in `layouts/partials`;
+- `layouts` -- templates: page layouts in `layouts/miscellaneous`, shared parts in `layouts/partials`, shortcodes for page bodies in `layouts/shortcodes`. `{{< lastmod "translations" >}}` gives the date of the latest record added to a Directus collection (on the home page). `{{< translations-count >}}` gives the number of translations into the page's language and the date of the latest one, as " (59, 07.10.26)" with the date in red (on the main language pages). Records migrated from the old site have no creation date, so for them only the number is shown;
 - `assets` -- files processed during the build: CSS (`assets/css`; all shared colours are CSS variables in `assets/css/palette.css`, embedded into every page by `layouts/partials/palette.html`) and SVG icons (`assets/svg`: album icons for the song catalogue, `svg/cd`, and format icons, `svg/format`);
 - `static` -- files copied to the site as they are: images, PDFs, legacy pages that are not converted yet; `static/admin` is the in-browser editor (see "Editing in the browser" below);
 - `data`, `archetypes`, `i18n` -- Hugo data files, templates for new pages, translations of interface strings;

@@ -1,0 +1,15 @@
+{{- /* Число опубликованных переводов на язык страницы и дата последнего добавленного:
+       {{< translations-count >}} → « (59)» или « (59, <span class="datum">дд.мм.гг</span>)».
+       Язык — params.lang страницы (или первый аргумент: {{< translations-count "de" >}}). Данные — translations-data.html
+       (Directus, translations). Дата — самая поздняя date_created среди переводов этого языка, в том же виде, что у
+       шорткода lastmod; у перенесённых со старого сайта переводов её нет (null), тогда выводится только число. */ -}}
+{{- $lang := .Get 0 | default .Page.Params.lang -}}
+{{- $n := 0 -}}
+{{- $last := "" -}}
+{{- range (partialCached "translations-data.html" "translations-data").list -}}
+	{{- if eq .lang.id $lang -}}
+		{{- $n = add $n 1 -}}
+		{{- with .dateCreated }}{{ if or (not $last) (gt (time.AsTime .).Unix (time.AsTime $last).Unix) }}{{ $last = . }}{{ end }}{{ end -}}
+	{{- end -}}
+{{- end -}}
+{{- if $n }} ({{ $n }}{{ with $last }}, <span class="datum">{{ . | time.Format "02.01.06" }}</span>{{ end }}){{ end -}}
