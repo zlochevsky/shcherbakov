@@ -6,7 +6,7 @@
       "disable": true
    },
    "params": {
-      "target": "../../translations.html#eo",
+      "target": "../../eo/translations.html",
       "noindex": true
    }
 }

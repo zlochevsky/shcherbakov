@@ -14,7 +14,7 @@ See the [Hugo front matter docs](https://gohugo.io/content-management/front-matt
 - `aliases` — old addresses that should redirect to this page.
 - `date`, `lastmod` — dates; `lastmod` feeds the "updated" date shown next to some menu items.
 - `"sitemap": {"disable": true}` — keep the page out of `sitemap.xml` (redirect pages, `fans/kom2`). Song pages are handled by their own rules, see below.
-- `"build": {"render": "never", "list": "never"}` — a page that is not rendered on its own, only included by another template (`Books/other-publications.md`, shown on the Books page) or read for its settings (`eo/eo-index.md`, `he/he-index.md`: language sections without a main page yet).
+- `"build": {"render": "never", "list": "never"}` — a page that is not rendered on its own, only included by another template (`Books/other-publications.md`, shown on the Books page) or read for its settings only (a language section whose main page has no text yet; on 2026-10-09 there is none: all six languages have a main page).
 - `draft`, `publishDate`, `expiryDate` — not used in content now (the hand-written `content/announces/` and its archetype were removed 2026-10-02: announces come from Directus).
 
 ## Site chrome (most page types)
@@ -86,7 +86,7 @@ Language section pages; each sets its own `layout`:
   - `params.nav` (list of `{label, href}`) — the top menu of the section, in that language. The first three entries are also the breadcrumb steps: the Russian home page, the main page of the language, the list of translations. An entry with an empty `href` is an inactive cell (no page yet);
   - `params.labels` (dictionary) — interface strings in that language: the menu and breadcrumb names (`menu`, `breadcrumbs`, `language`, `translations`, `top`, `page`), translation page labels (`original`, `translatedBy`, `showOriginal`, `hideOriginal`, `performances`, `recordedIn`, `inRussian`), the view switches (`text`, `chords`, `above`, `side`, `source`, `transpose`, `stress`), the list headings and sort buttons (`translationsTitle`, `sortTranslation`, `sortOriginal`, `sortTranslator`, `sortSongYear`; optional `sortAscending`, `sortDescending` — the tooltip of the active sort button, English by default);
   - `params.sortable` (bool) — sort buttons on the list of translations;
-  - `eo` and `he` have only this settings page so far, with `"build": {"render": "never", "list": "never"}`.
+  - a new language may start with this settings page alone, with `"build": {"render": "never", "list": "never"}` and empty `href` in `nav`, until its main page gets text; then `build` is removed and `href` filled in (so it was with `eo` and `he` until 2026-10-09).
 - `<language>-translations.md` (`language-translations`) — the list of translations: `params.lang`.
 - An article of the section (`language-article`, `fr/ostromoukhov-2000.md`): `params.lang`, `params.crumb` (the last breadcrumb, `title` by default). `params.description` — **unused**.
 
@@ -128,7 +128,7 @@ Small pages that keep legacy addresses alive (`content/Images/redirects/`, `cont
 - `aliases` — старые адреса, которые должны вести на эту страницу.
 - `date`, `lastmod` — даты; `lastmod` даёт дату «обновлено» у некоторых пунктов меню.
 - `"sitemap": {"disable": true}` — не включать страницу в `sitemap.xml` (страницы-редиректы, `fans/kom2`). Для страниц песен — свои правила, см. ниже.
-- `"build": {"render": "never", "list": "never"}` — страница не выводится сама: её вставляет другой шаблон (`Books/other-publications.md` на странице «Книги») или из неё читают настройки (`eo/eo-index.md`, `he/he-index.md` — разделы языков, у которых пока нет главной страницы).
+- `"build": {"render": "never", "list": "never"}` — страница не выводится сама: её вставляет другой шаблон (`Books/other-publications.md` на странице «Книги») или из неё только читают настройки (раздел языка, у главной страницы которого ещё нет текста; на 2026-10-09 таких нет: главные страницы есть у всех шести языков).
 - `draft`, `publishDate`, `expiryDate` — сейчас в контенте не используются (ручные `content/announces/` и их заготовка удалены 2026-10-02: анонсы берутся из Directus).
 
 ## Общее оформление (большинство страниц)
@@ -200,7 +200,7 @@ Small pages that keep legacy addresses alive (`content/Images/redirects/`, `cont
   - `params.nav` (список `{label, href}`) — верхнее меню раздела на этом языке. Первые три пункта — ещё и шаги крошек: русская главная, главная языка, список переводов. Пункт с пустым `href` — неактивная ячейка (страницы ещё нет);
   - `params.labels` (словарь) — строки интерфейса на этом языке: названия меню и крошек (`menu`, `breadcrumbs`, `language`, `translations`, `top`, `page`), подписи страницы перевода (`original`, `translatedBy`, `showOriginal`, `hideOriginal`, `performances`, `recordedIn`, `inRussian`), переключатели вида (`text`, `chords`, `above`, `side`, `source`, `transpose`, `stress`), заголовок списка и кнопки сортировки (`translationsTitle`, `sortTranslation`, `sortOriginal`, `sortTranslator`, `sortSongYear`; необязательные `sortAscending`, `sortDescending` — подсказка у активной кнопки сортировки, по умолчанию по-английски);
   - `params.sortable` (bool) — кнопки сортировки в списке переводов;
-  - у `eo` и `he` пока есть только эта страница настроек, с `"build": {"render": "never", "list": "never"}`.
+  - новый язык может начаться с одной этой страницы настроек, с `"build": {"render": "never", "list": "never"}` и пустыми `href` в `nav`, пока у главной страницы нет текста; потом `build` убирается и `href` заполняются (так было у `eo` и `he` до 2026-10-09).
 - `<язык>-translations.md` (`language-translations`) — список переводов: `params.lang`.
 - Статья раздела (`language-article`, `fr/ostromoukhov-2000.md`): `params.lang`, `params.crumb` (последний шаг крошек, по умолчанию `title`). `params.description` — **не используется**.
 

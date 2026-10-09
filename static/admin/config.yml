@@ -31,7 +31,7 @@ output:
 # Кнопка «открыть на сайте» в редакторе: preview_path — адрес страницы от корня домена, который Sveltia берёт из
 # адреса самой админки (localhost:1313 или zlochevsky.github.io), поэтому с префиксом shcherbakov/ — подпапкой сайта
 # на GitHub Pages (и у hugo server). Переедет сайт в корень домена — префикс убрать. Статьи — по своему url;
-# у новой статьи без url кнопки нет. У настроек eo/he страницы нет — и кнопки нет.
+# у новой статьи без url кнопки нет.
 collections:
   - name: texts
     label: Тексты песен
@@ -190,8 +190,10 @@ collections:
       - { name: fr-index, preview_path: "shcherbakov/fr/index.html", label: Français — главная, file: content/fr/fr-index.md, fields: *pagefields }
       - { name: fr-translations, preview_path: "shcherbakov/fr/translations.html", label: Français — список переводов, file: content/fr/fr-translations.md, fields: *pagefields }
       - { name: fr-ostromoukhov, preview_path: "shcherbakov/fr/ostromoukhov-2000.html", label: Français — мемуар Б. Остромуховой, file: content/fr/ostromoukhov-2000.md, fields: *pagefields }
-      - { name: eo-index, label: Esperanto — настройки (страница ещё не выводится), file: content/eo/eo-index.md, fields: *pagefields }
-      - { name: he-index, label: עברית — настройки (страница ещё не выводится), file: content/he/he-index.md, fields: *pagefields }
+      - { name: eo-index, preview_path: "shcherbakov/eo/index.html", label: Esperanto — главная, file: content/eo/eo-index.md, fields: *pagefields }
+      - { name: eo-translations, preview_path: "shcherbakov/eo/translations.html", label: Esperanto — список переводов, file: content/eo/eo-translations.md, fields: *pagefields }
+      - { name: he-index, preview_path: "shcherbakov/he/index.html", label: עברית — главная, file: content/he/he-index.md, fields: *pagefields }
+      - { name: he-translations, preview_path: "shcherbakov/he/translations.html", label: עברית — список переводов, file: content/he/he-translations.md, fields: *pagefields }
 
 
   # Переводы: content/<язык>/<id>.md; страницы языка (у них есть layout) — в коллекции «Страницы языков»

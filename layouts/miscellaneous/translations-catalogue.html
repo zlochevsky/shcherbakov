@@ -45,9 +45,9 @@
 				<input type="text" id="search" placeholder="песня, перевод, переводчик, язык, год..." autofocus>
 				<button id="clear-search">сброс</button> &emsp; &emsp;
 				Сортировать вывод:
-				<button data-sort="song" class="active">по годам песен</button>
-				<button data-sort="orig">по оригиналу</button>
-				<button data-sort="lang">по языкам</button>
+				<button data-sort="song" class="active" aria-pressed="true">по годам песен</button>
+				<button data-sort="orig" aria-pressed="false">по оригиналу</button>
+				<button data-sort="lang" aria-pressed="false">по языкам</button>
 			</div>
 <ul id="trlist">
 {{- range $i, $t := sort $items "work.year" }}
@@ -56,7 +56,7 @@
 	{{- $search := delimit (slice .work.name .work.fincipit .display .incipit (delimit $trAll " ") .lang.id .lang.name_ru .lang.name_native (string (.year | default "")) (string .work.year)) " " }}
 	<li class="tr-entry" data-i="{{ $i }}" data-song="{{ printf "%04d" (int .work.year) }}" data-orig="{{ .work.name | lower }}" data-lang="{{ printf "%02d-%s" (int .lang.sort) .lang.id }}" data-search="{{ $search }}">
 		<span class="tr-new">{{ if .isNew }}<span class="new" data-balloon="новое" data-balloon-pos="up"></span>{{ end }}</span>
-		<span class="lang-badge" data-balloon="{{ .lang.name_ru }} ({{ .lang.name_native }})" data-balloon-pos="up">{{ .lang.id }}</span>
+		<span class="lang-badge" data-balloon="{{ .lang.name_ru }}" data-balloon-pos="up">{{ .lang.id }}</span>
 		<span class="entry">
 			<a href="{{ .href | relURL }}" lang="{{ .lang.id }}" dir="auto">{{ .display }}</a>{{ with .year }} <span class="year">{{ . }}</span>{{ end }}
 			<span class="tr-translator">— {{ delimit $trRu ", " }}</span>
@@ -88,16 +88,44 @@ document.addEventListener("DOMContentLoaded", () => {
     search.value = ""; search.focus(); rows.forEach(r => { r.hidden = false; });
   });
 
-  // ключи сортировки: год песни → оригинал → язык → исходный порядок
+  // ключи сортировки: год песни → оригинал → язык → исходный порядок.
+  // Активная кнопка — класс active и aria-pressed, после подписи — стрелка направления (↑ по возрастанию, ↓ по убыванию);
+  // повторное нажатие меняет направление главного ключа (остальные ключи — по возрастанию), другая кнопка включается
+  // по возрастанию. Изначально — по годам песен, по возрастанию (в таком порядке список и выведен). Как в «Каталоге песен».
   const keys = { song: ["song", "orig", "lang"], orig: ["orig", "song", "lang"], lang: ["lang", "song", "orig"] };
-  document.querySelectorAll("[data-sort]").forEach(btn => btn.addEventListener("click", () => {
+  const buttons = Array.from(document.querySelectorAll("[data-sort]"));
+  let current = buttons.find(b => b.classList.contains("active")) || buttons[0];
+  let dir = 1;
+  function render() {
+    buttons.forEach(b => {
+      const active = b === current;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-pressed", active ? "true" : "false");
+      let mark = b.querySelector(".sort-dir");
+      if (active) {
+        if (!mark) { mark = document.createElement("span"); mark.className = "sort-dir"; b.append(mark); }
+        mark.textContent = dir === 1 ? " ↑" : " ↓";
+        b.title = dir === 1 ? "по возрастанию; нажмите ещё раз — по убыванию" : "по убыванию; нажмите ещё раз — по возрастанию";
+      } else {
+        if (mark) mark.remove();
+        b.removeAttribute("title");
+      }
+    });
+  }
+  buttons.forEach(btn => btn.addEventListener("click", () => {
+    dir = btn === current ? -dir : 1;
+    current = btn;
     const k = keys[btn.dataset.sort];
     rows.sort((a, b) => {
-      for (const f of k) { const c = a.dataset[f].localeCompare(b.dataset[f], "ru"); if (c) return c; }
+      for (let i = 0; i < k.length; i++) {
+        const c = a.dataset[k[i]].localeCompare(b.dataset[k[i]], "ru");
+        if (c) return i === 0 ? dir * c : c;
+      }
       return a.dataset.i - b.dataset.i;
     }).forEach(r => list.appendChild(r));
-    document.querySelectorAll("[data-sort]").forEach(b => b.classList.toggle("active", b === btn));
+    render();
   }));
+  render();
 
   // #<код языка> — фильтр по языку (русское название языка в поле фильтра)
   const applyHash = () => {

@@ -215,10 +215,17 @@ nav.breadcrumbs [aria-current] {
 	display: inline-block;
 	text-align: center;
 	font: .75em/1.6 sans-serif;
+	/* буквы на 1px ниже середины (иначе кажутся завышенными); высота значка та же */
+	line-height: calc(1.6em - 1px);
+	padding-top: 1px;
 	text-transform: uppercase;
-	color: var(--muted);
-	border: 1px solid #b8bccf;
+	color: var(--text);
+	border: 1px solid var(--text);   /* буквы и обводка — чёрные, цвет основного текста */
 	border-radius: 3px;
+}
+/* подсказка (::after) наследовала бы text-transform: uppercase значка — название языка в ней как в базе, строчными */
+#trlist .lang-badge::after {
+	text-transform: none;
 }
 
 #trlist .tr-translator {
