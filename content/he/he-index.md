@@ -70,3 +70,5 @@
 כל התרגומים לעברית של שירי מיכאיל שצ'רבקוב נאספו בדף <a href="translations.html">&quot;תרגומים לעברית&quot;</a>{{< translations-count >}}.
 
 <a href="https://en.wikipedia.org/wiki/Mikhail_Shcherbakov">הערך על מיכאיל שצ'רבקוב</a> בוויקיפדיה האנגלית <span class="lang-mark">(באנגלית)</span>.
+
+<p class="ai-note"><small>את הטקסט הזה הכינה בינה מלאכותית (Claude) לבקשתנו. אם אתם שולטים בעברית ושמתם לב לטעות, כתבו לנו: <a href="mailto:deniskhin@gmail.com">deniskhin@gmail.com</a>.</small></p>

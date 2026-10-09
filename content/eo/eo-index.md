@@ -70,3 +70,5 @@ Krom ĉi tiu paĝo kaj kelkaj tradukoj ni havas nenion en Esperanto. La tradukoj
 Ĉiuj tradukoj en Esperanton estas kolektitaj en la paĝo <a href="translations.html">„Esperantaj tradukoj“</a>{{< translations-count >}}.
 
 Ĉi tiu retejo ne estas oficiala retejo de Ŝĉerbakov; ĝin prizorgas komunumo de liaj ŝatantoj. Ŝĉerbakov ne kontraŭas ĝian ekziston en la reto. Eble vi volus kontribui al ĝia evoluigo <a href="https://github.com/zlochevsky/shcherbakov">ĉe GitHub</a>. Aŭ eble organizi koncertojn de Ŝĉerbakov por esperantistoj. Ĉiuokaze vi povas simple skribi al ni: <a href="mailto:deniskhin@gmail.com">deniskhin@gmail.com</a>.
+
+<p class="ai-note"><small>Ĉi tiun tekston preparis artefarita inteligenteco (Claude) laŭ nia peto. Se vi regas Esperanton kaj rimarkis eraron, bonvolu skribi al ni: <a href="mailto:deniskhin@gmail.com">deniskhin@gmail.com</a>.</small></p>

@@ -4,7 +4,7 @@
 
 This project, built with [HUGO](https://gohugo.io/), static site generator written in [Go](https://go.dev/), develops the layout of website dedicated to the works of Mikhail Shcherbakov, a russian songwriter and performer. The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. The maintained version, serving as the starting point for the project, is available at <https://lambda.mkshch.com/>.
 
-The goal of the project is to create a responsive layout for the website while preserving the original style and content as much as possible, making the website more usable for visitors and convenient for maintenance and support. The following objectives are set:
+The goal of the project was to create a responsive layout for the website while preserving the original style and content as much as possible, making the website more usable for visitors and easier to maintain. The following objectives were set:
 
 1. Convert current set of the whole website's pages into HUGO project manually.
 2. Update the website's markup to be more friendly to modern browsers and search engines.
@@ -12,7 +12,9 @@ The goal of the project is to create a responsive layout for the website while p
 4. Improve the overall user experience and interface, while preserving the style and intent of the website's creators. Add functionality, e.g. in the chords pages. Use JavaScript where appropriate.
 5. Maintain the simplicity and appearance of the current version: avoid excessive CSS complexity, refrain from overloading the user interface, optimize the graphic elements.
 
-Thus, the website is intended to be developed in a retro, old-fashioned, style, while striving for elegance and usability. I hope that after successfully achieving the set objectives, the website will become easier to develop, and new goals will become possible, such as implementing multilingual support. One such goal, full-text search, is already in place: the site's search page is built with [Pagefind](https://pagefind.app/).
+By design, the website was to keep its old-fashioned style while being as usable as possible. By October 2026 the main objectives have been achieved: all pages of the old website have been converted into HUGO, the markup has been updated and the layout is responsive; data on songs, concerts, albums and books is kept in a [Directus](https://directus.io/) database (on [PostgreSQL](https://www.postgresql.org/)), the song catalogue has been rethought, and song pages have chord display modes and transposition. New goals have become possible too: full-text search ([Pagefind](https://pagefind.app/)), a catalogue of translations and language sections, and editing texts in the browser. The aim not to depart from simplicity and the old look (objective 5) remains a working principle.
+
+Code, templates and documentation are to a large extent written with the help of AI ([Claude](https://claude.ai/)), directed and reviewed by the project's participants; such commits are marked with a `Co-Authored-By` line. The texts of some pages for visitors (the Esperanto and Hebrew main pages) were also prepared with AI, and those pages say so.
 
 Specific implementation aspects, e.g. integration with the studio records store or changing the russian character encoding, are intentionally not considered here, as they are deemed not significant enough for the main readme file.
 
