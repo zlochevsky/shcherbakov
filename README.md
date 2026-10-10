@@ -14,7 +14,7 @@ The goal of the project was to create a responsive layout for the website while 
 
 By design, the website was to keep its old-fashioned style while being as usable as possible. By October 2026 the main objectives have been achieved: all pages of the old website have been converted into HUGO, the markup has been updated and the layout is responsive; data on songs, concerts, albums and books is kept in a [Directus](https://directus.io/) database (on [PostgreSQL](https://www.postgresql.org/)), the song catalogue has been rethought, and song pages have chord display modes and transposition. New goals have become possible too: full-text search ([Pagefind](https://pagefind.app/)), a catalogue of translations and language sections, and editing texts in the browser. The aim not to depart from simplicity and the old look (objective 5) remains a working principle.
 
-Code, templates and documentation are to a large extent written with the help of AI ([Claude](https://claude.ai/)), directed and reviewed by the project's participants; such commits are marked with a `Co-Authored-By` line. The texts of some pages for visitors (the Esperanto and Hebrew main pages) were also prepared with AI, and those pages say so.
+The code, templates, and documentation were largely written with the help of AI ([Claude](https://claude.ai/)) under the guidance and review of project participants. AI was also used to prepare page content in languages ​​other than Russian and English.
 
 Specific implementation aspects, e.g. integration with the studio records store or changing the russian character encoding, are intentionally not considered here, as they are deemed not significant enough for the main readme file.
 
