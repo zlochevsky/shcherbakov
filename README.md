@@ -80,7 +80,7 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 
 ## Editing in the browser
 
-`/admin/` on the site is [Sveltia CMS](https://sveltiacms.app/), an editor for files in this repository: `static/admin/index.html` loads it, and `static/admin/config.yml` sets what it edits. It does not change any other page of the site. Each save is a commit to `master` made through the GitHub API, and the usual workflow publishes it. Data kept in Directus (titles, years, albums, translators, announces, comments) is edited in Directus.
+`/admin/` on the site is [Sveltia CMS](https://sveltiacms.app/), an editor for files in this repository: `static/admin/index.html` loads it, and `static/admin/config.yml` sets what it edits. It does not change any other page of the site. Each save is a commit to `master` made through the GitHub API, and the usual workflow publishes it. Data kept in Directus (titles, years, albums, translators, announces, comments) is edited in Directus. The "Таблицы Directus" item at the bottom of the editor's left panel opens `/admin/directus.html`: links to the Directus Studio tables, grouped by topic, with descriptions. The groups and descriptions live in `content/admin-directus.md` and are edited in the editor itself ("Страницы сайта"). The item itself is inserted by a script in `static/admin/index.html`, since Sveltia has no custom links in its panel.
 
 ### Signing in
 

@@ -1,0 +1,73 @@
+{{- /* Страница /admin/directus.html — ссылки на таблицы Directus Studio для редакторов, по группам. Отдельная
+       страница без шапки и меню сайта (без baseof): открывается из левой панели редактора /admin/ (Sveltia, пункт
+       добавляет скрипт в static/admin/index.html). Группы и описания — в params.groups файла
+       content/admin-directus.md, правятся в том же редакторе. Группа с заголовком — список а), б), в)…;
+       без заголовка — её таблицы одной строкой через «и». */ -}}
+{{- $studio := printf "%sadmin/content/" site.Params.directus.url -}}
+{{- $letters := split "абвгдежзиклмнопрстуфхцчшщэюя" "" -}}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<title>{{ .Title }}</title>
+{{ partial "palette.html" . }}
+<style>
+body {
+	margin: 0 auto;
+	padding: 16px;
+	max-width: 50em;
+	background: var(--page-bg);
+	color: var(--text);
+	font: 16px/1.45 sans-serif;
+}
+a { color: var(--link); }
+.back { margin: 0 0 1em; font-size: 14px; }
+h1 { margin: 0 0 .5em; font-size: 1.6em; }
+.intro { color: var(--muted); }
+.groups { padding-left: 2em; }
+.groups > li { margin: 1.2em 0; }
+.groups > li::marker { font-weight: bold; }
+.group-title, .tables-line { margin: 0; font-weight: bold; }
+.tables { margin: .3em 0 0; padding: 0; list-style: none; }
+.tables > li { margin: .7em 0; }
+.tables .letter { display: inline-block; min-width: 1.6em; }
+.table-link { font-family: monospace; font-weight: bold; }
+.desc { margin: .2em 0 0; font-size: 14px; }
+.tables .desc { margin-left: 1.6em; }
+.desc .table-name { font-family: monospace; }
+</style>
+</head>
+<body data-pagefind-ignore="all">
+<p class="back"><a href="{{ "admin/" | relURL }}">&larr; Редактор сайта</a></p>
+<h1>{{ .Title }}</h1>
+<div class="intro">{{ .Content }}</div>
+<ol class="groups">
+{{- range .Params.groups }}
+	{{- $tables := .tables | default slice }}
+	{{- $n := len $tables }}
+	<li>
+	{{- if .title }}
+		<p class="group-title">{{ .title }}:</p>
+		<ol class="tables">
+		{{- range $i, $t := $tables }}
+			<li><span class="letter">{{ index $letters $i }})</span>{{ $t.label }} (<a class="table-link" href="{{ $studio }}{{ $t.table }}" target="_blank" rel="noopener">{{ $t.table }}</a>){{ if eq (add $i 1) $n }}.{{ else }};{{ end }}
+				{{- with $t.description }}<p class="desc">{{ . | markdownify }}</p>{{ end }}</li>
+		{{- end }}
+		</ol>
+	{{- else }}
+		<p class="tables-line">
+		{{- range $i, $t := $tables }}
+			{{- if $i }} и {{ end }}{{ $t.label }} (<a class="table-link" href="{{ $studio }}{{ $t.table }}" target="_blank" rel="noopener">{{ $t.table }}</a>)
+		{{- end }}.</p>
+		{{- range $t := $tables }}
+			{{- with $t.description }}<p class="desc">{{ if gt $n 1 }}<span class="table-name">{{ $t.table }}</span>. {{ end }}{{ . | markdownify }}</p>{{ end }}
+		{{- end }}
+	{{- end }}
+	</li>
+{{- end }}
+</ol>
+</body>
+</html>

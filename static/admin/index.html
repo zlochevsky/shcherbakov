@@ -102,6 +102,17 @@ textarea {
 	background: var(--sui-primary-accent-color, #2a6ac8); border-color: transparent;
 	color: var(--sui-primary-accent-color-inverted, #fff);
 }
+/* пункт «Таблицы Directus» внизу левой панели (скрипт ниже) */
+#directus-tables-link {
+	display: block;
+	margin: 8px;
+	padding: 8px 12px;
+	border-top: 1px solid hsl(var(--sui-border-color-2-hsl, 0 0% 72%));
+	color: var(--sui-primary-accent-color-text, inherit);
+	font-size: var(--sui-font-size-default, 14px);
+	text-decoration: none;
+}
+#directus-tables-link:hover { text-decoration: underline; }
 #caret-pos {
 	position: fixed; right: 16px; bottom: 16px; z-index: 1000;
 	padding: 4px 10px; border-radius: 4px;
@@ -236,6 +247,23 @@ try {
 	addEventListener('hashchange', mark);
 	addEventListener('popstate', mark);
 	setInterval(mark, 500);
+})();
+// Пункт «Таблицы Directus» внизу левой панели со списком коллекций — ссылка на страницу directus.html рядом с
+// редактором (собирается из content/admin-directus.md). Штатно своих ссылок в панели у Sveltia нет, поэтому
+// пункт вставляется в её разметку (nav.primary-sidebar); Sveltia перерисовывает панель — проверка по таймеру
+// возвращает пункт. Переименуют класс в новой версии — пункт просто пропадёт, страница останется по адресу.
+(() => {
+	const add = () => {
+		const nav = document.querySelector('nav.primary-sidebar');
+		if (!nav || nav.querySelector('#directus-tables-link')) return;
+		const a = document.createElement('a');
+		a.id = 'directus-tables-link';
+		a.href = 'directus.html';
+		a.textContent = 'Таблицы Directus';
+		nav.append(a);
+	};
+	add();
+	setInterval(add, 500);
 })();
 </script>
 </body>

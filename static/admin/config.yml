@@ -80,6 +80,33 @@ collections:
       - { name: "no", preview_path: "shcherbakov/no.html", label: Чего не хватает, file: content/no.md, fields: *sitepagefields }
       - { name: tab, preview_path: "shcherbakov/tab.html", label: Что такое таблатуры, file: content/tab.md, fields: *sitepagefields }
       - { name: praises-list, preview_path: "shcherbakov/praises.html", label: Список рецензий (Praises), file: content/praises.md, fields: *sitepagefields }
+      # страница со ссылками на таблицы Directus (пункт «Таблицы Directus» в левой панели — скрипт в index.html):
+      # группа с заголовком выводится списком а), б), в)…, без заголовка — таблицы одной строкой через «и»
+      - name: admin-directus
+        preview_path: "shcherbakov/admin/directus.html"
+        label: Таблицы Directus (ссылки для редакторов)
+        file: content/admin-directus.md
+        fields:
+          - { label: Заголовок, name: title, widget: string }
+          - label: Параметры
+            name: params
+            widget: object
+            fields:
+              - label: Группы
+                name: groups
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Заголовок группы, name: title, widget: string, required: false, hint: "Пусто — таблицы группы выводятся одной строкой через «и»" }
+                  - label: Таблицы
+                    name: tables
+                    widget: list
+                    summary: "{{fields.label}} ({{fields.table}})"
+                    fields:
+                      - { label: Название, name: label, widget: string }
+                      - { label: Таблица в Directus, name: table, widget: string, hint: "Имя коллекции, как в адресе Directus: events, works…" }
+                      - { label: Описание, name: description, widget: text, required: false }
+          - { label: Текст над списком, name: body, widget: text }
 
 
   - divider: true
