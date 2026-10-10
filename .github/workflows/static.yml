@@ -36,6 +36,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      # Directus недоступен или публичный токен не видит данных — сборку не продолжаем: Hugo при ошибке запроса
+      # к Directus не падает, а собирает страницы с пустыми данными, и деплой опубликовал бы сайт без каталога,
+      # концертов и дисков. Упавший workflow ничего не публикует — на сайте остаётся прежняя версия.
+      # Список — коллекции, которые читает сборка и которые не бывают пустыми (announces и log_entries — бывают).
+      - name: Check that Directus answers
+        run: |
+          TOKEN=$(jq -r .directus.token config/_default/params.json.example)
+          URL=https://db.sch.com.ru/
+          if ! curl -sf --max-time 20 --retry 3 --retry-delay 10 --retry-all-errors "${URL}server/ping" > /dev/null; then
+            echo "::error::Directus (${URL}) не отвечает — сборка остановлена, на сайте остаётся прежняя версия"
+            exit 1
+          fi
+          fail=0
+          for c in works events perfs sets sets_entries disk_formats books books_entries book_sets translations translators languages performers releases recordings comments; do
+            n=$(curl -sf --max-time 20 --retry 2 --retry-delay 5 --retry-all-errors "${URL}items/${c}?limit=1&fields=id${TOKEN}" | jq '.data | length') || n=""
+            if [ "$n" != "1" ]; then
+              echo "::error::Directus: публичный токен не получил данных из «${c}» (нет доступа или коллекция пуста)"
+              fail=1
+            fi
+          done
+          exit $fail
+
       - name: Archive expired announces in Directus
         run: |
           curl -sf -X PATCH "https://db.sch.com.ru/items/announces" \

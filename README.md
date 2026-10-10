@@ -75,6 +75,7 @@ Run `hugo server` for a local preview, or `hugo` to build the site into `public`
 The site is built and published to GitHub Pages by GitHub Actions ([.github/workflows/static.yml](.github/workflows/static.yml)):
 
 - on every push to `master`, on manual start, and on schedule twice a day (05:00 and 17:00 UTC), so that data changed in Directus reaches the site without a push;
+- first the workflow checks that Directus answers and that the public token reads data from the collections the build uses; if not, the workflow stops and the published site stays as it was (otherwise Hugo would build pages with empty data);
 - before each build the workflow archives announces whose expiry date has passed (sets their status in Directus to `archived`);
 - the build uses the public read-only Directus token from `params.json.example`, runs Hugo, then Pagefind to make the search index.
 
