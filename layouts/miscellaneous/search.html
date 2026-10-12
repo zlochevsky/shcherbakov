@@ -35,7 +35,7 @@
 		<label><input type="radio" name="sscope" value="all" checked> По всему сайту</label>
 		<label><input type="radio" name="sscope" value="songs"> По текстам песен</label>
 	</fieldset>
-	<input type="text" id="ssearch" placeholder="что ищем...">
+	<input type="search" id="ssearch" placeholder="что ищем..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
 	<p class="search-status"><span id="scount"></span></p>
 </div>
 
@@ -64,13 +64,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 		return checked ? checked.value : "all";
 	}
 
-	async function renderResults(searchResult) {
+	async function renderResults(searchResult, seq) {
+		const shown = searchResult.results.slice(0, 40);
+		const items = await Promise.all(shown.map(r => r.data()));
+		// пока грузились данные, мог начаться более новый поиск
+		if (seq !== searchSeq) return;
+
 		results.innerHTML = "";
 		const total = searchResult.results.length;
 		countEl.textContent = total ? `Найдено: ${total}` : "Ничего не найдено.";
-
-		const shown = searchResult.results.slice(0, 40);
-		const items = await Promise.all(shown.map(r => r.data()));
 
 		function isSong(item) {
 			return !!(item.filters && item.filters.type && item.filters.type.includes("song"));
@@ -110,7 +112,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 	}
 
 	let debounceTimer;
+	// номер последнего запущенного поиска: ответы на устаревшие запросы
+	// (короткие префиксы при наборе) могут прийти позже актуального и затереть его
+	let searchSeq = 0;
 	async function runSearch() {
+		const seq = ++searchSeq;
 		const term = search.value.trim();
 		if (!term) {
 			results.innerHTML = "";
@@ -119,13 +125,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 		}
 		const filters = currentScope() === "songs" ? { filters: { type: ["song"] } } : {};
 		const searchResult = await pagefind.search(term, filters);
-		renderResults(searchResult);
+		if (seq !== searchSeq) return;
+		renderResults(searchResult, seq);
 	}
 
 	search.addEventListener("input", () => {
 		clearTimeout(debounceTimer);
 		debounceTimer = setTimeout(runSearch, 150);
 	});
+	// на мобильных убираем экранную клавиатуру, чтобы она не закрывала результаты:
+	// по кнопке «Поиск» (Enter) и при касании списка результатов
+	search.addEventListener("keydown", e => {
+		if (e.key === "Enter") {
+			e.preventDefault();
+			search.blur();
+		}
+	});
+	results.addEventListener("touchstart", () => search.blur(), { passive: true });
 	document.querySelectorAll('input[name="sscope"]').forEach(r => r.addEventListener("change", () => {
 		clearTimeout(debounceTimer);
 		runSearch();
