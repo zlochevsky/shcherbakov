@@ -118,8 +118,10 @@
 	{{- end -}}
 {{- end -}}
 {{- $albumList = sort $albumList "order" -}}
+{{- /* в фильтре строки — только сокращения дисков («Б2»); совпадения по названию диска
+       выводит отдельный блок «Найденные песни с диска…», иначе песни дублируются */ -}}
 {{- $diskSearch := slice -}}
-{{- range $albumList }}{{ $diskSearch = $diskSearch | append .abbrev .shortTitle }}{{ end -}}
+{{- range $albumList }}{{ $diskSearch = $diskSearch | append .abbrev }}{{ end -}}
 
 <li class="opus-entry"
 	data-id="{{ .id }}"
