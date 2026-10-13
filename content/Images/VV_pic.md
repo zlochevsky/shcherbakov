@@ -4,7 +4,8 @@
         "subtitle": "Иллюстрации М. А. Кима к книге М. К. Щербакова «Вишнёвое варенье»",
         "parentUrl": "Images/illustrations.html",
         "parentTitle": "Иллюстрации",
-        "bgColor": "#f9eef3"
+        "bgColor": "#f9eef3",
+        "seoTitle": "Иллюстрации к книге Щербакова «Вишнёвое варенье» — М. А. Ким"
     },
     "layout": "images-page",
     "type": "miscellaneous",

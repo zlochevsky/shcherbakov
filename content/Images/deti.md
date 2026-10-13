@@ -5,7 +5,7 @@
         "parentUrl": "Images/illustrations.html",
         "parentTitle": "Иллюстрации",
         "bgColor": "#F0E68C",
-        "seoTitle": "Иллюстрации к песням: рисунки и фото, шуточные скриншоты — фан-клуб Михаила Щербакова"
+        "seoTitle": "Иллюстрации к песням Щербакова — Дмитрий Полонский, pinguinchen и другие"
     },
     "description": "Иллюстрации к песням Михаила Щербакова: работы Дмитрия Полонского, pinguinchen и mosomedve-art, фотографии и шуточные скриншоты.",
     "layout": "images-page",
