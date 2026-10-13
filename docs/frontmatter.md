@@ -14,13 +14,24 @@ See the [Hugo front matter docs](https://gohugo.io/content-management/front-matt
 - `aliases` — old addresses that should redirect to this page.
 - `date`, `lastmod` — dates; `lastmod` feeds the "updated" date shown next to some menu items.
 - `"sitemap": {"disable": true}` — keep the page out of `sitemap.xml` (redirect pages, `fans/kom2`). Song pages are handled by their own rules, see below.
-- `"build": {"render": "never", "list": "never"}` — a page that is not rendered on its own, only included by another template (`Books/other-publications.md`, shown on the Books page) or read for its settings only (a language section whose main page has no text yet; on 2026-10-09 there is none: all six languages have a main page).
+- `"build": {"render": "never", "list": "never"}` — a page that is not rendered on its own, only included by another template (`Books/other-publications.md`, shown on the Books page; `_footer.md`, the home page footer) or read for its settings only (a language section whose main page has no text yet; on 2026-10-09 there is none: all six languages have a main page).
 - `draft`, `publishDate`, `expiryDate` — not used in content now (the hand-written `content/announces/` and its archetype were removed 2026-10-02: announces come from Directus).
 
 ## Site chrome (most page types)
 
 - `params.subtitle` — per-page `<h2>` under `<h1>`. Not the site-wide `site.Params.Subtitle` from `hugo.json`.
-- `params.name` — browser-tab `<title>` independent of `<h1>`; falls back to `title`.
+- `params.name` — short page name independent of `<h1>` (menus, the base of the default `<title>`); falls back to `title`.
+
+## Search engines and link previews — all pages except redirects
+
+`<title>`, description, `noindex`, canonical and Open Graph come from one partial, `layouts/partials/seo.html` (added 2026-10-13).
+
+- `description` (standard Hugo field) — `<meta name="description">` and `og:description`. Set on the main static pages; songs, translations, albums, cassettes, books, cycles and Praises articles get a generated one when it is empty.
+- `params.seoTitle` — the full `<title>` (and `og:title`), used as is. Without it the title is generated: by page type for songs, translations, albums, books, cycles and Praises articles; otherwise `params.name`/`title` plus a section suffix: « — Михаил Щербаков» (showcase), « — фан-клуб Михаила Щербакова» (`fans`, `Parodies`, `FOM`, `SCH2`, `Images`), the author's name in the section's language (language folders); no suffix when the name already contains «Щербаков» or «Shcherbakov».
+- `params.noindex` (bool) — `noindex, follow` and no canonical (e.g. `search.md`, `Cycles/monologi.md`).
+- `params.author` (Praises articles) — also used in the generated title (up to the first comma) and description.
+
+canonical and `og:url` point to the page itself, or, if `params.canonicalBase` is set in `hugo.json` (empty now), to the same path on that address — for when a copy of the site is published under another domain.
 
 ## Announces — `content/news.md` only
 
@@ -128,13 +139,24 @@ Small pages that keep legacy addresses alive (`content/Images/redirects/`, `cont
 - `aliases` — старые адреса, которые должны вести на эту страницу.
 - `date`, `lastmod` — даты; `lastmod` даёт дату «обновлено» у некоторых пунктов меню.
 - `"sitemap": {"disable": true}` — не включать страницу в `sitemap.xml` (страницы-редиректы, `fans/kom2`). Для страниц песен — свои правила, см. ниже.
-- `"build": {"render": "never", "list": "never"}` — страница не выводится сама: её вставляет другой шаблон (`Books/other-publications.md` на странице «Книги») или из неё только читают настройки (раздел языка, у главной страницы которого ещё нет текста; на 2026-10-09 таких нет: главные страницы есть у всех шести языков).
+- `"build": {"render": "never", "list": "never"}` — страница не выводится сама: её вставляет другой шаблон (`Books/other-publications.md` на странице «Книги»; `_footer.md` — подвал главной) или из неё только читают настройки (раздел языка, у главной страницы которого ещё нет текста; на 2026-10-09 таких нет: главные страницы есть у всех шести языков).
 - `draft`, `publishDate`, `expiryDate` — сейчас в контенте не используются (ручные `content/announces/` и их заготовка удалены 2026-10-02: анонсы берутся из Directus).
 
 ## Общее оформление (большинство страниц)
 
 - `params.subtitle` — подзаголовок `<h2>` под `<h1>`. Не путать с общим `site.Params.Subtitle` из `hugo.json`.
-- `params.name` — текст вкладки браузера (`<title>`) независимо от `<h1>`; по умолчанию — `title`.
+- `params.name` — короткое имя страницы независимо от `<h1>` (меню, основа `<title>` по умолчанию); по умолчанию — `title`.
+
+## Поисковики и превью ссылок — все страницы, кроме редиректов
+
+`<title>`, description, `noindex`, canonical и Open Graph выводит один партиал — `layouts/partials/seo.html` (добавлен 2026-10-13).
+
+- `description` (стандартное поле Hugo) — `<meta name="description">` и `og:description`. Задано у основных статических страниц; песни, переводы, диски, кассеты, книги, циклы и статьи из Praises получают сгенерированное, если поле пустое.
+- `params.seoTitle` — полный `<title>` (и `og:title`), выводится как есть. Без него заголовок собирается: по типу страницы у песен, переводов, дисков, книг, циклов и статей из Praises; иначе `params.name`/`title` плюс суффикс раздела: « — Михаил Щербаков» (витрина), « — фан-клуб Михаила Щербакова» (`fans`, `Parodies`, `FOM`, `SCH2`, `Images`), имя автора на языке раздела (языковые папки); без суффикса, если в имени уже есть «Щербаков» или «Shcherbakov».
+- `params.noindex` (bool) — `noindex, follow` и без canonical (например, `search.md`, `Cycles/monologi.md`).
+- `params.author` (статьи Praises) — ещё и в сгенерированном заголовке (до первой запятой) и описании.
+
+canonical и `og:url` указывают на саму страницу, а если в `hugo.json` задан `params.canonicalBase` (сейчас пуст) — на тот же путь по этому адресу: на случай, когда копия сайта публикуется под другим доменом.
 
 ## Анонсы — только `content/news.md`
 

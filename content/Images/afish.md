@@ -1,8 +1,8 @@
 {
-   "title": "Афиши",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/afish.html"
+    "title": "Афиши",
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/afish.html"
 }
 
 <p>Этот раздел изначально предназначался главным образом для организаторов концертов.<br>

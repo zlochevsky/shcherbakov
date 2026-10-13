@@ -1,16 +1,17 @@
 {
-   "title": "Коллекция «щербаковских» баннеров",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/banners.html",
-   "aliases": [
-      "/Banners/index.html",
-      "/Banners/fooksman.html"
-   ],
-   "params": {
-       "bgColor": "#FEFEEF"
-   }
+    "aliases": [
+        "/Banners/index.html",
+        "/Banners/fooksman.html"
+    ],
+    "title": "Коллекция «щербаковских» баннеров",
+    "params": {
+        "bgColor": "#FEFEEF"
+    },
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/banners.html"
 }
+
 <p>Здесь мы собираем баннеры, изготовленные к гастролям М.&nbsp;Щербакова в разных странах, либо просто связанные с темами и сюжетами его произведений.<br>
 Если вы захотите разместить на своих страницах или еще как-то использовать какое-либо из этих творений, то обращайтесь за санкцией к их создателям. Авторство некоторых из баннеров нам неизвестно, и если вы знаете, кто их сделал&nbsp;&mdash; напишите <a href="mailto:l_meirovich@hotmail.com">Л.&nbsp;Мееровичу</a>, и авторство будет восстановлено. И <a href="mailto:l_meirovich@hotmail.com">присылайте</a> еще!</p>
 

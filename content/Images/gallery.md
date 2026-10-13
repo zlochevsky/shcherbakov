@@ -1,12 +1,13 @@
 {
-   "title": "Картинки",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/index.html",
-   "params": {
-       "subtitle": "фотографии, иллюстрации, афиши, артефакты"
-   }
+    "title": "Картинки",
+    "params": {
+        "subtitle": "фотографии, иллюстрации, афиши, артефакты"
+    },
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/index.html"
 }
+
 <h2 id="photos">Фотографии</h2>
 <h3 id="photos-2010s">2010-е годы</h3>
 <img src="precollage/2010s.jpg">

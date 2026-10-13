@@ -7,11 +7,7 @@
 {{ hugo.Generator }}
 {{ partial "palette.html" . }}
 {{- $info := partial "song-page-info.html" . }}
-<title>{{ $info.title }} - текст, аккорды</title>
-{{- with $info.incipit }}
-<meta name="description" content="{{ . }}">
-{{- end }}
-{{ if $info.noindex }}<meta name="robots" content="noindex, follow">{{ end }}
+{{ partial "seo.html" . }}
 <style>
     /* По умолчанию (без JS) показываем только source */
     .view-container {

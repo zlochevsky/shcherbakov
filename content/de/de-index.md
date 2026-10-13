@@ -1,54 +1,56 @@
 {
-   "title": "Michail Schtscherbakow: Deutsch",
-   "type": "miscellaneous",
-   "layout": "language-index",
-   "url": "/de/index.html",
-   "params": {
-      "lang": "de",
-      "heading": "Michail Schtscherbakow",
-      "nav": [
-         {
-            "label": "Russische Hauptseite",
-            "href": "index.html"
-         },
-         {
-            "label": "Deutsche Hauptseite",
-            "href": "de/index.html"
-         },
-         {
-            "label": "Deutsche Übersetzungen",
-            "href": "de/translations.html"
-         },
-         {
-            "label": "Russischer Liederkatalog",
-            "href": "catalogue.html"
-         }
-      ],
-      "labels": {
-         "translations": "Übersetzungen",
-         "translationsTitle": "Deutsche Übersetzungen",
-         "original": "Original",
-         "translatedBy": "Übersetzt von",
-         "showOriginal": "Original anzeigen",
-         "hideOriginal": "Original ausblenden",
-         "performances": "Interpretationen",
-         "text": "Text",
-         "chords": "Akkorde",
-         "above": "über der Zeile",
-         "side": "daneben",
-         "source": "Quelltext",
-         "transpose": "transponieren",
-         "stress": "Betonungen",
-         "page": "S.",
-         "recordedIn": "Aufnahme von",
-         "inRussian": "auf Russisch",
-         "language": "Deutsch",
-         "menu": "Menü",
-         "breadcrumbs": "Brotkrumen",
-         "top": "Nach oben"
-      },
-      "sortable": false
-   }
+    "title": "Michail Schtscherbakow: Deutsch",
+    "params": {
+        "seoTitle": "Michail Schtscherbakow — Lieder auf Deutsch",
+        "heading": "Michail Schtscherbakow",
+        "labels": {
+            "above": "über der Zeile",
+            "breadcrumbs": "Brotkrumen",
+            "chords": "Akkorde",
+            "hideOriginal": "Original ausblenden",
+            "inRussian": "auf Russisch",
+            "language": "Deutsch",
+            "menu": "Menü",
+            "original": "Original",
+            "page": "S.",
+            "performances": "Interpretationen",
+            "recordedIn": "Aufnahme von",
+            "showOriginal": "Original anzeigen",
+            "side": "daneben",
+            "source": "Quelltext",
+            "stress": "Betonungen",
+            "text": "Text",
+            "top": "Nach oben",
+            "translatedBy": "Übersetzt von",
+            "translations": "Übersetzungen",
+            "translationsTitle": "Deutsche Übersetzungen",
+            "transpose": "transponieren"
+        },
+        "lang": "de",
+        "nav": [
+            {
+                "href": "index.html",
+                "label": "Russische Hauptseite"
+            },
+            {
+                "href": "de/index.html",
+                "label": "Deutsche Hauptseite"
+            },
+            {
+                "href": "de/translations.html",
+                "label": "Deutsche Übersetzungen"
+            },
+            {
+                "href": "catalogue.html",
+                "label": "Russischer Liederkatalog"
+            }
+        ],
+        "sortable": false
+    },
+    "description": "Michail Schtscherbakow, russischer Dichter und Liedermacher: Biografie und deutsche Übersetzungen seiner Lieder mit den russischen Originalen.",
+    "layout": "language-index",
+    "type": "miscellaneous",
+    "url": "/de/index.html"
 }
 
 

@@ -1,14 +1,16 @@
 {
-   "title": "Иллюстрации к песням",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/illustr2.html",
-   "params": {
-       "subtitle": "Карты и фото, шуточные артефакты",
-       "bgColor": "#DDC5A4",
-       "parentUrl": "Images/illustrations.html",
-       "parentTitle": "Иллюстрации"
-   }
+    "title": "Иллюстрации к песням",
+    "params": {
+        "subtitle": "Карты и фото, шуточные артефакты",
+        "parentUrl": "Images/illustrations.html",
+        "parentTitle": "Иллюстрации",
+        "bgColor": "#DDC5A4",
+        "seoTitle": "Иллюстрации к песням: карты и фото, шуточные артефакты — фан-клуб Михаила Щербакова"
+    },
+    "description": "Иллюстрации к песням Михаила Щербакова: карты, фотографии мест из песен, акварель П. И. Борисова и шуточные артефакты.",
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/illustr2.html"
 }
 
 <p id="amenhotep">Аменхотеп III.</p>

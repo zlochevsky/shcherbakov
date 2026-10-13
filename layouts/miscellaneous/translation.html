@@ -26,10 +26,7 @@
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 {{ hugo.Generator }}
 {{ partial "palette.html" . }}
-<title>{{ $t.display | default .Title }}{{ with $tr }} — {{ delimit . ", " }}{{ end }}</title>
-{{- with $t.incipit }}
-<meta name="description" content="{{ . }}">
-{{- end }}
+{{ partial "seo.html" . }}
 <style>
     .view-container { display: none; }
     .viewtype-source { display: block; }

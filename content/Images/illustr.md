@@ -1,14 +1,16 @@
 {
-   "title": "Иллюстрации к песням",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/illustr.html",
-   "params": {
-       "subtitle": "Рисунки, фото, репродукции",
-       "bgColor": "#DDC5A4",
-       "parentUrl": "Images/illustrations.html",
-       "parentTitle": "Иллюстрации"
-   }
+    "title": "Иллюстрации к песням",
+    "params": {
+        "subtitle": "Рисунки, фото, репродукции",
+        "parentUrl": "Images/illustrations.html",
+        "parentTitle": "Иллюстрации",
+        "bgColor": "#DDC5A4",
+        "seoTitle": "Иллюстрации к песням: рисунки, фото, репродукции — фан-клуб Михаила Щербакова"
+    },
+    "description": "Иллюстрации к песням Михаила Щербакова: рисунки Елены Ерофеевой, Тани Каган, Володи Смирнова и других, репродукции Мане, Босха и Рембрандта.",
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/illustr.html"
 }
 
 <p id="bystrov3"><a href="../texts/2001/bystrov.html">Быстров</a></p>

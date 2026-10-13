@@ -5,8 +5,10 @@
    "url": "/Archive/index.html",
    "params": {
       "subtitle": "расписания, координаты организаторов, etc",
-      "isIndex": true
-   }
+      "isIndex": true,
+      "seoTitle": "Архив концертов и гастролей Михаила Щербакова"
+   },
+   "description": "Отчёты о старых концертах Михаила Щербакова."
 }
 <ul>
 <li><b>2010</b><ul>

@@ -1,16 +1,18 @@
 {
-   "lastmod": "",
-   "draft": false,
-   "type": "miscellaneous",
-   "layout": "news",
-   "title": "Новости и объявления",
-   "params": {
+    "title": "Новости и объявления",
+    "params": {
+        "seoTitle": "Новости и концерты — Михаил Щербаков",
+        "announce": [],
         "announceTitle": "Ближайшие концерты",
         "showAnnounce": true,
-        "showAnnounceTitle": true,
         "showAnnounceOnHome": true,
-        "announce": []
-    }
+        "showAnnounceTitle": true
+    },
+    "description": "Ближайшие концерты Михаила Щербакова, хроника выступлений и новости сайта.",
+    "draft": false,
+    "lastmod": "",
+    "layout": "news",
+    "type": "miscellaneous"
 }
 
 
@@ -634,4 +636,3 @@
 
 Напоминаем, что в помощь организаторам концертов на этих страницах имеется раздел, содержащий [макеты и примеры афиш](Images/afish.html).
 А также у нас тут есть [разные баннеры](Images/banners.html).
-

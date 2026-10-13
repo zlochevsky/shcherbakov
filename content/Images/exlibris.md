@@ -1,11 +1,11 @@
 {
-   "title": "Экслибрис Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/exlibris.html",
-   "params": {
-       "bgColor": "#aaaaaa"
-   }
+    "title": "Экслибрис Михаила Щербакова",
+    "params": {
+        "bgColor": "#aaaaaa"
+    },
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/exlibris.html"
 }
 
 <p style="text-align: center">Работа <a href="http://hiero.ru/Serikkul">Серика Кульмешкенова</a>.</p>

@@ -1,11 +1,11 @@
 {
-   "title": "Фотографии 1980-х годов",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/photos1980s.html",
-   "params": {
-       "centerText": true
-   }
+    "title": "Фотографии 1980-х годов",
+    "params": {
+        "centerText": true
+    },
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/photos1980s.html"
 }
 
 <h2 id="msk89">С концерта 1989 г. в ДК МЭЛЗ в Москве.</h2>

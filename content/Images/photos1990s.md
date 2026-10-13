@@ -1,11 +1,11 @@
 {
-   "title": "Фотографии 1990-х годов",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/photos1990s.html",
-   "params": {
-       "centerText": true
-   }
+    "title": "Фотографии 1990-х годов",
+    "params": {
+        "centerText": true
+    },
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/photos1990s.html"
 }
 
 <h2 id="rbbooklet">Из буклета к диску серии «Российские барды».</h2>

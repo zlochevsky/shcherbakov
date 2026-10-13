@@ -2,8 +2,10 @@
     "title": "Пародии",
     "params": {
         "backUrl": "fans/index.html",
-        "backTitle": "Фан-клуб"
+        "backTitle": "Фан-клуб",
+        "seoTitle": "Пародии на песни Михаила Щербакова"
     },
+    "description": "Пародии и подражания песням Михаила Щербакова, собранные поклонниками.",
     "layout": "praises-article",
     "type": "miscellaneous",
     "lastmod": "2020-06-20",

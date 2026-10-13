@@ -1,54 +1,56 @@
 {
-   "title": "מיכאיל שצ'רבקוב: עברית",
-   "type": "miscellaneous",
-   "layout": "language-index",
-   "url": "/he/index.html",
-   "params": {
-      "lang": "he",
-      "heading": "מיכאיל שצ'רבקוב",
-      "nav": [
-         {
-            "label": "דף הבית ברוסית",
-            "href": "index.html"
-         },
-         {
-            "label": "דף הבית בעברית",
-            "href": "he/index.html"
-         },
-         {
-            "label": "תרגומים לעברית",
-            "href": "he/translations.html"
-         },
-         {
-            "label": "קטלוג השירים ברוסית",
-            "href": "catalogue.html"
-         }
-      ],
-      "labels": {
-         "translations": "תרגומים",
-         "translationsTitle": "תרגומים לעברית",
-         "original": "מקור",
-         "translatedBy": "תרגום:",
-         "showOriginal": "הצג את המקור",
-         "hideOriginal": "הסתר את המקור",
-         "performances": "ביצועים",
-         "text": "טקסט",
-         "chords": "אקורדים",
-         "above": "מעל השורה",
-         "side": "בצד",
-         "source": "קוד מקור",
-         "transpose": "טרנספוזיציה",
-         "stress": "הטעמות",
-         "page": "עמ'",
-         "recordedIn": "הוקלט ב-",
-         "inRussian": "ברוסית",
-         "language": "עברית",
-         "menu": "תפריט",
-         "breadcrumbs": "פירורי לחם",
-         "top": "למעלה"
-      },
-      "sortable": false
-   }
+    "title": "מיכאיל שצ'רבקוב: עברית",
+    "params": {
+        "seoTitle": "מיכאיל שצ'רבקוב — שירים בעברית",
+        "heading": "מיכאיל שצ'רבקוב",
+        "labels": {
+            "above": "מעל השורה",
+            "breadcrumbs": "פירורי לחם",
+            "chords": "אקורדים",
+            "hideOriginal": "הסתר את המקור",
+            "inRussian": "ברוסית",
+            "language": "עברית",
+            "menu": "תפריט",
+            "original": "מקור",
+            "page": "עמ'",
+            "performances": "ביצועים",
+            "recordedIn": "הוקלט ב-",
+            "showOriginal": "הצג את המקור",
+            "side": "בצד",
+            "source": "קוד מקור",
+            "stress": "הטעמות",
+            "text": "טקסט",
+            "top": "למעלה",
+            "translatedBy": "תרגום:",
+            "translations": "תרגומים",
+            "translationsTitle": "תרגומים לעברית",
+            "transpose": "טרנספוזיציה"
+        },
+        "lang": "he",
+        "nav": [
+            {
+                "href": "index.html",
+                "label": "דף הבית ברוסית"
+            },
+            {
+                "href": "he/index.html",
+                "label": "דף הבית בעברית"
+            },
+            {
+                "href": "he/translations.html",
+                "label": "תרגומים לעברית"
+            },
+            {
+                "href": "catalogue.html",
+                "label": "קטלוג השירים ברוסית"
+            }
+        ],
+        "sortable": false
+    },
+    "description": "מיכאיל שצ'רבקוב, משורר ויוצר שירים רוסי: ביוגרפיה ותרגומים של שיריו לעברית לצד המקור הרוסי.",
+    "layout": "language-index",
+    "type": "miscellaneous",
+    "url": "/he/index.html"
 }
 
 <img src="../Images/mks_lsh0.jpg" width="191" height="231" alt="מ. שצ'רבקוב. תמונה מעטיפת האלבום «Ложный шаг»" title="מ. שצ'רבקוב. תמונה מעטיפת האלבום «Ложный шаг»" class="portrait">

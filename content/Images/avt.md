@@ -1,14 +1,14 @@
 {
-   "title": "Автографы",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/avt.html",
-   "params": {
-       "bgColor": "#C8C5A4",
-       "centerText": true,
-       "parentUrl": "Images/around-disks.html",
-       "parentTitle": "Вокруг дисков"
-   }
+    "title": "Автографы",
+    "params": {
+        "parentUrl": "Images/around-disks.html",
+        "parentTitle": "Вокруг дисков",
+        "bgColor": "#C8C5A4",
+        "centerText": true
+    },
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/avt.html"
 }
 
 <p id="zhizn">Автограф на обратной стороне обложки компакт-диска «Другая жизнь»</p>

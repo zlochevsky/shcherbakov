@@ -1,15 +1,15 @@
 {
-   "title": "CD lables © Kari",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/cd.html",
-   "params": {
-       "subtitle": "Обложки дисков — «Неофициальный» вариант дизайна",
-       "bgColor": "#C8C5A4",
-       "centerText": true,
-       "parentUrl": "Images/around-disks.html",
-       "parentTitle": "Вокруг дисков"
-   }
+    "title": "CD labels © Kari",
+    "params": {
+        "subtitle": "Обложки дисков — «Неофициальный» вариант дизайна",
+        "parentUrl": "Images/around-disks.html",
+        "parentTitle": "Вокруг дисков",
+        "bgColor": "#C8C5A4",
+        "centerText": true
+    },
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/cd.html"
 }
 
 <p>&copy; <a href="http://sister-kari.livejournal.com/">Кари</a>.</p>

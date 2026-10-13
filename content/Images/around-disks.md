@@ -1,8 +1,8 @@
 {
-   "title": "Вокруг дисков",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/around-disks.html"
+    "title": "Вокруг дисков",
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/around-disks.html"
 }
 
 <ul>

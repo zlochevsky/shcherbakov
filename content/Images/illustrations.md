@@ -1,8 +1,8 @@
 {
-   "title": "Иллюстрации",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/illustrations.html"
+    "title": "Иллюстрации",
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/illustrations.html"
 }
 
 <p>Об иллюстрациях к песням — см. также <a href="../fans/kom.html">Словарь заморских слов</a>.</p>

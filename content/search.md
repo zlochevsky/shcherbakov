@@ -3,5 +3,10 @@
    "title": "Поиск",
    "type": "miscellaneous",
    "layout": "search",
-   "sitemap": {"disable": true}
+   "sitemap": {
+      "disable": true
+   },
+   "params": {
+      "noindex": true
+   }
 }

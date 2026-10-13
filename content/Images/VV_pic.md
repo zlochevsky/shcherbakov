@@ -1,14 +1,14 @@
 {
-   "title": "Вишнёвое варенье. Иллюстрации",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/VV_pic.html",
-   "params": {
-       "subtitle": "Иллюстрации М. А. Кима к книге М. К. Щербакова «Вишнёвое варенье»",
-       "bgColor": "#f9eef3",
-       "parentUrl": "Images/illustrations.html",
-       "parentTitle": "Иллюстрации"
-   }
+    "title": "Вишнёвое варенье. Иллюстрации",
+    "params": {
+        "subtitle": "Иллюстрации М. А. Кима к книге М. К. Щербакова «Вишнёвое варенье»",
+        "parentUrl": "Images/illustrations.html",
+        "parentTitle": "Иллюстрации",
+        "bgColor": "#f9eef3"
+    },
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/VV_pic.html"
 }
 
 <p>Книга: <a href="../Books/vv.html">«Вишнёвое варенье»</a> (<a href="../Books/index.html">все книги</a>).</p>

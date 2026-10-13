@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ with .Params.name }}{{ . }}{{ else }}{{ printf .Title }}{{ end }}{{ end }}</title>
+{{ partial "seo.html" . }}
 <!--{{ partialCached "head/css.html" . }}-->
 <style>
 {{ with resources.Get "css/basic.css" }}

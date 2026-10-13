@@ -4,11 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
-{{- $title := .Title }}
-{{- if not (hasPrefix (lower $title) "cd диск") }}
-	{{- $title = printf "CD Диск %s" $title }}
-{{- end }}
-<title>{{ $title }}</title>
+{{ partial "seo.html" . }}
 <style>
 {{ with resources.Get "css/basic.css" }}
 	{{ .Content | safeCSS }}

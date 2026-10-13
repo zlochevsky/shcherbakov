@@ -1,54 +1,56 @@
 {
-   "title": "Михайло Щербаков: українська",
-   "type": "miscellaneous",
-   "layout": "language-index",
-   "url": "/uk/index.html",
-   "params": {
-      "lang": "uk",
-      "nav": [
-         {
-            "label": "Російська головна сторінка",
-            "href": "index.html"
-         },
-         {
-            "label": "Українська головна сторінка",
-            "href": "uk/index.html"
-         },
-         {
-            "label": "Українські переклади",
-            "href": "uk/translations.html"
-         },
-         {
-            "label": "Російський каталог пісень",
-            "href": "catalogue.html"
-         }
-      ],
-      "labels": {
-         "translations": "Переклади",
-         "translationsTitle": "Українські переклади",
-         "original": "Оригінал",
-         "translatedBy": "Переклад:",
-         "showOriginal": "показати оригінал",
-         "hideOriginal": "сховати оригінал",
-         "performances": "Виконання",
-         "text": "текст",
-         "chords": "акорди",
-         "above": "над рядком",
-         "side": "праворуч",
-         "source": "вихідний текст",
-         "transpose": "транспонувати",
-         "stress": "наголоси",
-         "page": "С.",
-         "recordedIn": "запис",
-         "inRussian": "російською",
-         "language": "Українська",
-         "menu": "Меню",
-         "breadcrumbs": "Навігаційний ланцюжок",
-         "top": "Нагору"
-      },
-      "sortable": false,
-      "heading": "Михайло Щербаков"
-   }
+    "title": "Михайло Щербаков: українська",
+    "params": {
+        "seoTitle": "Михайло Щербаков — пісні українською",
+        "heading": "Михайло Щербаков",
+        "labels": {
+            "above": "над рядком",
+            "breadcrumbs": "Навігаційний ланцюжок",
+            "chords": "акорди",
+            "hideOriginal": "сховати оригінал",
+            "inRussian": "російською",
+            "language": "Українська",
+            "menu": "Меню",
+            "original": "Оригінал",
+            "page": "С.",
+            "performances": "Виконання",
+            "recordedIn": "запис",
+            "showOriginal": "показати оригінал",
+            "side": "праворуч",
+            "source": "вихідний текст",
+            "stress": "наголоси",
+            "text": "текст",
+            "top": "Нагору",
+            "translatedBy": "Переклад:",
+            "translations": "Переклади",
+            "translationsTitle": "Українські переклади",
+            "transpose": "транспонувати"
+        },
+        "lang": "uk",
+        "nav": [
+            {
+                "href": "index.html",
+                "label": "Російська головна сторінка"
+            },
+            {
+                "href": "uk/index.html",
+                "label": "Українська головна сторінка"
+            },
+            {
+                "href": "uk/translations.html",
+                "label": "Українські переклади"
+            },
+            {
+                "href": "catalogue.html",
+                "label": "Російський каталог пісень"
+            }
+        ],
+        "sortable": false
+    },
+    "description": "Михайло Щербаков — російський поет і автор пісень: біографія та переклади його пісень українською з оригіналами.",
+    "layout": "language-index",
+    "type": "miscellaneous",
+    "url": "/uk/index.html"
 }
 
 <img src="../Images/mks_lsh0.jpg" width="191" height="231" alt="М. Щербаков. Фото з обкладинки диска «Ложный шаг»" title="М. Щербаков. Фото з обкладинки диска «Ложный шаг»" class="portrait">

@@ -1,15 +1,15 @@
 {
-   "title": "«Люди сухопутья». Эскиз обложки",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/ludis.html",
-   "params": {
-       "subtitle": "Два эскиза обложки для готовившейся к изданию в 1991 г. книги песен Щербакова «Люди сухопутья»",
-       "bgColor": "#f9eef3",
-       "centerText": true,
-       "parentUrl": "Images/illustrations.html",
-       "parentTitle": "Иллюстрации"
-   }
+    "title": "«Люди сухопутья». Эскиз обложки",
+    "params": {
+        "subtitle": "Два эскиза обложки для готовившейся к изданию в 1991 г. книги песен Щербакова «Люди сухопутья»",
+        "parentUrl": "Images/illustrations.html",
+        "parentTitle": "Иллюстрации",
+        "bgColor": "#f9eef3",
+        "centerText": true
+    },
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/ludis.html"
 }
 
 <!--  bgcolor=#e7bdd1 -->

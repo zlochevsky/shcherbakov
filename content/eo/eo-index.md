@@ -1,54 +1,56 @@
 {
-   "title": "Miĥail Ŝĉerbakov: Esperanto",
-   "type": "miscellaneous",
-   "layout": "language-index",
-   "url": "/eo/index.html",
-   "params": {
-      "lang": "eo",
-      "heading": "Miĥail Ŝĉerbakov",
-      "nav": [
-         {
-            "label": "Rusa ĉefpaĝo",
-            "href": "index.html"
-         },
-         {
-            "label": "Esperanta ĉefpaĝo",
-            "href": "eo/index.html"
-         },
-         {
-            "label": "Esperantaj tradukoj",
-            "href": "eo/translations.html"
-         },
-         {
-            "label": "Rusa katalogo de kantoj",
-            "href": "catalogue.html"
-         }
-      ],
-      "labels": {
-         "translations": "Tradukoj",
-         "translationsTitle": "Esperantaj tradukoj",
-         "original": "Originalo",
-         "translatedBy": "Tradukis",
-         "showOriginal": "montri la originalon",
-         "hideOriginal": "kaŝi la originalon",
-         "performances": "Prezentoj",
-         "text": "teksto",
-         "chords": "akordoj",
-         "above": "super la linio",
-         "side": "flanke",
-         "source": "fonto",
-         "transpose": "transponi",
-         "stress": "akcentoj",
-         "page": "p.",
-         "recordedIn": "registrita en",
-         "inRussian": "ruslingve",
-         "language": "Esperanto",
-         "menu": "Menuo",
-         "breadcrumbs": "Paderoj",
-         "top": "Supren"
-      },
-      "sortable": false
-   }
+    "title": "Miĥail Ŝĉerbakov: Esperanto",
+    "params": {
+        "seoTitle": "Miĥail Ŝĉerbakov — kantoj en Esperanto",
+        "heading": "Miĥail Ŝĉerbakov",
+        "labels": {
+            "above": "super la linio",
+            "breadcrumbs": "Paderoj",
+            "chords": "akordoj",
+            "hideOriginal": "kaŝi la originalon",
+            "inRussian": "ruslingve",
+            "language": "Esperanto",
+            "menu": "Menuo",
+            "original": "Originalo",
+            "page": "p.",
+            "performances": "Prezentoj",
+            "recordedIn": "registrita en",
+            "showOriginal": "montri la originalon",
+            "side": "flanke",
+            "source": "fonto",
+            "stress": "akcentoj",
+            "text": "teksto",
+            "top": "Supren",
+            "translatedBy": "Tradukis",
+            "translations": "Tradukoj",
+            "translationsTitle": "Esperantaj tradukoj",
+            "transpose": "transponi"
+        },
+        "lang": "eo",
+        "nav": [
+            {
+                "href": "index.html",
+                "label": "Rusa ĉefpaĝo"
+            },
+            {
+                "href": "eo/index.html",
+                "label": "Esperanta ĉefpaĝo"
+            },
+            {
+                "href": "eo/translations.html",
+                "label": "Esperantaj tradukoj"
+            },
+            {
+                "href": "catalogue.html",
+                "label": "Rusa katalogo de kantoj"
+            }
+        ],
+        "sortable": false
+    },
+    "description": "Miĥail Ŝĉerbakov, rusa poeto kaj kantaŭtoro: biografio kaj Esperantaj tradukoj de liaj kantoj kun la rusaj originaloj.",
+    "layout": "language-index",
+    "type": "miscellaneous",
+    "url": "/eo/index.html"
 }
 
 <img src="../Images/chanson_mks.jpg" width="198" height="174" alt="Miĥail Ŝĉerbakov" class="portrait">

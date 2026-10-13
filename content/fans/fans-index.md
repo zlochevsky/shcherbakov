@@ -3,8 +3,10 @@
     "params": {
         "backUrl": "index.html",
         "backTitle": "На главную",
+        "seoTitle": "Фан-клуб Михаила Щербакова",
         "bgColor": "#E0FFFF"
     },
+    "description": "Материалы поклонников Михаила Щербакова: эссе, стихи, переводы, пародии, кроссворды, картинки, социология и мемориальные страницы.",
     "layout": "praises-article",
     "type": "miscellaneous",
     "url": "/fans/index.html"

@@ -1,61 +1,63 @@
 {
-   "title": "Mikhail Shcherbakov: English",
-   "type": "miscellaneous",
-   "layout": "language-index",
-   "url": "/en/index.html",
-   "aliases": [
-      "/English/index.html"
-   ],
-   "params": {
-      "lang": "en",
-      "heading": "Mikhail Shcherbakov",
-      "nav": [
-         {
-            "label": "Russian main page",
-            "href": "index.html"
-         },
-         {
-            "label": "English main page",
-            "href": "en/index.html"
-         },
-         {
-            "label": "English translations",
-            "href": "en/translations.html"
-         },
-         {
-            "label": "Russian songs catalog",
-            "href": "catalogue.html"
-         }
-      ],
-      "labels": {
-         "translations": "Translations",
-         "translationsTitle": "English translations",
-         "original": "Original",
-         "translatedBy": "Translated by",
-         "showOriginal": "show original",
-         "hideOriginal": "hide original",
-         "performances": "Performances",
-         "text": "text",
-         "chords": "chords",
-         "above": "above",
-         "side": "aside",
-         "source": "source",
-         "transpose": "transpose",
-         "stress": "stresses",
-         "sortSongYear": "by song year",
-         "sortOriginal": "by original title",
-         "sortTranslation": "by translation title",
-         "sortTranslator": "by translator",
-         "page": "P.",
-         "recordedIn": "recorded in",
-         "inRussian": "in Russian",
-         "language": "English",
-         "menu": "Menu",
-         "breadcrumbs": "Breadcrumb",
-         "top": "Top"
-      },
-      "sortable": true
-   }
+    "title": "Mikhail Shcherbakov: English",
+    "params": {
+        "seoTitle": "Mikhail Shcherbakov — songs in English translation",
+        "heading": "Mikhail Shcherbakov",
+        "labels": {
+            "above": "above",
+            "breadcrumbs": "Breadcrumb",
+            "chords": "chords",
+            "hideOriginal": "hide original",
+            "inRussian": "in Russian",
+            "language": "English",
+            "menu": "Menu",
+            "original": "Original",
+            "page": "P.",
+            "performances": "Performances",
+            "recordedIn": "recorded in",
+            "showOriginal": "show original",
+            "side": "aside",
+            "sortOriginal": "by original title",
+            "sortSongYear": "by song year",
+            "sortTranslation": "by translation title",
+            "sortTranslator": "by translator",
+            "source": "source",
+            "stress": "stresses",
+            "text": "text",
+            "top": "Top",
+            "translatedBy": "Translated by",
+            "translations": "Translations",
+            "translationsTitle": "English translations",
+            "transpose": "transpose"
+        },
+        "lang": "en",
+        "nav": [
+            {
+                "href": "index.html",
+                "label": "Russian main page"
+            },
+            {
+                "href": "en/index.html",
+                "label": "English main page"
+            },
+            {
+                "href": "en/translations.html",
+                "label": "English translations"
+            },
+            {
+                "href": "catalogue.html",
+                "label": "Russian songs catalog"
+            }
+        ],
+        "sortable": true
+    },
+    "description": "Mikhail Shcherbakov, Russian poet and singer-songwriter: biography and English translations of his songs, with the Russian originals.",
+    "aliases": [
+        "/English/index.html"
+    ],
+    "layout": "language-index",
+    "type": "miscellaneous",
+    "url": "/en/index.html"
 }
 
 

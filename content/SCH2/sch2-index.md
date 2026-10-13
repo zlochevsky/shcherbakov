@@ -6,8 +6,10 @@
    "lastmod": "2000-05-20",
    "params": {
       "backUrl": "sociology.html",
-      "backTitle": "Социология"
-   }
+      "backTitle": "Социология",
+      "seoTitle": "Проект «Щ-2» — вопросник о песнях Михаила Щербакова"
+   },
+   "description": "Материалы проекта «Щ-2» (1999–2000): вопросы о творчестве Михаила Щербакова и ответы участников."
 }
 
 <p><a href="../FOM/index.html">(Щ-1)</a><br><a href="gb/index.html">(Дискуссия)</a><br><!-- changed by Polonski, 20.09.2000  ---></p>

@@ -1,12 +1,12 @@
 {
-   "title": "Бутлеги",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/bootlegs.html",
-   "params": {
-       "bgColor": "#C8C5A4",
-       "centerText": true
-   }
+    "title": "Бутлеги",
+    "params": {
+        "bgColor": "#C8C5A4",
+        "centerText": true
+    },
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/bootlegs.html"
 }
 
 <p>Фотография с обложки кассеты «Мое Королевство», изданной объединением «Московские Окна». Бутлег, естественно — то есть, с продажи этой кассеты автор не получает ни копейки.</p>

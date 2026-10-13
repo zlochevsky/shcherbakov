@@ -1,55 +1,58 @@
 {
-   "title": "Mikhaïl Chtcherbakov : français",
-   "type": "miscellaneous",
-   "layout": "language-index",
-   "url": "/fr/index.html",
-   "params": {
-      "lang": "fr",
-      "nav": [
-         {
-            "label": "Page d’accueil russe",
-            "href": "index.html"
-         },
-         {
-            "label": "Page d’accueil française",
-            "href": "fr/index.html"
-         },
-         {
-            "label": "Traductions françaises",
-            "href": "fr/translations.html"
-         },
-         {
-            "label": "Catalogue russe des chansons",
-            "href": "catalogue.html"
-         }
-      ],
-      "labels": {
-         "translations": "Traductions",
-         "translationsTitle": "Traductions françaises",
-         "original": "Original",
-         "translatedBy": "Traduit par",
-         "showOriginal": "afficher l’original",
-         "hideOriginal": "masquer l’original",
-         "performances": "Interprétations",
-         "text": "texte",
-         "chords": "accords",
-         "above": "au-dessus",
-         "side": "à côté",
-         "source": "source",
-         "transpose": "transposer",
-         "stress": "accents",
-         "page": "p.",
-         "recordedIn": "enregistré en",
-         "inRussian": "en russe",
-         "language": "Français",
-         "menu": "Menu",
-         "breadcrumbs": "Fil d’Ariane",
-         "top": "Haut de page"
-      },
-      "sortable": false,
-      "heading": "Mikhaïl Chtcherbakov"
-   }
+    "title": "Mikhaïl Chtcherbakov : français",
+    "params": {
+        "seoTitle": "Mikhaïl Chtcherbakov — chansons en français",
+        "heading": "Mikhaïl Chtcherbakov",
+        "labels": {
+            "above": "au-dessus",
+            "breadcrumbs": "Fil d’Ariane",
+            "chords": "accords",
+            "hideOriginal": "masquer l’original",
+            "inRussian": "en russe",
+            "language": "Français",
+            "menu": "Menu",
+            "original": "Original",
+            "page": "p.",
+            "performances": "Interprétations",
+            "recordedIn": "enregistré en",
+            "showOriginal": "afficher l’original",
+            "side": "à côté",
+            "source": "source",
+            "stress": "accents",
+            "text": "texte",
+            "top": "Haut de page",
+            "translatedBy": "Traduit par",
+            "translations": "Traductions",
+            "translationsTitle": "Traductions françaises",
+            "transpose": "transposer"
+        },
+        "lang": "fr",
+        "nav": [
+            {
+                "href": "index.html",
+                "label": "Page d’accueil russe"
+            },
+            {
+                "href": "fr/index.html",
+                "label": "Page d’accueil française"
+            },
+            {
+                "href": "fr/translations.html",
+                "label": "Traductions françaises"
+            },
+            {
+                "href": "catalogue.html",
+                "label": "Catalogue russe des chansons"
+            }
+        ],
+        "sortable": false
+    },
+    "description": "Mikhaïl Chtcherbakov, poète et auteur-compositeur-interprète russe : biographie et traductions françaises de ses chansons, avec les originaux.",
+    "layout": "language-index",
+    "type": "miscellaneous",
+    "url": "/fr/index.html"
 }
+
 <img src="../Images/mks_lsh0.jpg" width="191" height="231" alt="M. Chtcherbakov. Photo de la pochette du disque « Faux pas »" title="M. Chtcherbakov. Photo de la pochette du disque « Faux pas »" class="portrait">
 
 Mikhaïl Chtcherbakov est un auteur-compositeur-interprète russe qui chante lui-même ses chansons à la guitare. Son genre est la « chanson d’auteur » russe, des années 1980 à nos jours. Il vit à Moscou, donne régulièrement des concerts en Russie et, plus rarement, en Amérique, en Europe et en Israël.

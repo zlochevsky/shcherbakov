@@ -1,0 +1,206 @@
+{{- /* <title>, description, robots, canonical и Open Graph для <head> (контекст — страница).
+       Порядок источников: params.seoTitle и description во front matter → вычисленные по типу страницы
+       (песня, перевод, диск, кассета, книга, цикл, статья из Praises) → заголовок страницы с суффиксом раздела
+       (витрина — «Михаил Щербаков», клуб — «фан-клуб Михаила Щербакова», языковые разделы — имя на языке раздела).
+       canonical и og:url: если задан site.Params.canonicalBase — он + путь страницы (копия сайта указывает на
+       основной адрес), иначе собственный адрес. Страницы с noindex canonical не получают. */ -}}
+{{- $p := . -}}
+{{- $section := lower $p.Section -}}
+{{- $author := "Михаил Щербаков" -}}
+{{- $sfxMain := printf " — %s" $author -}}
+{{- $sfxClub := " — фан-клуб Михаила Щербакова" -}}
+{{- $clubSections := slice "fans" "parodies" "fom" "sch2" "images" -}}
+{{- $langSections := slice "en" "eo" "he" "uk" "fr" "de" -}}
+{{- $locales := dict "ru" "ru_RU" "en" "en_US" "eo" "eo" "he" "he_IL" "uk" "uk_UA" "fr" "fr_FR" "de" "de_DE" -}}
+
+{{- $title := "" -}}
+{{- $desc := "" -}}
+{{- $image := "" -}}
+{{- $noindex := $p.Params.noindex | default false -}}
+{{- $ogType := "website" -}}
+{{- $lang := $p.Params.lang | default "ru" -}}
+{{- $name := $p.Params.name | default $p.Title | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+
+{{- /* «N песен» с правильным окончанием */ -}}
+{{- $songsWord := dict "one" "песня" "few" "песни" "many" "песен" -}}
+
+{{- if eq $p.Layout "songpage" -}}
+	{{- $info := partial "song-page-info.html" $p -}}
+	{{- $workId := $p.Params.editionOf | default $info.id -}}
+	{{- $m := index (partialCached "song-meta.html" "song-meta") $workId | default dict -}}
+	{{- $songData := partialCached "song-data.html" "song-data" -}}
+	{{- $isPoem := index $songData.poems $workId | default false -}}
+	{{- $kind := "текст песни" -}}
+	{{- if $isPoem }}{{ $kind = "стихотворение" }}{{ else if $p.Params.chordsStartAt }}{{ $kind = "текст и аккорды" }}{{ end -}}
+	{{- $title = printf "%s%s: %s" $info.title $sfxMain $kind -}}
+	{{- $noindex = $info.noindex -}}
+	{{- with $info.incipit -}}
+		{{- $what := cond $isPoem "Стихотворение" "Песня" -}}
+		{{- $desc = printf "«%s» %s Михаила Щербакова" . $what -}}
+		{{- with $m.year }}{{ $desc = printf "%s (%v)" $desc . }}{{ end -}}
+		{{- if and (not $isPoem) $p.Params.chordsStartAt }}{{ $desc = printf "%s: текст и аккорды" $desc }}{{ end -}}
+		{{- $desc = printf "%s." $desc -}}
+		{{- /* альбомы (кроме кассет) в порядке выхода */ -}}
+		{{- $rows := slice -}}
+		{{- $seen := dict -}}
+		{{- range index $songData.albums $workId -}}
+			{{- with .sets_id -}}
+				{{- if and (ne .format "mc") (not (index $seen .id)) -}}
+					{{- $seen = merge $seen (dict .id true) -}}
+					{{- $rows = $rows | append (dict "title" .title "year" (int (.year | default 0))) -}}
+				{{- end -}}
+			{{- end -}}
+		{{- end -}}
+		{{- $titles := slice -}}
+		{{- range sort $rows "year" }}{{ $titles = $titles | append (printf "«%s»" .title) }}{{ end -}}
+		{{- if eq (len $titles) 1 -}}
+			{{- $desc = printf "%s Альбом %s." $desc (index $titles 0) -}}
+		{{- else if $titles -}}
+			{{- $desc = printf "%s Альбомы: %s." $desc (delimit $titles ", ") -}}
+		{{- end -}}
+	{{- end -}}
+
+{{- else if eq $p.Layout "translation" -}}
+	{{- $id := $p.File.ContentBaseName -}}
+	{{- $t := index (partialCached "translations-data.html" "translations-data").byId $id | default dict -}}
+	{{- $langId := index (split (strings.Trim $p.File.Dir "/") "/") 0 -}}
+	{{- $sec := site.GetPage (printf "/%s/%s-index" $langId $langId) -}}
+	{{- $lang = $t.lang.id | default $langId -}}
+	{{- $tr := slice }}{{ range $t.translators }}{{ $tr = $tr | append .native }}{{ end -}}
+	{{- $title = printf "%s — %s" ($t.display | default $p.Title) ($sec.Params.heading | default $author) -}}
+	{{- with $tr -}}
+		{{- $by := strings.TrimSuffix ":" (lower ($sec.Params.labels.translatedBy | default "")) -}}
+		{{- $title = printf "%s, %s %s" $title $by (delimit . ", ") -}}
+	{{- end -}}
+	{{- $desc = $t.incipit | default "" -}}
+
+{{- else if in (slice "diskpage" "tapepage") $p.Layout -}}
+	{{- $setData := partialCached "set-data.html" "set-data" -}}
+	{{- $set := index $setData.sets ($p.Params.id | default "") | default dict -}}
+	{{- $fmt := partial "disk-format.html" $set.format -}}
+	{{- $fmtRu := index (dict "cd" "CD" "mp3" "MP3" "da" "цифровой альбом" "mc" "кассета") $fmt.key | default $fmt.short -}}
+	{{- $setTitle := $set.title | default $name -}}
+	{{- $paren := cond (strings.Contains (lower $setTitle) (lower $fmtRu)) "" $fmtRu -}}
+	{{- with $set.year }}{{ $paren = cond $paren (printf "%s, %v" $paren .) (string .) }}{{ end -}}
+	{{- $title = cond $paren (printf "%s (%s)%s" $setTitle $paren $sfxMain) (printf "%s%s" $setTitle $sfxMain) -}}
+	{{- $works := dict -}}
+	{{- range index $setData.entries ($p.Params.id | default "") -}}
+		{{- with .perfs_id }}{{ with .works_id }}{{ $works = merge $works (dict (string .) true) }}{{ end }}{{ end -}}
+	{{- end -}}
+	{{- $n := len $works -}}
+	{{- $what := cond (eq $fmt.key "mc") "Кассета" "Альбом" -}}
+	{{- $desc = printf "%s Михаила Щербакова «%s»" $what $setTitle -}}
+	{{- with $paren }}{{ $desc = printf "%s (%s)" $desc . }}{{ end -}}
+	{{- if $n -}}
+		{{- $form := "many" -}}
+		{{- $m10 := mod $n 10 }}{{ $m100 := mod $n 100 -}}
+		{{- if and (eq $m10 1) (ne $m100 11) }}{{ $form = "one" }}{{ else if and (ge $m10 2) (le $m10 4) (or (lt $m100 12) (gt $m100 14)) }}{{ $form = "few" }}{{ end -}}
+		{{- $desc = printf "%s: %d %s с текстами и аккордами" $desc $n (index $songsWord $form) -}}
+	{{- end -}}
+	{{- $desc = printf "%s. Обложка, участники записи, выходные данные." $desc -}}
+	{{- with $set.album_img | default $p.Params.image }}{{ $image = printf "Images/%s" . }}{{ end -}}
+
+{{- else if eq $p.Layout "bookpage" -}}
+	{{- $book := dict -}}
+	{{- range (partialCached "directus-books-list.html" "books-list").data -}}
+		{{- if eq .id $p.Params.id }}{{ $book = . }}{{ end -}}
+	{{- end -}}
+	{{- $bookName := $book.name | default $name -}}
+	{{- $title = $bookName -}}
+	{{- with $book.year }}{{ $title = printf "%s (%v)" $title . }}{{ end -}}
+	{{- $title = printf "%s%s" $title $sfxMain -}}
+	{{- $out := slice -}}
+	{{- with $book.publisher }}{{ $out = $out | append (. | plainify | htmlUnescape) }}{{ end -}}
+	{{- with $book.year }}{{ $out = $out | append (string .) }}{{ end -}}
+	{{- $desc = printf "«%s»" ($bookName | plainify | htmlUnescape) -}}
+	{{- with $out }}{{ $desc = printf "%s (%s)" $desc (delimit . ", ") }}{{ end -}}
+	{{- $ann := $book.annotation | default "" | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+	{{- with $ann -}}
+		{{- $first := index (split . ". ") 0 | strings.TrimSuffix "." -}}
+		{{- $first = truncate 110 $first -}}
+		{{- $desc = printf "%s: %s%s" $desc $first (cond (strings.HasSuffix $first "…") "" ".") -}}
+	{{- else -}}
+		{{- $desc = printf "%s: содержание и обложка." $desc -}}
+	{{- end -}}
+	{{- $photo := $book.photo | default (printf "bkp/%s.jpg" ($p.Params.id | default "")) -}}
+	{{- if fileExists (printf "static/Images/%s" $photo) }}{{ $image = printf "Images/%s" $photo }}{{ end -}}
+
+{{- else if eq $p.Layout "cycle" -}}
+	{{- $title = printf "%s — цикл песен Михаила Щербакова" $name -}}
+	{{- $desc = printf "Цикл песен Михаила Щербакова «%s»: состав и тексты песен." $name -}}
+
+{{- else if and (eq $p.Layout "praises-article") (eq $section "praises") -}}
+	{{- $ogType = "article" -}}
+	{{- $short := $name -}}
+	{{- if gt (strings.RuneCount $short) 65 -}}
+		{{- $head := index (split $short ". ") 0 -}}
+		{{- if and (lt (strings.RuneCount $head) (strings.RuneCount $short)) (ge (strings.RuneCount $head) 20) (le (strings.RuneCount $head) 65) -}}
+			{{- $short = $head -}}
+		{{- else -}}
+			{{- $short = truncate 60 $short -}}
+		{{- end -}}
+	{{- end -}}
+	{{- $title = $short -}}
+	{{- /* автор — как записан, до первой запятой (дальше бывают город, должность или соавторы) */ -}}
+	{{- with $p.Params.author -}}
+		{{- with index (split (. | plainify | htmlUnescape) ",") 0 | strings.TrimSpace }}{{ $title = printf "%s — %s" $title . }}{{ end -}}
+	{{- end -}}
+{{- end -}}
+
+{{- /* языковые разделы: язык страницы и имя автора на этом языке */ -}}
+{{- $langHeading := "" -}}
+{{- if in $langSections $section -}}
+	{{- with site.GetPage (printf "/%s/%s-index" $section $section) -}}
+		{{- $langHeading = .Params.heading -}}
+	{{- end -}}
+	{{- if ne $p.Layout "translation" }}{{ $lang = $p.Params.lang | default $section }}{{ end -}}
+{{- end -}}
+
+{{- /* заголовок по умолчанию: название страницы + суффикс раздела */ -}}
+{{- if not $title -}}
+	{{- if $p.IsHome -}}
+		{{- $title = site.Title -}}
+	{{- else if $langHeading -}}
+		{{- $title = cond (strings.Contains $name $langHeading) $name (printf "%s — %s" $name $langHeading) -}}
+	{{- else if or (strings.Contains $name "Щербаков") (strings.Contains $name "Shcherbakov") -}}
+		{{- $title = $name -}}
+	{{- else if in $clubSections $section -}}
+		{{- $title = printf "%s%s" $name $sfxClub -}}
+	{{- else -}}
+		{{- $title = printf "%s%s" $name $sfxMain -}}
+	{{- end -}}
+{{- end -}}
+
+{{- /* описание статьи по умолчанию: автор и начало текста */ -}}
+{{- if and (not $desc) (eq $p.Layout "praises-article") (not $p.Description) -}}
+	{{- $text := $p.Plain | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+	{{- with $p.Params.author }}{{ $text = printf "%s. %s" (. | plainify | htmlUnescape) $text }}{{ end -}}
+	{{- $desc = truncate 160 $text -}}
+{{- end -}}
+
+{{- $title = $p.Params.seoTitle | default $title -}}
+{{- $desc = $p.Description | default $desc -}}
+
+{{- /* адреса: относительный путь страницы от корня сайта + основной адрес */ -}}
+{{- $base := site.Params.canonicalBase | default site.BaseURL -}}
+{{- $canonical := cond $p.IsHome $base (printf "%s%s" $base (strings.TrimPrefix site.BaseURL $p.Permalink)) -}}
+<title>{{ $title }}</title>
+{{- with $desc }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+{{- if $noindex }}
+<meta name="robots" content="noindex, follow">
+{{- else }}
+<link rel="canonical" href="{{ $canonical }}">
+{{- end }}
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:type" content="{{ $ogType }}">
+<meta property="og:title" content="{{ $title }}">
+{{- with $desc }}
+<meta property="og:description" content="{{ . }}">
+{{- end }}
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:locale" content="{{ index $locales $lang | default "ru_RU" }}">
+{{- with $image }}
+<meta property="og:image" content="{{ printf "%s%s" $base . }}">
+{{- end }}

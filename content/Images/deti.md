@@ -1,14 +1,16 @@
 {
-   "title": "Иллюстрации к песням",
-   "type": "miscellaneous",
-   "layout": "images-page",
-   "url": "/Images/deti.html",
-   "params": {
-       "subtitle": "Рисунки и фото, шуточные скриншоты",
-       "bgColor": "#F0E68C",
-       "parentUrl": "Images/illustrations.html",
-       "parentTitle": "Иллюстрации"
-   }
+    "title": "Иллюстрации к песням",
+    "params": {
+        "subtitle": "Рисунки и фото, шуточные скриншоты",
+        "parentUrl": "Images/illustrations.html",
+        "parentTitle": "Иллюстрации",
+        "bgColor": "#F0E68C",
+        "seoTitle": "Иллюстрации к песням: рисунки и фото, шуточные скриншоты — фан-клуб Михаила Щербакова"
+    },
+    "description": "Иллюстрации к песням Михаила Щербакова: работы Дмитрия Полонского, pinguinchen и mosomedve-art, фотографии и шуточные скриншоты.",
+    "layout": "images-page",
+    "type": "miscellaneous",
+    "url": "/Images/deti.html"
 }
 
 <h2 id="dance">Данс-макабр</h2>
