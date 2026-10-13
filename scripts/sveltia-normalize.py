@@ -10,6 +10,7 @@
 - после заголовка пустая строка, затем тело; в конце файла один перевод строки.
 
 Использование: scripts/sveltia-normalize.py <коллекция> [...] [--check]
+  Коллекции — папки (folder) и списки файлов (files).
   --check — только показать, какие файлы изменились бы (код выхода 1, если такие есть).
 """
 import json
@@ -107,18 +108,23 @@ def main():
     changed = 0
     for name in args:
         col = cols[name]
-        folder = ROOT / col['folder']
-        depth = (col.get('nested') or {}).get('depth', 1)
-        files = [p for p in folder.rglob('*.md') if len(p.relative_to(folder).parts) <= depth]
+        if 'files' in col:
+            # коллекция-список файлов: у каждого файла свои поля
+            entries = [(ROOT / f['file'], f['fields']) for f in col['files']]
+        else:
+            folder = ROOT / col['folder']
+            depth = (col.get('nested') or {}).get('depth', 1)
+            entries = [(p, col['fields']) for p in sorted(folder.rglob('*.md'))
+                       if len(p.relative_to(folder).parts) <= depth]
         flt = col.get('filter')
-        for p in sorted(files):
+        for p, fields in entries:
             text = p.read_text(encoding='utf-8')
             if flt:
                 hm = re.match(r'^\{\n(?:(?P<head>[\s\S]*?)\n)?\}', text.strip())
                 head = json.loads('{' + (hm.group('head') or '') + '}') if hm else {}
                 if head.get(flt['field']) != flt['value']:
                     continue
-            new = normalize(text, col['fields'], indent, 'folder' in col)
+            new = normalize(text, fields, indent, 'folder' in col)
             if new is not None and new != text:
                 changed += 1
                 if check:

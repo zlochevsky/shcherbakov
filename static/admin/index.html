@@ -207,6 +207,32 @@ try {
 })();
 </script>
 <script>
+// Предпросмотр статей и картинок: Sveltia рисует его во фрейме с <base href> = только origin сайта
+// (http://localhost:1313, https://zlochevsky.github.io), и относительные адреса из текстов («x.jpg», «../Images/x.jpg»,
+// «../texts/…») уходят мимо подпапки /shcherbakov/. Ставим базой папку Images сайта (рядом с admin/): адреса
+// разрешаются так же, как на страницах разделов (Images/, Praises/, fans/ — один уровень от корня сайта), и картинки
+// и ссылки в предпросмотре работают. Не работают только «../../» из подпапок фан-клуба (fans/Demiurg и др.).
+(() => {
+	const base = new URL('../Images/', location.href).href;
+	const fix = (frame) => {
+		const doc = frame.contentDocument;
+		const el = doc && doc.querySelector('base');
+		if (!el || el.href === base) return;
+		el.href = base;
+		// картинки, вставленные до замены базы, — запросить заново по новому адресу
+		doc.querySelectorAll('img[src]').forEach((img) => { img.src = img.getAttribute('src'); });
+	};
+	const watch = (frame) => {
+		if (frame.dataset.baseFixed) return;
+		frame.dataset.baseFixed = '1';
+		frame.addEventListener('load', () => fix(frame));
+		fix(frame);
+	};
+	new MutationObserver(() => document.querySelectorAll('iframe.preview').forEach(watch))
+		.observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<script>
 // Строка и символ под курсором в поле текста, оба с 1 — те же числа, что в параметрах песни:
 // «Аккорды с позиции» (chordsStartAt) — номер символа, «Последняя строка текста» (textFinishAtLine) — номер строки
 (() => {

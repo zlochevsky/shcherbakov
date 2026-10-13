@@ -62,6 +62,9 @@ collections:
 
   - divider: true
 
+  # Поля для поисковиков (layouts/partials/seo.html, docs/frontmatter.md) объявлены якорями &seotitle и &seodesc в полях
+  # главной страницы ниже и переиспользуются в других коллекциях. Оба необязательные: пусто — заголовок и описание
+  # собирает шаблон. seoTitle — внутри params, description — стандартное поле Hugo.
   # Отдельные страницы сайта: тело — Markdown (у tab — HTML), правится как есть, простым полем; анонсы на странице
   # новостей — из Directus (announces), в файле news.md только «Хроника»
   - name: pages
@@ -71,7 +74,7 @@ collections:
       # главная: тело — HTML-вёрстка блоками (abstract, frontimage, collections) и шорткод {{< lastmod … >}} — править
       # осторожно, незакрытый тег ломает вид главной; подвал (_footer.md, на главной и страницах шаблона baseof) —
       # только текст: заголовка у него нет (обязательное поле «Заголовок» не дало бы сохранить)
-      - { name: home, preview_path: "shcherbakov/index.html", label: Главная страница, file: content/_index.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Текст, name: body, widget: text } ] }
+      - { name: home, preview_path: "shcherbakov/index.html", label: Главная страница, file: content/_index.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Параметры, name: params, widget: object, collapsed: true, fields: [ &seotitle { label: Заголовок для поисковиков, name: seoTitle, widget: string, required: false, hint: "Полный текст вкладки браузера и заголовка в выдаче, как есть. Пусто — заголовок страницы с припиской раздела («— Михаил Щербаков»)" } ] }, &seodesc { label: Описание для поисковиков, name: description, widget: text, required: false, hint: "Одна-две фразы, 110–160 знаков: текст под ссылкой в выдаче и в превью ссылок в мессенджерах. Пусто — у статей начало текста, у остальных страниц ничего" }, { label: Текст, name: body, widget: text } ] }
       - { name: footer, preview_path: "shcherbakov/index.html", label: Подвал главной, file: content/_footer.md, fields: [ { label: Текст, name: body, widget: text } ] }
       - { name: bio, preview_path: "shcherbakov/bio.html", label: Биография, file: content/bio.md, fields: *sitepagefields }
       - { name: about, preview_path: "shcherbakov/about.html", label: Об этой коллекции, file: content/about.md, fields: *sitepagefields }
@@ -113,7 +116,7 @@ collections:
 
   # Статьи фан-клуба (шаблон praises-article): тело — HTML. Заголовки файлов приведены к виду, в котором их пишет
   # Sveltia (порядок ключей, отступ 4), чтобы сохранение не давало лишнего diff; поля и их порядок здесь менять
-  # вместе с этим видом (scripts/sveltia-normalize.py praises parodies fans).
+  # вместе с этим видом (scripts/sveltia-normalize.py praises parodies fans images pages language-pages).
   # Создавать статьи можно: имя файла (латиницей) вводится вручную, адрес страницы — <раздел>/<имя>.html (uglyURLs,
   # url в заголовке не нужен); type и layout — скрытые поля со значениями по умолчанию (layout ещё и для фильтра:
   # в fans есть kom.md и переадресация kom2.md с другими шаблонами). Ссылку на новую статью вписать в список раздела:
@@ -140,9 +143,15 @@ collections:
         fields:
           - { label: Автор, name: author, widget: string, required: false }
           - { label: Подзаголовок, name: subtitle, widget: string, required: false }
+          - *seotitle
+      - *seodesc
       - &layoutfield { label: layout, name: layout, widget: hidden, required: false, default: praises-article }
       - &typefield { label: type, name: type, widget: hidden, required: false, default: miscellaneous }
-      - &articlebody { label: Текст (HTML), name: body, widget: text }
+      # тело — поле Markdown только в режиме исходника (modes: raw): правится тот же HTML как текст, без визуального
+      # редактора, который переписал бы разметку; зато предпросмотр его отрисовывает (Markdown с сырым HTML, как Hugo
+      # на сайте; скрипты и iframe Sveltia в предпросмотре вырезает). Картинки и ссылки видны: базой адресов предпросмотра
+      # скрипт в index.html ставит папку Images сайта; не видны только адреса «../../» из подпапок фан-клуба
+      - &articlebody { label: Текст (HTML), name: body, widget: markdown, modes: [raw] }
 
   - name: parodies
     label: Пародии (Parodies)
@@ -167,6 +176,8 @@ collections:
           - { label: Подзаголовок, name: subtitle, widget: string, required: false }
           - { label: Ссылка «назад» — адрес, name: backUrl, widget: string, required: false, default: Parodies/index.html }
           - { label: Ссылка «назад» — подпись, name: backTitle, widget: string, required: false, default: Пародии }
+          - *seotitle
+      - *seodesc
       - *layoutfield
       - *typefield
       - *articlebody
@@ -195,7 +206,44 @@ collections:
           - { label: Подзаголовок, name: subtitle, widget: string, required: false }
           - { label: Ссылка «назад» — адрес, name: backUrl, widget: string, required: false, default: fans/index.html }
           - { label: Ссылка «назад» — подпись, name: backTitle, widget: string, required: false, default: Фан-клуб }
+          - *seotitle
+      - *seodesc
       - *layoutfield
+      - *typefield
+      - *articlebody
+
+  # Страницы картинок (шаблон images-page): тело — HTML; картинки лежат в static/Images, на страницах на них ссылаются
+  # просто по имени файла ("afish1.jpg"). Кнопка вставки картинки пишет адрес от корня домена
+  # (/Images/…), который на github.io (сайт в подпапке /shcherbakov/) не открывается — вписывать имя файла вручную.
+  # Переадресации со старых адресов (content/Images/redirects) в коллекцию не входят: вложенные папки не читаются,
+  # и у них другой шаблон. Создание и удаление — как у статей.
+  - name: images
+    label: Картинки (Images)
+    label_singular: Страница
+    folder: content/Images
+    extension: md
+    format: json-frontmatter
+    create: true
+    delete: false
+    duplicate: false
+    slug: { editable: [create] }   # имя файла вводится только при создании; адрес страницы — её url
+    filter: { field: layout, value: images-page }
+    summary: "{{title}} · {{filename}}"
+    preview_path: "shcherbakov{{fields.url}}"
+    fields:
+      - { label: Заголовок, name: title, widget: string }
+      - label: Параметры
+        name: params
+        widget: object
+        fields:
+          - { label: Подзаголовок, name: subtitle, widget: string, required: false }
+          - { label: Ссылка «назад» — адрес, name: parentUrl, widget: string, required: false, default: Images/index.html }
+          - { label: Ссылка «назад» — подпись, name: parentTitle, widget: string, required: false, default: Картинки }
+          - { label: Цвет фона, name: bgColor, widget: string, required: false, hint: "CSS-цвет, напр. #DDC5A4; пусто — цвет по умолчанию (khaki)" }
+          - { label: Текст по центру, name: centerText, widget: boolean, required: false }
+          - *seotitle
+      - *seodesc
+      - { label: layout, name: layout, widget: hidden, required: false, default: images-page }
       - *typefield
       - *articlebody
 
@@ -208,7 +256,7 @@ collections:
     label: Страницы языков
     format: json-frontmatter
     files:
-      - { name: en-index, preview_path: "shcherbakov/en/index.html", label: English — главная, file: content/en/en-index.md, fields: &pagefields [ { label: Заголовок, name: title, widget: string }, { label: Текст (HTML), name: body, widget: text } ] }
+      - { name: en-index, preview_path: "shcherbakov/en/index.html", label: English — главная, file: content/en/en-index.md, fields: &pagefields [ { label: Заголовок, name: title, widget: string }, { label: Параметры, name: params, widget: object, collapsed: true, fields: [ *seotitle ] }, *seodesc, { label: Текст (HTML), name: body, widget: text } ] }
       - { name: en-translations, preview_path: "shcherbakov/en/translations.html", label: English — список переводов, file: content/en/en-translations.md, fields: *pagefields }
       - { name: de-index, preview_path: "shcherbakov/de/index.html", label: Deutsch — главная, file: content/de/de-index.md, fields: *pagefields }
       - { name: de-translations, preview_path: "shcherbakov/de/translations.html", label: Deutsch — список переводов, file: content/de/de-translations.md, fields: *pagefields }
