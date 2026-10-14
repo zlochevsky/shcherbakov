@@ -2,8 +2,10 @@
     "title": "Кроссворды",
     "params": {
         "backUrl": "fans/index.html#creative",
-        "backTitle": "Назад в Фан-Клуб"
+        "backTitle": "Назад в Фан-Клуб",
+        "seoTitle": "Кроссворды по песням Михаила Щербакова"
     },
+    "description": "Два кроссворда по песням Михаила Щербакова, составленные М. Пасуманским и В. Смирновым.",
     "layout": "praises-article",
     "type": "miscellaneous",
     "url": "/fans/krossvord.html"

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 <title>{{ .Title }}</title>
-<link rel="canonical" href="{{ "fans/kom.html" | relURL }}">
+<link rel="canonical" href="{{ printf "%sfans/kom.html" (site.Params.canonicalBase | default site.BaseURL) }}">
 {{- if .Params.noindex }}
 <meta name="robots" content="noindex, follow">
 {{- end }}

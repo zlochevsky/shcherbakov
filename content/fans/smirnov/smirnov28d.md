@@ -3,8 +3,10 @@
     "params": {
         "subtitle": "годовщина со дня гибели создателя этого сайта Володи Смирнова",
         "backUrl": "fans/smirnov/index.html",
-        "backTitle": "Тексты В. Смирнова"
+        "backTitle": "Тексты В. Смирнова",
+        "seoTitle": "28 декабря — годовщина гибели Володи Смирнова"
     },
+    "description": "28 декабря — годовщина гибели создателя этого сайта Володи Смирнова на горе Орисаба (1999): ссылки на биографию и мемориальные страницы.",
     "layout": "praises-article",
     "type": "miscellaneous",
     "url": "/fans/smirnov/smirnov28d.html"

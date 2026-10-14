@@ -1,11 +1,13 @@
 {
     "title": "La chanson d’auteur russe aujourd’hui : Mikhaïl Scherbakov",
-    "layout": "language-article",
     "params": {
+        "seoTitle": "La chanson d’auteur russe aujourd’hui : Mikhaïl Scherbakov — Bella Ostromoukhov (2000)",
         "crumb": "Mémoire de B. Ostromoukhov",
         "description": "Mémoire de maîtrise de Bella Ostromoukhov, Université de la Sorbonne, 2000",
         "lang": "fr"
     },
+    "description": "Mémoire de maîtrise de Bella Ostromoukhov (Sorbonne, 2000) sur Mikhaïl Chtcherbakov, auteur-compositeur-interprète russe : la chanson d’auteur, ses thèmes et sa poétique.",
+    "layout": "language-article",
     "type": "miscellaneous",
     "url": "/fr/ostromoukhov-2000.html"
 }

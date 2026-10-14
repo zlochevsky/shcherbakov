@@ -2,8 +2,10 @@
     "title": "Julia Genyuk",
     "params": {
         "backUrl": "fans/index.html#articles",
-        "backTitle": "Фан-клуб"
+        "backTitle": "Фан-клуб",
+        "seoTitle": "Julia Genyuk. Homo ludens — дань уважения Михаилу Щербакову"
     },
+    "description": "Стихотворение Юлии Генюк «Homo ludens» (1996), посвящённое Михаилу Щербакову.",
     "layout": "praises-article",
     "type": "miscellaneous",
     "url": "/fans/julia.html"

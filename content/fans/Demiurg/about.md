@@ -3,8 +3,10 @@
     "params": {
         "subtitle": "Оксана Савоскул, &laquo;Мир Демиурга Щ.&raquo;",
         "backUrl": "fans/Demiurg/index.html",
-        "backTitle": "К оглавлению"
+        "backTitle": "К оглавлению",
+        "seoTitle": "Об авторе «Мира Демиурга Щ.» — Оксана Савоскул"
     },
+    "description": "Об Оксане Савоскул, авторе исследования песен Михаила Щербакова «Мир Демиурга Щ.»: справка от публикатора (октябрь 2003).",
     "layout": "praises-article",
     "type": "miscellaneous",
     "url": "/fans/Demiurg/about.html"

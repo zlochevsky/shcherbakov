@@ -2,8 +2,10 @@
     "title": "Андрей Андрианов",
     "params": {
         "backUrl": "fans/index.html#articles",
-        "backTitle": "Фан-клуб"
+        "backTitle": "Фан-клуб",
+        "seoTitle": "Андрей Андрианов — вариации на песни Щербакова"
     },
+    "description": "Андрей Андрианов о том, как песни Михаила Щербакова стали сенсацией 1986–1990 годов, и о творчестве поклонников: вариации на «Балаган», «Ковчег» и другие песни.",
     "layout": "praises-article",
     "type": "miscellaneous",
     "url": "/fans/andrianov.html"

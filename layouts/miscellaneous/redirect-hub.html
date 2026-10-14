@@ -1,5 +1,5 @@
 <!doctype html><meta charset="utf-8">
-<link rel="canonical" href="{{ .Params.default }}">
+<link rel="canonical" href="{{ partial "redirect-canonical.html" (dict "page" . "target" .Params.default) }}">
 {{- if .Params.noindex }}
 <meta name="robots" content="noindex, follow">
 {{- end }}

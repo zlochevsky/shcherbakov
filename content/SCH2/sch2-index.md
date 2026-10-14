@@ -34,14 +34,14 @@
 
 <ul>
 <!-- li><a href=001.html>Предварительные вопросы</a> - социально-демографический блок.<!-->
-<li><a href="http://blackalpinist.com/cgi-bin/sch2block.pl?1">Блок 1.</a> Поэзия и/или музыка?</li>
-<li><a href="http://blackalpinist.com/cgi-bin/sch2block.pl?2">Блок 2.</a> «Мир Щербакова»</li>
-<li><a href="http://blackalpinist.com/cgi-bin/sch2block.pl?3">Блок 3.</a> Интертекстуальность</li>
-<li><a href="http://blackalpinist.com/cgi-bin/sch2block.pl?4">Блок 4.</a> Гуманизм или антигуманизм?</li>
-<li><a href="http://blackalpinist.com/cgi-bin/sch2block.pl?5">Блок 5.</a> Поэтика Щербакова.</li>
-<li><a href="http://blackalpinist.com/cgi-bin/sch2block.pl?6">Блок 6.</a> Окуджава, Высоцкий, Щербаков.</li>
-<li><a href="http://blackalpinist.com/cgi-bin/sch2block.pl?7">Блок 7.</a> Разговор с автором.</li>
-<li><a href="http://blackalpinist.com/cgi-bin/sch2block.pl?8">Блок 8.</a> Ваши замечания и предложения.</li>
+<li>Блок 1. Поэзия и/или музыка?</li>
+<li>Блок 2. «Мир Щербакова»</li>
+<li>Блок 3. Интертекстуальность</li>
+<li>Блок 4. Гуманизм или антигуманизм?</li>
+<li>Блок 5. Поэтика Щербакова.</li>
+<li>Блок 6. Окуджава, Высоцкий, Щербаков.</li>
+<li>Блок 7. Разговор с автором.</li>
+<li>Блок 8. Ваши замечания и предложения.</li>
 </ul>
 
 <hr>

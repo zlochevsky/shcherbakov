@@ -2,8 +2,10 @@
     "title": "Валерия Феденкова",
     "params": {
         "backUrl": "fans/index.html#articles",
-        "backTitle": "Фан-клуб"
+        "backTitle": "Фан-клуб",
+        "seoTitle": "Валерия Феденкова — подражание Щербакову"
     },
+    "description": "Стихотворение Валерии Феденковой «в подражание Михаилу Щербакову»: игра словами и созвучиями в его манере.",
     "layout": "praises-article",
     "type": "miscellaneous",
     "url": "/fans/fedenkova.html"

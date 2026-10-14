@@ -5,7 +5,8 @@
    "url": "/SCH2/profiles.html",
    "params": {
       "backUrl": "SCH2/index.html",
-      "backTitle": "Щ-2"
+      "backTitle": "Щ-2",
+      "noindex": true
    }
 }
 

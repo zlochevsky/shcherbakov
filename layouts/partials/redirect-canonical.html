@@ -1,0 +1,13 @@
+{{- /* Абсолютный адрес для <link rel="canonical"> страницы-редиректа. Контекст — dict:
+       "page"   — страница-редирект;
+       "target" — куда она ведёт: относительный адрес (от папки страницы, как в params.target) или полный URL.
+       Основа — site.Params.canonicalBase (если задан, см. seo.html), иначе адрес сайта; #якорь отбрасывается:
+       canonical указывает на страницу, а не на место в ней. */ -}}
+{{- $target := .target | default "" -}}
+{{- $url := index (split $target "#") 0 -}}
+{{- if not (findRE `^[a-zA-Z][a-zA-Z0-9+.-]*:` $url) -}}
+	{{- $base := site.Params.canonicalBase | default site.BaseURL -}}
+	{{- $dir := path.Dir (strings.TrimPrefix site.BaseURL .page.Permalink) -}}
+	{{- $url = printf "%s%s" $base (strings.TrimPrefix "./" (path.Join $dir $url)) -}}
+{{- end -}}
+{{- return $url -}}
