@@ -19,7 +19,8 @@
 {{ hugo.Generator }}
 {{ partial "palette.html" . }}
 </head>
-<body>
+{{- /* страница, закрытая от поисковиков (noindex), не попадает и в поиск по сайту */}}
+<body{{ if .Params.noindex }} data-pagefind-ignore="all"{{ end }}>
 {{- $backUrl := .Params.backUrl }}
 {{- $backTitle := .Params.backTitle }}
 {{- if and (not $backUrl) (hasPrefix .File.Dir "fans/") }}

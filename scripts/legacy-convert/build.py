@@ -7,16 +7,25 @@ if not os.environ.get('LEGACY_WWW'):
 sys.dont_write_bytecode = True
 SECTION = os.environ.get('SECTION', 'fans')
 if SECTION == 'fans':
-    from meta import META
+    import meta as MOD
 else:
     import importlib
-    META = importlib.import_module('meta_' + SECTION).META
+    # meta-модуль раздела можно держать вне репозитория: каталог задаёт META_DIR (например, для раздела,
+    # который не публикуется в открытом репозитории)
+    if os.environ.get('META_DIR'):
+        sys.path.insert(0, os.environ['META_DIR'])
+    MOD = importlib.import_module('meta_' + SECTION)
+META = MOD.META
 FANS_NAMES="andr2 andrianov andr-rusalka-d andr-rusalka answer bes bestiar bom-bram brahms chgk chgkizb discussion elfy eslinado fedenkova herbary horatius izvraty julia katrin kogolublu lirika mandlsh2 mandlsht memory metafora mueller nikst-glaza oncetran parabola polkovnik potop rakety rechisty rubcov-doroga sardanapal shuty suzy1 szs-intrm4 zhandarov comix/comix memo/podborka memo/schneider utf/covers utf/crocodile".split()
 NAMES = FANS_NAMES if SECTION == 'fans' else sorted(f[:-5] for f in os.listdir(fconv.SRC) if f.endswith('.html'))
 if SECTION == 'SCH2':
     NAMES = ['index', '103-e', 'gb/index', 'profiles']
     fconv.SRC_OVERRIDE['profiles'] = fconv.SRC + 'profiles'
 DEFAULT_BACK = {'fans': ('fans/index.html', 'Фан-клуб'), 'Parodies': ('Parodies/index.html', 'Пародии'), 'SCH2': ('SCH2/index.html', 'SCH2')}
+# meta-модуль может задать для своего раздела: DEFAULT_BACK (кортеж «назад»), FRONT_MATTER и PARAMS (добавляются
+# во front matter и в params каждой страницы, например noindex/sitemap), POST(body, имя) — обработка тела страницы
+if hasattr(MOD, 'DEFAULT_BACK'):
+    DEFAULT_BACK[SECTION] = MOD.DEFAULT_BACK
 def OUTNAME(n):
     if n == 'index': return SECTION.lower() + '-index'
     if n.endswith('/index'): return n[:-5] + os.path.basename(os.path.dirname(n)) + '-index'
@@ -75,6 +84,8 @@ for n in (sys.argv[1:] or NAMES):
         if a not in body:
             print('  ! replace not found:', a[:50])
         body = body.replace(a, b)
+    if hasattr(MOD, 'POST'):
+        body = MOD.POST(body, n)
     body = resolve_songs(body, n)
     title = m.get('title', title)
     back = m.get('back', DEFAULT_BACK[SECTION])
@@ -86,6 +97,8 @@ for n in (sys.argv[1:] or NAMES):
     if m.get('author'): fm['params']['author'] = m['author']
     if m.get('subtitle'): fm['params']['subtitle'] = m['subtitle']
     fm['params']['backUrl'], fm['params']['backTitle'] = back
+    fm['params'].update(getattr(MOD, 'PARAMS', {}))
+    fm.update(getattr(MOD, 'FRONT_MATTER', {}))
     open(D+OUTNAME(n)+'.md','w').write(json.dumps(fm, ensure_ascii=False, indent=3)+'\n\n'+body)
     print(n, 'homoglyph fixes:', fconv.HOMO_COUNT[0], [d for d in fconv.DEBUG if 'nav' not in d and 'TABLE' not in d]); fconv.HOMO_COUNT[0]=0
 
