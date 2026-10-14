@@ -1,5 +1,5 @@
 {
-   "title": "Цифровой альбом По другим мотивам",
+   "title": "По другим мотивам",
    "type": "miscellaneous",
    "layout": "diskpage",
    "url": "/Disks/podrugim.html",

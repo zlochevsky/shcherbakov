@@ -1,5 +1,5 @@
 {
-   "title": "CD Диск Авиапочта",
+   "title": "Авиапочта",
    "type": "miscellaneous",
    "layout": "diskpage",
    "url": "/Disks/aviapochta.html",
