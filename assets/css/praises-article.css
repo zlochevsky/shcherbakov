@@ -85,6 +85,9 @@ main pre {
 	line-height: 1.2em;
 	white-space: pre-wrap;
 	overflow-wrap: break-word;
+	/* overflow-x: auto (basic.css) делает <pre> прокручиваемым и по вертикали; буквы запасного шрифта чуть выше
+	   line-height — без этого появляется лишняя вертикальная полоса прокрутки */
+	overflow-y: hidden;
 	margin: 1em 0 1em 2em;
 }
 /* моноширинный — где текст выровнен пробелами: кроссворды; страницы с params.monoPre (письма, таблатуры, таблицы);
