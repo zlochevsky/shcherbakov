@@ -3,7 +3,8 @@
     "params": {
         "seoTitle": "Как читать гитарные таблатуры",
         "backTitle": "Вступление",
-        "backUrl": "about.html"
+        "backUrl": "about.html",
+        "monoPre": true
     },
     "description": "Что такое таблатура и как её читать: короткое пояснение к гитарным разборам песен Михаила Щербакова на этом сайте.",
     "layout": "praises-article",

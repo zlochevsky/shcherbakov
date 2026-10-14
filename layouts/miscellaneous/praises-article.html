@@ -20,7 +20,8 @@
 {{ partial "palette.html" . }}
 </head>
 {{- /* страница, закрытая от поисковиков (noindex), не попадает и в поиск по сайту */}}
-<body{{ if .Params.noindex }} data-pagefind-ignore="all"{{ end }}>
+{{- /* params.monoPre: <pre> моноширинным (текст выровнен пробелами) */}}
+<body{{ if .Params.monoPre }} class="mono-pre"{{ end }}{{ if .Params.noindex }} data-pagefind-ignore="all"{{ end }}>
 {{- $backUrl := .Params.backUrl }}
 {{- $backTitle := .Params.backTitle }}
 {{- if and (not $backUrl) (hasPrefix .File.Dir "fans/") }}

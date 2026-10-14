@@ -73,6 +73,7 @@ One file per song: minimal front matter, the song text as the body (read raw wit
 - `title`, `params.subtitle`, `params.author` — heading block.
 - `params.backUrl`, `params.backTitle` — the "back" link in the corner navigation. Without them a page under `content/fans/` gets «Фан-клуб → fans/index.html»; other sections set them explicitly.
 - `params.bgColor` — page background (the fan club hub `fans/fans-index.md`).
+- `params.monoPre` (bool) — `<pre>` in a monospace font (the page's `<body>` gets `class="mono-pre"`). By default `<pre>` uses the page font: in the fan club and parodies it holds mostly verse and quotations. Set where text is aligned with spaces: `tab.md` (tablature), `statistics.md` (tables), letters of sections kept in the private overlay (2026-10-14). Crosswords (`<pre class="crossword">`) are monospace without it.
 
 ## Other projects — `content/Disks/other.md` (`other-projects`)
 
@@ -198,6 +199,7 @@ canonical и `og:url` указывают на саму страницу, а ес
 - `title`, `params.subtitle`, `params.author` — заголовочный блок.
 - `params.backUrl`, `params.backTitle` — ссылка «назад» в угловой навигации. Без них страница из `content/fans/` получает «Фан-клуб → fans/index.html»; в остальных разделах задаются явно.
 - `params.bgColor` — фон страницы (хаб клуба `fans/fans-index.md`).
+- `params.monoPre` (bool) — `<pre>` моноширинным шрифтом (`<body>` страницы получает `class="mono-pre"`). По умолчанию `<pre>` набирается шрифтом страницы: в фан-клубе и пародиях там в основном стихи и цитаты. Ставится там, где текст выровнен пробелами: `tab.md` (табулатуры), `statistics.md` (таблицы), письма разделов из приватного слоя (2026-10-14). Кроссворды (`<pre class="crossword">`) моноширинные и без него.
 
 ## Другие проекты — `content/Disks/other.md` (`other-projects`)
 

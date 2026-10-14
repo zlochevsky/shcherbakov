@@ -79,12 +79,19 @@ main p.verse {
 	text-indent: 0;
 }
 main pre {
+	/* шрифт страницы: в фан-клубе и пародиях в <pre> в основном стихи и цитаты (docs/fanclub-migration.md) */
 	font-family: inherit;
 	font-size: 1em;
 	line-height: 1.2em;
 	white-space: pre-wrap;
 	overflow-wrap: break-word;
 	margin: 1em 0 1em 2em;
+}
+/* моноширинный — где текст выровнен пробелами: кроссворды; страницы с params.monoPre (письма, таблатуры, таблицы);
+   monospace повторён, иначе браузеры уменьшают шрифт */
+main pre.crossword,
+body.mono-pre main pre {
+	font-family: monospace, monospace;
 }
 main h3,
 main h4 {
