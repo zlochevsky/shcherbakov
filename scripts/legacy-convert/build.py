@@ -22,10 +22,12 @@ if SECTION == 'SCH2':
     NAMES = ['index', '103-e', 'gb/index', 'profiles']
     fconv.SRC_OVERRIDE['profiles'] = fconv.SRC + 'profiles'
 DEFAULT_BACK = {'fans': ('fans/index.html', 'Фан-клуб'), 'Parodies': ('Parodies/index.html', 'Пародии'), 'SCH2': ('SCH2/index.html', 'SCH2')}
-# meta-модуль может задать для своего раздела: DEFAULT_BACK (кортеж «назад»), FRONT_MATTER и PARAMS (добавляются
+# meta-модуль может задать для своего раздела: DEFAULT_BACK (кортеж «назад»), SRC_OVERRIDE, FRONT_MATTER и PARAMS (добавляются
 # во front matter и в params каждой страницы, например noindex/sitemap), POST(body, имя) — обработка тела страницы
 if hasattr(MOD, 'DEFAULT_BACK'):
     DEFAULT_BACK[SECTION] = MOD.DEFAULT_BACK
+# SRC_OVERRIDE в meta-модуле: имя страницы -> файл-исходник не по стандартному пути (например, .txt вместо .html)
+fconv.SRC_OVERRIDE.update(getattr(MOD, 'SRC_OVERRIDE', {}))
 def OUTNAME(n):
     if n == 'index': return SECTION.lower() + '-index'
     if n.endswith('/index'): return n[:-5] + os.path.basename(os.path.dirname(n)) + '-index'
