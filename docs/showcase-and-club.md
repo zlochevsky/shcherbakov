@@ -100,5 +100,5 @@
 - `scripts/check-separation.py` — разметка разделов (`CLUB`, `NEUTRAL`) и исключения (`ALLOW`) с причинами;
   шаг в `.github/workflows/static.yml` выдаёт предупреждения.
 - `layouts/miscellaneous/praises-article.html` — «назад» по разделу для страниц клуба.
-- `hugo.json` — меню главной (`indexheadermenu`, `indexfootermenu`).
+- `config/_default/menus.json` — меню главной (`indexheadermenu`, `indexfootermenu`; до 2026-10-15 — в `hugo.json`).
 1

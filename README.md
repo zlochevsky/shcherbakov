@@ -30,7 +30,7 @@ The website is created and maintained by people not affiliated with the author, 
 
 # Structure
 
-Hugo's configuration is `hugo.json` in the root directory (site parameters, menus). The Directus access token lives in `config/_default/params.json`, which is not in git: copy `config/_default/params.json.example` to it (see Building below).
+Hugo's configuration is `hugo.json` in the root directory (site parameters); the menus are in `config/_default/menus.json` (Hugo merges the files of `config/_default/` into the configuration). The Directus access token lives in `config/_default/params.json`, which is not in git: copy `config/_default/params.json.example` to it (see Building below).
 
 Standard Hugo directories:
 

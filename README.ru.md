@@ -30,7 +30,7 @@
 
 # Структура
 
-Настройки Hugo лежат в `hugo.json` в корне проекта (параметры сайта, меню). Токен доступа к Directus хранится в `config/_default/params.json`, которого нет в git: скопируйте в него `config/_default/params.json.example` (см. «Сборка» ниже).
+Настройки Hugo лежат в `hugo.json` в корне проекта (параметры сайта); меню — в `config/_default/menus.json` (файлы из `config/_default/` Hugo добавляет к настройкам). Токен доступа к Directus хранится в `config/_default/params.json`, которого нет в git: скопируйте в него `config/_default/params.json.example` (см. «Сборка» ниже).
 
 Стандартные папки Hugo:
 

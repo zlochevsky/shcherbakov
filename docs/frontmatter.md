@@ -4,7 +4,7 @@
 
 Front matter fields (the JSON block at the top of `content/**/*.md`) that the templates in `layouts/` actually read. Checked against `layouts/` and all content files on 2026-10-02; sections for translations, language pages and `Disks/other.md` added on 2026-10-07. Fields present in content but read by no template are marked **unused**.
 
-Not covered: the Directus collections (works, events, perfs, sets, books, comments, announces…) — see [docs/directus.md](directus.md); and the `params` of menu entries in `hugo.json` (`isDateToPrint`, `dynamicLastmod`, `collapsible`, `toggleChild`, `mobileOnly`, `shortName`, `dropdown`, `lang`) — they look like `.Params.*` in templates but belong to the menu config, not to any `.md` file.
+Not covered: the Directus collections (works, events, perfs, sets, books, comments, announces…) — see [docs/directus.md](directus.md); and the `params` of menu entries in `config/_default/menus.json` (`isDateToPrint`, `dynamicLastmod`, `collapsible`, `toggleChild`, `mobileOnly`, `shortName`, `dropdown`, `lang`) — they look like `.Params.*` in templates but belong to the menu config, not to any `.md` file.
 
 ## Standard Hugo fields
 

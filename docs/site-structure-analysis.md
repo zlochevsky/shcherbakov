@@ -171,7 +171,7 @@
 выпадающим списком «Языки» (§6.1): `params.dropdown` в `hugo.json`, дочерние пункты — самоназвания языков с
 `params.lang`; список раскрывается внутри своей ячейки (`layouts/partials/menu.html`), а не отдельными ячейками,
 как «Фан-клуб». В списке — языки, у которых есть главная страница: English, Deutsch, Українська, Français, Esperanto, עברית
-(на 2026-10-09); тот же список — в меню каталога переводов (`trnheadermenu`). Реализовано в `hugo.json` (`indexheadermenu`/`indexfootermenu`,
+(на 2026-10-09); тот же список — в меню каталога переводов (`trnheadermenu`). Реализовано в меню (`config/_default/menus.json`, до 2026-10-15 — в `hugo.json`; `indexheadermenu`/`indexfootermenu`,
 `mobileOnly`/`shortName`/`parent`/`identifier` params), `layouts/partials/
 menu.html`, `assets/css/common.css`/`index.css`; `fans/index.html`
 переупорядочен (Мемориальные страницы + дисклеймер — первыми, эпиграф — вниз,
@@ -180,7 +180,7 @@ menu.html`, `assets/css/common.css`/`index.css`; `fans/index.html`
 **Граница реализации:** `indexheadermenu`/`indexfootermenu` работают **только на
 главной** — `header.html`/`footer.html` подключены лишь в `baseof.html`, а его
 использует только `_index.md`. У каталога песен, каталога концертов, поиска и
-страниц песен — свои короткие верхние меню из `hugo.json` (`ctgheadermenu`,
+страниц песен — свои короткие верхние меню (`ctgheadermenu`,
 `concertsheadermenu`, `searchheadermenu`) через тот же `partials/menu.html`. У
 остальных страниц (about/bio/no/news/log/sociology/buy, все `praises-article`,
 включая весь `fans/*`) меню нет, только `cornernav`. Решение владельца (2026-09-30):
