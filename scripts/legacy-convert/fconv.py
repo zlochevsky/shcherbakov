@@ -502,10 +502,12 @@ def post(blocks):
             continue
         if re.fullmatch(r'<p>(?:&nbsp;|<br>|\s)*</p>', b):
             continue
-        if b in ('<ul>', '</ul>', '<ol>', '</ol>'):
+        # открывающий тег списка — и с атрибутами (<ol start="17">), иначе его пункты считаются стоящими вне списка
+        if re.fullmatch(r'</?(?:ul|ol)(?:\s[^>]*)?>', b):
             out.append(b); continue
         ml = re.fullmatch(r'<li>(.*)</li>', b, re.S)
-        if ml and not any(x in ('<ul>', '<ol>') for x in out[-1:]) and out.count('<ul>') + out.count('<ol>') == out.count('</ul>') + out.count('</ol>'):
+        opened = sum(1 for x in out if re.fullmatch(r'<(?:ul|ol)(?:\s[^>]*)?>', x))
+        if ml and not any(re.fullmatch(r'<(?:ul|ol)(?:\s[^>]*)?>', x) for x in out[-1:]) and opened == out.count('</ul>') + out.count('</ol>'):
             b = '<p>%s</p>' % ml.group(1)
         b = re.sub(r'<b>((?:<br>)+)', r'\1<b>', b)
         if SPLIT_BR2[0]:
