@@ -100,6 +100,7 @@ for n in (sys.argv[1:] or NAMES):
     if m.get('subtitle'): fm['params']['subtitle'] = m['subtitle']
     fm['params']['backUrl'], fm['params']['backTitle'] = back
     fm['params'].update(getattr(MOD, 'PARAMS', {}))
+    fm['params'].update(m.get('params', {}))      # параметры отдельной страницы (например, palette)
     fm.update(getattr(MOD, 'FRONT_MATTER', {}))
     open(D+OUTNAME(n)+'.md','w').write(json.dumps(fm, ensure_ascii=False, indent=3)+'\n\n'+body)
     print(n, 'homoglyph fixes:', fconv.HOMO_COUNT[0], [d for d in fconv.DEBUG if 'nav' not in d and 'TABLE' not in d]); fconv.HOMO_COUNT[0]=0
