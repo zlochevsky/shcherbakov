@@ -76,6 +76,7 @@ One file per song: minimal front matter, the song text as the body (read raw wit
 - `params.backUrl`, `params.backTitle` — the "back" link in the corner navigation. Without them a page under `content/fans/` gets «Фан-клуб → fans/index.html»; other sections set them explicitly.
 - `params.bgColor` — page background (the fan club hub `fans/fans-index.md`).
 - `params.monoPre` (bool) — `<pre>` in a monospace font (the page's `<body>` gets `class="mono-pre"`). By default `<pre>` uses the page font: in the fan club and parodies it holds mostly verse and quotations. Set where text is aligned with spaces: `tab.md` (tablature), `statistics.md` (tables), letters of sections kept in the private overlay (2026-10-14). Crosswords (`<pre class="crossword">`) are monospace without it.
+- `params.palette` (string) — the page's own colour scheme: the `<body>` gets `class="palette-<name>"`, which overrides the palette variables (`assets/css/palette.css`, section "per-page schemes"). Available: `olive` — the old site's dark olive scheme (background `#666656`, light-yellow text, yellow links), used for a contents page of the private overlay (2026-10-15). A new scheme is a new `body.palette-<name>` block in `palette.css`.
 
 ## Other projects — `content/Disks/other.md` (`other-projects`)
 
