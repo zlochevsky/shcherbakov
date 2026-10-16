@@ -2,7 +2,8 @@
        страница без шапки и меню сайта (без baseof): открывается из левой панели редактора /admin/ (Sveltia, пункт
        добавляет скрипт в static/admin/index.html). Группы и описания — в params.groups файла
        content/admin-directus.md, правятся в том же редакторе. Группа с заголовком — список а), б), в)…;
-       без заголовка — её таблицы одной строкой через «и». */ -}}
+       без заголовка — её таблицы одной строкой через «и». Тот же список (без описаний) скрипт редактора берёт
+       отсюда же для блока в левой панели: ссылки .table-link с data-label, заголовки групп .group-title. */ -}}
 {{- $studio := printf "%sadmin/content/" site.Params.directus.url -}}
 {{- $letters := split "абвгдежзиклмнопрстуфхцчшщэюя" "" -}}
 <!DOCTYPE html>
@@ -53,14 +54,14 @@ h1 { margin: 0 0 .5em; font-size: 1.6em; }
 		<p class="group-title">{{ .title }}:</p>
 		<ol class="tables">
 		{{- range $i, $t := $tables }}
-			<li><span class="letter">{{ index $letters $i }})</span>{{ $t.label }} (<a class="table-link" href="{{ $studio }}{{ $t.table }}" target="_blank" rel="noopener">{{ $t.table }}</a>){{ if eq (add $i 1) $n }}.{{ else }};{{ end }}
+			<li><span class="letter">{{ index $letters $i }})</span>{{ $t.label }} (<a class="table-link" href="{{ $studio }}{{ $t.table }}" data-label="{{ $t.label }}" target="_blank" rel="noopener">{{ $t.table }}</a>){{ if eq (add $i 1) $n }}.{{ else }};{{ end }}
 				{{- with $t.description }}<p class="desc">{{ . | markdownify }}</p>{{ end }}</li>
 		{{- end }}
 		</ol>
 	{{- else }}
 		<p class="tables-line">
 		{{- range $i, $t := $tables }}
-			{{- if $i }} и {{ end }}{{ $t.label }} (<a class="table-link" href="{{ $studio }}{{ $t.table }}" target="_blank" rel="noopener">{{ $t.table }}</a>)
+			{{- if $i }} и {{ end }}{{ $t.label }} (<a class="table-link" href="{{ $studio }}{{ $t.table }}" data-label="{{ $t.label }}" target="_blank" rel="noopener">{{ $t.table }}</a>)
 		{{- end }}.</p>
 		{{- range $t := $tables }}
 			{{- with $t.description }}<p class="desc">{{ if gt $n 1 }}<span class="table-name">{{ $t.table }}</span>. {{ end }}{{ . | markdownify }}</p>{{ end }}

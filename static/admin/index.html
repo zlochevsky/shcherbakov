@@ -102,17 +102,26 @@ textarea {
 	background: var(--sui-primary-accent-color, #2a6ac8); border-color: transparent;
 	color: var(--sui-primary-accent-color-inverted, #fff);
 }
-/* пункт «Таблицы Directus» внизу левой панели (скрипт ниже) */
-#directus-tables-link {
-	display: block;
+/* блок «Таблицы Directus» внизу левой панели (скрипт ниже): раскрывается, внутри — группы ссылок */
+#directus-tables {
 	margin: 8px;
 	padding: 8px 12px;
 	border-top: 1px solid hsl(var(--sui-border-color-2-hsl, 0 0% 72%));
-	color: var(--sui-primary-accent-color-text, inherit);
 	font-size: var(--sui-font-size-default, 14px);
+}
+#directus-tables summary {
+	cursor: pointer;
+	color: var(--sui-primary-accent-color-text, inherit);
+}
+#directus-tables ul { margin: 6px 0 0; padding: 0; list-style: none; }
+#directus-tables li { margin: 5px 0; line-height: 1.35; }
+#directus-tables .dt-group { color: hsl(var(--sui-foreground-color-2-hsl, 0 0% 35%)); }
+#directus-tables a {
+	color: var(--sui-primary-accent-color-text, inherit);
 	text-decoration: none;
 }
-#directus-tables-link:hover { text-decoration: underline; }
+#directus-tables a:hover { text-decoration: underline; }
+#directus-tables .dt-help { margin-top: 10px; }
 #caret-pos {
 	position: fixed; right: 16px; bottom: 16px; z-index: 1000;
 	padding: 4px 10px; border-radius: 4px;
@@ -274,20 +283,82 @@ try {
 	addEventListener('popstate', mark);
 	setInterval(mark, 500);
 })();
-// Пункт «Таблицы Directus» внизу левой панели со списком коллекций — ссылка на страницу directus.html рядом с
-// редактором (собирается из content/admin-directus.md). Штатно своих ссылок в панели у Sveltia нет, поэтому
-// пункт вставляется в её разметку (nav.primary-sidebar); Sveltia перерисовывает панель — проверка по таймеру
-// возвращает пункт. Переименуют класс в новой версии — пункт просто пропадёт, страница останется по адресу.
+// Блок «Таблицы Directus» внизу левой панели со списком коллекций: ссылки прямо на таблицы Directus Studio (в новой
+// вкладке) и последней строкой — страница directus.html с пояснениями. Список не хранится здесь: он читается из той
+// же страницы directus.html (собирается из content/admin-directus.md, правится в редакторе) — ссылки .table-link
+// с data-label, заголовки групп .group-title. Штатно своих ссылок в панели у Sveltia нет, поэтому блок вставляется
+// в её разметку (nav.primary-sidebar); Sveltia перерисовывает панель — проверка по таймеру возвращает блок.
+// Переименуют класс в новой версии — блок просто пропадёт, страница останется по адресу.
+// Раскрыт блок или нет — запоминается в браузере (localStorage).
 (() => {
+	const OPEN_KEY = 'directus-tables-open';
+	let groups = null;   // [{ title, links: [{ label, href }] }] — после загрузки directus.html
+
+	const build = () => {
+		const box = document.createElement('details');
+		box.id = 'directus-tables';
+		try { box.open = localStorage.getItem(OPEN_KEY) === '1'; } catch (e) { /* без localStorage — свёрнут */ }
+		box.addEventListener('toggle', () => {
+			try { localStorage.setItem(OPEN_KEY, box.open ? '1' : '0'); } catch (e) { /* не запомнится */ }
+		});
+		const summary = document.createElement('summary');
+		summary.textContent = 'Таблицы Directus';
+		box.append(summary);
+		const ul = document.createElement('ul');
+		const link = (text, href, newTab) => {
+			const a = document.createElement('a');
+			a.href = href;
+			a.textContent = text;
+			if (newTab) { a.target = '_blank'; a.rel = 'noopener'; }
+			return a;
+		};
+		// группа с заголовком: «Диски: диски · исполнения в дисках · …»; без заголовка — сами ссылки через «·»
+		for (const g of groups || []) {
+			const li = document.createElement('li');
+			if (g.title) {
+				const t = document.createElement('span');
+				t.className = 'dt-group';
+				t.textContent = g.title + ': ';
+				li.append(t);
+			}
+			g.links.forEach((l, i) => {
+				if (i) li.append('\u00a0· ');   // неразрывный пробел: точка не уходит в начало строки
+				li.append(link(l.label, l.href, true));
+			});
+			ul.append(li);
+		}
+		const help = document.createElement('li');
+		help.className = 'dt-help';
+		help.append(link('Что в какой таблице →', 'directus.html', false));
+		ul.append(help);
+		box.append(ul);
+		return box;
+	};
+
 	const add = () => {
 		const nav = document.querySelector('nav.primary-sidebar');
-		if (!nav || nav.querySelector('#directus-tables-link')) return;
-		const a = document.createElement('a');
-		a.id = 'directus-tables-link';
-		a.href = 'directus.html';
-		a.textContent = 'Таблицы Directus';
-		nav.append(a);
+		if (!nav || nav.querySelector('#directus-tables')) return;
+		nav.append(build());
 	};
+
+	fetch('directus.html')
+		.then((r) => (r.ok ? r.text() : Promise.reject(r.status)))
+		.then((html) => {
+			const doc = new DOMParser().parseFromString(html, 'text/html');
+			groups = [...doc.querySelectorAll('ol.groups > li')].map((li) => ({
+				title: (li.querySelector('.group-title')?.textContent || '').replace(/:\s*$/, '').trim(),
+				links: [...li.querySelectorAll('a.table-link')].map((a) => ({
+					label: a.dataset.label || a.textContent,
+					href: a.href,
+				})),
+			})).filter((g) => g.links.length);
+		})
+		.catch(() => { groups = []; })   // страница не загрузилась — в блоке останется ссылка на неё
+		.finally(() => {
+			document.getElementById('directus-tables')?.remove();
+			add();
+		});
+
 	add();
 	setInterval(add, 500);
 })();
