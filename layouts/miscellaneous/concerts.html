@@ -15,6 +15,9 @@
 	{{- with resources.Get "css/concerts-prototype.css" }}
 		{{ .Content | safeCSS -}}
 	{{ end }}
+	{{- with resources.Get "css/mobile-header.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
 </style>
 {{ hugo.Generator }}
 {{ partial "palette.html" . }}

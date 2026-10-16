@@ -10,6 +10,9 @@
 		{{ with resources.Get "css/index.css" }}
 			{{- .Content | safeCSS -}}
 		{{ end }}
+		{{ with resources.Get "css/mobile-header.css" }}
+			{{- .Content | safeCSS -}}
+		{{ end }}
 	{{ end }}
 </style>
 {{ hugo.Generator }}

@@ -158,6 +158,13 @@ nav summary {
 		transform-origin: 0.3em 50%;
 	}
 }
+/* Компьютер: ячейки верхнего меню выровнены по верху — когда раскрывается список («Языки») и строка становится выше,
+   остальные пункты остаются на месте, а не съезжают к середине (решение владельца 2026-10-16) */
+@media only screen and (width > 70em) {
+	nav.top-menu > div {
+		vertical-align: top;
+	}
+}
 /* Раскрывающийся список внутри ячейки (выбор языка, params.dropdown в hugo.json) */
 nav details.dropdown .dropdown-list {
 	list-style: none;
@@ -166,7 +173,35 @@ nav details.dropdown .dropdown-list {
 	text-align: left;
 }
 nav details.dropdown .dropdown-list li {
-	margin: .2em 0 0 .8em;
+	margin: .4em 0 0 .8em;
+}
+/* Языки — с квадратиками, как пункты нижнего меню (раскладка не сдвигается); при наведении у этого языка квадратик
+   скрывается (подчёркивание при наведении снимается на всём сайте, site.css) (решение владельца 2026-10-16) */
+/* свой маркер «▪», как в нижнем меню (.bordered.toggle-child::before): у встроенного ::marker расстояние до текста
+   не настраивается; висит слева в отступе пункта */
+nav details.dropdown .dropdown-list li::before {
+	content: "▪";
+	display: inline-block;
+	width: .6em;
+	margin-left: -.6em;
+	vertical-align: middle;
+}
+nav details.dropdown .dropdown-list li:has(> a:hover)::before {
+	visibility: hidden;
+}
+/* Список языков в две колонки по ширине содержимого (сетка) — где ячейка «Языки» достаточно широкая. Верхние границы —
+   точки смены числа колонок меню (18.75em, 35em, 70em), нижние — с них названия помещаются; на компьютере — всегда
+   (решения владельца 2026-10-16). Порядок — сверху вниз по колонкам, по три языка */
+@media only screen and (16em <= width < 18.75em), only screen and (30em <= width < 35em),
+       only screen and (45em <= width) {
+	nav details.dropdown[open] .dropdown-list {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-rows: repeat(3, auto);
+		grid-template-columns: max-content max-content;
+		justify-content: center;
+		column-gap: .5em;
+	}
 }
 nav > div:has(.toggle-child) {
 	display: none;
@@ -218,6 +253,10 @@ nav.bottom-menu > div:has(> details[open]:not(.dropdown)) ~ div:has(.toggle-chil
         }
         footer nav.bottom-menu {
                 display: none;
+        }
+        /* подпункты «Фан-клуба» — по левому краю (решение владельца 2026-10-16) */
+        nav.top-menu .bordered.toggle-child {
+                text-align: left;
         }
         /* :not(.dropdown) — открытый список языков не должен раскрывать пункты «Фан-клуба» */
         nav.top-menu > div:has(> details[open]:not(.dropdown)) ~ div:has(.toggle-child) {

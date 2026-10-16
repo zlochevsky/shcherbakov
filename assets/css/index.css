@@ -96,42 +96,6 @@ main > div.wrapper > div.collections > ul {
                 height: auto;
         }
 }
-/* мобильная версия (бургер): название и подзаголовок слева, кнопка меню справа в одной строке с ними */
-@media only screen and (width <= 70em) {
-        header {
-                display: grid;
-                grid-template-columns: 1fr auto;
-                align-items: center;
-                column-gap: 0.5em;
-                text-align: left;
-                padding: 0 0.5em;
-        }
-        /* расстояние между базовыми линиями заголовка и подзаголовка — не меньше 1.2 межстрочного интервала заголовка;
-           h1 прижат к низу своей строки, h2 — к верху: кнопка на две строки не раздвигает их */
-        header h1 { grid-column: 1; grid-row: 1; align-self: end; font-size: 2em; margin: 0.3em 0 0; line-height: 1.15; }
-        header h2 { grid-column: 1; grid-row: 2; align-self: start; font-size: 1.2em; margin: 1.05em 0 0.3em; }
-        header .burger { grid-column: 2; grid-row: 1 / span 2; margin-top: 0; }
-        header nav.top-menu { grid-column: 1 / -1; grid-row: 3; }
-        header ul.announce { grid-column: 1 / -1; grid-row: 4; text-align: center; }
-        header .mob-menu-button { display: none; }
-}
-/* широкая мобильная версия: название и подзаголовок по центру страницы — слева отступ, равный месту кнопки справа:
-   ширина кнопки (отступы 0.3em·2 + 1.5em·2, значок 32px + рамки 6px) + промежуток сетки 0.5em; в rem — от шрифта
-   страницы, как у кнопки (при 16px — 104px, при 20px — 118px) */
-@media only screen and (25em <= width <= 70em) {
-        header h1,
-        header h2 { text-align: center; margin-left: calc(4.1rem + 38px); }
-}
-/* узкий телефон: название мельче; кнопка меньше исходной (~94px), значок — 0.75 исходного, толщина линий та же (1px) */
-@media only screen and (width < 25em) {
-        header h1 { font-size: 1.45em; }
-        header h2 { font-size: 0.95em; margin-top: 0.85em; }
-        header .burger { padding: 0.3em; }
-        header .burger .burger-wrapper { padding: 1.1em; }
-        header .burger .top-burger,
-        header .burger .bottom-burger { width: 24px; height: 3px; }
-        header .burger .middle-burger { width: 22.5px; margin: 0.525em 2.25px; }
-}
 @media only screen and (width > 70em) {
         .centered {
                 margin: 0 auto; /* Center the block */

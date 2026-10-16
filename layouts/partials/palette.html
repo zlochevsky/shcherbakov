@@ -2,3 +2,7 @@
 {{- with resources.Get "css/palette.css" }}
 <style>{{ .Content | safeCSS }}</style>
 {{- end }}
+{{- /* Общие правила для всех страниц (assets/css/site.css) — тем же шаблоном, он есть на каждой странице. */ -}}
+{{- with resources.Get "css/site.css" }}
+<style>{{ .Content | safeCSS }}</style>
+{{- end }}
