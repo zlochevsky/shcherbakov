@@ -80,7 +80,7 @@ Renders a menu for the given menu ID.
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}
           {{- end }}
         {{- end -}}
-      >{{ $label }}</a>{{ .Post | markdownify }}
+      >{{ with .Params.icon }}{{ partial "menu-icon.html" . }}{{ end }}{{ $label }}</a>{{ .Post | markdownify }}
 {{- /* If set in site config ("isDateToPrint"), print update timestamp after the menu entry.
        If set in site config, ("frontmatter" > "lastmod" > [lastmod,:fileModTime]),
        update timestamp is taken from "lastmod" site config param in the following order:

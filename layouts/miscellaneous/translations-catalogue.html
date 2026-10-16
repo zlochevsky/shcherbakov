@@ -25,6 +25,9 @@
 	{{ with resources.Get "css/translations.css" }}
 		{{ .Content | safeCSS }}
 	{{ end }}
+	{{- with resources.Get "css/mobile-header.css" }}
+		{{ .Content | safeCSS -}}
+	{{ end }}
 </style>
 {{ hugo.Generator }}
 {{ partial "palette.html" . }}
@@ -42,12 +45,13 @@
 		<div>
 			<div class="search js-only centertext">
 				Задать фильтр:
-				<input type="text" id="search" placeholder="песня, перевод, переводчик, язык, год..." autofocus>
-				<button id="clear-search">сброс</button> &emsp; &emsp;
-				Сортировать вывод:
-				<button data-sort="song" class="active" aria-pressed="true">по годам песен</button>
-				<button data-sort="orig" aria-pressed="false">по оригиналу</button>
-				<button data-sort="lang" aria-pressed="false">по языкам</button>
+				<span class="search-field"><input type="text" id="search" placeholder="песня, переводчик, язык, год..." autofocus><button id="clear-search" title="Сбросить фильтр" aria-label="Сбросить фильтр"><span class="clear-text">сброс</span><span class="clear-icon" aria-hidden="true">✕</span></button></span><span class="search-sep"> &emsp; &emsp; </span>
+				<span class="sort-label">Сортировать вывод по:</span>
+				<span class="sort-buttons">
+				<button data-sort="song" class="active" aria-pressed="true">году песни</button>
+				<button data-sort="orig" aria-pressed="false">оригиналу</button>
+				<button data-sort="lang" aria-pressed="false">языку</button>
+				</span>
 			</div>
 <ul id="trlist">
 {{- range $i, $t := sort $items "work.year" }}

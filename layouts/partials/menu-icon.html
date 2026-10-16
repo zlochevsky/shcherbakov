@@ -1,0 +1,7 @@
+{{- /* Значок перед подписью пункта меню (menus.json, params.icon): home — домик, search — лупа.
+   Серый (--gray-text), высотой в строку, для экранных чтецов скрыт (подпись пункта рядом). */ -}}
+{{- if eq . "home" -}}
+<svg class="menu-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2 7.5 8 2.5l6 5M3.8 6.2V13.5h3.2V9.8h2V13.5h3.2V6.2" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/></svg>
+{{- else if eq . "search" -}}
+<svg class="menu-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="6.8" cy="6.8" r="4.3" fill="none" stroke="currentColor" stroke-width="1"/><path d="M10 10l4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+{{- end -}}

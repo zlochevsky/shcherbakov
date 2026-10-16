@@ -35,12 +35,13 @@
                 <div>
                         <div class="search js-only centertext">
                                 Задать фильтр:
-                                <input type="text" id="search" placeholder="название, диск, год..." autofocus>
-                                <button id="clear-search">сброс</button> &emsp; &emsp;
-                                Сортировать вывод:
-                                <button id="alphabetname" aria-pressed="true">по названиям</button>
-                                <button id="alphabetical" aria-pressed="false">по первым словам</button>
-                                <button id="chronological" aria-pressed="false">по годам</button>
+                                <span class="search-field"><input type="text" id="search" placeholder="песня, диск, год..." autofocus><button id="clear-search" title="Сбросить фильтр" aria-label="Сбросить фильтр"><span class="clear-text">сброс</span><span class="clear-icon" aria-hidden="true">✕</span></button></span><span class="search-sep"> &emsp; &emsp; </span>
+                                <span class="sort-label">Сортировать вывод по:</span>
+                                <span class="sort-buttons">
+                                <button id="alphabetname" aria-pressed="true">названию</button>
+                                <button id="alphabetical" aria-pressed="false">первым словам</button>
+                                <button id="chronological" aria-pressed="false">году</button>
+                                </span>
                         </div>
 {{ $songs := partial "directus.html" }}
 {{ $albumPerfs := partial "directus-albums.html" }}

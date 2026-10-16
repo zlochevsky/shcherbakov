@@ -217,6 +217,37 @@ a [data-balloon] {
         border: 3px solid var(--control-border);
 }
 
+/* кнопки сортировки каталога песен — рамка в 1px, как в каталоге переводов; у выбранной — толстая (выше) */
+#alphabetname, #alphabetical, #chronological {
+        border-width: 1px;
+}
+/* узкий экран: кнопки сортировки — одной группой (без промежутков, с общими границами), иначе не помещаются в ряд;
+   выбранная (толстая рамка) — поверх соседних. Шире — раздельные (с 23.5em — та же точка, где даты в меню встают
+   в строку, common.css; раздельные помещаются в ряд с ~21.25em). :is() с id — та же сила, что у общего правила
+   отступов кнопок (решения владельца 2026-10-16) */
+@media only screen and (width < 23.5em) {
+        .sort-buttons > :is(#alphabetname, #alphabetical, #chronological, button[data-sort]) {
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: .4em;
+                padding-right: .4em;
+                position: relative;
+        }
+        .sort-buttons > :is(#alphabetname, #alphabetical, #chronological, button[data-sort]) + button {
+                margin-left: -1px;
+        }
+        .sort-buttons > button[aria-pressed="true"] {
+                z-index: 1;
+        }
+}
+/* кнопка сброса фильтра: на компьютере — «сброс» рядом с полем, в мобильной версии — «✕» внутри поля (ниже) */
+#clear-search {
+        margin-left: .3em;
+}
+.clear-icon {
+        display: none;
+}
+
 .hidden {
         display: none !important ;
 }
@@ -268,6 +299,57 @@ a [data-balloon] {
         }
         .ch, .txt {
                 display: flow;
+        }
+        /* блок фильтра и сортировки компактнее: поле во всю ширину ячейки, «✕» сброса — внутри поля справа
+           (текст прокручивается, не переносится), кнопки сортировки — группой с переносом (решение владельца 2026-10-16) */
+        main > div > div.wrapper > div {
+                padding: 1em;
+        }
+        .search-field {
+                position: relative;
+                display: block;
+                margin: .4em 0 1em;
+        }
+        #search {
+                display: block;
+                width: 100%;
+                margin: 0;
+                padding-right: 2.6em;
+        }
+        #clear-search {
+                position: absolute;
+                right: .35em;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 2.2em;
+                height: 2.2em;
+                margin: 0;
+                padding: 0;
+                border: none;
+                background: transparent;
+                font-size: 1em;
+                line-height: 1;
+                cursor: pointer;
+        }
+        .clear-text, .search-sep {
+                display: none;
+        }
+        .clear-icon {
+                display: inline;
+        }
+        .sort-label {
+                display: block;
+                margin-bottom: .4em;
+        }
+        .sort-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: .4em;
+        }
+        /* без auto по бокам (общее правило): во флекс-ряду auto делит всё свободное место — кнопки разъезжаются */
+        .sort-buttons > :is(#alphabetname, #alphabetical, #chronological, button[data-sort]) {
+                margin: 0;
         }
 
 }
@@ -340,4 +422,10 @@ a [data-balloon] {
 		order: 2;
 		justify-content: flex-start;
 	}
+}
+/* узкий экран: кнопки сортировки одной группой — промежутков нет (после мобильного правила с gap) */
+@media only screen and (width < 23.5em) {
+        .sort-buttons {
+                gap: 0;
+        }
 }

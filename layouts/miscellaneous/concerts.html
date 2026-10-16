@@ -46,8 +46,7 @@
 
 <div class="controls">
 	<div class="search-row">
-		<input type="text" id="csearch" placeholder="песня, город, страна, площадка...">
-		<button id="creset">Сбросить</button>
+		<span class="search-field"><input type="text" id="csearch" placeholder="песня, город, страна, площадка..."><button id="creset" title="Сбросить поиск" aria-label="Сбросить поиск"><span class="clear-text">сброс</span><span class="clear-icon" aria-hidden="true">✕</span></button></span>
 		<span class="count">Найдено: <span id="ccount">{{ $total }}</span> из {{ $total }}</span>
 	</div>
 
@@ -82,6 +81,9 @@
 			<label><input type="radio" name="f-program" value="1"> Есть программа</label>
 			<label><input type="radio" name="f-program" value="0"> Без программы</label>
 		</fieldset>
+	</div>
+	<div class="filter-reset">
+		<button id="cfreset">Сбросить фильтры</button>
 	</div>
 
 	<div class="view-buttons">
@@ -254,16 +256,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		search.dispatchEvent(new Event("input"));
 	});
 
+	// «✕»/«сброс» у поля — только текст поиска; «Сбросить фильтры» — только радиокнопки (решение владельца 2026-10-16).
+	// После сброса список заново отбирается по оставшимся условиям
 	reset.addEventListener("click", () => {
 		clearTimeout(searchDebounce);
 		search.value = "";
+		search.focus();
+		applyFilters();
+	});
+	document.getElementById("cfreset").addEventListener("click", () => {
 		document.querySelectorAll('.filter-group input[value=""]').forEach(r => r.checked = true);
-		allDetails.forEach(d => {
-			d.hidden = false;
-			d.querySelectorAll("li.matched").forEach(li => li.classList.remove("matched"));
-		});
-		countEl.textContent = total;
-		updateYearBlocks();
+		applyFilters();
 	});
 
 	document.getElementById("cexpand").addEventListener("click", () => allDetails.forEach(d => d.open = true));
