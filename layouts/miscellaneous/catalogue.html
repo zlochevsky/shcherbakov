@@ -142,13 +142,13 @@
 	{{- range $albumList }}<a href="{{ partial "set-url.html" (dict "id" .id "format" .fmt.key) | relURL }}"><span class="cd-icon {{ cond (eq .fmt.key "mc") "tape" .id }}" data-balloon="{{ if ne .fmt.key "mc" }}{{ .fmt.full }}&#10;{{ end }}{{ .shortTitle }} ({{ .year }})" data-balloon-break data-balloon-pos="up"></span></a>{{ end -}}
 	</span>
 	<span class="entry">
-	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span class="opus-name">{{ $name }}</span></a>
+	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span class="opus-name{{ if not .name }} incipit{{ end }}">{{ $name }}</span></a>
 	{{- if .is_new }}<span class="new" data-balloon="новое" data-balloon-pos="up"></span>{{ end -}}
-	{{- if .name }} (<span class="opus-begin">{{ .fincipit }}</span>){{ if .is_poem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
+	{{- if .name }}&ensp;<span class="opus-begin incipit">{{ .fincipit }}</span>{{ if .is_poem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
 	{{- else if .is_poem -}}
 		 <span class="poem-tag">(стихотворение)</span>
 	{{- end -}}
-	{{- if $date }}	<span class="year">{{ $date -}}{{- if .edit -}}, {{ .edit -}}{{- end -}}</span>
+	{{- if $date }}<span class="year">({{ $date -}}{{- if .edit -}}, {{ .edit -}}{{- end -}})</span>
 	{{- end -}}
 	{{- $workBooks := index $booksByWork .id -}}
 	{{- if $workBooks -}}
@@ -165,7 +165,7 @@
 			{{- $group := $byIcon.Get $icon -}}
 			{{- $first := index $group 0 }} <a href="{{ printf "Books/%s.html" $first.id | relURL }}">
 			{{- if eq (len $group) 1 -}}
-				<span class="{{ $icon }}" data-balloon="{{ $first.name }}" data-balloon-pos="up"></span></a>{{ with $first.page }} с.&#8239;{{ . }}{{ end }}
+				<span class="{{ $icon }}" data-balloon="{{ $first.name }}" data-balloon-pos="up"></span></a>{{ with $first.page }} с.&#8202;{{ . }}{{ end }}
 			{{- else -}}
 				{{- $lines := slice -}}
 				{{- range $group }}{{ $line := .name }}{{ with .page }}{{ $line = printf "%s, с. %v" $line . }}{{ end }}{{ $lines = $lines | append $line }}{{ end -}}
@@ -318,6 +318,9 @@ document.addEventListener("DOMContentLoaded", () => {
          let nameCopy = opusName.textContent;
          opusName.textContent = opusBeginContent
          opusBegin.textContent = nameCopy;
+         // кавычки («») рисует CSS у класса incipit — он переезжает вместе с первыми словами
+         opusName.classList.toggle("incipit");
+         opusBegin.classList.toggle("incipit");
 //       opusBegin = "" ;
 //       opusName = "" ;
 //       nameCopy = "" ;

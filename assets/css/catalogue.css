@@ -103,8 +103,17 @@ div.wrapper ul, div.wrapper ol {
         font: normal 1em/1.5em serif;
 }
 
+.opus-begin {
+        color: var(--muted);
+}
+
+/* первые слова песни — в кавычках; кавычки не в тексте, а в CSS, чтобы при сортировке
+   «по первым словам» (name и begin меняются местами) они оставались у первых слов */
+.incipit::before { content: "«"; }
+.incipit::after { content: "»"; }
+
 .year, .poem-tag {
-	font-size: .8em;
+	font-size: .85em;
 	color: var(--muted);
 	display: inline-block;
 	margin-left: .5em;
