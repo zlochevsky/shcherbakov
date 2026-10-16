@@ -35,11 +35,11 @@
 <div class="search-controls">
 	<fieldset class="search-scope">
 		<legend>Искать</legend>
-		<label><input type="radio" name="sscope" value="all" checked> По всему сайту</label>
-		<label><input type="radio" name="sscope" value="songs"> По текстам песен</label>
+		<label><input type="checkbox" id="sscope-songs" checked> По текстам песен</label>
+		<label><input type="checkbox" id="sscope-rest"> По остальному сайту</label>
 	</fieldset>
 	<input type="search" id="ssearch" placeholder="что ищем..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
-	<p class="search-status"><span id="scount"></span></p>
+	<p class="search-status"><span id="scount">&nbsp;</span></p>
 </div>
 
 <ul id="sresults"></ul>
@@ -53,6 +53,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 	const countEl = document.getElementById("scount");
 	const results = document.getElementById("sresults");
 
+	// область поиска — два флажка; выбор запоминается в куки searchScope ("songs", "rest", "songs,rest" или пусто),
+	// без куки — только тексты песен (решение владельца 2026-10-16)
+	const scopeSongs = document.getElementById("sscope-songs");
+	const scopeRest = document.getElementById("sscope-rest");
+	const cookie = document.cookie.split("; ").find(c => c.startsWith("searchScope="));
+	if (cookie !== undefined) {
+		const saved = decodeURIComponent(cookie.slice("searchScope=".length)).split(",");
+		scopeSongs.checked = saved.includes("songs");
+		scopeRest.checked = saved.includes("rest");
+	}
+	function saveScope() {
+		const v = [scopeSongs.checked && "songs", scopeRest.checked && "rest"].filter(Boolean).join(",");
+		document.cookie = `searchScope=${encodeURIComponent(v)}; path={{ "/" | relURL }}; max-age=31536000; SameSite=Lax`;
+	}
+
 	let pagefind;
 	try {
 		pagefind = await import("{{ "pagefind/pagefind.js" | relURL }}");
@@ -62,9 +77,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 		return;
 	}
 
-	function currentScope() {
-		const checked = document.querySelector('input[name="sscope"]:checked');
-		return checked ? checked.value : "all";
+	// фильтр Pagefind по области: песни — type: song, остальное — всё, кроме песен; null — область не выбрана
+	function scopeFilters() {
+		if (scopeSongs.checked && scopeRest.checked) return {};
+		if (scopeSongs.checked) return { filters: { type: ["song"] } };
+		if (scopeRest.checked) return { filters: { not: { type: "song" } } };
+		return null;
 	}
 
 	async function renderResults(searchResult, seq) {
@@ -121,12 +139,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 	async function runSearch() {
 		const seq = ++searchSeq;
 		const term = search.value.trim();
-		if (!term) {
+		const filters = scopeFilters();
+		if (!filters) {
 			results.innerHTML = "";
-			countEl.textContent = "";
+			countEl.textContent = "Выберите область поиска.";
 			return;
 		}
-		const filters = currentScope() === "songs" ? { filters: { type: ["song"] } } : {};
+		if (!term) {
+			results.innerHTML = "";
+			countEl.textContent = "Введите запрос.";
+			return;
+		}
 		const searchResult = await pagefind.search(term, filters);
 		if (seq !== searchSeq) return;
 		renderResults(searchResult, seq);
@@ -145,7 +168,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 		}
 	});
 	results.addEventListener("touchstart", () => search.blur(), { passive: true });
-	document.querySelectorAll('input[name="sscope"]').forEach(r => r.addEventListener("change", () => {
+	[scopeSongs, scopeRest].forEach(c => c.addEventListener("change", () => {
+		saveScope();
 		clearTimeout(debounceTimer);
 		runSearch();
 	}));
@@ -158,6 +182,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 	window.addEventListener("pageshow", () => {
 		search.dispatchEvent(new Event("input"));
 	});
+	// строка статуса под полем не пустеет никогда (до загрузки в ней неразрывный пробел) — высота блока не меняется,
+	// и содержимое ячейки по вертикали не сдвигается (решение владельца 2026-10-16).
+	// первый pageshow мог пройти, пока грузился Pagefind: показать состояние сразу (в т. ч. «Выберите область поиска.»)
+	runSearch();
 });
 </script>
 </body>
