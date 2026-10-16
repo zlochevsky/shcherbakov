@@ -9,7 +9,7 @@
 - Меню сайта — `config/_default/menus.json` (с 2026-10-15; раньше — в `hugo.json`): шесть меню (`indexheadermenu`,
   `indexfootermenu`, `searchheadermenu`, `ctgheadermenu`, `trnheadermenu`, `concertsheadermenu`); у пунктов `name`,
   `pageRef`/`url`, `weight`, `pre`/`post`, `params` (`isDateToPrint`, `dynamicLastmod`, `collapsible`, `toggleChild`,
-  `mobileOnly`, `shortName`, `dropdown`, `lang`), подменю — через `parent`/`identifier`. Выводит `layouts/partials/menu.html`.
+  `mobileOnly`, `shortName`, `icon`, `dropdown`, `lang`), подменю — через `parent`/`identifier`. Выводит `layouts/partials/menu.html`.
 - **Hugo сортирует меню по `weight`, а не по месту пункта в списке** — перетаскивание в списке само порядок на сайте
   не меняет. Это главная сложность для редактора.
 - Пункт меню Hugo умеет задавать и во front matter самой страницы (`menus: {<меню>: {name, weight, parent, …}}`).

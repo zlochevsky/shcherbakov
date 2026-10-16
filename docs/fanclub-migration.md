@@ -106,7 +106,7 @@ legacy каноническими — UTF-8 ради символов, кото�
   `comix/comix` (+ картинки комикса);
 - 1d прочее: `katrin` (отдельно, 138 КБ), `fedenkova`, `julia`, `parabola`,
   `rechisty`, `suzy1`, `zhandarov`, `answer` (ответы к кроссворду).
-  После волны — **включить «Фан-клуб» в меню главной**: в `hugo.json`
+  После волны — **включить «Фан-клуб» в меню главной**: в `hugo.json` (меню с 2026-10-15 — в `config/_default/menus.json`)
   (`indexfootermenu`) `pageRef: "fans/fans-index.md"` вместо `"fans/index.html"`
   (сейчас там мёртвая `<a>` без `href`).
 

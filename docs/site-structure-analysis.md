@@ -173,7 +173,7 @@
 как «Фан-клуб». В списке — языки, у которых есть главная страница: English, Deutsch, Українська, Français, Esperanto, עברית
 (на 2026-10-09); тот же список — в меню каталога переводов (`trnheadermenu`). Реализовано в меню (`config/_default/menus.json`, до 2026-10-15 — в `hugo.json`; `indexheadermenu`/`indexfootermenu`,
 `mobileOnly`/`shortName`/`parent`/`identifier` params), `layouts/partials/
-menu.html`, `assets/css/common.css`/`index.css`; `fans/index.html`
+menu.html`, `assets/css/common.css`/`index.css` (с 2026-10-16 мобильная шапка — `assets/css/mobile-header.css`); `fans/index.html`
 переупорядочен (Мемориальные страницы + дисклеймер — первыми, эпиграф — вниз,
 новые разделы Картинки/Социология).
 

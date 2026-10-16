@@ -36,7 +36,7 @@ Standard Hugo directories:
 
 - `content` -- the pages: `.md` files whose body is mostly HTML markup. At the top of each file there is *front matter* -- page parameters in JSON. The fields the templates actually read are listed in [docs/frontmatter.md](docs/frontmatter.md);
 - `layouts` -- templates: page layouts in `layouts/miscellaneous`, shared parts in `layouts/partials`, shortcodes for page bodies in `layouts/shortcodes`. `{{< lastmod "translations" >}}` gives the date of the latest record added to a Directus collection (on the home page). `{{< translations-count >}}` gives the number of translations into the page's language and the date of the latest one, as " (59, 07.10.26)" with the date in red (on the main language pages). Records migrated from the old site have no creation date, so for them only the number is shown;
-- `assets` -- files processed during the build: CSS (`assets/css`; all shared colours are CSS variables in `assets/css/palette.css`, embedded into every page by `layouts/partials/palette.html`) and SVG icons (`assets/svg`: album icons for the song catalogue, `svg/cd`, and format icons, `svg/format`);
+- `assets` -- files processed during the build: CSS (`assets/css`; all shared colours are CSS variables in `assets/css/palette.css`, embedded into every page by `layouts/partials/palette.html` together with `assets/css/site.css`, the rules for every page, e.g. no underline on hovered links; `assets/css/mobile-header.css` is the compact mobile header shared by the home page, search and the three catalogues) and SVG icons (`assets/svg`: album icons for the song catalogue, `svg/cd`, and format icons, `svg/format`);
 - `static` -- files copied to the site as they are: images, PDFs, legacy pages that are not converted yet; `static/admin` is the in-browser editor (see "Editing in the browser" below);
 - `data`, `archetypes`, `i18n` -- Hugo data files, templates for new pages, translations of interface strings;
 - `public` -- where Hugo puts the built site. It is not stored in git: the published site is built by GitHub Actions (see below).
@@ -53,6 +53,22 @@ A part of the site's content (song catalogue, concerts, performances, albums, bo
 - [docs/directus.md](docs/directus.md) describes the collections, their relations, automation (Flows) and naming conventions;
 - `https://db.sch.com.ru/server/specs/oas` with the public token (see Building) returns the OpenAPI description of exactly the collections and fields that token can read. Open it in any OpenAPI viewer, e.g. Swagger UI;
 - the API itself shows real records, e.g. `https://db.sch.com.ru/items/works?limit=5` with the token in the `Authorization: Bearer` header or the `access_token` query parameter.
+
+## Menus
+
+The menus are in `config/_default/menus.json`: `indexheadermenu` and `indexfootermenu` (home page), `searchheadermenu`, `ctgheadermenu` (song catalogue), `trnheadermenu` (translations), `concertsheadermenu`. `layouts/partials/menu.html` renders them. Besides the standard `name`, `pageRef`/`url`, `weight`, `parent`/`identifier`, an entry may have `params`:
+
+- `shortName` -- the label in the mobile version (the full `name` is shown on wide screens): «Песни», «Концерты», «Главная»;
+- `mobileOnly: "yes"` -- the entry is shown only in the mobile version;
+- `icon: "home"` / `"search"` -- a grey icon before the label (`layouts/partials/menu-icon.html`);
+- `isDateToPrint: "yes"` -- the update date after the label: the `lastmod` of the target page (top level of its front matter, not inside `params`), or, with `dynamicLastmod: "works"` / `"translations"`, the date the latest record was added to that Directus collection. The date is printed by `layouts/partials/menu-datum.html`: «13.10.26» in line with the label; in narrow menu columns it goes below the label in a smaller font and with the full year, «13.10.2026». A page without a date gets none (planned changes: [docs/editor-pages-plan.md](docs/editor-pages-plan.md), step 3);
+- `collapsible: "yes"` with children marked `toggleChild: "yes"` -- a section whose sub-entries open as further cells («Фан-клуб»); `dropdown: "yes"` -- a list opening inside its own cell («Языки», the children have `lang`).
+
+In the mobile version the menu hides behind the button and is laid out in columns: one column below 18.75em, two from 18.75em, three from 35em (300 and 560 px at the default font size; all thresholds are in `em`, so they grow with the reader's font size). The home page header has two steps: below 25em the title and the button are smaller; from 25em the button has its full size and the title is centred.
+
+## Search page
+
+`search.html` searches the Pagefind index (see Building). The scope is two checkboxes, "song texts" (on by default) and "the rest of the site"; the choice is kept in the `searchScope` cookie (path `/shcherbakov/`, one year). With no scope selected the page says so instead of searching.
 
 ## Two sites in one
 
