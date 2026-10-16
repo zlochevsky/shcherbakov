@@ -136,6 +136,28 @@ nav summary {
 		margin-left: .3em;
 	}
 }
+/* Мобильная версия: маркер раскрывающихся пунктов («▶ Языки», «▶ Фан-клуб») висит слева от слова и не занимает
+   места в строке — слово стоит по центру кнопки и переносится только само (решение владельца 2026-10-16).
+   Встроенный маркер заменён своим: тот же «▶», в открытом виде повёрнут вниз */
+@media only screen and (width <= 70em) {
+	nav details > summary {
+		list-style: none;
+	}
+	nav details > summary::-webkit-details-marker {
+		display: none;
+	}
+	nav details > summary::before {
+		content: "▶";
+		display: inline-block;
+		width: 1em;
+		margin-left: -1em;
+		text-align: left;
+	}
+	nav details[open] > summary::before {
+		transform: rotate(90deg);
+		transform-origin: 0.3em 50%;
+	}
+}
 /* Раскрывающийся список внутри ячейки (выбор языка, params.dropdown в hugo.json) */
 nav details.dropdown .dropdown-list {
 	list-style: none;
@@ -208,19 +230,24 @@ nav.bottom-menu > div:has(> details[open]:not(.dropdown)) ~ div:has(.toggle-chil
                 display: none;
         }
 }
-/* Дата обновления на мобильном видна по умолчанию, кроме двух узких зон,
-   где colonnes/пункт теснее всего и текст с датой чаще всего переносится:
-   чуть выше порога двух колонок (25em) и совсем узкие экраны (<=15em).
-   Это эвристика по ширине вьюпорта, не измерение реального переноса —
-   границы подбираются визуально под конкретные тексты пунктов. */
-@media only screen and (25em < width <= 30em) {
-        nav.top-menu .datum {
-                display: none;
-        }
+/* первые две цифры года у даты пункта меню (partials/menu-datum.html) — только там, где дата под ссылкой мелким шрифтом */
+nav.top-menu .datum .century {
+        display: none;
 }
-@media only screen and (width <= 15em) {
+/* Дата обновления на мобильном — в строку со ссылкой, кроме двух узких зон, где пункт с датой
+   переносится: от порога двух колонок (18.75em) до 23.5em (при шрифте 16px «Новости 13.10.26» помещается
+   с ~372px) и совсем узкие экраны (<=15em). Там дата — под ссылкой, шрифтом вдвое меньше
+   (решение владельца 2026-10-16). Эвристика по ширине вьюпорта, границы подобраны замером. */
+@media only screen and (18.75em <= width < 23.5em), only screen and (width <= 15em) {
+        /* строка даты (line-height 1) уходит в нижний отступ кнопки — высота кнопки та же, ряды колонок не разъезжаются */
         nav.top-menu .datum {
-                display: none;
+                display: block;
+                font-size: calc(0.5em + 5px);
+                line-height: 1;
+                margin-bottom: -1em;
+        }
+        nav.top-menu .datum .century {
+                display: inline;
         }
 }
 @media only screen and (width > 70em) {
@@ -243,13 +270,20 @@ nav.bottom-menu > div:has(> details[open]:not(.dropdown)) ~ div:has(.toggle-chil
                 display: inline;
         }
 }
-@media only screen and (25em <= width <= 70em) {
+/* меню колонками: две — с 18.75em (300px при шрифте 16px), три — с 35em (с неё пункты с датой помещаются в строку);
+   пороги растут со шрифтом браузера (решения владельца 2026-10-16) */
+@media only screen and (18.75em <= width <= 70em) {
         #menu-toggle:checked ~ nav.top-menu {
                 column-count: 2;
                 column-gap: .5em;
         }
         #menu-toggle:checked ~ nav.top-menu .bordered {
                 break-inside: avoid-column;
+        }
+}
+@media only screen and (35em <= width <= 70em) {
+        #menu-toggle:checked ~ nav.top-menu {
+                column-count: 3;
         }
 }
 @media only screen and (min-width: 1600px) {

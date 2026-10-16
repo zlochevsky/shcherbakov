@@ -94,9 +94,9 @@ Renders a menu for the given menu ID.
         {{- with $dynamicLastmod }}
           {{- $latest := partial "directus-lastmod.html" . }}
           {{- if $latest.data }}
-            {{- with index $latest.data 0 }} <span class="datum">{{ .date_created | time.Format "02.01.06" }}</span>{{ end }}
+            {{- with index $latest.data 0 }} {{ partial "menu-datum.html" .date_created }}{{ end }}
           {{- end }}
-        {{- else }}{{ with .Page }} <span class="datum">{{ .Lastmod | time.Format "02.01.06" }}</span>{{ end }}
+        {{- else }}{{ with .Page }} {{ partial "menu-datum.html" .Lastmod }}{{ end }}
         {{- end }}
       {{- end }}
       {{- with .Children }}
