@@ -10,7 +10,7 @@
     },
     "description": "Ближайшие концерты Михаила Щербакова, хроника выступлений и новости сайта.",
     "draft": false,
-    "lastmod": "",
+    "lastmod": "2026-10-12",
     "layout": "news",
     "type": "miscellaneous"
 }
