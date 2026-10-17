@@ -32,10 +32,21 @@
 {{- $backUrl = $backUrl | default "praises.html" }}
 {{- $backTitle = $backTitle | default "Отзывы" }}
 <a id="top"></a>
+{{- /* params.prevUrl/prevTitle/prevHint, nextUrl/…: страница из серии, которую читают подряд (вопросы «Щ-2») —
+       строка «[← предыдущая] [следующая →]» угловой навигации, отдельной группой (вверху — после «назад»,
+       внизу — перед ним); Hint — подсказка при наведении */}}
+{{- $series := "" }}
+{{- if or .Params.prevUrl .Params.nextUrl }}
+	{{- $series = partial "series-nav.html" . }}
+{{- end }}
 <ul class="cornernav">
 	<li>[<a href="{{ "index.html" | relURL }}">На главную страницу</a>]</li>
 	{{- if ne $backUrl "index.html" }}
 	<li>[<a href="{{ $backUrl | relURL }}">{{ $backTitle }}</a>]</li>
+	{{- end }}
+	{{- with $series }}
+	<li class="series-gap"></li>
+	{{- . }}
 	{{- end }}
 </ul>
 <header>
@@ -47,6 +58,10 @@
 {{ .Content }}
 </main>
 <ul class="cornernav">
+	{{- with $series }}
+	{{- . }}
+	<li class="series-gap"></li>
+	{{- end }}
 	<li>[<a href="{{ $backUrl | relURL }}">{{ $backTitle }}</a>]</li>
 	<li>[<a href="#top">Наверх</a>]</li>
 </ul>

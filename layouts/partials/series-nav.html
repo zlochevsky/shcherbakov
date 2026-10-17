@@ -1,0 +1,7 @@
+{{- /* «[← Вопрос 1.3] [Вопрос 1.4 →]» — соседние страницы серии (params.prevUrl … nextHint), одним пунктом угловой
+       навигации, через пробел; см. praises-article.html */ -}}
+	<li>
+	{{- with .Params.prevUrl }}[<a href="{{ . | relURL }}" rel="prev"{{ with $.Params.prevHint }} title="{{ . }}"{{ end }}>&larr;&nbsp;{{ $.Params.prevTitle }}</a>]{{ end }}
+	{{- if and .Params.prevUrl .Params.nextUrl }} {{ end }}
+	{{- with .Params.nextUrl }}[<a href="{{ . | relURL }}" rel="next"{{ with $.Params.nextHint }} title="{{ . }}"{{ end }}>{{ $.Params.nextTitle }}&nbsp;&rarr;</a>]{{ end -}}
+	</li>

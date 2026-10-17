@@ -14,6 +14,61 @@ main p.center {
 	text-align: center;
 	text-indent: 0;
 }
+/* страницы вопросов «Щ-2» (SCH2/101-e …, 401-2 — есть абзацы p.speaker): вертикальный отступ — только между репликами;
+   реплика начинается абзацем с именем (p.speaker, без красной строки), её следующие абзацы (p.cont) — красной строкой
+   без отступа сверху; вопрос, связки составителей — без красной строки; цитаты стихов — <blockquote> (общее правило
+   статей: курсив, отступ слева, отбивка) */
+main:has(> p.speaker) p {
+	text-indent: 0;
+}
+main:has(> p.speaker) p.cont {
+	text-indent: 1.8em;
+	margin-top: 0;
+}
+main:has(> p.speaker) p:has(+ p.cont) {
+	margin-bottom: 0;
+}
+/* связки и примечания составителей (в оригинале зелёные) — курсивом, без отступа (владелец 2026-10-17) */
+main p.editorial {
+	font-style: italic;
+}
+/* перечни с тире в репликах и связках («— излишняя мрачность…») — список с маркером «–», без отбивки от вводной
+   фразы и от продолжения реплики (владелец 2026-10-17) */
+main ul.dashes {
+	list-style-type: "–\00a0\00a0";
+	margin: 0 0 1em;
+	padding-left: 3em;
+}
+main ul.dashes:has(+ p.cont) {
+	margin-bottom: 0;
+}
+main p:has(+ ul.dashes) {
+	margin-bottom: 0;
+}
+main ul.dashes.editorial {
+	font-style: italic;
+}
+/* пункты вопроса а) б) в) — список с маркерами «а)», вплотную под вопросом, с отступом слева */
+@counter-style ru-letters-paren {
+	system: alphabetic;
+	symbols: а б в г д е ж з и к;
+	suffix: ") ";
+}
+main ol.subq {
+	list-style: ru-letters-paren;
+	margin: 0 0 1em;
+	padding-left: 2.5em;
+}
+main ol.subq li::marker {
+	font-weight: bold;
+}
+main p.question:has(+ ol.subq) {
+	margin-bottom: 0;
+}
+/* «Предварительное обсуждение» — заголовком по центру, как в оригинале (владелец 2026-10-17) */
+main:has(> p.speaker) h2 {
+	text-align: center;
+}
 .byline {
 	text-align: center;
 	font-weight: bold;
@@ -44,6 +99,11 @@ blockquote.epigraph p {
 }
 blockquote p {
 	text-indent: 0;
+}
+/* подпись под цитатой («И. Бродский.», «В. Высоцкий») — отдельным абзацем с отбивкой, прямым шрифтом */
+blockquote .quote-source {
+	font-style: normal;
+	margin-top: 1em;
 }
 .footnotes {
 	font-size: 0.9em;
@@ -147,4 +207,63 @@ main ol {
 .spoiler::selection {
 	color: #000;
 	background: #ffe9a8;
+}
+
+
+/* строка «[← предыдущая] [следующая →]» у страниц серии (вопросы «Щ-2») — в угловой навигации отдельной
+   группой: пустой пункт-отбивка между ними и остальными */
+.cornernav li.series-gap {
+	height: .6em;
+}
+
+/* «Обсуждение» «Щ-2» (SCH2/gb): ссылка gb/index.html#q103 со страницы вопроса показывает только ответы на этот вопрос —
+   записи помечены классом qNNN, строка-пояснение p.gb-q видна только под якорем (:target) */
+.gb-q {
+	display: none;
+}
+.gb-q:target {
+	display: block;
+	font-weight: bold;
+}
+main:has(#q101:target) .gb-entry:not(.q101),
+main:has(#q102:target) .gb-entry:not(.q102),
+main:has(#q103:target) .gb-entry:not(.q103),
+main:has(#q104:target) .gb-entry:not(.q104),
+main:has(#q201:target) .gb-entry:not(.q201),
+main:has(#q202:target) .gb-entry:not(.q202),
+main:has(#q203:target) .gb-entry:not(.q203),
+main:has(#q204:target) .gb-entry:not(.q204),
+main:has(#q205:target) .gb-entry:not(.q205),
+main:has(#q301:target) .gb-entry:not(.q301),
+main:has(#q302:target) .gb-entry:not(.q302),
+main:has(#q303:target) .gb-entry:not(.q303),
+main:has(#q304:target) .gb-entry:not(.q304),
+main:has(#q401:target) .gb-entry:not(.q401),
+main:has(#q402:target) .gb-entry:not(.q402),
+main:has(#q403:target) .gb-entry:not(.q403),
+main:has(#q501:target) .gb-entry:not(.q501),
+main:has(#q502:target) .gb-entry:not(.q502),
+main:has(#q503:target) .gb-entry:not(.q503),
+main:has(#q504:target) .gb-entry:not(.q504),
+main:has(#q505:target) .gb-entry:not(.q505),
+main:has(#q601:target) .gb-entry:not(.q601),
+main:has(#q701:target) .gb-entry:not(.q701),
+main:has(#q702:target) .gb-entry:not(.q702),
+main:has(#q703:target) .gb-entry:not(.q703),
+main:has(#q704:target) .gb-entry:not(.q704),
+main:has(#q705:target) .gb-entry:not(.q705),
+main:has(#q802:target) .gb-entry:not(.q802) {
+	display: none;
+}
+/* оглавление «Щ-2»: вопросы блока списком, ответы читателей — мельче; на странице вопроса — строка со ссылкой на них */
+main ul.sch2-questions li {
+	margin: .3em 0;
+}
+main .readers {
+	font-size: .9em;
+	color: var(--muted);
+}
+main p.readers {
+	text-indent: 0;
+	margin-top: 1.5em;
 }
