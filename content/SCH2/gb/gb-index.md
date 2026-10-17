@@ -16,85 +16,114 @@
 
 <p><i>Страница восстановлена по копии в архиве Интернета (web.archive.org, снимок 29 октября 2008 года): на исходном сайте от неё осталась только шапка. Ссылки на неработающие адреса оставлены текстом.</i></p>
 
-<div class="gb-entry">
+<p class="gb-q" id="q101">Показаны только ответы на <a href="../101-e.html">вопрос 1.1</a> (23). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q102">Показаны только ответы на <a href="../102-e.html">вопрос 1.2</a> (16). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q103">Показаны только ответы на <a href="../103-e.html">вопрос 1.3</a> (9). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q104">Показаны только ответы на <a href="../104-e.html">вопрос 1.4</a> (14). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q201">Показаны только ответы на <a href="../201-e.html">вопрос 2.1</a> (16). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q202">Показаны только ответы на <a href="../202-e.html">вопрос 2.2</a> (8). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q203">Показаны только ответы на <a href="../203-e.html">вопрос 2.3</a> (10). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q204">Показаны только ответы на <a href="../204-e.html">вопрос 2.4</a> (14). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q205">Показаны только ответы на <a href="../205-e.html">вопрос 2.5</a> (5). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q301">Показаны только ответы на <a href="../301-e.html">вопрос 3.1</a> (14). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q302">Показаны только ответы на <a href="../302-e.html">вопрос 3.2</a> (8). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q303">Показаны только ответы на <a href="../303-e.html">вопрос 3.3</a> (3). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q304">Показаны только ответы на <a href="../304-e.html">вопрос 3.4</a> (10). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q401">Показаны только ответы на <a href="../401-e.html">вопрос 4.1</a> (2). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q402">Показаны только ответы на <a href="../402-e.html">вопрос 4.2</a> (12). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q403">Показаны только ответы на <a href="../403-e.html">вопрос 4.3</a> (16). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q501">Показаны только ответы на <a href="../501-e.html">вопрос 5.1</a> (10). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q502">Показаны только ответы на <a href="../502-e.html">вопрос 5.2</a> (12). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q503">Показаны только ответы на <a href="../503-e.html">вопрос 5.3</a> (5). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q504">Показаны только ответы на <a href="../504-e.html">вопрос 5.4</a> (2). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q505">Показаны только ответы на <a href="../505-e.html">вопрос 5.5</a> (13). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q601">Показаны только ответы на <a href="../601-e.html">вопрос 6.1</a> (3). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q701">Показаны только ответы на <a href="../701-e.html">вопрос 7.1</a> (2). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q702">Показаны только ответы на <a href="../702-e.html">вопрос 7.2</a> (2). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q703">Показаны только ответы на <a href="../703-e.html">вопрос 7.3</a> (3). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q704">Показаны только ответы на <a href="../704-e.html">вопрос 7.4</a> (1). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q705">Показаны только ответы на <a href="../705-e.html">вопрос 7.5</a> (2). <a href="index.html">Показать все записи</a></p>
+<p class="gb-q" id="q802">Показаны только ответы на вопрос 8.2 (11). <a href="index.html">Показать все записи</a></p>
+
+<div class="gb-entry q101">
 <!--IP=212.98.161.85-->
 <hr>
-<p><i><b>attalea, Минск, Беларусь, yvch@tut.by, 16:30 2.6.2004 Вопрос 1.1 .</b></i></p>
+<p><i><b>attalea, Минск, Беларусь, yvch@tut.by, 16:30 2.6.2004 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Чем далее -- тем менее музыки, тем более речитатива, шаманства чистой воды. Авторское исполнение МЩ уникально. Потому резко не нравится, когда он поет дуэтом с подголосками и прочей клубничкой. Убивается и текст, и уникальность.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q103">
 <!--IP=81.25.2.200-->
 <hr>
-<p><i><b>alexey, новгород, alexey099@e-mail.ru, 13:48 28.2.2004 <a href="../103-e.html">Вопрос 1.3 </a>.</b></i></p>
+<p><i><b>alexey, новгород, alexey099@e-mail.ru, 13:48 28.2.2004 <a href="../103-e.html">Вопрос 1.3</a>.</b></i></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q701">
 <!--IP=62.76.83.212-->
 <hr>
-<p><i><b>Ник, Москва, nick_1983_l@front.ru, 6:55 23.1.2003 Вопрос 7.1 .</b></i></p>
+<p><i><b>Ник, Москва, nick_1983_l@front.ru, 6:55 23.1.2003 <a href="../701-e.html">Вопрос 7.1</a>.</b></i></p>
 <p>Песни Щербакова стали уже контекстом моей жизни, и единственное, что я точно знаю -- под проигрывание записей я прекрасно впадаю в запои, а после концерта уже один раз заблудился в родном метро.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q103">
 <!--IP=212.48.201.140-->
 <hr>
-<p><i><b>П, 10:32 2.1.2003 <a href="../103-e.html">Вопрос 1.3 </a>.</b></i></p>
+<p><i><b>П, 10:32 2.1.2003 <a href="../103-e.html">Вопрос 1.3</a>.</b></i></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=212.48.201.140-->
 <hr>
-<p><i><b>Иван Кочнев, Питер, Россия, -, 10:31 2.1.2003 Вопрос 8.2 .</b></i></p>
+<p><i><b>Иван Кочнев, Питер, Россия, -, 10:31 2.1.2003 Вопрос 8.2.</b></i></p>
 <p>Господа, вопрос потребительский, но тем не менее, Где Можно(хотябы частично) достать "Монологи странствующего рыцаря"?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=195.162.49.9-->
 <hr>
-<p><i><b>Илья, Омск, Россия, 4:19 17.4.2002 Вопрос 8.2 .</b></i></p>
+<p><i><b>Илья, Омск, Россия, 4:19 17.4.2002 Вопрос 8.2.</b></i></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q103">
 <!--IP=193.232.112.69-->
 <hr>
-<p><i><b>archimed, Россия, OrlovSergei@mail.ru, 5:40 18.10.2001 <a href="../103-e.html">Вопрос 1.3 </a>.</b></i></p>
+<p><i><b>archimed, Россия, OrlovSergei@mail.ru, 5:40 18.10.2001 <a href="../103-e.html">Вопрос 1.3</a>.</b></i></p>
 <p>Конечно, согласен, что с синтезатором гораздо хуже (только в "Школе танцев" он оправдан). О "качестве" музыки говорить не берусь, но в старых песнях она интересней, хоть и менее разнообразна.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=193.232.112.69-->
 <hr>
-<p><i><b>archimed, Россия, OrlovSergei@mail.ru, 5:29 18.10.2001 Вопрос 1.1 .</b></i></p>
+<p><i><b>archimed, Россия, OrlovSergei@mail.ru, 5:29 18.10.2001 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Считаю, что Щ - один из тех авторов, у которых музыка и стихи по отдельности замечательны, и тем не менее вместе они дают что-то новое. Музыка добавляет чувств, эмоциональной окраски (вспомним хотя бы "Я спел бы вам о том, о чем хочу..."<br>
 Что качается авторского исполнения... До того, как я побывал на концерте, представлял его как на фотографии из "Другой Жизни" - обращенным к залу, направленным на микрофон. После концерта понял, что все совсем не так, и для прослушивания старых его записей до сих пор представляю его как и раньше, иначе теряется очарование песен.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q703">
 <!--IP=62.76.80.3-->
 <hr>
-<p><i><b>Евгений, Россия Тверь, vasiliev2000@pochtamt.ru, 6:16 15.10.2001 Вопрос 7.3 .</b></i></p>
+<p><i><b>Евгений, Россия Тверь, vasiliev2000@pochtamt.ru, 6:16 15.10.2001 <a href="../703-e.html">Вопрос 7.3</a>.</b></i></p>
 <p>А я бы в записке ему просто здоровья пожелал.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q202">
 <!--IP=62.76.80.3-->
 <hr>
-<p><i><b>Евгений, Россия Тверь, vailiev2000@pochtamt.ru, 4:27 15.10.2001 Вопрос 2.2 .</b></i></p>
+<p><i><b>Евгений, Россия Тверь, vailiev2000@pochtamt.ru, 4:27 15.10.2001 <a href="../202-e.html">Вопрос 2.2</a>.</b></i></p>
 <p>А это очень просто. Вот мир реальный. И прусь я по нему, скажем, на работу. В ушах у меня наушник полудохлый, в плеере -- кассетка паленая, десятая копия. Я ее слушаю, от этого лучше становится. Как будто родители нашлись. Правда.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=62.76.80.3-->
 <hr>
-<p><i><b>Евгений, Россия Тверь, vasiliev2000@pochtamt.ru, 4:11 15.10.2001 Вопрос 1.1 .</b></i></p>
+<p><i><b>Евгений, Россия Тверь, vasiliev2000@pochtamt.ru, 4:11 15.10.2001 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Душевно получается.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=62.76.80.3-->
 <hr>
-<p><i><b>Евгений, Россия Тверь, vasiliev2000@pochtamt.ru, 4:3 15.10.2001 Вопрос 1.1 .</b></i></p>
+<p><i><b>Евгений, Россия Тверь, vasiliev2000@pochtamt.ru, 4:3 15.10.2001 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 </div>
 
 <div class="gb-entry">
@@ -104,10 +133,10 @@
 <p>Нуждаюсь в тексте, который исполняет второй голос в песне Ecce Homo. Спасибо.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=131.111.8.68-->
 <hr>
-<p><i><b>Оля, UK, 13:1 9.6.2001 Вопрос 3.1 .</b></i></p>
+<p><i><b>Оля, UK, 13:1 9.6.2001 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Chasto liubliu citirovat' vot chto:<br>
 Это было мощное кто кого,<br>
 кроме шуток, вдребезги, чья возьмет.<br>
@@ -117,26 +146,26 @@ No vsluh redko. Blizkim druzjam, kogda hochu objasnit' sootvetstvyjuschuju situa
 Vidimo, citiruju i jesche (i kuda bol'she), no eto to, chto vspominajetsya srazu.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=212.113.37.194-->
 <hr>
-<p><i><b>Яковлев ДМИТРИЙ, украина, PRoffice@km.ru, 10:2 2.5.2001 Вопрос 8.2 .</b></i></p>
+<p><i><b>Яковлев ДМИТРИЙ, украина, PRoffice@km.ru, 10:2 2.5.2001 Вопрос 8.2.</b></i></p>
 <p>организуйте пожалуста гастроли М.К.ЩЕРБАКОВА по УКРАИНЕ(заехать в РОВНО в частности!), очень хочется познакомиться с этим ВЕЛИКИМ ЧЕЛОВЕКОМ.<br>
          PR-менеджер РГКАП<br>
             Яковлев Дмитрий</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=193.232.88.16-->
 <hr>
-<p><i><b>Борис, Москва, chigidin@mail.ru, 9:6 13.4.2001 Вопрос 2.1 .</b></i></p>
+<p><i><b>Борис, Москва, chigidin@mail.ru, 9:6 13.4.2001 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Есть у меня пара знакомых, голова у коих всегда была на месте, а в душе некогда был большой непорядок. "В белой мгле..." снимало их депрессивное состояние как рукой. Резонансный эффект суи генерис. :)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=195.248.191.65-->
 <hr>
-<p><i><b>Deathinfector, 2:50 15.12.2000 Вопрос 5.2 .</b></i></p>
+<p><i><b>Deathinfector, 2:50 15.12.2000 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>Konechno nuzhdayutsa..., Ya mnogie iz nih rashifroval i mne etot process prines "glubokoe moralnoe udovletvorenie".......<br>
 Po moemu vopros postavlen<br>
 na otseivanie auditorii po raznye storony barricad<br>
@@ -146,27 +175,27 @@ Ya by na meste Bayraka ne stal by riskovat viskazivatsya<br>
 po etomu povodu osobenno v svete contexta ego sobstvennogo tvorchestva:))</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q205">
 <!--IP=212.115.224.2-->
 <hr>
-<p><i><b>Deathinfector, 11:24 1.12.2000 Вопрос 2.5 .</b></i></p>
+<p><i><b>Deathinfector, 11:24 1.12.2000 <a href="../205-e.html">Вопрос 2.5</a>.</b></i></p>
 <p>... obychnye dela zhivotnih ne bog vest chto....<br>
 sovpadaet s moim mizantropicheskim vospriyatyem mira</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=212.115.224.2-->
 <hr>
-<p><i><b>Deathinfector, 8:9 29.11.2000 Вопрос 1.4 .</b></i></p>
+<p><i><b>Deathinfector, 8:9 29.11.2000 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Nikoim obrazom ne sootnositsa blize k jazzu<br>
 a KSP YA VOOBSHE NE UVAZZAYU!!<br>
 kak i vsyakuyu druguyu obshestvennuyu machinu<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=212.115.224.2-->
 <hr>
-<p><i><b>Deathinfector, 6:4 29.11.2000 Вопрос 1.1 .</b></i></p>
+<p><i><b>Deathinfector, 6:4 29.11.2000 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Voobshe takoe sochetanie muziki golosa i teksta vstrechaetca ochen i ochen redko<br>
 obychno u nashih bardov,<br>
 rockerov, itd<br>
@@ -180,19 +209,19 @@ P.S.<br>
 Ya kak rock-lyubitel malo vstrechal ludei kotorye na acustichescoy gitare igrayut kak na electrice a u Sherbacova eto splosh i ryadom za shto i uvazhayu<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q703">
 <!--IP=212.115.224.2-->
 <hr>
-<p><i><b>Deathinfector, 5:43 29.11.2000 Вопрос 7.3 .</b></i></p>
+<p><i><b>Deathinfector, 5:43 29.11.2000 <a href="../703-e.html">Вопрос 7.3</a>.</b></i></p>
 <p>Ya dumayu cto sprashivat o chem libo ne imeet smysla ibo po pesnyam mozno vichislit mnogoe (otnoshenie k tomu-to itd)<br>
 a nemnogoe znat voobshe ne sleduet<br>
 zapiski dlya lentyaev<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q702">
 <!--IP=212.115.224.2-->
 <hr>
-<p><i><b>Deathinfector, 7:1 25.11.2000 Вопрос 7.2 .</b></i></p>
+<p><i><b>Deathinfector, 7:1 25.11.2000 <a href="../702-e.html">Вопрос 7.2</a>.</b></i></p>
 <p>I te i drugie horoshi po svoemu<br>
 Studiynye otcryvaut Sherbacova kak Jazz-Bardovogo instrumentalista<br>
 takze zapis v studii posvolayet ubrat yavhie ogrehi cto-to podcorrectirovat i t d<br>
@@ -202,10 +231,10 @@ v kakom-to rode proverca na prochnoct i proffesionalizm<br>
 <br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=212.115.224.2-->
 <hr>
-<p><i><b>Deathinfector, 6:41 25.11.2000 Вопрос 4.3 .</b></i></p>
+<p><i><b>Deathinfector, 6:41 25.11.2000 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>U kazdogo genya(ili chelovecka talantlyvogo) est svoya dolya mizantropii v proizvedenyah no antigumanizm-eto slishkom<br>
 skoree eto pravdiviy gumanizm<br>
 <br>
@@ -214,10 +243,10 @@ Yest te cto ne hochet sebya takim pocuvstvovat?<br>
 toto<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q302">
 <!--IP=212.115.224.2-->
 <hr>
-<p><i><b>Deathinfector, 6:28 25.11.2000 Вопрос 3.2 .</b></i></p>
+<p><i><b>Deathinfector, 6:28 25.11.2000 <a href="../302-e.html">Вопрос 3.2</a>.</b></i></p>
 <p>Poskolku ya sam nemnogo stradayu grafomaniey dlya menya citati yavliayutsa formoy skritogo obschenya s avtorom s razlichnimi celyamy<br>
 ot prizhanya zaslug citiruemogo do otkrovennogo<br>
 podtrunivania nad nim<br>
@@ -225,61 +254,61 @@ tak ze citaty yavlyautsa formoy virazenia blagodarnosty avtoru za tolchok podvig
 a voobshe mozet sluzit kak pokazatel nachitannosty:-)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q203">
 <!--IP=212.115.224.2-->
 <hr>
-<p><i><b>Deathinfector, 6:10 25.11.2000 Вопрос 2.3 .</b></i></p>
+<p><i><b>Deathinfector, 6:10 25.11.2000 <a href="../203-e.html">Вопрос 2.3</a>.</b></i></p>
 <p>Я против такого однобокого восприятия любого автора если он не полная бездарь</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q501">
 <!--IP=212.115.224.2-->
 <hr>
-<p><i><b>deathinfector, 6:7 25.11.2000 Вопрос 5.1 .</b></i></p>
+<p><i><b>deathinfector, 6:7 25.11.2000 <a href="../501-e.html">Вопрос 5.1</a>.</b></i></p>
 <p>Скорее как отражение высоких уровней нашего мира который сам по себе пёстр и мозаичен<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q203">
 <!--IP=195.46.166.218-->
 <hr>
-<p><i><b>Саша, Russia, talebetka@usa.net, 16:53 5.10.2000 Вопрос 2.3 .</b></i></p>
+<p><i><b>Саша, Russia, talebetka@usa.net, 16:53 5.10.2000 <a href="../203-e.html">Вопрос 2.3</a>.</b></i></p>
 <p>мы холодно-циничны (хоть я и люблю Щ %))</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q302">
 <!--IP=195.46.166.218-->
 <hr>
-<p><i><b>Саша, Russia, talebetka@usa.net, 16:49 5.10.2000 Вопрос 3.2 .</b></i></p>
+<p><i><b>Саша, Russia, talebetka@usa.net, 16:49 5.10.2000 <a href="../302-e.html">Вопрос 3.2</a>.</b></i></p>
 <p>А разве не приятно бывает иногда угадать эту самую цитату? Мне приятно.. А с каким умыслом это делает автор... сказать сложно. Возможно таким образом он хочет проявить свое отношение к этой цитате..</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=195.46.166.218-->
 <hr>
-<p><i><b>Саша, Россия, talebetka@usa.net, 16:40 5.10.2000 Вопрос 3.1 .</b></i></p>
+<p><i><b>Саша, Россия, talebetka@usa.net, 16:40 5.10.2000 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Цитирую, скажу честно, когда хочется сумничать %).. и хорошо получается, несведущие люди дивятся %) Сегодня мною было употреблено: "все в одиночку, за углом, бутылки пряча под пальто.." А подчиненным я иной раз выдаю: "я снова к вам пришел, чтоб ваш услышать плачь"</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=195.46.166.218-->
 <hr>
-<p><i><b>Саша, Россия, talebetka@usa.net, 16:18 5.10.2000 Вопрос 1.2 .</b></i></p>
+<p><i><b>Саша, Россия, talebetka@usa.net, 16:18 5.10.2000 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Сравню с Набоковым. У Набокова нет сюжета, у него есть слова связанные в предложения и связь эта стоит всего остального.. похожая связь присутствует в некоторых песнях Щербакова. наверно это называют атмосферой... так вот очень редких авторов можно читать (слушать) только ради того чтобы почувствовать эту атмосферу,  иногда даже не вдумываясь в смысл, как это не парадоксально. Вот так я читаю Набокова и слушаю Щербакова %)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=134.219.188.3-->
 <hr>
-<p><i><b>ZZ, 11:3 18.5.2000 Вопрос 2.1 .</b></i></p>
+<p><i><b>ZZ, 11:3 18.5.2000 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Вот основные песни, внесенные в мою картину мира: ?Ад?,<br>
          ?Аэродром?, ?Род людской?, ?Проживи, как я...", ?1995?.<br>
          Кроме автора и героя, есть ещё третий персонаж - слушатель. (В песне ?Русалка, цыганка, цикада..." эти три стороны присутствуют как равноправные). С ним себя обычно и отождествляешь.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=134.219.188.3-->
 <hr>
-<p><i><b>ZZ, zlobnyjzhlob@writeme.com, 20:0 17.5.2000 Вопрос 4.3 .</b></i></p>
+<p><i><b>ZZ, zlobnyjzhlob@writeme.com, 20:0 17.5.2000 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Solly,<br>
 <br>
 у что Вы, в самом деле? Щербаков как раз "говорит то, что<br>
@@ -288,37 +317,37 @@ a voobshe mozet sluzit kak pokazatel nachitannosty:-)</p>
          вешаться?":)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q302">
 <!--IP=213.8.216.94-->
 <hr>
-<p><i><b>Estrel`, Rehovot,Israel, 19:16 7.4.2000 Вопрос 3.2 .</b></i></p>
+<p><i><b>Estrel`, Rehovot,Israel, 19:16 7.4.2000 <a href="../302-e.html">Вопрос 3.2</a>.</b></i></p>
 <p>Scherbakov  cytiruet  v  svoih  proizvedenijah  prochih  avtorov  kak  raz  v  teh  sluchajah, kogda  ja  procytirovala  by  Scherbakova, i , navernoe,<br>
 v  teh  zhe  celiah -  kogda<br>
 cytata  bolee  jemko  vyrazit<br>
 to, chto  on  hotel  by  skazat`, chem  ego  sobstvennyj  tekst.  A  sluchaetsia  eto  dovol`no  chasto  i  v  moem  sluchae, i  v  sluchae  Scherbakova.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=213.8.216.94-->
 <hr>
-<p><i><b>Estrel`, Rehovot,Israel, 19:12 7.4.2000 Вопрос 3.1 .</b></i></p>
+<p><i><b>Estrel`, Rehovot,Israel, 19:12 7.4.2000 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Cytiruju tol`ko  kogda  u  menia  sozdaetsia  vpechatlenie, chto  moj  sobesednik  znakom  s  tvorchestvom M.K.  Inache  propadaet  napolnennost`  cytaty. A  variacii  situacyj-<br>
 beskonechny.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=213.8.217.69-->
 <hr>
-<p><i><b>Estrel`, Rehovot,Israel, 20:5 4.4.2000 Вопрос 8.2 .</b></i></p>
+<p><i><b>Estrel`, Rehovot,Israel, 20:5 4.4.2000 Вопрос 8.2.</b></i></p>
 <p>Avtor  delaet  odolzhenie,<br>
 puskaja  v  svoj  mir, esli  on  poet  "dlia  druziej  i  prochih"  u  sebia  doma  ili  u  kostra  v  lesu.  Kak  tol`ko  avtor  reshaetsia  vyjti<br>
 na  scenu  i  prodat`  bilety  na  svoj  koncert  on  tochno  tak  zhe  torguet  svoim  talantom  i  znanijami, kak  prodaju  ih  ja  (psiholog  po  professii)  ili  luboj  iz  vas , i  u  togo , kto  pokupaet  etot  tovar, est`  opredelennyje  prava.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=213.8.212.145-->
 <hr>
-<p><i><b>Estrel`, Rehovot,Israel, 22:16 3.4.2000 Вопрос 2.1 .</b></i></p>
+<p><i><b>Estrel`, Rehovot,Israel, 22:16 3.4.2000 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Da, konechno,  u  M.K.<br>
 est`  pesni  obo  mne<br>
 ("Kalejdoskop  detskij",<br>
@@ -334,10 +363,10 @@ a  takzhe  takih, kotorye<br>
 poprostu  ne  nraviatsia.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=213.8.212.145-->
 <hr>
-<p><i><b>Estrel`, Rehovot,Israel, 22:4 3.4.2000 Вопрос 4.3 .</b></i></p>
+<p><i><b>Estrel`, Rehovot,Israel, 22:4 3.4.2000 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Mne  kazhetsia, holodnost`  i  antigumanizm  -  slishkom  sil`nyje  slova, chtoby  imi  razbrasyvat`sia. Ochevidno,<br>
 chto M.K. - chelovek  sderzhanyj, no  esli  vspomnit`  "Posle  holodnosti  bezbrezhnoj"<br>
 ili  "Za  tot  zhe  samyj  gorizont"  - razgovor  o  holodnosti  stanovitsia  bespredmetnym.<br>
@@ -346,53 +375,53 @@ Dumaju,  chto  B.G.  i  M.K.Sch.  -  dve  storony  odnoj  i  toj  zhe  monety.<b
 Esli  vam  nesimpatichen  B.G., ochevidno, chto  mnogie  ottenki  v  tvorchestve  M.K.  nevozvratno  poteriany  dlia  vas...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=213.8.212.145-->
 <hr>
-<p><i><b>Estrel`, Rehovot,Israel, 21:49 3.4.2000 Вопрос 4.2 .</b></i></p>
+<p><i><b>Estrel`, Rehovot,Israel, 21:49 3.4.2000 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>Mne  kazhetsia, M.K.  mozhno  ne  lubit`  za  ogromnoe  kolichestvo  musora  v  tekstah,  osobenno  v  rannih.<br>
 Vremia  ot  vremeni  pojavliaetsia  soblazn  otrezat`  ot  pesni  kusok,<br>
 i  na  pomojku.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q703">
 <!--IP=213.8.212.145-->
 <hr>
-<p><i><b>Estrel`, Israel, 21:10 3.4.2000 Вопрос 7.3 .</b></i></p>
+<p><i><b>Estrel`, Israel, 21:10 3.4.2000 <a href="../703-e.html">Вопрос 7.3</a>.</b></i></p>
 <p>Mne  kazhetsia, nuzhno  sprashivat'  obo  vsem  i  pobol`she, vkluchaja  vse  klassicheskije  voprosy  o  Marii, Natalie, etc. Eto, konechno, razdrazhaet  i  zlit, no  takovy  realii professii , kotoruju  uvazhaemyj  M.K.  vybral.<br>
 <br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q705">
 <!--IP=213.8.212.145-->
 <hr>
-<p><i><b>Estrel`, Israel, 21:4 3.4.2000 Вопрос 7.5 .</b></i></p>
+<p><i><b>Estrel`, Israel, 21:4 3.4.2000 <a href="../705-e.html">Вопрос 7.5</a>.</b></i></p>
 <p>Mne  kazhetsia, eto byl  by<br>
 libo  neperenosimo  vitievatyj  istoricheskij  roman  s  nadryvom,  libo  ochen`  prilichnyj  populiarnyj  literaturovedcheskij  trud.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q704">
 <!--IP=213.8.212.145-->
 <hr>
-<p><i><b>Estrel`, Israel, 20:59 3.4.2000 Вопрос 7.4 .</b></i></p>
+<p><i><b>Estrel`, Israel, 20:59 3.4.2000 <a href="../704-e.html">Вопрос 7.4</a>.</b></i></p>
 <p>Dumaju, chto  eto  bylo  by  otvratitel`no  (kak  chasten`ko  i  byvaet, kogda  M.K.  otvechaet  na  voprosy  publiki). Dlia  uspeha  podobnogo  predprijatija  sovershenno  neobhodimo  uvazhenie  k  uchashchemusia,  k  slushateliu, a u M.K.  serjeznye  s  etim  problemy.<br>
 Interesno  bylo  by  poslushat`  lekcii  po  etimologii  ili  sravnitel`nomu<br>
 jazykoznaniju.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q702">
 <!--IP=213.8.212.145-->
 <hr>
-<p><i><b>Estrel`, Israel, 20:51 3.4.2000 Вопрос 7.2 .</b></i></p>
+<p><i><b>Estrel`, Israel, 20:51 3.4.2000 <a href="../702-e.html">Вопрос 7.2</a>.</b></i></p>
 <p>Predpochitaju  zapisi  studijnyje  i  aranzhirovannyje.  V  nih  gorazdo  men`she  sluchajnogo, nanosnogo<br>
 (plohoe  nastroenie, zub  razbolelsia). Krome  togo,<br>
 kachestvo  zapisi  igraet  ne  poslednuu  rol`.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q701">
 <!--IP=213.8.212.145-->
 <hr>
-<p><i><b>Estrel`, Israel, annalisa@zahav.net.il, 20:46 3.4.2000 Вопрос 7.1 .</b></i></p>
+<p><i><b>Estrel`, Israel, annalisa@zahav.net.il, 20:46 3.4.2000 <a href="../701-e.html">Вопрос 7.1</a>.</b></i></p>
 <p>Mne  udalos`  pobyvat`  na  vseh  koncertah  Scherbakova  v Izraile  -  i  kvartirnyh, i  scenicheskih.<br>
 Po  moemu  mneniju, pesni<br>
 Mihaila  Konstantinovicha  gorazdo  prijatnee  slushat`  v  zapisi , uchityvaja  ego<br>
@@ -406,69 +435,69 @@ razve  chto  na  kvartirnikah<br>
 M.K. s  bol`shej  ohotoj  otvechaet  na  voprosy  publiki.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=195.208.218.1-->
 <hr>
-<p><i><b>Песчаный Лис, Москва, sandtod@mail.ru, 8:42 28.3.2000 Вопрос 8.2 .</b></i></p>
+<p><i><b>Песчаный Лис, Москва, sandtod@mail.ru, 8:42 28.3.2000 Вопрос 8.2.</b></i></p>
 <p>Иногда лечит, иногда нет. Обычно пробуждает зависть :-))).</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q705">
 <!--IP=195.208.218.1-->
 <hr>
-<p><i><b>Песчаный Лис, Москва, sandtod@mail.ru, 8:21 28.3.2000 Вопрос 7.5 .</b></i></p>
+<p><i><b>Песчаный Лис, Москва, sandtod@mail.ru, 8:21 28.3.2000 <a href="../705-e.html">Вопрос 7.5</a>.</b></i></p>
 <p>Ожидал бы увидеть новый сборник стихов aka песен. А если о прозе - то повести, похожие на Набокова. Эксперты, кстати, явно под впечатлением окуджавских исторических романов часть своих ответов дали.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q501">
 <!--IP=212.20.9.29-->
 <hr>
-<p><i><b>Яна, 4:59 23.3.2000 Вопрос 5.1 .</b></i></p>
+<p><i><b>Яна, 4:59 23.3.2000 <a href="../501-e.html">Вопрос 5.1</a>.</b></i></p>
 <p>Конечно, единое целое! О чем бы ни пел, о чем бы ни писал - атмосфЭра всегда одна, определенная личностью автора. Причем личностью весьма неординарной...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q601">
 <!--IP=195.239.4.118-->
 <hr>
-<p><i><b>comte, 19:45 14.3.2000 Вопрос 6.1 .</b></i></p>
+<p><i><b>comte, 19:45 14.3.2000 <a href="../601-e.html">Вопрос 6.1</a>.</b></i></p>
 <p>Кто дозрелый, а кто нет - это не вам, г-н Treivas, решать. А герои у Щербакова - разные. Конечно, в какой-то мере всякий "лирический герой" есть проекция автора, хотя иногда - очень искаженная, и в этом смысле некоторое родство между ними есть. И я о нем говорил - и о стыках между демиургом и смиренником, и об интеллектуальной и эмоциональной составляющей. Тем не менее, различия достаточно четкие. Ворует финики, пьет водку и валит сосны - вовсе не демиург. И даже там, где самоуничижение явно иронично ("Что такое есть я на фоне..."), герой - вовсе не демиург, а обычный человек. С другой стороны, говоря о демиурге, мотивы Саваофа Бааловича приписывать ему вряд ли уместно. Того, как известно, останавливало то, что всякое чудо хоть кому-то, да во вред. Героя Щербакова, открыто презирающего толпу двуногих с их обычными делами животных, это бы вряд ли остановило.<br>
 Вообще интересно - верующий ли Щербаков. По-моему, нет (во всяком случае, в христианском смысле), хотя во многих песнях утверждается обратное. Кто-нибудь знает точно, он высказывался на эту тему?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=195.133.235.1-->
 <hr>
-<p><i><b>shef, SPb, shef@lek.ru, 8:3 14.3.2000 Вопрос 1.1 .</b></i></p>
+<p><i><b>shef, SPb, shef@lek.ru, 8:3 14.3.2000 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Вот ведь... Он же сам говорит - важен ритм. Отлично воспринимаются слова с листа, хотя песня несне рознь. Например, "Ей 28 лет" читаются легко. А "Океан" ("Ну здравствуй, Бог зыби..") - завязан на музыку очень сильно. Он интонирует свои стихи музыкой. Это, по-моему, достаточно исчерпывающее определение. Есть ведь вещи (не у МЩ, а вообще), которые довольно прочитать - и понять. А есть такие, что нуждаются в дополнительном интонировании, или их смысл меняется в зависимости от интонации кардинально. У него есть и то, и другое. Кстати, у меня он почему-то очень легко мурлыкается на ходу. У меня вообще внутренний ритм как правило совпадает с его.<br>
 <br>
 Авторское исполнение, конечно, важно. Я сама пою кое-какие из его песен и знаю от людей, меня слушающих, что впечатление от некоторых вещей, исполненных довольно высоким, глуховатым женским голосом, меняется сильно, и не всегда - в худшую сторону. Я обладаю "фотографической" слуховой памятью и вздрагиваю, когда он меняет слова под настроение или чуть-чуть смещает ритмический рисунок. ("...зовут, предположим, Серж" на кассете и "...зовут, разумеется, Серж" на концерте в Питере, где я впервые эту песню и услышала). Эти колебания привносят очень много. Забавно, что аранжировки мне как правило мешают, я просто абстрагируюсь от музыки, но подключаюсь к мелодии. Одного барабанного соло в "Подростке" на кассете достаточно, чтобы желание слушать аранжировки исчезло. Хотя, с другой стороны, Ecce Homo с этой песенкой на заднем плане очень хорош.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q601">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>Ben Treivas, 14:5 2.3.2000 Вопрос 6.1 .</b></i></p>
+<p><i><b>Ben Treivas, 14:5 2.3.2000 <a href="../601-e.html">Вопрос 6.1</a>.</b></i></p>
 <p>Слава comte, единственному, кто размахнулся ответить на сей вопрос (в общем, даже и эксперты этого не сделали толком)! Пусть он и попал пальцем в небо просто по всем пунктам, сколько и каких не затронул. Не говоря уж о том, что "лирический герой" и "лирический мир" - это не совсем одно и то же... что это совсем не одно и то же... что вообще при чем тут старые галоши... М-да, так вот, "четыре героя", перечисленные ниже - это то же самое, что четыре Владимира Ильича Ленина: один лысый, сругой борадатый, третий вождь мирового пролетариата, четвертый... Излюбленный герой МЩ: демиург (раз) в обличии хлипкого смиренника (два), или точнее - могущественный настолько, чтобы осознавать свое невсемогущество и в отличие от Мефистофеля, признающего это со скрипом и через "но", на сей с.чет над собою подтрунивающий. Он такой могущественный через "бы", что предпочитает (или вынужден?) наблюдать и не вмешиваться (три) - тем более, что все равно сочтут "делом каких-то сил надмирных, нежели доблести моей". Совсем как Саваоф Баолович из "Понедельника", а то и его прототип. Ну, и наблюдатель-демиург, да еще и замаскированный под "серую мышку" - так что и из лести никому в голову не прийдет ему поклоняться - естественно чувствует себя одиноким (четыре). О "мирах Окуджавы и Высоцкого-2 поговорим в следующем посте.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>Ben Treivas, veniamint@hotmail.com, 13:50 2.3.2000 Вопрос 8.2 .</b></i></p>
+<p><i><b>Ben Treivas, veniamint@hotmail.com, 13:50 2.3.2000 Вопрос 8.2.</b></i></p>
 <p>Ох уж этот comte, ох уж этот Ницше недозрелый! "Тексты не должны ни лечить, ни веселить", но могут. Настойка травы тоже лечить не обязана, но бывает, что лечит.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=194.154.81.45-->
 <hr>
-<p><i><b>comte, 0:57 2.3.2000 Вопрос 8.2 .</b></i></p>
+<p><i><b>comte, 0:57 2.3.2000 Вопрос 8.2.</b></i></p>
 <p>Господа, гуманистически-потребительский подход к творчеству неверен, как и почти все гуманистическое. Тексты не должны ни лечить, ни веселить, ни звать за собой. Автор вообще никому ничего не обязан, он, напротив, делает одолжение, пуская посторонних в свой мир - Щербаков это знает, за что многие его и не любят. А тексты у него можно найти под разное настроение...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q601">
 <!--IP=194.154.81.45-->
 <hr>
-<p><i><b>comte, 0:46 2.3.2000 Вопрос 6.1 .</b></i></p>
+<p><i><b>comte, 0:46 2.3.2000 <a href="../601-e.html">Вопрос 6.1</a>.</b></i></p>
 <p>Давненько я тут не был... Продолжим.<br>
 Как я уже говорил, у Щербакова нет какого-то единого мира. Единственное единство ;) его произведений - это единство формы второго порядка, формы форм. Все более низкие уровни абстрагирования распадаются на практически непересекающиеся и даже антагонистичные составляющие. Опять процитирую себя - Щербаков то восхитительно циничен, то романтичен до отвращения. И лирический герой у него далеко не один, даже если он сам утверждал обратное. Один из наиболее ярких и любимых (автором)героев - демиург ("Спешите видеть...", "Вместо того, чтоб гнить в глуши...", "Сердце ангела" и т.п.) С ним соседствует прямо противоположный образ -  самоуничижительного смиренника, юродствующего в лучших (худших) христианских традициях ("Я признаю свою убогость перед величием других" (хотя сама песня не об этом), "разевает рот, думая, что поет", "зачем на этом свете ничем я до сих пор не стал" и т.п.) Углубляясь в психоанализ, можно, конечно, заметить, что эти образы, при всем внешнем антагонизме, пересекаются, а именно - смирение показное и призвано лишний раз ублажить гордыню. Интересно, что и демиург у Щербакова раз за разом предстает внешне обычным и даже невзрачным человеком (разве что в "Посещении" у него зеленая кровь и голова на болтах, но и там это подается как нечто заурядное), что отчетливо указывает на комплекс непризнанного гения - вы, мол, думаете, что я - такой же двуногий, а на самом-то деле я о-го-го! Честно говоря, неясно, откуда такой комплекс у столь успешного - и в творческом, и в жизненном плане - автора (или если считать, что это все-таки не комплекс - откуда любовь именно к этой маске). Третий "системообразующий" герой у Щербакова - наблюдатель. Он не сверху и не снизу, как предыдущие два, он - сбоку, со стороны. Далее идет герой, который, вероятно, наиболее близок самому автору - точнее, наблюдатель ему тоже близок, но является рассудочной ипостасью, а эта, четвертая - ипостась эмоциональная ("как одиноко в мире одному"). Дальнейшее рассыпается на отдельные жанровые сценки, социальную тематику и т.п. - уже без объединяющей идеи/образа.<br>
 <br>
@@ -480,43 +509,43 @@ M.K. s  bol`shej  ohotoj  otvechaet  na  voprosy  publiki.</p>
 Вот примерно так.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=212.24.53.158-->
 <hr>
-<p><i><b>Вик, Москва, 16:28 2.2.2000 Вопрос 8.2 .</b></i></p>
+<p><i><b>Вик, Москва, 16:28 2.2.2000 Вопрос 8.2.</b></i></p>
 <p>Лечит. Однозначно :). Слушаю редко, но почти всегда это завершающие окорды "черной полосы". Потом как-то легче. Пока исключений не было.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=195.242.13.225-->
 <hr>
-<p><i><b>Сергей Кабанов, 17:27 31.1.2000 Вопрос 8.2 .</b></i></p>
+<p><i><b>Сергей Кабанов, 17:27 31.1.2000 Вопрос 8.2.</b></i></p>
 <p>Недавнее открытие поразило меня. Щербаков не помогает в трудную минуту! Как-то меня сильно напугали врачи. Впервые столь явно почувствовал дыхание... не важно. Включил кассету- не успокаивает, не спасает! Потом все улеглось вернулась бодрость,оптимизм, отчасти даже здоровье - включил, слушаю - отлично!!! Может быть обсудим это? В каком настроении Вы слушаете М.К.? Лечит или калечит?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=195.242.13.225-->
 <hr>
-<p><i><b>Сергей Кабанов, Питер, costa, 17:12 31.1.2000 Вопрос 8.2 .</b></i></p>
+<p><i><b>Сергей Кабанов, Питер, costa, 17:12 31.1.2000 Вопрос 8.2.</b></i></p>
 <p>Меня тут назвали "Настоящим Бескомпромиссным Фанатом"! Ну уж Вы скажете то же... В мои то годы!<br>
   А как записаться в эксперты?<br>
 <br>
   Прочитал американскую кассету М.К. Второй день хожу счастливый."Разнообразная картофель"!!! Конечно же, женского роду, и всегда была женского рода, эдакая цветет... Как же я раньше не догадался?!</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q802">
 <!--IP=195.242.13.225-->
 <hr>
-<p><i><b>Сергей Кабанов, Петербург, costa@pop3.rcom.ru, 17:5 31.1.2000 Вопрос 8.2 .</b></i></p>
+<p><i><b>Сергей Кабанов, Петербург, costa@pop3.rcom.ru, 17:5 31.1.2000 Вопрос 8.2.</b></i></p>
 <p>Тема - исполнители песен Щербакова, кто они, зачем они и какие они?<br>
 Для Смирнова:<br>
   Трио "Радоль" чудесно исполняло песни М.К. в начале 90-х в Питере. Ольга Захаренкова, Светлана Шитова,Марина Бернцева. Единственная студийная запись утеряна. У меня есть две концертные записи. Звоню  переиодически, требую возобновить творчество-безуспешно, семья, дети... Может общими усилиями?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q501">
 <!--IP=212.111.65.120-->
 <hr>
-<p><i><b>Elena G. Koroteyeva, Moscow, Russia, lenka@srdlan.npi.msu.su, 13:31 19.1.2000 Вопрос 5.1 .</b></i></p>
+<p><i><b>Elena G. Koroteyeva, Moscow, Russia, lenka@srdlan.npi.msu.su, 13:31 19.1.2000 <a href="../501-e.html">Вопрос 5.1</a>.</b></i></p>
 <p>Вообще-то я пишу, I'm sorry, чтобы проверить работу скрипта.<br>
 <br>
 А по по поводу мозаичности творчества Щербакова... Что бы такого придумать?..<br>
@@ -524,55 +553,55 @@ M.K. s  bol`shej  ohotoj  otvechaet  na  voprosy  publiki.</p>
 Какая же это мозаичность, если у него постоянные скрытые и не очень самоцитаты и всегда один и тот же лирический герой (как иногда утверждает автор при ответах на записки). Не может один и тот же герой жить вне мира :)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q501">
 <!--IP=193.124.76.222-->
 <hr>
-<p><i><b>Мисюра Сергей, Харьков, hobot@martin.vl.net.ua, 1:19 15.1.2000 Вопрос 5.1 .</b></i></p>
+<p><i><b>Мисюра Сергей, Харьков, hobot@martin.vl.net.ua, 1:19 15.1.2000 <a href="../501-e.html">Вопрос 5.1</a>.</b></i></p>
 <p>Я не решусь назвать творчество Щербакова "миром" - скорее пестрой и затейливой мозаикой, которой можно любоваться на досуге, но к которой, как заметил Виктор Байрак, не прибежишь искать спасения в трудной жизненной ситуации. Для этого - Окуджава, Клячкин, Егоров, Городницкий...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=193.232.88.16-->
 <hr>
-<p><i><b>Javert, Москва, javert@mail.ru, 17:6 14.1.2000 Вопрос 2.1 .</b></i></p>
+<p><i><b>Javert, Москва, javert@mail.ru, 17:6 14.1.2000 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Да, безусловно. Однако мне кажется, что привычка видеть себя во всем окружающем мало коррелирует с объектом наблюдения. Скорее, она является следствием интровертности, разве нет? Не в обиду МЩ будет сказано, но я достаточно легко могу углядеть себя во множестве вещей вокруг. Да, подумав, понял, что хотел бы быть автором песен "Анета" и "Descencus Ad Inferos".</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=129.89.7.203-->
 <hr>
-<p><i><b>solly, 4:45 11.1.2000 Вопрос 4.3 .</b></i></p>
+<p><i><b>solly, 4:45 11.1.2000 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>За холодность и антигуманизм у щербакова часто (а особенно "шестидесятники" и их последователи) принимают отсутствие КСПшных соплей и сентиментальных охов и ахов. По отношению к этой части культурной традиции Щербаков ДЕЙСТВИТЕДЬНО холоден и всячески подчеркивает ее неприятие.<br>
 Едва ли можно называть негуманным, когда вещи просто называются своими именами и тебе предлагают, хотя бы на время, обойтись без розовых очков. В них конечно - спокойней, но есть в этом что-то от жизни "под вечным кайфом".</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q303">
 <!--IP=129.89.7.203-->
 <hr>
-<p><i><b>solly, 4:36 11.1.2000 Вопрос 3.3 .</b></i></p>
+<p><i><b>solly, 4:36 11.1.2000 <a href="../303-e.html">Вопрос 3.3</a>.</b></i></p>
 <p>По-моему в творчестве Щербакова существует только одна "сквозная" тема - тема смерти, как крайнего выражения абсурдности человеческого бытия. Приятно однако, что Щербаков трактует ее не в Сартровском духе, а в духе, скорее, Камю...<br>
 Сам же автор появляется в творчестве МЩ восновном в качестве объекта авторской самоиронии - чтобы за "высоким штилем" не забыть о собственной бренности и слабости - чем господа "барды" откровенно грешили (любили они себя что-ли?)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=129.89.7.203-->
 <hr>
-<p><i><b>solly, 4:25 11.1.2000 Вопрос 1.1 .</b></i></p>
+<p><i><b>solly, 4:25 11.1.2000 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Первично, безусловно, было поэтическое творчество...<br>
 Но, по мере развития музыкального профессионализма у МЩ, на его место пришел ритм и мелодия, вернее - возможность их невполне обычного использования (безусловно Щербаков ПОКА не профессиональный композитор, но я не удивлюсь, если лет через десять он им станет - он умеет УЧИТЬСЯ и изменять себя)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q501">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>Бен Трейвас, veniamint@hotmail.com, 18:39 22.12.99 Вопрос 5.1 .</b></i></p>
+<p><i><b>Бен Трейвас, veniamint@hotmail.com, 18:39 22.12.99 <a href="../501-e.html">Вопрос 5.1</a>.</b></i></p>
 <p>Творчество Щербакова столь монолитный, а не коллажно-мозаичный... ну, мир - не мир... об'ект, что пропустив какую-нибудь одну из десятка его кассет, пропустив какой-нибудь год его творчества, постаянно ощущаешь при прослушивании новых песен, как будто серию многосерийного фильма пропустил или главу из середины книги не читал: какой ворон, на какой Майорке? от каких кротов независима? и даже не в этих конкретных текстовых перемычках дело...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=141.2.114.130-->
 <hr>
-<p><i><b>zhuk, 11:44 17.12.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>zhuk, 11:44 17.12.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>zaranee proshu proweniya za latinicu - net russkogo shrifta. zaranee zhe, spasibo<br>
 <br>
 pozvolju sebe zadat' vopros tov? g-nu? Cath :<br>
@@ -585,39 +614,39 @@ M. W.?<br>
 zadayu e'tot vopros, ne yavlyayas' protivnikom = antifanatom Mixaila Konstantinovicha. prosto nedoponyl  tov.? g-na? Cath<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=195.34.57.214-->
 <hr>
-<p><i><b>Гр.С., Москва, Россия, 22:46 6.12.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>Гр.С., Москва, Россия, 22:46 6.12.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Вообще-то, это противопоставдение ("гуманизм"-"антигуманизм") как-то не отсуюда. Это про бардов можно обсуждать, гуманизм там или нет. Применительно к Щербакову более важный вопрос он задал себе сам: полюбит ли его черт, или Бог его сохранит.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q302">
 <!--IP=195.34.57.214-->
 <hr>
-<p><i><b>Гр.С., Москва, Россия, 22:42 6.12.99 Вопрос 3.2 .</b></i></p>
+<p><i><b>Гр.С., Москва, Россия, 22:42 6.12.99 <a href="../302-e.html">Вопрос 3.2</a>.</b></i></p>
 <p>Применительно к Щербакову термин "цитаты" мне кажется слишком бедным. Тут полно всего: от намеков на возможность намекнуть до целых упоминательных монтажей. Как любое культурное явление определенного уровня (Пушкин, Шнитке) Щербаков, можно сказать, весь состоит из культурно-цитатного контекста. Щербаков оркеструет его, делая актуальным. Здесь главное - свобода обращения с материалом. Этим он, собственно, и Щербаков.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=195.34.57.214-->
 <hr>
-<p><i><b>Гр.С., Москва, Россия, 22:35 6.12.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>Гр.С., Москва, Россия, 22:35 6.12.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>Набоков как-то, чтобы отстали, видимо, сказал, что "Приглашение на казнь" - это Россия в трехтысячном году. Явление Щербакова для меня есть явяление Цинцината Ц. - указание на приближение этого срока.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=195.34.57.214-->
 <hr>
-<p><i><b>Гр.С., Москва, Россия, gr_sapov@mtu-net.ru, 22:26 6.12.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Гр.С., Москва, Россия, gr_sapov@mtu-net.ru, 22:26 6.12.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Музыка Щербакова мне представляется вышаганной, намурлыканной при ходьбе или каком-то сосредоточенно-расслабленном занятии, вроде сортировки картошки или расстановки книг по полкам. В этом качестве она образует для стихов ритмически-эмоциональную основу (что бы это ни значило у профессионалов).<br>
 Авторское исполнение, безусловно, производит огромное впечатление. Правда, я не слышал НЕ авторского исполнения песен Щербакова, так что о привнесении судить не берусь.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=195.34.29.171-->
 <hr>
-<p><i><b>Бутрин, 14:19 29.11.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>Бутрин, 14:19 29.11.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>Сдается, что позиция у таких людей вовсе не едина, даже если отбросить "феноменальное невежество", которое действительно разумно отбросить (впрочем, тоже вопрос - как-то в поезде сельский учитель из-под Красноярска, пламенный антисемит и человек, полагающий Рильке нацистким писателем, отнял-таки у меня в дальней дороге CD уважаемого автора и долго восхищался... Не совсем в невежестве дело, я полагаю), то и среди оставшихся "двуногих" есть люди, позиция которых различна. Можно попытаться типологизировать, хотя, естественно, лень это делать серьезно - попробую сделать это так, как придумается. А кому неинтересно, так ведь и читать не надо, правда?<br>
 1. Люди, не имевшие тесного контакта с российской городской культурой 70-х-80-х. Таких немного, но есть. Не буду говорить, что прав целиком, но люди деревенские (два полевых эксперимента по три и четыре человека в группе) не воспринимали Щербакова никак. Совершенно. Реакция - "это бессмысленный набор слов, это невозможно понять, это как газета, это непонятно про что". При этом о невежестве речи не идет - они при этом вполне читают Толстую и подпевают Визбора. Более подробно не мотивируют, впрочем, было объяснение, которое встречалось и у других нелюбителей: нежелание "раскрывать душу", то есть, IMHO (не уверен я в расшифровке ДУШИ) нежелание активно искать раппорта у аудитории.<br>
 2. Люди, принципиально не воспринимающие авторскую песню как литературный или музыкальный жанр. Здесь много различных вариантов мотиваций "не люблю", общее место, пожалуй, - то же нежелание "раскрывать душу" (здесь скорее речь идет не об абсолютном нежелании, а нежелании делать это сразу, открыто и без иносказаний - правда, смешно? ;-) ), но - и еще отмечается "слабая, подражательная, вторичная по отношению к тексту музыка", "отсутствие энергетики" (ага, "... высоковольтный тянут кабель...") , "неувлекательность", "отсутствие сюжета", "неэмоциональность". В принципе, любопытно, что и первая и вторая группа не проявляет вообше никакой осмысленной реакции на произведения Щербакова, они могут слушать только первые 15 секунд, далее - все, внимание уходит в никуда, как при прослушивании курдского фольклора или рассматривании плана-графика профсоюзных собраний в инфекционной клинике. Очень, кстати, показательно, что  они абсолютно неагрессивны в вопросах отношения к автору - для них его просто нет. Значить, и отношения нет.<br>
@@ -633,29 +662,29 @@ PS: пожалуй, самое главное, что отличает "нелю
 Пернатым легче...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=212.68.158.184-->
 <hr>
-<p><i><b>Алёна, elenas@bgumail.bgu.ac.il, 11:56 29.11.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Алёна, elenas@bgumail.bgu.ac.il, 11:56 29.11.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Мне кажется что музыкальная состаляющая в песнях Щербакова<br>
 обладает не меньшей смысловой нагрузкой, чем текст.Она, определяет эмоциональное (и не только) восприятие песни.<br>
 Авторское исполнение доносит до нас авторское отношение к произведению в данный момент времени. Многие песни в различных записях звучат немного иначе. И это влияет на восприятие.<br>
 Каждый раз обращаешь внимание на что-то другое.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=62.88.4.237-->
 <hr>
-<p><i><b>Vit, Vienna, Austria, vitaly.rychkov@ccbeverages.com, 4:2 9.11.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Vit, Vienna, Austria, vitaly.rychkov@ccbeverages.com, 4:2 9.11.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>МЩ - мой любимец, поэтому я не воспринимаю всерьез обсуждение его. Очень понравилось высказывание В.Шнайдера, что "ПЕСНЯ ЕСТЬ ЖАНР МУЗЫКАЛЬНЫЙ".<br>
 Мой тезис к дискуссии: "Обсуждение творчества МЩ как способ самовыражения"<br>
  Прощайте Все. Спасибо Всем.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=216.41.39.24-->
 <hr>
-<p><i><b>smirnov, 13:44 6.11.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>smirnov, 13:44 6.11.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>Теперь с ответами экспертов на вопросы 5.3, 5.4, 5.5 действительно все нормально. Намудрил с "ln -s"...<br></p>
 </div>
 
@@ -666,25 +695,25 @@ PS: пожалуй, самое главное, что отличает "нелю
 <p>Как единое целое. Есть как бы и коллажно-мозаичные песни, но они все равно создают единое целое, настолько гармоничное, что мозаикой назвать уже сложновато. Да, это я о его песнях, что в основном состоялись на момент 1993 года.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=63.209.225.84-->
 <hr>
-<p><i><b>smirnov, 22:27 4.11.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>smirnov, 22:27 4.11.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>Ответы экспертов на вопросы 5.3 и 5.5 исправлены. Извините, что так долго не наводил порядок.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q203">
 <!--IP=193.124.5.57-->
 <hr>
-<p><i><b>Лена, Москва, lenka_a@chat.ru, 11:10 2.11.99 Вопрос 2.3 .</b></i></p>
+<p><i><b>Лена, Москва, lenka_a@chat.ru, 11:10 2.11.99 <a href="../203-e.html">Вопрос 2.3</a>.</b></i></p>
 <p>Когда я слушаю эти песни - очень одинока, т.к. те, кто обычно рядом со мной, не разделяют моего отношения к творчеству МЩ. Они не считают его искусством, достойным, чтобы вслушаться и задуматься, а фоновой музыкой эти песни вообще считать невозможно. Изредка встречаясь с людьми, которые знают и ценят эти песни, практически не говорим о них. Наверное, это оттого, что чаще слушаем их в одиночестве, и очень по-своему каждый воспринимает услышанное. Кажется, что это "своя маленькая тайна", и поделиться ей можно... ну не знаю, с кем. Иногда, слушая кассету, представляю, что рядом есть человек, который просто тоже слушает песню, может, подпевает; что она не раздражает его, и с ним можно обменяться парой цитат, вспомнить отрывки из произведений других авторов на затронутую тему или случай из жизни...<br>
 	Ну а если говорить об эмоциях и чувствах, вызываемых именно самими песнями - очень разные. Ведь и песни разные, и настроение, с которым слушаешь, и вызываемые ассоциации. Но, точно, не вселенская грусть, не безнадежное отчаяние, не отрицание окружающего. Скорее, если песня вызывает из памяти неприглядные ассоциации, это все равно жизнеутверждающее начало ("А в море столько нефти, что утопиться негде - и слава Богу, еще поживем"). Мол, да, такое хреновое лето ("А здесь все время холода"), но другого здесь и сейчас нет, это МОЙ мир, и надо жить здесь и сейчас, и даже если я не на коне сегодня - это все равно я... В общем, о себе задумываюсь, о том, что МОЕ и что НЕ МОЕ. Более обособленно воспринимаю себя, отдельно от мнений и оценок других, а от этого - более уверенно. Что-то от эгоцентризма тут есть, и цинизм (здоровый или нездоровый), и некоторая самоуверенность... Ведь если кто-то открыто говорит "Я в неком даровании никем не превзойден", то почему и мне нельзя сказать так (хотя бы себе)? Это, конечно, не все эмоции, связанные с песнями МЩ; весь спектр не охватить в ответе. Просто именно об этих вещах я почему-то не думаю, слушая, к примеру, Визбора или Кима (раз уж Вы о них вспомнили в вопросе).</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=195.34.29.171-->
 <hr>
-<p><i><b>Бутрин, 12:45 1.11.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Бутрин, 12:45 1.11.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Плохо понятно, откуда берется идея о необычности музыки автора. Конечно, в сравнении с тем же Окуждавой он несколько сложнее. Что ж, послушайте Губайдулину или Свиридова (Перселла даже не упоминаем... Антик, одначе). Ну, нельзя же включение синтезатора со стандартным ритмом в аккомпанимент или разложение в два голоса считать музыкальным откровением?<br>
 Манера исполнения - это действительно важно. Щербакова, особенно нынешнего, практически невозможно понимать без его голоса. Однако это разговор о китайском заводном соловье - то, не то, имеет ли ценность? поди знай... В записи Щербаков другой, в тексте - третий<br>
 В структуру восприятия произведения - смотря что мы под этим понимаем - привносит изменения все - включая погоду на улице и качество кондиционера в зале, не говоря уж о шрифте, которым мы распечатываем тексты с этого сайта.<br>
@@ -692,122 +721,122 @@ PS: пожалуй, самое главное, что отличает "нелю
 "Всхлипывай, если ты клавесин, а если орган - реви..." Ой, не хочу цитировать, грешно это...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>Schneider, 12:8 1.11.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>Schneider, 12:8 1.11.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>М. Ростиславскому:<br>
 Извиняйте - обмахнулся: Иванов, конечно, не Вяч. и не Вс., а всего лишь Г. - Георгий, то бишь: буквы одна над другой на клавиатуре-то. Hо это все такие пустяки в сравнении... да и вообще офф-топик.<br>
 Любопытно другое: из 10 ответов на данный вопрос нету ни одного... ответа на данный вопрос. Вот Вы, М. Ростиславский, "на голубом глазу просматривать заново по годам творчество" Мэтра не нуждающися, какие наиболее значимые, на ваш взгляд, этапы творческого пути МЩ Вы бы выделили и на каком основании?<br>
 Благ!<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q202">
 <!--IP=212.192.227.61-->
 <hr>
-<p><i><b>Алексей Кор, alekskorn@mail.ru, 10:16 1.11.99 Вопрос 2.2 .</b></i></p>
+<p><i><b>Алексей Кор, alekskorn@mail.ru, 10:16 1.11.99 <a href="../202-e.html">Вопрос 2.2</a>.</b></i></p>
 <p>Мир, создаваемый Щербаковым в каждой песне - это тот бред, с которым каждый из нас в своей жизни. Он обладает, на мой взгляд, умением просто делать этт бред (прошу не считать, что "бред" - это плохо, недостойно и т. п.) явным и выпуклым. И поэтому - цепляет. "Мир Щербакова" - это мир противоречий и совпадений, сложностей и простоты. И он, по-моему, соотносится с миром каждого человека - точнее, с тем, как человек может воспринимать так называемый "объективный" мир.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=193.232.88.16-->
 <hr>
-<p><i><b>М.Ростиславский - Виктору Шнейдеру, 7:31 1.11.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>М.Ростиславский - Виктору Шнейдеру, 7:31 1.11.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>Поэта В.Иванова я не знаю, ничего об этом сказать не могу. А вот был такой поэт в начале ХХ века - Вяч.Иванов. Может быть, он имеется в виду?<br>
 Но тоже вряд ли - он прожил бОльшую часть жизни в России, уехал (не эмигрировал!) в Италию в 58 лет, где и прожил еще 13 лет с советским паспортом, а потом еще 12 - без оного. Насчет "эмиграционных страданий" Вяч.Иванова, солидного поэта и католического ученого, сильно сомневаюсь.<br>
 Но главное в другом. Если некто может пожелать другому, чтобы его жизнь или еще кто "била по лицу", то мое глубокое убеждение состоит в том, что таких людей дальше прихожей пускать нельзя. А лучше - послать его на конюшню, чтобы ему всыпали полсотни горячих - авось образумится.<br>
 И обсуждать тут нечего - такую публику не обсуждать, а вразумлять или лечить надо.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>vjaloe vozrazhenie, M. Rostislavskomu, Viktor.Schneider@klp.med.uni-muenchen.de, 14:43 31.10.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>vjaloe vozrazhenie, M. Rostislavskomu, Viktor.Schneider@klp.med.uni-muenchen.de, 14:43 31.10.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>Вынужден напомнить уважаемому М. Ростиславскому, что такое же пожелание в начале века высказывалось в адрес поета В. Иванова, и, увы, сбылось - и действительно эмиграционные страдания сделали его сильным (а не только технически безупречным) поэтом. Так что чем-чем, а "новым" тут не пахнет.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=195.34.51.51-->
 <hr>
-<p><i><b>М.Ростиславский - Виктору Байраку, 3:59 31.10.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>М.Ростиславский - Виктору Байраку, 3:59 31.10.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>Вот это уже серьезно - пожелание поэту для творческого успеха - крепкого битья по лицу. Это - просто новое слово в литературоведении и филологии!<br>
 Или те самые тяжелые комплексы, которые в ответе про ковбойскую шляпу.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q503">
 <!--IP=195.34.51.51-->
 <hr>
-<p><i><b>М.Ростиславский - Виктору Байраку, 3:51 31.10.99 Вопрос 5.3 .</b></i></p>
+<p><i><b>М.Ростиславский - Виктору Байраку, 3:51 31.10.99 <a href="../503-e.html">Вопрос 5.3</a>.</b></i></p>
 <p>А нельзя ли пример новых песен, которых качественно не лучше чем?<br>
 А если уровень (т.е., "ровный"), то как же крутой? Который надо присутствовать.<br>
 А если серьезно - кто чего ждал-то?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=195.34.51.51-->
 <hr>
-<p><i><b>М.Ростиславский - Виктору Байраку, 3:47 31.10.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>М.Ростиславский - Виктору Байраку, 3:47 31.10.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>И здесь не без неологизма - "демонстративное слово". Вот здорово! Вот уж где чего нет, так это ковбойских шляп!<br>
 ...друг... Аркадий... не...<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q501">
 <!--IP=195.34.51.51-->
 <hr>
-<p><i><b>М.Ростиславский - Виктору Байраку, 3:39 31.10.99 Вопрос 5.1 .</b></i></p>
+<p><i><b>М.Ростиславский - Виктору Байраку, 3:39 31.10.99 <a href="../501-e.html">Вопрос 5.1</a>.</b></i></p>
 <p>Спасибо, дорогой Виктор, за чудесный неологизм - "привуалирует". Особенно когда речь идет об оценке "качества товара", как Вы тонко выразились.<br>
 Но вот как понять Ваше суждение "Вот тут-то и получается, что "хвататься" читатель будет не за Щербакова, а за Окуджаву, Городницкого, Кима..."?<br>
  Я имею в виду некоторую грамматическую несогласованность времен глаголов. Или это ничего, можно?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=208.244.48.2-->
 <hr>
-<p><i><b>Виктор Байрак, Украина, Одесса, hachita@farlep.net, 13:47 29.10.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>Виктор Байрак, Украина, Одесса, hachita@farlep.net, 13:47 29.10.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>Сейчас у Щ. все стабильно. Ни взлетов, ни падений. Пишет, как машина.Альбомы издает с той же стабильностью.Думаю, что если на творческом пути не появятся сильные помехи ни в одну ни в другую сторону отклонений не будет. Вообще-то чтобы поэт писал лучше - жизнь должна иногда крепко бить его по лицу. Если это происходит и поэт не ломается раз и навсегда - зачастую выход на новый уровень. А прогнозировать удар судьбы... Нехорошо это. Бог не простит.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q503">
 <!--IP=208.244.48.2-->
 <hr>
-<p><i><b>Виктор, Байрак, hachita@farlep.net, 13:35 29.10.99 Вопрос 5.3 .</b></i></p>
+<p><i><b>Виктор, Байрак, hachita@farlep.net, 13:35 29.10.99 <a href="../503-e.html">Вопрос 5.3</a>.</b></i></p>
 <p>Ох,как этого ждали! Ждали, что Щ. выйдет на новый круг. Но, увы.За последнее время (лет пять) Михаил не написал ни одной песни качественно лучше своих первых. Правда он и не деградирует. А ведь держаться на  таком крутом заданном уровне (пусть даже заданным самим собой) уровне - большого таланта надо. Что присутствует.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=208.244.48.2-->
 <hr>
-<p><i><b>Виктор Байрак, Украина Одесса, hachita@farlep, 13:26 29.10.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>Виктор Байрак, Украина Одесса, hachita@farlep, 13:26 29.10.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>Не думаю, что у Щ. есть второй пласт.В противном случае его слово было бы не столь демонстративным. Возьмем поэзию глубоких: Бродского, Тарковского, Мандельштама. Какая тут демонстративность? А никакой. Ковбойские шляпы носят или для дела или для подавления комплекса беззащитности.<br>
 Щ.,как и Высоцкий, говорит то, что говорит. Это не хорошо и не плохо.Плохо, когда кто-либо делает вид что где-то есть то, чего там нет. Попросту хитрит.Я думаю что Щ. не хитрит и второе дно пытаются увидеть те, кто фанатично, а не объективно оценивает  поэта. Я не влюблен в Щ.. Я просто считаю его хорошим мастером.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q501">
 <!--IP=208.244.48.2-->
 <hr>
-<p><i><b>Виктор Байрак, Украина, Одесса, Hachita, 13:11 29.10.99 Вопрос 5.1 .</b></i></p>
+<p><i><b>Виктор Байрак, Украина, Одесса, Hachita, 13:11 29.10.99 <a href="../501-e.html">Вопрос 5.1</a>.</b></i></p>
 <p>У Михаила есть и то и это. К сожалению, первое привуалирует и давлеет над вторым. Изящность упаковки еще не говорит о качестве товара.Тут нужны испытания. Мне кажется одним из таких испытаний является проверка на сложные жизненные ситуации, когда как к спасителю, ты обращаешься к слову. Тогда не до упаковки. Вот тут-то и получается, что "хвататься" читатель будет не за Щербакова, а за Окуджаву, Городницкого, Кима... Пушкина, в конце-концов (или в начале). Шарик на елке тоже может быть произведением искусства.Но это его (искусства) особый раздел. Хотя несколько песен (Баб-эль или Шансон) могут и в жизни людям помочь.А в большинстве, конечно, мастерская мозаика.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q504">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>Ben Treivas, veniamint@hotmail.com, 8:15 15.10.99 Вопрос 5.4 .</b></i></p>
+<p><i><b>Ben Treivas, veniamint@hotmail.com, 8:15 15.10.99 <a href="../504-e.html">Вопрос 5.4</a>.</b></i></p>
 <p>He интересует.<br>
 Tem obidnee, chto otvety expertov na etot vopros zapolonili mesta obsuzhdenija voprosov interesnyh - 5.3 u 5.5 (Eto, navernoe, tehnicheskaja nepoladka iz-za pereezda, tak chto ispraviv ee, umoderirujte moj otvet k chertovoj babushke).</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=216.41.39.95-->
 <hr>
-<p><i><b>smirnov, 20:33 7.10.99 Вопрос 2.1 .</b></i></p>
+<p><i><b>smirnov, 20:33 7.10.99 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>С переездом на новое место</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=193.124.5.57-->
 <hr>
-<p><i><b>Лена, Москва, lenka_a@chat.ru, 11:23 5.10.99 Вопрос 2.1 .</b></i></p>
+<p><i><b>Лена, Москва, lenka_a@chat.ru, 11:23 5.10.99 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Обычно бывает так, что я не представляю себя героем песни, а песня подбирается под состояние. Т.е. не услышать песню и сказать "это про меня" или "я могла бы быть там", а наоборот, с одним настроением напеть про себя : "Мильон потов за грош" и все же "Мил нам этот жребий...", с другим: "Будет нам всего помногу", с третьим: "И это все, что связывает нас".<br>
 Но не могу сказать "мои песни". Нет, не мои. По-моему - ничьи. Все-таки прохладны они, чтобы быть личными. Они как-то отдельно от меня и, такое впечатление, от всех. В какие-то моменты я бываю очень близко к какой-нибудь песне (настроение, эмоции - к словам, музыке, интонации песни), и тогда почти уже готова сказать "мое", но вдруг понимаешь - нет! Я живая, а это - ну не мертвое, а все-таки искусственное. Как, к примеру, живой, настоящий, народный венгерский танец отличается от танцев Брамса или слова русских народных песен от их обработки Глинкой. Живое - менее изящно, стройно, более неуклюже, не так романтично... Вот так и с песнями Щ., примеряемыми к себе - они "законченнее", чем любое мое настроение, но менее живые.<br>
 Есть поэты более живые, менее искусственные, но это другое.<br>
@@ -815,62 +844,62 @@ Tem obidnee, chto otvety expertov na etot vopros zapolonili mesta obsuzhdenija v
 И вообще, если честно, я не поклонник творчества Щ., а ценитель. "Когда я был помоложе..." - да, раньше можно было причилить меня к поклонникам Щ., раньше я воспринимала его песни более эмоционально, а теперь больше наслаждаюсь ими, не примеряя на себя.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=193.124.5.57-->
 <hr>
-<p><i><b>Лена, Москва, lenka_a@chat.ru, 12:40 4.10.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>Лена, Москва, lenka_a@chat.ru, 12:40 4.10.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Во-первых, мне вообще не нравится аббревиатура КСП. Слово "самодеятельность" подразумевает "деятельность непрофессионалов". "Клуб" - "некоторое количество единомышленников". Как эти слова можно отнести к одному человеку, профессионалу в полном смысле?<br>
 "Авторская песня" - уже лучше. Но, как было замечено выше, почти все песни имеют авторов.<br>
 Если попытаться произнести "авторская песня" на разные лады, то одно из услышанных значений - "песня с ярко выраженным авторством", т.е. автора которой ни с кем не спутаешь. В этом случае можно сказать: "Да, это о нем." Его песни очень, очень "авторские"! И стихи, и музыка. И исполнение, кстати, тоже - очень "авторское".<br>
 Только не нужно вкладывать с это определение пренебрежительный оттенок "непрофессионализм". Например, о некоторых ювелирных изделиях или о предметах одежды, мебели говорят "Авторская работа". Это значит "не конвейер, не ширпотреб, работа мастера". Почему же в сочетании со словом "песня" прилагательное "авторский" имеет другой, принижающий смысл? Я с таким определением не согласна.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=193.124.5.57-->
 <hr>
-<p><i><b>Лена, Москва, lenka_a@chat.ru, 12:18 4.10.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Лена, Москва, lenka_a@chat.ru, 12:18 4.10.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Меня "завораживают" многие его песни, как звуки флейты - змею. Как бы не понимаю, где нахожусь, что делаю... Стихи - не похожи ни на что. Очень, очень "самостные", ничьи больше, узнаваемые, но такие разные, что можно удивляться и восхищаться мастерством создателя. Не обязательно принимая их близко к сердцу (это, пожалуй, даже вредно для восприятия), а именно построением стихов, ритмом, сложными словосочетаниями.<br>
 	Но! просто стихи (при чтении с листа) восхищают и удивляют (что немало), а в состояние "отключения" от действительности меня приводят только песни Щ., т.к. необычные стихи сопровождаются необычной музыкой. Причем "околдовывают" меня эти песни только в авторском исполнении. Другие исполнители, вольно или невольно, наполняют песни своим отношением к содержанию, к теме, а это уже другое. Может, не хуже, но другое. Можно увлечься эмоциями исполнителя, начать подпевать, но это не то. Когда поет Щербаков, вспоминаются Онегин и Печорин - знают свою неординарность ("Я в неком даровании никем не превзойден"), смотрят несколько свысока на всех и... Одиноки, всегда! Восхищение, преклонение окружающих - приятно, льстит, но не обязательно. Они самодостаточны - и тем еще привлекательнее для нас.<br>
 	Из-за этого ощущения мне очень странным кажется свое участие в опросе: кажется, что самому Щербакову это не нужно (возможно, не мешает, но и не нужно), а нам - зачем? Как Моськи вокруг слона - хвалим, ругаем, ищем намеки, скрытые цитаты, иносказания... а слон идет себе своей дорогой, даже не замечая количества Мосек, не различая среди их гвалта ни критиков, ни поклонников...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q203">
 <!--IP=195.170.63.21-->
 <hr>
-<p><i><b>Paul, Moscow, pach_ru, 7:20 26.9.99 Вопрос 2.3 .</b></i></p>
+<p><i><b>Paul, Moscow, pach_ru, 7:20 26.9.99 <a href="../203-e.html">Вопрос 2.3</a>.</b></i></p>
 <p>Ах, прошу прощения, ошибся. Не в следующем вопросе, а через один. Гм... Так вот...<br>
 Кто-то (уже не помню кто) высказал мне мысль, что слушая МЩ можно только ухудшать свое состояние, т.е. если у тебя было хорошее настроение, то оно испортится, а если плохое, то вообще кранты. Должен признаться, в этом что-то есть. По крайней мере, применительно к позднему периоду МЩ. Его песни - как память (в споре Леголаса и Гимли на лодке, если кто-то понимает о чем я). С одной стороны, там есть все - и буря эмоций, и накал страстей ("...и бесился от бессилья, и от холода рыдал..."), но это подернуто ледком, как будто смотришься в зеркало. И чем дальше (чем ближе по времени), тем сильней это ощущается. Кстати, можно было бы просто отбрехаться, дескать песни МЩ делают нас отчаявшимися циниками, но это было бы некорректно, хотя отчаяние (сначала), а потом и безнадежность (понимаете различие?) очень хорошо чувствуются в его песнях. Это и создает тот "ледок". У меня создается ощущение, что МЩ сам испытывает примерно такие же чувства, которые изливает на нас с кассет (дисков, сцены). "Поводырь", например. Не буду цитировать всего, рекомендую еще раз послушать. Или "Волк"... "...Но на холмах не узнав Иерусалима, так и пройдешь сквозь врата, только что не мимо..." Это ли не верх безнадежности? (Для сравнения:"...И по-прежнему тропа мимо Крыма..." - еще отчаяние.) ("Да, это он, верхний предел, апофеоз отчаянья..." - тоже МЩ.) (В "Волке" (это кстати об авторах), воля ваша, что-то вообще льюисовское чувствуется.) В свете вышеизложенного тенденция в творчестве МЩ (по крайней мере, в эмоциональном плане) вполне объяснима. Не знаю, как другие, я ее очень отчетливо чувствую (и не один я, к слову). "Когда мы слушаем Щербакова", мы осознаем тщету всего сущего, в том числе и нас самих.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=195.170.63.21-->
 <hr>
-<p><i><b>Paul, Moscow, pach_ru@yahoo.com, 6:34 26.9.99 Вопрос 2.1 .</b></i></p>
+<p><i><b>Paul, Moscow, pach_ru@yahoo.com, 6:34 26.9.99 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Ранние песни МЩ воспринимаются мной как декларация, которую я готов подписать. Например, "Крым": "Как же это, по пути в крематорий, как же в Крым не заглянуть, как же это?" Подписываюсь! Голосую обеими руками! Позднее его творчество вызывает у меня более "живой" отклик. (Начиная, примерно, с "Века плывут..." - кстати, очень люблю декламировать в о-о-очень плохом настроении) Так... Продолжение ответа см. в следующем вопросе.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=195.218.180.29-->
 <hr>
-<p><i><b>Татьяна, Москва, 16:5 24.9.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>Татьяна, Москва, 16:5 24.9.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Прошу прощения за высказывания не по теме (честное слово, больше не буду!), но не могу молчать и вынуждена повторить еще раз: НЕ БЫ-ВА-ЕТ такого жанра - КСП. Или кто-то не знает, как расшифровывается аббревиатура... :)<br>
 Что же касается столь замечательного определения АП, то автор его, судя по всему, весьма сведущ, но я бы, эксперимента ради, хотела бы послушать, как у него хором получится... ну, что-нибудь из Веры Матвеевой, например. А "всегда индивидуальный" - так ежели не индивидуальный, то и говорить не о чем. А кто НЕ индивидуальный? Окуджава? Ким? Тот же Ланцберг? etc., etc...<br>
 Просто, по-моему, есть два (больше, но упростим картину) довольно явных подвида АП, которые можно условно обозначить как "литературный" и "туристский" (причем есть авторы, относящиеся к обоим одновременно). Ко второму Щербаков, безусловно, никакого отношения не имеет. А к первому - почему бы и нет? Стиль поведения? Так автор песни про "возьмемся за руки..." тоже, к счастью, не был склонен к братанию со слушателями :)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=194.67.161.4-->
 <hr>
-<p><i><b>Павел, Москва, pavel117@hotmail.com, 2:4 24.9.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>Павел, Москва, pavel117@hotmail.com, 2:4 24.9.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Во всяком случае, под расстроенную гитару его песни не звучат, и хором у костра получаются так же нелепо, как могла бы выглядеть куранта под клавесин в дансинге.<br>
 <br>
 Один знакомый сказал, что КСП (авторская песня) - это то, что легко повторить и петь вместе. Может быть, слишком простые критерии, но, кажется, верные. По ним МЩ не проходит, всегда индивидуальный, изящный, никак не хоровой.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=195.26.161.69-->
 <hr>
-<p><i><b>Pavel, pavel117@hotmail.com, 7:22 23.9.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>Pavel, pavel117@hotmail.com, 7:22 23.9.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>1. Experts answerings are not so interesting as expected...<br>
 <br>
 2. Especially for COMTE:<br>
@@ -888,256 +917,256 @@ Posadil Ded Repku - it's not easy...</p>
 А Щербаков, БГ (может, я зря их вместе, не хотел бы никого обидеть) - это максимально близко, это здесь (здание, здоровье),  "ближе, чем кожа"...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q202">
 <!--IP=62.76.114.33-->
 <hr>
-<p><i><b>Айони, Н.Новгород, iony@uic.nnov.ru, 2:53 23.9.99 Вопрос 2.2 .</b></i></p>
+<p><i><b>Айони, Н.Новгород, iony@uic.nnov.ru, 2:53 23.9.99 <a href="../202-e.html">Вопрос 2.2</a>.</b></i></p>
 <p>Для меня не существует отдельного "мира, созданного Щербаковым", скорее уж "окружающий мир, увиденный Щербаковым", а при такой постановке вопроса не может идти речь об идентичности этого мира ни с реальным (который гораздо многограннее любой своей интерпретации) ни с моим внутренним (который - МОЙ).</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=195.218.180.29-->
 <hr>
-<p><i><b>Татьяна, Москва, 15:6 22.9.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>Татьяна, Москва, 15:6 22.9.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>comte:<br>
 Народ, давайте все-таки разберемся с дефиницией. КСП - не жанр, а (простите мне канцелярит) "неформальное движение" любителей жанра. Судить по нему о жанре - все равно, что судить о роке по тому, как его поют на Арбате.<br>
 А орать песни Щербакова в не совсем трезвом виде под расстроенную гитару очень даже можно :)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=194.226.55.209-->
 <hr>
-<p><i><b>Anna Owl, 6:44 20.9.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>Anna Owl, 6:44 20.9.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>Между понятиями "знак" и "образ" есть разница. Знак подразумевает четкую связь между означающим и означаемым. Например: Показываю кукиш - адресат понимает, что я ему в чем-то отказала. Это знак. Образ же не только имеет множество толкований, он в них не особенно-то и нуждается, он самоценен. Это и делает искусство искусством. Мораль: Щербакова можно и нужно комментировать, раскодировать и т.п. Но если его песни только сложный могоуровневый текст, то это уже не искусство, а интеллектуальная игра в чистом виде. Есть ли в песнях МЩ такой иррациональный остаток, не поддающийся "раскодировке"?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q503">
 <!--IP=194.226.55.209-->
 <hr>
-<p><i><b>Anna Owl, 6:34 20.9.99 Вопрос 5.3 .</b></i></p>
+<p><i><b>Anna Owl, 6:34 20.9.99 <a href="../503-e.html">Вопрос 5.3</a>.</b></i></p>
 <p>Могу проиллюстрировать. Сравните: "...Но это все такие пустяки/ В сравнении со смертью и любовью."<br>
    "Прохожий, скучно мне, неинтересно мне - Анета влюблена..." и там же:"Седьмой покойник за семь лет - привыкнуть бы, а он все слезы льет..." Может быть, я чего-то не понимаю, но мне страшновато от этого сравнения.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q304">
 <!--IP=194.226.55.209-->
 <hr>
-<p><i><b>Anna Owl, 6:16 20.9.99 Вопрос 3.4 .</b></i></p>
+<p><i><b>Anna Owl, 6:16 20.9.99 <a href="../304-e.html">Вопрос 3.4</a>.</b></i></p>
 <p>"У меня судьба не злая, только глупая чуть-чуть..." - это что касается русского характера. Всем я хорош, только живу фигово. Но это касается раннего Щербакова. Поздний же просто "всем я хорош"...:)) Меня, наверное, убьют. Сергей Кабанов точно причислит к идиотам...:-((</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=194.226.55.209-->
 <hr>
-<p><i><b>Anna Owl, Москва, 6:11 20.9.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>Anna Owl, Москва, 6:11 20.9.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Формально - да (автор музыки и слов исполняет свои песни). По существу - нет. Во-первых, это уже профессия, а авторская песня предполагает, мнэ-э, дилетантизм (не в оценочном, а в формальном плане!). Во-вторых, как говорил Ланцберг в своем интервью, найденном мной на этом же сайте, поведение МЩ и, главное, его отношение к своему делу отличается от традиционного бардовского стиля. Мне нравится называть его песни милым словечком "шансон", т.е. Вы себе поете, мы себе слушаем, денежки платим за хорошую работу, а всякое там "возьмемся за руки" в условиях рыночной экономики неуместно и старомодно.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=194.226.55.209-->
 <hr>
-<p><i><b>Anna Owl, 5:53 20.9.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>Anna Owl, 5:53 20.9.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Мне кажется, Брюсов. По тщательности, с которой выстраивается свой образ. По стремлению быть мэтром. То есть, по довольно-таки неприглядным качествам. Сравнивать МЩ с Бродским мне самой не пришло бы в голову, но если такой вопрос возникает, то вот: Бродский самодостаточен, а МЩ играет самодостаточность.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=194.85.123.66-->
 <hr>
-<p><i><b>Cath, 13:38 12.9.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>Cath, 13:38 12.9.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>Мне бы очень хотелось, чтобы он всё-таки взялся написать что-нибудь в прозе -- ну, вроде Рекшановского "Кайфа", что ли, не то, чтобы мемуары, а... Даже просто собрать воедино ответы на записки из зала за много лет -- было бы страшно интересно, хотя он и относится к этому скептически. А кто, кроме него самого, может это сделать? Разве что фанаты и поклонники объединёнными усилиями.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q504">
 <!--IP=194.85.123.66-->
 <hr>
-<p><i><b>Cath, 13:19 12.9.99 Вопрос 5.4 .</b></i></p>
+<p><i><b>Cath, 13:19 12.9.99 <a href="../504-e.html">Вопрос 5.4</a>.</b></i></p>
 <p>Разумеется, интересует -- я в своё время совершенно самостоятельно подсчитала, сколько раз слово "словарь" встречается на 9-й кассете! А что могла написать -- уже написала в своей пьесе.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=194.85.123.66-->
 <hr>
-<p><i><b>Cath, 13:14 12.9.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>Cath, 13:14 12.9.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>Если не рассматривать двуногих, а также оставить в стороне моральное убожество и феноменальное невежество -- я не очень понимаю, как он вообще может не нравиться. Однако, по своему собственному опыту, могу заметить: если ты в какой-то момент закрыт (иногда -- очень надолго) или развёрнут к чему-то перпендикулярно -- то и... Мне просто очень повезло с конкретным моментом, когда мне принесли его первую кассету.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q302">
 <!--IP=194.85.123.66-->
 <hr>
-<p><i><b>Cath, 13:5 12.9.99 Вопрос 3.2 .</b></i></p>
+<p><i><b>Cath, 13:5 12.9.99 <a href="../302-e.html">Вопрос 3.2</a>.</b></i></p>
 <p>Для него, по-моему (как и для меня, когда я пишу что-то своё) это просто настолько же естественно, как дышать, а для меня (когда слушаю его) -- хороший повод к расширению сознания и тема для общения с понимающими единомышленниками.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q205">
 <!--IP=194.85.123.66-->
 <hr>
-<p><i><b>Cath, 12:58 12.9.99 Вопрос 2.5 .</b></i></p>
+<p><i><b>Cath, 12:58 12.9.99 <a href="../205-e.html">Вопрос 2.5</a>.</b></i></p>
 <p>Моему собственному -- безнадёжное, беспросветное и безвыходное одиночество в окончательно и катастрофически свихнувшемся окружающем мире... и прочие глубоко пессимистичные вещи.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=194.85.123.66-->
 <hr>
-<p><i><b>Cath, 12:50 12.9.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>Cath, 12:50 12.9.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>Ну, появился-то он, наверное, всё-таки сам по себе, а вот то, что его так воспринимают -- возможно, отчасти обусловлено тем, что он (как в своё время БГ) напомнил... кое-кому из нас, что тексты, поющиеся под музыку, могут быть ещё и Поэзией.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=194.85.123.94-->
 <hr>
-<p><i><b>Cath, 15:31 11.9.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>Cath, 15:31 11.9.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Может быть, ещё одна цитата: "Если бы Свифт и вправду ненавидел людей, он бы не делал это так страстно".</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q103">
 <!--IP=194.85.123.94-->
 <hr>
-<p><i><b>Cath, 15:16 11.9.99 <a href="../103-e.html">Вопрос 1.3 </a>.</b></i></p>
+<p><i><b>Cath, 15:16 11.9.99 <a href="../103-e.html">Вопрос 1.3</a>.</b></i></p>
 <p>Стараюсь не слишком анализировать. Для меня это -- инструмент настройки души и подсознания для выхода в астрал, вхождения в Контакт с чем-то Высшим и т.п. Поначалу (года 3 назад) пыталась было разложить всё это по старой дурацкой привычке на составляющие -- резко споткнулась, когда же из подобной деструкции что-то получалось -- там обнаруживались вместо кирпичиков драгоценные камни редкостной огранки.<br>
 Замечу только, что не все римэйки ранних песен мне нравятся -- "Это я" с отбивкой ритма по деке -- это чудесно, а вот "Контрреволюционный этюд", на мой взгляд, избытком эффектов безнадёжно испортили. Против синтезаторов и т.п. абсолютно ничего не имею, аранжировки поздних вещей принимаю безоговорочно.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=194.85.123.94-->
 <hr>
-<p><i><b>Cath, 15:0 11.9.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>Cath, 15:0 11.9.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Повторюсь: Игорь Иртеньев и Андрей Кнышев -- близки по тембру словотворчества, невольно возникают ассоциации. "Римский полководец Нолемоций" у последнего -- разве не просится быть спетым?! Мне вообще представляется, что если бы они с МЩ случайно повстречались и не подрались при этом -- на стыке жанров могло бы родиться нечто совершенно непредсказуемое и грандиозное, этакая Вселенная во взрыве.<br>
 Бродского знаю очень мало, но вот... может быть, к МЩ вполне приложимо сказанное о Бродском у Довлатова: "Он не первый. Он, к сожалению, единственный."</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q304">
 <!--IP=216.41.39.67-->
 <hr>
-<p><i><b>Smirnov, Boston, Russia, 17:20 5.9.99 Вопрос 3.4 .</b></i></p>
+<p><i><b>Smirnov, Boston, Russia, 17:20 5.9.99 <a href="../304-e.html">Вопрос 3.4</a>.</b></i></p>
 <p><br>
 comte, 0:48 13.7.99:<br>
 <br>
 Это Достоевский-то вторичен по отношению к Сименону? Ню-ню.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q503">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>Schneider, 19:4 24.8.99 Вопрос 5.3 .</b></i></p>
+<p><i><b>Schneider, 19:4 24.8.99 <a href="../503-e.html">Вопрос 5.3</a>.</b></i></p>
 <p>Ponimaju i sochustvuju zhelaniju chitat' russkij text kirillicej, a latinicej - nerusskij. Odnako v pervom zhe experimente - neuvjazochka:<br>
 > with dividing his songs in 2 > group "Songs of a madman"<br>
 > and "Songs without words".<br>
 "Pesni bezumca" v sochetanii s "pesnjami bez slov" - eto ne tol'ko "Songs of a madman". Eto pesni "bez um-ca", "bez muzychki", tak skazat'. V perevode etot vtoroj smysl ischezaet, a stoit li ego ischezat'?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q503">
 <!--IP=207.19.204.4-->
 <hr>
-<p><i><b>SmallTanya, NYC, 16:21 20.8.99 Вопрос 5.3 .</b></i></p>
+<p><i><b>SmallTanya, NYC, 16:21 20.8.99 <a href="../503-e.html">Вопрос 5.3</a>.</b></i></p>
 <p>OK. A while ago, in 1992 or 1993 (when his book # 2 came out), he came up with dividing his songs in 2 group "Songs of a madman" and "Songs without words". That's one change - before that they were just songs. In one of the concerts he suggested how to divide them: "if you think the author has a mental problem, that it's "madman's song", else - "without words". And if feels like more and more songs (especially on "Lozhny Shag" CD) fall in this category.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q304">
 <!--IP=195.170.63.27-->
 <hr>
-<p><i><b>Paul, Moscow, Russia, pach_ru@yahoo.com, 16:36 15.8.99 Вопрос 3.4 .</b></i></p>
+<p><i><b>Paul, Moscow, Russia, pach_ru@yahoo.com, 16:36 15.8.99 <a href="../304-e.html">Вопрос 3.4</a>.</b></i></p>
 <p>"Отчего в России мало авторских талантов?" :-)))</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q302">
 <!--IP=195.170.63.27-->
 <hr>
-<p><i><b>Paul, moscow, Russia, pach_ru@yahoo.com, 16:30 15.8.99 Вопрос 3.2 .</b></i></p>
+<p><i><b>Paul, moscow, Russia, pach_ru@yahoo.com, 16:30 15.8.99 <a href="../302-e.html">Вопрос 3.2</a>.</b></i></p>
 <p>Щербаков, да простится мне это высказывание, выпендривается. ("О, факультет цитат, тебя ни ценить не рвусь, ни винить...") Я - тоже. Хотя это, конечно не вся правда. (До Шодерло де Лакло я добрался исключительно благодаря Щ., не говоря уже о Перселле.)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=195.170.63.20-->
 <hr>
-<p><i><b>Paul, Moscow, Russia, pach_ru@yahoo.com, 16:12 15.8.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>Paul, Moscow, Russia, pach_ru@yahoo.com, 16:12 15.8.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Щербакова цитирую очень часто. Большое количество его песен знаю просто наизусть. Ситуации различны, но у М.Щ. находится цитата для любой. (Например, "...и если "да", какою ценой, а если "нет" - почему?...") Иногда цитирую целиком (любимая "утешительная" - "...Не печалься, брат мой гордый...").</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=195.37.210.130-->
 <hr>
-<p><i><b>michi, BRD, @fen.baynet.de, 17:43 31.7.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>michi, BRD, @fen.baynet.de, 17:43 31.7.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=212.46.201.224-->
 <hr>
-<p><i><b>Салют, Москва, 21:15 29.7.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>Салют, Москва, 21:15 29.7.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Цитировать Щербакова? А кого же еще цитировать... все мои друзья, знакомые с его творчеством делают это, и часто.<br>
 Примеры, конечно, не вспомнятся, да и нет каких-то любимых цитат. Когда-то что-то даже висело на стене... Будет к месту, процитирую.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=195.19.33.81-->
 <hr>
-<p><i><b>Олег, Москва, 3:22 19.7.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>Олег, Москва, 3:22 19.7.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>"Комментарии" и "расшифорвка" - две большие разницы. Описать мое мнение - комментарий. Разжевать построчно какое-либо стихотворение - расшифровка. И второе - вредно для восприятия произведения как _музыкального_.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q501">
 <!--IP=195.19.33.81-->
 <hr>
-<p><i><b>Олег, Москва, 3:14 19.7.99 Вопрос 5.1 .</b></i></p>
+<p><i><b>Олег, Москва, 3:14 19.7.99 <a href="../501-e.html">Вопрос 5.1</a>.</b></i></p>
 <p>Мир Щербакова так же един или мозаичен, как мечты и миры, создаваемые любым человеком внутри собственного разума. Они могут быть разными по содержанию, но одинаковыми эмоционально, и наоборот. Плюс реальность, на кою он также периодически обращает внимание.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=195.19.33.81-->
 <hr>
-<p><i><b>Олег, Москва, 3:10 19.7.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>Олег, Москва, 3:10 19.7.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>"Антигуманизм" Щербакова - это изрядная доля здорового цинизма в некоторых его песнях. Или во многих. И это правильно, хотя как раз эта сторона его творчества меня менее привлекает, чем, например, когда он о тех же вещах говорит с печалью - "и печали умножатся в сердце моем (оно и так уже хранит все горести земли)..." (Вот умудрился впихнуть две песни в одну цитату... :)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=195.19.33.81-->
 <hr>
-<p><i><b>Олег, Москва, 2:58 19.7.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>Олег, Москва, 2:58 19.7.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Очень люблю цитировать Щербакова, и к месту и не к месту, но только редко получается. Любимая цитата - "О том и речь, что мгла и тишина речам не помеха". Естественно, к месту только часть фразы до запятой :)<br>
 Мой друг, (что-то вроде Тэкльберри из Полицейской Академии :) кстати, очень любит другую цитату - "Неправда, война это очень славная вещь..."</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=195.19.33.81-->
 <hr>
-<p><i><b>Олег, Москва, 2:45 19.7.99 Вопрос 2.1 .</b></i></p>
+<p><i><b>Олег, Москва, 2:45 19.7.99 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Могу отождествить себя с песнями Щербакова только на эмоциональном уровне. Если так, то:<br>
 "После холодности безбрежной..."<br>
 Люди сухопутья</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=195.19.33.81-->
 <hr>
-<p><i><b>Олег, Москва, 2:33 19.7.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Олег, Москва, 2:33 19.7.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Мне не очень нравится ЧИТАТЬ Щербакова, в отличие, например, от менестрелей-толкиенистов и т.д. А вот слушать его очень приятно, и мне часто кажется, что неважно, что он поет, а важно - как.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q302">
 <!--IP=195.42.160.150-->
 <hr>
-<p><i><b>comte, 1:12 16.7.99 Вопрос 3.2 .</b></i></p>
+<p><i><b>comte, 1:12 16.7.99 <a href="../302-e.html">Вопрос 3.2</a>.</b></i></p>
 <p>Недоброжелатели, конечно, скажут "Крутизну свою показывает". И будут правы, но лишь отчасти. Дело не в стремлении блеснуть эрудицией. Мастерство литератора и в особенности поэта, при всей моей любви к содержанию, в очень большой степени определяется степенью владения формой. И самоутверждение (не надо говорить, что личности уровня Щ. в нем не нуждаются) через использование сложных форм вполне понятно. В общем случае уложить в размер длинное слово сложнее, чем короткое, а чужую фразу, да еще прозаическую - сложнее, чем слово. Вот, собс-но, и вся сермяжная правда (хотя, конечно, как оно на самом деле, знает только сам Щ. - и то если отдает себе отчет в своих мотивах).<br>
 Лично у меня любимая цитата у Щ. - "нет, я даже не волк, который homo homini est". Вывернул наизнанку, а получилось изящно.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=195.218.128.226-->
 <hr>
-<p><i><b>comte, 0:48 16.7.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>comte, 0:48 16.7.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>Г-н Ростиславский, вы совершенно напрасно пытаетесь переложить на оппонента бремя доказывания, что он не верблюд - я на такие провокации не поддаюсь. Напротив, это вам придется доказывать обратное, если, конечно, возьметесь. А понять и прочитать можно что угодно, даже код Windows в 16-ричном представлении - вопрос в том, насколько удобно и легко это делать. Постулат: истинное произведение поэтического искусства читается легко, без спотыканий и попыток представить, что же это должна быть за мелодия, чтобы _это_ укладывалось хоть в какой-то размер. Насчет четкости и однозначности смысла - возможны разные точки зрения, однако, по-моему, ни один исследователь творчества Щ., если он, конечно, исследователь, а не фанат, не станет отрицать склонности Щ. к формализму, к созданию произведений, в которых форма доминирует над содержанием. Это отмечалось и экспертами в ходе данного обсуждения.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q304">
 <!--IP=195.218.128.226-->
 <hr>
-<p><i><b>comte, 0:35 16.7.99 Вопрос 3.4 .</b></i></p>
+<p><i><b>comte, 0:35 16.7.99 <a href="../304-e.html">Вопрос 3.4</a>.</b></i></p>
 <p>Древние греки первичны по отношению к культуре Возрождения, не более чем. А если под "лермонтовизмом" вы понимаете романтизм, так это явление опять-таки не русское, а западная мода начала XIX века, которую если и связывать с конкретным именем, то Байрона, а не его российских подражателей (несмотря на мое уважение к Лермонтову как поэту). Но мы отклонились от темы.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>Schneider, (v, 11:13 15.7.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>Schneider, (v, 11:13 15.7.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>уважаемый М.Ростиславский хотел заметить по поводу предыдущего высказывания уважаемого comte...<br>
 Slovo "уважаемый" v zdeshnem nashenskom krugu zvuchit vsegda neskol'ko ugrozhajusche. Ko mne, vot, tak obychno уважаемый эксперт B. obraschaetsja. No eto tak, k slovu. K slovu "уважаемый".<br>
 <br>
@@ -1149,18 +1178,18 @@ To est' kazhdyj sero- i kareglazyj prosto objazan все творчество Щ
 Blag!</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=193.232.88.16-->
 <hr>
-<p><i><b>М.Ростиславский, 8:25 15.7.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>М.Ростиславский, 8:25 15.7.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>Я бы хотел заметить по поводу предыдущего высказывания уважаемого comte, что выражение "стихи непонятные и нечитабельные" - это форма, в общем-то, сокращенная, а полная, очевидно, должна звучать так: "я этих стихов не понимаю и читать не могу". Ну что ж, как говаривал незабвенный никогда Георг Лихтенберг: "Если при столкновении..." ну, и так далее, до слов "то всегда ли виновата книга?".<br>
 И еще - неудивительно, что песни Щербакова кажутся непонятными тому, кто на голубом глазу может писать про "заново просматривать все творчество по годам".</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q304">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>Bukmop, Город Город, Viktor.Schneider@klp.med.uni-muenchen.de, 12:25 13.7.99 Вопрос 3.4 .</b></i></p>
+<p><i><b>Bukmop, Город Город, Viktor.Schneider@klp.med.uni-muenchen.de, 12:25 13.7.99 <a href="../304-e.html">Вопрос 3.4</a>.</b></i></p>
 <p>русская классическая культура сама по себе вторична, как справедливо отмечал де Кюстин.<br>
 Nu, pervichny drevnie greki, da i te...<br>
 <br>
@@ -1169,46 +1198,46 @@ Nu, pervichny drevnie greki, da i te...<br>
 A chto do Щербаковa - русской классической литературой инициирован ves' ego Lermontovizm, to est' period proshedlyj.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=195.42.160.139-->
 <hr>
-<p><i><b>comte, 1:10 13.7.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>comte, 1:10 13.7.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>Господа, если у вас проблема с русскими драйверами (хотя непонятно, с чего) - пишите по-английски, а? Вроде любители Щ. - люди грамотные. А то этот "воляпюк" раздражает ужасно :(<br>
 По существу. Да, нуждаются. Любое произведение уровня сложности выше чем "посадил дед репку" нуждается в комментариях, и утверждать обратное - снобизм и пижонство. Абсолютной эрудицией не обладает никто, включая и самого Щ. Другое дело, действительно - не переусердствовать и не счесть аллюзией случайную ассоциацию. Т. е. в неявных случаях комментировать по типу "возможно, что..." А вообще если автор не хочет, чтобы его понимали неправильно, он должен сам писать комментарии к своим работам ;)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=195.42.160.139-->
 <hr>
-<p><i><b>comte, 0:58 13.7.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>comte, 0:58 13.7.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>Для подробного ответа надо заново просматривать все творчество по годам. А тенденцию на будущее уже отмечал - дальнейший уход в формотворчество, рост числа стихов непонятных и нечитабельных, выплескивание на публику странных результатов странных экспериментов. Если все это так, то лучший Щербаков уже позади, как это ни печально.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q501">
 <!--IP=195.218.251.140-->
 <hr>
-<p><i><b>comte, 0:52 13.7.99 Вопрос 5.1 .</b></i></p>
+<p><i><b>comte, 0:52 13.7.99 <a href="../501-e.html">Вопрос 5.1</a>.</b></i></p>
 <p>Да, как мозаичный, о чем не раз уже говорил. Хотя, конечно, некоторая общность имеется, но это общность формы (второго порядка, т.е. "формы формы"), а не содержания. В то же время разнообразие Щ. не бесконечно.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q304">
 <!--IP=195.218.251.140-->
 <hr>
-<p><i><b>comte, 0:48 13.7.99 Вопрос 3.4 .</b></i></p>
+<p><i><b>comte, 0:48 13.7.99 <a href="../304-e.html">Вопрос 3.4</a>.</b></i></p>
 <p>Щербаков космополитичен. Он человек европейской культуры, куда русская тоже включается как подмножество. Впрочем, русская классическая культура сама по себе вторична, как справедливо отмечал де Кюстин. Так что на вопрос о "специфически русском" возникает контрвопрос - а что это такое? Лапти, матрешки, водка? Все "специфически русское" не имеет к культуре, тем паче классической, никакого отношения. Если кто-то считает, что романы Достоевского могли родиться только на русской почве, пусть прочитает La tete d'un hombre Сименона. Всего-то навсего детективщик, а вот поди ж ты...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=195.218.251.140-->
 <hr>
-<p><i><b>comte, 0:31 13.7.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>comte, 0:31 13.7.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Редко. Недавно вот цитировал в качестве эпиграфа к статье о комп. игре ("Вот изобретенная не мною и не мне...") Я вообще редко пользуюсь цитатами - вероятно, потому, что сам умею выражать свои мысли ;) В общении с единомышленниками - почти никогда; чаще всего, пожалуй, прибегаю к цитированию, чтобы "уесть" оппонента. Наиболее популярные цитаты у меня - "Разруха не в клозетах, а в головах" (Булгаков) и "не дождетесь!" (Рабинович) ;)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q205">
 <!--IP=195.218.251.140-->
 <hr>
-<p><i><b>comte, 0:13 13.7.99 Вопрос 2.5 .</b></i></p>
+<p><i><b>comte, 0:13 13.7.99 <a href="../205-e.html">Вопрос 2.5</a>.</b></i></p>
 <p>Не буду повторять слова экспертов и свои собственные о том, что у Щербакова нет единого "лирического героя". Отмечу лишь, что дух времени существует и вполне характерен. Точнее, духов этих 2: дух тех, кто в этом времени прижился, от мелких челноков до чубайсов и березовских, и дух интеллектуалов, наблюдающих за всем этим копошением со стороны. Щербаков соответствует второму. В очередной раз нахально сошлюсь на себя:<br>
 <br>
 Теперь мы стали взрослыми,<br>
@@ -1224,123 +1253,123 @@ A chto do Щербаковa - русской классической литер
 Вот примерно это.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q202">
 <!--IP=195.218.128.142-->
 <hr>
-<p><i><b>comte, 23:46 11.7.99 Вопрос 2.2 .</b></i></p>
+<p><i><b>comte, 23:46 11.7.99 <a href="../202-e.html">Вопрос 2.2</a>.</b></i></p>
 <p>Как я уже отмечал, Щербаков непоследователен. В его песнях можно найти прямо противоположные идеи, тезисы и настроения. Конечно, в реальном мире тоже, но одно дело - несвязанная совокупность разнородных явлений как таковых, а другое - все это, пропущенное через сознание - художника? наблюдателя? - в этом случае ожидаешь увидеть уже некую систему, которую, собс-но, и называют "миром" того или иного автора. У Щербакова стройной системы нет... возможно, из-за того, что он слишком увлечен формой, что рождает этакие песни акына виртуальной реальности. Скорее творчество Ш. можно разбить на много миров, некоторые из которых мне чрезвычайно близки - мизантропические, социальные, некоторые - не близки, но интересны - скажем, "Кинематорграф" или "Колыбельная безумца", некоторые - просто пустое место, бессмысленный набор слов, и некоторые, наконец, вызывают резкое неприятие (любовная лирика процентов на 90 - тут дело в моих принципах, для большинства других поэтов у меня эта цифра=100% и еще некоторые).<br>
 <br>
 Что до моих собственных миров... Глобальных тем у меня две - несовершентво (мягко говоря) человека и противостояние между личностью и обществом. Конкретные идеи варьируются от произведения к произведению; в целом проза всегда пишется "под идею", стихи, как и у Щ., могут писаться "под форму" (но, в отличие от него, идея все равно будет присутствовать). Есть вещи-зарисовки, есть размышления и диалоги; там, где есть сюжет, он развивается классически, от завязки к кульминации, выпендрежных выкрутасов не люблю. Happy end считаю дурным тоном, но истребления героев из принципа, а не там, где этого требует логика сюжета, также не практикую. А вообще мое творческое кредо - "Я не инженер человеческих душ. Я их патологоанатом." Соответственно, жить в собственных мирах я бы не хотел ;)(за редким исключением) Ознакомиться с тем, как это все выглядит на практике, можете на сайте - я для удобства URL сюда вписал ;)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=195.218.128.142-->
 <hr>
-<p><i><b>comte, 23:13 11.7.99 Вопрос 2.1 .</b></i></p>
+<p><i><b>comte, 23:13 11.7.99 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Я слишком самостоятельная личность, чтобы жить в чьих-то мирах. И вообще, не следует смешивать литературу и жизнь. То, что представляет интерес как предмет искусства - весьма некомфортно для бытового использования. Интересна патология, а не норма.<br>
 <br>
 Что касается авторства... Мне нравятся многие песни Щербакова, в том числе и явно "не мои". Из наиболее "моих" навскидку вспоминаются "Мы, жители социума...", "Не жалко двуногих" - без 4 и 5 куплета, я ее так и пою, "О город слез!" - без последнего четверостишия.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=195.218.251.116-->
 <hr>
-<p><i><b>comte, 0:56 11.7.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>comte, 0:56 11.7.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Нет, как я уже сказал, до истинного антигуманизма Щербаков не дотягивает. "Человеческого, слишком человеческого" слишком много, хотя и меньше, чем у большинства поэтов. Попутно, кстати, поясню, что я понимаю под истинным антигуманизмом (к сторонникам которого отношу и себя): не мизантропию ради мизантропии - это так же смешно, как и гуманизм - а _беспощадную_ объективность.<br>
 И опору на разум, а не на эмоции.<br>
 <br>
 Боже меня упаси писать эссе и о гуманизме, и о пафосе. Разве что - с уничтожающей критикой того и другого.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q401">
 <!--IP=195.218.251.116-->
 <hr>
-<p><i><b>comte, 0:23 11.7.99 Вопрос 4.1 .</b></i></p>
+<p><i><b>comte, 0:23 11.7.99 <a href="../401-e.html">Вопрос 4.1</a>.</b></i></p>
 <p>Когда я слышу "этика", я хватаюсь за пулемет... Интересующихся отсылаю к своей статье "Конец каменного века" (см. на моем сайте). Кстати, заодно прорекламирую и повесть "Рильме гфурку" (там же), где также затрагивается темы этики и эстетики. Любопытно, что Бродский выводил первое из второго. Что касается Щ., то, как я выразился в свое время, у него нет единой позиции - он то восхитительно циничен, то отвратительно романтичен. Хотя, конечно, тут может быть путаница между автором и "лирическим героем". Но в любом случае романтическая составляющая не позволяет считать его "этически амбивалентным". Насчет постмодернизма - ох, не люблю я этих классификаторов... я убежденный рационалист и сторонник научной картины мира, но искусство - это не биология. Здесь нельзы делить на виды, потому как и фенотипы варьируются в очень широких пределах, в том числе - у одной и той же особи, и свободное скрещивание между кем и кем только не наблюдается...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=195.218.251.116-->
 <hr>
-<p><i><b>comte, 23:53 10.7.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>comte, 23:53 10.7.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Странный вопрос. Это по определению АП. Беда в том, что АП часто путают с КСП, жанром (опять же по определению)дилетантским и с фигурами масштаба Щ. несопоставимым. Песни Щ. невозможно орать у костра в не совсем трезвой компании под расстроенную гитару, за это ортодоксальные КСПшники его так и не любят.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=195.218.251.116-->
 <hr>
-<p><i><b>comte, 23:39 10.7.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>comte, 23:39 10.7.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Сходство между Щербаковым и Бродским мне представляется чисто внешним. Несмотря на то, что Щ. явно не избежал влияния Б., и его подражание ("...шар замедляет движенье...") просто превосходно - когда я это читал, так и слышал голос Бродского и его интонации, трудно было поверить, что это написал другой поэт ("на востоке, в желтой стране прищура" - очень "по-бродски" сказано, например). Но это - сознательное подражание. Собственное же творчество Щ., при всей его увлеченности игрой со сложными формами (в которой он, как и Бродский, периодически переигрывает), проникнуто иными интонациями. У Щ. - "я экзотик, я экзотику люблю", у Б. - "гимн баналу". Щ. так и не изжил в себе (вероятно, сознательно) мальчишеского романтизма, Б., я бы сказал  - серьезнее, циничнее и взрослее. Даже когда Щ. сам ударяется в мизантропию и цинизм (и эти его вещи мною наиболее любимы), он эстетствует, становится в красивую позу: "Не жалко двуногих. Кому их возня важна..." У Б. - просто и обыденно: "Я не люблю людей.", и это действует едва ли не сильнее красивой игры формами и иностранными словами.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=195.218.251.116-->
 <hr>
-<p><i><b>comte, 23:12 10.7.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>comte, 23:12 10.7.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Я не спец в области музыки, поэтому могу сказать лишь, что мелодии Щербакова красивы и оригинальны, как ни у какого из ныне живущих бардов (разумеется, не все). Но я уже говорил об опасности "уклона в гребенщиковщину", превалирования формы над содержанием. Каковую опасность я<br>
 отмечал еще в 1995, и с сожалением вижу, что мои опасения оправдались. Все больше становится стихов бессмысленных и откровенно нечитабельных как стихи. О том, какие ритмы у Щербакова первичны - стихотворные или музыкальные - это надо у него самого спросить. Не исключаю, что тут параллельный процесс.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=195.90.179.90-->
 <hr>
-<p><i><b>itbkonst, 14:53 10.7.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>itbkonst, 14:53 10.7.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>без сомнения, сам Щ. говорит, что он, в первую очередь, акцентируется на РАБОТЕ С ЯЗЫКОМ. Щ. с ним - языком, всячески экспериментирует.<br>
 Это и следует, видимо признать основной ипостасью и увлечением Щ.<br>
 Музыка уже находится немного сзади может быть....<br>
 Вообще же, признавая за Щ., неоспоримые музыкальные дарования, следует отметить, что в музыке его, преобладает языковая наклонность - он - Щ. - работает с ритмом может более, может у меня просто слух слоновий, но все равно, ритмика музыки Щербакова, неуловима и заслуженно непонятна, а ритмика в музыке - это, может быть то, что белее всего стоит ближе (...) к языку, с которым Щ. и любит экспериментировать.............</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q203">
 <!--IP=195.170.63.37-->
 <hr>
-<p><i><b>astr, 10:11 29.6.99 Вопрос 2.3 .</b></i></p>
+<p><i><b>astr, 10:11 29.6.99 <a href="../203-e.html">Вопрос 2.3</a>.</b></i></p>
 <p>Наблюдатели, исследователи. Щ. вынуждает нас относиться к своим песням, как к экспонатам своего мира, нуждающимся в изучении. А изучив их, недолго и обнаружить себя в этом мире (это к пред. вопросу).<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=195.170.63.37-->
 <hr>
-<p><i><b>astr, M, astr@shade.msu.ru, 9:56 29.6.99 Вопрос 2.1 .</b></i></p>
+<p><i><b>astr, M, astr@shade.msu.ru, 9:56 29.6.99 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>В этих песнях - МОЯ вселенная. В которой хочется быть "наблюдателем по эту сторону стекла", но часто приходится "наблюдать самого себя".</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=195.46.161.89-->
 <hr>
-<p><i><b>Татьяна, Москва (и не стремлюсь в Европу...), 18:12 17.6.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>Татьяна, Москва (и не стремлюсь в Европу...), 18:12 17.6.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>"to tut kak raz interesnee priroda ne oshibki kommentatora, a... otsutstvija              alljuzii" - да, конечно. Возможно, это был не самый удачный пример (за удачными было лень в СЗС обращаться). Но, тем не менее, я все же полагаю, что "специальной" расшифровки не требуется: хватает грамотности понять, что это отсылка - замечательно, а если не хватает - ну, что ж теперь делать... (а то, действительно, ассоциации возникают чуть ли не на пустом месте - не должен же автор отвечать за слушательские (мои, в частности) болезненные ассоциации!). Вот примерно это я и пыталась сказать...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>Viktor Schneider, cebe v dogonku, 11:44 17.6.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>Viktor Schneider, cebe v dogonku, 11:44 17.6.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>Da, zabyl izvinit'sja za ideju otkryt' publike na osmotrenie (obsuzhdenie i osmejanie)<br>
 Ответы экспертов: vrode kak neskromnodst' s moej storony. No ja kak raz, pomnitsja, po obsuzhdaemomu voprosu nichego i ne govoril, tak chto - ne za sebja radeju!..<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=138.245.151.227-->
 <hr>
-<p><i><b>Viktor Schneider, no gopoгe u3 Triera в Muenchen, ???, 11:40 17.6.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>Viktor Schneider, no gopoгe u3 Triera в Muenchen, ???, 11:40 17.6.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>Nu, kak vidno, bez  Ответов экспертов diskussii sovsem konec prishel (pravda, ne fakt, chto ne prishel by i s nimi, no esli chto-to izmenit' i mozhno "vnutrennimi silami", tak eto tol'ko eti oтветы zlo- (ili dobro-)poluchnye na mesto vodvorit'.)<br>
 Na poslednij (i davnij uzhe!) post posmeju vozrazit', chto esli<br>
 "в порыве расшифровочного рвения можно посчитать аллюзиями то, что ими и не является вовсе (например, как в случае знаменитого совпадения с Заболоцким по поводу собаки и знаков Зодиака)."<br>
 to tut kak raz interesnee priroda ne oshibki kommentatora, a... otsutstvija alljuzii. A ser'ezno - alljuzii zanjali prochnoe mesto v scherbakovskoj poetike (chert ego znaet, chto eto slovo znachit, no vse primenjajut, tak i ja ne huzhe) pozzhe, chem byla sobaka s Zodiakom, no zato prochno, uverenno, OSOZNANNO, i raz my znaem, chto otsylki k chuzh[d]ym textam est' i oni ne mnimye, to kak zhe ih i ne iskat'-to?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=195.46.161.12-->
 <hr>
-<p><i><b>Татьяна, Москва, 17:36 31.5.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>Татьяна, Москва, 17:36 31.5.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>Солидарна с Suzy. Кроме всего прочего, в порыве расшифровочного рвения можно посчитать аллюзиями то, что ими и не является вовсе (например, как в случае знаменитого совпадения с Заболоцким по поводу собаки и знаков Зодиака).</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=193.158.142.82-->
 <hr>
-<p><i><b>Viktor Schneider, odna Federativnaja Respublika, iof.tri@t-online.de, 16:31 30.5.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>Viktor Schneider, odna Federativnaja Respublika, iof.tri@t-online.de, 16:31 30.5.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>Suzy glagolit:<br>
 > Esli komu nado ob'yasnyat', > kto takoy Gloster, to emu<br>
 > slushat' Scherbakova dostavit<br>
@@ -1351,46 +1380,46 @@ to tut kak raz interesnee priroda ne oshibki kommentatora, a... otsutstvija allj
 Tak-to ono tak. No esli imet' smelost' predpolozhit', chto chelovek, znajuschij mnogoe, a otnjud' ne vse citaty stol' ochevidny, kak imja Glostera, to - v tom i vopros - stoit li tomu, kto raspoznal 60% citat kak chto-to samo soboj razumeescheesja (to est' ne zametiv, chto on chto-to tam raspoznaval), 10% - nahmuriv lob i naprjagshi pamjaqt', pro 20% ponjal, chto k chemu-to tut otsylajut, raskryvat' glaza na to, chto on ne uznal sam. Ja dumaju, da. Potomu chto te pervye 60% u raznyh ljudej raznye, a rasshirjat' svoju erudiciju - eto voobsche pohval'no. Drugoe delo, special'no li "pichkaet" MSch svoi pesni citatami, mol, "ugadaj-ka" ili oni organichnye "ob"ektivnye" realii ego proliteraturennogo mira? CHASCHE - vtoroe. No inogda i pervoe, i togda stoit "nakazyvat'" avtora tem, chto i ne probovat' razgadyvat' ego zagadki.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q502">
 <!--IP=192.114.80.181-->
 <hr>
-<p><i><b>Suzy, Haifa, Israel, suzy@actcom.co.il, 15:46 30.5.99 Вопрос 5.2 .</b></i></p>
+<p><i><b>Suzy, Haifa, Israel, suzy@actcom.co.il, 15:46 30.5.99 <a href="../502-e.html">Вопрос 5.2</a>.</b></i></p>
 <p>IMHO, lishnee eto. Esli ya hochu pochesat' mozgi putem ugadyvaniya citat, est' u menya na eto rodnoy klub ChGK. A Scherbakova ya slushayu s ABSOLYUTNO drugoy cel'yu. "Ya ezzhu k zhenschinam, da tol'ko ne za etim". On prosto ne na russkom pishet, vernee, BOLEE, chem na russkom - na metayazyke. Gloster - slovo metayazyka. Esli komu nado ob'yasnyat', kto takoy Gloster, to emu slushat' Scherbakova dostavit stol'ko zhe udovol'stviya, skol'ko chitat' "Ya pomnyu chudnoe mgnoven'ye" cheloveku, kotoryi ne znaet, chto takoe "ya", chto takoe "pomnyu" i chto takoe "chudnoe".</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q501">
 <!--IP=195.34.52.64-->
 <hr>
-<p><i><b>Kris, Moskva, 13:28 28.5.99 Вопрос 5.1 .</b></i></p>
+<p><i><b>Kris, Moskva, 13:28 28.5.99 <a href="../501-e.html">Вопрос 5.1</a>.</b></i></p>
 <p>Вопрос, мне кажется, с подковыркой. А как мы воспринимаем наш мир? И то, и другое, и третье, и четвёртое.<br>
 А творчество - часть этого мира? Или мир - часть творчества? И в том и в другом можно выделять какие угодно элементы и при этом воспринимать и то и другое как целое.<br>
 Но, мне кажется, камень преткновения здесь - в том, ктО создаёт этот мир. Наш мир, или мир своего творчества.<br>
 Автор, творец. Это целое. Всё остальное можно разбивать на кусочки, и склеивать обратно, как угодно. По большому счёту, конечно, и то и другое - целое, просто разноцветное.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q103">
 <!--IP=206.172.71.19-->
 <hr>
-<p><i><b>Борис, Монреаль, СBRCANADA@hotmail.com, 12:44 26.5.99 <a href="../103-e.html">Вопрос 1.3 </a>.</b></i></p>
+<p><i><b>Борис, Монреаль, СBRCANADA@hotmail.com, 12:44 26.5.99 <a href="../103-e.html">Вопрос 1.3</a>.</b></i></p>
 <p>Вот Тухманов, или Корнелюк - те<br>
 вот настоящие композиторы.<br>
 Еще Коля Мозговой есть, он "МЁй рЁдний край" написал, который народная артиска всего, чего можно София Ротару воспела...Этот тоже настоящий композитор.<br>
 ...Слушали бы Вы про "На недельку до второго", сэр!<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Смирнов, 20:26 25.5.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Смирнов, 20:26 25.5.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>К слову о 5-сложных размерах, о которых я писал и экспертном обсуждении.<br>
 <br>
 Никто не пробовал петь щербаковские "Прощание славянки" и "Стихи о прекрасной даме" на мотив "Зеленый поезд виляет задом"???<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q304">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 17:36 24.5.99 Вопрос 3.4 .</b></i></p>
+<p><i><b>Smirnov, 17:36 24.5.99 <a href="../304-e.html">Вопрос 3.4</a>.</b></i></p>
 <p>М.Ростиславский:<br>
 <br>
 Щербаков сказал, что ему Пелевин не нравится, т.к. (пересказываю) там, по его мнению, отсутствует объективная и внутренняя (персонажей) мотивация, в  силу которой развиваются события. Точная цитата: "Мне кажется, что там вообще ничего не происходит".<br>
@@ -1402,47 +1431,47 @@ Tak-to ono tak. No esli imet' smelost' predpolozhit', chto chelovek, znajuschij 
 Из примеров общих мест приведу "мотыльков, которые ползли не туда"  - почти идентичный образ у Щербакова и Пелевина ("Жизнь насекомых"). С этого, кажется, и начались разговоры об их сходстве.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q505">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 17:17 24.5.99 Вопрос 5.5 .</b></i></p>
+<p><i><b>Smirnov, 17:17 24.5.99 <a href="../505-e.html">Вопрос 5.5</a>.</b></i></p>
 <p>1. Опубликован 5 блок вопросов. Прошу высказываться.<br>
 <br>
 2. Мнения экспертов по этому и другим вопросам 5 блока опубликованы до поры не будут, чтобы дать всем возможность высказаться  независимо.<br>
 <br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q103">
 <!--IP=194.85.83.244-->
 <hr>
-<p><i><b>Pipopolamus, Moscow, 6:1 24.5.99 <a href="../103-e.html">Вопрос 1.3 </a>.</b></i></p>
+<p><i><b>Pipopolamus, Moscow, 6:1 24.5.99 <a href="../103-e.html">Вопрос 1.3</a>.</b></i></p>
 <p>Музыку Щербакова раннего периода (до 1991-92) можно назвать красивой, приятной и даже нетривиальной. Однако нетривиальность эта ощущается только относительно среднего уровня авторской песни. Да, музыка раннего Щербакова совершеннее, например, музыки Визбора или Высоцкого, но ни в коей мере не гениальнее Никитина или Клячкина (не говоря уже о профессиональных композиторах).<br>
 Видимо, сам Щербаков это понял,и году в 92-м у него появилась заметная тяга к усложнениям, подчас неоправданным. Иногда эти усложнения порождали генияльные мелодические и гармонические решения ("После холодности"), но нередко это приводило к тому, что музыка обилием диссонансов не помогала, а мешала восприятию стихов ("Баллада", "Калейдоскоп детский", "Это должно случиться").<br>
 К 95-му году Щербаков, вероятно, понял, что все же до настоящего композитора он не дотягивает и тогда он пошел по пути упрощения гармоний до уровня порой даже ниже уровня ранних песен (см. например "Красные ворота", "Рыба"). Конечно, многое осталось и от второго периода, как-то обилие диссонансов, воспринимаемых на слух как ошибки композитора, а не как тонкая игра на чувствах слушателя. По признанию самого Щербакова, в настоящее время музыке он уделяет значительно меньше внимания чем тексту.<br>
 Итог: Щербаков - автор с несомненно неплохими, по КСП-шным меркам, композиторскими задатками, но все время пытающийся доказать (самому себе), что способен на большее, чем на самом деле способен.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q304">
 <!--IP=195.34.55.207-->
 <hr>
-<p><i><b>М.Ростиславский, 12:29 23.5.99 Вопрос 3.4 .</b></i></p>
+<p><i><b>М.Ростиславский, 12:29 23.5.99 <a href="../304-e.html">Вопрос 3.4</a>.</b></i></p>
 <p>Ответ Юлии, мне кажется, может считаться самым оригинальным среди уже имеющихся ответов на все вопросы этого проекта. Нельзя ли только поточнее сформулировать какие-нибудь примеры, что ли, похожести ("с чисто языковой стороны", так скзать) раннего Пелевина на нынешнего Щербакова. Может быть, не только Юлия так думает, и еще имеются сторонники такой точки зрения?<br>
 Ответьте, не томите! ЧЕМ ПЕЛЕВИН НАПОМИНАЕТ ЩЕРБАКОВА?!<br>
 Ведь существует же содержательный ответ на этот вопрос, я верю в это! Не может не существовать!</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q304">
 <!--IP=195.2.81.163-->
 <hr>
-<p><i><b>Юлия, Москва, 19:2 20.5.99 Вопрос 3.4 .</b></i></p>
+<p><i><b>Юлия, Москва, 19:2 20.5.99 <a href="../304-e.html">Вопрос 3.4</a>.</b></i></p>
 <p>Русская классическая литература - это что именно? Серебряные век явно присутствует на цитатном и образном уровне, а вот золотой... Не в большей мере, чем у того же Бродского, с каковым Щербакова сравнивать - уже банальность.<br>
 P.S. Кстати, на мой взгляд, с чисто языковой стороны ранний Пелевин (когда рассказики писал) напоминает позднего(нынешнего в смысле) Щербакова...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=139.20.28.104-->
 <hr>
-<p><i><b>Дмитрий Полонский, Фрайберг, Германия, dpolon@bohr1.tbt.tu-freiberg.de, 15:27 16.5.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>Дмитрий Полонский, Фрайберг, Германия, dpolon@bohr1.tbt.tu-freiberg.de, 15:27 16.5.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Мне кажется, Щербаков вообще несколько ближе к "петербургской"<br>
 поэтической традиции, чем к "московской". Правда, я бы не взялся<br>
 с достаточной определенностью провести разграничительую черту<br>
@@ -1460,37 +1489,37 @@ P.S. Кстати, на мой взгляд, с чисто языковой ст
 петербургским явлением - но это уже детали :))<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=132.239.73.186-->
 <hr>
-<p><i><b>Epaminond, USA, Santa Barbara, Epaminond, 1:50 16.5.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>Epaminond, USA, Santa Barbara, Epaminond, 1:50 16.5.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>To Алексей Troy:<br>
 В любом множестве с нетривиальной метрикой есть точки,превосходящие по модулю не только среднюю величинy, но и как правило многие другие. И авторская песня здесь не самая корректная аналогия. А Щербаков  вообще-то скорее "антиавторская" песня. Прорваться сквозь исполненную узость личного восприятия к всеобъемлющей пустоте вселенского может только истинное одиночество... А авторская песня пусть себе топает в XXI век туристскими тропами, она для них очень даже классная штука. Я сам ее пою. :-)<br>
 <br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=128.113.60.32-->
 <hr>
-<p><i><b>Алексей, Troy, NY, USA, filin@rpi.edu, 17:15 12.5.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>Алексей, Troy, NY, USA, filin@rpi.edu, 17:15 12.5.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Да... Что касается отрывка из интервью В. Капгера, то первое, что приходит в голову - это то, с какой ненавистью думал о Пушкине "поэт" Иван Бездомный... Да и не удивительно - Щебаков настолько оторвался от своих, по-видимому, бывших коллег по цеху КСП или авторской песни, что спрашивать их мнение о нем просто некорректно... "А судьи кто?"<br>
 <br>
 С другой стороны, Капгер нечаянно дал Щербакову исключительно высокую оценку: каким же нужно обладать талантом, чтобы писать такие стихи (песни), имея целью не сам творческий процесс (который единственный, по моим представлениям, и интересует Щербакова), а фактически (по Капгеру) одурачивание группы индивидуумов!<br>
 И не стоит г-ну Капгеру беспокоиться - не есть творчество Щербакова - "авторская песня XXI века", ибо авторской песне в целом (или в среднем) никогда не достичь тех вершин, которые взял Щербаков.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=195.46.168.178-->
 <hr>
-<p><i><b>Татьяна, Москва, vrazhek@mail.ru, 16:12 11.5.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>Татьяна, Москва, vrazhek@mail.ru, 16:12 11.5.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Хотелось бы, конечно, сказать что-нибудь по поводу отрывка из интервью В. Капгера, но это было бы о Капгере, а не о Щербакове. А зачем?<br>
 В конце концов, любое мнение имеет право на существование...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=206.172.71.37-->
 <hr>
-<p><i><b>Борис, Монреаль, CBR.Centre@sympatico.ca, 0:1 11.5.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>Борис, Монреаль, CBR.Centre@sympatico.ca, 0:1 11.5.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Все предельно ясно. Помните мультик "Баба-Яга против!"<br>
 Там была чудная фраза: "ну почему он?!Почему он, а не я?!"<br>
 Читая капгеровские выпады невозможно этого не вспомнить.<br>
@@ -1508,20 +1537,20 @@ P.S. Кстати, на мой взгляд, с чисто языковой ст
 Как говорится, комментарии излишни.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 0:15 8.5.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>Smirnov, 0:15 8.5.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Насчет антигуманизма.<br>
 Вот тут мне прислали <a href="../../Praises/kapger.html"><br>
 отывок из интервью</a> с бардом Владимиром Капгером, где речь идет о Щербакове.<br>
 Есть кому-нибудь что-нибудь сказать по этому поводу?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=132.239.73.186-->
 <hr>
-<p><i><b>Epaminond, Santa Barbara, USA, Epaminond999, 16:56 7.5.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>Epaminond, Santa Barbara, USA, Epaminond999, 16:56 7.5.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Никакой игры нет и быть не может - все "по меньшей мере умеренно"<br>
 серьезно. По поводу Набокова -<br>
 по сравнению с человеком написавшим "Отвяжись я тебя, умоляю,/Вечер страшен, гул жизни затих/ Я беспомощен, я умираю/ От слепых наплываний твоих... и т д" "к литературе как к игре" относятся все остальные от Пушкина до Солженицына включительно (рамки, естественно, намеренно нелепые).<br>
@@ -1533,25 +1562,25 @@ P.S. Кстати, на мой взгляд, с чисто языковой ст
 <br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=195.19.5.140-->
 <hr>
-<p><i><b>Инна, Пущино, Россия, inna@vega.protres.ru, 11:44 1.5.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>Инна, Пущино, Россия, inna@vega.protres.ru, 11:44 1.5.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Мне кажется, что Щербаков близок к Набокову. Их роднит любовь к изящной словесности, отношение к литературе, как к интеллектуальной игре.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 1:8 29.4.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>Smirnov, 1:8 29.4.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Suzy:<br>
 Хороший у Вас набросок эссе про пафос. получается, что гуманизм состоит в понимании ценности и уникальности каждой  личности и трансляции этого понимания на аудиторию. Как бы получается, что гуманизма больше в том, чтобы нарисовать хороший портрет нищего, чем подать ему. (И действительно, может оказаться и ему полезнее.)<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=192.114.82.144-->
 <hr>
-<p><i><b>Suzy, Haifa, Israel, suzy@actcom.co.il, 15:11 28.4.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>Suzy, Haifa, Israel, suzy@actcom.co.il, 15:11 28.4.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Ehskiz ehsse o gumanisticheskom pafose Scherbakova.<br>
 <br>
 					"Esli iskusstvo chemu-to i uchit..., to imenno chastnosti chelovecheskogo suschestvovaniya. Buduchi naibolee drevney - i naibolee bukval'noy - formoy chastnogo predprinimatel'stva, ono vol'no ili nevol'no pooschryaet v cheloveke ego oschuschenie individual'nosti, unikal'nosti, otdel'nosti, - prevraschaya ego iz obschestvennogo zhivotnogo v lichnost'.		Brodskiy, Nobelevskaya lekciya.<br>
@@ -1606,17 +1635,17 @@ Suzy.<br>
 <br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=198.133.22.72-->
 <hr>
-<p><i><b>vilsha, USA, vilshans@us.ibm.com, 23:1 26.4.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>vilsha, USA, vilshans@us.ibm.com, 23:1 26.4.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Poeticheskaja sostavljajuschaja preobladaet. No muzykal'naja tem ne menee neot'emlema, osobenno v stihah slozhnoj ili eksperimental'noj formy.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=193.158.142.86-->
 <hr>
-<p><i><b>Schneider, tam zhe, iof.tri@t-online.de, 17:33 26.4.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>Schneider, tam zhe, iof.tri@t-online.de, 17:33 26.4.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>vrazhek<br>
 Ну, положим, Щербакова тоже об<br>
 этом "анониме" спрашивали, и в<br>
@@ -1636,10 +1665,10 @@ Mne tozhe. Tak my vyjasnili Hаши суждения (voistinu непредвз�
 Tak i ja o tom otvetstvoval, chto vot, namedni obschalsja, lichno, ne cherez interv'ju, ne na kassete... I - s kuda menee primechatel'nymi v inyh otnoshenijah, no kuda bolee neprimirimymi - Scherbakovonenavistnikami (sobstvenno, Lanc... Nekto "nenavistnikom" ne javljaetsja, a prosto kriticheski podhodit - imeet pravo, mjagko govorja) vzhive obschalsja esche mnogo-mnogo raz.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=195.46.162.179-->
 <hr>
-<p><i><b>vrazhek, Москва, 16:36 25.4.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>vrazhek, Москва, 16:36 25.4.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>Шнейдеру:<br>
 Ну, положим, Щербакова тоже об этом "анониме" спрашивали, и в ответ тоже не комплименты звучали... Это, по-моему, тот самый случай, когда под существующую антипатию подбираются аргументы, которые кажутся существенными. Особенно если вспомнить предыдущие претензии (в том самом интервью: типа, никто не может сказать, что где-то там со Щербаковым водку пил, и т.п. - по тусовочно-кспшному принципу, да? Очень серьезно...). Это, все же,  претензии к человеку и его поведению, а не к тому, что он делает... "Ремесло" - уже серьезнее, но это общие слова.<br>
 А на самом деле, все эти разборки совершенно не мешают - мне, например, - с удовольствием слушать песни обоих...<br>
@@ -1650,36 +1679,36 @@ Tak i ja o tom otvetstvoval, chto vot, namedni obschalsja, lichno, ne cherez int
 Вот в том и беда, что и поклонники, и противники верят на слово, так сказать, лирическому герою :-) (вот и получается: у одних - "гений", а у других - монстр какой-то, лежит, понимаете ли, мерзавец, на траве и, глядя в небеса, свистит мотив бессмысленный...)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 15:54 25.4.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>Smirnov, 15:54 25.4.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>Шнейдеру<br>
 Интервью-то было даже не 2, а 4. Анонимность одного из них действительно "умилительна" - впрочем, по поводу остальных Грызлов говорил, что они и по жизни куда менее известны, чем этот один.<br>
 <br>
 И вообще. Ремеслом он, понимаешь, занимается. Сказал же человек: "Оно уже теперь, сейчас почти разорвалось..." - а кому-то все Искусства подавай. Чем может, тем и занимается, вот.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=193.158.142.86-->
 <hr>
-<p><i><b>Da Schneider ja, Schneider, Germanija, zimnjaja skazka, 15:44 25.4.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>Da Schneider ja, Schneider, Germanija, zimnjaja skazka, 15:44 25.4.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>с неким деятелем АП,          пожелавшим остаться анонимным (ih, pomnitsja, dazhe dva bylo - teh interv'ju i, sledovatel'no, dejatelej, tol'ko anonimnost' odnogo iz nih osobenno umilitel'na - kto zhe eto pel: "Ja segodnja zanjat - ja hudozhnik", v samom dele, zagadka! tak vot, imenno s nim) govoril ja vchera-s', i on v ocherednoj raz sformuliroval svoju nedoljubov' k predmetu nashej diskussii: "Chelovek, kotoryj mozhet zanimat'sja iskusstvom, zanimaetsja remeslom."</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q303">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 15:36 25.4.99 Вопрос 3.3 .</b></i></p>
+<p><i><b>Smirnov, 15:36 25.4.99 <a href="../303-e.html">Вопрос 3.3</a>.</b></i></p>
 <p>М.Ростиславский:<br>
 По поводу откуда взялись ангелы - это вопрос, с одной стороны, к Чайке Джонатану Ливингстону, а с другой - к Веничке Ерофееву.<br>
 Но образ этот у Щербакова действително необычен, как необычно и то, что хоть один из "экспертов" его заметил. Следует отдать должное наблюдательности Ольги Мамыкиной.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=195.2.77.81-->
 <hr>
-<p><i><b>М.Ростиславский, Москва, 8:53 25.4.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>М.Ростиславский, Москва, 8:53 25.4.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>Суть их позиции в том, что русский язык, русская речь НЕ ставится на первое место, а ставится что-либо другое, даже очень привлекательное - ну там, общность людей, высшие или какие еще моральные ценности, даже и сама любовь, и дружба, и много есть еще в нашей жизни хорошего и душевного...<br>
 Но - не язык. Они не ощущают глубинной и основополагающей связи точного употребления слов - с истиной. В таком случае они либо вообще не воспринимают Щербакова, либо воспринимают в основном ранние песни, в которых проблематика отношения слова и сущности еще не была столь ясна, как позже, в песнях 90-х годов.<br>
 И еще я так непредвзято скажу: эти люди не любят работать, а любят впитывать всей душой. (Речь идет, конечно, только о песнях). А тут надо вкалывать, все время вкалывать.<br>
@@ -1688,68 +1717,68 @@ Tak i ja o tom otvetstvoval, chto vot, namedni obschalsja, lichno, ne cherez int
 (Это я говорю совершенно непредвзято!)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q403">
 <!--IP=195.2.78.196-->
 <hr>
-<p><i><b>М.Ростиславский, Москва, 0:53 25.4.99 Вопрос 4.3 .</b></i></p>
+<p><i><b>М.Ростиславский, Москва, 0:53 25.4.99 <a href="../403-e.html">Вопрос 4.3</a>.</b></i></p>
 <p>Как-то мои друзья целый день провели в обществе молодого московского бизнесмена, мотались по Москве поразным делам, и, чтобы не было скучно, слушали тогдашнюю новинку - девятую кассету (с "Волком" "Кинематографом-2", "Инициалами" и проч.)<br>
 Молодой человек слушал очень внимательно, спросил, кто это все поет, и в какой-то момент пробурчал:"Что это у него все песни о любви да о любви..."</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q304">
 <!--IP=195.2.78.196-->
 <hr>
-<p><i><b>М.Ростиславский, Москва, 0:46 25.4.99 Вопрос 3.4 .</b></i></p>
+<p><i><b>М.Ростиславский, Москва, 0:46 25.4.99 <a href="../304-e.html">Вопрос 3.4</a>.</b></i></p>
 <p>Русской классической литературой, говорите? XIX веком, то есть? Это - вряд ли. Не было тогда такого языкового опыта.<br>
 С другой стороны, Щербаков кажется мне исключительно национальным поэтом. Непереводимым ни на другой язык, ни на другую культуру. (В отличие от совершенно стертого и какого-то несуществующего Пелевина, кстати).<br>
 А вот в чем эта специфика - скорее всего, в понимании того, что предпосылкой достойного поведения и отношения к жизни является здоровая безнадежность.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q303">
 <!--IP=195.2.67.15-->
 <hr>
-<p><i><b>М.Ростиславский, Москва, 12:32 24.4.99 Вопрос 3.3 .</b></i></p>
+<p><i><b>М.Ростиславский, Москва, 12:32 24.4.99 <a href="../303-e.html">Вопрос 3.3</a>.</b></i></p>
 <p>Я совершенно согласен с Олей Мамыкиной - и для самые загадочные, самые притягивающие и самые непонятные - это образы этих самых ангелов (вестников, мастеров, врачей и т.д.). По моему представлению, не должно быть в мире Щербакова этих "они" - только "я" (ну, не только, но в основном), да "ты" (что то же самое и совсем другое одновременно - как в зеркале).<br>
  А тут такие... К чему? Почему они возникают снова и снова, эти ангелы? ЧЕГО или КОГО они посланники?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q302">
 <!--IP=195.2.67.15-->
 <hr>
-<p><i><b>М.Ростиславский, Москва, Россия, 12:17 24.4.99 Вопрос 3.2 .</b></i></p>
+<p><i><b>М.Ростиславский, Москва, Россия, 12:17 24.4.99 <a href="../302-e.html">Вопрос 3.2</a>.</b></i></p>
 <p>Дело не в цитате, а в том культурном смысле, который стоит за ней. Поскольку задача Щ. - предельно точное называние, обозначение этого смысла, то с этой точки зрения абсолютно все равно, цитата сказана или не цитата - главное, чтобы слова были точно употреблены.<br>
 Поэтому меня часто доводит до... доводит, в общем, игра фанов Щербакова в "угадай цитату". Т.е., игра в "на что похоже это сочетание слов". О смысле речи нет. Хотя для Щербакова, повторяю, цель - смысл.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q205">
 <!--IP=195.2.67.15-->
 <hr>
-<p><i><b>М.Ростиславский, Москва, Россия, 12:1 24.4.99 Вопрос 2.5 .</b></i></p>
+<p><i><b>М.Ростиславский, Москва, Россия, 12:1 24.4.99 <a href="../205-e.html">Вопрос 2.5</a>.</b></i></p>
 <p>Нет, я считаю, что "дух времени" существует - а куда бы он делся, интересно? Другое дело, что его одной фразой довольно трудно определить... Для меня Щербаков (ну да, его "лирический герой", оно же "центральное сознание") - это ощущение и переживание границы, четкой и однозначной границы. Границы между "есть" и "нет", между истиной и всем остальным, которого и много, и нет совсем. Похоже, что нам не очень могут помочь предыдущие ответы на этот вопрос.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q203">
 <!--IP=132.239.73.186-->
 <hr>
-<p><i><b>Epaminond, 0:25 21.4.99 Вопрос 2.3 .</b></i></p>
+<p><i><b>Epaminond, 0:25 21.4.99 <a href="../203-e.html">Вопрос 2.3</a>.</b></i></p>
 <p>Не стоит думаю, тут мудрить - реалисты мы, реалисты, и никто больше. Не "социалистические" правда, и даже не "критические", но в общем та же "натуральная школа",<br>
 Все из той же "гоголевской шинели" в общем наш постмодернист, да и откуда, собственно, ему еще быть? Язвительность тут явно переоценивается, ироничность -<br>
 тоже в общем умеренная. Романтичность, "счастье" - тут я пас. Ум, наблюдательность - само собой, на высочайшем уровне. А КАК ЖЕ ИНАЧЕ? Но все же - нормальные сысли нормального человека... Ничего такого экстраординарного. Да ничего больше и не должно быть.<br>
 <br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 18:10 20.4.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>Smirnov, 18:10 20.4.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>Vrazhek:<br>
 Да нет, вроде не придумали. Точнее, за себя я отвечаю, а Б.Жукова сами спрашивайте. Вроде правдоподобно пишет. Тем более вот есть <a href="../../FOM/iska.html">интервью</a> с неким деятелем АП, пожелавшим остаться анонимным - на тему именно амбивалентности и гуманизьма.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=195.46.168.76-->
 <hr>
-<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 16:47 20.4.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 16:47 20.4.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>Сергей Кабанов: Ага, и вообще "ничего у французов с нами общего нет..."<br>
 <br>
 Вот наконец-то довелось увидеть мнение Настоящего Бескомпромиссного Фаната. Нет тут на него Д. Быкова. А это жаль...<br>
@@ -1757,10 +1786,10 @@ Tak i ja o tom otvetstvoval, chto vot, namedni obschalsja, lichno, ne cherez int
 Теперь - по делу. Честно говоря, никаких дискуссий, кроме данной (и предыдущей, но здесь же),  я не знаю, и обсуждать творчество Щербакова с теми, кому оно не близко, мне не доводилось. То есть, конечно, людей таких я видела, но чтобы они как-то подробно объясняли свое неприятие - не помню (объяснения типа "да ну его...", полагаю, не в счет). Вы это точно не придумали, про дискуссии? А заодно про амбивалентность, антигуманизм и постмодернизм?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=193.158.142.81-->
 <hr>
-<p><i><b>Viktor Schneider, Deutschland (ueber Alles - nad dymom, nad Krymom), iof.tri@t-online.de, 16:16 20.4.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>Viktor Schneider, Deutschland (ueber Alles - nad dymom, nad Krymom), iof.tri@t-online.de, 16:16 20.4.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p><br>
 Dlja С. Кабановa<br>
 Несомненно правы считающие что с Щербаковым авторская песня    закончилась как жанр.Ja protestuju-protestuju-protestuju i k sledujuschemu pis'mu uzhe, verojatno, pridumaju, pochemu imenno.<br>
@@ -1768,88 +1797,88 @@ Dlja С. Кабановa<br>
 Razve sovershenstvo byvaet tol'ko kakim-to odnim, a ne raznym? Ja slyshal mnenie (kak i vse), chto nevozmozhna poezija posle Osvencima. No chto ona nevozmozhna posle, skazhem, Petrarki - ne slyhal. Tak MSch pretenduet na rol' vtorogo ili pervogo dlja avtorskoj pesni?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 22:56 19.4.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Smirnov, 22:56 19.4.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>С.Кабанов:<br>
 Вы упомянули трио Радоль. Впервые слышу о таком... что, впрочем, неудивительно. Очень хотелось бы послушать. У них какие-нибудь диски есть или там что?<br>
 Вражек: Нет, никто пока что никому не надоел, в особенности Вы. разве что я вот самому себе надоел, сам сделал гестбуку и сам  пишу. Я сам себе, понимаешь, правитель, я сам себе народ.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=195.46.161.227-->
 <hr>
-<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 16:32 19.4.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 16:32 19.4.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Если я еще не надоела хозяину сайта, я позволю себе еще немного поговорить о цитатах. Вот я, отвечая на другой вопрос, употребила выражение "можно продолжать перечислять". При этом совершенно искренне забыла, что это цитата. А когда меня осенило (благодаря экспертам и присутствующим, неоднократно использовавшим те же слова в том же порядке), я еще долго вспоминала, откуда это... Так каким же образом я могу вспомнить, когда и почему та или иная цитата употребляется?..</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 18:36 18.4.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>Smirnov, 18:36 18.4.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>Простите, Сергей, неправильно указал ваш инициал в предыдушей записи.<br>
 Наверно, все же всех тех, кто любит песню, но не любит Щербакова, не надо в идиоты записывать. Может, они еще образумятся :-)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 18:30 18.4.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>Smirnov, 18:30 18.4.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>А.Кабанов:<br>
 А что, требуются какие-то дополнительные объяснения про коммунистов-гадов и "про жулик"? Судя по Вашим словам, Вы  про данные объекты уже составили исчерпывающее мнение...<br>
 (Только не надо затевать здесь дискуссию по поводу того, гады коммунисты или нет. Все равно ведь все повычеркиваю.)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q402">
 <!--IP=195.242.9.17-->
 <hr>
-<p><i><b>Сергей Кабанов, 18:12 18.4.99 Вопрос 4.2 .</b></i></p>
+<p><i><b>Сергей Кабанов, 18:12 18.4.99 <a href="../402-e.html">Вопрос 4.2</a>.</b></i></p>
 <p>Не все люди любят стихи, гитару и соответственно Щербакова им не освоить. Жанр своеобразный. Увы.<br>
 Те же, кто на ты с жанром и не любит творчество нашего автора - идиоты (это непредвзято)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=195.242.9.17-->
 <hr>
-<p><i><b>Сергей Кабанов, 18:8 18.4.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>Сергей Кабанов, 18:8 18.4.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>В конце концов мы заслужили Щербакова. Не знаю чем, но заслужили. Может быть все потому, что без него никак. Сидишь на его концерте, ждешь - сейчас все объяснит, про Сербию, про банк-жулик, про коммунистов-гадов, про дочку непутевую, про нищую старушку  - а Он ни слова. Он о другом. Он создает Красоту. Такая работа... "Главное дело моей жизни" - сказал М.К. на концерте в Питере 17 апреля 1999 года.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q203">
 <!--IP=195.242.9.17-->
 <hr>
-<p><i><b>Сергей Кабанов, 18:0 18.4.99 Вопрос 2.3 .</b></i></p>
+<p><i><b>Сергей Кабанов, 18:0 18.4.99 <a href="../203-e.html">Вопрос 2.3</a>.</b></i></p>
 <p>Когда мы слушаем Щербакова мы умны, наблюдательны,ироничны, не боимся называть вещи своими именами, и в то же время мы романтичны и счастливы.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=195.242.9.17-->
 <hr>
-<p><i><b>Сергей Кабанов, 17:55 18.4.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Сергей Кабанов, 17:55 18.4.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>У Щербакова поэзия первична. Это очевидно. Поэтому музыка не всегда дотягивает. Но уж если дотягивает! Песгя все-таки не разделима, это целостное создание.<br>
 Об авторском исполнении. А где хорошие исполители песен Щербакова? Иногда такое услышишь, волосы дыбом. Единственное талантливое исключение - трио "Радоль". Следовательно, авторское исполнение архиважно, архиважно, батенька... :-))</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=195.242.9.17-->
 <hr>
-<p><i><b>Сергей Кабанов, 17:49 18.4.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>Сергей Кабанов, 17:49 18.4.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Несомненно правы считающие что с Щербаковым авторская песня закончилась как жанр. Достигнуто совершенство, дальнейшее развитие бессмысленно и невозможно. Все прочее скучно. Будем любить прошлых авторов, за то что они были плацдармом.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q103">
 <!--IP=195.242.9.17-->
 <hr>
-<p><i><b>Сергей Кабанов, 17:40 18.4.99 <a href="../103-e.html">Вопрос 1.3 </a>.</b></i></p>
+<p><i><b>Сергей Кабанов, 17:40 18.4.99 <a href="../103-e.html">Вопрос 1.3</a>.</b></i></p>
 <p>Музыка Щербаков гениальна. Она, подчас, проста, но это простота первого взгляда, простата свойственная достигнутому совершенству. Помню, как я был поражен в позднем детстве, осознав, что "Конотоп" ("Я очень ясно вижу..") не играется на блатных!!! А каковы стилизации!!!  "Балтийские волны" - слышны лучшие руссские вальсы, "Прощание славянки" знаминитый марш, "Билли" -кантри чистой воды. И приэтом ни ноты заимствований, ни дай бог плагиата! Это другая музыка.Это отраженные автором вальсы, марши и кантри!<br>
 Теперь об аранжировках. Ох уж эти аранжировки! Неуклюжие, иногда откровенно смешные. Эти барабаны...И это при такой гитаре! Избавь нас от этих аранжировок ( обращаясь то ли к богу, то ли к самому Автору...)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 16:43 18.4.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>Smirnov, 16:43 18.4.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Да о ком угодно существуют полярные суждения (включая Амундсена, не тем будь помянут :-)<br>
 Это не повод...<br>
 Впрочем, римские императоры, как правило, как раз и были ничем не примечательными личностями, гибшими в результате заговоров. Может, в этом дело?<br>
@@ -1857,25 +1886,25 @@ Razve sovershenstvo byvaet tol'ko kakim-to odnim, a ne raznym? Ja slyshal mnenie
 Ближе к селенью, т.е. к теме вопроса. Не кажется ли вам, господа, что первая реакция на данный вопрос - "да, конечно, цитируем!!!", а потом начинаешь вспоминать, что и когда - и ничего не вспоминается. Или это только у меня, как его бишь, склероз?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=195.46.162.159-->
 <hr>
-<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 16:1 18.4.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 16:1 18.4.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Смирнов:<br>
 Это зря - о непримечательности имп. Павла. Личность вполне примечательная, хотя бы потому, что существуют полярно противоположные суждения о нем... (что-то мне это напоминает :) )</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 15:14 18.4.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>Smirnov, 15:14 18.4.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>Извиняюсь, в предыдущих записях неправильно писался месяц. Сейчас вроде все д.б. нормально.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=132.239.73.186-->
 <hr>
-<p><i><b>Epaminond, 22:12 17.3.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>Epaminond, 22:12 17.3.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>To Smirnov:<br>
 Да, но песня (как и молитва :-)) все жанр более консервативный, она должна более-менее легко восприниматься на слух и с первого раза (пускай и совсем не так как при повторении). Литературный прорыв Бродского конечно значительнее, что и неудивительно - профессия все-таки другая, но аналогичных мыслей он у меня все-таки никогда не вызывал - в стихах конечно много еще чего можно наделать (наверно, даже больше чем в прозе при всей условности границ). Но так, чтобы это пелось - навряд ли, эта граница, кажется, вполне осязаема.<br>
 <br>
@@ -1883,10 +1912,10 @@ Razve sovershenstvo byvaet tol'ko kakim-to odnim, a ne raznym? Ja slyshal mnenie
 <br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 19:58 17.3.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>Smirnov, 19:58 17.3.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>Epaminond:<br>
 Не далее как совсем недавно я в точности то же самое где-то читал применительно к Бродскому. Что после него в поэзии невозможно если не все, то почти все.<br>
 Язык - он, к счастью или к несчастью, развивается. Иначе бы, действительно, наборы слов, являющиеся поэтическими произведениями, исчерпались бы очень быстро из чисто комбинаторных соображений.<br>
@@ -1894,60 +1923,60 @@ Razve sovershenstvo byvaet tol'ko kakim-to odnim, a ne raznym? Ja slyshal mnenie
 Как говорил А.Битов, еще будет бронзовый век, железный, оловянный, деревянный, картофельный, г.... - и все это еще будет искусство...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 19:50 17.3.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>Smirnov, 19:50 17.3.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Кстати об императоре Павле. Никто не обращал внимания, что по отношению к данному царю слово "император" выглядит естественно, как ни к какому иному. Вот Николай 1 - явно царь, а Павел - именно император. Странно. Ничем в общем не замечательная личность.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=195.46.162.53-->
 <hr>
-<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 18:15 17.3.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 18:15 17.3.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Случается. Хронически. В ситуациях, где это уместно. Или не очень. Насчет роли цитат рассуждать не возьмусь - а какую роль вообще играют цитаты в речи? Можно сказать "В Питере", можно - "на брегах Невы", а можно - "в городе, где задушен был император Павел". Грамотный человек все равно поймет, о чем речь, даже если он не слышал Щербакова (это я к тому, что цитаты, мол, употребляются только для опознания "своих" - это чушь, они употребляются исключительно там и тогда, где и когда приходят в голову; тем более, что мне, в частности, не свойственно приходить в буйный восторг только потому, что некто разделяет мои вкусы).</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=132.239.73.186-->
 <hr>
-<p><i><b>Epaminond, Santa-Barbara, USA, Epaminond999@yahoo.com, 18:10 17.3.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>Epaminond, Santa-Barbara, USA, Epaminond999@yahoo.com, 18:10 17.3.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>"Вы тоже звали этот век железным" (И.Бродский). Нет, он пока еще "бронзовый", так что до "каменного" далеко. По поводу "феномена Щербакова в контексте национальной и мировой культуры" можно также высказать возможно на первый взгляд противоположные<br>
 суждения - это и ее кульминация и ее вырождение. Явление -необычайной, нечеловеческой силы (для меня - изумительнее Бродского, которого многие небезосновательно всовывают в прокрустово ложе "привития английских форм к советско-русскому дичку" и т д; Щербаков же просто "cочинитель песен" и... собственно все, но КАКОЕ); c другой - в каком-то смысле - полностью лишенное будущего, поразительно МАЛООБЕЩАЮЩЕЕ, не обещающее почти ничего. Не знаю, можно ли сказать - лучше уже нельзя (безвкусно и наивно как- то), но ДАЛЬШЕ ТОЧНО НЕКУДА. Окуджавой, Галичем, Высоцким etc. можно быть "даже лучше" Щербакова, но все это возможно только ДО него.<br>
 После него даже ими же быть только "хуже". Я ужасно хочу здесь ошибиться, но куда больше боюсь оказаться правым.<br>
 Поживем-увидим...Или услышим. Или не поживем. ;-) Намеренно ограничиваю себя полным отсутствием деталей и не утилизирую процессы в песенной культуре - ЛЮБЫЕ ПРИМЕРЫ БЫЛИ БЫ ЗДЕСЬ НЕХАРАКТЕРНЫ, поэтому касательно нашей эпохи отмечу лишь, что Щербаков АБСОЛЮТНО своевременен, хотя и абсолютно незлободневен, как и положено "по рангу" всякому великому художнику. Хотелось бы думать, что не последнему, но все-таки, похоже уже некуда тянуть этот смертельно тяжелый груз "накопившихся ценностей". Во всяком случае - "аудиовоспринимаемую", то есть как бы еще одномерную его проекцию.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q203">
 <!--IP=195.46.163.124-->
 <hr>
-<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 17:40 17.3.99 Вопрос 2.3 .</b></i></p>
+<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 17:40 17.3.99 <a href="../203-e.html">Вопрос 2.3</a>.</b></i></p>
 <p>Ну, то, что язвительность просыпается с нечеловеческой силой - это точно :-)<br>
 Если же слегка серьезней (что трудно) - смею надеяться, что остаюсь собой. За "мы" отвечать не берусь, тем более, что (опять к вопросам придираюсь, такая-сякая) и пример не очень удачный: попробуйте прийти в романтическое настроение от песни "Один ответственный квартиросъемщик..." (Визбор), либо ощутить взрыв иронии, слушая "На пороге наших дней..." (Ким) (можно продолжать перечислять...). Впрочем, не думаю, что можно вообще найти автора (достойного), в творчестве которого доминирует 1 (одна) эмоция.<br>
 Я не думаю, что это самое "заражение" вообще имеет место быть. Скорее уж навешиваются собственные эмоции на песни, чем-то созвучные в данный момент (и совершенно необязательно, что эмоция, испытанная при слушании,  была заложена при сочинении или исполнении).</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 21:5 16.3.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>Smirnov, 21:5 16.3.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>Шнейдер:<br>
 Серебряный век - это же не только символисты, да?<br>
 <br>
 Что до собственно вопроса. Я не знаю, как там на самом деле было, но дошел до нашей глубинки слух о каком-то невероятном успехе проекта "Песни нашего века", который какие-то там места во всех  хит-парадах позанимал. Вот вам и "процесс в восприятии словесной, песенной культуры".</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=134.76.10.79-->
 <hr>
-<p><i><b>Schneider, iof.tri@t-online, 10:11 16.3.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>Schneider, iof.tri@t-online, 10:11 16.3.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>Ne pomnju, chto ja na eto "expertno" naotvechal, da i nevazhno, no Новый виток Серебрянного века eto navrjad li: vsja "filosofskaja podlozhka" Scherbakova - sovremennaja i dazhe modnaja (togda kak simvolisty ot Kanta i Solov'eva pljasali).</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q401">
 <!--IP=132.239.73.186-->
 <hr>
-<p><i><b>Epaminond, Santa-Barbara, Epaminond999@yahoo.com, 23:47 15.3.99 Вопрос 4.1 .</b></i></p>
+<p><i><b>Epaminond, Santa-Barbara, Epaminond999@yahoo.com, 23:47 15.3.99 <a href="../401-e.html">Вопрос 4.1</a>.</b></i></p>
 <p>a) Упрощенная формула будет выглядеть так - творчество, точнее в данном случае только искусство, призвано выразить скушные резонерские "этические ценности" через радующие или хотя бы трогающие чувства и мысли "эстетические решения".<br>
 Дальше утрировать некуда - получится только "красота спасет мир" или "гений и злодейство - две вещи несовместимые", но уже не так изящно. Обвинять М. Щербакова в "этической амбивалентности" - это вопиющий вздор (по меньшей мере невежественное недоразумение).  Вопрос "Если да, то почему?" мне  показался бы тут гораздо более уместным. Как-то даже неловко оправдывать... Помнится :-), не только Бродского и Набокова, но даже Пушкина и Тургенева в чем-то подобном в свое время тоже обвиняли...<br>
 Давайте еще сравним "Войну и мир" и евангелие для детей в пользу последнего, тем более, что и сам уважаемый Автор с нами с удовольствием согласился бы...<br>
@@ -1957,61 +1986,61 @@ Razve sovershenstvo byvaet tol'ko kakim-to odnim, a ne raznym? Ja slyshal mnenie
 <br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 20:58 15.3.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>Smirnov, 20:58 15.3.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Еще о цитатах, часто используемых в разных ситуациях<br>
 "Надо менять глаза"<br>
 "Если вам все равно, то, конечно..." (с обоими вариантами окончания)<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=195.46.162.206-->
 <hr>
-<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 17:11 15.3.99 Вопрос 2.1 .</b></i></p>
+<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 17:11 15.3.99 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Это свойственно хорошим песням вообще (за исключением автобиографических, но в случае Щербакова это не очень актуально), под настроение - разные песни очень легко "присваиваются". Точно НЕ хочется относить к себе "Нет, нет! Твое ли дело - облака...", "Ей двадцать восемь лет..." - видимо, не имеет смысла объяснять, почему. Трудно в этом плане говорить о песнях, так сказать, абстрактного содержания и явно "сделанных", но их и воспринимаешь как "безделушку ручной работы".</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=195.46.162.206-->
 <hr>
-<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 16:44 15.3.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 16:44 15.3.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Вопрос вызывает такие же ощущения, как и предложение расставить отметки - в предыдущем блоке вопросов. Не думаю, что стоит эти ощущения описывать подробно...</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=195.46.162.206-->
 <hr>
-<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 16:39 15.3.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>vrazhek, Москва, vrazhek@mail.ru, 16:39 15.3.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Насколько мне известно, дискуссии по выявлению границ жанра благополучно завершились ничем, то есть каждый остался при своем мнении. Какой же смысл тогда выяснять, кто к нему имеет отношение, а кто нет? Вообще, нужна ли эта система распознавания "свой-чужой" - людям, которые, полагаю, не считают себя ограниченными?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q301">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 14:40 15.3.99 Вопрос 3.1 .</b></i></p>
+<p><i><b>Smirnov, 14:40 15.3.99 <a href="../301-e.html">Вопрос 3.1</a>.</b></i></p>
 <p>Я очень люблю цитату: "Впредь будет рождаться не здесь". Применяется в тех случаях, когда человек или еще кто оказывается виноват только тем, что оказался в неподходящее время в неподходящем месте. Студент, заваливший экзамен, потому что нос его преподу не понравился. Деревце, растущее посередине единственного пригодного места под палатку. Да кто угодно. Сами виноваты :-/</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=38.26.22.126-->
 <hr>
-<p><i><b>Masha, New York, USA, maria_shkolnik@yahoo.com, 23:42 14.3.99 Вопрос 2.1 .</b></i></p>
+<p><i><b>Masha, New York, USA, maria_shkolnik@yahoo.com, 23:42 14.3.99 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Песня, в которой я бы хотела  представить себя действующим лицом - "Видал бы кто, каким я львом..." (в роли дамы, соответственно). А самая "Моя" песня - "Chinatown". С Артемом Казанцевым в объяснениях не тягаться,  но почему-то мне всегда, когда её слушаю, вспоминается моя поездка в Венецию на три часа - совершенно нереальный город, который вот-вот, кажется снесет ветром... И потом, ритм у этой песни завораживающий - Мой ритм.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=195.46.163.47-->
 <hr>
-<p><i><b>jxz, Москва, jxz@chat.ru, 17:33 14.3.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>jxz, Москва, jxz@chat.ru, 17:33 14.3.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Простите за некоторое вторжение в данную дискуссию, но, по моему мнению, несколько неправильно сравнивать различных как по стилистике, так и по направлению приложения своих творческих сил поэтов. Вопрос не корректен изначально.Вы пробовали когда- нибудь сравнивать Бальмонта с Пушкиным ?</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q202">
 <!--IP=132.239.73.186-->
 <hr>
-<p><i><b>Epaminond, 15:43 14.3.99 Вопрос 2.2 .</b></i></p>
+<p><i><b>Epaminond, 15:43 14.3.99 <a href="../202-e.html">Вопрос 2.2</a>.</b></i></p>
 <p>"Мир, созданный Щербаковым", при всей несимпатичности для меня этого выражения, это тот самый идеальный "интерфейс", который стирает границу между внутренним миром и внешним, который часто то в утешение, то "в огрубление" называют "реальным". И вообще-то я серьезно отношусь к словам МКЩ о себе как о "cугубом реалисте".<br>
 Слава богу, так оно и есть. :-)<br>
 <br>
@@ -2020,51 +2049,51 @@ Razve sovershenstvo byvaet tol'ko kakim-to odnim, a ne raznym? Ja slyshal mnenie
 Сам я не творю миров, их уже и без меня наделано предостаточно, я их только открываю и обживаю. :-)<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=194.85.4.250-->
 <hr>
-<p><i><b>Таня, Санкт-Петербург, tanushahome@hotmail.com, 5:34 13.3.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>Таня, Санкт-Петербург, tanushahome@hotmail.com, 5:34 13.3.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Смотря что определять жанром авторской песни. Если считать, что любой человек, взявший в руки гитару и исполняющий свои стихи под свою же музыку - "бард", тогда рамки жанра становятся необъятно широкими и в них, конечно же, можно поместить творчество Михаила Константиновича. Но, по моему личному мнению, дух его песен (стихов) несколько иной, чем "классиков" бардовской песни (при всех их отличиях) между собой. Он - поэт другой эпохи, чем Визбор, Окуджава, Клячкин и многие, многие другие любимые мною поэты. Мир Щербакова мир поколения тех, кому сейчас 20-30, мир тех, кому в лицо "черный ветер засвистел, нещадно дуя", кто, хотя и знает, "что где-то есть на свете горы, куда так просто убежать", но какую-то последнюю боль, радость и надежду не может принести ни друзьям, ни горам, кто прекрасно понимает, что "нет гарантии нигде и ни на что". И нам его песни говорят: "не зазря ломал ты крылья, не напрасно ты страдал, и бесился от бессилья, и от холода рыдал".</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=128.100.80.107-->
 <hr>
-<p><i><b>Smirnov, 20:24 12.3.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Smirnov, 20:24 12.3.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Имеют место быть некоторые реформы в бедном моем чертоге. Теперь тут поболее скриптов и поменее статических страниц. Если будет тормозить, smirnov@video-collage.com<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=194.90.81.31-->
 <hr>
-<p><i><b>Леонид Энтин, Israel, leo@colordesk.com, 9:34 8.3.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>Леонид Энтин, Israel, leo@colordesk.com, 9:34 8.3.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Бродский - великий лирический поэт. (Только забыть на секунду тонны всемирно-исторической чепухи, наговоренной вокруг его поэзии, в том числе им самим.) Трагически утраченная любовь стала главной темой его и человеческой, и поэтической судьбы.<br>
 Щербаков, может быть, оттого и ограничивает себя песней (жанром неличным, всеобщим, где границы между автором и персонажем размыты), хотя его поэзия и стремится перерасти эти рамки, что чужд лирике.<br>
 <br>
 Я люблю замечать сходство с Бродским только в стихах, написанных до Бродского. Поэтому возможные параллели у Щербакова стараюсь игнорировать. Правда, в текстах последних песен, присланных в мэйл-листе, это сделать уже трудно. :)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=192.114.82.143-->
 <hr>
-<p><i><b>Suzy, 11:29 7.3.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>Suzy, 11:29 7.3.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Porazmyslivshi:<br>
 voobsche-to na ves'ma drevnem yazyke - ivrite - "pesnya" i "poeziya" - slova odnokorennye i ochen' blizkie po zvuchaniyu. A 'poet' v doslovnom perevode voobsche "sochinitel' pesen". Tak chto zhanr Scherbakova - eto vozvraschenie k istoku, navernoe.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <!--IP=195.128.128.13-->
 <hr>
-<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 0:52 7.3.99 Вопрос 2.4 .</b></i></p>
+<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 0:52 7.3.99 <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>Мне кажется, что подобные личности появляются всегда в тот момент, когда классическая форма искусства, из которой идут его корни, перестает развиваться. Тогда<br>
 появляется личность, которая создает новую  форму, или новый уровень этой формы, или слияние двух или нескольких форм.<br>
 В данном случае, мне кажется, произошло слияние (или начало происходить), исчерпывающей себя авторской песни с классической поэзией, которая после Бродского, по-моему, тоже уже не развивалась.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q203">
 <!--IP=195.128.128.13-->
 <hr>
-<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 0:34 7.3.99 Вопрос 2.3 .</b></i></p>
+<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 0:34 7.3.99 <a href="../203-e.html">Вопрос 2.3</a>.</b></i></p>
 <p>Так ведь это же опять какие-то рамки.<br>
 В недостатке иронии и самоиронии Щербакова явно не упрекнешь. С романтикой сложнее, потому что, лично я  считаю, что Щербаков романтик очень высокого уровня, но<br>
 его романтика не похожа на романтику Визбора. Поэтому, вот, по визборовскому пониманию романтики сравнивать - бесполезно.<br>
@@ -2072,49 +2101,49 @@ voobsche-to na ves'ma drevnem yazyke - ivrite - "pesnya" i "poeziya" - slova odn
 Сложно отвечать на конкретные вопросы, применительно к такому многогранному явлению, однозначно. Все время кажется, что это как-то суживает это явление, ограничивает его восприятие.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q202">
 <!--IP=195.128.128.13-->
 <hr>
-<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 0:19 7.3.99 Вопрос 2.2 .</b></i></p>
+<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 0:19 7.3.99 <a href="../202-e.html">Вопрос 2.2</a>.</b></i></p>
 <p>Кажется, что я уже почти ответил на этот вопрос в прошлом пункте. Хорошо ощущаю.<br>
  Безусловно ничего не принимается, кроме нагорной проповеди. Мир Щербакова сложен и не однозначен, в нем есть радость и горе, добро и зло, - какая уж тут однозначность? Другое дело, что в этом мире живет лирический герой - романтик нашего времени. И в теле этого героя очень интересно и красиво по этому миру перемещаться.<br>
 А вообще для меня этот и предыдущий пункты практически неделимы.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=195.128.128.13-->
 <hr>
-<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 0:7 7.3.99 Вопрос 2.1 .</b></i></p>
+<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 0:7 7.3.99 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Не могу выделить конкретных произведений. Как-то оно все переплетается и дополняет друг дружку. Такой, знаете ли, неделимый мир. Естественно, что в процессе восприятия этого мира, примеряешь ситуации, которые в нем моделируются, на себя. В большей части случаев очень удачно подходят. Но это к 90 процентам песен относится. Мне кажется нет смысла их все перечислять, тем более, что в зависимости от настроения, предпочтительными оказываются разные песни.<br>
 <br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <!--IP=195.128.128.13-->
 <hr>
-<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 23:54 6.3.99 Вопрос 1.4 .</b></i></p>
+<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 23:54 6.3.99 <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Загонять личность масштаба Щербакова в рамки какого-либо жанра, - занятие весьма неблагодарное, а главное бессмысленное.<br>
 Наверно есть люди, которые могут как-то профессионально определить жанр, в котором творит Щербаков. Но мне кажется, что это не особо существенно, ибо для слушающих его людей, ради которых, собственно, все и делается, это ничего не изменит, а остальным и вовсе безразлично.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q103">
 <!--IP=195.128.128.13-->
 <hr>
-<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 23:45 6.3.99 <a href="../103-e.html">Вопрос 1.3 </a>.</b></i></p>
+<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 23:45 6.3.99 <a href="../103-e.html">Вопрос 1.3</a>.</b></i></p>
 <p>Очень хорошо воспринимаю музыку. В большинстве случаев, правда, хотелось бы без синтезатора, но бывают варианты, когда синтезатор является очень удачной находкой.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <!--IP=195.128.128.13-->
 <hr>
-<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 23:37 6.3.99 Вопрос 1.2 .</b></i></p>
+<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 23:37 6.3.99 <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Бродский.  Не могу проанализировать, как литературовед, почему, но, как-то ассоциативно, у меня так получается.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=195.128.128.13-->
 <hr>
-<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 23:31 6.3.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>dzeh, Rossiya, Samara, dzeh@samara.net, 23:31 6.3.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Поэтическая составляющая явно доминирует. Музыкальная очень хороша, но во многих случаях представляет собой музыкальные стилизации. Но, как мне кажется, применительно к песенному жанру это не является ни достоинством, ни недостатком.<br>
 Многие не могут читать Бродского, поскольку не могут поймать ритм его стихов. Естественно, музыка, как акомпанимент, дает возможность автору расширить диапазон используемых ритмов и размеров, поскольку размер не ищется аудиторией на листе бумаги (что сложнее), а подается ей в хорошо воспринимаемом виде.<br>
 Это позволяет экспериментировать с размером без риска, что аудитория его не почувствует. Хорошицй вариант, прогрессивный.<br>
@@ -2123,50 +2152,50 @@ voobsche-to na ves'ma drevnem yazyke - ivrite - "pesnya" i "poeziya" - slova odn
 Всегда приятнее получить вещь из первых рук. А уж потом, если у тебя есть такая необходимость, - интерпретируй ее хоть до посинения.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <!--IP=216.41.39.179-->
 <hr>
-<p><i><b>Ингвалл, Бостон, США, ingwall@thecia.net, 21:58 6.3.99 Вопрос 2.1 .</b></i></p>
+<p><i><b>Ингвалл, Бостон, США, ingwall@thecia.net, 21:58 6.3.99 <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Существует, и не одна. После очень многих песен хочется вздохнуть, улыбнуться, как дурак, и сказать: А это же про меня песня... Или, если песня от первого лица - моя песня.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q103">
 <!--IP=216.41.39.179-->
 <hr>
-<p><i><b>Ингвалл, Бостон, США, ingwall@thecia.net, 21:52 6.3.99 <a href="../103-e.html">Вопрос 1.3 </a>.</b></i></p>
+<p><i><b>Ингвалл, Бостон, США, ingwall@thecia.net, 21:52 6.3.99 <a href="../103-e.html">Вопрос 1.3</a>.</b></i></p>
 <p>Насчет аранжировки не могу не привести мнение одного моего друга, когда я дал ему послушать "Диктант" (Аз есмь церемониймейстер). Реакция была такая: "Синтезатор - зачем, зачем, зачем, зачем?..."</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <!--IP=216.41.39.179-->
 <hr>
-<p><i><b>Ингвалл, Бостон, США, ingwall@thecia.net, 21:47 6.3.99 Вопрос 1.1 .</b></i></p>
+<p><i><b>Ингвалл, Бостон, США, ingwall@thecia.net, 21:47 6.3.99 <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Я, собственно, в музыке разбираюсь не сильно, гораздо меньше, чем в стихосложении, но мне кажется несомненным то, что<br>
 оригинальные и нестандартные размеры требуют оригинальных и нестандартных музыкальных решений. Насчет авторского исполнения - да, конечно. Песни Щербакова, как он их исполняет - этот бесстрастный, несколько отрешенный тон - слушаются несколько по-иному, чем когда их исполняют другие. Не скажу, что лучше, но по-другому</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <hr>
-<p><i><b>Сюзи, Вопрос 1.2 .</b></i></p>
+<p><i><b>Сюзи, <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Добавлю. Первые ощущения - Лорелея, Крысолов и Томас Лермонт из аглицкой легедыб утащенный королевой фей на 7 лет на предмет монопольного прослушивания его песен (как бы даже предок Лермонтова)</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q205">
 <hr>
-<p><i><b>Сюзи, Вопрос 2.5 .</b></i></p>
+<p><i><b>Сюзи, <a href="../205-e.html">Вопрос 2.5</a>.</b></i></p>
 <p>Щербаков вневременен (но со всем поэтическим, эстетическим и этическим опытом человечества в бэкграунде), тем и хорош.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q204">
 <hr>
-<p><i><b>Сюзи, Вопрос 2.4 .</b></i></p>
+<p><i><b>Сюзи, <a href="../204-e.html">Вопрос 2.4</a>.</b></i></p>
 <p>Уже сказано в какой-то статье на сайте. Fin de ciecle.<br>
 Новый виток Серебрянного века. Плюс виртуализация окружающего мира.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q203">
 <hr>
-<p><i><b>Сюзи, Вопрос 2.3 .</b></i></p>
+<p><i><b>Сюзи, <a href="../203-e.html">Вопрос 2.3</a>.</b></i></p>
 <p>Когда я слушаю Щербакова, испытываю нечто вроде религиозного экстаза, если учесть, что моя религия - стих, в основном русский. Даже радуюсь иногда, когда он сбивается - подтверждение, что он все же живой человек, а не какой-нибудь... каратель межзвездный... Нахальная самоцитата:<br>
 Вот так, по холмам Галилеи,<br>
 надвинув плейер набекрень,<br>
@@ -2178,29 +2207,29 @@ voobsche-to na ves'ma drevnem yazyke - ivrite - "pesnya" i "poeziya" - slova odn
 дороже здравого ума.<br></p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <hr>
-<p><i><b>Борис Львин, Россия/США, borislvin@hotmail.com, Вопрос 1.2 .</b></i></p>
+<p><i><b>Борис Львин, Россия/США, borislvin@hotmail.com, <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Из современных -  для меня Щербаков ассоциируется больше всего с Бродским. Не как поэт, а как полноценно свободный человек. В отличие от большинства наших современников, которые все в той или иной степени - рабы господствующих предрассудков.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q101">
 <hr>
-<p><i><b>Борис Львин Вопрос 1.1 .</b></i></p>
+<p><i><b>Борис Львин <a href="../101-e.html">Вопрос 1.1</a>.</b></i></p>
 <p>Согласен с мнением Виктора Шнейдера - бОльшая часть песен Щербакова с листа воспринимается плохо. Исключительно авторский продукт. Особенно в "послегитарный" период - не хотел бы даже и пробовать слушать других исполнителей.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q202">
 <hr>
-<p><i><b>Сюзи Вопрос 2.2 .</b></i></p>
+<p><i><b>Сюзи <a href="../202-e.html">Вопрос 2.2</a>.</b></i></p>
 <p>Вообще говоря, программиста роднит с поэтом то, что оба они творят миры из слова, хоть и на разных языках.<br>
 Возможно, поэтому это мой мир; точнее, границы моего мира сильно расширились за те полгода - год, что я читаю и слушаю его.<br>
  Мир же Щербакова с реальным миром соотносится, видимо, как трехмерный - с плоскостью или даже линией, поэтому, выходя в пространство  Щербакова, очень трудно возвращаться (втискиваться) обратно.</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q202">
 <hr>
-<p><i><b>Smirnov Вопрос 2.2 .</b></i></p>
+<p><i><b>Smirnov <a href="../202-e.html">Вопрос 2.2</a>.</b></i></p>
 <p>На отзыв Ольги Мамыкиной<br>
 Действительно, самое интересное в жизни после любви - это смерть.<br>
 Про "проводника жизни" - это песня "Предположим". Он, значит, вестник, сиречь нарочный, а мы-то мертвенькие уже...<br>
@@ -2208,27 +2237,27 @@ voobsche-to na ves'ma drevnem yazyke - ivrite - "pesnya" i "poeziya" - slova odn
 Впрочем, это на самом деле тоже тест</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <hr>
-<p><i><b>Сюзи Вопрос 2.1 .</b></i></p>
+<p><i><b>Сюзи <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Моих - на каждом диске по 4-5 минимум; на данный момент самые мои - Кордебалет и Другое обращение к герою; про меня - "не ищу ответа, не жду возврата - \Она на то и молодость, что крылата"</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <hr>
-<p><i><b>Сюзи , , , 12:17 6.3.99, Вопрос 1.2 .</b></i></p>
+<p><i><b>Сюзи , , , 12:17 6.3.99, <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Да пожалуй еще Теннисон</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q104">
 <hr>
-<p><i><b>Сюзи , , , 12:15 6.3.99, Вопрос 1.4 .</b></i></p>
+<p><i><b>Сюзи , , , 12:15 6.3.99, <a href="../104-e.html">Вопрос 1.4</a>.</b></i></p>
 <p>Я воспринимаю его как поэта от Бога - и в нашем поколении крупнейшего</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q102">
 <hr>
-<p><i><b>Сюзи , , , 12:2 6.3.99, Вопрос 1.2 .</b></i></p>
+<p><i><b>Сюзи , , , 12:2 6.3.99, <a href="../102-e.html">Вопрос 1.2</a>.</b></i></p>
 <p>Серебрянный век - обогащенный опытом 20 века;<br>
 Грин - в ранних вещах;<br>
 где-то даже Державин (в том смысле в каком с ним же сравнивали и Бродского);<br>
@@ -2236,9 +2265,9 @@ voobsche-to na ves'ma drevnem yazyke - ivrite - "pesnya" i "poeziya" - slova odn
 Эдгар По</p>
 </div>
 
-<div class="gb-entry">
+<div class="gb-entry q201">
 <hr>
-<p><i><b>Smirnov , Toronto, chtob emu pusto bylo, smirnov@video-collage.com, 1:32 6.3.99, Вопрос 2.1 .</b></i></p>
+<p><i><b>Smirnov , Toronto, chtob emu pusto bylo, smirnov@video-collage.com, 1:32 6.3.99, <a href="../201-e.html">Вопрос 2.1</a>.</b></i></p>
 <p>Вы спрашиваете, какая песня про меня? Да вот: "проснулся утром весь в слезах, лицо помыл, таблетку съел..." и т.д.<br>
 <br>
 Это вообще-то тест. Пишите вволю, открыто.<br></p>
