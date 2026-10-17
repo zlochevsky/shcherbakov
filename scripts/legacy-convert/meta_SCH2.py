@@ -650,7 +650,9 @@ def polish(body):
     body = re.sub(r'\s*<b>([А-ЯЁ«][^<:.]{1,30})</b></p>\n\n<p class="cont">',
                   r'</p>\n\n<p class="speaker"><b>\1.</b> ', body)
     body = wrap_comments(body)
-    body = '\n\n'.join(unbold_inner(p) if p.startswith('<p') else p for p in body.split('\n\n'))
+    # (вопрос — полужирный целиком, его не трогаем)
+    body = '\n\n'.join(unbold_inner(p) if p.startswith('<p') and not p.startswith('<p class="question">') else p
+                         for p in body.split('\n\n'))
     # комментарий-реплика с переводом строки внутри курсива — второй абзац красной строкой
     body = re.sub(r'(<p class="speaker"><i>.*?)</p>', lambda m: m.group(1).replace('<br>', '</i></p>\n\n<p class="cont"><i>')
                   + '</p>', body)
@@ -667,8 +669,7 @@ def polish(body):
 _GB = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../content/SCH2/gb/gb-index.md')
 GB_COUNT = {}
 if os.path.exists(_GB):
-    for q in re.findall(r'Вопрос (\d)\.(\d)', open(_GB).read()):
-        k = f'{q[0]}0{q[1]}'
+    for k in re.findall(r'class="gb-entry q(\d+)"', open(_GB).read()):   # записи помечены вопросом
         GB_COUNT[k] = GB_COUNT.get(k, 0) + 1
 
 

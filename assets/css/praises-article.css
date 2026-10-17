@@ -216,45 +216,157 @@ main ol {
 	height: .6em;
 }
 
-/* «Обсуждение» «Щ-2» (SCH2/gb): ссылка gb/index.html#q103 со страницы вопроса показывает только ответы на этот вопрос —
-   записи помечены классом qNNN, строка-пояснение p.gb-q видна только под якорем (:target) */
-.gb-q {
+/* «Обсуждение» «Щ-2» (SCH2/gb) — без скриптов, по якорям: записи (div.gb-entry.qNNN) идут по времени;
+   #qNNN — только ответы на вопрос NNN, сверху его текст (div.gb-qhead.qNNN); #byq — все записи по вопросам
+   (flex + order, перед каждым вопросом — его текст). Ссылки — в панели div.gb-nav вверху и со страниц вопросов */
+.gb-qhead,
+.gb-filtered {
 	display: none;
 }
-.gb-q:target {
-	display: block;
+.gb-qhead {
+	margin: 2.5em 0 0;
+}
+.gb-qhead p {
+	text-indent: 0;
 	font-weight: bold;
 }
-main:has(#q101:target) .gb-entry:not(.q101),
-main:has(#q102:target) .gb-entry:not(.q102),
-main:has(#q103:target) .gb-entry:not(.q103),
-main:has(#q104:target) .gb-entry:not(.q104),
-main:has(#q201:target) .gb-entry:not(.q201),
-main:has(#q202:target) .gb-entry:not(.q202),
-main:has(#q203:target) .gb-entry:not(.q203),
-main:has(#q204:target) .gb-entry:not(.q204),
-main:has(#q205:target) .gb-entry:not(.q205),
-main:has(#q301:target) .gb-entry:not(.q301),
-main:has(#q302:target) .gb-entry:not(.q302),
-main:has(#q303:target) .gb-entry:not(.q303),
-main:has(#q304:target) .gb-entry:not(.q304),
-main:has(#q401:target) .gb-entry:not(.q401),
-main:has(#q402:target) .gb-entry:not(.q402),
-main:has(#q403:target) .gb-entry:not(.q403),
-main:has(#q501:target) .gb-entry:not(.q501),
-main:has(#q502:target) .gb-entry:not(.q502),
-main:has(#q503:target) .gb-entry:not(.q503),
-main:has(#q504:target) .gb-entry:not(.q504),
-main:has(#q505:target) .gb-entry:not(.q505),
-main:has(#q601:target) .gb-entry:not(.q601),
-main:has(#q701:target) .gb-entry:not(.q701),
-main:has(#q702:target) .gb-entry:not(.q702),
-main:has(#q703:target) .gb-entry:not(.q703),
-main:has(#q704:target) .gb-entry:not(.q704),
-main:has(#q705:target) .gb-entry:not(.q705),
-main:has(#q802:target) .gb-entry:not(.q802) {
+.gb-qhead ol.subq {
+	margin-bottom: 1em;
+}
+.gb-qhead p.gb-experts {
+	font-weight: normal;
+}
+.gb-nav p {
+	text-indent: 0;
+}
+main:has(.gb-anchor:target) .gb-filtered,
+main:has(#byq:target) .gb-qhead {
+	display: block;
+}
+main:has(#byq:target) .gb-entries {
+	display: flex;
+	flex-direction: column;
+}
+.gb-entries > * {
+	order: 9999;
+}
+.gb-entries > .q101 { order: 1010; }
+.gb-entries > .gb-qhead.q101 { order: 1009; }
+.gb-entries > .q102 { order: 1020; }
+.gb-entries > .gb-qhead.q102 { order: 1019; }
+.gb-entries > .q103 { order: 1030; }
+.gb-entries > .gb-qhead.q103 { order: 1029; }
+.gb-entries > .q104 { order: 1040; }
+.gb-entries > .gb-qhead.q104 { order: 1039; }
+.gb-entries > .q201 { order: 2010; }
+.gb-entries > .gb-qhead.q201 { order: 2009; }
+.gb-entries > .q202 { order: 2020; }
+.gb-entries > .gb-qhead.q202 { order: 2019; }
+.gb-entries > .q203 { order: 2030; }
+.gb-entries > .gb-qhead.q203 { order: 2029; }
+.gb-entries > .q204 { order: 2040; }
+.gb-entries > .gb-qhead.q204 { order: 2039; }
+.gb-entries > .q205 { order: 2050; }
+.gb-entries > .gb-qhead.q205 { order: 2049; }
+.gb-entries > .q301 { order: 3010; }
+.gb-entries > .gb-qhead.q301 { order: 3009; }
+.gb-entries > .q302 { order: 3020; }
+.gb-entries > .gb-qhead.q302 { order: 3019; }
+.gb-entries > .q303 { order: 3030; }
+.gb-entries > .gb-qhead.q303 { order: 3029; }
+.gb-entries > .q304 { order: 3040; }
+.gb-entries > .gb-qhead.q304 { order: 3039; }
+.gb-entries > .q401 { order: 4010; }
+.gb-entries > .gb-qhead.q401 { order: 4009; }
+.gb-entries > .q402 { order: 4020; }
+.gb-entries > .gb-qhead.q402 { order: 4019; }
+.gb-entries > .q403 { order: 4030; }
+.gb-entries > .gb-qhead.q403 { order: 4029; }
+.gb-entries > .q501 { order: 5010; }
+.gb-entries > .gb-qhead.q501 { order: 5009; }
+.gb-entries > .q502 { order: 5020; }
+.gb-entries > .gb-qhead.q502 { order: 5019; }
+.gb-entries > .q503 { order: 5030; }
+.gb-entries > .gb-qhead.q503 { order: 5029; }
+.gb-entries > .q504 { order: 5040; }
+.gb-entries > .gb-qhead.q504 { order: 5039; }
+.gb-entries > .q505 { order: 5050; }
+.gb-entries > .gb-qhead.q505 { order: 5049; }
+.gb-entries > .q601 { order: 6010; }
+.gb-entries > .gb-qhead.q601 { order: 6009; }
+.gb-entries > .q701 { order: 7010; }
+.gb-entries > .gb-qhead.q701 { order: 7009; }
+.gb-entries > .q702 { order: 7020; }
+.gb-entries > .gb-qhead.q702 { order: 7019; }
+.gb-entries > .q703 { order: 7030; }
+.gb-entries > .gb-qhead.q703 { order: 7029; }
+.gb-entries > .q704 { order: 7040; }
+.gb-entries > .gb-qhead.q704 { order: 7039; }
+.gb-entries > .q705 { order: 7050; }
+.gb-entries > .gb-qhead.q705 { order: 7049; }
+.gb-entries > .q802 { order: 8020; }
+.gb-entries > .gb-qhead.q802 { order: 8019; }
+main:has(#q101:target) .gb-entries > :not(.q101),
+main:has(#q102:target) .gb-entries > :not(.q102),
+main:has(#q103:target) .gb-entries > :not(.q103),
+main:has(#q104:target) .gb-entries > :not(.q104),
+main:has(#q201:target) .gb-entries > :not(.q201),
+main:has(#q202:target) .gb-entries > :not(.q202),
+main:has(#q203:target) .gb-entries > :not(.q203),
+main:has(#q204:target) .gb-entries > :not(.q204),
+main:has(#q205:target) .gb-entries > :not(.q205),
+main:has(#q301:target) .gb-entries > :not(.q301),
+main:has(#q302:target) .gb-entries > :not(.q302),
+main:has(#q303:target) .gb-entries > :not(.q303),
+main:has(#q304:target) .gb-entries > :not(.q304),
+main:has(#q401:target) .gb-entries > :not(.q401),
+main:has(#q402:target) .gb-entries > :not(.q402),
+main:has(#q403:target) .gb-entries > :not(.q403),
+main:has(#q501:target) .gb-entries > :not(.q501),
+main:has(#q502:target) .gb-entries > :not(.q502),
+main:has(#q503:target) .gb-entries > :not(.q503),
+main:has(#q504:target) .gb-entries > :not(.q504),
+main:has(#q505:target) .gb-entries > :not(.q505),
+main:has(#q601:target) .gb-entries > :not(.q601),
+main:has(#q701:target) .gb-entries > :not(.q701),
+main:has(#q702:target) .gb-entries > :not(.q702),
+main:has(#q703:target) .gb-entries > :not(.q703),
+main:has(#q704:target) .gb-entries > :not(.q704),
+main:has(#q705:target) .gb-entries > :not(.q705),
+main:has(#q802:target) .gb-entries > :not(.q802) {
 	display: none;
 }
+main:has(#q101:target) .gb-qhead.q101,
+main:has(#q102:target) .gb-qhead.q102,
+main:has(#q103:target) .gb-qhead.q103,
+main:has(#q104:target) .gb-qhead.q104,
+main:has(#q201:target) .gb-qhead.q201,
+main:has(#q202:target) .gb-qhead.q202,
+main:has(#q203:target) .gb-qhead.q203,
+main:has(#q204:target) .gb-qhead.q204,
+main:has(#q205:target) .gb-qhead.q205,
+main:has(#q301:target) .gb-qhead.q301,
+main:has(#q302:target) .gb-qhead.q302,
+main:has(#q303:target) .gb-qhead.q303,
+main:has(#q304:target) .gb-qhead.q304,
+main:has(#q401:target) .gb-qhead.q401,
+main:has(#q402:target) .gb-qhead.q402,
+main:has(#q403:target) .gb-qhead.q403,
+main:has(#q501:target) .gb-qhead.q501,
+main:has(#q502:target) .gb-qhead.q502,
+main:has(#q503:target) .gb-qhead.q503,
+main:has(#q504:target) .gb-qhead.q504,
+main:has(#q505:target) .gb-qhead.q505,
+main:has(#q601:target) .gb-qhead.q601,
+main:has(#q701:target) .gb-qhead.q701,
+main:has(#q702:target) .gb-qhead.q702,
+main:has(#q703:target) .gb-qhead.q703,
+main:has(#q704:target) .gb-qhead.q704,
+main:has(#q705:target) .gb-qhead.q705,
+main:has(#q802:target) .gb-qhead.q802 {
+	display: block;
+}
+
 /* оглавление «Щ-2»: вопросы блока списком, ответы читателей — мельче; на странице вопроса — строка со ссылкой на них */
 main ul.sch2-questions li {
 	margin: .3em 0;
