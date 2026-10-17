@@ -509,6 +509,8 @@ def unstick_text(t):
     out, i = [], 0
     for m in re.finditer(r'([.,;:!?…])(?=[А-Яа-яЁё])', t):
         j = m.start()
+        if m.group(1) == ';' and re.search(r'&[a-zA-Z]+$|&#\d+$', t[:j]):
+            continue                                          # «&laquo;Слово» — конец HTML-сущности, не знак
         before = t[:j + 1]
         # многоточие сразу после пробела, скобки, кавычки или в начале — начало цитаты
         if re.search(r'(?:^|[\s(«„"—;])(?:\.{2,}|…)$', before):
@@ -525,7 +527,15 @@ def unstick_text(t):
     # после слова со знаком перед цифрой — тоже пробел: «(см.2.3.)» → «(см. 2.3.)» (сокращение — неразрывный);
     # «1.4» (цифра.цифра) не трогаем
     t = re.sub(r'(?<=[А-Яа-яЁё])([.,:;])(?=\d)', lambda m: m.group(1) + ('&nbsp;' if m.group(1) == '.' else ' '), t)
-    return re.sub(r'(т\.(?:&nbsp;)?[дпе])\.\.(?!\.)', r'\1.', t)    # «т.д..» → «т. д.»
+    t = re.sub(r'(т\.(?:&nbsp;)?[дпе])\.\.(?!\.)', r'\1.', t)    # «т.д..» → «т. д.»
+    return initials(t)
+
+
+def initials(t):
+    # инициалы не отрываются ни друг от друга, ни от фамилии: «Л. И. Блехер», «М. Щербаков» — неразрывные
+    # пробелы (владелец 2026-10-17)
+    return re.sub(r'(?<![А-Яа-яЁёA-Za-z])((?:[А-ЯЁ]\.(?:\s|&nbsp;)*){1,2}?)(?:\s|&nbsp;)*(?=[А-ЯЁ](?:[а-яё]|\.))',
+                  lambda m: re.sub(r'\.(?:\s|&nbsp;)*', '.&nbsp;', m.group(1)), t)
 
 
 def unstick(body):
@@ -592,7 +602,8 @@ def dash_lists(body):
 def quote_sources(body):
     # подпись под цитатой — отдельным абзацем внутри цитаты, прямым шрифтом, без скобок, с отбивкой, как у авторов
     # («И. Бродский.» в 4.3); короткая строка-подпись сразу после цитаты переносится в неё (владелец 2026-10-17)
-    body = re.sub(r'<br>QSRC([^<]*)</p></blockquote>', r'</p>\n<p class="quote-source">\1</p></blockquote>', body)
+    body = re.sub(r'<br>QSRC([^<]*)</p></blockquote>',
+                  lambda m: f'</p>\n<p class="quote-source">{initials(m.group(1))}</p></blockquote>', body)
     return re.sub(r'</blockquote>\n\n<p(?: class="cont")?>([А-ЯЁ]\.(?:&nbsp;|\s)?[А-ЯЁ][а-яё]+\.?)</p>',
                   r'\n<p class="quote-source">\1</p></blockquote>', body)
 
