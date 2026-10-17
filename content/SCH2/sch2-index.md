@@ -30,7 +30,7 @@
 
 <ul class="sch2-questions">
 <li><a href="101-e.html">Вопрос 1.1</a>. Стих и музыка, авторское исполнение <span class="readers">(ответы читателей: <a href="gb/index.html#q101">23</a>)</span></li>
-<li><a href="102-e.html">Вопрос 1.2</a>. Близкие Щербакову поэты и писатели <span class="readers">(ответы читателей: <a href="gb/index.html#q102">16</a>)</span></li>
+<li><a href="102-e.html">Вопрос 1.2</a>. Близкие Щербакову поэты и писатели <span class="readers">(ответы читателей: <a href="gb/index.html#q102">17</a>)</span></li>
 <li><a href="103-e.html">Вопрос 1.3</a>. Музыка Михаила Щербакова <span class="readers">(ответы читателей: <a href="gb/index.html#q103">9</a>)</span></li>
 <li><a href="104-e.html">Вопрос 1.4</a>. Щербаков и жанр авторской песни <span class="readers">(ответы читателей: <a href="gb/index.html#q104">14</a>)</span></li>
 </ul>
@@ -66,7 +66,7 @@
 <h3>Блок 5. Поэтика Щербакова</h3>
 
 <ul class="sch2-questions">
-<li><a href="501-e.html">Вопрос 5.1</a>. Мозаика или единое целое <span class="readers">(ответы читателей: <a href="gb/index.html#q501">10</a>)</span></li>
+<li><a href="501-e.html">Вопрос 5.1</a>. Мозаика или единое целое <span class="readers">(ответы читателей: <a href="gb/index.html#q501">11</a>)</span></li>
 <li><a href="502-e.html">Вопрос 5.2</a>. Расшифровка аллюзий <span class="readers">(ответы читателей: <a href="gb/index.html#q502">12</a>)</span></li>
 <li><a href="503-e.html">Вопрос 5.3</a>. Как менялась поэтика <span class="readers">(ответы читателей: <a href="gb/index.html#q503">5</a>)</span></li>
 <li><a href="504-e.html">Вопрос 5.4</a>. Словарь языка Щербакова <span class="readers">(ответы читателей: <a href="gb/index.html#q504">2</a>)</span></li>
