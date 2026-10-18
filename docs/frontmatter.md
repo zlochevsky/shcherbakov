@@ -17,7 +17,7 @@ See the [Hugo front matter docs](https://gohugo.io/content-management/front-matt
 - `date`, `lastmod` — dates; `lastmod` feeds the "updated" date shown next to some menu items.
 - `"sitemap": {"disable": true}` — keep the page out of `sitemap.xml` (redirect pages, `fans/kom2`). Song pages are handled by their own rules, see below.
 - `"build": {"render": "never", "list": "never"}` — a page that is not rendered on its own, only included by another template (`Books/other-publications.md`, shown on the Books page; `_footer.md`, the home page footer) or read for its settings only (a language section whose main page has no text yet; on 2026-10-09 there is none: all six languages have a main page).
-- `draft`, `publishDate`, `expiryDate` — not used in content now: only `"draft": false` occurs (`_index.md`, `news.md`, `bio.md`), which changes nothing (the hand-written `content/announces/` and its archetype were removed 2026-10-02: announces come from Directus).
+- `draft`, `publishDate`, `expiryDate` — not used in content now (the hand-written `content/announces/` and its archetype were removed 2026-10-02: announces come from Directus).
 
 ## Site chrome (most page types)
 
