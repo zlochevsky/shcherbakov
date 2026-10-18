@@ -83,6 +83,16 @@ collections:
       - { name: "no", preview_path: "shcherbakov/no.html", label: Чего не хватает, file: content/no.md, fields: *sitepagefields }
       - { name: tab, preview_path: "shcherbakov/tab.html", label: Что такое таблатуры, file: content/tab.md, fields: *sitepagefields }
       - { name: praises-list, preview_path: "shcherbakov/praises.html", label: Список рецензий (Praises), file: content/praises.md, fields: *sitepagefields }
+      # страницы, содержимое которых строит шаблон из Directus: в файле — заголовок, поля для поисковиков и вступление
+      - { name: catalogue, preview_path: "shcherbakov/catalogue.html", label: Каталог песен, file: content/catalogue.md, fields: *sitepagefields }
+      - { name: translations, preview_path: "shcherbakov/translations.html", label: Каталог переводов, file: content/translations.md, fields: *sitepagefields }
+      - { name: concerts, preview_path: "shcherbakov/concerts.html", label: Концерты, file: content/concerts.md, fields: *sitepagefields }
+      - { name: search, preview_path: "shcherbakov/search.html", label: Поиск, file: content/search.md, fields: *sitepagefields }
+      # «Лог»: записи — из Directus (log_entries), в файле — прежняя хроника (HTML, ~130 КБ)
+      - { name: log, preview_path: "shcherbakov/log.html", label: Лог, file: content/log.md, fields: *sitepagefields }
+      - { name: statistics, preview_path: "shcherbakov/statistics.html", label: Статистика, file: content/statistics.md, fields: *sitepagefields }
+      # «Другие публикации» сами не выводятся: их текст вставляется в страницу «Книги»
+      - { name: other-publications, preview_path: "shcherbakov/Books/index.html", label: Книги — другие публикации, file: content/Books/other-publications.md, fields: *sitepagefields }
       # страница со ссылками на таблицы Directus (блок «Таблицы Directus» в левой панели берёт список отсюда — скрипт в index.html):
       # группа с заголовком выводится списком а), б), в)…, без заголовка — таблицы одной строкой через «и»
       - name: admin-directus
@@ -114,13 +124,13 @@ collections:
 
   - divider: true
 
-  # Статьи фан-клуба (шаблон praises-article): тело — HTML. Заголовки файлов приведены к виду, в котором их пишет
+  # Статьи (шаблон praises-article): тело — HTML. Заголовки файлов приведены к виду, в котором их пишет
   # Sveltia (порядок ключей, отступ 4), чтобы сохранение не давало лишнего diff; поля и их порядок здесь менять
-  # вместе с этим видом (scripts/sveltia-normalize.py praises parodies fans images pages language-pages).
-  # Создавать статьи можно: имя файла (латиницей) вводится вручную, адрес страницы — <раздел>/<имя>.html (uglyURLs,
-  # url в заголовке не нужен); type и layout — скрытые поля со значениями по умолчанию (layout ещё и для фильтра:
-  # в fans есть kom.md и переадресация kom2.md с другими шаблонами). Ссылку на новую статью вписать в список раздела:
-  # рецензии — «Страницы сайта» → «Список рецензий», пародии и фан-клуб — их оглавления (parodies-index, fans-index).
+  # вместе с этим видом (scripts/sveltia-normalize.py praises club releases images pages language-pages).
+  # Рецензии создавать можно: имя файла (латиницей) вводится вручную, адрес страницы — Praises/<имя>.html (uglyURLs,
+  # url в заголовке не нужен); type и layout — скрытые поля со значениями по умолчанию (layout ещё и для фильтра).
+  # Ссылку на новую статью вписать в список раздела: рецензии — «Страницы сайта» → «Список рецензий», статьи
+  # фан-клуба — оглавление своего раздела (fans-index, parodies-index, fom-index, sch2-index).
   # Удалять нельзя: на статьи ведут ссылки из списков и других статей — удалять через git, проверив check-links.
   - name: praises
     label: Рецензии (Praises)
@@ -153,64 +163,68 @@ collections:
       # скрипт в index.html ставит папку Images сайта; не видны только адреса «../../» из подпапок фан-клуба
       - &articlebody { label: Текст (HTML), name: body, widget: markdown, modes: [raw] }
 
-  - name: parodies
-    label: Пародии (Parodies)
-    label_singular: Пародия
-    folder: content/Parodies
+  # Статьи фан-клуба — одна коллекция на несколько папок: content/ с вложенными папками (nested, два уровня), записи
+  # отбираются по url (фильтр в Sveltia — одно условие): fans, Parodies, FOM («Щ-1»), SCH2 («Щ-2»), sociology,
+  # kniga_pamyati. В левой панели — дерево папок. Переадресации лежат глубже двух уровней (content/redirects/legacy/)
+  # и сюда не попадают; fans/kom2 (переадресация) — без url. «Отзывы» — отдельной коллекцией выше.
+  # Новая статья: «Parent Folder» — папка раздела (подставляется открытая в списке), «Адрес» — тот же раздел
+  # и латинское имя: /fans/imya.html. Без url статья не попала бы в список (по нему фильтр), поэтому он обязателен.
+  # Ссылка «назад» по умолчанию — оглавление раздела (layouts/miscellaneous/praises-article.html).
+  - name: club
+    label: Статьи фан-клуба
+    label_singular: Статья
+    folder: content
+    nested: { depth: 2, subfolders: false }
+    meta: { path: { label: Раздел (папка) } }
     extension: md
     format: json-frontmatter
     create: true
     delete: false
     duplicate: false
-    slug: { editable: [create] }   # имя файла вводится только при создании; адрес статьи — её url
-    filter: { field: layout, value: praises-article }
+    slug: { editable: [create] }   # имя файла вводится только при создании
+    filter: { field: url, pattern: '^/(fans|Parodies|FOM|SCH2)/|^/(sociology|kniga_pamyati)\.html$' }
     summary: "{{title}} · {{filename}}"
     preview_path: "shcherbakov{{fields.url}}"
     fields:
       - { label: Заголовок, name: title, widget: string }
+      - { label: Адрес, name: url, widget: string, pattern: ['^/(fans|Parodies|FOM|SCH2)/[A-Za-z0-9_.-]+\.html$|^/(sociology|kniga_pamyati)\.html$', 'Адрес вида /fans/imya.html — раздел тот же, что у папки, имя латиницей'], hint: "Раздел — тот же, что у папки: /fans/…, /Parodies/…, /FOM/…, /SCH2/…; имя латиницей, с .html" }
       - label: Параметры
         name: params
         widget: object
         fields:
           - { label: Автор, name: author, widget: string, required: false }
           - { label: Подзаголовок, name: subtitle, widget: string, required: false }
-          - { label: Ссылка «назад» — адрес, name: backUrl, widget: string, required: false, default: Parodies/index.html }
-          - { label: Ссылка «назад» — подпись, name: backTitle, widget: string, required: false, default: Пародии }
+          - { label: Ссылка «назад» — адрес, name: backUrl, widget: string, required: false, hint: "Пусто — оглавление раздела" }
+          - { label: Ссылка «назад» — подпись, name: backTitle, widget: string, required: false }
           - *seotitle
       - *seodesc
       - *layoutfield
       - *typefield
       - *articlebody
 
-  - name: fans
-    label: Фан-клуб (fans)
-    label_singular: Материал
-    folder: content/fans
+  # Диски, кассеты, книги, циклы, архив гастролей: данные (треки, обложки, выходные данные) — из Directus по params.id,
+  # в файле — заголовок, поля для поисковиков и текст. Параметры (id и прочее) в форме не показываются и сохраняются
+  # как есть. Новые страницы появляются вместе с записями в Directus. Отбор — по url, как у статей фан-клуба.
+  - name: releases
+    label: Диски, книги, архив
+    label_singular: Страница
+    folder: content
     nested: { depth: 2, subfolders: false }
     extension: md
     format: json-frontmatter
-    create: true
+    create: false
     delete: false
     duplicate: false
-    slug: { editable: [create] }   # имя файла вводится только при создании; адрес статьи — её url
-    filter: { field: layout, value: praises-article }
+    slug: { editable: false }
+    filter: { field: url, pattern: '^/(Disks|Tapes|Books|Cycles|Archive)/' }
     summary: "{{title}} · {{filename}}"
     preview_path: "shcherbakov{{fields.url}}"
     fields:
       - { label: Заголовок, name: title, widget: string }
-      - label: Параметры
-        name: params
-        widget: object
-        fields:
-          - { label: Автор, name: author, widget: string, required: false }
-          - { label: Подзаголовок, name: subtitle, widget: string, required: false }
-          - { label: Ссылка «назад» — адрес, name: backUrl, widget: string, required: false, default: fans/index.html }
-          - { label: Ссылка «назад» — подпись, name: backTitle, widget: string, required: false, default: Фан-клуб }
-          - *seotitle
+      - { label: url, name: url, widget: hidden, required: false }
+      - { label: Параметры, name: params, widget: object, collapsed: true, fields: [ { label: Подзаголовок, name: subtitle, widget: string, required: false }, *seotitle ] }
       - *seodesc
-      - *layoutfield
-      - *typefield
-      - *articlebody
+      - { label: Текст, name: body, widget: text, required: false }
 
   # Страницы картинок (шаблон images-page): тело — HTML; картинки лежат в static/Images, на страницах на них ссылаются
   # просто по имени файла ("afish1.jpg"). Кнопка вставки картинки пишет адрес от корня домена
@@ -271,10 +285,13 @@ collections:
       - { name: he-translations, preview_path: "shcherbakov/he/translations.html", label: עברית — список переводов, file: content/he/he-translations.md, fields: *pagefields }
 
 
-  # Переводы: content/<язык>/<id>.md; страницы языка (у них есть layout) — в коллекции «Страницы языков»
-  - name: tr-en
-    label: Переводы — English
-    folder: content/en
+  # Переводы: content/<язык>/<id>.md — одна коллекция на все языки, в левой панели — папки языков. Отбор — по пустому
+  # layout: он есть у страниц языков, у подвала главной и других служебных страниц, у переводов — нет
+  - name: translations
+    label: Переводы
+    label_singular: Перевод
+    folder: content
+    nested: { depth: 2, subfolders: false }
     extension: md
     format: json-frontmatter
     create: false
@@ -283,78 +300,8 @@ collections:
     slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
     filter: { field: layout, value: null }
     summary: "{{filename}}"
-    preview_path: "shcherbakov/en/{{filename}}.html"
-    fields: &trfields
-      # только для фильтра: у страниц языка layout есть, у переводов нет (пустое не записывается)
+    preview_path: "shcherbakov/{{dirname}}/{{filename}}.html"
+    fields:
+      # только для фильтра (пустое не записывается)
       - { label: layout, name: layout, widget: hidden, required: false }
       - { label: Текст, name: body, widget: text }
-
-  - name: tr-de
-    label: Переводы — Deutsch
-    folder: content/de
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/de/{{filename}}.html"
-    fields: *trfields
-
-  - name: tr-eo
-    label: Переводы — Esperanto
-    folder: content/eo
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/eo/{{filename}}.html"
-    fields: *trfields
-
-  - name: tr-he
-    label: Переводы — עברית
-    folder: content/he
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/he/{{filename}}.html"
-    fields: *trfields
-
-  - name: tr-uk
-    label: Переводы — Українська
-    folder: content/uk
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/uk/{{filename}}.html"
-    fields: *trfields
-
-  - name: tr-fr
-    label: Переводы — Français
-    folder: content/fr
-    extension: md
-    format: json-frontmatter
-    create: false
-    delete: false
-    duplicate: false
-    slug: { editable: false }   # имя файла = id записи в Directus: не переименовывать
-    filter: { field: layout, value: null }
-    summary: "{{filename}}"
-    preview_path: "shcherbakov/fr/{{filename}}.html"
-    fields: *trfields

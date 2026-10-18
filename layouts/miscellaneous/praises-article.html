@@ -25,9 +25,15 @@
 <body{{ with $cls }} class="{{ delimit . " " }}"{{ end }}{{ if .Params.noindex }} data-pagefind-ignore="all"{{ end }}>
 {{- $backUrl := .Params.backUrl }}
 {{- $backTitle := .Params.backTitle }}
-{{- if and (not $backUrl) (hasPrefix .File.Dir "fans/") }}
-	{{- $backUrl = "fans/index.html" }}
-	{{- $backTitle = $backTitle | default "Фан-клуб" }}
+{{- /* без backUrl — оглавление раздела по первой папке файла; в остальных случаях — «Отзывы» (статьи Praises) */}}
+{{- $sections := dict
+	"fans" (slice "fans/index.html" "Фан-клуб")
+	"Parodies" (slice "Parodies/index.html" "Пародии")
+	"FOM" (slice "FOM/index.html" "Щ-1")
+	"SCH2" (slice "SCH2/index.html" "Щ-2") }}
+{{- with and (not $backUrl) .File (index $sections (index (split .File.Dir "/") 0)) }}
+	{{- $backUrl = index . 0 }}
+	{{- $backTitle = $backTitle | default (index . 1) }}
 {{- end }}
 {{- $backUrl = $backUrl | default "praises.html" }}
 {{- $backTitle = $backTitle | default "Отзывы" }}

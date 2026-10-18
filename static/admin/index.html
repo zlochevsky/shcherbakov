@@ -9,7 +9,7 @@
 <style>
 /* Поле текста ведёт себя по-разному в зависимости от коллекции (атрибут data-collection у <html> ставит скрипт
    ниже по адресу #/collections/<имя>/…):
-   - песни (texts) и переводы (tr-*): строки выровнены пробелами (аккорды справа) — моноширинный шрифт со своей
+   - песни (texts) и переводы (translations): строки выровнены пробелами (аккорды справа) — моноширинный шрифт со своей
      кириллицей (иначе браузер берёт русские буквы из другого шрифта, их ширина не равна ширине пробела, и аккорды
      съезжают), без переноса строк, поля во всю ширину панели (у Sveltia — не шире 768px);
    - остальные страницы (проза): обычный шрифт, длинные строки переносятся по словам, как абзацы */
@@ -18,7 +18,7 @@ textarea {
 	line-height: 1.6 !important;
 }
 :root[data-collection="texts"] textarea,
-:root[data-collection^="tr-"] textarea {
+:root[data-collection="translations"] textarea {
 	font-family: "PT Mono", "DejaVu Sans Mono", Consolas, monospace !important;
 	letter-spacing: 0 !important;
 	word-spacing: 0 !important;
@@ -27,7 +27,7 @@ textarea {
 	overflow-x: auto !important;
 }
 :root[data-collection="texts"] section[role="group"].field > *,
-:root[data-collection^="tr-"] section[role="group"].field > * { max-width: none !important; }
+:root[data-collection="translations"] section[role="group"].field > * { max-width: none !important; }
 /* светлая тема: желтоватый фон (как Solarized Light) и тёмно-красные акценты; тёмная тема — как у Sveltia.
    Переменные — внутренние у Sveltia: если в новой версии их переименуют, вернутся стандартные цвета */
 :root[data-theme=light] {
@@ -206,7 +206,7 @@ try {
 			return h('pre', { className: 'song-source' }, this.props.entry.getIn(['data', 'body']) || '');
 		},
 	});
-	for (const name of ['texts', 'tr-en', 'tr-de', 'tr-eo', 'tr-he', 'tr-uk', 'tr-fr']) {
+	for (const name of ['texts', 'translations']) {
 		CMS.registerPreviewTemplate(name, SongSource);
 	}
 	CMS.registerPreviewStyle(

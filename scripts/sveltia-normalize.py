@@ -81,7 +81,7 @@ def normalize(text, fields, indent, entry_collection):
     body = m.group('body') or ''
     if body.startswith('\n'):
         body = body[1:]
-    flat = flatten(head, '', {})
+    flat = flatten(head, '', {}) if head else {}
     items = []
     if entry_collection:
         for k in [k for k in flat if k == 'aliases' or k.startswith('aliases.')]:
@@ -97,6 +97,15 @@ def normalize(text, fields, indent, entry_collection):
         return body + '\n'
     h = json.dumps(content, ensure_ascii=False, indent=indent)[1:-1].strip('\n')
     return '{\n' + h + '\n}\n' + ('\n' + body + '\n' if body else '')
+
+
+def matches(flt, v):
+    """Фильтр коллекции, как в Sveltia: value — значение или список (null — поля нет), pattern — регулярное
+    выражение (поле без значения ему не соответствует)."""
+    if 'pattern' in flt:
+        return v is not None and re.search(flt['pattern'], str(v)) is not None
+    vals = flt['value'] if isinstance(flt['value'], list) else [flt['value']]
+    return v in vals or (None in vals and v == '')
 
 
 def main():
@@ -122,7 +131,7 @@ def main():
             if flt:
                 hm = re.match(r'^\{\n(?:(?P<head>[\s\S]*?)\n)?\}', text.strip())
                 head = json.loads('{' + (hm.group('head') or '') + '}') if hm else {}
-                if head.get(flt['field']) != flt['value']:
+                if not matches(flt, head.get(flt['field'])):
                     continue
             new = normalize(text, fields, indent, 'folder' in col)
             if new is not None and new != text:
