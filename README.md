@@ -108,7 +108,19 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 - "Sign In Using Access Token" takes a GitHub personal access token that each editor makes in their own GitHub settings; the token stays in their browser:
   - the repository owner can use a fine-grained token: Repository access → this repository, Permissions → "Contents: Read and write";
   - a collaborator cannot use a fine-grained token, because such a token reaches only repositories of its own owner or of an organization. A collaborator makes a classic token with the `public_repo` scope instead. It can write to every public repository the collaborator has access to, not only this one.
-- On localhost the editor also offers to work with a local copy of the repository. In that mode "Save" writes the file to disk with no commit, and the change is committed with git as usual.
+- On localhost the editor also offers to work with a local copy of the repository, without signing in to GitHub — see "Editing on your own computer".
+
+### Editing on your own computer
+
+The same editor works with a clone of the repository on disk: changes show at once in `hugo server` and are published only when you commit and push them yourself. Handy for many edits in a row and for checking the result before publishing.
+
+1. You need a clone of the repository, Hugo and `config/_default/params.json` (see "Building"), and a Chromium browser — Chrome or Edge: the editor opens a folder on disk through the File System Access API, which Firefox and Safari lack (in Brave it has to be enabled in `brave://flags`).
+2. Update the clone (`git pull`) so you do not edit stale files, and run `hugo server` in its root.
+3. Open `http://localhost:1313/shcherbakov/admin/`, click "Work with Local Repository" and pick the clone's root folder (the one holding `.git`); the browser asks for read and write permission.
+4. Edit as usual. "Save" writes the file straight to disk: no commit and no build on GitHub. `hugo server` rebuilds the page at once, and "view on site" leads to `localhost:1313`.
+5. Check the changes (`git status`, `git diff`), commit and push (`git push`) — the GitHub build publishes them as always.
+
+A picture inserted with the editor's button is copied into the clone's `static/Images` and goes into the commit too.
 
 ### What can be edited
 
@@ -116,7 +128,7 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 - Language pages: title and body.
 - Site pages: title and body of the home page, biography, about, where to buy, news (the chronicle; announces come from Directus), what is missing, tablature, statistics, the log (the old chronicle), the list of reviews (`praises.md`) and «Другие публикации» on the books page; the body of the footer. The song and translation catalogues, concerts and search have the title, search engine fields and the introduction: the rest is built by the template from Directus. The home page body is HTML laid out in blocks, so edit it with care: an unclosed tag breaks the home page.
 - Reviews (`content/Praises`): title, author, subtitle and body.
-- Fan-club articles — one collection over several folders: `fans` (with the comments page `kom.md`), `Parodies`, `FOM` (Щ-1), `SCH2` (Щ-2), plus `sociology.md` and `kniga_pamyati.md`. The editor's sidebar shows a folder tree; picking a folder narrows the list. Fields: title, address (`url`), author, subtitle, "back" link (empty — the section's table of contents) and body. Entries are selected by address, so the redirects from old addresses live deeper, in `content/redirects/legacy/`, and are not listed.
+- Fan-club articles — one collection over several folders: `fans` (with the comments page `kom.md`), `Parodies`, `FOM` (Щ-1), `SCH2` (Щ-2), plus `sociology.md` and `kniga_pamyati.md`. The editor's sidebar shows a folder tree; picking a folder narrows the list. Fields: title, address (`url`), author, subtitle, "back" link and body. The "back" link is the corner-navigation item at the top and bottom of the page ([Фан-клуб], [Пародии], [Щ-1]) that leads to the parent page: the "address" is a path from the site root without a leading slash (`fans/index.html`), the "title" is the link text. Empty — the section's own table of contents; set it only when the parent is another page (as on the Щ-1 table of contents, which leads to «Фан-клуб»). Entries are selected by address, so the redirects from old addresses live deeper, in `content/redirects/legacy/`, and are not listed.
 - Albums, cassettes, books, cycles and the tour archive (`Disks`, `Tapes`, `Books`, `Cycles`, `Archive`) — also one collection with a folder tree: title, subtitle, search engine fields and body. The data (tracks, covers, imprint) come from Directus by `params.id`; the parameters are not shown in the form and are kept as they are.
 - Picture pages in `content/Images` (`images-page` layout): title, subtitle, "back" link, background colour, centred text and body (HTML). The redirects from old addresses in `content/Images/redirects` are not listed. Pictures themselves live in `static/Images` and are referred to by file name; the editor's insert-image button writes an address from the domain root (`/Images/…`), which does not open on github.io (site in the `/shcherbakov/` subfolder), so type the file name by hand.
 - The body of articles and picture pages is a Markdown field in source-only mode: the same HTML is edited as text, and the preview renders it (without the site's styles; scripts and iframes are stripped). Sveltia resolves relative addresses in the preview against the domain root only, so a script in `static/admin/index.html` sets the preview's base to the site's `Images/` folder: pictures and links of picture pages and articles show as on the site, except `../../` addresses from fan-club subfolders.
