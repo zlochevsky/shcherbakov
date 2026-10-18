@@ -114,7 +114,7 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 
 The same editor works with a clone of the repository on disk: changes show at once in `hugo server` and are published only when you commit and push them yourself. Handy for many edits in a row and for checking the result before publishing.
 
-1. You need a clone of the repository, Hugo and `config/_default/params.json` (see "Building"), and a Chromium browser — Chrome or Edge: the editor opens a folder on disk through the File System Access API, which Firefox and Safari lack (in Brave it has to be enabled in `brave://flags`).
+1. You need a clone of the repository, Hugo and `config/_default/params.json` (see "Building"), and a Chromium browser — Chrome or Edge: the editor opens a folder on disk through the File System Access API, which Firefox and Safari lack (in the Brave browser, also Chromium-based, it is off and has to be enabled in `brave://flags`).
 2. Update the clone (`git pull`) so you do not edit stale files, and run `hugo server` in its root.
 3. Open `http://localhost:1313/shcherbakov/admin/`, click "Work with Local Repository" and pick the clone's root folder (the one holding `.git`); the browser asks for read and write permission.
 4. Edit as usual. "Save" writes the file straight to disk: no commit and no build on GitHub. `hugo server` rebuilds the page at once, and "view on site" leads to `localhost:1313`.
