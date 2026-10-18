@@ -57,6 +57,7 @@ collections:
           - { label: Тональность, name: tonality, widget: string, required: false }
           - { label: Аккорды с позиции (номер символа в строке), name: chordsStartAt, widget: number, value_type: int, required: false }
           - { label: Последняя строка текста, name: textFinishAtLine, widget: number, value_type: int, required: false }
+      - { label: Дата публикации, name: lastmod, widget: datetime, time_format: false, required: false, hint: "Когда текст опубликован на сайте; по самой свежей — дата «Каталога песен» в меню. Пусто — даты нет" }
       - { label: Текст, name: body, widget: text }
 
 
@@ -74,7 +75,7 @@ collections:
       # главная: тело — HTML-вёрстка блоками (abstract, frontimage, collections) и шорткод {{< lastmod … >}} — править
       # осторожно, незакрытый тег ломает вид главной; подвал (_footer.md, на главной и страницах шаблона baseof) —
       # только текст: заголовка у него нет (обязательное поле «Заголовок» не дало бы сохранить)
-      - { name: home, preview_path: "shcherbakov/index.html", label: Главная страница, file: content/_index.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Параметры, name: params, widget: object, collapsed: true, fields: [ &seotitle { label: Заголовок для поисковиков, name: seoTitle, widget: string, required: false, hint: "Полный текст вкладки браузера и заголовка в выдаче, как есть. Пусто — заголовок страницы с припиской раздела («— Михаил Щербаков»)" } ] }, &seodesc { label: Описание для поисковиков, name: description, widget: text, required: false, hint: "Одна-две фразы, 110–160 знаков: текст под ссылкой в выдаче и в превью ссылок в мессенджерах. Пусто — у статей начало текста, у остальных страниц ничего" }, { label: Текст, name: body, widget: text } ] }
+      - { name: home, preview_path: "shcherbakov/index.html", label: Главная страница, file: content/_index.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Параметры, name: params, widget: object, collapsed: true, fields: [ &seotitle { label: Заголовок для поисковиков, name: seoTitle, widget: string, required: false, hint: "Полный текст вкладки браузера и заголовка в выдаче, как есть. Пусто — заголовок страницы с припиской раздела («— Михаил Щербаков»)" }, &menudate { label: Показывать дату в меню, name: menuDate, widget: boolean, required: false, hint: "Только у страниц, на которые ведёт пункт меню: дата обновления рядом с пунктом" }, &menudatefrom { label: Откуда дата для меню, name: menuDateFrom, widget: select, required: false, hint: "Пусто — поле «Дата» этой страницы", options: [ { label: "Самая свежая рецензия (Praises)", value: praises }, { label: "Самая свежая статья фан-клуба (fans, пародии, Щ-1, Щ-2)", value: club }, { label: "Самая свежая страница картинок", value: images }, { label: "Самый свежий текст песни", value: texts }, { label: "Самый свежий перевод", value: translations }, { label: "Действующие объявления (Directus)", value: announces } ] } ] }, &seodesc { label: Описание для поисковиков, name: description, widget: text, required: false, hint: "Одна-две фразы, 110–160 знаков: текст под ссылкой в выдаче и в превью ссылок в мессенджерах. Пусто — у статей начало текста, у остальных страниц ничего" }, &datefield { label: Дата, name: lastmod, widget: datetime, time_format: false, required: false, hint: "Дата обновления страницы (не меняется сама при сохранении): по ней — дата в меню и в sitemap. Пусто — даты нет" }, { label: Текст, name: body, widget: text } ] }
       - { name: footer, preview_path: "shcherbakov/index.html", label: Подвал главной, file: content/_footer.md, fields: [ { label: Текст, name: body, widget: text } ] }
       - { name: bio, preview_path: "shcherbakov/bio.html", label: Биография, file: content/bio.md, fields: *sitepagefields }
       - { name: about, preview_path: "shcherbakov/about.html", label: Об этой коллекции, file: content/about.md, fields: *sitepagefields }
@@ -155,6 +156,7 @@ collections:
           - { label: Подзаголовок, name: subtitle, widget: string, required: false }
           - *seotitle
       - *seodesc
+      - &datefieldnew { label: Дата, name: lastmod, widget: datetime, time_format: false, required: false, default: "{{now}}", hint: "Дата публикации или обновления (не меняется сама при сохранении): по ней — дата раздела в меню. Пусто — даты нет" }
       - &layoutfield { label: layout, name: layout, widget: hidden, required: false, default: praises-article }
       - &typefield { label: type, name: type, widget: hidden, required: false, default: miscellaneous }
       # тело — поле Markdown только в режиме исходника (modes: raw): правится тот же HTML как текст, без визуального
@@ -197,7 +199,10 @@ collections:
           - { label: Ссылка «назад» — адрес, name: backUrl, widget: string, required: false, hint: "Пункт угловой навигации — родительская страница. Путь от корня сайта без начальной «/», напр. fans/index.html. Пусто — оглавление раздела" }
           - { label: Ссылка «назад» — подпись, name: backTitle, widget: string, required: false }
           - *seotitle
+          - *menudate
+          - *menudatefrom
       - *seodesc
+      - *datefieldnew
       - *layoutfield
       - *typefield
       - *articlebody
@@ -222,8 +227,9 @@ collections:
     fields:
       - { label: Заголовок, name: title, widget: string }
       - { label: url, name: url, widget: hidden, required: false }
-      - { label: Параметры, name: params, widget: object, collapsed: true, fields: [ { label: Подзаголовок, name: subtitle, widget: string, required: false }, *seotitle ] }
+      - { label: Параметры, name: params, widget: object, collapsed: true, fields: [ { label: Подзаголовок, name: subtitle, widget: string, required: false }, *seotitle, *menudate, *menudatefrom ] }
       - *seodesc
+      - *datefield
       - { label: Текст, name: body, widget: text, required: false }
 
   # Страницы картинок (шаблон images-page): тело — HTML; картинки лежат в static/Images, на страницах на них ссылаются
@@ -256,7 +262,10 @@ collections:
           - { label: Цвет фона, name: bgColor, widget: string, required: false, hint: "CSS-цвет, напр. #DDC5A4; пусто — цвет по умолчанию (khaki)" }
           - { label: Текст по центру, name: centerText, widget: boolean, required: false }
           - *seotitle
+          - *menudate
+          - *menudatefrom
       - *seodesc
+      - *datefieldnew
       - { label: layout, name: layout, widget: hidden, required: false, default: images-page }
       - *typefield
       - *articlebody
@@ -304,4 +313,5 @@ collections:
     fields:
       # только для фильтра (пустое не записывается)
       - { label: layout, name: layout, widget: hidden, required: false }
+      - { label: Дата публикации, name: lastmod, widget: datetime, time_format: false, required: false, hint: "Когда перевод опубликован на сайте; по самому свежему — дата «Каталога переводов» в меню. Пусто — даты нет" }
       - { label: Текст, name: body, widget: text }

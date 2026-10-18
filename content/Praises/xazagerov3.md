@@ -3,9 +3,9 @@
     "params": {
         "author": "Георгий Хазагеров"
     },
+    "lastmod": "1998-11-08",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "1998-11-08",
     "url": "/Praises/xazagerov3.html"
 }
 

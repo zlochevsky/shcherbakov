@@ -3,9 +3,9 @@
     "params": {
         "author": "Александра Спиглазова"
     },
+    "lastmod": "2013-06-03",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2013-06-03",
     "url": "/Praises/valet.html"
 }
 

@@ -4,9 +4,9 @@
         "author": "Сергей Бережной",
         "subtitle": "Материал написан в апреле 2000 года. Опубликован впервые на сайте интернет-магазина <a href=\"http://www.ozon.ru/context/detail/id/197525/\">&laquo;оЗон&raquo;</a>."
     },
+    "lastmod": "2000-04-19",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2000-04-19",
     "url": "/Praises/berezhnoy.html"
 }
 

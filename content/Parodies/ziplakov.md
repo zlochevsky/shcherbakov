@@ -6,9 +6,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "2004-10-07",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2004-10-07"
+    "type": "miscellaneous"
 }
 
 <p>Можно исполнять на мелодию «Декларации». А можно просто декларировать, в смысле декламировать...</p>

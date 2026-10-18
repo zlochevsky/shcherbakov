@@ -6,9 +6,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "2006-12-09",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2006-12-09"
+    "type": "miscellaneous"
 }
 
 <p><a href="http://polnolunie.baikal.ru/me/porodii.htm">Оригинал</a>&nbsp;&mdash; на Полнолунии</p>

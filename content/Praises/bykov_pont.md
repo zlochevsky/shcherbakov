@@ -4,9 +4,9 @@
         "author": "Дмитрий Быков",
         "subtitle": "М.&nbsp;Щербакову"
     },
+    "lastmod": "2000-04-12",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2000-04-12",
     "url": "/Praises/bykov_pont.html"
 }
 

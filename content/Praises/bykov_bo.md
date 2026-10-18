@@ -4,9 +4,9 @@
         "author": "Дмитрий Быков",
         "subtitle": "М., Молодая гвардия, 2009. Часть четвертая, глава четвертая."
     },
+    "lastmod": "2009-06-04",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2009-06-04",
     "url": "/Praises/bykov_bo.html"
 }
 

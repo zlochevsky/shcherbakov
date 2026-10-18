@@ -5,9 +5,9 @@
         "backUrl": "fans/index.html#creative",
         "backTitle": "Фан-клуб"
     },
+    "lastmod": "2006-01-14",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2006-01-14"
+    "type": "miscellaneous"
 }
 
 <!--TABLE cellSpacing=10 width="100%" bgColor=green>

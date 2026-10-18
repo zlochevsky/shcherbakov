@@ -4,9 +4,9 @@
         "author": "Григорий Сапов",
         "subtitle": "<a href=\"http://www.sapov.ru/novoe/n00-73.htm\">«От четверга до четверга»</a> за 16 и 23 ноября 2000 года<br>(Размышления о Щербакове)"
     },
+    "lastmod": "2001-03-02",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2001-03-02",
     "url": "/Praises/sapov.html"
 }
 

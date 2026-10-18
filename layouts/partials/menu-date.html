@@ -1,0 +1,35 @@
+{{- /* Дата страницы для пункта меню (docs/editor-pages-plan.md, шаг 3). Контекст — страница. Возвращает дату или "".
+       params.menuDateFrom — откуда дата:
+       - пусто — lastmod страницы (поле «Дата» в редакторе; время файла не берётся, hugo.json → frontmatter.lastmod);
+       - praises, club, images, texts, translations — самая свежая «Дата» среди страниц раздела (папки ниже,
+         рекурсивно, только страницы своего шаблона: оглавления, переадресации и «Словарь» не считаются);
+       - announces — самая поздняя дата публикации среди действующих объявлений Directus (тех же, что на сайте);
+         действующих нет — даты нет. */ -}}
+{{- $p := . -}}
+{{- $d := "" -}}
+{{- $from := $p.Params.menuDateFrom | default "" -}}
+{{- $sources := dict
+	"praises" (dict "folders" (slice "Praises") "layout" "praises-article")
+	"club" (dict "folders" (slice "fans" "Parodies" "FOM" "SCH2") "layout" "praises-article")
+	"images" (dict "folders" (slice "Images") "layout" "images-page")
+	"texts" (dict "folders" (slice "texts") "layout" "songpage")
+	"translations" (dict "folders" (slice "en" "de" "eo" "he" "uk" "fr") "layout" "translation") -}}
+{{- $src := index $sources $from -}}
+{{- if $src -}}
+	{{- /* по первой папке файла, а не site.GetPage "/Praises": Hugo не различает регистр, и тот вернул бы praises.md */ -}}
+	{{- range where site.RegularPages "Layout" $src.layout -}}
+		{{- if and .File (in $src.folders (index (split .File.Dir "/") 0)) (not .Lastmod.IsZero) (or (not $d) (.Lastmod.After $d)) -}}
+			{{- $d = .Lastmod -}}
+		{{- end -}}
+	{{- end -}}
+{{- else if eq $from "announces" -}}
+	{{- range (partial "directus-announces.html").data -}}
+		{{- with .publish_date -}}
+			{{- $t := time.AsTime . -}}
+			{{- if or (not $d) ($t.After $d) }}{{ $d = $t }}{{ end -}}
+		{{- end -}}
+	{{- end -}}
+{{- else if not $p.Lastmod.IsZero -}}
+	{{- $d = $p.Lastmod -}}
+{{- end -}}
+{{- return $d -}}

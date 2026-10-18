@@ -5,9 +5,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "2012-06-06",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2012-06-06"
+    "type": "miscellaneous"
 }
 
 <p><i>&nbsp;&nbsp;&nbsp;Михаилу Константиновичу, с любовью.</i></p>

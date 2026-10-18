@@ -6,9 +6,9 @@
         "backUrl": "Parodies/index.html#free",
         "backTitle": "Пародии"
     },
+    "lastmod": "1999-09-05",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "1999-09-05"
+    "type": "miscellaneous"
 }
 
 <p><i>Леон Позен</i></p>

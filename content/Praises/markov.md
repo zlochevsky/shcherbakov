@@ -4,9 +4,9 @@
         "author": "Никита Марков",
         "subtitle": "(отрывок из статьи <a href=\"http://www.informacional.su/postsov/culture/71-2013-04-03-10-27-15\">Российская поэзия начала XXI века</a>)"
     },
+    "lastmod": "2013-06-08",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2013-06-08",
     "url": "/Praises/markov.html"
 }
 

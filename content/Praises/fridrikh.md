@@ -4,9 +4,9 @@
         "author": "A.Г.Копылова",
         "subtitle": "(анализ текста песни М.Щербакова &laquo;Фридрих идёт&raquo;)"
     },
+    "lastmod": "2006-04-29",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-04-29",
     "url": "/Praises/fridrikh.html"
 }
 

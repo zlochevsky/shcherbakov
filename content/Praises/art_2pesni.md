@@ -3,9 +3,9 @@
     "params": {
         "author": "Артем Казанцев"
     },
+    "lastmod": "2000-04-12",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2000-04-12",
     "url": "/Praises/art_2pesni.html"
 }
 

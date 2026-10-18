@@ -4,9 +4,9 @@
         "author": "Катя Зотова",
         "subtitle": "Несколько замечаний к статье Л.&nbsp;Аннинского &laquo;Заговаривающий бездну&raquo;"
     },
+    "lastmod": "2000-05-06",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2000-05-06",
     "url": "/Praises/katja-annin.html"
 }
 

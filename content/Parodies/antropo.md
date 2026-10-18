@@ -5,9 +5,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "2000-04-12",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2000-04-12"
+    "type": "miscellaneous"
 }
 
 <p>Прислал это Лев Евдокимов.</p>

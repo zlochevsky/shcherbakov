@@ -3,9 +3,9 @@
     "params": {
         "author": "Игнат Меренков"
     },
+    "lastmod": "2005-01-15",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2005-01-15",
     "url": "/Praises/piligrim.html"
 }
 

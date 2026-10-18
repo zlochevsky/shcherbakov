@@ -7,9 +7,9 @@
         "backUrl": "fans/index.html#creative",
         "backTitle": "Фан-клуб"
     },
+    "lastmod": "2021-08-14",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2021-08-14"
+    "type": "miscellaneous"
 }
 
 <blockquote>Неизгладимой памяти<br>Александра Кайдановского<br>в числе многих прочих<br>посвящается...</blockquote>

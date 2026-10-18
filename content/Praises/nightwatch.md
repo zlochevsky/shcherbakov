@@ -3,9 +3,9 @@
     "params": {
         "author": "Лариса Шульц"
     },
+    "lastmod": "2011-03-21",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2011-03-21",
     "url": "/Praises/nightwatch.html"
 }
 

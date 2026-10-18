@@ -3,9 +3,9 @@
     "params": {
         "author": "Евгений Сухарев"
     },
+    "lastmod": "2007-08-31",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2007-08-31",
     "url": "/Praises/cyxapeb.html"
 }
 

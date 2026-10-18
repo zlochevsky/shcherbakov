@@ -4,9 +4,9 @@
         "author": "Бина Смехова, Иерусалим",
         "subtitle": "Зал полон. Поёт Михаил Щербаков."
     },
+    "lastmod": "2004-02-06",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2004-02-06",
     "url": "/Praises/binas.html"
 }
 

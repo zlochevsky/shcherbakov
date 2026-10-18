@@ -4,9 +4,9 @@
         "author": "Ванкарем Никифорович (Чикаго)",
         "subtitle": "<a href=\"http://www.vestnik.com/issues/2001/0619/win/nikiforovich.htm\">&laquo;Вестник&raquo;</a>, &#8470;&nbsp;13(272), 19 июня 2001 г."
     },
+    "lastmod": "2003-11-17",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2003-11-17",
     "url": "/Praises/nikiforovich.html"
 }
 

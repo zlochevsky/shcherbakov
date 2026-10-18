@@ -3,9 +3,9 @@
     "params": {
         "author": "Александра Спиглазова"
     },
+    "lastmod": "2014-11-06",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2014-11-06",
     "url": "/Praises/rozhdest.html"
 }
 

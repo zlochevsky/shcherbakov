@@ -4,9 +4,9 @@
         "author": "О. Елисеев",
         "subtitle": "Газета &laquo;Известия&raquo; от 26 марта 2003 года. Рубрика &laquo;Обратная связь&raquo;. 16-я страница."
     },
+    "lastmod": "2003-03-29",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2003-03-29",
     "url": "/Praises/izv-mar03.html"
 }
 

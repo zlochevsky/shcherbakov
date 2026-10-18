@@ -4,9 +4,9 @@
         "author": "Никита Елисеев",
         "subtitle": "&laquo;Эксперт Северо-Запад&raquo; N22(275), 12 июня 2006"
     },
+    "lastmod": "2006-06-15",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-06-15",
     "url": "/Praises/ekspert06.html"
 }
 

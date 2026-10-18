@@ -4,9 +4,9 @@
         "author": "Ирина Луговая",
         "subtitle": "Сравнительный анализ текстов песен Михаила Щербакова &laquo;Жалоба&raquo; и Марка Фрейдкина &laquo;Песня о зубном протезе&raquo;"
     },
+    "lastmod": "2012-04-10",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2012-04-10",
     "url": "/Praises/lugovaya.html"
 }
 

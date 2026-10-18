@@ -4,9 +4,9 @@
         "author": "Борис Косолапов",
         "subtitle": "&laquo;Новое русское слово&raquo;. 1996. &#8470;&nbsp;30 (216), 31 мая. С.&nbsp;34."
     },
+    "lastmod": "2024-11-03",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2024-11-03",
     "url": "/Praises/kosolapov.html"
 }
 

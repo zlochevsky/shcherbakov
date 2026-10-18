@@ -3,9 +3,9 @@
     "params": {
         "author": "Александра Спиглазова"
     },
+    "lastmod": "2014-10-27",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2014-10-27",
     "url": "/Praises/noname.html"
 }
 

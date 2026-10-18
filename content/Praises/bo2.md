@@ -3,9 +3,9 @@
     "params": {
         "author": "Булат Окуджава"
     },
+    "lastmod": "2008-01-03",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2008-01-03",
     "url": "/Praises/bo2.html"
 }
 

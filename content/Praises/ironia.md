@@ -3,9 +3,9 @@
     "params": {
         "author": "Александра Спиглазова"
     },
+    "lastmod": "2012-08-09",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2012-08-09",
     "url": "/Praises/ironia.html"
 }
 

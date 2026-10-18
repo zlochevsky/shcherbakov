@@ -3,9 +3,9 @@
     "params": {
         "author": "Юлий Ким"
     },
+    "lastmod": "2005-10-02",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2005-10-02",
     "url": "/Praises/kim-sketch.html"
 }
 

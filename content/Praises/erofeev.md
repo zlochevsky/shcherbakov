@@ -6,9 +6,9 @@
     "params": {
         "author": "Александр Ерофеев"
     },
+    "lastmod": "2015-03-24",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2015-03-24",
     "url": "/Praises/erofeev.html"
 }
 

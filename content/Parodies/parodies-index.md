@@ -7,9 +7,9 @@
         "seoTitle": "Пародии на песни Михаила Щербакова"
     },
     "description": "Пародии и подражания песням Михаила Щербакова, собранные поклонниками.",
+    "lastmod": "2020-06-20",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2020-06-20"
+    "type": "miscellaneous"
 }
 
 <blockquote><i>Штирлиц шел по улице. Вдруг ему на голову упал кирпич.<br>«Цигель,»&nbsp;&mdash; подумал Штирлиц.<br>«Цигель, цигель, абгемахт,»&nbsp;&mdash; подумал Мюллер, сбрасывая второй кирпич.</i><br><a href="mailto:grisha@mit.edu">(Гр.Гольдберг)</a></blockquote>

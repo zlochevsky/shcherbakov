@@ -4,9 +4,9 @@
         "author": "Александра Спиглазова",
         "subtitle": "Международная конференция &laquo;Литература в диалоге культур-8&raquo;, Ростов-на-Дону, 2010."
     },
+    "lastmod": "2010-11-12",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2010-11-12",
     "url": "/Praises/prostran.html"
 }
 

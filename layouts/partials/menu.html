@@ -60,7 +60,7 @@ Renders a menu for the given menu ID.
     {{- else if eq .Params.collapsible "yes" }}
     <div>
       <details class="{{ $boxClass }}">
-        <summary>{{ .Pre | markdownify }}{{ $label }}{{ .Post | markdownify }}</summary>
+        <summary>{{ .Pre | markdownify }}{{ $label }}{{ .Post | markdownify }}{{ with partial "menu-entry-date.html" . }} {{ partial "menu-datum.html" . }}{{ end }}</summary>
       </details>
     </div>
 {{- /* Children of a collapsible entry render as flat sibling "nav > div" cells right
@@ -81,24 +81,8 @@ Renders a menu for the given menu ID.
           {{- end }}
         {{- end -}}
       >{{ with .Params.icon }}{{ partial "menu-icon.html" . }}{{ end }}{{ $label }}</a>{{ .Post | markdownify }}
-{{- /* If set in site config ("isDateToPrint"), print update timestamp after the menu entry.
-       If set in site config, ("frontmatter" > "lastmod" > [lastmod,:fileModTime]),
-       update timestamp is taken from "lastmod" site config param in the following order:
-       1. "lastmod" param of the actual page; 2. actual page file's modification time.
-       If "dynamicLastmod" is set to a Directus collection name (works, translations), the date is instead
-       the most recent date_created among that collection's items (eg. last song added).
-*/}}
-      {{- $isDateToPrint := .Params.isDateToPrint }}
-      {{- $dynamicLastmod := .Params.dynamicLastmod }}
-      {{- if eq $isDateToPrint "yes" }}
-        {{- with $dynamicLastmod }}
-          {{- $latest := partial "directus-lastmod.html" . }}
-          {{- if $latest.data }}
-            {{- with index $latest.data 0 }} {{ partial "menu-datum.html" .date_created }}{{ end }}
-          {{- end }}
-        {{- else }}{{ with .Page }} {{ partial "menu-datum.html" .Lastmod }}{{ end }}
-        {{- end }}
-      {{- end }}
+{{- /* дата обновления после подписи — partials/menu-entry-date.html */}}
+      {{- with partial "menu-entry-date.html" . }} {{ partial "menu-datum.html" . }}{{ end }}
       {{- with .Children }}
         <ul>
           {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}

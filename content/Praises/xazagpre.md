@@ -4,9 +4,9 @@
         "author": "Георгий Хазагеров",
         "subtitle": "проф. Ростовского университета"
     },
+    "lastmod": "2007-06-29",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2007-06-29",
     "url": "/Praises/xazagpre.html"
 }
 

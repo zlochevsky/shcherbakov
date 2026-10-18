@@ -3,9 +3,9 @@
     "params": {
         "author": "Артем Казанцев"
     },
+    "lastmod": "2003-10-09",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2003-10-09",
     "url": "/Praises/gipsy.html"
 }
 

@@ -4,9 +4,9 @@
         "author": "Евгений Сухарев",
         "subtitle": "Литературно-художественный альманах &laquo;Белый ворон&raquo; (Екатеринбург). Выпуск &#8470;&nbsp;2 (19). Лето 2015&nbsp;г. С.&nbsp;194-198."
     },
+    "lastmod": "2015-07-14",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2015-07-14",
     "url": "/Praises/cyxapeb3.html"
 }
 

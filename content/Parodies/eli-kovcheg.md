@@ -5,9 +5,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "1998-07-01",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "1998-07-01"
+    "type": "miscellaneous"
 }
 
 <p>Date: Fri, 9 May 1997 22:18:24 +0300 (IDT)<br>From: <a href="mailto:massi@cs.technion.ac.il">Eliyahu Bar-Yahalom</a></p>

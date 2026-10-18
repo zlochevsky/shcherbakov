@@ -4,9 +4,9 @@
         "author": "Юлия Фридман",
         "subtitle": "Статья в <a href=\"http://old.russ.ru/journal/culture/98-12-10/avtor.htm\">&laquo;Русском Журнале&raquo;</a>"
     },
+    "lastmod": "1998-12-15",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "1998-12-15",
     "url": "/Praises/fridman.html"
 }
 

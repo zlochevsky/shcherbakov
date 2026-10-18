@@ -4,9 +4,9 @@
         "author": "Андрей Тимофеев",
         "subtitle": "Михаил Щербаков"
     },
+    "lastmod": "2005-03-21",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2005-03-21",
     "url": "/Praises/concert0305.html"
 }
 

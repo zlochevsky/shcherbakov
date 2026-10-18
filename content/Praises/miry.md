@@ -3,9 +3,9 @@
     "params": {
         "author": "Георгий Любарский"
     },
+    "lastmod": "2012-11-17",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2012-11-17",
     "url": "/Praises/miry.html"
 }
 

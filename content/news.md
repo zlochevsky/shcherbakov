@@ -2,6 +2,8 @@
     "title": "Новости и объявления",
     "params": {
         "seoTitle": "Новости и концерты — Михаил Щербаков",
+        "menuDate": true,
+        "menuDateFrom": "announces",
         "announce": [],
         "announceTitle": "Ближайшие концерты",
         "showAnnounce": true,

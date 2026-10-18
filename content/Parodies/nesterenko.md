@@ -5,9 +5,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "1999-09-05",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "1999-09-05"
+    "type": "miscellaneous"
 }
 
 <h4>Короткие волны</h4>

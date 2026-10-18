@@ -4,9 +4,9 @@
         "author": "Алексей Тугарев",
         "subtitle": "Версия 3.12 (12.12.2006)"
     },
+    "lastmod": "2006-12-12",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-12-12",
     "url": "/Praises/metrica.html"
 }
 

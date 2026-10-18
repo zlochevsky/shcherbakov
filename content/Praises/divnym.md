@@ -4,9 +4,9 @@
         "author": "Татьяна Вольтская, литератор",
         "subtitle": "Татьяна Вольтская. &laquo;По дивным песенкам твоим...&raquo; // Невское время (Санкт-Петербург).- 02.08.1997"
     },
+    "lastmod": "2003-02-14",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2003-02-14",
     "url": "/Praises/divnym.html"
 }
 

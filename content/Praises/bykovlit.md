@@ -3,9 +3,9 @@
     "params": {
         "author": "Дмитрий Быков"
     },
+    "lastmod": "1999-12-01",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "1999-12-01",
     "url": "/Praises/bykovlit.html"
 }
 

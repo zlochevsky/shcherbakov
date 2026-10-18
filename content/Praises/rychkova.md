@@ -4,9 +4,9 @@
         "author": "Ольга Рычкова",
         "subtitle": "Михаил Щербаков: пират верхом на зебре"
     },
+    "lastmod": "2007-10-21",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2007-10-21",
     "url": "/Praises/rychkova.html"
 }
 

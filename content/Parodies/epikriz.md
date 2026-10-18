@@ -6,9 +6,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "2003-05-01",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2003-05-01"
+    "type": "miscellaneous"
 }
 
 <p>У леща голова тоща. У моржа, говорят, рыжа.<br>А моя голова, похоже, ни на что уже не гожа.</p>

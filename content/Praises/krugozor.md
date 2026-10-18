@@ -4,9 +4,9 @@
         "author": "Владимир Мартынов",
         "subtitle": "Журнал &laquo;Кругозор&raquo;, №11, 1991 г. С. 5."
     },
+    "lastmod": "2006-05-19",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-05-19",
     "url": "/Praises/krugozor.html"
 }
 

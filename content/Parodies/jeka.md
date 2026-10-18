@@ -6,9 +6,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "1999-09-12",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "1999-09-12"
+    "type": "miscellaneous"
 }
 
 <p class="right"><b>e-mail: <a href="mailto:je@bards.de">je@bards.de</a></b></p>

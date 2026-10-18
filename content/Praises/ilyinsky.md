@@ -4,9 +4,9 @@
         "author": "Петр Ильинский",
         "subtitle": "Новая авторская редакция статьи, впервые опубликованной в одной из Бостонских русских газет."
     },
+    "lastmod": "2004-03-22",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2004-03-22",
     "url": "/Praises/ilyinsky.html"
 }
 

@@ -4,7 +4,7 @@
 
 Поля front matter (JSON-блок в начале `content/**/*.md`), которые реально читают шаблоны из `layouts/`. Сверено с `layouts/` и всеми файлами контента 2026-10-02, перепроверено 2026-10-18; разделы о переводах, языковых страницах и `Disks/other.md` добавлены 2026-10-07. Поля, которые есть в контенте, но не читаются ни одним шаблоном, помечены **не используется**.
 
-Не входит: коллекции Directus (works, events, perfs, sets, books, comments, announces…) — см. [docs/directus.md](directus.md); `params` пунктов меню в `config/_default/menus.json` (`isDateToPrint`, `dynamicLastmod`, `collapsible`, `toggleChild`, `mobileOnly`, `shortName`, `icon`, `dropdown`, `lang`; см. раздел «Меню» в README) — в шаблонах они выглядят как `.Params.*`, но относятся к настройкам меню, а не к файлам `.md`.
+Не входит: коллекции Directus (works, events, perfs, sets, books, comments, announces…) — см. [docs/directus.md](directus.md); `params` пунктов меню в `config/_default/menus.json` (`date`, `collapsible`, `toggleChild`, `mobileOnly`, `shortName`, `icon`, `dropdown`, `lang`; см. раздел «Меню» в README) — в шаблонах они выглядят как `.Params.*`, но относятся к настройкам меню, а не к файлам `.md`.
 
 ## Стандартные поля Hugo
 
@@ -14,7 +14,8 @@
 - `type`, `layout` — выбор шаблона. В контенте — `"type": "miscellaneous"` и явный `"layout"` (имя файла шаблона в `layouts/miscellaneous/`); страницам песен (`songpage`) и страницам языковых папок (`translation`) оба задают правила `cascade` в `hugo.json`, поэтому языковая страница, которая не перевод, задаёт свой `layout` сама.
 - `url` — адрес страницы; стоит почти у всех страниц, чтобы сохранить адреса старого сайта (`"/Disks/minsk3.html"`).
 - `aliases` — старые адреса, которые должны вести на эту страницу.
-- `date`, `lastmod` — даты; `lastmod` даёт дату «обновлено» у некоторых пунктов меню.
+- `date`, `lastmod` — даты. `lastmod` — поле «Дата» в редакторе: дата обновления страницы (у текстов песен и переводов — дата публикации). Её получают меню (см. ниже) и `sitemap.xml`; если `lastmod` пуст, Hugo не подставляет ни время файла, ни `date` (`hugo.json` → `frontmatter.lastmod`), и даты у страницы нет.
+- `params.menuDate` (bool) — «Показывать дату в меню»: дата рядом с пунктами меню, которые ведут на эту страницу. `params.menuDateFrom` — откуда она: пусто — `lastmod` страницы; `praises` / `club` / `images` / `texts` / `translations` — самая свежая `lastmod` среди рецензий / статей фан-клуба (fans, Parodies, FOM, SCH2) / страниц картинок / текстов песен / переводов (только страницы своего шаблона); `announces` — самая поздняя `publish_date` действующих объявлений Directus. Стоят на `news` (announces), `buy`, `log`, `Books/gallery`, `Disks/gallery`, `praises` (praises), `catalogue` (texts), `translations` (translations), `fans/fans-index` (club), `fans/kom`, `Images/gallery` (images). Шаблоны — `layouts/partials/menu-date.html`, `menu-entry-date.html`; подробнее — README, «Меню».
 - `"sitemap": {"disable": true}` — не включать страницу в `sitemap.xml` (страницы-редиректы, `fans/kom2`). Для страниц песен — свои правила, см. ниже.
 - `"build": {"render": "never", "list": "never"}` — страница не выводится сама: её вставляет другой шаблон (`Books/other-publications.md` на странице «Книги»; `_footer.md` — подвал главной) или из неё только читают настройки (раздел языка, у главной страницы которого ещё нет текста; на 2026-10-09 таких нет: главные страницы есть у всех шести языков).
 - `draft`, `publishDate`, `expiryDate` — сейчас в контенте не используются (ручные `content/announces/` и их заготовка удалены 2026-10-02: анонсы берутся из Directus).

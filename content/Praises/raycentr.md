@@ -3,9 +3,9 @@
     "params": {
         "author": "Лев Наумов"
     },
+    "lastmod": "2006-11-11",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-11-11",
     "url": "/Praises/raycentr.html"
 }
 

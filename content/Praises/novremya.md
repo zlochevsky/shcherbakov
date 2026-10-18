@@ -4,9 +4,9 @@
         "author": "Дмитрий Быков",
         "subtitle": "Журнал &laquo;Новое время&raquo;, &#8470;&nbsp;18-19, 1994. С.&nbsp;44-46."
     },
+    "lastmod": "2006-05-19",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-05-19",
     "url": "/Praises/novremya.html"
 }
 

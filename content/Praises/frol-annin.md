@@ -3,9 +3,9 @@
     "params": {
         "author": "Татьяна Фроликова"
     },
+    "lastmod": "2000-05-06",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2000-05-06",
     "url": "/Praises/frol-annin.html"
 }
 

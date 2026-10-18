@@ -5,9 +5,9 @@
         "backUrl": "fans/kom.html#neznajuk",
         "backTitle": "Словарь заморских слов"
     },
+    "lastmod": "1997-05-08",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "1997-05-08"
+    "type": "miscellaneous"
 }
 
 <p>Date: Thu, 8 May 1997 20:49:08 -0700<br>From: <a href="mailto:moshap@usa.net">Mosha Pasumansky</a><br>Subject: Slovar' zamorskix slov</p>

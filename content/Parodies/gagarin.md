@@ -5,9 +5,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "1998-07-01",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "1998-07-01"
+    "type": "miscellaneous"
 }
 
 <p>From: <a href="mailto:grisha@MIT.EDU">Francesco Deved</a>'</p>

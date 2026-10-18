@@ -5,9 +5,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "2007-04-22",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2007-04-22"
+    "type": "miscellaneous"
 }
 
 <p>И правильно!</p>

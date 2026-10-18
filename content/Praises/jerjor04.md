@@ -4,9 +4,9 @@
         "author": "Ольга Коган",
         "subtitle": "рецензия на выступление 2004 г. в Иерусалиме"
     },
+    "lastmod": "2006-12-29",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-12-29",
     "url": "/Praises/jerjor04.html"
 }
 

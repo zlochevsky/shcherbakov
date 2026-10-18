@@ -4,9 +4,9 @@
         "author": "Никита Елисеев",
         "subtitle": "«Эксперт Северо-Запад» №7(503), 2011"
     },
+    "lastmod": "2016-10-26",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2016-10-26",
     "url": "/Praises/ekspert11.html"
 }
 

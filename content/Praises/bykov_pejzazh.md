@@ -4,9 +4,9 @@
         "author": "Дмитрий Быков",
         "subtitle": "Статья любезно прислана автором; все цитаты сохранены в том виде, как их приводит Дм.&nbsp;Быков. Напечатана в авторском сборнике &laquo;Вместо жизни&raquo; (М., Вагриус, 2006)."
     },
+    "lastmod": "2000-04-27",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2000-04-27",
     "url": "/Praises/bykov_pejzazh.html"
 }
 

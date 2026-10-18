@@ -4,9 +4,9 @@
         "author": "Константин Крылов",
         "subtitle": "Coincidentia oppositorum"
     },
+    "lastmod": "2003-06-27",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2003-06-27",
     "url": "/Praises/dixi.html"
 }
 

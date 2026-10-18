@@ -3,9 +3,9 @@
     "params": {
         "author": "Александра Спиглазова"
     },
+    "lastmod": "2006-09-14",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-09-14",
     "url": "/Praises/polemika.html"
 }
 

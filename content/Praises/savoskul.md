@@ -5,9 +5,9 @@
         "subtitle": "<a href=\"http://www.russ.ru/culture/teksty/mihail_scherbakov_postmodernistskoe_lico_avtorskoj_pesni\">&laquo;Русский журнал&raquo;</a>, 27 ноября 2007",
         "seoTitle": "Михаил Щербаков: постмодернистское лицо авторской песни — Оксана Савоскул («Русский журнал», 2007)"
     },
+    "lastmod": "2007-11-27",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2007-11-27",
     "url": "/Praises/savoskul.html"
 }
 

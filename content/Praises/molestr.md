@@ -4,9 +4,9 @@
         "author": "Л.П.Беленький",
         "subtitle": "Журнал &laquo;Молодёжная эстрада&raquo;, &#8470;5, 1988 г. С. 87."
     },
+    "lastmod": "2006-05-19",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-05-19",
     "url": "/Praises/molestr.html"
 }
 

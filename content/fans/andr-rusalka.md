@@ -6,9 +6,9 @@
         "backUrl": "fans/index.html#articles",
         "backTitle": "Фан-клуб"
     },
+    "lastmod": "1998-12-15",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "1998-12-15"
+    "type": "miscellaneous"
 }
 
 <blockquote>Русалка, цыганка, цикада, она понимать рождена...</blockquote>

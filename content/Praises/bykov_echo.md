@@ -4,9 +4,9 @@
         "author": "Дмитрий Быков",
         "subtitle": "<a href=\"http://echo.msk.ru/programs/odin/1697726-echo/\">Программа</a> &laquo;Один&raquo; на &laquo;Эхо Москвы&raquo;, 22 января 2016"
     },
+    "lastmod": "2016-02-07",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2016-02-07",
     "url": "/Praises/bykov_echo.html"
 }
 

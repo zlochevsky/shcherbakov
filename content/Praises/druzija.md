@@ -4,9 +4,9 @@
         "author": "Л.П.Беленький",
         "subtitle": "<i>Песни Михаила Щербакова</i>"
     },
+    "lastmod": "1999-01-08",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "1999-01-08",
     "url": "/Praises/druzija.html"
 }
 

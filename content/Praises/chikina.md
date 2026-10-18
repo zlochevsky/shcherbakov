@@ -3,9 +3,9 @@
     "params": {
         "author": "Ольга Чикина"
     },
+    "lastmod": "2009-04-13",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2009-04-13",
     "url": "/Praises/chikina.html"
 }
 

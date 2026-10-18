@@ -3,9 +3,9 @@
     "params": {
         "author": "Спиглазова А.В., Ростов-на-Дону"
     },
+    "lastmod": "2020-01-04",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2020-01-04",
     "url": "/Praises/intermedia.html"
 }
 

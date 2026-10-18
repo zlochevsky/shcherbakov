@@ -4,9 +4,9 @@
         "author": "Александр Филатов, Александр Ощепков",
         "subtitle": "Творческая студия &laquo;Полнолуние&raquo; (радио &laquo;Пик&raquo;, Иркутск)&nbsp;&mdash; прямой эфир, звонки слушателей."
     },
+    "lastmod": "2003-06-27",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2003-06-27",
     "url": "/Praises/fullmoon.html"
 }
 

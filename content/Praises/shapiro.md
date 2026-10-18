@@ -4,9 +4,9 @@
         "author": "Александр Л. Шапиро",
         "subtitle": "Опубликовано в журнале <a href=\"http://magazines.russ.ru/bereg/2011/31/\">&laquo;Новый Берег&raquo; 2011, &#8470;31</a><br><i>Примечания переводчика</i>"
     },
+    "lastmod": "2011-04-12",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2011-04-12",
     "url": "/Praises/shapiro.html"
 }
 

@@ -4,9 +4,9 @@
         "author": "Андрей Анпилов",
         "subtitle": "Из Энциклопедии для детей, Том 9 &laquo;Русская литература&raquo;, Часть 2. М., &laquo;Аванта+&raquo;, 1999. Статья &laquo;Авторская песня&raquo;."
     },
+    "lastmod": "2003-02-08",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2003-02-08",
     "url": "/Praises/avanta.html"
 }
 

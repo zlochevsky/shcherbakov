@@ -4,9 +4,9 @@
         "author": "Владимир Капгер",
         "subtitle": "интервью, данное в Германии (вопросы задавал Роман Кабаков); <a href=\"http://www.bards.de/archive/interviews/kapgint.htm\">полный текст</a> прислал Илья Тимаков"
     },
+    "lastmod": "1999-05-08",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "1999-05-08",
     "url": "/Praises/kapger.html"
 }
 

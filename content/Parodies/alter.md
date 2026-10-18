@@ -5,9 +5,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "2009-06-04",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2009-06-04"
+    "type": "miscellaneous"
 }
 
 <h3>«Австралия» глазами муравьеда</h3>

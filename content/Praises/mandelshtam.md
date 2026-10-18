@@ -4,9 +4,9 @@
         "author": "klezmerchik",
         "subtitle": "Chapters from a term paper in Russian Lit (Harvard, Spring 2004). <a href='http://klezmerchik.livejournal.com/'>klezmerchik</a>"
     },
+    "lastmod": "2010-02-13",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2010-02-13",
     "url": "/Praises/mandelshtam.html"
 }
 

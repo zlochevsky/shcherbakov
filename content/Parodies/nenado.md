@@ -5,9 +5,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "2006-12-09",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2006-12-09"
+    "type": "miscellaneous"
 }
 
 <hr>

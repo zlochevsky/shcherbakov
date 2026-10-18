@@ -4,9 +4,9 @@
         "author": "Елена Бурд",
         "subtitle": "эссе"
     },
+    "lastmod": "2004-06-07",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2004-06-07",
     "url": "/Praises/burd.html"
 }
 

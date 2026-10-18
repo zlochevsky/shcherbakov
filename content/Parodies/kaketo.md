@@ -6,9 +6,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "2020-06-20",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2020-06-20"
+    "type": "miscellaneous"
 }
 
 <blockquote>Кому: Мэтру гитары, пера и плаща<br>Михаилу Константиновичу Ща***.<br>С любовью, трепетом и вообще<br>Михаилу Константиновичу Ще***!</blockquote>

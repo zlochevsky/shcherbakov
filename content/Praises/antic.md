@@ -4,9 +4,9 @@
         "author": "М. А. Янушкевич",
         "subtitle": "Перепечатано: «Гуманитарий» №2, ноябрь 2003, Журнал филологического факультета ТГУ."
     },
+    "lastmod": "2006-12-11",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-12-11",
     "url": "/Praises/antic.html"
 }
 

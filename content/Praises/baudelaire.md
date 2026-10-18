@@ -3,9 +3,9 @@
     "params": {
         "author": "Ксения Павленко"
     },
+    "lastmod": "2004-05-15",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2004-05-15",
     "url": "/Praises/baudelaire.html"
 }
 

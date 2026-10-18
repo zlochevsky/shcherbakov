@@ -5,9 +5,9 @@
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
+    "lastmod": "1999-02-27",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "1999-02-27"
+    "type": "miscellaneous"
 }
 
 <p><i>М. Щербакову</i></p>

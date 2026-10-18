@@ -5,9 +5,9 @@
         "backUrl": "fans/index.html#creative",
         "backTitle": "Фан-клуб"
     },
+    "lastmod": "2012-12-06",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "lastmod": "2012-12-06"
+    "type": "miscellaneous"
 }
 
 <blockquote class="epigraph">

@@ -3,9 +3,9 @@
     "params": {
         "author": "Лев Аннинский"
     },
+    "lastmod": "2009-01-21",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2009-01-21",
     "url": "/Praises/anninskij.html"
 }
 

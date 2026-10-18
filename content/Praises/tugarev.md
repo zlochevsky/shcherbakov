@@ -3,9 +3,9 @@
     "params": {
         "author": "Алексей Тугарев"
     },
+    "lastmod": "2007-06-29",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2007-06-29",
     "url": "/Praises/tugarev.html"
 }
 

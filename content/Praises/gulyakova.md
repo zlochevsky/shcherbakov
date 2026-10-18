@@ -4,9 +4,9 @@
         "author": "Ирина Геннадьевна Гулякова",
         "subtitle": "СПбГУ, Санкт-Петербург. <a href=\"mailto:irgengul@gmail.com\">irgengul@gmail.com</a>"
     },
+    "lastmod": "2014-12-10",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2014-12-10",
     "url": "/Praises/gulyakova.html"
 }
 

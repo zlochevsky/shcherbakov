@@ -1,0 +1,22 @@
+{{- /* Дата пункта меню или "". Контекст — пункт меню (MenuEntry).
+       Показывать ли дату — свойство страницы, на которую ведёт пункт: params.menuDate (флажок «Показывать дату
+       в меню»), источник — partials/menu-date.html. params.date у самого пункта меню (menus.json) — исключение
+       на случай, когда в одном меню дату нужно убрать или показать вопреки странице: "hide" / "show".
+       Пункт без страницы (раскрывающийся раздел, например «Фан-клуб») — самая свежая из дат своих подпунктов. */ -}}
+{{- $e := . -}}
+{{- $d := "" -}}
+{{- $mode := $e.Params.date | default "" -}}
+{{- if ne $mode "hide" -}}
+	{{- with $e.Page -}}
+		{{- if or (eq $mode "show") .Params.menuDate -}}
+			{{- $d = partialCached "menu-date.html" . .Path -}}
+		{{- end -}}
+	{{- else -}}
+		{{- range $e.Children -}}
+			{{- with partial "menu-entry-date.html" . -}}
+				{{- if or (not $d) (.After $d) }}{{ $d = . }}{{ end -}}
+			{{- end -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
+{{- return $d -}}

@@ -4,9 +4,9 @@
         "author": "Михаил Щербаков",
         "subtitle": "интервью на радио «Новая Жизнь» 620 AM в Нью-Йорке, 6 мая 2003"
     },
+    "lastmod": "2005-03-16",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2005-03-16",
     "url": "/Praises/nyradio.html"
 }
 

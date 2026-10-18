@@ -4,9 +4,9 @@
         "author": "Истомин С., Денисенко Д.",
         "subtitle": "Из книги: Истомин С., Денисенко Д. Самые знаменитые барды России.&nbsp;&mdash; М.: «ВЕЧЕ», 2002 г."
     },
+    "lastmod": "2007-07-01",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2007-07-01",
     "url": "/Praises/istomin.html"
 }
 
