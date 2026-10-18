@@ -217,6 +217,18 @@ try {
 // «Порядок меню» (config/_default/menus.json): Hugo сортирует пункты по weight, а не по месту в списке, поэтому перед
 // сохранением weight каждого пункта ставится по его месту в списке своего меню: 10, 20, 30… Подпункты стоят сразу за
 // своим разделом, и их порядок между собой — тот же, что в списке.
+// Флажки со снятой галочкой Sveltia записывает как false; в файлах их нет (для шаблонов «нет» и false — одно и то же),
+// и первое же сохранение страницы давало бы лишнюю строку в diff. Поэтому перед сохранением false у них убирается.
+CMS.registerEventListener({
+	name: 'preSave',
+	handler: ({ entry }) => {
+		let data = entry.get('data');
+		for (const key of ['menuDate', 'centerText', 'monoPre']) {
+			if (data.getIn(['params', key]) === false) data = data.deleteIn(['params', key]);
+		}
+		return data;
+	},
+});
 CMS.registerEventListener({
 	name: 'preSave',
 	handler: ({ entry }) => {

@@ -25,8 +25,10 @@
 <body{{ with $cls }} class="{{ delimit . " " }}"{{ end }}{{ if .Params.noindex }} data-pagefind-ignore="all"{{ end }}>
 {{- $backUrl := .Params.backUrl }}
 {{- $backTitle := .Params.backTitle }}
-{{- /* без backUrl — оглавление раздела по первой папке файла; в остальных случаях — «Отзывы» (статьи Praises) */}}
+{{- /* без backUrl — оглавление раздела по первой папке файла; у страницы в корне сайта — главная (вверху эта ссылка не
+       выводится: там всегда есть «На главную страницу», внизу — остаётся); в остальных случаях — «Отзывы» (Praises) */}}
 {{- $sections := dict
+	"" (slice "index.html" "На главную страницу")
 	"fans" (slice "fans/index.html" "Фан-клуб")
 	"Parodies" (slice "Parodies/index.html" "Пародии")
 	"FOM" (slice "FOM/index.html" "Щ-1")

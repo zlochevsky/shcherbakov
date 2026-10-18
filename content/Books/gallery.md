@@ -1,13 +1,13 @@
 {
     "title": "Библиография",
     "url": "/Books/index.html",
+    "layout": "books-index",
     "params": {
         "seoTitle": "Книги Михаила Щербакова — библиография",
         "menuDate": true
     },
     "description": "Книги песен и стихов Михаила Щербакова и сборники с его текстами: издательства, годы, содержание и обложки.",
     "lastmod": "2023-11-09",
-    "layout": "books-index",
     "type": "miscellaneous"
 }
 

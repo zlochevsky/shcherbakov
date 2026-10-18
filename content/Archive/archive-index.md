@@ -1,13 +1,13 @@
 {
     "title": "Архив концертов, гастролей и прочих событий",
     "url": "/Archive/index.html",
+    "layout": "archive-page",
     "params": {
         "subtitle": "расписания, координаты организаторов, etc",
         "seoTitle": "Архив концертов и гастролей Михаила Щербакова",
         "isIndex": true
     },
     "description": "Отчёты о старых концертах Михаила Щербакова.",
-    "layout": "archive-page",
     "type": "miscellaneous"
 }
 

@@ -6,8 +6,8 @@
         "id": "monologi",
         "noindex": true
     },
+    "type": "miscellaneous",
     "sitemap": {
         "disable": true
-    },
-    "type": "miscellaneous"
+    }
 }

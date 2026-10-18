@@ -82,7 +82,6 @@ collections:
       - { name: buy, preview_path: "shcherbakov/buy.html", label: Где купить, file: content/buy.md, fields: *sitepagefields }
       - { name: news, preview_path: "shcherbakov/news.html", label: Новости (хроника), file: content/news.md, fields: *sitepagefields }
       - { name: "no", preview_path: "shcherbakov/no.html", label: Чего не хватает, file: content/no.md, fields: *sitepagefields }
-      - { name: tab, preview_path: "shcherbakov/tab.html", label: Что такое таблатуры, file: content/tab.md, fields: *sitepagefields }
       - { name: praises-list, preview_path: "shcherbakov/praises.html", label: Список рецензий (Praises), file: content/praises.md, fields: *sitepagefields }
       # страницы, содержимое которых строит шаблон из Directus: в файле — заголовок, поля для поисковиков и вступление
       - { name: catalogue, preview_path: "shcherbakov/catalogue.html", label: Каталог песен, file: content/catalogue.md, fields: *sitepagefields }
@@ -91,7 +90,6 @@ collections:
       - { name: search, preview_path: "shcherbakov/search.html", label: Поиск, file: content/search.md, fields: *sitepagefields }
       # «Лог»: записи — из Directus (log_entries), в файле — прежняя хроника (HTML, ~130 КБ)
       - { name: log, preview_path: "shcherbakov/log.html", label: Лог, file: content/log.md, fields: *sitepagefields }
-      - { name: statistics, preview_path: "shcherbakov/statistics.html", label: Статистика, file: content/statistics.md, fields: *sitepagefields }
       # «Другие публикации» сами не выводятся: их текст вставляется в страницу «Книги»
       - { name: other-publications, preview_path: "shcherbakov/Books/index.html", label: Книги — другие публикации, file: content/Books/other-publications.md, fields: *sitepagefields }
       # страница со ссылками на таблицы Directus (блок «Таблицы Directus» в левой панели берёт список отсюда — скрипт в index.html):
@@ -121,6 +119,44 @@ collections:
                       - { label: Таблица в Directus, name: table, widget: string, hint: "Имя коллекции, как в адресе Directus: events, works…" }
                       - { label: Описание, name: description, widget: text, required: false }
           - { label: Текст над списком, name: body, widget: text }
+
+  # Страницы витрины — простые страницы-статьи в корне сайта (шаблон praises-article), вне фан-клуба: «Что такое
+  # таблатуры», «Статистика» и новые. Отбор — по url корня (/<имя>.html), кроме страниц фан-клуба в корне
+  # (kniga_pamyati, sociology) и каталога переводов. Новая страница: «Адрес» — /imya.html (латиницей).
+  # Ссылка «назад» по умолчанию — на главную (вверху она не выводится: там всегда есть «На главную страницу»).
+  - name: showcase
+    label: Страницы витрины
+    label_singular: Страница витрины
+    folder: content
+    extension: md
+    format: json-frontmatter
+    create: true
+    delete: false
+    duplicate: false
+    slug: { editable: [create] }
+    filter: { field: url, pattern: '^/(?!(kniga_pamyati|sociology|translations)\.html$)[A-Za-z0-9_-]+\.html$' }
+    summary: "{{title}} · {{filename}}"
+    preview_path: "shcherbakov{{fields.url}}"
+    fields:
+      - { label: Заголовок, name: title, widget: string }
+      - { label: Адрес, name: url, widget: string, pattern: ['^/[A-Za-z0-9_-]+\.html$', 'Адрес вида /imya.html, латиницей'] }
+      - label: Параметры
+        name: params
+        widget: object
+        fields:
+          - { label: Автор, name: author, widget: string, required: false }
+          - { label: Подзаголовок, name: subtitle, widget: string, required: false }
+          - { label: Ссылка «назад» — адрес, name: backUrl, widget: string, required: false, hint: "Пункт угловой навигации — родительская страница. Путь от корня сайта без начальной «/», напр. about.html. Пусто — на главную страницу" }
+          - { label: Ссылка «назад» — подпись, name: backTitle, widget: string, required: false }
+          - { label: Моноширинный <pre>, name: monoPre, widget: boolean, required: false, hint: "Для текста, выровненного пробелами (таблицы, табулатуры)" }
+          - *seotitle
+          - *menudate
+          - *menudatefrom
+      - *seodesc
+      - { label: Дата, name: lastmod, widget: datetime, time_format: false, required: false, hint: "Дата публикации или обновления — кнопка Today ставит сегодняшнюю; сама при сохранении не меняется. Пусто — даты нет" }
+      - { label: layout, name: layout, widget: hidden, required: false, default: praises-article }
+      - { label: type, name: type, widget: hidden, required: false, default: miscellaneous }
+      - { label: Текст (HTML), name: body, widget: markdown, modes: [raw] }
 
   # Порядок меню: config/_default/menus.json целиком — шесть меню, пункты перетаскиваются мышью. Hugo сортирует пункты
   # по weight, а не по месту в списке, поэтому при сохранении скрипт в index.html (preSave) проставляет weight по месту:
@@ -179,7 +215,7 @@ collections:
   # Удалять нельзя: на статьи ведут ссылки из списков и других статей — удалять через git, проверив check-links.
   - name: praises
     label: Рецензии (Praises)
-    label_singular: Статья
+    label_singular: Рецензия
     folder: content/Praises
     extension: md
     format: json-frontmatter
@@ -200,7 +236,7 @@ collections:
           - { label: Подзаголовок, name: subtitle, widget: string, required: false }
           - *seotitle
       - *seodesc
-      - &datefieldnew { label: Дата, name: lastmod, widget: datetime, time_format: false, required: false, default: "{{now}}", hint: "Дата публикации или обновления (не меняется сама при сохранении): по ней — дата раздела в меню. Пусто — даты нет" }
+      - &datefieldnew { label: Дата, name: lastmod, widget: datetime, time_format: false, required: false, hint: "Дата публикации или обновления — кнопка Today ставит сегодняшнюю; сама при сохранении не меняется. По ней — дата раздела в меню. Пусто — даты нет" }
       - &layoutfield { label: layout, name: layout, widget: hidden, required: false, default: praises-article }
       - &typefield { label: type, name: type, widget: hidden, required: false, default: miscellaneous }
       # тело — поле Markdown только в режиме исходника (modes: raw): правится тот же HTML как текст, без визуального
@@ -218,7 +254,7 @@ collections:
   # Ссылка «назад» по умолчанию — оглавление раздела (layouts/miscellaneous/praises-article.html).
   - name: club
     label: Статьи фан-клуба
-    label_singular: Статья
+    label_singular: Статья фан-клуба
     folder: content
     nested: { depth: 2, subfolders: false }
     meta: { path: { label: Раздел (папка) } }
@@ -252,28 +288,54 @@ collections:
       - *articlebody
 
   # Диски, кассеты, книги, циклы, архив гастролей: данные (треки, обложки, выходные данные) — из Directus по params.id,
-  # в файле — заголовок, поля для поисковиков и текст. Параметры (id и прочее) в форме не показываются и сохраняются
-  # как есть. Новые страницы появляются вместе с записями в Directus. Отбор — по url, как у статей фан-клуба.
+  # в файле — заголовок, поля для поисковиков и текст. Отбор — по url, как у статей фан-клуба. Новая страница (кнопка
+  # «+» или «New»): «Parent Folder» — папка раздела, «Адрес» — тот же раздел и имя (обычно = id), вид страницы и id записи
+  # в Directus (у страниц гастролей id нет). Вид и id у существующих страниц не менять: это связь с шаблоном и базой.
   - name: releases
     label: Диски, книги, архив
-    label_singular: Страница
+    label_singular: Диск, книга, гастроли
     folder: content
     nested: { depth: 2, subfolders: false }
+    meta: { path: { label: Раздел (папка) } }
     extension: md
     format: json-frontmatter
-    create: false
+    create: true
     delete: false
     duplicate: false
-    slug: { editable: false }
+    slug: { editable: [create] }
     filter: { field: url, pattern: '^/(Disks|Tapes|Books|Cycles|Archive)/' }
     summary: "{{title}} · {{filename}}"
     preview_path: "shcherbakov{{fields.url}}"
     fields:
       - { label: Заголовок, name: title, widget: string }
-      - { label: url, name: url, widget: hidden, required: false }
-      - { label: Параметры, name: params, widget: object, collapsed: true, fields: [ { label: Подзаголовок, name: subtitle, widget: string, required: false }, *seotitle, *menudate, *menudatefrom ] }
+      - { label: Адрес, name: url, widget: string, pattern: ['^/(Disks|Tapes|Books|Cycles|Archive)/[A-Za-z0-9_.-]+\.html$', 'Адрес вида /Disks/imya.html — раздел тот же, что у папки'], hint: "Раздел — тот же, что у папки: /Disks/…, /Tapes/…, /Books/…, /Cycles/…, /Archive/…; имя — обычно id записи в Directus" }
+      - label: Вид страницы
+        name: layout
+        widget: select
+        default: diskpage
+        hint: "Задаётся при создании; у существующих страниц не менять"
+        options:
+          - { label: Диск, value: diskpage }
+          - { label: Кассета, value: tapepage }
+          - { label: Книга, value: bookpage }
+          - { label: Цикл песен, value: cycle }
+          - { label: Страница гастролей (архив), value: archive-page }
+          - { label: Оглавление дисков, value: disks-index }
+          - { label: Оглавление книг, value: books-index }
+          - { label: Другие проекты, value: other-projects }
+      - label: Параметры
+        name: params
+        widget: object
+        collapsed: true
+        fields:
+          - { label: id записи в Directus, name: id, widget: string, required: false, hint: "sets.id (диск, кассета), books.id (книга), cycles.id (цикл); у страниц гастролей пусто. У существующих страниц не менять" }
+          - { label: Подзаголовок, name: subtitle, widget: string, required: false }
+          - *seotitle
+          - *menudate
+          - *menudatefrom
       - *seodesc
       - *datefield
+      - *typefield
       - { label: Текст, name: body, widget: text, required: false }
 
   # Страницы картинок (шаблон images-page): тело — HTML; картинки лежат в static/Images, на страницах на них ссылаются
@@ -283,7 +345,7 @@ collections:
   # и у них другой шаблон. Создание и удаление — как у статей.
   - name: images
     label: Картинки (Images)
-    label_singular: Страница
+    label_singular: Страница картинок
     folder: content/Images
     extension: md
     format: json-frontmatter

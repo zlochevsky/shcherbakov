@@ -1,10 +1,10 @@
 {
     "title": "Расписание американских гастролей Михаила Щербакова",
     "url": "/Archive/america99.html",
+    "layout": "archive-page",
     "params": {
         "subtitle": "Sep-Oct 1999"
     },
-    "layout": "archive-page",
     "type": "miscellaneous"
 }
 

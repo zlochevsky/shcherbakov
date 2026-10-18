@@ -1,15 +1,15 @@
 {
     "title": "Что такое таблатуры и как их читать?",
+    "url": "/tab.html",
     "params": {
-        "seoTitle": "Как читать гитарные таблатуры",
-        "backTitle": "Вступление",
         "backUrl": "about.html",
-        "monoPre": true
+        "backTitle": "Вступление",
+        "monoPre": true,
+        "seoTitle": "Как читать гитарные таблатуры"
     },
     "description": "Что такое таблатура и как её читать: короткое пояснение к гитарным разборам песен Михаила Щербакова на этом сайте.",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/tab.html"
+    "type": "miscellaneous"
 }
 
 <p>Таблатура, или табулатура (tablature) — способ записи гитарной

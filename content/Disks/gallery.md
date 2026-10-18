@@ -1,12 +1,12 @@
 {
     "title": "Дискография",
     "url": "/Disks/index.html",
+    "layout": "disks-index",
     "params": {
         "seoTitle": "Дискография Михаила Щербакова — альбомы и кассеты",
         "menuDate": true
     },
     "description": "Альбомы Михаила Щербакова: компакт-диски и цифровые альбомы. Списки песен, обложки, годы выхода и участники записи.",
-    "layout": "disks-index",
     "type": "miscellaneous"
 }
 

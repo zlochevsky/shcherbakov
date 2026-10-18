@@ -3,8 +3,8 @@
     "url": "/Books/bkp4.html",
     "layout": "bookpage",
     "params": {
-        "buyUrl": "https://paltbook.ru/catalog/knigi/1067/",
-        "id": "bkp4"
+        "id": "bkp4",
+        "buyUrl": "https://paltbook.ru/catalog/knigi/1067/"
     },
     "type": "miscellaneous"
 }

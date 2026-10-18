@@ -1,16 +1,16 @@
 {
     "title": "История с географией",
+    "url": "/statistics.html",
     "params": {
-        "seoTitle": "Статистика посещений сайта, 1996–1997 (архив)",
-        "backTitle": "Лог",
+        "subtitle": "Статистика посещений сайта, 1996–1997",
         "backUrl": "log.html",
+        "backTitle": "Лог",
         "monoPre": true,
-        "subtitle": "Статистика посещений сайта, 1996–1997"
+        "seoTitle": "Статистика посещений сайта, 1996–1997 (архив)"
     },
     "description": "Архивный срез: посещаемость сайта о Михаиле Щербакове в 1996–1997 годах по месяцам и странам.",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/statistics.html"
+    "type": "miscellaneous"
 }
 
 <h2>1. История.</h2>
