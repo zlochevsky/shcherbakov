@@ -56,7 +56,11 @@ A part of the site's content (song catalogue, concerts, performances, albums, bo
 
 ## Menus
 
-The menus are in `config/_default/menus.json`: `indexheadermenu` and `indexfootermenu` (home page), `searchheadermenu`, `ctgheadermenu` (song catalogue), `trnheadermenu` (translations), `concertsheadermenu`. `layouts/partials/menu.html` renders them. Order and entries are easier to edit in the editor: «Порядок меню» (see "Editing in the browser"). Hugo sorts entries by `weight`, not by list position, so in the file the `weight`s follow the entries' order (10, 20, 30…) and children come right after their section; on saving from the editor a script in `static/admin/index.html` recalculates them. Besides the standard `name`, `pageRef`, `weight`, `parent`/`identifier`, an entry may have `params`:
+The menus are in `config/_default/menus.json`: `indexheadermenu` and `indexfootermenu` (home page), `searchheadermenu`, `ctgheadermenu` (song catalogue), `trnheadermenu` (translations), `concertsheadermenu`. `layouts/partials/menu.html` renders them. Order and entries are easier to edit in the editor: «Порядок меню» (see "Editing in the browser"). Hugo sorts entries by `weight`, not by list position, so in the file the `weight`s follow the entries' order (10, 20, 30…) and children come right after their section; on saving from the editor a script in `static/admin/index.html` recalculates them.
+
+The order of entries is set twice, and the two must agree: **Hugo looks only at `weight`** (the position in the file does not matter to it; equal `weight`s go alphabetically), while **the editor looks only at the position in the list**: it shows entries in file order and on saving rewrites `weight` from that position, dropping the old numbers. So when editing `menus.json` by hand, move the entry itself (a child right after its section) and change its `weight` so the numbers grow from top to bottom. If only `weight` is changed, the site order changes, but the next save of the menus from the editor puts the entry back where it stands in the file.
+
+Besides the standard `name`, `pageRef`, `weight`, `parent`/`identifier`, an entry may have `params`:
 
 - `shortName` -- the label in the mobile version (the full `name` is shown on wide screens): «Песни», «Концерты», «Главная»;
 - `mobileOnly: "yes"` -- the entry is shown only in the mobile version;
