@@ -1,13 +1,13 @@
 {
     "title": "Гербарий, составленный по песням М. Щербакова",
+    "url": "/fans/herbary.html",
     "params": {
         "backUrl": "fans/index.html#creative",
         "backTitle": "Фан-клуб"
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2012-12-06",
-    "url": "/fans/herbary.html"
+    "lastmod": "2012-12-06"
 }
 
 <blockquote class="epigraph">

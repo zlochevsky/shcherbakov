@@ -1,5 +1,6 @@
 {
     "title": "Породии",
+    "url": "/Parodies/filatov.html",
     "params": {
         "author": "Александр Филатов",
         "backUrl": "Parodies/index.html",
@@ -7,8 +8,7 @@
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2006-12-09",
-    "url": "/Parodies/filatov.html"
+    "lastmod": "2006-12-09"
 }
 
 <p><a href="http://polnolunie.baikal.ru/me/porodii.htm">Оригинал</a>&nbsp;&mdash; на Полнолунии</p>

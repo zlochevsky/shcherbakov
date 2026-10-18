@@ -1,9 +1,9 @@
 {
-   "title": "Райцентр",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/raycentr.html",
-   "params": {
-       "id": "raycentr"
-       }
+    "title": "Райцентр",
+    "url": "/Disks/raycentr.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "raycentr"
+    },
+    "type": "miscellaneous"
 }

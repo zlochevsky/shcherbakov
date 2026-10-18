@@ -1,12 +1,12 @@
 {
-   "title": "Нет и не было яда",
-   "type": "miscellaneous",
-   "layout": "bookpage",
-   "url": "/Books/yad.html",
-   "aliases": [
-      "/Books/yad_cont.html"
-   ],
-   "params": {
-      "id": "yad"
-   }
+    "aliases": [
+        "/Books/yad_cont.html"
+    ],
+    "title": "Нет и не было яда",
+    "url": "/Books/yad.html",
+    "layout": "bookpage",
+    "params": {
+        "id": "yad"
+    },
+    "type": "miscellaneous"
 }

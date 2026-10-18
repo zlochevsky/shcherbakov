@@ -1,15 +1,15 @@
 {
-   "title": "«Не зря ли я взывал до хрипоты, племена миря?..»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/FOM/znanie.html",
-   "params": {
-      "subtitle": "&laquo;Знание-Сила&raquo; от 08.94 г<br>Отсканировал <a href=\"mailto:antgl@nwgsm.com\">Glasunov Anton</a>",
-      "backUrl": "FOM/index.html",
-      "backTitle": "Щ-1",
-      "seoTitle": "«Не зря ли я взывал до хрипоты...» — проект «Щ-1»"
-   },
-   "description": "Статья о Михаиле Щербакове из журнала «Знание — сила» (август 1994), приложенная к материалам проекта «Щ-1»."
+    "title": "«Не зря ли я взывал до хрипоты, племена миря?..»",
+    "url": "/FOM/znanie.html",
+    "params": {
+        "subtitle": "&laquo;Знание-Сила&raquo; от 08.94 г<br>Отсканировал <a href=\"mailto:antgl@nwgsm.com\">Glasunov Anton</a>",
+        "backUrl": "FOM/index.html",
+        "backTitle": "Щ-1",
+        "seoTitle": "«Не зря ли я взывал до хрипоты...» — проект «Щ-1»"
+    },
+    "description": "Статья о Михаиле Щербакове из журнала «Знание — сила» (август 1994), приложенная к материалам проекта «Щ-1».",
+    "layout": "praises-article",
+    "type": "miscellaneous"
 }
 
 <blockquote>

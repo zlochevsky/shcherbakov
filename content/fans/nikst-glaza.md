@@ -1,5 +1,6 @@
 {
     "title": "Эти глаза напротив",
+    "url": "/fans/nikst-glaza.html",
     "params": {
         "backUrl": "fans/kom.html#etiglaza",
         "backTitle": "Словарь заморских слов",
@@ -7,8 +8,7 @@
     },
     "description": "Текст и история песни «Эти глаза напротив» в исполнении Валерия Ободзинского — к одноимённой песне Михаила Щербакова (1992). Из «Словаря заморских слов».",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/nikst-glaza.html"
+    "type": "miscellaneous"
 }
 
 <p>From: nikst@glasnet.ru<br>Newsgroups: soc.culture.russian.moderated<br>Subject: Памяти Валерия ОБОДЗИНСКОГО&nbsp;&mdash; 4</p>

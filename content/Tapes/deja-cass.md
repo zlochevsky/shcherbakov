@@ -1,9 +1,9 @@
 {
-   "title": "Deja",
-   "type": "miscellaneous",
-   "layout": "tapepage",
-   "url": "/Tapes/deja-cass.html",
-   "params": {
-       "id": "deja-cass"
-       }
+    "title": "Deja",
+    "url": "/Tapes/deja-cass.html",
+    "layout": "tapepage",
+    "params": {
+        "id": "deja-cass"
+    },
+    "type": "miscellaneous"
 }

@@ -1,11 +1,11 @@
 {
-   "title": "Встречи минские и не только",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/minsk4.html",
-   "params": {
-       "id": "minsk4"
-       }
+    "title": "Встречи минские и не только",
+    "url": "/Disks/minsk4.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "minsk4"
+    },
+    "type": "miscellaneous"
 }
 
 Звук — Г.&nbsp;Заборовский, В.&nbsp;Липай, С.&nbsp;Павленко, Л.&nbsp;Фромзель. Фото — В.&nbsp;Липай. Дизайн — Е.&nbsp;Дашкевич.

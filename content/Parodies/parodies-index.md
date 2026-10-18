@@ -1,5 +1,6 @@
 {
     "title": "Пародии",
+    "url": "/Parodies/index.html",
     "params": {
         "backUrl": "fans/index.html",
         "backTitle": "Фан-клуб",
@@ -8,8 +9,7 @@
     "description": "Пародии и подражания песням Михаила Щербакова, собранные поклонниками.",
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2020-06-20",
-    "url": "/Parodies/index.html"
+    "lastmod": "2020-06-20"
 }
 
 <blockquote><i>Штирлиц шел по улице. Вдруг ему на голову упал кирпич.<br>«Цигель,»&nbsp;&mdash; подумал Штирлиц.<br>«Цигель, цигель, абгемахт,»&nbsp;&mdash; подумал Мюллер, сбрасывая второй кирпич.</i><br><a href="mailto:grisha@mit.edu">(Гр.Гольдберг)</a></blockquote>

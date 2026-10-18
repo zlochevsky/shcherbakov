@@ -1,13 +1,13 @@
 {
     "title": "Тема курочки Рябы",
+    "url": "/Parodies/ryaba.html",
     "params": {
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2012-06-06",
-    "url": "/Parodies/ryaba.html"
+    "lastmod": "2012-06-06"
 }
 
 <p><i>&nbsp;&nbsp;&nbsp;Михаилу Константиновичу, с любовью.</i></p>

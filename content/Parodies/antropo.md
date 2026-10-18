@@ -1,13 +1,13 @@
 {
     "title": "И еще нечто",
+    "url": "/Parodies/antropo.html",
     "params": {
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2000-04-12",
-    "url": "/Parodies/antropo.html"
+    "lastmod": "2000-04-12"
 }
 
 <p>Прислал это Лев Евдокимов.</p>

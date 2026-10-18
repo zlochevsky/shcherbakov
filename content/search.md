@@ -1,12 +1,12 @@
 {
-   "date": "2026-08-22",
-   "title": "Поиск",
-   "type": "miscellaneous",
-   "layout": "search",
-   "sitemap": {
-      "disable": true
-   },
-   "params": {
-      "noindex": true
-   }
+    "title": "Поиск",
+    "date": "2026-08-22",
+    "layout": "search",
+    "params": {
+        "noindex": true
+    },
+    "sitemap": {
+        "disable": true
+    },
+    "type": "miscellaneous"
 }

@@ -1,12 +1,13 @@
 {
-   "title": "Расписание американских гастролей Михаила Щербакова",
-   "type": "miscellaneous",
-   "layout": "archive-page",
-   "url": "/Archive/america99.html",
-   "params": {
-      "subtitle": "Sep-Oct 1999"
-   }
+    "title": "Расписание американских гастролей Михаила Щербакова",
+    "url": "/Archive/america99.html",
+    "params": {
+        "subtitle": "Sep-Oct 1999"
+    },
+    "layout": "archive-page",
+    "type": "miscellaneous"
 }
+
 <p>25-26 сент&nbsp;&mdash; <b><a href="http://www.kspus.org/">слет КСП Восточного побережья</a></b></p>
 
 <p>30 сент&nbsp;&mdash; <b>Fair Lawn, NJ.</b></p>

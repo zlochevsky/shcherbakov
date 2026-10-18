@@ -1,9 +1,9 @@
 {
-   "title": "Другая жизнь",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/drugaja.html",
-   "params": {
-       "id": "drugaja"
-       }
+    "title": "Другая жизнь",
+    "url": "/Disks/drugaja.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "drugaja"
+    },
+    "type": "miscellaneous"
 }

@@ -1,15 +1,16 @@
 {
-   "title": "Вишнёвое варенье",
-   "type": "miscellaneous",
-   "layout": "bookpage",
-   "url": "/Books/vv.html",
-   "aliases": [
-      "/Books/vv_cont.html"
-   ],
-   "params": {
-      "id": "vv"
-   }
+    "aliases": [
+        "/Books/vv_cont.html"
+    ],
+    "title": "Вишнёвое варенье",
+    "url": "/Books/vv.html",
+    "layout": "bookpage",
+    "params": {
+        "id": "vv"
+    },
+    "type": "miscellaneous"
 }
+
 <ul>
 <li>Художник М.&nbsp;А.&nbsp;Ким. (Даже если вы все песни знаете наизусть, то книгу стоит купить за одни <a href="../Images/VV_pic.html">иллюстрации</a>.)</li>
 <li>На внутренней стороне обложки&nbsp;&mdash; знаменитая фотография в шапке. <i>(Записка: «Почему на этой фотографии Вы такой красивый?»)</i></li>

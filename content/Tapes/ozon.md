@@ -1,9 +1,9 @@
 {
-   "title": "Российские барды",
-   "type": "miscellaneous",
-   "layout": "tapepage",
-   "url": "/Tapes/ozon.html",
-   "params": {
-       "id": "ozon"
-       }
+    "title": "Российские барды",
+    "url": "/Tapes/ozon.html",
+    "layout": "tapepage",
+    "params": {
+        "id": "ozon"
+    },
+    "type": "miscellaneous"
 }

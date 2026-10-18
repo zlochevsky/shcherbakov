@@ -1,9 +1,9 @@
 {
-   "title": "Faux pas / Ложный шаг",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/fauxpas.html",
-   "params": {
-       "id": "fauxpas"
-       }
+    "title": "Faux pas / Ложный шаг",
+    "url": "/Disks/fauxpas.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "fauxpas"
+    },
+    "type": "miscellaneous"
 }

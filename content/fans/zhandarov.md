@@ -1,5 +1,6 @@
 {
     "title": "Сергей Жандаров",
+    "url": "/fans/zhandarov.html",
     "params": {
         "backUrl": "fans/index.html#articles",
         "backTitle": "Фан-клуб",
@@ -7,8 +8,7 @@
     },
     "description": "Стихотворение Сергея Жандарова (9 марта 2003), навеянное «любовью, весной, воспоминаниями о Москве и новым диском Щербакова «Если»».",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/zhandarov.html"
+    "type": "miscellaneous"
 }
 
 <blockquote><i>...навеяно любовью, весной, воспоминаниями о Москве и,<br>не в последнюю очередь, новым диском Щербакова «Если»...</i></blockquote>

@@ -1,9 +1,9 @@
 {
-   "title": "Авиапочта",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/aviapochta.html",
-   "params": {
-       "id": "aviapochta"
-       }
+    "title": "Авиапочта",
+    "url": "/Disks/aviapochta.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "aviapochta"
+    },
+    "type": "miscellaneous"
 }

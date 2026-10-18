@@ -1,5 +1,6 @@
 {
     "title": "М. Щербаков: опыт комментария",
+    "url": "/fans/andr-rusalka.html",
     "params": {
         "author": "Андрей Андрианов",
         "backUrl": "fans/index.html#articles",
@@ -7,8 +8,7 @@
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "1998-12-15",
-    "url": "/fans/andr-rusalka.html"
+    "lastmod": "1998-12-15"
 }
 
 <blockquote>Русалка, цыганка, цикада, она понимать рождена...</blockquote>

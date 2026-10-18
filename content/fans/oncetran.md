@@ -1,12 +1,12 @@
 {
     "title": "Once — переводы",
+    "url": "/fans/oncetran.html",
     "params": {
         "backUrl": "fans/kom.html#once",
         "backTitle": "Словарь заморских слов"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/oncetran.html"
+    "type": "miscellaneous"
 }
 
 <pre>  Once in our lives

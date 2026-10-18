@@ -1,13 +1,13 @@
 {
     "title": "Вопросы «Что? Где? Когда?»",
+    "url": "/fans/chgk.html",
     "params": {
         "subtitle": "Вопросы, связанные с творчеством М. Щербакова, из <a href=\"http://chgk.zaba.ru/\">базы вопросов</a> «Что? Где? Когда?»",
         "backUrl": "fans/index.html#creative",
         "backTitle": "Фан-клуб"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/chgk.html"
+    "type": "miscellaneous"
 }
 
 <p>Чтобы увидеть ответ, выделите мышкой (левой кнопкой) участок под вопросом</p>

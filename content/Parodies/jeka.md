@@ -1,5 +1,6 @@
 {
     "title": "Песенка",
+    "url": "/Parodies/jeka.html",
     "params": {
         "author": "Евгения Голосовская",
         "backUrl": "Parodies/index.html",
@@ -7,8 +8,7 @@
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "1999-09-12",
-    "url": "/Parodies/jeka.html"
+    "lastmod": "1999-09-12"
 }
 
 <p class="right"><b>e-mail: <a href="mailto:je@bards.de">je@bards.de</a></b></p>

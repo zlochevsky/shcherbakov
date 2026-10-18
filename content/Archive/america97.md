@@ -1,12 +1,13 @@
 {
-   "title": "Mikhail Shcherbakov's American Tour, October 1997",
-   "type": "miscellaneous",
-   "layout": "archive-page",
-   "url": "/Archive/america97.html",
-   "params": {
-      "lang": "en"
-   }
+    "title": "Mikhail Shcherbakov's American Tour, October 1997",
+    "url": "/Archive/america97.html",
+    "layout": "archive-page",
+    "params": {
+        "lang": "en"
+    },
+    "type": "miscellaneous"
 }
+
 <p>Mikhail Shcherbakov, a famous Russian songwriter, will be visiting the USA and Canada with a series of concerts.</p>
 
 <p><a href="../index.html">Go to The Unofficial Scherbakov Page, if you can read Russian.</a></p>

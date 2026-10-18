@@ -1,20 +1,20 @@
 {
-   "title": "«Интегратор»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/FOM/itgr.html",
-   "params": {
-      "backUrl": "FOM/index.html",
-      "backTitle": "Щ-1",
-      "seoTitle": "Интервью «Интегратор» — проект «Щ-1», ФОМ",
-      "prevUrl": "FOM/patr.html",
-      "prevTitle": "«Патриарх»",
-      "prevHint": "Экспертный опрос: тексты интервью",
-      "nextUrl": "FOM/iska.html",
-      "nextTitle": "«Искатель»",
-      "nextHint": "Экспертный опрос: тексты интервью"
-   },
-   "description": "Интервью эксперта «Интегратор» о творчестве Михаила Щербакова — экспертный опрос Фонда «Общественное мнение», 1996."
+    "title": "«Интегратор»",
+    "url": "/FOM/itgr.html",
+    "params": {
+        "backUrl": "FOM/index.html",
+        "backTitle": "Щ-1",
+        "seoTitle": "Интервью «Интегратор» — проект «Щ-1», ФОМ",
+        "nextHint": "Экспертный опрос: тексты интервью",
+        "nextTitle": "«Искатель»",
+        "nextUrl": "FOM/iska.html",
+        "prevHint": "Экспертный опрос: тексты интервью",
+        "prevTitle": "«Патриарх»",
+        "prevUrl": "FOM/patr.html"
+    },
+    "description": "Интервью эксперта «Интегратор» о творчестве Михаила Щербакова — экспертный опрос Фонда «Общественное мнение», 1996.",
+    "layout": "praises-article",
+    "type": "miscellaneous"
 }
 
 <p>&mdash; Насчет Щербакова я могу сказать, что, по моему мнению, это однозначно

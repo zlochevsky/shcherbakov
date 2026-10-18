@@ -1,9 +1,9 @@
 {
-   "title": "По мотивам",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/pomotivam.html",
-   "params": {
-       "id": "pomotivam"
-       }
+    "title": "По мотивам",
+    "url": "/Disks/pomotivam.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "pomotivam"
+    },
+    "type": "miscellaneous"
 }

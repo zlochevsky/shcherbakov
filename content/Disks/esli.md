@@ -1,9 +1,9 @@
 {
-   "title": "Если",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/esli.html",
-   "params": {
-       "id": "esli"
-       }
+    "title": "Если",
+    "url": "/Disks/esli.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "esli"
+    },
+    "type": "miscellaneous"
 }

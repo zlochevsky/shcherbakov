@@ -1,10 +1,10 @@
 {
-   "title": "Собрание песен. Том 3",
-   "type": "miscellaneous",
-   "layout": "bookpage",
-   "url": "/Books/bkp3.html",
-   "params": {
-       "id": "bkp3",
-       "buyUrl": "https://paltbook.ru/catalog/knigi/1063/"
-       }
+    "title": "Собрание песен. Том 3",
+    "url": "/Books/bkp3.html",
+    "layout": "bookpage",
+    "params": {
+        "buyUrl": "https://paltbook.ru/catalog/knigi/1063/",
+        "id": "bkp3"
+    },
+    "type": "miscellaneous"
 }

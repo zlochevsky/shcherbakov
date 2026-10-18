@@ -1,9 +1,9 @@
 {
-   "title": "Заклинание",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/zaklinan.html",
-   "params": {
-       "id": "zaklinan"
-       }
+    "title": "Заклинание",
+    "url": "/Disks/zaklinan.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "zaklinan"
+    },
+    "type": "miscellaneous"
 }

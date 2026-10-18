@@ -1,5 +1,6 @@
 {
     "title": "Щербакиана",
+    "url": "/Parodies/dubinchik.html",
     "params": {
         "author": "Аркадий Дубинчик",
         "backUrl": "Parodies/index.html",
@@ -7,8 +8,7 @@
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "1999-02-27",
-    "url": "/Parodies/dubinchik.html"
+    "lastmod": "1999-02-27"
 }
 
 <ol>

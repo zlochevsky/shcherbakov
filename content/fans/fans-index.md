@@ -1,5 +1,6 @@
 {
     "title": "Фан-Клуб М. Щербакова",
+    "url": "/fans/index.html",
     "params": {
         "backUrl": "index.html",
         "backTitle": "На главную",
@@ -8,8 +9,7 @@
     },
     "description": "Материалы поклонников Михаила Щербакова: эссе, стихи, переводы, пародии, кроссворды, картинки, социология и мемориальные страницы.",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/index.html"
+    "type": "miscellaneous"
 }
 
 <h2>Мемориальные страницы</h2>

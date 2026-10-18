@@ -1,5 +1,6 @@
 {
     "title": "Два слова Муму",
+    "url": "/Parodies/mumu.html",
     "params": {
         "author": "Михаил Рабинович",
         "backUrl": "Parodies/index.html",
@@ -7,8 +8,7 @@
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2007-02-03",
-    "url": "/Parodies/mumu.html"
+    "lastmod": "2007-02-03"
 }
 
 <p><a id="lj"></a></p>

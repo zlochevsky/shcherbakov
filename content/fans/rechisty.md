@@ -1,12 +1,12 @@
 {
     "title": "Хома Речистый",
+    "url": "/fans/rechisty.html",
     "params": {
         "backUrl": "fans/index.html#articles",
         "backTitle": "Фан-клуб"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/rechisty.html"
+    "type": "miscellaneous"
 }
 
 <p><a href="https://stihi.ru/avtor/glibhamster">Хома Речистый</a></p>

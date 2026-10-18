@@ -1,9 +1,9 @@
 {
-   "title": "Целое лето",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/celoe.html",
-   "params": {
-       "id": "celoe"
-       }
+    "title": "Целое лето",
+    "url": "/Disks/celoe.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "celoe"
+    },
+    "type": "miscellaneous"
 }

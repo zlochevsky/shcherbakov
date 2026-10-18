@@ -1,5 +1,6 @@
 {
     "title": "Как это было на самом деле",
+    "url": "/Parodies/kaketo.html",
     "params": {
         "author": "Александр Вольнов",
         "backUrl": "Parodies/index.html",
@@ -7,8 +8,7 @@
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2020-06-20",
-    "url": "/Parodies/kaketo.html"
+    "lastmod": "2020-06-20"
 }
 
 <blockquote>Кому: Мэтру гитары, пера и плаща<br>Михаилу Константиновичу Ща***.<br>С любовью, трепетом и вообще<br>Михаилу Константиновичу Ще***!</blockquote>

@@ -1,9 +1,9 @@
 {
-   "title": "Once",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/once.html",
-   "params": {
-       "id": "once"
-       }
+    "title": "Once",
+    "url": "/Disks/once.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "once"
+    },
+    "type": "miscellaneous"
 }

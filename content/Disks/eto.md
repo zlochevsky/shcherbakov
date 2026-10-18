@@ -1,9 +1,9 @@
 {
-   "title": "Это должно случиться",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/eto.html",
-   "params": {
-       "id": "eto"
-       }
+    "title": "Это должно случиться",
+    "url": "/Disks/eto.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "eto"
+    },
+    "type": "miscellaneous"
 }

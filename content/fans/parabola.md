@@ -1,12 +1,12 @@
 {
     "title": "Парабола Лобачевского",
+    "url": "/fans/parabola.html",
     "params": {
         "backUrl": "fans/kom.html#pesenkao",
         "backTitle": "Словарь заморских слов"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/parabola.html"
+    "type": "miscellaneous"
 }
 
 <p>Некоторые вот думают, что строки Михаила Щербакова</p>

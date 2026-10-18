@@ -1,12 +1,12 @@
 {
     "title": "Какого века есть метафора сия?",
+    "url": "/fans/metafora.html",
     "params": {
         "backUrl": "fans/kom.html#drugoe",
         "backTitle": "Словарь заморских слов"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/metafora.html"
+    "type": "miscellaneous"
 }
 
 <p>Date: Sat, 08 Aug 1998 15:55:05 +0200<br>From: Victor Schneider &lt;vschnei@hotmail.com&gt;</p>

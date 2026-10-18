@@ -1,5 +1,6 @@
 {
     "title": "Ad Leuconoen",
+    "url": "/fans/horatius.html",
     "params": {
         "backUrl": "fans/kom.html#adleucon",
         "backTitle": "Словарь заморских слов",
@@ -7,8 +8,7 @@
     },
     "description": "Ода Горация «Ad Leuconoen» («Carpe diem») по-латыни и в переводе — к песне Михаила Щербакова «Ad Leuconoen» (1987). Из «Словаря заморских слов».",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/horatius.html"
+    "type": "miscellaneous"
 }
 
 <p>From: <a href="mailto:Berdn@MIT.EDU">Boris Berdnikov</a></p>

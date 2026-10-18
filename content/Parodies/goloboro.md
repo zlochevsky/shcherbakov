@@ -1,12 +1,12 @@
 {
     "title": "Пародии Д. Голобородько",
+    "url": "/Parodies/goloboro.html",
     "params": {
         "backUrl": "Parodies/index.html#free",
         "backTitle": "Пародии"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/Parodies/goloboro.html"
+    "type": "miscellaneous"
 }
 
 <ul>

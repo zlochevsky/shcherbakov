@@ -1,15 +1,15 @@
 {
-   "title": "«Щ-2»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/SCH2/index.html",
-   "lastmod": "2000-05-20",
-   "params": {
-      "backUrl": "sociology.html",
-      "backTitle": "Социология",
-      "seoTitle": "Проект «Щ-2» — вопросник о песнях Михаила Щербакова"
-   },
-   "description": "Материалы проекта «Щ-2» (1999–2000): вопросы о творчестве Михаила Щербакова и ответы участников."
+    "title": "«Щ-2»",
+    "url": "/SCH2/index.html",
+    "params": {
+        "backUrl": "sociology.html",
+        "backTitle": "Социология",
+        "seoTitle": "Проект «Щ-2» — вопросник о песнях Михаила Щербакова"
+    },
+    "description": "Материалы проекта «Щ-2» (1999–2000): вопросы о творчестве Михаила Щербакова и ответы участников.",
+    "layout": "praises-article",
+    "type": "miscellaneous",
+    "lastmod": "2000-05-20"
 }
 
 <p>(Последние дополнения&nbsp;&mdash; 15.12.1999, проект закрыт 20.05.2000)</p>

@@ -1,12 +1,12 @@
 {
     "title": "Если надо — объяснят",
+    "url": "/fans/eslinado.html",
     "params": {
         "backUrl": "fans/kom.html#nerazmen",
         "backTitle": "Словарь заморских слов"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/eslinado.html"
+    "type": "miscellaneous"
 }
 
 <p><b><a href="../texts/1999/nerazmen.html">Неразменная бабочка</a></b></p>

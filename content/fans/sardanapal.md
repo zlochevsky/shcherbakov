@@ -1,12 +1,12 @@
 {
     "title": "Аменхотеп, Ассаргадон, Анаксимандр",
+    "url": "/fans/sardanapal.html",
     "params": {
         "backUrl": "fans/kom.html#inicialy",
         "backTitle": "Словарь заморских слов"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/sardanapal.html"
+    "type": "miscellaneous"
 }
 
 <p>(Некоторые из нас, оказывается, все-таки знают и других авторов, кроме Щербакова...)</p>

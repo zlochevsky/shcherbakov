@@ -1,20 +1,20 @@
 {
-   "title": "«Искатель»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/FOM/iska.html",
-   "params": {
-      "backUrl": "FOM/index.html",
-      "backTitle": "Щ-1",
-      "seoTitle": "Интервью «Искатель» — проект «Щ-1», ФОМ",
-      "prevUrl": "FOM/itgr.html",
-      "prevTitle": "«Интегратор»",
-      "prevHint": "Экспертный опрос: тексты интервью",
-      "nextUrl": "FOM/0.html",
-      "nextTitle": "Цитируемая литература",
-      "nextHint": "Литература"
-   },
-   "description": "Интервью эксперта «Искатель» о песнях Михаила Щербакова — экспертный опрос Фонда «Общественное мнение», 1996."
+    "title": "«Искатель»",
+    "url": "/FOM/iska.html",
+    "params": {
+        "backUrl": "FOM/index.html",
+        "backTitle": "Щ-1",
+        "seoTitle": "Интервью «Искатель» — проект «Щ-1», ФОМ",
+        "nextHint": "Литература",
+        "nextTitle": "Цитируемая литература",
+        "nextUrl": "FOM/0.html",
+        "prevHint": "Экспертный опрос: тексты интервью",
+        "prevTitle": "«Интегратор»",
+        "prevUrl": "FOM/itgr.html"
+    },
+    "description": "Интервью эксперта «Искатель» о песнях Михаила Щербакова — экспертный опрос Фонда «Общественное мнение», 1996.",
+    "layout": "praises-article",
+    "type": "miscellaneous"
 }
 
 <p><i>&mdash; Твое отношение к творчеству Михаила Щербакова?</i></p>

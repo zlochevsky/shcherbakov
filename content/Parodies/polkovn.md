@@ -1,5 +1,6 @@
 {
     "title": "Полковник",
+    "url": "/Parodies/polkovn.html",
     "params": {
         "author": "Александр Воронцов",
         "backUrl": "Parodies/index.html",
@@ -7,8 +8,7 @@
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2009-06-25",
-    "url": "/Parodies/polkovn.html"
+    "lastmod": "2009-06-25"
 }
 
 <h3>* * *</h3>

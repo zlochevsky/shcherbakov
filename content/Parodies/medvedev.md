@@ -1,12 +1,12 @@
 {
     "title": "Пародии Владимира Медведева",
+    "url": "/Parodies/medvedev.html",
     "params": {
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/Parodies/medvedev.html"
+    "type": "miscellaneous"
 }
 
 <h2>Гаврилки и щербахокку</h2>

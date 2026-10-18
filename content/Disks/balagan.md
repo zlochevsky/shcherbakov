@@ -1,9 +1,9 @@
 {
-   "title": "Балаган 2",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/balagan.html",
-   "params": {
-       "id": "balagan"
-       }
+    "title": "Балаган 2",
+    "url": "/Disks/balagan.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "balagan"
+    },
+    "type": "miscellaneous"
 }

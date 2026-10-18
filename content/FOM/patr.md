@@ -1,20 +1,20 @@
 {
-   "title": "«Патриарх»",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/FOM/patr.html",
-   "params": {
-      "backUrl": "FOM/index.html",
-      "backTitle": "Щ-1",
-      "seoTitle": "Интервью «Патриарх» — проект «Щ-1», ФОМ",
-      "prevUrl": "FOM/xran.html",
-      "prevTitle": "«Хранитель традиций»",
-      "prevHint": "Экспертный опрос: тексты интервью",
-      "nextUrl": "FOM/itgr.html",
-      "nextTitle": "«Интегратор»",
-      "nextHint": "Экспертный опрос: тексты интервью"
-   },
-   "description": "Интервью эксперта «Патриарх» о песнях Михаила Щербакова и авторской песне — экспертный опрос Фонда «Общественное мнение», 1996."
+    "title": "«Патриарх»",
+    "url": "/FOM/patr.html",
+    "params": {
+        "backUrl": "FOM/index.html",
+        "backTitle": "Щ-1",
+        "seoTitle": "Интервью «Патриарх» — проект «Щ-1», ФОМ",
+        "nextHint": "Экспертный опрос: тексты интервью",
+        "nextTitle": "«Интегратор»",
+        "nextUrl": "FOM/itgr.html",
+        "prevHint": "Экспертный опрос: тексты интервью",
+        "prevTitle": "«Хранитель традиций»",
+        "prevUrl": "FOM/xran.html"
+    },
+    "description": "Интервью эксперта «Патриарх» о песнях Михаила Щербакова и авторской песне — экспертный опрос Фонда «Общественное мнение», 1996.",
+    "layout": "praises-article",
+    "type": "miscellaneous"
 }
 
 <p><i>&mdash; Что ты думаешь о Щербакове и его творчестве?</i></p>

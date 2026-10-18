@@ -1,12 +1,13 @@
 {
-   "layout": "other-publications",
-   "title": "Другие публикации",
-   "type": "miscellaneous",
-   "build": {
-      "render": "never",
-      "list": "never"
-   }
+    "title": "Другие публикации",
+    "build": {
+        "list": "never",
+        "render": "never"
+    },
+    "layout": "other-publications",
+    "type": "miscellaneous"
 }
+
 <h2 id="other-publications">Другие публикации</h2>
 
 <p>(первые публикации выделены <b>жирным шрифтом</b>; при этом публикации в книгах «Ковчег неутомимый», «После Ковчега» и на вкладышах CD не учитывались)</p>

@@ -1,9 +1,9 @@
 {
-   "title": "Хоровод",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/xopobod.html",
-   "params": {
-       "id": "xopobod"
-       }
+    "title": "Хоровод",
+    "url": "/Disks/xopobod.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "xopobod"
+    },
+    "type": "miscellaneous"
 }

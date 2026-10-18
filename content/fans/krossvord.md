@@ -1,5 +1,6 @@
 {
     "title": "Кроссворды",
+    "url": "/fans/krossvord.html",
     "params": {
         "backUrl": "fans/index.html#creative",
         "backTitle": "Назад в Фан-Клуб",
@@ -7,8 +8,7 @@
     },
     "description": "Два кроссворда по песням Михаила Щербакова, составленные М. Пасуманским и В. Смирновым.",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/krossvord.html"
+    "type": "miscellaneous"
 }
 
 <h2>Кроссворд 1 (М. Пасуманский)</h2>

@@ -1,15 +1,15 @@
 {
-   "title": "Анкета опроса слушательской аудитории М. Щербакова",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/FOM/anketa.html",
-   "params": {
-      "subtitle": "Проект &laquo;Щ-1&raquo;",
-      "backUrl": "FOM/index.html",
-      "backTitle": "Щ-1",
-      "seoTitle": "Анкета опроса — проект «Щ-1», ФОМ"
-   },
-   "description": "Анкета, по которой Фонд «Общественное мнение» в 1996 году опрашивал слушателей Михаила Щербакова."
+    "title": "Анкета опроса слушательской аудитории М. Щербакова",
+    "url": "/FOM/anketa.html",
+    "params": {
+        "subtitle": "Проект &laquo;Щ-1&raquo;",
+        "backUrl": "FOM/index.html",
+        "backTitle": "Щ-1",
+        "seoTitle": "Анкета опроса — проект «Щ-1», ФОМ"
+    },
+    "description": "Анкета, по которой Фонд «Общественное мнение» в 1996 году опрашивал слушателей Михаила Щербакова.",
+    "layout": "praises-article",
+    "type": "miscellaneous"
 }
 
 <p>Дорогой друг!</p>

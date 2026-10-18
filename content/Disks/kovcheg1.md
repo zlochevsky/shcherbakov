@@ -1,9 +1,9 @@
 {
-   "title": "Ковчег неутомимый 1",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/kovcheg1.html",
-   "params": {
-       "id": "kovcheg1"
-       }
+    "title": "Ковчег неутомимый 1",
+    "url": "/Disks/kovcheg1.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "kovcheg1"
+    },
+    "type": "miscellaneous"
 }

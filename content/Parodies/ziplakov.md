@@ -1,5 +1,6 @@
 {
     "title": "Трагическое напутствие",
+    "url": "/Parodies/ziplakov.html",
     "params": {
         "author": "Г. Циплаков",
         "backUrl": "Parodies/index.html",
@@ -7,8 +8,7 @@
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2004-10-07",
-    "url": "/Parodies/ziplakov.html"
+    "lastmod": "2004-10-07"
 }
 
 <p>Можно исполнять на мелодию «Декларации». А можно просто декларировать, в смысле декламировать...</p>

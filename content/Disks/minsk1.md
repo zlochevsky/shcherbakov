@@ -1,11 +1,11 @@
 {
-   "title": "Минские встречи 1",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/minsk1.html",
-   "params": {
-       "id": "minsk1"
-       }
+    "title": "Минские встречи 1",
+    "url": "/Disks/minsk1.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "minsk1"
+    },
+    "type": "miscellaneous"
 }
 
 М.&nbsp;Щербаков — текст, музыка, голос, гитара.

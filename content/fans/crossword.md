@@ -1,13 +1,13 @@
 {
     "title": "Кроссворд по песням М. Щербакова 1990-1994",
+    "url": "/fans/crossword.html",
     "params": {
         "author": "С. Карина",
         "backUrl": "fans/index.html",
         "backTitle": "Фан-клуб"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/crossword.html"
+    "type": "miscellaneous"
 }
 
 <p class="center"><img src="../Images/crosword.gif" alt="Сетка кроссворда"></p>

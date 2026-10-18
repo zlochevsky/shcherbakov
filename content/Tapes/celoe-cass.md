@@ -1,9 +1,9 @@
 {
-   "title": "Целое лето",
-   "type": "miscellaneous",
-   "layout": "tapepage",
-   "url": "/Tapes/celoe-cass.html",
-   "params": {
-       "id": "celoe-cass"
-       }
+    "title": "Целое лето",
+    "url": "/Tapes/celoe-cass.html",
+    "layout": "tapepage",
+    "params": {
+        "id": "celoe-cass"
+    },
+    "type": "miscellaneous"
 }

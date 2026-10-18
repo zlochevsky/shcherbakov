@@ -1,9 +1,9 @@
 {
-   "title": "Deja",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/deja.html",
-   "params": {
-       "id": "deja"
-       }
+    "title": "Deja",
+    "url": "/Disks/deja.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "deja"
+    },
+    "type": "miscellaneous"
 }

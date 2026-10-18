@@ -1,9 +1,9 @@
 {
-   "title": "Город Город",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/gorod.html",
-   "params": {
-       "id": "gorod"
-       }
+    "title": "Город Город",
+    "url": "/Disks/gorod.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "gorod"
+    },
+    "type": "miscellaneous"
 }

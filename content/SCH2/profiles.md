@@ -1,13 +1,13 @@
 {
-   "title": "Личные профили респондентов",
-   "type": "miscellaneous",
-   "layout": "praises-article",
-   "url": "/SCH2/profiles.html",
-   "params": {
-      "backUrl": "SCH2/index.html",
-      "backTitle": "Щ-2",
-      "noindex": true
-   }
+    "title": "Личные профили респондентов",
+    "url": "/SCH2/profiles.html",
+    "params": {
+        "backUrl": "SCH2/index.html",
+        "backTitle": "Щ-2",
+        "noindex": true
+    },
+    "layout": "praises-article",
+    "type": "miscellaneous"
 }
 
 <p>Здесь хранится краткая информация об участниках дискуссии <a href="index.html">проекту Щ-2.</a></p>

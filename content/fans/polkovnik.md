@@ -1,12 +1,12 @@
 {
     "title": "«Здравствуйте, полковник...»",
+    "url": "/fans/polkovnik.html",
     "params": {
         "backUrl": "fans/kom.html#svidanie",
         "backTitle": "Словарь заморских слов"
     },
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/polkovnik.html"
+    "type": "miscellaneous"
 }
 
 <p><a id="1"></a> Subject: Zdravstvuyte, polkovnik...<br>Date: Thu, 12 Aug 1999 19:49:02 +0300<br>From: «Rubinstein, Dmitry»</p>

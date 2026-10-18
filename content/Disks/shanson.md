@@ -1,9 +1,9 @@
 {
-   "title": "Шансон",
-   "type": "miscellaneous",
-   "layout": "diskpage",
-   "url": "/Disks/shanson.html",
-   "params": {
-       "id": "shanson"
-       }
+    "title": "Шансон",
+    "url": "/Disks/shanson.html",
+    "layout": "diskpage",
+    "params": {
+        "id": "shanson"
+    },
+    "type": "miscellaneous"
 }

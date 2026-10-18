@@ -1,9 +1,10 @@
 {
-   "title": "Информация о гастролях Щербакова в Европе в июне 2000 г.",
-   "type": "miscellaneous",
-   "layout": "archive-page",
-   "url": "/Archive/europe2000.html"
+    "title": "Информация о гастролях Щербакова в Европе в июне 2000 г.",
+    "url": "/Archive/europe2000.html",
+    "layout": "archive-page",
+    "type": "miscellaneous"
 }
+
 <p><b>10 июня, Мюнхен:</b><br>
 Burgersaal Furstenried, <a href="http://www.stadtplandienst.de/query;ORT=m;LL=11.500958x48.094794;GR=4">Zuericherstr. 35</a>, U3, Haltestelle <b>Forstenrieder Allee </b>начало в 19.00<br>
 Телефоны для справок: 089/55869782 (клуб «Город», <a href="mailto:club.gorod@t-online.de">club.gorod@t-online.de</a>), 0174/1860516 (Аня Вишневская, <a href="mailto:vichnevs@informatik.uni-muenchen.de">vichnevs@informatik.uni-muenchen.de</a>)</p>

@@ -1,13 +1,13 @@
 {
     "title": "Нечто",
+    "url": "/Parodies/landysh.html",
     "params": {
         "backUrl": "Parodies/index.html",
         "backTitle": "Пародии"
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2013-04-05",
-    "url": "/Parodies/landysh.html"
+    "lastmod": "2013-04-05"
 }
 
 <h3>* * *</h3>

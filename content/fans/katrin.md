@@ -1,5 +1,6 @@
 {
     "title": "Витамин Щ, или Под псевдонимом Фортуны",
+    "url": "/fans/katrin.html",
     "params": {
         "author": "Catherine",
         "subtitle": "Пьеса",
@@ -8,8 +9,7 @@
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "2021-08-14",
-    "url": "/fans/katrin.html"
+    "lastmod": "2021-08-14"
 }
 
 <blockquote>Неизгладимой памяти<br>Александра Кайдановского<br>в числе многих прочих<br>посвящается...</blockquote>

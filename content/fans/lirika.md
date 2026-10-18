@@ -1,5 +1,6 @@
 {
     "title": "Застольная",
+    "url": "/fans/lirika.html",
     "params": {
         "backUrl": "fans/kom.html#zastolnaya",
         "backTitle": "Словарь заморских слов",
@@ -7,8 +8,7 @@
     },
     "description": "Отсылки к дружеской лирике Пушкина в песне Михаила Щербакова «Застольная» («Долго ли, коротко…», 2001): строки песни рядом с пушкинскими. Из «Словаря заморских слов».",
     "layout": "praises-article",
-    "type": "miscellaneous",
-    "url": "/fans/lirika.html"
+    "type": "miscellaneous"
 }
 
 <p><b><a href="../texts/2001/zastolnaya.html">Застольная</a></b></p>

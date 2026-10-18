@@ -1,5 +1,6 @@
 {
     "title": "Пiсенька (Песенка)",
+    "url": "/Parodies/pisenka.html",
     "params": {
         "author": "Леон Позен",
         "backUrl": "Parodies/index.html#free",
@@ -7,8 +8,7 @@
     },
     "layout": "praises-article",
     "type": "miscellaneous",
-    "lastmod": "1999-09-05",
-    "url": "/Parodies/pisenka.html"
+    "lastmod": "1999-09-05"
 }
 
 <p><i>Леон Позен</i></p>
