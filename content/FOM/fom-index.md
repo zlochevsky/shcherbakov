@@ -4,6 +4,8 @@
    "layout": "praises-article",
    "url": "/FOM/index.html",
    "params": {
+      "backUrl": "fans/index.html",
+      "backTitle": "Фан-клуб",
       "subtitle": "Издание <a href=\"http://www.fom.ru\">Фонда &laquo;Общественное мнение&raquo;</a>",
       "seoTitle": "«Как варяг, наблюдающий нравы славян…» — исследование ФОМ"
    },

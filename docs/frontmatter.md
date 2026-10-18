@@ -2,7 +2,7 @@
 
 # Content front matter reference
 
-Front matter fields (the JSON block at the top of `content/**/*.md`) that the templates in `layouts/` actually read. Checked against `layouts/` and all content files on 2026-10-02; sections for translations, language pages and `Disks/other.md` added on 2026-10-07. Fields present in content but read by no template are marked **unused**.
+Front matter fields (the JSON block at the top of `content/**/*.md`) that the templates in `layouts/` actually read. Checked against `layouts/` and all content files on 2026-10-02, rechecked on 2026-10-18; sections for translations, language pages and `Disks/other.md` added on 2026-10-07. Fields present in content but read by no template are marked **unused**.
 
 Not covered: the Directus collections (works, events, perfs, sets, books, comments, announces…) — see [docs/directus.md](directus.md); and the `params` of menu entries in `config/_default/menus.json` (`isDateToPrint`, `dynamicLastmod`, `collapsible`, `toggleChild`, `mobileOnly`, `shortName`, `icon`, `dropdown`, `lang`; see the «Menus» section of the README) — they look like `.Params.*` in templates but belong to the menu config, not to any `.md` file.
 
@@ -17,21 +17,22 @@ See the [Hugo front matter docs](https://gohugo.io/content-management/front-matt
 - `date`, `lastmod` — dates; `lastmod` feeds the "updated" date shown next to some menu items.
 - `"sitemap": {"disable": true}` — keep the page out of `sitemap.xml` (redirect pages, `fans/kom2`). Song pages are handled by their own rules, see below.
 - `"build": {"render": "never", "list": "never"}` — a page that is not rendered on its own, only included by another template (`Books/other-publications.md`, shown on the Books page; `_footer.md`, the home page footer) or read for its settings only (a language section whose main page has no text yet; on 2026-10-09 there is none: all six languages have a main page).
-- `draft`, `publishDate`, `expiryDate` — not used in content now (the hand-written `content/announces/` and its archetype were removed 2026-10-02: announces come from Directus).
+- `draft`, `publishDate`, `expiryDate` — not used in content now: only `"draft": false` occurs (`_index.md`, `news.md`, `bio.md`), which changes nothing (the hand-written `content/announces/` and its archetype were removed 2026-10-02: announces come from Directus).
 
 ## Site chrome (most page types)
 
 - `params.subtitle` — per-page `<h2>` under `<h1>`. Not the site-wide `site.Params.Subtitle` from `hugo.json`.
-- `params.name` — short page name independent of `<h1>` (menus, the base of the default `<title>`); falls back to `title`.
+- `params.name` — short page name independent of `<h1>`: the base of the default `<title>` (`seo.html`; menus do not read it); falls back to `title`.
+- `params.lang` — page language when not Russian: on any page it sets `og:locale` (`seo.html`); in the archive and language sections also the page's `lang`, see below.
 
 ## Search engines and link previews — all pages except redirects
 
 `<title>`, description, `noindex`, canonical and Open Graph come from one partial, `layouts/partials/seo.html` (added 2026-10-13).
 
-- `description` (standard Hugo field) — `<meta name="description">` and `og:description`. Set on the main static pages; songs, translations, albums, cassettes, books, cycles and Praises articles get a generated one when it is empty.
+- `description` (standard Hugo field) — `<meta name="description">` and `og:description`. Set on the main static pages; songs, translations, albums, cassettes, books and cycles get a generated one when it is empty; all `praises-article` pages (Praises, fans, Parodies, FOM, SCH2) get the author and the beginning of the text.
 - `params.seoTitle` — the full `<title>` (and `og:title`), used as is. Without it the title is generated: by page type for songs, translations, albums, books, cycles and Praises articles; otherwise `params.name`/`title` plus a section suffix: « — Михаил Щербаков» (showcase), « — фан-клуб Михаила Щербакова» (`fans`, `Parodies`, `FOM`, `SCH2`, `Images`), the author's name in the section's language (language folders); no suffix when the name already contains «Щербаков» or «Shcherbakov».
 - `params.noindex` (bool) — `noindex, follow` and no canonical (e.g. `search.md`, `Cycles/monologi.md`).
-- `params.author` (Praises articles) — also used in the generated title (up to the first comma) and description.
+- `params.author` (`praises-article`) — also used in the generated description; for Praises articles also in the title (up to the first comma).
 
 canonical and `og:url` point to the page itself, or, if `params.canonicalBase` is set in `hugo.json` (empty now), to the same path on that address — for when a copy of the site is published under another domain.
 
@@ -73,10 +74,10 @@ One file per song: minimal front matter, the song text as the body (read raw wit
 ## Articles, fan club, parodies — `praises-article` (Praises, FOM, fans, Parodies, SCH2, …)
 
 - `title`, `params.subtitle`, `params.author` — heading block.
-- `params.backUrl`, `params.backTitle` — the "back" link in the corner navigation. Without them a page under `content/fans/` gets «Фан-клуб → fans/index.html»; other sections set them explicitly.
-- `params.bgColor` — page background (the fan club hub `fans/fans-index.md`).
-- `params.monoPre` (bool) — `<pre>` in a monospace font (the page's `<body>` gets `class="mono-pre"`). By default `<pre>` uses the page font: in the fan club and parodies it holds mostly verse and quotations. Set where text is aligned with spaces: `tab.md` (tablature), `statistics.md` (tables), letters of sections kept in the private overlay (2026-10-14). Crosswords (`<pre class="crossword">`) are monospace without it.
-- `params.prevUrl`, `params.prevTitle`, `params.prevHint`, `params.nextUrl`, `params.nextTitle`, `params.nextHint` (strings) — a page in a series read in order: «[← previous] [next →]» in one line of the corner navigation, a separate group at the top and at the bottom (`layouts/partials/series-nav.html`). Url is site-relative (`SCH2/102-e.html`), Hint is the tooltip. Set by the converter on the SCH2 question pages (1.1 … 7.5, the 4.1 polemic in between, 2026-10-17); also fit for other series, e.g. the FOM chapters.
+- `params.backUrl`, `params.backTitle` — the "back" link in the corner navigation. Without them a page under `content/fans/` gets «Фан-клуб → fans/index.html», any other page «Отзывы → praises.html» (as all Praises articles do); parodies, FOM and SCH2 set them explicitly.
+- `params.bgColor` — page background (`fans/fans-index.md`, `fans/memory.md`).
+- `params.monoPre` (bool) — `<pre>` in a monospace font (the page's `<body>` gets `class="mono-pre"`). By default `<pre>` uses the page font: in the fan club and parodies it holds mostly verse and quotations. Set where text is aligned with spaces: `tab.md` (tablature), `statistics.md` (tables), the SCH2 questions `101-e` and `203-e` (quotations aligned with spaces), letters of sections kept in the private overlay (2026-10-14). Crosswords (`<pre class="crossword">`) are monospace without it.
+- `params.prevUrl`, `params.prevTitle`, `params.prevHint`, `params.nextUrl`, `params.nextTitle`, `params.nextHint` (strings) — a page in a series read in order: «[← previous] [next →]» in one line of the corner navigation, a separate group at the top and at the bottom (`layouts/partials/series-nav.html`). Url is site-relative (`SCH2/102-e.html`), Hint is the tooltip. Set by the converter on the SCH2 question pages (1.1 … 7.5, the 4.1 polemic in between, 2026-10-17); set by hand on the FOM chapters, in table-of-contents order (2026-10-17).
 - `params.palette` (string) — the page's own colour scheme: the `<body>` gets `class="palette-<name>"`, which overrides the palette variables (`assets/css/palette.css`, section "per-page schemes"). Available: `olive` — the old site's dark olive scheme (background `#666656`, light-yellow text, yellow links), used for a contents page of the private overlay (2026-10-15); `warm` — a warmer, yellower background (`#fcf2cf`) for the rest of that section (2026-10-15). A new scheme is a new `body.palette-<name>` block in `palette.css`.
 
 ## Other projects — `content/Disks/other.md` (`other-projects`)
@@ -111,6 +112,10 @@ Language section pages; each sets its own `layout`:
 - `params.subtitle`, `params.bgColor`.
 - `params.centerText` (bool) — centre the text (for pages that were centred on the legacy site).
 - `params.parentUrl`, `params.parentTitle` — an extra "up" link in the corner navigation (default title «Выше»).
+
+## Directus tables — `content/admin-directus.md` (`admin-directus`)
+
+- `params.groups` (list of `{title, tables}`) — table groups on the `/admin/directus.html` page and in the «Таблицы Directus» block of the editor's sidebar (the block reads its list from that page). `title` is the group heading (empty — the group's tables in one line joined with «и»); `tables` is a list of `{label, table, description}`: name, Directus collection name (as in the Directus Studio address), description.
 
 ## Archive — `content/Archive/*.md` (`archive-page`)
 
