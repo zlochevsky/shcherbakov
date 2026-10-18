@@ -1,4 +1,5 @@
 {
+   "layout": "other-publications",
    "title": "Другие публикации",
    "type": "miscellaneous",
    "build": {

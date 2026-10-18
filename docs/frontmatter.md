@@ -125,7 +125,7 @@ Language section pages; each sets its own `layout`:
 
 ## Redirect pages — `redirect`, `redirect-hub`
 
-Small pages that keep legacy addresses alive (`content/Images/redirects/`, `content/redirects/`, `content/Tapes/tapes-index.md`, …). Usually with `"sitemap": {"disable": true}`.
+Small pages that keep legacy addresses alive (`content/Images/redirects/`, `content/redirects/legacy/`). Usually with `"sitemap": {"disable": true}`. They are kept three levels deep (`content/<folder>/<subfolder>/<file>.md`) so the editor collections, which read two levels of `content/`, never pick them up (their `url` is a section address such as `/SCH2/001.html`); the folder does not affect the page address.
 
 - `params.target` (`redirect`) — where to go; a **relative** address (`"photos2000-2004.html#agolyanov"`, `"../Disks/index.html#tapes"`) so the page survives a move of the site to another folder or domain without a rebuild.
 - `params.map`, `params.default` (`redirect-hub`) — for a legacy page that had several anchors: `map` = old anchor → new address, `default` = where to go without an anchor.

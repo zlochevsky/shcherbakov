@@ -1,4 +1,5 @@
 {
+    "layout": "footer",
     "build": {
         "list": "never",
         "render": "never"

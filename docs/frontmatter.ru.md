@@ -125,7 +125,7 @@ canonical и `og:url` указывают на саму страницу, а ес
 
 ## Страницы-редиректы — `redirect`, `redirect-hub`
 
-Маленькие страницы, которые сохраняют адреса старого сайта (`content/Images/redirects/`, `content/redirects/`, `content/Tapes/tapes-index.md` и др.). Обычно с `"sitemap": {"disable": true}`.
+Маленькие страницы, которые сохраняют адреса старого сайта (`content/Images/redirects/`, `content/redirects/legacy/`). Обычно с `"sitemap": {"disable": true}`. Лежат на третьем уровне (`content/<папка>/<подпапка>/<файл>.md`), чтобы их не подхватывали коллекции редактора, которые читают два уровня `content/` (`url` у них — адрес раздела вроде `/SCH2/001.html`); на адрес страницы папка не влияет.
 
 - `params.target` (`redirect`) — куда вести; **относительный** адрес (`"photos2000-2004.html#agolyanov"`, `"../Disks/index.html#tapes"`), чтобы страница пережила перенос сайта в другую папку или на другой домен без пересборки.
 - `params.map`, `params.default` (`redirect-hub`) — для старой страницы с несколькими якорями: `map` — старый якорь → новый адрес, `default` — куда вести без якоря.
