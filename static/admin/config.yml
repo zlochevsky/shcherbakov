@@ -122,6 +122,50 @@ collections:
                       - { label: Описание, name: description, widget: text, required: false }
           - { label: Текст над списком, name: body, widget: text }
 
+  # Порядок меню: config/_default/menus.json целиком — шесть меню, пункты перетаскиваются мышью. Hugo сортирует пункты
+  # по weight, а не по месту в списке, поэтому при сохранении скрипт в index.html (preSave) проставляет weight по месту:
+  # 10, 20, 30… Подпункты (языки, разделы «Фан-клуба») стоят в списке сразу за своим разделом: их порядок — тоже по месту.
+  # Все ключи пунктов описаны полями (weight — скрытым), чтобы сохранение их не потеряло.
+  - name: menus
+    label: Порядок меню
+    format: json
+    files:
+      - name: menus
+        label: Меню сайта
+        file: config/_default/menus.json
+        fields:
+          - label: Главная — верхнее меню
+            name: indexheadermenu
+            widget: list
+            label_singular: пункт
+            collapsed: true
+            summary: &menusummary "{{fields.name}}{{fields.parent | ternary(' — подпункт', '')}}"
+            fields: &menuitem
+              - { label: Подпись, name: name, widget: string }
+              - { label: Страница, name: pageRef, widget: string, required: false, hint: "Файл страницы от папки content: news.html, fans/fans-index.md… Пусто — у раздела с подпунктами" }
+              - { label: Код раздела, name: identifier, widget: string, required: false, hint: "Только у пункта с подпунктами (languages, fanclub…): на него ссылаются подпункты" }
+              - { label: Входит в раздел, name: parent, widget: string, required: false, hint: "Код раздела, если это подпункт; ставить сразу после раздела" }
+              - { label: weight, name: weight, widget: hidden, required: false }
+              - label: Оформление
+                name: params
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: Подпись на мобильном, name: shortName, widget: string, required: false }
+                  - { label: Только на мобильном, name: mobileOnly, widget: select, required: false, options: [ { label: да, value: "yes" } ] }
+                  - { label: Значок, name: icon, widget: select, required: false, options: [ { label: дом, value: home }, { label: лупа, value: search } ] }
+                  - { label: Раздел — подпункты отдельными ячейками, name: collapsible, widget: select, required: false, options: [ { label: да, value: "yes" } ] }
+                  - { label: Подпункт раздела-ячеек, name: toggleChild, widget: select, required: false, options: [ { label: да, value: "yes" } ] }
+                  - { label: Раздел — список внутри ячейки, name: dropdown, widget: select, required: false, options: [ { label: да, value: "yes" } ] }
+                  - { label: Язык подписи, name: lang, widget: string, required: false }
+                  - { label: Дата у пункта, name: date, widget: select, required: false, hint: "Пусто — как решает страница (флажок «Показывать дату в меню»)", options: [ { label: не показывать, value: hide }, { label: показывать, value: show } ] }
+          - { label: Главная — нижнее меню, name: indexfootermenu, widget: list, label_singular: пункт, collapsed: true, summary: *menusummary, fields: *menuitem }
+          - { label: Страница поиска, name: searchheadermenu, widget: list, label_singular: пункт, collapsed: true, summary: *menusummary, fields: *menuitem }
+          - { label: Каталог песен, name: ctgheadermenu, widget: list, label_singular: пункт, collapsed: true, summary: *menusummary, fields: *menuitem }
+          - { label: Каталог переводов, name: trnheadermenu, widget: list, label_singular: пункт, collapsed: true, summary: *menusummary, fields: *menuitem }
+          - { label: Концерты, name: concertsheadermenu, widget: list, label_singular: пункт, collapsed: true, summary: *menusummary, fields: *menuitem }
+
 
   - divider: true
 

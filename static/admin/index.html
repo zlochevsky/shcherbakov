@@ -214,6 +214,23 @@ try {
 		{ raw: true },
 	);
 })();
+// «Порядок меню» (config/_default/menus.json): Hugo сортирует пункты по weight, а не по месту в списке, поэтому перед
+// сохранением weight каждого пункта ставится по его месту в списке своего меню: 10, 20, 30… Подпункты стоят сразу за
+// своим разделом, и их порядок между собой — тот же, что в списке.
+CMS.registerEventListener({
+	name: 'preSave',
+	handler: ({ entry }) => {
+		if (entry.get('collection') !== 'menus') return;
+		let data = entry.get('data');
+		for (const key of data.keySeq().toArray()) {
+			const list = data.get(key);
+			if (list && typeof list.map === 'function' && typeof list.toArray === 'function') {
+				data = data.set(key, list.map((item, i) => (item && item.set ? item.set('weight', (i + 1) * 10) : item)));
+			}
+		}
+		return data;
+	},
+});
 </script>
 <script>
 // Предпросмотр статей и картинок: Sveltia рисует его во фрейме с <base href> = только origin сайта
