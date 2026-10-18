@@ -35,7 +35,7 @@ See the [Hugo front matter docs](https://gohugo.io/content-management/front-matt
 - `params.noindex` (bool) — `noindex, follow` and no canonical (e.g. `search.md`, `Cycles/monologi.md`).
 - `params.author` (`praises-article`) — also used in the generated description; for Praises articles also in the title (up to the first comma).
 
-canonical and `og:url` point to the page itself, or, if `params.canonicalBase` is set in `hugo.json` (empty now), to the same path on that address — for when a copy of the site is published under another domain.
+canonical and `og:url` point to the page itself, or, if `params.canonicalBase` is set in `hugo.json` (empty now; the expected main address is `https://lambda.mkshch.com/`, owner 2026-10-18, but it may be set only after the move: canonical must not point to an address that does not serve these pages yet), to the same path on that address — for when a copy of the site is published under another domain.
 
 ## Announces — `content/news.md` only
 
