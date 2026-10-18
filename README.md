@@ -37,14 +37,14 @@ Standard Hugo directories:
 - `content` -- the pages: `.md` files whose body is mostly HTML markup. At the top of each file there is *front matter* -- page parameters in JSON. The fields the templates actually read are listed in [docs/frontmatter.md](docs/frontmatter.md);
 - `layouts` -- templates: page layouts in `layouts/miscellaneous`, shared parts in `layouts/partials`, shortcodes for page bodies in `layouts/shortcodes`. `{{< lastmod "translations" >}}` gives the date of the latest record added to a Directus collection (on the home page). `{{< translations-count >}}` gives the number of translations into the page's language and the date of the latest one, as " (59, 07.10.26)" with the date in red (on the main language pages). Records migrated from the old site have no creation date, so for them only the number is shown;
 - `assets` -- files processed during the build: CSS (`assets/css`; all shared colours are CSS variables in `assets/css/palette.css`, embedded into every page by `layouts/partials/palette.html` together with `assets/css/site.css`, the rules for every page, e.g. no underline on hovered links; `assets/css/mobile-header.css` is the compact mobile header shared by the home page, search and the three catalogues) and SVG icons (`assets/svg`: album icons for the song catalogue, `svg/cd`, and format icons, `svg/format`);
-- `static` -- files copied to the site as they are: images, PDFs, legacy pages that are not converted yet; `static/admin` is the in-browser editor (see "Editing in the browser" below);
-- `data`, `archetypes`, `i18n` -- Hugo data files, templates for new pages, translations of interface strings;
+- `static` -- files copied to the site as they are: images, PDFs and other downloadable files; `static/admin` is the in-browser editor (see "Editing in the browser" below);
+- `archetypes` -- the template for new pages;
 - `public` -- where Hugo puts the built site. It is not stored in git: the published site is built by GitHub Actions (see below).
 
 Project directories:
 
 - `docs` -- project documentation (mostly in Russian): the Directus schema and conventions ([docs/directus.md](docs/directus.md)), the front matter reference, the site structure analysis ([docs/site-structure-analysis.md](docs/site-structure-analysis.md)) and plans for migrating legacy sections;
-- `scripts` -- Python tools: `check-links.py` (links to pages that do not exist yet), `check-separation.py` (see "Two sites in one" below), `sveltia-normalize.py` (see "Editing in the browser" below), `legacy-convert` (converting legacy pages to Hugo content);
+- `scripts` -- Python tools: `check-links.py` (links to pages that do not exist yet), `check-separation.py` (see "Two sites in one" below), `sveltia-normalize.py` (see "Editing in the browser" below), `comments-markup` (markup of the comments texts), `legacy-convert` (used to convert legacy pages to Hugo content; the conversion is complete);
 - `directus-extensions` -- sources of some custom Directus extensions;
 - `workfiles` -- local working files (images, tables, drafts). The directory is in `.gitignore`.
 
@@ -115,7 +115,7 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 - Song texts (`content/texts`) and translations (`content/<language>/`): the text, and for songs the tonality, `chordsStartAt` and `textFinishAtLine`.
 - Language pages: title and body.
 - Site pages: title and body of the home page, biography, about, where to buy, news (the chronicle; announces come from Directus), what is missing, tablature and the list of reviews (`praises.md`); the body of the footer. The home page body is HTML laid out in blocks, so edit it with care: an unclosed tag breaks the home page.
-- Fan-club articles in `content/Praises`, `content/Parodies` and `content/fans`: title, author, subtitle and body, for parodies and fan-club materials also the "back" link. Only pages with the `praises-article` layout are listed, so `fans/kom.md` (the comments page built from Directus) and the `kom2` redirect are left out.
+- Fan-club articles in `content/Praises`, `content/Parodies` and `content/fans`: title, author, subtitle and body, for parodies and fan-club materials also the "back" link. Only pages with the `praises-article` layout are listed, so `fans/kom.md` (the comments page built from Directus) and the `kom2` redirect are left out. The Щ-1 (`content/FOM`) and Щ-2 (`content/SCH2`) pages use the same layout but are not in the editor yet ([docs/editor-pages-plan.md](docs/editor-pages-plan.md), step 5).
 - Picture pages in `content/Images` (`images-page` layout): title, subtitle, "back" link, background colour, centred text and body (HTML). The redirects from old addresses in `content/Images/redirects` are not listed. Pictures themselves live in `static/Images` and are referred to by file name; the editor's insert-image button writes an address from the domain root (`/Images/…`), which does not open on github.io (site in the `/shcherbakov/` subfolder), so type the file name by hand.
 - The body of articles and picture pages is a Markdown field in source-only mode: the same HTML is edited as text, and the preview renders it (without the site's styles; scripts and iframes are stripped). Sveltia resolves relative addresses in the preview against the domain root only, so a script in `static/admin/index.html` sets the preview's base to the site's `Images/` folder: pictures and links of picture pages and articles show as on the site, except `../../` addresses from fan-club subfolders.
 - For search engines, on site pages, language pages, articles and picture pages: "Search engine title" (`params.seoTitle`) and "Search engine description" (`description`), both optional; see [docs/frontmatter.md](docs/frontmatter.md).
@@ -136,7 +136,7 @@ Other front matter keys are kept as they are, but the editor writes the keys it 
 
 ### The text field
 
-- Texts are edited as plain text, so spaces, indentation and chords stay exactly as typed.
+- Songs, translations, site pages and language pages are edited as plain text, so spaces, indentation and chords stay exactly as typed. Articles and picture pages have a Markdown field in source-only mode (see "What can be edited").
 - For songs and translations the field uses a monospace font with its own Cyrillic (PT Mono), does not wrap lines and takes the full width of the pane, because chords are aligned with spaces. With a font that lacks Cyrillic, the browser takes the letters from another font, and the chords drift. For other pages long lines wrap like paragraphs. A script on the page picks the mode from the collection in the address.
 - The preview of songs and translations shows the text as the "source" view of a song page does: in `<pre>`, in the browser's default monospace font (the same as on the site). Song parameters are not shown there.
 - A badge in the corner shows the line and character under the cursor, both counted from 1: the same numbers as `textFinishAtLine` and `chordsStartAt`.
