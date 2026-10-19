@@ -13,6 +13,3 @@
     "layout": "catalogue",
     "type": "miscellaneous"
 }
-
-
-Содержимое страницы

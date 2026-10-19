@@ -83,11 +83,12 @@ collections:
       - { name: news, preview_path: "shcherbakov/news.html", label: Новости (news), file: content/news.md, fields: *sitepagefields }
       - { name: "no", preview_path: "shcherbakov/no.html", label: Нужно (no), file: content/no.md, fields: *sitepagefields }
       - { name: praises-list, preview_path: "shcherbakov/praises.html", label: Отзывы и критика (praises), file: content/praises.md, fields: *sitepagefields }
-      # страницы, содержимое которых строит шаблон из Directus: в файле — заголовок, поля для поисковиков и вступление
-      - { name: catalogue, preview_path: "shcherbakov/catalogue.html", label: Каталог песен (catalogue), file: content/catalogue.md, fields: *sitepagefields }
-      - { name: translations, preview_path: "shcherbakov/translations.html", label: Каталог переводов (translations), file: content/translations.md, fields: *sitepagefields }
-      - { name: concerts, preview_path: "shcherbakov/concerts.html", label: Концерты (concerts), file: content/concerts.md, fields: *sitepagefields }
-      - { name: search, preview_path: "shcherbakov/search.html", label: Поиск, file: content/search.md, fields: *sitepagefields }
+      # страницы, содержимое которых целиком строит шаблон (из Directus, у поиска — Pagefind): тело файла на сайт не
+      # выводится, поэтому поля «Текст» у них нет — только заголовок, поля для поисковиков, дата и флажки меню
+      - { name: catalogue, preview_path: "shcherbakov/catalogue.html", label: Каталог песен (catalogue), file: content/catalogue.md, fields: &templatepagefields [ { label: Заголовок, name: title, widget: string, hint: "Содержимое этой страницы строит шаблон из данных Directus (у поиска — из индекса поиска). Здесь — только заголовок, поля для поисковиков и дата: текста у страницы нет" }, { label: Параметры, name: params, widget: object, collapsed: true, fields: [ *seotitle, *menudate, *menudatefrom ] }, *seodesc, *datefield ] }
+      - { name: translations, preview_path: "shcherbakov/translations.html", label: Каталог переводов (translations), file: content/translations.md, fields: *templatepagefields }
+      - { name: concerts, preview_path: "shcherbakov/concerts.html", label: Концерты (concerts), file: content/concerts.md, fields: *templatepagefields }
+      - { name: search, preview_path: "shcherbakov/search.html", label: Поиск, file: content/search.md, fields: *templatepagefields }
       # «Лог»: записи — из Directus (log_entries), в файле — прежняя хроника (HTML, ~130 КБ)
       - { name: log, preview_path: "shcherbakov/log.html", label: Лог (log), file: content/log.md, fields: *sitepagefields }
       # «Другие публикации» сами не выводятся: их текст вставляется в страницу «Книги»

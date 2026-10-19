@@ -11,6 +11,3 @@
     "layout": "concerts",
     "type": "miscellaneous"
 }
-
-
-Содержимое страницы
