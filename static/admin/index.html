@@ -245,14 +245,26 @@ CMS.registerEventListener({
 });
 </script>
 <script>
-// Предпросмотр статей и картинок: Sveltia рисует его во фрейме с <base href> = только origin сайта
-// (http://localhost:1313, https://zlochevsky.github.io), и относительные адреса из текстов («x.jpg», «../Images/x.jpg»,
-// «../texts/…») уходят мимо подпапки /shcherbakov/. Ставим базой папку Images сайта (рядом с admin/): адреса
-// разрешаются так же, как на страницах разделов (Images/, Praises/, fans/ — один уровень от корня сайта), и картинки
-// и ссылки в предпросмотре работают. Не работают только «../../» из подпапок фан-клуба (fans/Demiurg и др.).
+// Предпросмотр: Sveltia рисует его во фрейме с <base href> = только origin сайта (http://localhost:1313,
+// https://zlochevsky.github.io), и относительные адреса из текстов («x.jpg», «Images/x.jpg», «../texts/…») уходят мимо
+// подпапки /shcherbakov/. Ставим базой папку страницы на сайте (корень сайта — папка над admin/): адреса разрешаются
+// так же, как на самой странице. Папка — по адресу редактора #/collections/<коллекция>/entries/<запись>: у коллекций
+// на всю папку content (статьи фан-клуба, диски, переводы) — путь записи, у остальных — их папка на сайте.
 (() => {
-	const base = new URL('../Images/', location.href).href;
+	const root = new URL('../', location.href).href;
+	const folders = { praises: 'Praises/', images: 'Images/' };
+	const pageDir = () => {
+		const m = location.hash.match(/^#\/collections\/([^/]+)\/entries\/(.+?)(?:\?|$)/);
+		if (!m) return '';
+		const [, col, entry] = m;
+		if (col in folders) return folders[col];
+		if (col === 'texts') return 'texts/' + entry.replace(/[^/]*$/, '');
+		if (col === 'language-pages') return entry.split('-')[0] + '/';
+		if (col === 'pages') return entry === 'other-publications' ? 'Books/' : '';
+		return entry.includes('/') ? entry.replace(/[^/]*$/, '') : '';
+	};
 	const fix = (frame) => {
+		const base = root + pageDir();
 		const doc = frame.contentDocument;
 		const el = doc && doc.querySelector('base');
 		if (!el || el.href === base) return;
@@ -268,6 +280,8 @@ CMS.registerEventListener({
 	};
 	new MutationObserver(() => document.querySelectorAll('iframe.preview').forEach(watch))
 		.observe(document.documentElement, { childList: true, subtree: true });
+	// другая запись в том же фрейме — другая папка
+	addEventListener('hashchange', () => document.querySelectorAll('iframe.preview').forEach(fix));
 })();
 </script>
 <script>
