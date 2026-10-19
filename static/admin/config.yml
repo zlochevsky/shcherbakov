@@ -69,20 +69,20 @@ collections:
   # Отдельные страницы сайта: тело — Markdown (у tab — HTML), правится как есть, простым полем; анонсы на странице
   # новостей — из Directus (announces), в файле news.md только «Хроника»
   - name: pages
-    label: Страницы сайта
+    label: Корневые страницы
     format: json-frontmatter
     files:
       # главная: тело — HTML-вёрстка блоками (abstract, frontimage, collections) и шорткод {{< lastmod … >}} — править
       # осторожно, незакрытый тег ломает вид главной; подвал (_footer.md, на главной и страницах шаблона baseof) —
       # только текст: заголовка у него нет (обязательное поле «Заголовок» не дало бы сохранить)
-      - { name: home, preview_path: "shcherbakov/index.html", label: Главная страница, file: content/_index.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Параметры, name: params, widget: object, collapsed: true, fields: [ &seotitle { label: Заголовок для поисковиков, name: seoTitle, widget: string, required: false, hint: "Полный текст вкладки браузера и заголовка в выдаче, как есть. Пусто — заголовок страницы с припиской раздела («— Михаил Щербаков»)" }, &menudate { label: Показывать дату в меню, name: menuDate, widget: boolean, required: false, hint: "Только у страниц, на которые ведёт пункт меню: дата обновления рядом с пунктом" }, &menudatefrom { label: Откуда дата для меню, name: menuDateFrom, widget: select, required: false, hint: "Пусто — поле «Дата» этой страницы", options: [ { label: "Самая свежая рецензия (Praises)", value: praises }, { label: "Самая свежая статья фан-клуба (fans, пародии, Щ-1, Щ-2)", value: club }, { label: "Самая свежая страница картинок", value: images }, { label: "Самый свежий текст песни", value: texts }, { label: "Самый свежий перевод", value: translations }, { label: "Действующие объявления (Directus)", value: announces } ] } ] }, &seodesc { label: Описание для поисковиков, name: description, widget: text, required: false, hint: "Одна-две фразы, 110–160 знаков: текст под ссылкой в выдаче и в превью ссылок в мессенджерах. Пусто — у статей начало текста, у остальных страниц ничего" }, &datefield { label: Дата, name: lastmod, widget: datetime, time_format: false, required: false, hint: "Дата обновления страницы (не меняется сама при сохранении): по ней — дата в меню и в sitemap. Пусто — даты нет" }, { label: Текст, name: body, widget: text } ] }
-      - { name: footer, preview_path: "shcherbakov/index.html", label: Подвал главной, file: content/_footer.md, fields: [ { label: Текст, name: body, widget: text } ] }
+      - { name: home, preview_path: "shcherbakov/index.html", label: Главная страница, file: content/_index.md, fields: &sitepagefields [ { label: Заголовок, name: title, widget: string }, { label: Параметры, name: params, widget: object, collapsed: true, fields: [ &seotitle { label: Заголовок для поисковиков, name: seoTitle, widget: string, required: false, hint: "Полный текст вкладки браузера и заголовка в выдаче, как есть. Пусто — заголовок страницы с припиской раздела («— Михаил Щербаков»)" }, &menudate { label: Показывать дату в меню, name: menuDate, widget: boolean, required: false, hint: "Только у страниц, на которые ведёт пункт меню: дата обновления рядом с пунктом" }, &menudatefrom { label: Откуда дата для меню, name: menuDateFrom, widget: select, required: false, hint: "Пусто — поле «Дата» этой страницы", options: [ { label: "Самая свежая рецензия (Praises)", value: praises }, { label: "Самая свежая статья фан-клуба (fans, пародии, Щ-1, Щ-2)", value: club }, { label: "Самая свежая страница картинок", value: images }, { label: "Самый свежий текст песни", value: texts }, { label: "Самый свежий перевод", value: translations }, { label: "Действующие объявления (Directus)", value: announces } ] } ] }, &seodesc { label: Описание для поисковиков, name: description, widget: text, required: false, hint: "Одна-две фразы, 110–160 знаков: текст под ссылкой в выдаче и в превью ссылок в мессенджерах. Пусто — у статей начало текста, у остальных страниц ничего" }, &datefield { label: Дата, name: lastmod, widget: datetime, time_format: false, required: false, hint: "Дата обновления страницы (не меняется сама при сохранении): по ней — дата в меню и в sitemap. Пусто — даты нет" }, { label: Текст, name: body, widget: markdown, modes: [raw] } ] }
+      - { name: footer, preview_path: "shcherbakov/index.html", label: Подвал главной, file: content/_footer.md, fields: [ { label: Текст, name: body, widget: markdown, modes: [raw] } ] }
       - { name: bio, preview_path: "shcherbakov/bio.html", label: Биография, file: content/bio.md, fields: *sitepagefields }
       - { name: about, preview_path: "shcherbakov/about.html", label: Об этой коллекции, file: content/about.md, fields: *sitepagefields }
       - { name: buy, preview_path: "shcherbakov/buy.html", label: Где купить, file: content/buy.md, fields: *sitepagefields }
       - { name: news, preview_path: "shcherbakov/news.html", label: Новости (хроника), file: content/news.md, fields: *sitepagefields }
       - { name: "no", preview_path: "shcherbakov/no.html", label: Чего не хватает, file: content/no.md, fields: *sitepagefields }
-      - { name: praises-list, preview_path: "shcherbakov/praises.html", label: Список рецензий (Praises), file: content/praises.md, fields: *sitepagefields }
+      - { name: praises-list, preview_path: "shcherbakov/praises.html", label: Отзывы и критика (praises), file: content/praises.md, fields: *sitepagefields }
       # страницы, содержимое которых строит шаблон из Directus: в файле — заголовок, поля для поисковиков и вступление
       - { name: catalogue, preview_path: "shcherbakov/catalogue.html", label: Каталог песен, file: content/catalogue.md, fields: *sitepagefields }
       - { name: translations, preview_path: "shcherbakov/translations.html", label: Каталог переводов, file: content/translations.md, fields: *sitepagefields }
@@ -118,7 +118,7 @@ collections:
                       - { label: Название, name: label, widget: string }
                       - { label: Таблица в Directus, name: table, widget: string, hint: "Имя коллекции, как в адресе Directus: events, works…" }
                       - { label: Описание, name: description, widget: text, required: false }
-          - { label: Текст над списком, name: body, widget: text }
+          - { label: Текст над списком, name: body, widget: markdown, modes: [raw] }
 
   # Страницы витрины — простые страницы-статьи в корне сайта (шаблон praises-article), вне фан-клуба: «Что такое
   # таблатуры», «Статистика» и новые. Отбор — по url корня (/<имя>.html), кроме страниц фан-клуба в корне
@@ -214,7 +214,7 @@ collections:
   # фан-клуба — оглавление своего раздела (fans-index, parodies-index, fom-index, sch2-index).
   # Удалять нельзя: на статьи ведут ссылки из списков и других статей — удалять через git, проверив check-links.
   - name: praises
-    label: Рецензии (Praises)
+    label: отзывы и критика (Praises)
     label_singular: Рецензия
     folder: content/Praises
     extension: md
@@ -336,7 +336,7 @@ collections:
       - *seodesc
       - *datefield
       - *typefield
-      - { label: Текст, name: body, widget: text, required: false }
+      - { label: Текст, name: body, widget: markdown, modes: [raw], required: false }
 
   # Страницы картинок (шаблон images-page): тело — HTML; картинки лежат в static/Images, на страницах на них ссылаются
   # просто по имени файла ("afish1.jpg"). Кнопка вставки картинки пишет адрес от корня домена
@@ -385,7 +385,7 @@ collections:
     label: Страницы языков
     format: json-frontmatter
     files:
-      - { name: en-index, preview_path: "shcherbakov/en/index.html", label: English — главная, file: content/en/en-index.md, fields: &pagefields [ { label: Заголовок, name: title, widget: string }, { label: Параметры, name: params, widget: object, collapsed: true, fields: [ *seotitle ] }, *seodesc, { label: Текст (HTML), name: body, widget: text } ] }
+      - { name: en-index, preview_path: "shcherbakov/en/index.html", label: English — главная, file: content/en/en-index.md, fields: &pagefields [ { label: Заголовок, name: title, widget: string }, { label: Параметры, name: params, widget: object, collapsed: true, fields: [ *seotitle ] }, *seodesc, { label: Текст (HTML), name: body, widget: markdown, modes: [raw] } ] }
       - { name: en-translations, preview_path: "shcherbakov/en/translations.html", label: English — список переводов, file: content/en/en-translations.md, fields: *pagefields }
       - { name: de-index, preview_path: "shcherbakov/de/index.html", label: Deutsch — главная, file: content/de/de-index.md, fields: *pagefields }
       - { name: de-translations, preview_path: "shcherbakov/de/translations.html", label: Deutsch — список переводов, file: content/de/de-translations.md, fields: *pagefields }

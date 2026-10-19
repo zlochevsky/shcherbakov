@@ -72,6 +72,28 @@ def is_empty(v):
     return v is None or v == '' or v == [] or v == {}
 
 
+def order_lists(node, fields):
+    """Элементы списков (widget: list с fields) — ключи в порядке полей, остальные по алфавиту, как пишет Sveltia;
+    вложенные объекты и списки — так же. Верхний уровень и объекты уже упорядочены через field_paths."""
+    if not isinstance(node, dict):
+        return node
+    for f in fields:
+        v = node.get(f['name'])
+        if f.get('widget') == 'object' and isinstance(v, dict):
+            node[f['name']] = order_lists(v, f.get('fields', []))
+        elif f.get('widget') == 'list' and f.get('fields') and isinstance(v, list):
+            sub = f['fields']
+            names = [x['name'] for x in sub]
+            res = []
+            for item in v:
+                if isinstance(item, dict):
+                    keys = [k for k in names if k in item] + sorted((k for k in item if k not in names), key=natural_key)
+                    item = order_lists({k: item[k] for k in keys}, sub)
+                res.append(item)
+            node[f['name']] = res
+    return node
+
+
 def normalize(text, fields, indent, entry_collection):
     t = text.strip().replace('\r\n', '\n')
     m = re.match(r'^\{\n(?:(?P<head>[\s\S]*?)\n)?\}(?:\n(?P<body>[\s\S]*))?$', t)
@@ -91,8 +113,12 @@ def normalize(text, fields, indent, entry_collection):
             v = flat.pop(path)
             if required or not is_empty(v):
                 items.append((path, v))
+        else:
+            # поле-список (и другие составные поля, кроме object): его ключи — «путь.0.…», порядок внутри — order_lists
+            for k in [k for k in flat if k.startswith(path + '.')]:
+                items.append((k, flat.pop(k)))
     items += sorted(flat.items(), key=lambda kv: natural_key(kv[0]))
-    content = unflatten(items)
+    content = order_lists(unflatten(items), fields)
     if not content:
         return body + '\n'
     h = json.dumps(content, ensure_ascii=False, indent=indent)[1:-1].strip('\n')
