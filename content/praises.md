@@ -96,7 +96,8 @@
 -  Бяльский&nbsp;И. Путь // Наш Иepycалим. 1996. 10 апреля. С.&nbsp;15.
 <!--li> <img src="./Images/new.gif" alt="new" border="0"> Винокуров&nbsp;А. / М. Щербаков &mdash; 9. [11](Песни 1996г.) // Знамя, 1997, &#8470;&nbsp;<a href="http://magazines.russ.ru/znamia/1997/11/).-->
 
-<A HREF="praises.html#top"><FONT SIZE=-1>[Наверх]</FONT></A>
+[\[Наверх\]](#top)
+{.to-top}
 
 ### Опубликовано на нашем сайте {#opub}
 
@@ -132,7 +133,8 @@
   -  ["Категория меры в поэтике Михаила Щербакова"](Praises/xazagerov5.html) . <span class="datum">[26.04.05]</span> (Прислал [В.Палт](mailto:paltvlad@gmail.com))
 - [**Лариса Шульц**](mailto:larissa.shultz@gmail.com). [&laquo;Ночной дозор&raquo;](Praises/nightwatch.html) <span class="datum">[21.03.11]</span>
 
-<UL><A HREF="praises.html#top"><FONT SIZE=-1>[Наверх]</FONT></A></UL>
+[\[Наверх\]](#top)
+{.to-top}
 
 ### Сетевые публикации о Щербакове... {#sete}
 
@@ -178,7 +180,8 @@
 - **Николай Шошанни**. [Некоторые фигуры "высшего пилотажа" в поэтике](http://poezia.org/ru/publications/678). Эссе (с множеством примеров из творчества МЩ). <span class="datum">[14.10.06]</span></li>
 - **М.&nbsp;А.&nbsp;Янушкевич**. [Проблема изучения античных реминисценций в русской бард-рок-поэзии](Praises/antic.html). Найдено на [форуме](http://muz-online.tomsk.ru/forum/) (ссылка на заметку больше не работает<!--, [оригинал](http://elar.usu.ru/bitstream/1234.56789/1315/1/urgu0485s.pdf) в формате PDF-->). Грешит вольным обращением с цитатами &mdash; многие перевраны, иногда весьма основательно. Ссылку прислала [Лариса Шульц](mailto:laura9947@hotmail.com). <span class="datum">[11.12.06]</span></li>
 
-<A HREF="praises.html#top"><FONT SIZE=-1>[Наверх]</FONT></A>
+[\[Наверх\]](#top)
+{.to-top}
 
 ### Учебники, энциклопедии, словари... {#uche}
 
