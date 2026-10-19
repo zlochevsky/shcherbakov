@@ -140,8 +140,11 @@ textarea {
 try {
 	const KEY = 'sveltia-cms.prefs';
 	const prefs = JSON.parse(localStorage.getItem(KEY) || '{}') || {};
-	if (prefs.closeOnSave === undefined) {
+	// один раз выключаем и там, где настройка уже записана (браузер открывал редактор до этого скрипта: Sveltia
+	// сама записывает closeOnSave = true); отметка closeOnSaveSet — чтобы потом уважать выбор редактора
+	if (prefs.closeOnSave === undefined || !prefs.closeOnSaveSet) {
 		prefs.closeOnSave = false;
+		prefs.closeOnSaveSet = true;
 		localStorage.setItem(KEY, JSON.stringify(prefs));
 	}
 } catch (e) { /* без localStorage — как решит Sveltia */ }

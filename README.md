@@ -158,7 +158,7 @@ Other front matter keys are kept as they are, but the editor writes the keys it 
 ### Saving
 
 - A click on "Save" opens a small confirmation box under the button: Enter or "Save" confirms, Escape or "Cancel" goes back. Ctrl+S (Cmd+S) saves at once, without the box.
-- After saving, the editor stays open on the entry. This is the editor's own setting "Close the editor after saving a draft"; the page turns it off for anyone who has not changed it, and it can be switched back in the editor's settings.
+- After saving, the editor stays open on the entry. This is the editor's own setting "Close the editor after saving a draft"; the page turns it off once for everyone (also where Sveltia had already stored "close"), and after that respects the choice: it can be switched back in the editor's settings.
 - Both are done by a script in `static/admin/index.html` that runs before the editor loads. It recognises the button by its label on the editor toolbar, so a future editor version may need it adjusted.
 
 ### The text field
