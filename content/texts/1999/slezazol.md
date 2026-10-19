@@ -46,4 +46,4 @@
                                                                            Fm6   Cm  |           |
 
 1999                                                  Нотировка по исполнению 1999-2000 года
-                                                     (диск <A href="../../Disks/deja.html">Deja</a>).
+                                                     (диск <a href="../../Disks/deja.html">Deja</a>).
