@@ -13,7 +13,8 @@
 
 На этой странице мы собираем критические статьи и просто высказывания разных известных и неизвестных людей о творчестве Михаила Щербакова. Разбиение по рубрикам достаточно условно. Статьи в рубриках расположены в алфавитном (по фамилиям авторов) порядке, работы отдельных авторов &mdash; в хронологическом порядке. ([Библиография](Books/index.html) публикаций МЩ собрана на отдельной странице.)
 
-<p style="color:#000000"><span class="datum">[Вторник, 02.08.22].</span> Поддержкой этого раздела занимается Д.&nbsp;Милохин. Пожалуйста, присылайте материалы <a href="mailto:iam@deniskhin.ru">ему</a>.</p>
+<span class="datum">[Вторник, 02.08.22].</span> Поддержкой этого раздела занимается Д.&nbsp;Милохин. Пожалуйста, присылайте материалы [ему](mailto:iam@deniskhin.ru).
+{style="color:#000000"}
 
 ### Содержание.
 
@@ -58,7 +59,7 @@
 - **Татьяна Вольтская**, ["По дивным песенкам твоим..."](Praises/divnym.html) статья из газеты "Невское время" (Санкт-Петербург), 02.08.1997. Прислала [Змейка](mailto:zmeyka-lm@narod.ru) <span class="datum"> [14.02.03]</span>
 - **Роман Гуревич**. ["Необычное интервью в Абу-Торе"](Praises/Vesti.html). Статья из Иерусалимской газеты "Вести" от 16 мая 1996. Написано скверно, но информативно. Прислал  [Михаил Палатник.](mailto:misha@amil.co.il) 
 - **О.&nbsp;Елисеев**. [Поэт с гитарой не вымер](Praises/izv-mar03.html). Заметка из газеты "Известия" от 26 марта 2003 года. Прислал [Леонид Блехер](mailto:leonid-blekher@mtu-net.ru) <span class="datum">[29.03.03]</span>.
-- <span id="erofeev"></span><img src="Images/new.gif" alt="new"> **Александр&nbsp;Ерофеев**. [Детали и дали](https://ridero.ru/books/detali_i_dali/). В книгу вошли опубликованные на нашем сайте эссе ["Про Щербакова, авторскую песню и чудеса"](Praises/erofeev.html) и ["Неправда всё вокруг"](Praises/erofeev2.html) ([иллюстрация](Images/illustr.html#bystrov3) из книги) <span class="datum">[03.08.20]</span>.
+- <span id="erofeev"></span>![new](Images/new.gif) **Александр&nbsp;Ерофеев**. [Детали и дали](https://ridero.ru/books/detali_i_dali/). В книгу вошли опубликованные на нашем сайте эссе ["Про Щербакова, авторскую песню и чудеса"](Praises/erofeev.html) и ["Неправда всё вокруг"](Praises/erofeev2.html) ([иллюстрация](Images/illustr.html#bystrov3) из книги) <span class="datum">[03.08.20]</span>.
 - **Борис Жуков**, журналист, автор многих работ об авторской песне. Статьи и заметки, по-видимому, публикуются в Интернете впервые.
   - [Три письма об одном авторе (Из переписки с воображаемым другом, покинувшим страну 15 лет назад)](FOM/zhukov.html) // Cборник ["Как варяг, наблюдающий нравы славян..."](FOM/index.html). Издание Фонда "Общественное мнение", 1996.
   - ["...в сравнении со смертью и любовью".](Praises/zhukov.html) Cтатья из журнала "Библиография", No. 4, 1996. Прислал [Игорь Грызлов](mailto:apksp@narod.ru). <span class="datum"> [01.12.99]</span>  
@@ -67,7 +68,8 @@
 - **Петр Ильинский**. ["Одинокое пространство Михаила Щербакова"](Praises/ilyinsky.html). Новая авторская редакция статьи, впервые опубликованной в одной из Бостонских русских газет. Прислал [Игорь Грызлов](mailto:apksp@narod.ru). <span class="datum">[22.03.04]</span> 
 - [Очерк](Praises/istomin.html) "Михаил Щербаков" из книги: **Истомин С., Денисенко Д.** Самые знаменитые барды России. &mdash; М.: &laquo;ВЕЧЕ&raquo;, 2002 г.<span class="datum">[1.07.07]</span>
 - **Юлий Ким**.
-  - [Вступительное слово](Praises/kim140303.html) // Иерусалимский журнал. 2004.  &#8470;&nbsp;17. ([на сайте журнала](http://www.antho.net/jr/17.2004/12.php)). <br>Впервые прозвучало на концерте в Питере 14.03.03 (текст любезно прислан редактором "Иерусалимского журнала"). <span class="datum">[19.01.04]</span> 
+  - [Вступительное слово](Praises/kim140303.html) // Иерусалимский журнал. 2004.  &#8470;&nbsp;17. ([на сайте журнала](http://www.antho.net/jr/17.2004/12.php)).\
+    Впервые прозвучало на концерте в Питере 14.03.03 (текст любезно прислан редактором "Иерусалимского журнала"). <span class="datum">[19.01.04]</span> 
   - [О песнях Михаила Щербакова](Books/vv.html#kim) // Щербаков М.&nbsp;К. Bишнёвое варенье. &mdash; М.: МКС плюс, 1990. С.&nbsp;5-6. Предисловие к книге М.&nbsp;Щербакова "Вишневое варенье". Ким &mdash; это голова. Других комментариев нет.
   - Давнее (1986) [стихотворение](Praises/kim-sketch.html) (по наводке [Кари](mailto:kari_ok@mail.ru)). <span class="datum">[02.10.05]</span>
   - &laquo;[Бардовское дело обречено на бессмертие...](http://magazines.russ.ru/din/2010/5/ki39.html)&raquo; &mdash; Экспресс-интервью. Опубликовано в журнале
@@ -75,8 +77,8 @@
 - [**Владимир Ланцберг**](http://www.bards.ru/Lancberg/index.htm). [Интервью](FOM/patr.html) из сборника ["Как варяг, наблюдающий нравы славян..."](FOM/index.html) Отзыв амбивалентный. 
 - **В.&nbsp;Mapтынoв**. [Спасётся ли мой слог высокопарный?..](Praises/krugozor.html) // Кругозор. 1991. &#8470;&nbsp;11. С.&nbsp;5. Прислал [Николай Шошанни](mailto:shoshanni@bigmir.net). <span class="datum">[19.05.06]</span>  
 - **И.&nbsp;Меренков**. ["Тайна, которую нельзя высказать"](Praises/merenkov.html). Статья опубликована в газете "Камертон" Луганского государственного института культуры и искусств, N9(31), апрель 2004 года. Текст любезно прислан [автором](mailto:ignat_m@ukr.net). <span class="datum">[9.04.04]</span>
-- [Михаил Щербаков. "Bишнёвое варенье" (рецензия)](Praises/lit_gaz.html) // Литературная газета. 1992. &#8470;&nbsp;5. 29 января. С.&nbsp;4. Прислал [Николай Шошанни](mailto:shoshanni@bigmir.net). <span class="datum">[3.05.06]</span></li>
-- [**МКЩ: Сборник статей о творчестве Михаила Щербакова**](Praises/mksch.html) / Сост. О.&nbsp;C.&nbsp;Савоскул. &mdash; М.: ОГИ, 2008. &mdash; 312 с. <span class="datum">[30.12.07]</span> </li>
+- [Михаил Щербаков. "Bишнёвое варенье" (рецензия)](Praises/lit_gaz.html) // Литературная газета. 1992. &#8470;&nbsp;5. 29 января. С.&nbsp;4. Прислал [Николай Шошанни](mailto:shoshanni@bigmir.net). <span class="datum">[3.05.06]</span>
+- [**МКЩ: Сборник статей о творчестве Михаила Щербакова**](Praises/mksch.html) / Сост. О.&nbsp;C.&nbsp;Савоскул. &mdash; М.: ОГИ, 2008. &mdash; 312 с. <span class="datum">[30.12.07]</span>
 - **Евгения Морева**. ["А мой герой был скромный малый"](Praises/moygeroy.html) &mdash; статья из газеты "Зеркало недели" (Киев), 29.05.1999. Прислала [Змейка](mailto:zmeyka-lm@narod.ru) <span class="datum"> [08.02.03]</span>  
 - ["Не зря ли я взывал до хрипоты, племена миpя?.."](FOM/znanie.html) // Знaние-сила. 1994. &#8470;&nbsp;8. С.&nbsp;112-119. 
 - **Булат Окуджава**. [Отрывок из интервью](Praises/bo.html), взятого Дмитрием Быковым. 
@@ -107,7 +109,7 @@
   - [**Алексей Тугарев**](mailto:tugarev@yandex.ru). ["Метрический репертуар Михаила Щербакова"](fans/utf/metrica.html) <span class="datum">[26.11.24]</span>.
   - [**Алексей Тугарев**](mailto:tugarev@yandex.ru). ["Чужая музыка: песни на заимствованные мелодии и музыкальные цитаты"](fans/utf/alien.html) <span class="datum">[26.11.24]</span>.
 - [**Елена Бурд**](mailto:l_burd@mail.ru). [&laquo;Прописные истины&raquo;](Praises/burd.html) &mdash; эссе. <span class="datum">[7.06.04]</span>
-- <img src="Images/new.gif" alt="new"> **[Александр Ерофеев](mailto:sashayerofeyev@rambler.ru)**. [Про Щербакова, авторскую песню и чудеса](Praises/erofeev.html).
+- ![new](Images/new.gif) **[Александр Ерофеев](mailto:sashayerofeyev@rambler.ru)**. [Про Щербакова, авторскую песню и чудеса](Praises/erofeev.html).
 <span class="datum">[24.03.15]</span>
 <!-- li> <img src="./Images/new.gif" alt="new" border="0"> **[Мария Ерохина](mailto:marierre@yandex.ru)**. [Михаил Щербаков: миры, которые он создает](./Praises/fidelity.html).
 <span class="datum">[18.06.09]</span></LI-->
@@ -143,7 +145,7 @@
 - **Дм.&nbsp;Быков**. &laquo;Русалка, цыганка, цикада&hellip;&raquo; [Отрывок](Praises/bykov_echo.html) из [программы](http://echo.msk.ru/programs/odin/1697726-echo/) "Один" на "Эхо Москвы" от 22 января 2016. <span class="datum">[07.02.16]</span>
 - [Его королевство](Praises/egokor.html) на сайте <business.ua>. Статья опубликована на [business.ua](https://www.business.ua/alter-ego/ego_korolevstvo-344602/&cc_key=0) (&laquo;БИЗНЕС&raquo; от 15.05.2006, ссылку прислала [clodja](http://clodja.livejournal.com/profile/)), оригинал недоступен, авторы неизвестны. <span class="datum">[10.06.17]</span>
 - **Никита Елисеев**:
-  - [Сам по&nbsp;себе](Praises/ekspert06.html). &laquo;Эксперт Северо-Запад&raquo; &#8470;&nbsp;22(275) от 12 июня 2006. Оригинал [здесь](http://expert.ru/northwest/2006/22/mihail_scherbakov/?n=87778). А [здесь](http://community.livejournal.com/m_sch/115636.html) &mdash; обсуждение: *"Статья благожелательная, но поверхностная"*. И цитаты слегка перевраны. <span class="datum">[15.06.06]</span>
+  - [Сам по&nbsp;себе](Praises/ekspert06.html). &laquo;Эксперт Северо-Запад&raquo; &#8470;&nbsp;22(275) от 12 июня 2006. Оригинал [здесь](http://expert.ru/northwest/2006/22/mihail_scherbakov/?n=87778). А [здесь](http://community.livejournal.com/m_sch/115636.html) &mdash; обсуждение: <i>"Статья благожелательная, но поверхностная"</i>. И цитаты слегка перевраны. <span class="datum">[15.06.06]</span>
   -  [Поэт поколения](Praises/ekspert11.html). &laquo;Эксперт Северо-Запад&raquo; &#8470;&nbsp;7(503), 2011 ([ссылку](http://expert.ru/northwest/2011/07/poet-pokoleniya/) прислала [clodja](http://clodja.livejournal.com/profile/)). <span class="datum">[26.10.16]</span>
 - [**Владимир Капгер**](http://www.bards.ru/Kapger/index.htm). [Отрывок из интервью](Praises/kapger.html). Резко отрицательный отзыв. Прислал [Илья Тимаков.](mailto:timakov@rz.hu-berlin.de) <span class="datum">[8.05.99]</span>
 - **Юлий Ким**:
@@ -153,32 +155,32 @@
 - **Ольга Коган**. [Михаил Щербаков в поддержку &quot;Иерусалимского журнала&quot;](Praises/jerjor04.html) (рецензия на выступление 2004 г. в Иерусалиме). [Опубликовано](http://www.aen.ru/culture/story-id=252/) в январе 2004 на сайте [АЕН](http://www.aen.ru). Ссылку прислала [Татьяна Темкина](mailto:ttemkina@mail.ru). <span class="datum">[29.12.06]</span>
 - **Марина Лидис**. [Волнуемый лишь смертью и любовью](http://kids.sch.in.ua/2013/03/27/volnuemy-j-lish-smert-yu-i-lyubov-yu/). Опубликовано 27.03.2013 на [сайте](http://kids.sch.in.ua/) "Блог проекта Study Planner Харьков". <span class="datum">[04.11.15]</span>
 - **Лев Наумов**. [Михаил Щербаков &mdash; &quot;Райцентр&quot;](Praises/raycentr.html). Рецензия опубликована на сайте проекта ["Наш НеФормат"](http://www.nneformat.ru/project/). Оригинал [здесь](http://www.nneformat.ru/reviews/?id=3316). Ссылку прислала [Лариса Шульц](mailto:laura9947@hotmail.com). <span class="datum">[11.11.06]</span>
-- **Ванкарем Никифорович** (Чикаго). ["Опять остается спасение в слове..."](http://www.vestnik.com/issues/2001/0619/win/nikiforovich.htm) &mdash; статья  из американского журнала "Вестник" от  19 июня 2001 г. Ссылку прислал [В.Палт](mailto:paltvlad@gmail.com) <span class="datum">[17.11.03]</span> ([Локальная копия](Praises/nikiforovich.html) статьи)</li>
-- <strong>Таисия Овская, Сергей Петровский.</strong> [Чужой среди своих. Михаилу Щербакову &ndash; 55](https://godliteratury.ru/projects/chuzhoy-sredi-svoikh-mikhailu-shherbakovu)  (Портал ГодЛитературы.РФ 2018, ссылку прислала [Татьяна Акивис](http://tata-akivis.livejournal.com/)). <span class="datum">[22.07.18]</span></li>
+- **Ванкарем Никифорович** (Чикаго). ["Опять остается спасение в слове..."](http://www.vestnik.com/issues/2001/0619/win/nikiforovich.htm) &mdash; статья  из американского журнала "Вестник" от  19 июня 2001 г. Ссылку прислал [В.Палт](mailto:paltvlad@gmail.com) <span class="datum">[17.11.03]</span> ([Локальная копия](Praises/nikiforovich.html) статьи)
+- **Таисия Овская, Сергей Петровский.** [Чужой среди своих. Михаилу Щербакову &ndash; 55](https://godliteratury.ru/projects/chuzhoy-sredi-svoikh-mikhailu-shherbakovu)  (Портал ГодЛитературы.РФ 2018, ссылку прислала [Татьяна Акивис](http://tata-akivis.livejournal.com/)). <span class="datum">[22.07.18]</span>
 - **Булат Окуджава**. [Отрывок из интервью](Praises/bo2.html), взятого Ириной Карпинос. "Зеркало недели" &#8470;1(14) 6-13 января 1995. [Ссылку](http://www.zn.ua/3000/3680/43335/) прислала [Лариса Шульц](mailto:laura9947@hotmail.com). <span class="datum">[03.01.08]</span> 
-- **Игорь Резников**. [Барды и не только. Михаил Щербаков.](https://proza.ru/2020/04/11/1178) Ссылку прислала Инна Измайлова. <span class="datum">[07.05.21]</span></li>
+- **Игорь Резников**. [Барды и не только. Михаил Щербаков.](https://proza.ru/2020/04/11/1178) Ссылку прислала Инна Измайлова. <span class="datum">[07.05.21]</span>
 - **Ольга Рычкова**. [Филология в нотах и звуках.](Praises/rychkova.html) Рецензия на книгу: [Михаил Щербаков. Тринадцать дисков.](Books/13d.html) Опубликовано в [НГ Ex Libris](http://exlibris.ng.ru) от 18.10.2007.\
 [Ссылку](http://exlibris.ng.ru/lit/2007-10-18/6_foilologia.html) прислала [Лариса Шульц](mailto:laura9947@hotmail.com). <span class="datum">[21.10.07]</span> 
-- **Оксана Савоскул**. [Михаил Щербаков: постмодернистское лицо авторской песни](http://www.russ.ru/culture/teksty/mihail_scherbakov_postmodernistskoe_lico_avtorskoj_pesni) (отрывок из предисловия к сборнику статей о творчестве Михаила Щербакова &laquo;МКЩ&raquo;). Опубликовано в [&laquo;Русском журнале&raquo;](http://www.russ.ru/) 27 ноября 2007. ([Локальная копия](Praises/savoskul.html) статьи). <span class="datum">[27.11.07]</span> </li>
-- **Григорий Сапов**. ["Оправдание Цинцинната"](http://www.sapov.ru/novoe/n00-73.htm#cincin). Размышления содержат ряд тонких и, вместе с тем, глубоких замечаний. ([Локальная копия](Praises/sapov.html) статьи). <span class="datum">[02.03.01]</span> </li>
-- [**Вадим Смоленский**](http://www.susi.ru/rus/). [В жанре песни](http://www.susi.ru/rus/lace/k5.html). Первая из сетевых публикаций о нашем сайте. ([Локальная копия](Praises/smolensky.html) статьи).</li>
-- <strong>Владимир Солунский</strong>. [Песни &ndash; стихи Михаила Щербакова](https://www.chayka.org/node/10369) Опубликовано 3 декабря 2019 г. в журнале [Чайка](https://www.chayka.org/). Ссылку прислала [clodja](http://clodja.livejournal.com/profile/). <span class="datum">[24.10.20]</span>
+- **Оксана Савоскул**. [Михаил Щербаков: постмодернистское лицо авторской песни](http://www.russ.ru/culture/teksty/mihail_scherbakov_postmodernistskoe_lico_avtorskoj_pesni) (отрывок из предисловия к сборнику статей о творчестве Михаила Щербакова &laquo;МКЩ&raquo;). Опубликовано в [&laquo;Русском журнале&raquo;](http://www.russ.ru/) 27 ноября 2007. ([Локальная копия](Praises/savoskul.html) статьи). <span class="datum">[27.11.07]</span>
+- **Григорий Сапов**. ["Оправдание Цинцинната"](http://www.sapov.ru/novoe/n00-73.htm#cincin). Размышления содержат ряд тонких и, вместе с тем, глубоких замечаний. ([Локальная копия](Praises/sapov.html) статьи). <span class="datum">[02.03.01]</span>
+- [**Вадим Смоленский**](http://www.susi.ru/rus/). [В жанре песни](http://www.susi.ru/rus/lace/k5.html). Первая из сетевых публикаций о нашем сайте. ([Локальная копия](Praises/smolensky.html) статьи).
+- **Владимир Солунский**. [Песни &ndash; стихи Михаила Щербакова](https://www.chayka.org/node/10369) Опубликовано 3 декабря 2019 г. в журнале [Чайка](https://www.chayka.org/). Ссылку прислала [clodja](http://clodja.livejournal.com/profile/). <span class="datum">[24.10.20]</span>
 - [**Евгений Сухарев**](mailto:zhenuraname@yandex.ru). [&laquo;Эпические уроки Михаила Щербакова&raquo;](http://www.netslova.ru/suharev/sherbakov.html). &mdash; [Сетевая Словесность](http://www.netslova.ru/index.html). А также [Поэзия.ру](http://www.poezia.ru/person.php?sid=94), [Котлеты и Мухи](http://kotlet.net/article.php?story=20070822142833179), [локальная копия](Praises/cyxapeb.html) статьи. <span class="datum">[31.08.07]</span>
-- **Юлия Фридман**. [Творчество М. Щербакова: короткая заметка о возможных реформах наук и искусств](http://old.russ.ru/journal/culture/98-12-10/avtor.htm). Статья в ["Русском Журнале"](http://www.russ.ru/russ/). Пример анти-фанатства. Не всем же только хвалить. Иной раз даже лучше, чтобы не хвалили. ([Локальная копия](Praises/fridman.html) статьи). <span class="datum">[15.12.98]</span></li>
+- **Юлия Фридман**. [Творчество М. Щербакова: короткая заметка о возможных реформах наук и искусств](http://old.russ.ru/journal/culture/98-12-10/avtor.htm). Статья в ["Русском Журнале"](http://www.russ.ru/russ/). Пример анти-фанатства. Не всем же только хвалить. Иной раз даже лучше, чтобы не хвалили. ([Локальная копия](Praises/fridman.html) статьи). <span class="datum">[15.12.98]</span>
 - **Ольга Чикина**. [Записка про Щербакова](Praises/chikina.html) &mdash; коротко и выразительно ([оригинал](http://chikina.livejournal.com/34166.html) в ЖЖ) <span class="datum">[13.04.09]</span>.
 - [Щербаков, "Интермедия-5"](Praises/essay.html) ("Маросейка") &mdash; анонимное эссе из [ЖЖ](http://www.livejournal.com/community/m_sch/15490.html?nc=2) <span class="datum">[10.09.03]</span>.
 - [О стихотворении Михаила Щербакова "CHINATOWN"](http://www.igraigr.com/kartashov.htm) <span class="datum">[02.07.24]</span>.
 
 ### ... и не только {#inet}
 
-- **Соломон Воложин**. [Айвазовский. Картины. Щербаков. Песни. Художественный смысл](http://art-otkrytie.narod.ru/aivazovsky.htm). Ссылку прислал(а) [ad_leuconoen](http://ad_leuconoen.livejournal.com/). <span class="datum">[16.11.16]</span></li>
+- **Соломон Воложин**. [Айвазовский. Картины. Щербаков. Песни. Художественный смысл](http://art-otkrytie.narod.ru/aivazovsky.htm). Ссылку прислал(а) [ad_leuconoen](http://ad_leuconoen.livejournal.com/). <span class="datum">[16.11.16]</span>
 - **Никита Елисеев**. [Три трудности. О Самуиле Лурье](http://seance.ru/blog/xronika/samuil_lourie/) // СЕАНС, 15 сентября, 2015. См. раздел "Современный Лермонтов". Ссылку прислала [Татьяна Акивис](http://tata-akivis.livejournal.com/) ([обсуждение](http://m-sch.livejournal.com/548419.html)). <span class="datum">[26.10.16]</span>
-- **Ольга Кириллова** (Olga Kirillova). [К проблеме наездницы русского постмодернизма](https://old.culturalresearch.ru/en/hist-c-eng) // Международный журнал исследований культуры (онлайновая версия). <i>(... Проанализированы интертекстуальные истоки представленного в книге ["Серп холодной луны: реконструкции моделей чувственности" (2010)] текста "Циркачка" поэта и барда М.Щербакова в романе "Палисандрия" С.Соколова; объединяющий их образ "всадницы" как одного из двух полюсов имперского текста русской культуры рассмотрен в различных топологических контекстах)</i>. Ссылку прислала [homo-variable](http://homo-variable.livejournal.com/). <span class="datum">[12.10.13]</span></li>
-- **Псой Короленко**. [Мы едем по дорогам Европы](http://old.russ.ru/culture/song/20000928.html). Статья 2000 г. о Гансе Зиверсе, Щербакову посвящен один абзац. Ссылку прислал [riftsh](http://riftsh.livejournal.com). <span class="datum">[16.04.09]</span></li>
-- **Константин Крылов**. [Михаил Щербаков vs "АукцЫон"](Praises/dixi.html). Оригинал [здесь](http://www.traditio.ru/dixi/3.htm"). <span class="datum">[27.06.03]</span></li>
-- **Никита Марков**. [Российская поэзия начала XXI века](http://www.informacional.su/postsov/culture/71-2013-04-03-10-27-15).  См. раздел "Поэзия частностей: Михаил Щербаков" ([локальная копия](Praises/markov.html)). Ссылка от [homo-variable](http://homo-variable.livejournal.com/) (ЖЖ). <span class="datum">[08.06.13]</span></li>
-- **Николай Шошанни**. [Некоторые фигуры "высшего пилотажа" в поэтике](http://poezia.org/ru/publications/678). Эссе (с множеством примеров из творчества МЩ). <span class="datum">[14.10.06]</span></li>
-- **М.&nbsp;А.&nbsp;Янушкевич**. [Проблема изучения античных реминисценций в русской бард-рок-поэзии](Praises/antic.html). Найдено на [форуме](http://muz-online.tomsk.ru/forum/) (ссылка на заметку больше не работает<!--, [оригинал](http://elar.usu.ru/bitstream/1234.56789/1315/1/urgu0485s.pdf) в формате PDF-->). Грешит вольным обращением с цитатами &mdash; многие перевраны, иногда весьма основательно. Ссылку прислала [Лариса Шульц](mailto:laura9947@hotmail.com). <span class="datum">[11.12.06]</span></li>
+- **Ольга Кириллова** (Olga Kirillova). [К проблеме наездницы русского постмодернизма](https://old.culturalresearch.ru/en/hist-c-eng) // Международный журнал исследований культуры (онлайновая версия). <i>(... Проанализированы интертекстуальные истоки представленного в книге ["Серп холодной луны: реконструкции моделей чувственности" (2010)] текста "Циркачка" поэта и барда М.Щербакова в романе "Палисандрия" С.Соколова; объединяющий их образ "всадницы" как одного из двух полюсов имперского текста русской культуры рассмотрен в различных топологических контекстах)</i>. Ссылку прислала [homo-variable](http://homo-variable.livejournal.com/). <span class="datum">[12.10.13]</span>
+- **Псой Короленко**. [Мы едем по дорогам Европы](http://old.russ.ru/culture/song/20000928.html). Статья 2000 г. о Гансе Зиверсе, Щербакову посвящен один абзац. Ссылку прислал [riftsh](http://riftsh.livejournal.com). <span class="datum">[16.04.09]</span>
+- **Константин Крылов**. [Михаил Щербаков vs "АукцЫон"](Praises/dixi.html). Оригинал [здесь](http://www.traditio.ru/dixi/3.htm). <span class="datum">[27.06.03]</span>
+- **Никита Марков**. [Российская поэзия начала XXI века](http://www.informacional.su/postsov/culture/71-2013-04-03-10-27-15).  См. раздел "Поэзия частностей: Михаил Щербаков" ([локальная копия](Praises/markov.html)). Ссылка от [homo-variable](http://homo-variable.livejournal.com/) (ЖЖ). <span class="datum">[08.06.13]</span>
+- **Николай Шошанни**. [Некоторые фигуры "высшего пилотажа" в поэтике](http://poezia.org/ru/publications/678). Эссе (с множеством примеров из творчества МЩ). <span class="datum">[14.10.06]</span>
+- **М.&nbsp;А.&nbsp;Янушкевич**. [Проблема изучения античных реминисценций в русской бард-рок-поэзии](Praises/antic.html). Найдено на [форуме](http://muz-online.tomsk.ru/forum/) (ссылка на заметку больше не работает<!--, [оригинал](http://elar.usu.ru/bitstream/1234.56789/1315/1/urgu0485s.pdf) в формате PDF-->). Грешит вольным обращением с цитатами &mdash; многие перевраны, иногда весьма основательно. Ссылку прислала [Лариса Шульц](mailto:laura9947@hotmail.com). <span class="datum">[11.12.06]</span>
 
 [\[Наверх\]](#top)
 {.to-top}
@@ -191,7 +193,7 @@
 
 ### Зефир струит эфир. {#zefi}
 
-- [Передача](Praises/fullmoon.html) иркутской студии "Полнолуние" о творчестве Михаила Щербакова &mdash; прямой эфир, звонки слушателей... Оригинал [здесь](http://polnolunie.baikal.ru/articles/pered_4.htm"). <span class="datum">[27.06.03]</span></li>
+- [Передача](Praises/fullmoon.html) иркутской студии "Полнолуние" о творчестве Михаила Щербакова &mdash; прямой эфир, звонки слушателей... Оригинал [здесь](http://polnolunie.baikal.ru/articles/pered_4.htm). <span class="datum">[27.06.03]</span>
 - [Интервью](Praises/nyradio.html) на радио "Новая Жизнь" 620 АМ в Нью-Йорке. Взято 6.05.03. <span class="datum">[16.03.05]</span>
 
 ### Изыскания {#investigations}
@@ -217,8 +219,9 @@ Greifswald: Ernst-Moritz-Arndt-Universit&auml;t Greifswald, 2014. &mdash; C. 141
   - [Михаил Щербаков: инженерия смысла. Аффект, любовь, смерть в метафизике &laquo;Рождества&raquo;](Praises/rozhdest.html) <span class="datum">[06.11.14]</span>
   - [О словах, образах и звуках. Один момент в песне &laquo;Интермедия 7&raquo;](Praises/intermedia.html) <span class="datum">[04.01.20]</span>
 - **[klezmerchik](http://klezmerchik.livejournal.com/)**. [Преломление еврейских мотивов Мандельштама в поэзии Александра Ерёменко и Михаила Щербакова](Praises/mandelshtam.html) (на английском языке). <span class="datum">[13.02.10]</span> 
-- [**Bella Ostromoukhov**](mailto:ostrob@hotmail.com). Дипломная работа, выполненная на факультете славянских языков Сорбонны (руководитель проф. J.Bonamour). <br>Работа написана по-французски и носит название "La chanson d'auteur Russe d'aujourd'hui: Mikhail Scherbakov". Возможно, сей труд будет небезынтересен даже тем ценителям творчества Щербакова, которые не парлекают на языке исследования. MS Word-file, упакованный WinZip'ом &mdash; [здесь](fans/sorbonna.zip) (188 Кб). Работа выложена и [страницей сайта](fr/ostromoukhov-2000.html) во французском разделе. <span class="datum">[18.10.00]</span>
+- [**Bella Ostromoukhov**](mailto:ostrob@hotmail.com). Дипломная работа, выполненная на факультете славянских языков Сорбонны (руководитель проф. J.Bonamour).\
+  Работа написана по-французски и носит название "La chanson d'auteur Russe d'aujourd'hui: Mikhail Scherbakov". Возможно, сей труд будет небезынтересен даже тем ценителям творчества Щербакова, которые не парлекают на языке исследования. MS Word-file, упакованный WinZip'ом &mdash; [здесь](fans/sorbonna.zip) (188 Кб). Работа выложена и [страницей сайта](fr/ostromoukhov-2000.html) во французском разделе. <span class="datum">[18.10.00]</span>
 
 ---
 
-<a href="mailto:iam@deniskhin.ru">Присылайте еще!</a>
+[Присылайте еще!](mailto:iam@deniskhin.ru)
