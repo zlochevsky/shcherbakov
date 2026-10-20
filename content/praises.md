@@ -181,6 +181,7 @@
 - **Никита Марков**. [Российская поэзия начала XXI века](http://www.informacional.su/postsov/culture/71-2013-04-03-10-27-15).  См. раздел "Поэзия частностей: Михаил Щербаков" ([локальная копия](Praises/markov.html)). Ссылка от [homo-variable](http://homo-variable.livejournal.com/) (ЖЖ). <span class="datum">[08.06.13]</span>
 - **Николай Шошанни**. [Некоторые фигуры "высшего пилотажа" в поэтике](http://poezia.org/ru/publications/678). Эссе (с множеством примеров из творчества МЩ). <span class="datum">[14.10.06]</span>
 - **М.&nbsp;А.&nbsp;Янушкевич**. [Проблема изучения античных реминисценций в русской бард-рок-поэзии](Praises/antic.html). Найдено на [форуме](http://muz-online.tomsk.ru/forum/) (ссылка на заметку больше не работает<!--, [оригинал](http://elar.usu.ru/bitstream/1234.56789/1315/1/urgu0485s.pdf) в формате PDF-->). Грешит вольным обращением с цитатами &mdash; многие перевраны, иногда весьма основательно. Ссылку прислала [Лариса Шульц](mailto:laura9947@hotmail.com). <span class="datum">[11.12.06]</span>
+- **Юлий Ким**. Интервью Никите Елисееву о Михаиле Щербакове (не позднее июня 2006 года) // [источник](https://yacht.a7sharp9.com/DV/Potter/Posters/Snape/interview.html)
 
 [\[Наверх\]](#top)
 {.to-top}
