@@ -55,6 +55,15 @@
     {{- $pos := int ( math.Max 0 (sub (int $pageParams.chordsStartAt)  1) ) -}}
     {{- range $k, $v := $lines -}}
         {{- $line := $v -}}
+        {{/* "~" в начале строки текста — строка исполнения (повтор, вокализ, подпись): видна в режимах с аккордами,
+             скрыта в «только текст»; снимается ровно один символ, колонка аккордов этой строки — на единицу левее */}}
+        {{- $perf := false -}}
+        {{- $lp := $pos -}}
+        {{- if and (lt $k $textFinishAtLine) (strings.HasPrefix $line "~") -}}
+            {{- $perf = true -}}
+            {{- $line = substr $line 1 -}}
+            {{- if gt $pos 0 }}{{ $lp = sub $pos 1 }}{{ end -}}
+        {{- end -}}
         {{/* non-empty lines */}}
         {{- if gt (len (trim $line " \t")) 0 -}}
             {{/* determine if line should have year wrapped (skip first 2 lines) */}}
@@ -79,8 +88,8 @@
             {{- else -}}
                 {{- if gt $pos 0 -}}
                     {{/* split line into text and chords at position */}}
-                    {{- if and (gt (len $line) $pos) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}}
-                        {{- $p1 := substr $line 0 $pos -}}{{/* text substring */}}
+                    {{- if and (gt (len $line) $lp) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}}
+                        {{- $p1 := substr $line 0 $lp -}}{{/* text substring */}}
                         {{- if $ru -}}
                         {{- $p1 = replaceRE `(^|[\s\(—])"` "$1«" $p1 -}}{{/* opening quotes */}}
                         {{- $p1 = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $p1 -}}{{/* closing quotes before space/punctuation */}}
@@ -89,7 +98,7 @@
                         {{- $p1 = replaceRE `, - ` ", — " $p1 -}}{{/* dash after comma */}}
                         {{- $p1 = replaceRE ` - ` "&nbsp;— " $p1 -}}{{/* space-dash-space with non-breaking space */}}
                         {{- end -}}
-                        {{- $p2 := substr $line $pos -}}{{/* chords substring */}}
+                        {{- $p2 := substr $line $lp -}}{{/* chords substring */}}
                         {{- $stressPositions := "" -}}
                         {{- if ne $stressLine "" -}}
                             {{/* parse stress positions from previous line */}}
@@ -113,7 +122,7 @@
                             {{- $p2Clean = replaceRE `\s+` " " $p2Clean -}}
                         {{- end -}}
                         {{- $linesAbove = $linesAbove | append (printf "<span class=\"ch\"%s>%s</span><br>\n<span class=\"txt\">%s</span><br>\n" $dataAttr $p2Clean (strings.TrimRight " " $p1) | safeHTML) -}}
-                        {{- $linesText = $linesText | append (print "<span class=\"txt\">" $p1 "</span>\n" | safeHTML) -}}
+                        {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" $p1 "</span>\n" | safeHTML) }}{{ end -}}
                     {{- else -}}
                         {{- if and (findRE `^[\s,\|0-9]+$` $line) (findRE `,` $line) (not (findRE `\d{4}` $line)) -}}
                             {{/* save stress line for next iteration, add to side view */}}
@@ -133,7 +142,7 @@
                             {{- end -}}
                             {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                             {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
-                            {{- $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) -}}
+                            {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) }}{{ end -}}
                         {{- end -}}
                     {{- end -}}
                 {{- else -}}
@@ -155,7 +164,7 @@
                         {{- end -}}
                         {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                         {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
-                        {{- $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) -}}
+                        {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) }}{{ end -}}
                     {{- end -}}
                 {{- end -}}
             {{- end -}}
