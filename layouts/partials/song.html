@@ -114,7 +114,7 @@
                         {{- end -}}
                         {{/* append text and chords to view arrays */}}
                         {{- $dataAttr := cond (ne $stressPositions "") (printf " data-positions=\"%s\"" $stressPositions) "" -}}
-                        {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}
+                        {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 (cond $perf " " "") "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}{{/* пробел на месте снятой «~» — аккорды в колонке */}}
                         {{/* non stressed AboveView: replace multiple spaces */}}
                         {{- $p2Clean := $p2 -}}
                         {{- if eq $hasStress false -}}                                

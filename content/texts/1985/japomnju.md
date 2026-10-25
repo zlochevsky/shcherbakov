@@ -3,7 +3,7 @@
     "params": {
         "tonality": "A",
         "chordsStartAt": 50,
-        "textFinishAtLine": 39,
+        "textFinishAtLine": 42,
         "editionOf": "mojarabo"
     }
 }

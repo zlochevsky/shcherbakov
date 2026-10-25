@@ -5,7 +5,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 46,
-        "textFinishAtLine": 31,
+        "textFinishAtLine": 38,
         "editionOf": "bezhence"
     }
 }
