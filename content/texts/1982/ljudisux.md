@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 43,
-        "textFinishAtLine": 46
+        "textFinishAtLine": 47
     }
 }
 А в море плавают медузы,                  Hm A7

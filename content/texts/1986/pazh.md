@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 47,
-        "textFinishAtLine": 45
+        "textFinishAtLine": 46
     }
 }
 Вот так пропел небесный шансонье,             Am H7

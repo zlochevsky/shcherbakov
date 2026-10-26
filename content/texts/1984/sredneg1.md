@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 48,
-        "textFinishAtLine": 39
+        "textFinishAtLine": 40
     }
 }
 Я точно знаю, что значит масса,                Em E7 Am Em

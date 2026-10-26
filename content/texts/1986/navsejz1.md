@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 50,
-        "textFinishAtLine": 23
+        "textFinishAtLine": 24
     }
 }
 Без цели, без дорог, сквозь сумерки Земли             Am F7 B E7 Am E

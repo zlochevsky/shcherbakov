@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 53,
-        "textFinishAtLine": 31
+        "textFinishAtLine": 32
     }
 }
 Ах, я, точно тополь, рос и был неказист и прост,    Am Gm

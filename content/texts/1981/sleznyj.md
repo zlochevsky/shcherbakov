@@ -1,7 +1,7 @@
 {
     "params": {
         "tonality": "Hm",
-        "textFinishAtLine": 54
+        "textFinishAtLine": 55
     }
 }
 Колокольный звон, колокольный звон,

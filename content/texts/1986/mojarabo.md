@@ -2,7 +2,7 @@
     "params": {
         "tonality": "A",
         "chordsStartAt": 44,
-        "textFinishAtLine": 27
+        "textFinishAtLine": 28
     }
 }
 Я помню север, я помню юг,                         A D

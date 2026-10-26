@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 53,
-        "textFinishAtLine": 26
+        "textFinishAtLine": 27
     }
 }
 Я исполняю всё, что сам себе велю,                  Am Am7+ Am Am7+

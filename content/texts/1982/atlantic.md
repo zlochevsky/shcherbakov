@@ -2,7 +2,7 @@
     "params": {
         "tonality": "C",
         "chordsStartAt": 56,
-        "textFinishAtLine": 52
+        "textFinishAtLine": 53
     }
 }
 То ли мука, то ли скука, одиночества наука...          Eb Ab Eb Ab

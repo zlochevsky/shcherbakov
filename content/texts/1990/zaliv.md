@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 58,
-        "textFinishAtLine": 33
+        "textFinishAtLine": 34
     }
 }
 Душа, каких похвал ещё тебе, ворожее?                    Em Em+7 Em7 A7/c#

@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Gm",
         "chordsStartAt": 38,
-        "textFinishAtLine": 45
+        "textFinishAtLine": 46
     }
 }
 ~                                         D D7

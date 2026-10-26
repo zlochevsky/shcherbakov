@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 60,
-        "textFinishAtLine": 33
+        "textFinishAtLine": 35
     }
 }
 Давным-давно, мой бедный брат, оставил ты дела.            Dm E7 A7 Dm

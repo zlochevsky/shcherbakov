@@ -2,7 +2,7 @@
     "params": {
         "tonality": "G",
         "chordsStartAt": 65,
-        "textFinishAtLine": 32
+        "textFinishAtLine": 33
     }
 }
 Державный кесарь мечет и рвёт, зовёт незнамо куда.                G

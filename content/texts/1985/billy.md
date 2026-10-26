@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Cm",
         "chordsStartAt": 57,
-        "textFinishAtLine": 44
+        "textFinishAtLine": 45
     }
 }
 Где-то в горах высоких или в песках далёких -           Cm Fm

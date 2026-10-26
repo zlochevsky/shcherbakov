@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Gm",
         "chordsStartAt": 44,
-        "textFinishAtLine": 30
+        "textFinishAtLine": 31
     }
 }
 У нас опять зима. Снега идут кругами,                  Gm Cm Gm

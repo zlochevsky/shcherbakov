@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 62,
-        "textFinishAtLine": 30
+        "textFinishAtLine": 31
     }
 }
 В одних садах цветёт миндаль, в других метёт метель.         Em G D7 Am
