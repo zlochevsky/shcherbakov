@@ -1,23 +1,22 @@
 {
     "params": {
         "tonality": "Em",
-        "chordsStartAt": 51,
-        "textFinishAtLine": 53
+        "chordsStartAt": 53,
+        "textFinishAtLine": 49
     }
 }
 ,                    ,
- Мы прах. Мы явный прах.                          Em   C
-                      ,                           
- В буквальном смысле пыль земли,                  Am
-           ,                                      
- а также след в пыли. Мы мел                      H7
-   ,                  ,                           
- руин, щепа сухих древес,                         Em   H7
-                   ,                              
- морской песок и след в песке,                    Em
-,         ,         ,                             
- утиль музеев и настенный мох                     H7/F# G  H7
-
+ Мы прах. Мы явный прах.                            Em C
+                      ,
+ В буквальном смысле пыль земли,                    Am
+           ,
+ а также след в пыли. Мы мел                        H7
+   ,                  ,
+ руин, щепа сухих древес,                           Em H7
+                   ,
+ морской песок и след в песке,                      Em
+,         ,         ,
+ утиль музеев и настенный мох                       H7/F# G H7
  пещер. Мы алебастр и тальк.
  И та мука, что лик паяца белит.
  И опилки закулисных стойл.
@@ -45,15 +44,11 @@
  но если мы не соль земли,
  то кто же соль земли?
 
-
- Once in our lives let us drink to our wives,     Em C  Am   H7
- tho' their numbers be but small:                 Em    H7   Em
-                                                  H7/F# G    H7/F#
- Heav'n take the best and the Devil take the rest,
- and so we shall get rid of them all.
-
- To this hearty wish let each man take his dish,
- and drink, drink, drink till he fall.
-
+~ Once in our lives let us drink to our wives,      Em C Am H7
+~ tho' their numbers be but small:                  Em H7 Em H7/F# Em/G H7/F#
+~ Heav'n take the best and the Devil take the rest,
+~ and so we shall get rid of them all.
+~ To this hearty wish let each man take his dish,
+~ and drink, drink, drink till he fall.
 
  1995

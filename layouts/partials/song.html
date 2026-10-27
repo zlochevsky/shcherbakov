@@ -79,10 +79,9 @@
                 {{- end -}}
             {{- end -}}
             {{/* wrap year in <span> using Regex */}}
-            {{- if $shouldWrapYear -}}
-                {{- $line = replaceRE `^\s*(<?\s*\d{4}(?:,\s*\d{4})*\s*>?)\s*$` "<span class=\"year\">$1</span>" $line -}}
-            {{- end -}}
+            {{- $yearRE := `^(\s*)(<?\s*\d{4}(?:\s*[,–-]\s*\d{2,4})*(?:\s*>)?)(\s{2,}.*|\s*)$` -}}{{/* год; справа может быть примечание */}}
             {{- if (ge $k $textFinishAtLine)  -}}
+                {{- if $shouldWrapYear }}{{ $line = replaceRE $yearRE "$1<span class=\"year\">$2</span>$3" $line }}{{ end -}}
                 {{/* add lines to $newLinesAfter for <pre> block) */}}
                 {{- $newLinesAfter = $newLinesAfter | append (println $line | safeHTML ) -}}
             {{- else -}}
@@ -90,6 +89,7 @@
                     {{/* split line into text and chords at position */}}
                     {{- if and (gt (len $line) $lp) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}}
                         {{- $p1 := substr $line 0 $lp -}}{{/* text substring */}}
+                        {{- if $shouldWrapYear }}{{ $p1 = replaceRE $yearRE "$1<span class=\"year\">$2</span>$3" $p1 }}{{ end -}}
                         {{- if $ru -}}
                         {{- $p1 = replaceRE `(^|[\s\(—])"` "$1«" $p1 -}}{{/* opening quotes */}}
                         {{- $p1 = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $p1 -}}{{/* closing quotes before space/punctuation */}}
@@ -97,6 +97,7 @@
                         {{- $p1 = replaceRE `^- ` "— " $p1 -}}{{/* dash at line start (direct speech) */}}
                         {{- $p1 = replaceRE `, - ` ", — " $p1 -}}{{/* dash after comma */}}
                         {{- $p1 = replaceRE ` - ` "&nbsp;— " $p1 -}}{{/* space-dash-space with non-breaking space */}}
+                        {{- $p1 = replaceRE ` -( *)$` "&nbsp;—$1" $p1 -}}{{/* dash at line end */}}
                         {{- end -}}
                         {{- $p2 := substr $line $lp -}}{{/* chords substring */}}
                         {{- $stressPositions := "" -}}
@@ -132,6 +133,7 @@
                         {{- else -}}
                             {{/* text-only line: trim trailing spaces, replace quotes then dashes, append to all views */}}
                             {{- $lineClean := replaceRE ` +$` "" $line -}}
+                            {{- if $shouldWrapYear }}{{ $lineClean = replaceRE $yearRE "$1<span class=\"year\">$2</span>$3" $lineClean }}{{ end -}}
                             {{- if $ru -}}
                             {{- $lineClean = replaceRE `(^|[\s\(—])"` "$1«" $lineClean -}}{{/* opening quotes */}}
                             {{- $lineClean = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $lineClean -}}{{/* closing quotes before space/punctuation */}}
@@ -139,6 +141,7 @@
                             {{- $lineClean = replaceRE `^- ` "— " $lineClean -}}{{/* dash at line start */}}
                             {{- $lineClean = replaceRE `, - ` ", — " $lineClean -}}{{/* dash after comma */}}
                             {{- $lineClean = replaceRE ` - ` "&nbsp;— " $lineClean -}}
+                            {{- $lineClean = replaceRE ` -$` "&nbsp;—" $lineClean -}}{{/* dash at line end */}}
                             {{- end -}}
                             {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                             {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
@@ -154,6 +157,7 @@
                     {{- else -}}
                         {{/* text line: trim trailing spaces, replace quotes then dashes */}}
                         {{- $lineClean := replaceRE ` +$` "" $line -}}
+                        {{- if $shouldWrapYear }}{{ $lineClean = replaceRE $yearRE "$1<span class=\"year\">$2</span>$3" $lineClean }}{{ end -}}
                         {{- if $ru -}}
                         {{- $lineClean = replaceRE `(^|[\s\(—])"` "$1«" $lineClean -}}{{/* opening quotes */}}
                         {{- $lineClean = replaceRE `"([\s\.,!?;:\)—…]|$)` "»$1" $lineClean -}}{{/* closing quotes before space/punctuation */}}
@@ -161,6 +165,7 @@
                         {{- $lineClean = replaceRE `^- ` "— " $lineClean -}}{{/* dash at line start */}}
                         {{- $lineClean = replaceRE `, - ` ", — " $lineClean -}}{{/* dash after comma */}}
                         {{- $lineClean = replaceRE ` - ` "&nbsp;— " $lineClean -}}
+                        {{- $lineClean = replaceRE ` -$` "&nbsp;—" $lineClean -}}{{/* dash at line end */}}
                         {{- end -}}
                         {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                         {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
