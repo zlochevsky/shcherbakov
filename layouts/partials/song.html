@@ -87,7 +87,7 @@
             {{- else -}}
                 {{- if gt $pos 0 -}}
                     {{/* split line into text and chords at position */}}
-                    {{- if and (gt (len $line) $lp) ( gt (len (findRE `[A-Ha-hm#0-9]+` $line)) 0) -}}
+                    {{- if and (gt (len $line) $lp) ( gt (len (findRE `[A-Ha-hm#0-9]+|пр\.` $line)) 0) -}}{{/* «пр.» — проигрыш, тоже в колонку аккордов */}}
                         {{- $p1 := substr $line 0 $lp -}}{{/* text substring */}}
                         {{- if $shouldWrapYear }}{{ $p1 = replaceRE $yearRE "$1<span class=\"year\">$2</span>$3" $p1 }}{{ end -}}
                         {{- if $ru -}}
@@ -178,7 +178,7 @@
             {{- if  (le $k $textFinishAtLine) -}}
                 {{- $linesSide = $linesSide | append "<br>\n" -}}
                 {{- $linesAbove = $linesAbove | append "<br>\n" -}}
-                {{- $linesText = $linesText | append "\n" -}}
+                {{- if not $perf }}{{ $linesText = $linesText | append "\n" }}{{ end -}}{{/* пустая строка с «~» — только с аккордами */}}
             {{- else -}}
                 {{- $newLinesAfter = $newLinesAfter | append "\n" -}}
             {{- end -}}
