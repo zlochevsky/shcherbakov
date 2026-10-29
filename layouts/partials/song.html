@@ -89,6 +89,8 @@
                     {{/* split line into text and chords at position */}}
                     {{- if and (gt (len $line) $lp) ( gt (len (findRE `[A-Ha-hm#0-9]+|пр\.` $line)) 0) -}}{{/* «пр.» — проигрыш, тоже в колонку аккордов */}}
                         {{- $p1 := substr $line 0 $lp -}}{{/* text substring */}}
+                        {{- $hidden := len (findRE `\x{0301}` $p1) -}}{{/* невидимые в строке символы: знак ударения и теги (<i>…</i>) — в режиме «справа» добавляются пробелами, чтобы аккорды стояли в колонке */}}
+                        {{- range findRE `</?(?:i|em|b|strong|span|a|sup|sub|small|u)\b[^>]*>` $p1 }}{{ $hidden = add $hidden (strings.RuneCount .) }}{{ end -}}
                         {{- if $shouldWrapYear }}{{ $p1 = replaceRE $yearRE "$1<span class=\"year\">$2</span>$3" $p1 }}{{ end -}}
                         {{- if $ru -}}
                         {{- $p1 = replaceRE `(^|[\s\(—])"` "$1«" $p1 -}}{{/* opening quotes */}}
@@ -115,21 +117,41 @@
                         {{- end -}}
                         {{/* append text and chords to view arrays */}}
                         {{- $dataAttr := cond (ne $stressPositions "") (printf " data-positions=\"%s\"" $stressPositions) "" -}}
-                        {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 (cond $perf " " "") "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}{{/* пробел на месте снятой «~» — аккорды в колонке */}}
+                        {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 (strings.Repeat $hidden " ") (cond $perf " " "") "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}{{/* пробел на месте снятой «~» — аккорды в колонке */}}
                         {{/* non stressed AboveView: replace multiple spaces */}}
                         {{- $p2Clean := $p2 -}}
                         {{- if eq $hasStress false -}}                                
                             {{- $p2Clean = strings.TrimLeft " " $p2 -}}
                             {{- $p2Clean = replaceRE `\s+` " " $p2Clean -}}
                         {{- end -}}
+                        {{- if eq (trim $p1 " ") "" -}}{{/* строка только с аккордами (вступление, проигрыш): без пустой строки текста под ней */}}
+                        {{- $linesAbove = $linesAbove | append (printf "<span class=\"ch\"%s>%s</span><br>\n" $dataAttr $p2Clean | safeHTML) -}}
+                        {{- else -}}
                         {{- $linesAbove = $linesAbove | append (printf "<span class=\"ch\"%s>%s</span><br>\n<span class=\"txt\">%s</span><br>\n" $dataAttr $p2Clean (strings.TrimRight " " $p1) | safeHTML) -}}
+                        {{- end -}}
                         {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" $p1 "</span>\n" | safeHTML) }}{{ end -}}
                     {{- else -}}
                         {{- if and (findRE `^[\s,\|0-9]+$` $line) (findRE `,` $line) (not (findRE `\d{4}` $line)) -}}
                             {{/* save stress line for next iteration, add to side view */}}
-                            {{- $stressLine = $line -}}
+                            {{/* запятая стоит над буквой строки текста ниже; невидимые символы этой строки левее запятой
+                                 (теги, знак ударения) сдвигают её на экране — переносим запятую на столько же влево */}}
+                            {{- $next := "" -}}
+                            {{- if lt (add $k 1) (len $lines) }}{{ $next = index $lines (add $k 1) }}{{ end -}}
+                            {{- if strings.HasPrefix $next "~" }}{{ $next = substr $next 1 }}{{ end -}}
+                            {{- $adj := "" -}}
+                            {{- range $i, $ch := split $line "" -}}
+                                {{- if eq $ch "," -}}
+                                    {{- $pre := substr $next 0 $i -}}
+                                    {{- $h := len (findRE `\x{0301}` $pre) -}}
+                                    {{- range findRE `</?(?:i|em|b|strong|span|a|sup|sub|small|u)\b[^>]*>` $pre }}{{ $h = add $h (strings.RuneCount .) }}{{ end -}}
+                                    {{- $gap := sub (sub $i $h) (strings.RuneCount $adj) -}}
+                                    {{- if lt $gap 0 }}{{ $gap = 0 }}{{ end -}}
+                                    {{- $adj = print $adj (strings.Repeat $gap " ") "," -}}
+                                {{- end -}}
+                            {{- end -}}
+                            {{- $stressLine = $adj -}}
                             {{- $hasStress = true -}}
-                            {{- $linesSide = $linesSide | append (print "<span class=\"strss\">" (replaceRE ` +$` "" $line) "<br></span>\n" | safeHTML) -}}
+                            {{- $linesSide = $linesSide | append (print "<span class=\"strss\">" $adj "<br></span>\n" | safeHTML) -}}
                         {{- else -}}
                             {{/* text-only line: trim trailing spaces, replace quotes then dashes, append to all views */}}
                             {{- $lineClean := replaceRE ` +$` "" $line -}}

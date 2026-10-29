@@ -1,5 +1,5 @@
 const VALID_VIEW_TYPES = ['text', 'side', 'above', 'source'];
-const DEFAULT_VIEW_TYPE = 'side';
+const DEFAULT_VIEW_TYPE = 'text';  // без сохранённого выбора — «только текст»
 const COOKIE_PARAMETERS = 'Path=/; Max-Age=31536000; SameSite=Lax';
 
 // Глобальные переменные для кнопок (инициализируются в DOMContentLoaded)

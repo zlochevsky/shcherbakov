@@ -63,7 +63,7 @@
 еду всё тем же транспортом без билета. В зубах у меня галета.       F D7 Gm Gm6
 Жизнь дребезжит, подпрыгивает и воспринимается как курьёз.          Dm B Dm/B A
 
-Меж тем закончилось целое лето. Adiós,                              Gm A B Dm B7/G# Dm
+Меж тем закончилось целое лето. Adiós,                             Gm A B Dm B7/G# Dm
 amigos, nos encontramos más tarde,
 nos encontramos...                                                  G Dm
 
