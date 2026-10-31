@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 77,
-        "textFinishAtLine": 65
+        "textFinishAtLine": 67
     }
 }
 ~                                                                           F#m (обыгрывается)
@@ -68,5 +68,7 @@
 Почти успел доиграть кое-как и бросить ноты в огонь.                        G Gm Dm
 Не ждал, не гадал, что в самом конце реприза опять,                         E G E7/g#
 опять не финал.                                                             A
+
 ~                                                                           a a# Hm
 ~                                                                           e f F#m
+2024
