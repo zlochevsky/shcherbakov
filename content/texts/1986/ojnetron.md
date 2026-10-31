@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 50,
-        "textFinishAtLine": 52
+        "textFinishAtLine": 51
     }
 }
 Ой, не троньте, отойдите, я болею,

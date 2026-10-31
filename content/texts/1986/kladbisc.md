@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 49,
-        "textFinishAtLine": 21
+        "textFinishAtLine": 22
     }
 }
     Под пылью миров, под светилами,             Em        D7   G

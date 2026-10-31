@@ -2,7 +2,7 @@
     "params": {
         "tonality": "D",
         "chordsStartAt": 51,
-        "textFinishAtLine": 27
+        "textFinishAtLine": 26
     }
 }
 Поправьте пюпитры, закончен антракт.                   D Em A7   D

@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 55,
-        "textFinishAtLine": 20
+        "textFinishAtLine": 22
     }
 }
 Ковыляет по курганам колымага за конём.               Am   Dm    E7   Am
@@ -24,5 +24,6 @@
 а среди каньонов тесных ящик золота лежит.            C    F     C    Dm
 А моих и Себастьяно вам костей не отыскать,           C    F     C    Dm
 наши души по курганам будут вечно ковылять...         Am   F     C    Dm
-                                                      Am   E7    Am   E7   Am
+
+~                                                     Am   E7    Am   E7   Am
 <1980>

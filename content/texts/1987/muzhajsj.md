@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Bm",
         "chordsStartAt": 51,
-        "textFinishAtLine": 24
+        "textFinishAtLine": 23
     }
 }
                                                   Bm

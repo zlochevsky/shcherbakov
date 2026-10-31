@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 50,
-        "textFinishAtLine": 29
+        "textFinishAtLine": 28
     }
 }
 Мой гордый дух под звёздным кровом,               Dm  Gm    Dm  Gm

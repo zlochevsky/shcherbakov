@@ -2,7 +2,7 @@
     "params": {
         "tonality": "A",
         "chordsStartAt": 73,
-        "textFinishAtLine": 45
+        "textFinishAtLine": 44
     }
 }
 Вторник, второе августа, время - десять без десяти.                     A6 F#dim Dm6/A

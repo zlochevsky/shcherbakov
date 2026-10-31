@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 63,
-        "textFinishAtLine": 66
+        "textFinishAtLine": 65
     }
 }
                                                               Hm

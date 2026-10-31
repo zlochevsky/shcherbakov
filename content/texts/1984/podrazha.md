@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 50,
-        "textFinishAtLine": 67
+        "textFinishAtLine": 66
     }
 }
 Мне-то, в общем, наплевать, мне без разницы -

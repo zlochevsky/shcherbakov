@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 44,
-        "textFinishAtLine": 62
+        "textFinishAtLine": 61
     }
 }
 Прошу вниманья, государь!                  Hm G7 Hm

@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 32,
-        "textFinishAtLine": 50
+        "textFinishAtLine": 51
     }
 }
                                (пр.)

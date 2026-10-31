@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 40,
-        "textFinishAtLine": 128
+        "textFinishAtLine": 127
     }
 }
 Огорчу поневоле,                       Hm

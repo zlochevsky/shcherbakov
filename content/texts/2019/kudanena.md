@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 53,
-        "textFinishAtLine": 25
+        "textFinishAtLine": 26
     }
 }
                                                     Em F#dim H7 Em F#dim H7

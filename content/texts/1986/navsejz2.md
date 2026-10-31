@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 57,
-        "textFinishAtLine": 46
+        "textFinishAtLine": 45
     }
 }
 В ночи моргали огоньки, и двигались вагоны              Am   A#   Am

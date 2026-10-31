@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 66,
-        "textFinishAtLine": 39
+        "textFinishAtLine": 38
     }
 }
                                                                   Am6 H7 Em
@@ -42,4 +42,4 @@
 сам выдумывай, чем бы завтра себя развлечь.                      Em6 F Em F Em
                                                                  Am6 H7 Em
 
-2017                                                             
+2017

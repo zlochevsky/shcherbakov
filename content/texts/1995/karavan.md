@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 58,
-        "textFinishAtLine": 68
+        "textFinishAtLine": 67
     }
 }
 Школяр в объятьях младой Гертруды                        Am F

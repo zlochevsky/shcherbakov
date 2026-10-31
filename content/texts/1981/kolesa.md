@@ -2,7 +2,7 @@
     "params": {
         "tonality": "G",
         "chordsStartAt": 51,
-        "textFinishAtLine": 33
+        "textFinishAtLine": 32
     }
 }
 Скрипят колёса под телегою моею.                   G    Em   G

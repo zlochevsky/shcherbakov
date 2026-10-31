@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 47,
-        "textFinishAtLine": 92
+        "textFinishAtLine": 95
     }
 }
 Такие школы есть в Москве,                    Dm
@@ -83,20 +83,20 @@
 трубач отбой сыграет, то есть никогда.        Em H7 Em
 
                                             ->Em
-                                              
+
                                               Em/C Em/H Em/A
                                               Em/G H7/F# Em
                                               Em C7
                                               Em Am
                                               F# Am H7 Em
-                                              
+
                                               (*)E7
                                               A Am
                                               Em H7 Em
                                               E7
                                               Am
                                               Em H7 Em
-                                              
+
 (*)последний куплет
 
 <2019>

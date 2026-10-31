@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 57,
-        "textFinishAtLine": 83
+        "textFinishAtLine": 84
     }
 }
                 Неугасающей памяти Владимира Высоцкого

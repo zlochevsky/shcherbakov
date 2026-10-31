@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 53,
-        "textFinishAtLine": 49
+        "textFinishAtLine": 47
     }
 }
 ,                    ,

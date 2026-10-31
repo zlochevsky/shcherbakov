@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 40,
-        "textFinishAtLine": 99
+        "textFinishAtLine": 100
     }
 }
 Я фланирую над миром                   Dm

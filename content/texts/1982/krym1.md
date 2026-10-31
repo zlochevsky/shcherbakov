@@ -5,7 +5,7 @@
     "params": {
         "tonality": "Gm",
         "chordsStartAt": 47,
-        "textFinishAtLine": 86
+        "textFinishAtLine": 87
     }
 }
                                               G  G7  Cm  G  Cm  G  D7  G  Gm

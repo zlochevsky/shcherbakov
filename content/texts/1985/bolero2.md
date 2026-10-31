@@ -2,7 +2,7 @@
     "params": {
         "tonality": "A",
         "chordsStartAt": 65,
-        "textFinishAtLine": 49
+        "textFinishAtLine": 48
     }
 }
                       Памяти А. Галича

@@ -5,7 +5,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 36,
-        "textFinishAtLine": 54,
+        "textFinishAtLine": 55,
         "editionOf": "maj"
     }
 }

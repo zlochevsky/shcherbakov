@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 33,
-        "textFinishAtLine": 63
+        "textFinishAtLine": 55
     }
 }
 ~                               вст.: F7 E7 Am
@@ -57,6 +57,6 @@
 Краше не может быть никак.      Cm C7/B
 Новый узор на патронташе.       C7 Fm
 Звёздное небо. Волчий мрак.     Fm/Ab Cm/G G ок.: Cm Fm
-                                Cm C7 Fm Cm/G Fm6 G#7 G7 Cm                               
-~                               
+                                Cm C7 Fm Cm/G Fm6 G#7 G7 Cm
+~
 1998

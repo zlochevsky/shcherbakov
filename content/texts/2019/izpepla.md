@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 40,
-        "textFinishAtLine": 47
+        "textFinishAtLine": 46
     }
 }
 Из пепла былого и дыма                 Dm Am A

@@ -2,7 +2,7 @@
     "params": {
         "tonality": "C#m",
         "chordsStartAt": 70,
-        "textFinishAtLine": 131
+        "textFinishAtLine": 134
     }
 }
  Уже не раз, говоря о том же, о чём сегодня,                         C#m

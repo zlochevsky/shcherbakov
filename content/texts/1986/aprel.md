@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 41,
-        "textFinishAtLine": 48
+        "textFinishAtLine": 49
     }
 }
 Секунды сделали своё,                   Dm

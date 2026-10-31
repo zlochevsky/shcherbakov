@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 45,
-        "textFinishAtLine": 56
+        "textFinishAtLine": 57
     }
 }
 Разве что залпом лишний кубок,                  Hm Hm/E# Hm/F# Em
@@ -61,4 +61,4 @@
 вовсе оно тогда не нужно.                       Em/C# Em Hm
 Пасмурно там всегда и вьюжно.                   G Hm/C# Hm
 	
-<2018>                               
+<2018>

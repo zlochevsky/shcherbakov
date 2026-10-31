@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 54,
-        "textFinishAtLine": 27
+        "textFinishAtLine": 26
     }
 }
 Тёплый дом, сытный стол, брудершафт с поцелуем -     Am Dm Am

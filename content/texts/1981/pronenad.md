@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 42,
-        "textFinishAtLine": 60
+        "textFinishAtLine": 61
     }
 }
 Куда мне деться, Бога ради,              Em Em6

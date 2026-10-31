@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 36,
-        "textFinishAtLine": 43
+        "textFinishAtLine": 45
     }
 }
-                                   Am  Am7 D   F   C   E7  Am
+~                                  Am  Am7 D   F   C   E7  Am
+~
 Ах, куда девалась нежность         Am
 и небрежная прилежность            Dm6
 соблюдения родства?                E7      Am

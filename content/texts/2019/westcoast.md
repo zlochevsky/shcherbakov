@@ -2,7 +2,7 @@
     "params": {
         "tonality": "A",
         "chordsStartAt": 61,
-        "textFinishAtLine": 39
+        "textFinishAtLine": 38
     }
 }
 Да, это Запад, лицо его и душа.                             A
@@ -39,7 +39,7 @@
 нормы осадков за год, ландшафты, запах и цвет.              F# F E
 
                                                             E E/H H7/A E/G# H7/F#
-                                                            
+
                                                             Em Hm C# C H
 
 2019

@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 50,
-        "textFinishAtLine": 54
+        "textFinishAtLine": 55
     }
 }
                   Михаил Щербаков

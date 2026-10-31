@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 50,
-        "textFinishAtLine": 100
+        "textFinishAtLine": 30
     }
 }
 От этих зимних зорь над миром синь такая,

@@ -5,7 +5,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 49,
-        "textFinishAtLine": 21,
+        "textFinishAtLine": 28,
         "editionOf": "kladbisc"
     }
 }

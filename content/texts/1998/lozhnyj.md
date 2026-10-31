@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 59,
-        "textFinishAtLine": 52
+        "textFinishAtLine": 41
     }
 }
 На причале ни души. Чаплин Чарли, не смеши.               Hm G Hm E
