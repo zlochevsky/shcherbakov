@@ -194,6 +194,30 @@ pre {
 	.strss {
 		color: #6b9aff;
 	}
+	/* белый фон: цвета страницы и ячеек (palette.css) и рамки ячеек на печать не идут */
+	html, body {
+		background: #fff !important;
+	}
+	body * {
+		background-color: transparent !important;
+		border-color: transparent !important;
+	}
+	/* режимы с аккордами: шрифт контейнера — как у строк (иначе строка выше, чем в «только текст»); аккорды — жирным */
+	.viewtype-side, .viewtype-above {
+		font-family: monospace;
+	}
+	.ch {
+		font-weight: bold;
+	}
+	/* заголовок песни — шрифтом и размером основного текста, заглавными, слева; до текста — одна пустая строка */
+	.view-container h1 {
+		font-family: monospace;
+		font-size: inherit;
+		line-height: 1.4;
+		text-transform: uppercase;
+		text-align: left;
+		margin: 0 0 1.4em;
+	}
 
 }
 

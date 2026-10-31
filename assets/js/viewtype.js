@@ -151,9 +151,10 @@ function positionChordsAbove() {
         // 1. Парсим позиции в массив чисел (1-based из Hugo)
         const positions = positionsStr.split(',').map(p => parseInt(p.trim(), 10));
 
-        // 2. Разбираем аккорды по пробелам
-        const chordText = span.textContent.trim().replace(/[|0-9]/g, '');
-        const chords = chordText.split(/\s+/).filter(c => c.length > 0);
+        // 2. Разбираем аккорды по пробелам; отбрасываем такты «|» и отдельно стоящие числа, цифры внутри аккорда (E7, G#5+) остаются
+        const chords = span.textContent.trim().split(/\s+/)
+            .map(c => c.replace(/^\|+|\|+$/g, ''))
+            .filter(c => c.length > 0 && !/^[0-9]+$/.test(c));
 
         // Проверяем совпадение количества
         if (chords.length !== positions.length) {

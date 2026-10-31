@@ -132,7 +132,14 @@
                         {{- end -}}
                         {{/* append text and chords to view arrays */}}
                         {{- $dataAttr := cond (ne $stressPositions "") (printf " data-positions=\"%s\"" $stressPositions) "" -}}
-                        {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $p1 (strings.Repeat $hidden " ") (cond $perf " " "") "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}{{/* пробел на месте снятой «~» — аккорды в колонке */}}
+                        {{/* «справа»: общий отступ строк текста снимается, как в «только текст» (колонка аккордов сдвигается вместе с ним);
+                             у «~»-строки без отступа вместо него не добавляется пробел на месте «~» */}}
+                        {{- $sp1 := $p1 -}}
+                        {{- $ppad := cond $perf " " "" -}}
+                        {{- if ne $textTrim "" -}}
+                            {{- if strings.HasPrefix $p1 $textTrim }}{{ $sp1 = strings.TrimPrefix $textTrim $p1 }}{{ else if $perf }}{{ $ppad = "" }}{{ end -}}
+                        {{- end -}}
+                        {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $sp1 (strings.Repeat $hidden " ") $ppad "</span><span class=\"ch\">" $p2 "</span><br>\n" | safeHTML) -}}{{/* пробел на месте снятой «~» — аккорды в колонке */}}
                         {{/* non stressed AboveView: replace multiple spaces */}}
                         {{- $p2Clean := $p2 -}}
                         {{- if eq $hasStress false -}}                                
@@ -166,7 +173,9 @@
                             {{- end -}}
                             {{- $stressLine = $adj -}}
                             {{- $hasStress = true -}}
-                            {{- $linesSide = $linesSide | append (print "<span class=\"strss\">" $adj "<br></span>\n" | safeHTML) -}}
+                            {{/* при снятом отступе строки текста строка ударений сдвигается влево на столько же — запятая над первой буквой уходит в поле */}}
+                            {{- $strssStyle := cond (ne $textTrim "") (printf " style=\"margin-left: -%dch\"" (len $textTrim)) "" -}}
+                            {{- $linesSide = $linesSide | append (print "<span class=\"strss\"" $strssStyle ">" $adj "<br></span>\n" | safeHTML) -}}
                         {{- else -}}
                             {{/* text-only line: trim trailing spaces, replace quotes then dashes, append to all views */}}
                             {{- $lineClean := replaceRE ` +$` "" $line -}}
@@ -180,7 +189,7 @@
                             {{- $lineClean = replaceRE ` - ` "&nbsp;— " $lineClean -}}
                             {{- $lineClean = replaceRE ` -$` "&nbsp;—" $lineClean -}}{{/* dash at line end */}}
                             {{- end -}}
-                            {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
+                            {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" (strings.TrimPrefix $textTrim $lineClean) "</span><br>\n" | safeHTML) -}}
                             {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                             {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" (strings.TrimPrefix $textTrim $lineClean) "</span>\n" | safeHTML) }}{{ end -}}
                         {{- end -}}
@@ -204,7 +213,7 @@
                         {{- $lineClean = replaceRE ` - ` "&nbsp;— " $lineClean -}}
                         {{- $lineClean = replaceRE ` -$` "&nbsp;—" $lineClean -}}{{/* dash at line end */}}
                         {{- end -}}
-                        {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
+                        {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" (strings.TrimPrefix $textTrim $lineClean) "</span><br>\n" | safeHTML) -}}
                         {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                         {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" (strings.TrimPrefix $textTrim $lineClean) "</span>\n" | safeHTML) }}{{ end -}}
                     {{- end -}}
