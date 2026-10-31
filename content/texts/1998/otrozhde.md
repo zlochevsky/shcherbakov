@@ -2,10 +2,9 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 43,
-        "textFinishAtLine": 37
+        "textFinishAtLine": 36
     }
 }
-~                                         (Hm)
 Не ниже, не строже                        Hm Em
 сегодняшний холод свистел, чем вчера.     Hm Em G7/F F#
 И завтра - всё то же.                     Hm Em

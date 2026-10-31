@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 54,
-        "textFinishAtLine": 26
+        "textFinishAtLine": 25
     }
 }
 Тёплый дом, сытный стол, брудершафт с поцелуем -     Am Dm Am
@@ -28,6 +28,5 @@
 
 Повисит, переждёт и вернётся с войсками,             Em Em6 G Hm
 и никто ему снова не скажет "долой!"                 C Hm F# Hm
-
 
 1985

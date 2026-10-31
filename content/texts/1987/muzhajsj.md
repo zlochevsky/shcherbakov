@@ -2,10 +2,9 @@
     "params": {
         "tonality": "Bm",
         "chordsStartAt": 51,
-        "textFinishAtLine": 23
+        "textFinishAtLine": 22
     }
 }
-                                                  Bm
 Пока не грянул горн и залп не прозвучал,          Bm  F/c  Bm/c#  F/c   | Bm  F/c  Bm/c#  F/c
 пока ни лавр, ни тёрн чела не увенчал,            C#m G#/d# C#m/e G#/d# | C#m G#/d# C#m/e G#/d#
 мужайся! Ведь даже кровь твоя на эшафоте          E        F#m          | C#m/c# g# e g# c# g# e g#
@@ -25,6 +24,6 @@
 О, вечный раб изгнаний, данник алтарей!           C#m G#/d# C#m/e G#/d# | C#m G#/d# C#m/e G#/d#
 Мужайся! Недалеко уже, на горизонте,              E        F#m          | C#m/c# g# e g# c# g# e g#
 горят огни несчастной родины твоей...             Am       G#           | C#m G#/d# C#m/e G#/d#
-                                                  C#m G#/d# C#m/e G#/d# | C#m G#/d# C#m/e G#/d# etc
+~                                                 C#m G#/d# C#m/e G#/d# | C#m G#/d# C#m/e G#/d# etc
 
 1987

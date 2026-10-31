@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 60,
-        "textFinishAtLine": 38
+        "textFinishAtLine": 41
     }
 }
 ~                                                          Em H7/F# Em/G
+~
 Изгнав меня, Натура выполнит кульбит -                     Adim Em H7 C E7/H Am
 не слишком хитрый, хоть и двойной, как всякий жест её.     Em/G F# H7 Em H7 Em H7/F# Em/G
 Один замолк, другой вступил. Антрактов нет                 Adim Em H7 C E7/H Am
@@ -40,7 +41,9 @@
 Вираж, ещё вираж... Вольно ж ему                           Eb C H Em H7/F# Em/G
 
 чертить круги, начавшись там, где жизнь моя                Adim Em H7 C E7/H Am
-переломилась, как статуэтка.                               Em/G F# H Am Em H7 Em Am6 Em H7 Em
+переломилась, как статуэтка.                               Em/G F# H7
+~
+~                                                          Am Em H Em Am Em H Em
 
 1995
 

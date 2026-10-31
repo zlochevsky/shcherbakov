@@ -56,5 +56,5 @@
 Спрошу себя: ведь ты о том? Отвечу: нет, не только.                       Em G7/F Hm/F# Hm/D Em6 F# Hm
 
 ~                                                                         Hm G Hm Em Hm Em
-                                                                          G7/F F# Hm
+~                                                                         G7/F F# Hm
 2013

@@ -3,8 +3,6 @@
         "/texts/1981/maj.html"
     ],
     "params": {
-        "tonality": "Hm",
-        "chordsStartAt": 36,
         "textFinishAtLine": 55,
         "editionOf": "maj"
     }
