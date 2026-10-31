@@ -158,6 +158,18 @@ pre {
 .txt, .ch, .strss {
 	font-family: monospace;
 }
+/* одна высота строки во всех режимах: в «справа»/«над строкой» пустая строка — голый <br> в div с обычным шрифтом
+   (line-height: normal у Times меньше, чем у моноширинного), и промежутки между строфами при переключении менялись */
+.viewtype-text pre, .viewtype-side, .viewtype-above {
+	line-height: 1.4;
+}
+.view-container h1 {
+	line-height: normal;
+}
+/* моноширинные строки в div с обычным шрифтом по базовой линии раздвигали строку на ~1px — по верху строки */
+.viewtype-side .txt, .viewtype-side .ch, .viewtype-above .txt, .viewtype-above .ch {
+	vertical-align: top;
+}
 
 @media screen {
 	.ch {
@@ -213,7 +225,21 @@ pre {
 		margin: 0 .3em 0 0;
 
 	}
-
+	/* «только текст» на узком экране: длинная строка переносится, продолжение — с висячим отступом;
+	   строка — inline-block на всю ширину (блок из catalogue.css давал лишнюю пустую строку после каждой) */
+	.viewtype-text pre {
+		white-space: pre-wrap;
+	}
+	.viewtype-text .txt {
+		display: inline-block;
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 1.5em;
+		text-indent: -1.5em;
+	}
+	.viewtype-text .txt .year {
+		text-indent: 0;
+	}
 
 }
 
