@@ -53,6 +53,21 @@
     {{- end -}}
     {{/* chords start position (clamped to 0) */}}
     {{- $pos := int ( math.Max 0 (sub (int $pageParams.chordsStartAt)  1) ) -}}
+    {{/* общий отступ строк текста (1–2 пробела под запятые ударений в первой колонке) — в режиме «только текст» снимается;
+         строки «~», строки ударений и пустые не считаются, лесенки и отступы рефренов сохраняют сдвиг относительно текста */}}
+    {{- $textIndent := 99 -}}
+    {{- range $k, $v := $lines -}}
+        {{- if and (lt $k $textFinishAtLine) (not (strings.HasPrefix $v "~")) -}}
+            {{- $t := $v -}}
+            {{- if and (gt $pos 0) (gt (len $v) $pos) }}{{ $t = substr $v 0 $pos }}{{ end -}}
+            {{- if and (ne (trim $t " ") "") (not (findRE `^[\s,]*,[\s,]*$` $t)) (not (findRE `^\s*<?\s*\d{4}(?:\s*[,–-]\s*\d{2,4})*(?:\s*>)?(?:\s{2,}.*|\s*)$` $t)) -}}{{/* и не строка года */}}
+                {{- $n := sub (len $t) (len (strings.TrimLeft " " $t)) -}}
+                {{- if lt $n $textIndent }}{{ $textIndent = $n }}{{ end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $textTrim := "" -}}
+    {{- if and (ge $textIndent 1) (le $textIndent 2) }}{{ $textTrim = strings.Repeat $textIndent " " }}{{ end -}}
     {{- range $k, $v := $lines -}}
         {{- $line := $v -}}
         {{/* "~" в начале строки текста — строка исполнения (повтор, вокализ, подпись): видна в режимах с аккордами,
@@ -129,7 +144,7 @@
                         {{- else -}}
                         {{- $linesAbove = $linesAbove | append (printf "<span class=\"ch\"%s>%s</span><br>\n<span class=\"txt\">%s</span><br>\n" $dataAttr $p2Clean (strings.TrimRight " " $p1) | safeHTML) -}}
                         {{- end -}}
-                        {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" $p1 "</span>\n" | safeHTML) }}{{ end -}}
+                        {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" (strings.TrimPrefix $textTrim $p1) "</span>\n" | safeHTML) }}{{ end -}}
                     {{- else -}}
                         {{- if and (findRE `^[\s,\|0-9]+$` $line) (findRE `,` $line) (not (findRE `\d{4}` $line)) -}}
                             {{/* save stress line for next iteration, add to side view */}}
@@ -167,7 +182,7 @@
                             {{- end -}}
                             {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                             {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
-                            {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) }}{{ end -}}
+                            {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" (strings.TrimPrefix $textTrim $lineClean) "</span>\n" | safeHTML) }}{{ end -}}
                         {{- end -}}
                     {{- end -}}
                 {{- else -}}
@@ -191,7 +206,7 @@
                         {{- end -}}
                         {{- $linesSide = $linesSide | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
                         {{- $linesAbove = $linesAbove | append (print "<span class=\"txt\">" $lineClean "</span><br>\n" | safeHTML) -}}
-                        {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" $lineClean "</span>\n" | safeHTML) }}{{ end -}}
+                        {{- if not $perf }}{{ $linesText = $linesText | append (print "<span class=\"txt\">" (strings.TrimPrefix $textTrim $lineClean) "</span>\n" | safeHTML) }}{{ end -}}
                     {{- end -}}
                 {{- end -}}
             {{- end -}}
