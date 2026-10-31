@@ -2,7 +2,7 @@
     "params": {
         "tonality": "D",
         "chordsStartAt": 64,
-        "textFinishAtLine": 54
+        "textFinishAtLine": 53
     }
 }
 Когда не долг бы владеть собою,                                D B7 D B7 D

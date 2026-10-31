@@ -1,7 +1,6 @@
 {
     "params": {
         "tonality": "",
-        "chordsStartAt": 45,
         "textFinishAtLine": 32
     }
 }

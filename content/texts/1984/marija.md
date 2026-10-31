@@ -24,7 +24,7 @@
 Завещание я написал.                       C E7 Am Am6/F#
 О, Мария! Грустны мои замыслы,             Em Cm G/G G/F#
 но грустны и твои небеса.                  Am Em H7 C
-~                                          Am Em Am Em
-                                           Am Em H7 Em
 
+~                                          Am Em Am Em
+~                                          Am Em H7 Em
 1984

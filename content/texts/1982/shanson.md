@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Gm",
         "chordsStartAt": 55,
-        "textFinishAtLine": 47
+        "textFinishAtLine": 48
     }
 }
-~                                                      Gm A7 Cm6 D7 Gm A7 D7
+~                                                     Gm A7 Cm6 D7 Gm A7 D7
+~
 Вершит народ дела свои, пройдохи ищут славы,          Gm Cm Gm D7
 пророки врут, поэты пьют, богатства копит знать.      Gm Cm F B
 Стоит над миром год Змеи, все злобны как удавы,       Ab Gm D7 Eb

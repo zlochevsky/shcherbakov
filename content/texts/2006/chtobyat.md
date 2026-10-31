@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Bm",
         "chordsStartAt": 60,
-        "textFinishAtLine": 45
+        "textFinishAtLine": 44
     }
 }
 ~                                                          Bm
@@ -48,6 +48,5 @@
 Но самолёт не покупай.                                     F Bm
 
 ~                                                          Gm Bm Gm Bm Gm
-~
 2006
 

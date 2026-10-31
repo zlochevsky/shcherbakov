@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 60,
-        "textFinishAtLine": 28
+        "textFinishAtLine": 27
     }
 }
 Мы, жители социума, не могущего без войны,                 Am F Am6/F# F
@@ -31,5 +31,4 @@
 и бросили тебя одного умирать в стране допотопноподобной.  Em Em6 Hm Gm F# Em
 
 ~                                                          Em6 Hm Gm F# Hm6/D
-
 1991

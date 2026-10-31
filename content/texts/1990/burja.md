@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 45,
-        "textFinishAtLine": 38
+        "textFinishAtLine": 39
     }
 }
-~(ария)
+~<i>(ария)</i>
+~
 Конечно - гибель поначалу                   Dm E7/G# Gm6
 страшит. Тем паче с непривычки.             Dm/F Gm6/E A7
 Но мы же вас предупреждали                  Cm D7

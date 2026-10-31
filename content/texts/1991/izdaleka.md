@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 59,
-        "textFinishAtLine": 33
+        "textFinishAtLine": 32
     }
 }
 Издалека вернувшись туда, где не был долго,               Hm11 C#m
@@ -36,5 +36,4 @@
 ~                                                         Hm11 C#m
 ~                                                         Dm9 Em
 ~                                                         Dm9 Em
-
 1991

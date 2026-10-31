@@ -2,11 +2,12 @@
     "params": {
         "tonality": "A",
         "chordsStartAt": 50,
-        "textFinishAtLine": 65
+        "textFinishAtLine": 66
     }
 }
 ~                                                A6 Dm E7 A Ebdim Dm E7
 ~                                                A6 Dm E7 A Ebdim Dm E7
+~
 На приволье - в здоровом теле                    A6
 крепкий дух и порядок древний,                   Hm
 но нельзя же, на самом деле,                     E7

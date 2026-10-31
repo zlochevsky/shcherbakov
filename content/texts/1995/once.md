@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 53,
-        "textFinishAtLine": 47
+        "textFinishAtLine": 46
     }
 }
 ,                    ,
@@ -50,5 +50,4 @@
 ~ and so we shall get rid of them all.
 ~ To this hearty wish let each man take his dish,
 ~ and drink, drink, drink till he fall.
-
  1995

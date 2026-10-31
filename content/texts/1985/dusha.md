@@ -2,7 +2,7 @@
     "params": {
         "tonality": "D",
         "chordsStartAt": 42,
-        "textFinishAtLine": 29
+        "textFinishAtLine": 28
     }
 }
 Оставлю всех, пройду повсюду,            D G
@@ -31,6 +31,5 @@
 в грязи чиста, в беде честна.            A7 Dm (D7)
 Всё так же ей горька чужбина                       Gm Dm
 и сладок дым Отечества.                  A7 D
-
 
 1985

@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 46,
-        "textFinishAtLine": 41
+        "textFinishAtLine": 40
     }
 }
 Кругом туман, впереди туман,                 Am
@@ -42,7 +42,6 @@
     Эй-эй, к хлопотной доле своей            C     Em
     веселей приноравливайся!                 F  G  C  G  C
 
-                                             G C G C G C
-                                             E7 Am E7 Am
-
+~                                            G C G C G C
+~                                            E7 Am E7 Am
 1981, 1987

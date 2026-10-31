@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 77,
-        "textFinishAtLine": 56
+        "textFinishAtLine": 57
     }
 }
 ,                                               ,
@@ -59,7 +59,8 @@
 
 И что же слышится им в ответ?                                               A#m5-7
 ~Лалалалала....                                                             F#m A#m5-7 F#m A#m5-7
-                                                                            F#m A#m5-7 F#m A#m5-7
+
+~                                                                           F#m A#m5-7 F#m A#m5-7
 1996
                                                                             Нотировка упрощённая,
                                                                             по изданию «Собрание песен»

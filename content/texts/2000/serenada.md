@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 36,
-        "textFinishAtLine": 54
+        "textFinishAtLine": 55
     }
 }
 ~                                   H7 Em Hm Em F# Hm Em F# Hm
+~
 Горный озон прохладной тучей        Hm A
 гонит с закатом жар дневной.        Am Hm
 Вот ведь какой досадный случай.     Hm A

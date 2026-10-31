@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 50,
-        "textFinishAtLine": 59
+        "textFinishAtLine": 58
     }
 }
 ~                                                A7 D Em Hm F#5+ F# Hm
@@ -62,7 +62,6 @@
 Пора, пора. Пока, пока.                          Hm/F# Em6 Hm
 
 ~                                                H7 Em G7/F Hm/F# Hm6/G# G Hm/F# Em5- Hm
-~
 2012
                                                  Нотировка по исполнению 2013 года
                                                  (диск <a href="../../Disks/chmuzyka2.html">'Чужая музыка и не только'. Часть 2</a>).

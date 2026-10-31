@@ -2,7 +2,7 @@
     "params": {
         "tonality": "C",
         "chordsStartAt": 51,
-        "textFinishAtLine": 21
+        "textFinishAtLine": 22
     }
 }
 Как ни горды мы, как ни ранимы,                   C Em C7 Fm
@@ -24,5 +24,6 @@
 там, над стремниной, стань и замри.               Dm Fm G7
 Сколько ни длится тема полёта,                    A#m C7 Fm
 всё возвратится к теме Земли.                     G#m D# G7 C
-                                                  Fm Dm7 D7 G7 C7+
+
+~                                                 Fm Dm7 D7 G7 C7+
 1987

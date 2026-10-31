@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Bm",
         "chordsStartAt": 60,
-        "textFinishAtLine": 50
+        "textFinishAtLine": 49
     }
 }
 ~                                                          Bm Bm/Db Bm/C Bm (bis)
@@ -53,7 +53,6 @@
 ~                                                          Bm Bm/Db-C Bm
 ~                                                          Hm Hm/D-C# Hm
 ~                                                          Bm Bm/Db-C Bm
-~
 2014
                                                            Попытка нотировки по исполнению 2014 года.
 

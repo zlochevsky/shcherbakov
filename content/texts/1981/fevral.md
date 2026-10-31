@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 40,
-        "textFinishAtLine": 67
+        "textFinishAtLine": 66
     }
 }
 Ах, оставьте вашу скуку!               Dm E7
@@ -69,6 +69,5 @@
 ~я растаю, пролетая,                   F# Fm
 ~я дарю вам, золотая,                  C# Bm
 ~восемнадцатый февраль.                C7 Fm
-
 
 1981

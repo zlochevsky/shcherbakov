@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 43,
-        "textFinishAtLine": 60
+        "textFinishAtLine": 59
     }
 }
 ~                                         A7 D Em Hm F#5+ F# Hm
@@ -61,15 +61,14 @@
            , ,           ,
 насущный хлеб на каждый день.             Hm/F# Em6 Hm
 
-
 ~                                         H7 Em G7/F Hm/F# Hm6/G# G Hm/F# Em5- Hm
 2009
 
 Нотировка упрощённая по изданию &#171;Собрание песен&#187;
 и исп. 2013 года (диск <a href="../../Disks/chmuzyka2.html">&#171;Чужая музыка и не только. Часть 2&#187;</a>).
-	
+
 Аккорды.
-	
+
 
   Hm6/G#           G7/F            Em6
    III              I               II

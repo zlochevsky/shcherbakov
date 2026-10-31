@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Gm",
         "chordsStartAt": 50,
-        "textFinishAtLine": 27
+        "textFinishAtLine": 26
     }
 }
 И спокойный в душе, и тверёзый,                  Gm A7 D7 Gm
@@ -29,6 +29,5 @@
 растеряв и почёт и барыш,                        Cm Gm A7 D7 Gm
 я качаюсь, как во поле верба,                    A7 D7 Gm
 но вдобавок шумлю, как камыш.                    Cm Gm A7 D7 D# Cm6 D7 Gm
-
 
 1985

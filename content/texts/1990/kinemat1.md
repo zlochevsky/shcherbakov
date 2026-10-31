@@ -2,12 +2,12 @@
     "params": {
         "tonality": "C",
         "chordsStartAt": 64,
-        "textFinishAtLine": 42
+        "textFinishAtLine": 41
     }
 }
-                                                               C Em C7 F Fm
-                                                               C Gdim Ebdim G7 Fm
-
+~                                                              C Em C7 F Fm
+~                                                              C Gdim Ebdim G7 Fm
+~
 Не потому ли, что пыль рутины любой ландшафт обращает в ад,    Cm Ab
 мы разорвали чертёж Техаса и упразднили коней,                 Cm F#dim F
 переместив горизонт картины в гораздо менее жёлтый штат,       Fm Cm Fm
@@ -43,7 +43,6 @@
 мелькает в кадре... И свищет ветер, и, удаляясь, молчит земля, Fm C Gdim
 и что бы ни было впредь - да здравствует наша Америка, Джим!.. Ebdim G7 C
 
-                                                               C Em C7 F Fm
-                                                               C Gdim Ebdim G7 C
-
+~                                                              C Em C7 F Fm
+~                                                              C Gdim Ebdim G7 C
 1990

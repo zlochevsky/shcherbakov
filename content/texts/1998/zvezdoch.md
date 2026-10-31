@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 66,
-        "textFinishAtLine": 42
+        "textFinishAtLine": 43
     }
 }
-~                                                                Am
+~                                                                (Am)
+~
 Пернатым легче. Наук не знай.                                    Dm/H E7/G# Am Am/C Dm/H E7/G# Am Am/C
 Воркуй да каркай. Тешься натуральной снедью.                     Dm/H E7/G# A7 Dm Dm F7/Eb E Am
 А я сижу пред звёздной картой.                                   Dm/H E7/G# Am Am/C Dm/H E7/G# Am Am/C

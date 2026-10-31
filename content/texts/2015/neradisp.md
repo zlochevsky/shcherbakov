@@ -2,7 +2,7 @@
     "params": {
         "tonality": "G#m",
         "chordsStartAt": 72,
-        "textFinishAtLine": 45
+        "textFinishAtLine": 44
     }
 }
 ~                                                                      C#m G#m D#7 G#m
@@ -48,5 +48,4 @@
 мы купили за сорок восемь копеек или рублей.                           C#m G#m D#7 G#m
 
 ~                                                                      C#m G#m D#7 G#m (bis)
-~
 <2015>

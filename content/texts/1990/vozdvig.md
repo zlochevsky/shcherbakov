@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 48,
-        "textFinishAtLine": 80
+        "textFinishAtLine": 81
     }
 }
 Позабывши - где я, кто я,                      Hm
@@ -82,6 +82,7 @@
 - Памятник, зачем тебе такие большие зубы?     G Em
 
 Не даёт ответа...                              Em
-                                               G H7/F# Em
+
+~                                              G H7/F# Em
 1990
 

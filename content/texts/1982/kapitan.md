@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 47,
-        "textFinishAtLine": 53
+        "textFinishAtLine": 54
     }
 }
-                                              Am Em H7 Em Am Em H7 Em
+~                                             Am Em H7 Em Am Em H7 Em
+~
 Всё куда-то рвался, дерзал, метался,          C D7 G Em
 не укрощался, а укрощал.                      Am H7 C E7
 Долгие годы желал свободы                     Am D7 G F

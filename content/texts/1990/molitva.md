@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Gm",
         "chordsStartAt": 40,
-        "textFinishAtLine": 37
+        "textFinishAtLine": 38
     }
 }
 ~                                              Gm6
+~
 Кто бы и где бы я ни был,                      Cm Cm6
 в чьей бы ни тлел оболочке,                    Gm Gm6
 всюду - я думаю только                         Dm Dm6

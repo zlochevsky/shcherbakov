@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 61,
-        "textFinishAtLine": 42
+        "textFinishAtLine": 43
     }
 }
-~                                                           Am
+~                                                           Am A7/C# Dm Am F7/D# E7 Am
+~
 Я подарил тебе прескверную страну, о мой герой!             C#m Am
 Она - как контурная карта, и по ней - горизонталь           C#m Am
 наискосок... Другой державы не имел я под рукой.            G#m E/G#

@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Ebm",
         "chordsStartAt": 40,
-        "textFinishAtLine": 35
+        "textFinishAtLine": 38
     }
 }
 День-деньской жара в Москве.           Ebm B7 H Eb7
@@ -15,27 +15,30 @@
 
 Там - ремонт, разбой, погром.          Ebm B7 H Eb7
 Он не кончится добром.                 Abm6 Ebm B7 Ebm
-                                       Abm6 Ebm B7 Ebm
 
+~                                      Abm6 Ebm B7 Ebm
+~
 Штурм, аврал, двойной тариф.           Em H7 C E7
 Чем, Судьба, не твой мотив?            Am6 Em H7 Em
 ~Чем, Судьба, не твой мотив?           Am6 Em H7 Em
 
 День-деньской - сумбур, ходьба.        Em H7 C E7
 Чем не твой напев, Судьба?             Am6 Em H7 Em
-                                       Am6 Em H7 Em
 
+~                                      Am6 Em H7 Em
+~
 Зной в Москве, квартал в лесах.        Fm C7 C# F7
 Весь июль прошёл в слезах.             Bm6 Fm C7 Fm
 ~Весь июль прошёл в слезах.            Bm6 Fm C7 Fm
 
 Дни мои, цветные сны!                  F#m C#7 D F#7
 Никому вы не нужны.                    Hm6 F#m C#7 F#m
-                                       Hm6 F#m C#7 F#m
 
+~                                      Hm6 F#m C#7 F#m
+~
 Отвези меня на край (земли),           F#m C#7 D F#7
 шаткий мой седьмой трамвай.            Hm6 F#m C#7 F#m
 ~Шаткий мой седьмой трамвай.           Hm6 F#m C#7 F#m
-                                       Hm6 F#m C#7 F#m
 
+~                                      Hm6 F#m C#7 F#m
 1998

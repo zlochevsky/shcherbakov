@@ -2,11 +2,12 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 43,
-        "textFinishAtLine": 41
+        "textFinishAtLine": 42
     }
 }
 ~                                         Dm/F Gm6/E Dm/F Gm6/E
 ~                                         Ebdim Dm B Dm/A A7
+~
 Дрожь унялась. Казнь миновала.            Dm/F Gm6/E Dm/F Gm6/E
 Он далеко. Горше не будет.                Dm/F Gm6/E Dm/F Gm6/E
 Ты молода. Время целебно.                 Dm/F Gm6/E Dm/F Gm6/E

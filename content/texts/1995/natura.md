@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 60,
-        "textFinishAtLine": 41
+        "textFinishAtLine": 40
     }
 }
 ~                                                          Em H7/F# Em/G
@@ -42,8 +42,7 @@
 
 чертить круги, начавшись там, где жизнь моя                Adim Em H7 C E7/H Am
 переломилась, как статуэтка.                               Em/G F# H7
-~
-~                                                          Am Em H Em Am Em H Em
 
+~                                                          Am Em H Em Am Em H Em
 1995
 

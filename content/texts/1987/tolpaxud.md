@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 59,
-        "textFinishAtLine": 16
+        "textFinishAtLine": 17
     }
 }
 Ты - художник, мы - толпа, ты умён, толпа глупа.          F# Hm A7 D C Hm F# Hm
@@ -19,5 +19,6 @@
 мы тебе со всей любовью бюст воздвигнем во весь рост!     Hm A7 D C Hm F# Hm
 Но когда ненастным днём ты согнёшься под крестом,         Hm Em Hm Em
 мы пойдём рубить терновник и венец тебе сплетём.          H7 Em Hm F#
-                                                          Hm A7 D C Hm F# Hm
+
+~                                                         Hm A7 D C Hm F# Hm
 1987

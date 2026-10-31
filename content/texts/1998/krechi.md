@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 67,
-        "textFinishAtLine": 39
+        "textFinishAtLine": 40
     }
 }
 ~                                                                 Am
@@ -41,6 +41,7 @@
 то-то собьюсь я при встрече! То-то же я                           Dm Am
 скажу сам себе: шире глаза, горбун, это речь твоя.                G Am
 Улыбнись ей скорей, она не надолго.                               G Am
+
 ~                                                                 G Am
-                                                                  G Am
+~                                                                 G Am
 1998

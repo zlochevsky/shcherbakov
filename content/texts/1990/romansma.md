@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Em",
         "chordsStartAt": 53,
-        "textFinishAtLine": 39
+        "textFinishAtLine": 40
     }
 }
 ~                                                   Em
+~
 Порою давней, хмельной да резвой,                   Am Em
 твои считал я имена, но бросил счёт.                H7 Em
 Звалась ты Мартой, звалась Терезой...               Am Em

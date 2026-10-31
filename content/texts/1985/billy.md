@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Cm",
         "chordsStartAt": 57,
-        "textFinishAtLine": 45
+        "textFinishAtLine": 47
     }
 }
 Где-то в горах высоких или в песках далёких -           Cm Fm
@@ -17,8 +17,7 @@
     Good-bye, good-bye my home.                         Cm
     Good-bye, good-bye my mummy.                        Fm
     Good-bye, good-bye my baby.                         Cm
-    Good-bye my love.                                   D7   G   Cm
-                                                        A7
+    Good-bye my love.                                   D7   G   Cm A7
 
 Сколько деньков проплыло, сколько годков пробило,       Dm Gm
 сколько красоток было - не сосчитать.                   Dm E7 A Dm A
@@ -32,8 +31,7 @@
     Good-bye, good-bye my home.                         Dm
     Good-bye, good-bye my mummy.                        Gm
     Good-bye, good-bye my baby.                         Dm
-    Good-bye my love.                                   E7 A Dm
-                                                        H7
+    Good-bye my love.                                   E7 A Dm H7
 
 Где вы, подружки Билли? Зря вы его любили.              Em Am
 Билли лежит в могиле, плачьте навзрыд.                  Em F#7 H Em H

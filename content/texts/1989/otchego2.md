@@ -2,14 +2,15 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 55,
-        "textFinishAtLine": 74
+        "textFinishAtLine": 76
     }
 }
          <i>Отчего в России мало авторских талантов?
                                          (Карамзин)</i>
-~        2
-                                                      Dm Dm6 Am Dm Am E7
+        2
 
+~                                                     Dm Dm6 Am Dm Am E7
+~
 Призвав решительность и строгость,                         Am
 язык бахвальству отрубив,                             E7 Am
 я признаю свою убогость                               E7 Am
@@ -75,6 +76,7 @@
 в экспрессе, едущем на юг...                               Hm
 Ах, отчего в России мало                                   F#7
 талантов авторских, мой друг?                         G Hm
-                                                      Em Em6 Hm Em
-                                                      G7/F Hm F# Hm
+
+~                                                     Em Em6 Hm Em
+~                                                     G7/F Hm F# Hm
 1989

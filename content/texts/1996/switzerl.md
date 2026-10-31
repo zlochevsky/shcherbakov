@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 39,
-        "textFinishAtLine": 40
+        "textFinishAtLine": 41
     }
 }
 Чуть свет на днях Борей пронзил                  Hm G
@@ -22,7 +22,7 @@
 и юн. Так смерть - дохнёт, мелькнёт -            H7 Em C Am
 и нет её. Опять июнь.                            Em H7 E
 ~                                     (g# a g# g# a g#) Em (g a g g a g)
-~
+
 ~                                     голос Hm (f# f# g f#
 ~                                                  d f# g f#
 ~                                                  d f# a g#
@@ -32,7 +32,7 @@
 ~                                             F# c# b
 ~                                             E h)
 ~                                     гитара (g# a g# g# a g#) Em (g a g g a g)
-
+~
 В горах пасут овец. И я                         Hm G
 не прочь взойти туда, взглянуть:                Em Hm F#
 ужель и впрямь Гельвеция                        H7 Em C Am
@@ -43,5 +43,6 @@
 бичом? Я не имел в виду                         Em Hm F#
 вреда, отнюдь. Хотел я лишь                     H7 Em C Am
 спросить, куда идут стада.                      Em H7 E
-                                      (g# a g# g# a g#) Em (g a g g a g)
+
+~                                     (g# a g# g# a g#) Em (g a g g a g)
 1996

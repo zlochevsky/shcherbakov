@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 44,
-        "textFinishAtLine": 20
+        "textFinishAtLine": 22
     }
 }
 Я чашу свою осушил до предела,             Hm Em Em6
@@ -13,8 +13,9 @@
 прекрасной мечтой обуян.                   Hm/F# F# G Am6 H7
 Мой путь состоялся, река на исходе,        Em G7/F# Hm/F# G Em6
 и виден вдали океан.                       Hm/F# F# G H7/F#
-                                           Em Em6 Hm/F# F# Hm
 
+~                                          Em Em6 Hm/F# F# Hm
+~
 Прости, моя радость, прости, моё счастье,  Hm Em Em6
 ещё высоки небеса,                         Hm B F# Hm A7
 но там вдалеке, где клубится ненастье,     D Em C
@@ -23,5 +24,6 @@
 о том, что исчезнет во мгле.               Hm/F# F# G Am6 H7
 Пока не стемнело, хотя б на мгновенье      Em G7/F# Hm/F# G Em6
 останься со мной на Земле.                 Hm/F# F# G H7/F#
-                                           Em Em6 Hm/F# F# Hm
+
+~                                          Em Em6 Hm/F# F# Hm
 1986

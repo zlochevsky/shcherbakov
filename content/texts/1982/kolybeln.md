@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 41,
-        "textFinishAtLine": 45
+        "textFinishAtLine": 46
     }
 }
-                                        Dm D7 Gm B7 Dm A7 Dm A7
+~                                       Dm D7 Gm B7 Dm A7 Dm A7
+~
 Спит Гавана, спят Афины,                Dm G B
 спят осенние цветы.                     Dm A7 Dm | A7
 В Чёрном море спят дельфины,            Dm G B

@@ -2,7 +2,7 @@
     "params": {
         "tonality": "A",
         "chordsStartAt": 66,
-        "textFinishAtLine": 55
+        "textFinishAtLine": 54
     }
 }
 ~                                                                A(V) Am(V) Em(III) Hm/D H7/A Em6/C#

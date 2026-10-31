@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 45,
-        "textFinishAtLine": 43
+        "textFinishAtLine": 44
     }
 }
 Когда в хлеву обезьяньем                    Dm/H Am
@@ -44,8 +44,9 @@
 берись, чуть что, за ружьё.                 Dbm/B Abm
 А что я с детства безумец -                 Dbm/B Abm
 так это дело моё.                           Dbm/B Abm
-                                            Ebm/C Bm Ebm/C Bm
-                                            Fm/D Cm Fm/D Cm
+
+~                                           Ebm/C Bm Ebm/C Bm
+~                                           Fm/D Cm Fm/D Cm
 1994
 
 

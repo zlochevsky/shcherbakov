@@ -2,10 +2,11 @@
     "params": {
         "tonality": "Hm",
         "chordsStartAt": 54,
-        "textFinishAtLine": 29
+        "textFinishAtLine": 30
     }
 }
-                                                     Hm
+~                                                    (Hm)
+~
 Всё скрылось, отошло, и больше не начнётся.          Hm Em6
 Роман и есть роман. В нём всё как надлежит.          Em F# Hm
 Кибитка вдаль бежит, пыль вьётся, сердце бьётся.     Em6

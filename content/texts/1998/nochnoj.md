@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Am",
         "chordsStartAt": 57,
-        "textFinishAtLine": 46
+        "textFinishAtLine": 45
     }
 }
 ~                                                       Am Am/C Dm Dm/F Am Am/C Dm Dm/F

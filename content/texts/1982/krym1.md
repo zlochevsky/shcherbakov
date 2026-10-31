@@ -5,10 +5,11 @@
     "params": {
         "tonality": "Gm",
         "chordsStartAt": 47,
-        "textFinishAtLine": 87
+        "textFinishAtLine": 88
     }
 }
 ~                                             G  G7  Cm  G  Cm  G  D7  G  Gm
+~
 Ой, ну право же, провал у пилигрима:          Gm
 ой, везде он побывал, кроме Крыма,            G      G7     Cm
 ой, полмира исходил, ой, полсвета,            Gm

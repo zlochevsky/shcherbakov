@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Cm",
         "chordsStartAt": 52,
-        "textFinishAtLine": 31
+        "textFinishAtLine": 30
     }
 }
 А нас ещё осудят, а мы ещё ответим,                Cm F Fm
@@ -33,6 +33,5 @@
 пока своей любовью нас дарят небеса.               Dm F E7 Am
 ~                                                  Cm Ebm Hm F#m
 ~                                                  Dm Am Dm6 Am Dm6 A
-
 
 1985

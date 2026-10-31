@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Gm",
         "chordsStartAt": 50,
-        "textFinishAtLine": 36
+        "textFinishAtLine": 35
     }
 }
 ~                                                Gm(4d) D7(4d)/F# Gm(4d) Cm Gm(4d) D7(4d)/F# Gm(4d)/B D7(4d)/F#
@@ -15,9 +15,9 @@
 мыло скоро будет в цене.                         Gm D7 Eb7
 Скоро всё иначе будет, чем было.                 Gm Gm7+ Gm7 Eb7
 А меня убьют на войне.                           Gm D7/F# Gm
-~
-~                                                Gm(4d) D7(4d)/F# Gm(4d) Cm Gm(4d) D7(4d)/F# Gm(4d)/B D7(4d)/F#
 
+~                                                Gm(4d) D7(4d)/F# Gm(4d) Cm Gm(4d) D7(4d)/F# Gm(4d)/B D7(4d)/F#
+~
 Не зевай, историк, сочиняй книгу,                Gm D7/F# Gm Cm
 наблюдай вращенье Земли.                         Gm D7/F# Gm D7/F#
 Каждому столетью, году, дню, мигу,               Gm F B Ab
@@ -26,9 +26,9 @@
 цезарь спит и стонет во сне.                     Gm D7 Eb7
 Скоро станет ясно, кто кого свергнет.            Gm Gm7+ Gm7 Eb7
 А меня убьют на войне.                           Gm D7/F# Gm
-~
-~                                                Gm(4d) D7(4d)/F# Gm(4d) Cm Gm(4d) D7(4d)/F# Gm(4d)/B D7(4d)/F#
 
+~                                                Gm(4d) D7(4d)/F# Gm(4d) Cm Gm(4d) D7(4d)/F# Gm(4d)/B D7(4d)/F#
+~
 Смейся, Левконоя, разливай вина,                 Gm D7/F# Gm Cm
 знать, что будет, ты не вольна.                  Gm D7/F# Gm D7/F#
 Можешь мне поверить, по всему видно,             Gm F B Ab
@@ -37,7 +37,6 @@
 Думай о сегодняшнем дне.                         Gm D7 Eb7
 Я ж, хотя и знаю, но скажу только,               Gm Gm7+ Gm7 Eb7
 что меня убьют на войне.                         Gm   D7/F#    Gm
-~
-~                                                Gm(4d) D7(4d)/F# Gm(4d) Cm Gm(4d) D7(4d)/F# Gm(4d)/B D7(4d)/F#
 
+~                                                Gm(4d) D7(4d)/F# Gm(4d) Cm Gm(4d) D7(4d)/F# Gm(4d)/B D7(4d)/F# Gm
 1987

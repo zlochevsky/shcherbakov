@@ -2,7 +2,7 @@
     "params": {
         "tonality": "C",
         "chordsStartAt": 67,
-        "textFinishAtLine": 52
+        "textFinishAtLine": 53
     }
 }
 Это я, а не ты, соглядатай, и не прочий какой-либо вне.           C C/F# C/F C
@@ -46,12 +46,13 @@
 сей бред.
 А спасётся ль затем от пожара эта рукопись, право, Бог весть.     Em C7/E Em
 Почему бы и нет?                                                  C
-                                                                  C C/F# C/F C
-                                                                  C C/F# C/F C
-                                                                  Em C7/E Em
-                                                                  Em C7/E Em
-                                                                  C
 
+~                                                                 C C/F# C/F C
+~                                                                 C C/F# C/F C
+~                                                                 Em C7/E Em
+~                                                                 Em C7/E Em
+~                                                                 C
+~
 Это я, чьи капризные губы всё никак не закончат куплет.           C C/F# C/F C
 Почему бы и нет, почему бы, почему, почему бы и нет?              C C/F# C/F C
 

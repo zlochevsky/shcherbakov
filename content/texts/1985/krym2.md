@@ -2,7 +2,7 @@
     "params": {
         "tonality": "Dm",
         "chordsStartAt": 45,
-        "textFinishAtLine": 52
+        "textFinishAtLine": 51
     }
 }
 Ни на чью не посягну честь,                 Dm B Dm E
@@ -54,6 +54,5 @@
 И пускай летит, и пёс с ним!                A7 Dm B F
 Я всё так же помню свой шар.                D7 Gm A7 B
 И по-прежнему хочу в Крым.                  D7 Gm A7 Dm
-
 
 1985
