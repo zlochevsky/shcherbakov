@@ -2,7 +2,7 @@
 
 # About
 
-This project, built with [HUGO](https://gohugo.io/), static site generator written in [Go](https://go.dev/), develops the layout of website dedicated to the works of Mikhail Shcherbakov, a russian songwriter and performer. The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. The maintained version, serving as the starting point for the project, is available at <https://lambda.mkshch.com/>.
+This project, built with [HUGO](https://gohugo.io/), static site generator, develops the layout of website dedicated to the works of Mikhail Shcherbakov, a russian songwriter and performer. The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. The maintained version, serving as the starting point for the project, is available at <https://lambda.mkshch.com/>.
 
 The goal of the project was to create a responsive layout for the website while preserving the original style and content as much as possible, making the website more usable for visitors and easier to maintain. The following objectives were set:
 
@@ -12,11 +12,11 @@ The goal of the project was to create a responsive layout for the website while 
 4. Improve the overall user experience and interface, while preserving the style and intent of the website's creators. Add functionality, e.g. in the chords pages. Use JavaScript where appropriate.
 5. Maintain the simplicity and appearance of the current version: avoid excessive CSS complexity, refrain from overloading the user interface, optimize the graphic elements.
 
-By design, the website was to keep its old-fashioned style while being as usable as possible. By October 2026 the main objectives have been achieved: all pages of the old website have been converted into HUGO, the markup has been updated and the layout is responsive; data on songs, concerts, albums and books is kept in a [Directus](https://directus.io/) database (on [PostgreSQL](https://www.postgresql.org/)), the song catalogue has been rethought, and song pages have chord display modes and transposition. New goals have become possible too: full-text search ([Pagefind](https://pagefind.app/)), a catalogue of translations and language sections, and editing texts in the browser. The aim not to depart from simplicity and the old look (objective 5) remains a working principle.
+By design, the website was to keep its old-fashioned style while being as usable as possible. By October 2026 the main objectives have been achieved: all pages of the old website have been converted into HUGO, the markup has been updated and the layout is responsive; data on songs, concerts, albums and books is kept in a [Directus](https://directus.io/) database (on [PostgreSQL](https://www.postgresql.org/)), the song catalogue has been rethought, and song pages have chord display modes and transposition. New goals have been set and achieved as well: full-text search ([Pagefind](https://pagefind.app/)), a catalogue of translations and language sections, and in-browser text editing for the site editor. The aim not to depart from simplicity and the old look (objective 5) remains a working principle.
 
 The code, templates, and documentation were largely written with the help of AI ([Claude](https://claude.ai/)) under the guidance and review of project participants. AI was also used to prepare page content in languages ​​other than Russian and English.
 
-Specific implementation aspects, e.g. integration with the studio records store or changing the russian character encoding, are intentionally not considered here, as they are deemed not significant enough for the main readme file.
+Specific implementation aspects, e.g. integration with the [studio records store](https://mkshch.com/) or changing the russian character encoding (from KOI8-R to UTF-8), are intentionally not considered here, as they are deemed not significant enough for the main readme file.
 
 Currently, the website is created and maintained by a small Russian-speaking community, which explains why the vast majority of the pages are in Russian. Unfortunately, this circumstance makes it more difficult to attract new people and resources to the project, but at the same time, it gives hope that the website will be cared for by individuals who are passionate about both the work and person of Mikhail Shcherbakov and the memory of the website's creator, Vladimir Smirnov.
 
@@ -34,11 +34,15 @@ Hugo's configuration is `hugo.json` in the root directory (site parameters); the
 
 Standard Hugo directories:
 
-- `content` -- the pages: `.md` files whose body is mostly HTML markup. At the top of each file there is *front matter* -- page parameters in JSON. The fields the templates actually read are listed in [docs/frontmatter.md](docs/frontmatter.md);
+- `content` -- the pages: `.md` files whose body is mostly HTML markup. At the top of each file there is *front matter* -- page parameters in JSON. The fields the templates actually read are listed in [docs/frontmatter.md](docs/frontmatter.md). It holds both sections of the old site and new ones:
+    - inherited from the old site: sections `Archive/`, `Books/`, `Disks/`, `fans/`, `FOM/`, `Images/`, `Parodies/`, `Praises/`, `SCH2/`, `Tapes/`, pages `about.md`, `bio.md`, `buy.md`, `kniga_pamyati.md`, `log.md`, `news.md`, `no.md`, `praises.md`, `sociology.md`, `statistics.md`, `tab.md`;
+    - new sections and pages:
+        - sections: language subdirectories `de/`, `en/`, `eo/`, `fr/`, `he/`, `uk/` (more may follow), `texts/` for song texts, `redirects/legacy/` for redirect pages from old URLs (such as `/htmtexts/1981/index.html`), `Cycles/` for song cycles (its pages have front matter only, as they take their content from the Directus database at build time);
+        - pages: `admin-directus.md` -- a reference page for the editor describing the tables in the Directus database; `catalogue.md` -- the song catalogue; `concerts.md` -- the concert catalogue; `translations.md` -- the translations catalogue (all three catalogues have front matter only, as they take their content from Directus at build time); `search.md` -- the search page (front matter only too, as the page has no text of its own); `_index.md` and `_footer.md`, the content of the home page;
 - `layouts` -- templates: page layouts in `layouts/miscellaneous`, shared parts in `layouts/partials`, shortcodes for page bodies in `layouts/shortcodes`. `{{< lastmod "translations" >}}` gives the date of the latest record added to a Directus collection (on the home page). `{{< translations-count >}}` gives the number of translations into the page's language and the date of the latest one, as " (59, 07.10.26)" with the date in red (on the main language pages). Records migrated from the old site have no creation date, so for them only the number is shown;
 - `assets` -- files processed during the build: CSS (`assets/css`; all shared colours are CSS variables in `assets/css/palette.css`, embedded into every page by `layouts/partials/palette.html` together with `assets/css/site.css`, the rules for every page, e.g. no underline on hovered links; `assets/css/mobile-header.css` is the compact mobile header shared by the home page, search and the three catalogues) and SVG icons (`assets/svg`: album icons for the song catalogue, `svg/cd`, and format icons, `svg/format`);
 - `static` -- files copied to the site as they are: images, PDFs and other downloadable files; `static/admin` is the in-browser editor (see "Editing in the browser" below);
-- `archetypes` -- the template for new pages;
+- `archetypes` -- templates for new pages, not used in the project (archetypes only apply when a page is created with `hugo new content ...` in the terminal);
 - `public` -- where Hugo puts the built site. It is not stored in git: the published site is built by GitHub Actions (see below).
 
 Project directories:
