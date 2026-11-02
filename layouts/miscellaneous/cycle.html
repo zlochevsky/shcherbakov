@@ -23,8 +23,7 @@
 	{{- $songs := partial "directus.html" -}}
 	{{- $worksById := dict -}}
 	{{- range $songs.data -}}
-		{{- $name := partial "work-title.html" . -}}
-		{{- $worksById = merge $worksById (dict .id (dict "name" $name "date" .date "edit" .edit)) -}}
+		{{- $worksById = merge $worksById (dict .id (dict "name" (partial "work-title.html" .).html "date" .date "edit" .edit)) -}}
 	{{- end -}}
 
 	{{- $entries := partial "directus-cycle-entries.html" $cycleId -}}

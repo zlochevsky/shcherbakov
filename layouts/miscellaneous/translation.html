@@ -9,7 +9,7 @@
 {{- $labels := $sec.Params.labels | default dict -}}
 {{- $lang := $t.lang.id | default $langId -}}
 {{- $tr := slice }}{{ range $t.translators }}{{ $tr = $tr | append .native }}{{ end -}}
-{{- $trInfo := dict "id" $id "h1" ($t.title | default "") "title" ($t.display | default .Title) "subtitle" ($t.note | default "") -}}
+{{- $trInfo := dict "id" $id "h1" (htmlEscape ($t.title | default "")) "title" ($t.display | default .Title) "subtitle" ($t.note | default "") -}}
 {{- $orig := "" -}}
 {{- $origInfo := dict -}}
 {{- with $t.work.href -}}

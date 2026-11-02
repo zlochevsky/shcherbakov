@@ -44,7 +44,7 @@
 <ul class="translation-list">
 {{- range $i, $t := $items }}
 	{{- $tr := slice }}{{ range .translators }}{{ $tr = $tr | append .native }}{{ end }}
-	<li data-song="{{ printf "%04d-%s" (int .work.year) .work.id }}" data-orig="{{ .work.name | lower }}" data-title="{{ .display | lower }}" data-translator="{{ delimit $tr ", " | lower }}" data-i="{{ $i }}">
+	<li data-song="{{ printf "%04d-%s" (int .work.year) .work.id }}" data-orig="{{ .work.plain | lower }}" data-title="{{ .display | lower }}" data-translator="{{ delimit $tr ", " | lower }}" data-i="{{ $i }}">
 		<a href="{{ .href | relURL }}" class="tr-title">{{ .display }}</a>{{ with .year }}<span class="tr-year">, {{ . }}</span>{{ end }}
 		<span class="tr-translator">— {{ delimit $tr ", " }}</span><br>
 		<span class="tr-original" lang="ru">{{ with .work.href }}<a href="{{ . | relURL }}">{{ $t.work.name }}</a>{{ else }}{{ $t.work.name }}{{ end }}{{ with .work.year }} ({{ . }}){{ end }}</span>

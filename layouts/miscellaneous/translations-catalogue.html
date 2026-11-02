@@ -57,8 +57,8 @@
 {{- range $i, $t := sort $items "work.year" }}
 	{{- $trRu := slice }}{{ $trAll := slice }}
 	{{- range .translators }}{{ $trRu = $trRu | append .ru }}{{ $trAll = $trAll | append .all }}{{ end }}
-	{{- $search := delimit (slice .work.name .work.fincipit .display .incipit (delimit $trAll " ") .lang.id .lang.name_ru .lang.name_native (string (.year | default "")) (string .work.year)) " " }}
-	<li class="tr-entry" data-i="{{ $i }}" data-song="{{ printf "%04d" (int .work.year) }}" data-orig="{{ .work.name | lower }}" data-lang="{{ printf "%02d-%s" (int .lang.sort) .lang.id }}" data-search="{{ $search }}">
+	{{- $search := delimit (slice .work.plain .work.fincipit .display .incipit (delimit $trAll " ") .lang.id .lang.name_ru .lang.name_native (string (.year | default "")) (string .work.year)) " " }}
+	<li class="tr-entry" data-i="{{ $i }}" data-song="{{ printf "%04d" (int .work.year) }}" data-orig="{{ .work.plain | lower }}" data-lang="{{ printf "%02d-%s" (int .lang.sort) .lang.id }}" data-search="{{ $search }}">
 		<span class="tr-new">{{ if .isNew }}<span class="new" data-balloon="новое" data-balloon-pos="up"></span>{{ end }}</span>
 		<span class="lang-badge" data-balloon="{{ .lang.name_ru }}" data-balloon-pos="up">{{ .lang.id }}</span>
 		<span class="entry">

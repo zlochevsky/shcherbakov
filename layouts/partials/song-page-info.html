@@ -4,15 +4,15 @@
        description берутся из первой строки собственного текста (у ранней редакции она может отличаться).
        Возвращает dict:
          "id"       — id страницы (имя файла)
-         "h1"       — заголовок на странице; пусто — песня без названия («* * *»)
-         "title"    — для <title>: заголовок, иначе fincipit
+         "h1"       — заголовок на странице, готовый HTML (выделение <em>); пусто — песня без названия («* * *»)
+         "title"    — для <title>: заголовок без разметки (с уточнением «: …»), иначе fincipit
          "incipit"  — для <meta name="description">
          "noindex"  — ранняя редакция или works.noindex
          "newer"    — адрес актуальной редакции (только у ранней редакции) */ -}}
 {{- $id := .File.ContentBaseName -}}
 {{- $workId := .Params.editionOf | default $id -}}
 {{- $m := index (partialCached "song-meta.html" "song-meta") $workId | default dict -}}
-{{- $h1 := .Params.title | default $m.name | default "" -}}
+{{- $h1 := .Params.title | default $m.name | default "" -}}{{/* сначала — текстом: для проверки на «* * *» и для <title> */}}
 {{- $fincipit := $m.fincipit | default "" -}}
 {{- $incipit := $m.incipit | default "" -}}
 {{- if eq $h1 "* * *" -}}
@@ -37,7 +37,7 @@
 {{- with .Params.editionOf }}{{ $newer = printf "texts/%v/%s.html" $m.year . }}{{ $isEdition = true }}{{ end -}}
 {{- return dict
 	"id" $id
-	"h1" $h1
+	"h1" (cond (ne $h1 "") (cond (ne (.Params.title | default "") "") (htmlEscape $h1) ($m.html | default (htmlEscape $h1))) "")
 	"title" ($h1 | default $fincipit | default "* * *")
 	"incipit" $incipit
 	"noindex" (or $isEdition ($m.noindex | default false))

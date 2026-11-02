@@ -48,7 +48,7 @@ canonical и `og:url` указывают на саму страницу, а ес
 
 ## Страницы песен — `content/texts/<год>/<id>.md`
 
-Один файл на песню: короткий front matter, текст песни — тело файла (читается как есть, `.RawContent`, без Markdown; пустые строки перед текстом пропускаются, так что пустая строка после front matter, которую ставит редактор в браузере, ничего не меняет). Имя файла — id песни (`works.id`), папка — год актуальной редакции. `<h1>`, `<title>`, description и видимость берутся из Directus (`works.fname`/`name`/`fincipit`/`incipit`, `works.noindex`, `works.hidden`), см. [docs/directus.md](directus.md).
+Один файл на песню: короткий front matter, текст песни — тело файла (читается как есть, `.RawContent`, без Markdown; пустые строки перед текстом пропускаются, так что пустая строка после front matter, которую ставит редактор в браузере, ничего не меняет). Имя файла — id песни (`works.id`), папка — год актуальной редакции. `<h1>`, `<title>`, description и видимость берутся из Directus (`works.name`/`qualifier`/`fincipit`/`incipit`, `works.noindex`, `works.hidden`), см. [docs/directus.md](directus.md).
 
 - `params.tonality` (напр. `"Hm"`) — исходная тональность для транспонирования. Если пусто, `song.html` угадывает её по аккордам; явное значение надёжнее.
 - `params.chordsStartAt` (число, столбец с 1) — где начинаются аккорды; по нему строки делятся на текст и аккорды. Для стихов без аккордов не задаётся.

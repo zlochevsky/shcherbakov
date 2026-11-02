@@ -23,7 +23,7 @@
 
 {{- $worksById := dict -}}
 {{- range $songs.data -}}
-	{{- $name := partial "work-title.html" . -}}
+	{{- $title := partial "work-title.html" . -}}
 	{{- $year := "" -}}
 	{{- with .date -}}
 		{{- $year = math.Abs . | int -}}
@@ -34,7 +34,7 @@
 		{{- $urlYear = . -}}
 		{{- $yearDisplay = printf "%v, %v" $year . -}}
 	{{- end -}}
-	{{- $worksById = merge $worksById (dict .id (dict "name" $name "hasName" (not (not .name)) "incipit" .incipit "fincipit" .fincipit "year" $yearDisplay "urlYear" $urlYear "sort" .sort "isPoem" .is_poem)) -}}
+	{{- $worksById = merge $worksById (dict .id (dict "name" $title.html "plain" $title.plain "hasName" (not (not .name)) "incipit" .incipit "fincipit" .fincipit "year" $yearDisplay "urlYear" $urlYear "sort" .sort "isPoem" .is_poem)) -}}
 {{- end -}}
 
 {{- $commentsByWork := dict -}}
@@ -111,8 +111,8 @@
 	{{- $work := .work }}
 	{{- $href := printf "texts/%v/%v.html" $work.urlYear .workId | relURL }}
 	<details class="comment-entry" id="{{ .workId }}" data-id="{{ .workId }}">
-		<summary data-name="{{ or $work.name $work.incipit }}" data-begin="{{ $work.fincipit }}" data-year="{{ $work.year }}" title="Развернуть/свернуть комментарии">
-			<a href="{{ $href }}" title="Перейти к тексту песни"><span class="song-name">{{ or $work.name $work.incipit }}</span></a>
+		<summary data-name="{{ $work.plain }}" data-begin="{{ $work.fincipit }}" data-year="{{ $work.year }}" title="Развернуть/свернуть комментарии">
+			<a href="{{ $href }}" title="Перейти к тексту песни"><span class="song-name">{{ $work.name }}</span></a>
 			{{- if $work.hasName }} (<span class="song-begin">{{ $work.fincipit }}</span>){{ if $work.isPoem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
 			{{- else if $work.isPoem }} <span class="poem-tag">(стихотворение)</span>
 			{{- end }}

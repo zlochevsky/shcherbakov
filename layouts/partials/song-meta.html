@@ -1,6 +1,8 @@
 {{- /* Справочник песен для страниц песен и sitemap.xml (вызывать через partialCached "song-meta.html" "song-meta"):
        id песни (works.id) -> dict
-         "name"     — заголовок: fname или name с заглавной буквы; пусто, если у песни нет названия (тогда на странице «* * *»)
+         "name"     — заголовок без разметки, с уточнением «: …» (work-title.html, plain) — для <title>;
+                      пусто, если у песни нет названия (тогда на странице «* * *»)
+         "html"     — заголовок для <h1>: с выделением (<em>), без уточнения
          "fincipit" — короткая первая строка (для <title> песен без названия)
          "incipit"  — полная первая строка (для <meta name="description">)
          "noindex"  — works.noindex: закрыть от поисковиков и не включать в sitemap.xml
@@ -8,9 +10,10 @@
 {{- $meta := newScratch -}}
 {{- range (partial "directus.html").data -}}
 	{{- $name := "" -}}
-	{{- if .name }}{{ $name = partial "work-title.html" . }}{{ end -}}
+	{{- $html := "" -}}
+	{{- if .name }}{{ with partial "work-title.html" . }}{{ $name = .plain }}{{ $html = string .html }}{{ end }}{{ end -}}
 	{{- $year := or .edit .date -}}
 	{{- with $year }}{{ $year = math.Abs . | int }}{{ end -}}
-	{{- $meta.Set .id (dict "name" $name "fincipit" (.fincipit | default "") "incipit" (.incipit | default "") "noindex" (.noindex | default false) "year" $year) -}}
+	{{- $meta.Set .id (dict "name" $name "html" $html "fincipit" (.fincipit | default "") "incipit" (.incipit | default "") "noindex" (.noindex | default false) "year" $year) -}}
 {{- end -}}
 {{- return $meta.Values -}}

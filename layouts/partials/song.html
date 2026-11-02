@@ -16,7 +16,7 @@
 {{- $linesText := slice -}}
 {{- $h1 := "" -}}
 {{- with $info.h1 -}}
-    {{- $h1 = printf "<h1>%s</h1>" (. | htmlEscape) -}}
+    {{- $h1 = printf "<h1>%s</h1>" . -}}{{/* info.h1 — уже HTML (song-page-info.html) */}}
 {{- else -}}
     {{- $h1 = printf "<h1><span aria-hidden=\"true\">* * *</span><span class=\"visually-hidden\">%s</span></h1>" ($info.title | htmlEscape) -}}
 {{- end -}}

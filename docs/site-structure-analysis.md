@@ -264,7 +264,7 @@ menu.html`, `assets/css/common.css`/`index.css` (с 2026-10-16 мобильна�
 - `translators` — `id` (латиницей), `name_ru` (кириллицей, если есть), `name_lat`, `name_native` (на языке переводов,
   если отличается), `description` (HTML), ссылки — через общую `links` (владелец `translators_id`);
 - `translations` — `id` = имя файла `content/<язык>/<id песни>-<id переводчика>.md`, `status`, `works_id`,
-  `languages_id`, `title` / `incipit` перевода (как `fname` / `fincipit` у песен), `year` (год перевода), `note`,
+  `languages_id`, `title` / `incipit` перевода (как `name` / `fincipit` у песен), `year` (год перевода), `note`,
   `source`, `is_new` (метка «new», ставится вручную, как `works.is_new`), `date_created`; переводчики — M2M с порядком
   (совместный перевод; в адресе — первый);
 - `recordings.translations_id` — исполнения перевода (записи публикуются из медиа-архива владельца с флагом

@@ -7,7 +7,7 @@
          year, isNew, note, source, dateCreated, href (адрес страницы перевода от корня),
          translators (slice of dict id, ru — имя для русских страниц, native — на языке переводов, lat, all — все
                       написания через пробел (для фильтра), hasPage),
-         work (dict id, name — заголовок как в каталоге, href, year — год создания песни, fincipit),
+         work (dict id, name — заголовок как в каталоге (HTML), plain — он же без разметки, href, year — год создания песни, fincipit),
          recordings (slice). */ -}}
 {{- $works := partialCached "works-by-id.html" "works-by-id" -}}
 {{- $meta := partialCached "song-meta.html" "song-meta" -}}
@@ -48,7 +48,7 @@
 		"dateCreated" (.date_created | default "")
 		"href" (printf "%s/%s.html" ($lang.id | default "xx") .id)
 		"translators" $trs
-		"work" (dict "id" $wid "name" ($w.name | default "") "href" ($w.href | default "") "year" (index $songYear $wid | default 0)
+		"work" (dict "id" $wid "name" ($w.name | default "") "plain" ($w.plain | default "") "href" ($w.href | default "") "year" (index $songYear $wid | default 0)
 			"fincipit" ((index $meta $wid).fincipit | default ""))
 		"recordings" (.recordings | default slice) -}}
 	{{- $list = $list | append $t -}}

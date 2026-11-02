@@ -1,11 +1,24 @@
-{{- /* Название песни для вывода (единое правило для каталогов, списков треков, страниц песен, концертов):
-       works.fname, иначе works.name — с заглавной буквы; если у песни нет названия (name пусто) — fincipit.
-       Контекст — запись works (нужны поля name, fname, fincipit).
-       Есть ли у песни собственное название — проверять по .name (fname без name не бывает). */ -}}
-{{- $t := "" -}}
-{{- with .name -}}
-	{{- $t = $.fname | default . | strings.TrimSpace | strings.FirstUpper -}}
+{{- /* Название песни — единое правило для каталогов, списков треков, страниц песен, концертов, «Словаря», циклов.
+       Контекст — запись works (поля name, qualifier, fincipit). Возвращает dict:
+         "html"  — для видимого текста: выделение *так* в name → <em>так</em> (курсив), первая буква заглавная;
+         "plain" — без разметки, с уточнением «: <qualifier>» (различает песни с одинаковым названием) —
+                   для <title>, атрибутов data-*, поиска и сортировки.
+       У песни без названия (name пусто) — fincipit. Есть ли у песни название — проверять по .name. */ -}}
+{{- $html := "" -}}
+{{- $plain := "" -}}
+{{- if .name -}}
+	{{- $src := .name | strings.TrimSpace -}}
+	{{- /* заглавной делаем первую букву, а не первый символ: «*завтра*», ««балтийские волны»» */ -}}
+	{{- with findRESubmatch `^([^\pL\pN]*)(.)` $src 1 -}}
+		{{- $pre := index . 0 1 -}}
+		{{- $ch := index . 0 2 -}}
+		{{- $src = print $pre (upper $ch) (strings.TrimPrefix (print $pre $ch) $src) -}}
+	{{- end -}}
+	{{- $html = replaceRE `\*([^*]+)\*` "<em>$1</em>" (htmlEscape $src) -}}
+	{{- $plain = replaceRE `\*([^*]+)\*` "$1" $src -}}
+	{{- with .qualifier }}{{ $plain = printf "%s: %s" $plain (strings.TrimSpace .) }}{{ end -}}
 {{- else -}}
-	{{- $t = .fincipit | default "" -}}
+	{{- $plain = .fincipit | default "" -}}
+	{{- $html = htmlEscape $plain -}}
 {{- end -}}
-{{- return $t -}}
+{{- return dict "html" ($html | safeHTML) "plain" $plain -}}

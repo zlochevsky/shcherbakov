@@ -19,16 +19,16 @@ const NUMBER_FIELD     = 'num';       // порядок в программе �
                                        // разъехаться с чужими одновременными
                                        // правками того же концерта.
 
-// Заголовок песни строим так же, как это делает layouts/miscellaneous/catalogue.html:
-// name (с fname, если есть) — а если name пусто, то fincipit. incipit/fincipit
+// Заголовок песни строим так же, как сайт (layouts/partials/work-title.html, plain):
+// name без разметки *…* с заглавной + «: qualifier», а если name пусто — fincipit. incipit/fincipit
 // тянем только для подсказки в выпадашке, в поиск их не пускаем — см. SEARCH_FIELDS.
-const WORK_TITLE_FIELDS = ['name', 'fname', 'incipit', 'fincipit', 'sort'];
+const WORK_TITLE_FIELDS = ['name', 'qualifier', 'incipit', 'fincipit', 'sort'];
 // Поля, по которым реально матчим ввод. Сознательно БЕЗ incipit/fincipit —
 // поиск по всей первой строке тянет много лишнего (совпадение где-то в середине
 // фразы). sort почти всегда содержит короткую "витрину" песни: имя, если оно
 // задано, иначе fincipit (см. пример rusalka — name пуст, sort == fincipit) —
-// так что name+fname+sort фактически покрывают все случаи и остаются узкими.
-const SEARCH_FIELDS = ['name', 'fname', 'sort'];
+// так что name+sort фактически покрывают все случаи и остаются узкими.
+const SEARCH_FIELDS = ['name', 'sort'];
 const EXCLUDE_HIDDEN = true; // не предлагать works.hidden = true в автокомплите
 
 // Русские подписи для всех булевых полей perfs — набор чекбоксов, которые
@@ -215,13 +215,17 @@ async function loadRows() {
 	}
 }
 
-// Заголовок песни — та же логика, что в catalogue.html.
+// Заголовок песни — та же логика, что на сайте (work-title.html, plain): выделение *так* снимаем,
+// заглавной делаем первую букву (не кавычку и не «*»), уточнение — через двоеточие.
 function capitalize(s) {
-	return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+	return s ? s.replace(/^([^\p{L}\p{N}]*)(.)/u, (m, pre, ch) => pre + ch.toUpperCase()) : s;
 }
 function workTitle(work) {
 	if (!work) return '—';
-	if (work.name) return capitalize(work.fname || work.name);
+	if (work.name) {
+		const t = capitalize(work.name.trim().replace(/\*([^*]+)\*/g, '$1'));
+		return work.qualifier ? `${t}: ${work.qualifier}` : t;
+	}
 	return work.fincipit || work.incipit || '—';
 }
 // Подсказка вторым планом (как "(fincipit)" на сайте) — помогает отличить
@@ -239,7 +243,8 @@ function normalize(text) {
 		.trim()
 		.normalize('NFD')
 		.replace(/\p{Diacritic}/gu, '')
-		.replace(/ё/g, 'е');
+		.replace(/ё/g, 'е')
+		.replace(/\*/g, ''); // разметка выделения в name
 }
 
 // Автокомплит: 2+ буквы -> фильтр по уже загруженному справочнику (см.

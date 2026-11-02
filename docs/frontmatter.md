@@ -48,7 +48,7 @@ Read by `header.html` (home page) and `news.html` through `site.GetPage "news"`.
 
 ## Song pages — `content/texts/<year>/<id>.md`
 
-One file per song: minimal front matter, the song text as the body (read raw with `.RawContent`, not as Markdown; blank lines before the text are skipped, so a blank line after the front matter, as the in-browser editor writes it, changes nothing). The file name is the song id (`works.id`), the folder is the year of the current edition. `<h1>`, `<title>`, description and visibility come from Directus (`works.fname`/`name`/`fincipit`/`incipit`, `works.noindex`, `works.hidden`), see [docs/directus.md](directus.md).
+One file per song: minimal front matter, the song text as the body (read raw with `.RawContent`, not as Markdown; blank lines before the text are skipped, so a blank line after the front matter, as the in-browser editor writes it, changes nothing). The file name is the song id (`works.id`), the folder is the year of the current edition. `<h1>`, `<title>`, description and visibility come from Directus (`works.name`/`qualifier`/`fincipit`/`incipit`, `works.noindex`, `works.hidden`), see [docs/directus.md](directus.md).
 
 - `params.tonality` (e.g. `"Hm"`) — base key for transposition. If empty, `song.html` guesses it from the chords; an explicit value is more reliable.
 - `params.chordsStartAt` (int, 1-based column) — where chords begin; splits lines into lyrics and chords. Omit for poems without chords.

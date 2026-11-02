@@ -104,7 +104,7 @@
 {{- end -}}
 
 
-{{- $name := partial "work-title.html" . -}}
+{{- $title := partial "work-title.html" . -}}
 
 {{- $worksById = merge $worksById (dict .id true) -}}
 
@@ -132,7 +132,7 @@
 	data-begin="{{ .fincipit }}"
 	data-disk="{{ delimit $diskSearch " " }}"
 	data-name="{{ with .name -}}
-			{{- $name -}}
+			{{- $title.plain -}}
 		{{- else -}}
 			{{- .incipit -}}
 		{{- end }}">
@@ -140,7 +140,7 @@
 	{{- range $albumList }}<a href="{{ partial "set-url.html" (dict "id" .id "format" .fmt.key) | relURL }}"><span class="cd-icon {{ cond (eq .fmt.key "mc") "tape" .id }}" data-balloon="{{ if ne .fmt.key "mc" }}{{ .fmt.full }}&#10;{{ end }}{{ .shortTitle }} ({{ .year }})" data-balloon-break data-balloon-pos="up"></span></a>{{ end -}}
 	</span>
 	<span class="entry">
-	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span class="opus-name{{ if not .name }} incipit{{ end }}">{{ $name }}</span></a>
+	<a href="texts/{{ with .edit }}{{ . }}{{ else }}{{ with .date }}{{ math.Abs . | int }}{{ end }}{{ end }}/{{ .id }}.html"><span class="opus-name{{ if not .name }} incipit{{ end }}">{{ $title.html }}</span></a>
 	{{- if .is_new }}<span class="new" data-balloon="новое" data-balloon-pos="up"></span>{{ end -}}
 	{{- if .name }}&ensp;<span class="opus-begin incipit">{{ .fincipit }}</span>{{ if .is_poem }} <span class="poem-tag">(стихотворение)</span>{{ end }}
 	{{- else if .is_poem -}}
@@ -310,10 +310,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
          if (opusBegin != null) { //swap .opus-begin and .opus-name, only if the opus has an .opus-begin
 
-         let opusBeginContent = opusBegin.textContent;
-         let nameCopy = opusName.textContent;
-         opusName.textContent = opusBeginContent
-         opusBegin.textContent = nameCopy;
+         // innerHTML, а не textContent: в названии бывает выделение (<em>), оно должно пережить обмен
+         let opusBeginContent = opusBegin.innerHTML;
+         let nameCopy = opusName.innerHTML;
+         opusName.innerHTML = opusBeginContent
+         opusBegin.innerHTML = nameCopy;
          // кавычки («») рисует CSS у класса incipit — он переезжает вместе с первыми словами
          opusName.classList.toggle("incipit");
          opusBegin.classList.toggle("incipit");
