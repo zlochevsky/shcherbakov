@@ -137,9 +137,8 @@
 			{{- else -}}
 				{{- $date = $dateint | cast.ToString -}}
 			{{- end -}}
-			<li class="songname" data-premiere="{{ if .is_premiere }}1{{ else }}0{{ end }}">{{- with .works_id.name -}}{{ . }}&ensp;<span class="song-incipit">({{ $perf.works_id.fincipit }})</span>
-			{{- else -}}{{ $perf.works_id.fincipit }}
-			{{- end -}}
+			<li class="songname" data-premiere="{{ if .is_premiere }}1{{ else }}0{{ end }}">{{- partial "work-title.html" .works_id -}}
+			{{- if .works_id.name }}&ensp;<span class="song-incipit">({{ $perf.works_id.fincipit }})</span>{{ end -}}
 			{{- if $date }} <span class="perf-year">{{ $date }}{{ if .works_id.edit }}, {{ .works_id.edit }}{{ end }}</span>{{ end }}{{ if .is_premiere }} <span class="tag">премьера</span>{{ end }}</li>
 			{{- end -}}
 		{{- end -}}</ol>

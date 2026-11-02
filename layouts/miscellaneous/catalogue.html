@@ -80,7 +80,14 @@
 {{- end -}}
 {{- $worksById := dict -}}
 <ul id="artlist">
-{{- range $songs.data -}}
+{{- /* порядок по works.sort — как у кнопки «по названию» (localeCompare "ru" в скрипте ниже): цифры, кириллица, латиница;
+       ё как е. Hugo ставит латиницу перед кириллицей, поэтому латинские названия переносятся в конец отдельно */ -}}
+{{- $byName := slice -}}
+{{- $latin := slice -}}
+{{- range sort $songs.data "sort" -}}
+	{{- if findRE `^[A-Za-z]` .sort }}{{ $latin = $latin | append . }}{{ else }}{{ $byName = $byName | append . }}{{ end -}}
+{{- end -}}
+{{- range $byName | append $latin -}}
 {{- if not .hidden -}}
 
 {{- $dateint := .date -}}
@@ -97,16 +104,7 @@
 {{- end -}}
 
 
-{{- $name := "" }}
-{{- if .name -}}
-	{{- if .fname }}
-		{{- $name = .fname | strings.FirstUpper -}}
-	{{- else -}}
-		{{- $name = .name | strings.FirstUpper -}}
-	{{- end -}}
-		{{- else -}}
-	{{- $name = .fincipit }}
-{{- end -}}
+{{- $name := partial "work-title.html" . -}}
 
 {{- $worksById = merge $worksById (dict .id true) -}}
 
@@ -295,10 +293,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function sortBy(attr, dir) {
     // только строки самого списка: копии в «Найденные песни с диска» (#album-matches) не трогаем
     const items = Array.from(artlist.querySelectorAll(':scope > li[data-' + attr + ']'));
-    items.sort((a, b) => {
-      const x = a.dataset[attr], y = b.dataset[attr];
-      return x < y ? -dir : x > y ? dir : 0;
-    });
+    // по-русски (ё как е — так же, как сервер отдаёт список при загрузке), числа — по значению
+    items.sort((a, b) => dir * a.dataset[attr].localeCompare(b.dataset[attr], "ru", { numeric: true }));
     items.forEach(e => artlist.appendChild(e));
   }
 

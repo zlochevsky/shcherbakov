@@ -23,16 +23,7 @@
 
 {{- $worksById := dict -}}
 {{- range $songs.data -}}
-	{{- $name := "" -}}
-	{{- if .name -}}
-		{{- if .fname -}}
-			{{- $name = .fname | strings.FirstUpper -}}
-		{{- else -}}
-			{{- $name = .name | strings.FirstUpper -}}
-		{{- end -}}
-	{{- else -}}
-		{{- $name = .fincipit -}}
-	{{- end -}}
+	{{- $name := partial "work-title.html" . -}}
 	{{- $year := "" -}}
 	{{- with .date -}}
 		{{- $year = math.Abs . | int -}}

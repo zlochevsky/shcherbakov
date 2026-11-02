@@ -8,7 +8,7 @@
 {{- $meta := newScratch -}}
 {{- range (partial "directus.html").data -}}
 	{{- $name := "" -}}
-	{{- with or .fname .name -}}{{ $name = . | strings.TrimSpace | strings.FirstUpper }}{{ end -}}
+	{{- if .name }}{{ $name = partial "work-title.html" . }}{{ end -}}
 	{{- $year := or .edit .date -}}
 	{{- with $year }}{{ $year = math.Abs . | int }}{{ end -}}
 	{{- $meta.Set .id (dict "name" $name "fincipit" (.fincipit | default "") "incipit" (.incipit | default "") "noindex" (.noindex | default false) "year" $year) -}}

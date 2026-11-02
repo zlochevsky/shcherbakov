@@ -23,16 +23,7 @@
 	{{- $songs := partial "directus.html" -}}
 	{{- $worksById := dict -}}
 	{{- range $songs.data -}}
-		{{- $name := "" -}}
-		{{- if .name -}}
-			{{- if .fname -}}
-				{{- $name = .fname | strings.FirstUpper -}}
-			{{- else -}}
-				{{- $name = .name | strings.FirstUpper -}}
-			{{- end -}}
-		{{- else -}}
-			{{- $name = .fincipit -}}
-		{{- end -}}
+		{{- $name := partial "work-title.html" . -}}
 		{{- $worksById = merge $worksById (dict .id (dict "name" $name "date" .date "edit" .edit)) -}}
 	{{- end -}}
 

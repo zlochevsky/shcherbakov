@@ -2,16 +2,7 @@
        id песни -> dict "name" (заголовок как в каталоге) "href" (адрес страницы песни, относительно корня). */ -}}
 {{- $worksById := newScratch -}}
 {{- range (partial "directus.html").data -}}
-	{{- $name := "" -}}
-	{{- if .name -}}
-		{{- if .fname -}}
-			{{- $name = .fname | strings.FirstUpper -}}
-		{{- else -}}
-			{{- $name = .name | strings.FirstUpper -}}
-		{{- end -}}
-	{{- else -}}
-		{{- $name = .fincipit -}}
-	{{- end -}}
+	{{- $name := partial "work-title.html" . -}}
 	{{- $editOrDate := .edit -}}
 	{{- if not $editOrDate -}}{{ $editOrDate = .date }}{{- end -}}
 	{{- $editOrDate = math.Abs $editOrDate | int -}}

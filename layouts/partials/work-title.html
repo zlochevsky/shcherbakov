@@ -1,0 +1,11 @@
+{{- /* Название песни для вывода (единое правило для каталогов, списков треков, страниц песен, концертов):
+       works.fname, иначе works.name — с заглавной буквы; если у песни нет названия (name пусто) — fincipit.
+       Контекст — запись works (нужны поля name, fname, fincipit).
+       Есть ли у песни собственное название — проверять по .name (fname без name не бывает). */ -}}
+{{- $t := "" -}}
+{{- with .name -}}
+	{{- $t = $.fname | default . | strings.TrimSpace | strings.FirstUpper -}}
+{{- else -}}
+	{{- $t = .fincipit | default "" -}}
+{{- end -}}
+{{- return $t -}}
