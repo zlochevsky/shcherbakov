@@ -52,7 +52,7 @@ EXPORTS = [('flows', 'flows?limit=-1&fields=*,operations.*'),
 # 'left': коллекция, которую поставить слева — её линии пишутся «от неё», и Mermaid кладёт её первой}.
 GROUPS = [
     # Ядро: песня — исполнение — событие, в строку слева направо.
-    ('Песня, исполнение, событие', ['works', ('perfs', ['id', 'events_id', 'works_id', 'variants_id', 'num', 'note']), 'events']),
+    ('Песня, исполнение, событие', ['works', 'perfs', 'events']),
     # Коллекции песни
     ('Песни', [('works', ['name', 'sort', 'incipit', 'fincipit', 'hidden', 'date', 'edit', 'author', 'music']), 'perfs', 'books_entries', 'translations', 'recordings', 'statements', 'variants', 'works_see_also', 'comments', 'cycles_entries'], 'works'),
     ('Издания', [('works', ['id']), 

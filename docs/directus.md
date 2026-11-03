@@ -6,10 +6,7 @@
 
 База данных — **PostgreSQL** (с 2026-08-19, раньше был SQLite; причины миграции см. в разделе про кириллический `LOWER()`/`UPPER()` ниже). Directus работает в контейнере на `db.sch.com.ru`.
 
-Доступ для приложения Hugo при сборке сайта — токен в `config/_default/params.json` (не в git, см. `.gitignore`). Токенов для сборки два, оба только на чтение перечисленных ниже коллекций:
-
-- **публичный** — пользователь «Public read-only build token», роль `PublicReadAPI`, политика `PublicRead` (с 2026-10-02). Опубликован в `config/_default/params.json.example` и README. Видит только записи со статусом `published` (`events`, `perfs` — через их событие, `announces`, `log_entries`, `books`, `releases`, `recordings`, `translations`) и не видит служебные поля `events.comment`/`description`/`author_intro`/`user_created`/`user_updated` и `perfs.note`. Сайт, собранный с ним, совпадает с опубликованным байт в байт (проверено 2026-10-02);
-- **приватный** — роль `ReadOnlyAPI`, политика `ReadOnly`: читает всё, включая черновики и служебные поля. С 2026-10-02 сборке не нужен: CI собирает публичным токеном из `params.json.example` (токен пользователя `API` был засвечен в истории git в `.claude/settings.json` и отозван).
+Доступ для приложения Hugo при сборке сайта — **публичный токен** в `config/_default/params.json` (не в git, см. `.gitignore`) — пользователь «Public read-only build token», роль `PublicReadAPI`, политика `PublicRead` (с 2026-10-02). Опубликован в `config/_default/params.json.example` и README. Видит только записи со статусом `published` (`events`, `perfs` — через их событие, `announces`, `log_entries`, `books`, `releases`, `recordings`, `translations`) и не видит служебные поля `events.comment`/`description`/`author_intro`/`user_created`/`user_updated` и `perfs.note`. Сайт, собранный с ним, совпадает с опубликованным байт в байт (проверено 2026-10-02).
 
 Если запросить поле, к которому у токена нет доступа, Directus отвечает 403 на **весь** запрос, а сборка Hugo при этом не падает — партиал молча получает пустые данные. Поэтому в запросах `directus-*.html` нельзя просить служебные поля. Права Directus держит в кэше в памяти: после правки таблиц `directus_*` прямо в базе нужен `docker restart perf-directus-1`.
 
@@ -23,19 +20,18 @@
 
 ### Песня, исполнение, событие
 
+База строится вокруг двух сущностей:
+
+- `events` — концерта (или студийной сессии);
+- `works` — песни (или стихотворения).
+
+Связующеё сущностью является между ними является `perfs` — известное исполнение, которому всегда присуще событие (даже если его время и обстоятельства неизвестны) и сам исполняемый опус.
+
 <!-- schema:Песня, исполнение, событие -->
 ```mermaid
 erDiagram
     perfs }o--o| events : "events_id"
     perfs }o--o| works : "works_id"
-    perfs {
-        text id PK
-        text events_id FK
-        text works_id FK
-        bigInteger variants_id FK
-        integer num
-        text note
-    }
 ```
 <!-- /schema:Песня, исполнение, событие -->
 
