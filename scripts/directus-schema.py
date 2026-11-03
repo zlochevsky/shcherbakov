@@ -46,7 +46,8 @@ EXPORTS = [('flows', 'flows?limit=-1&fields=*,operations.*'),
 # в группе, поэтому общие (works, performers, links…) вписаны в каждую тему, где нужны.
 # Элемент группы — имя коллекции (пустой блок) или (имя, [поля]) — блок с этими полями
 # в этом порядке; '*' вместо списка — все поля. У одной коллекции в разных группах
-# поля могут быть разными.
+# поля могут быть разными. Необязательный третий элемент группы — центральная коллекция:
+# тогда рисуются только её связи, без линий между остальными («с чем связана эта таблица»).
 GROUPS = [
     ('Издания', [('works', ['id']), 
                 ('books', ['id', 'series', 'name', 'fullname', 'show_on_catalogpage', 'show_on_songpage']), 
@@ -54,9 +55,10 @@ GROUPS = [
                 ('books_entries',['works_id', 'books_id', 'page']), 
                 ]),
     ('Комментарии', ['works', ('comments',['body', 'work_id', 'sort_order']), 'works_see_also']),
-    ('Песни', [('works', ['name', 'sort', 'incipit', 'fincipit', 'hidden', 'date', 'edit', 'author', 'music']), 'perfs', 'books_entries', 'translations', 'recordings', 'statements', 'variants', 'works_see_also', 'comments', 'cycles_entries']),
+    ('Песни', [('works', ['name', 'sort', 'incipit', 'fincipit', 'hidden', 'date', 'edit', 'author', 'music']), 'perfs', 'books_entries', 'translations', 'recordings', 'statements', 'variants', 'works_see_also', 'comments', 'cycles_entries'], 'works'),
     ('Варианты', ['works', 'variants', 'perfs', 'books_entries']),
-    ('Исполнения', ['works', 'events', 'perfs']),
+    ('Исполнения', [('perfs', ['id', 'events_id', 'works_id', 'variants_id', 'num', 'note']),
+                    'events', 'works', 'variants', 'performers', 'sets_entries'], 'perfs'),
     ('События', ['events', 'announces']),
     ('Диски', [('works', ['id']), ('perfs', ['events_id', 'works_id', 'num']), ('sets',['title', 'year', 'ignore_in_catalogue']), ('sets_entries', ['perfs_id', 'sets_id', 'num']), 'disk_formats']),
     ('Исполнители', ['works', 'releases', 'recordings', 'performers', 'links']),
@@ -147,20 +149,22 @@ def render(snap):
     """Легенда и [(название темы, чертёж mermaid)] в порядке GROUPS."""
     es, hidden = edges(snap)
     shown = {c['collection'] for c in snap['data']['collections']} - hidden
-    norm = [(t, [(c, None) if isinstance(c, str) else (c[0], c[1]) for c in cs]) for t, cs in GROUPS]
-    grouped = {c for _, cs in norm for c, _ in cs}
+    norm = [(g[0], [(c, None) if isinstance(c, str) else (c[0], c[1]) for c in g[1]], g[2] if len(g) > 2 else None)
+            for g in GROUPS]
+    grouped = {c for _, cs, _ in norm for c, _ in cs}
     groups = list(norm)
     rest = sorted(shown - grouped)
     if rest:
         print('Не распределены по схемам (добавьте в GROUPS):', ', '.join(rest), file=sys.stderr)
-        groups.append(('Не распределены', [(c, None) for c in rest]))
+        groups.append(('Не распределены', [(c, None) for c in rest], None))
     for c in sorted(grouped - shown):
         print('В GROUPS есть, в снимке нет:', c, file=sys.stderr)
     arrow = {'m2o': '}o--||', 'm2o?': '}o--o|', 'm2m': '}o--o{'}
     parts = []
-    for title, cs in groups:
+    for title, cs, center in groups:
         mine = {c for c, _ in cs}
-        mine_es = [(a, b, f, k) for a, b, f, k in es if a in mine and b in mine]
+        mine_es = [(a, b, f, k) for a, b, f, k in es if a in mine and b in mine
+                   and (center is None or center in (a, b))]
         lines = [f'{a} {arrow[k]} {b} : "{f}"' for a, b, f, k in mine_es]
         for c, wanted in cs:
             if wanted:
