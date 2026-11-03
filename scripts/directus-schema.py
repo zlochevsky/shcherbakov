@@ -54,7 +54,7 @@ GROUPS = [
                 ('books_entries',['works_id', 'books_id', 'page']), 
                 ]),
     ('Комментарии', ['works', ('comments',['body', 'work_id', 'sort_order']), 'works_see_also']),
-    ('Песни', [('works', ['name', 'sort', 'incipit', 'fincipit', 'hidden', 'date', 'edit', 'author', 'music']), 'perfs', 'books_entries', 'translations', 'recordings', 'statements', 'variants', 'works_see_also']),
+    ('Песни', [('works', ['name', 'sort', 'incipit', 'fincipit', 'hidden', 'date', 'edit', 'author', 'music']), 'perfs', 'books_entries', 'translations', 'recordings', 'statements', 'variants', 'works_see_also', 'comments', 'cycles_entries']),
     ('Варианты', ['works', 'variants', 'perfs', 'books_entries']),
     ('Исполнения', ['works', 'events', 'perfs']),
     ('События', ['events', 'announces']),

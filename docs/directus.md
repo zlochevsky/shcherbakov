@@ -75,6 +75,8 @@ erDiagram
 erDiagram
     books_entries }o--o| variants : "variants_id"
     books_entries }o--o| works : "works_id"
+    comments }o--o| works : "work_id"
+    cycles_entries }o--o| works : "work_id"
     perfs }o--o| variants : "variants_id"
     perfs }o--o| works : "works_id"
     recordings }o--o| translations : "translations_id"
@@ -110,6 +112,23 @@ erDiagram
 - Поле `hidden` регулирует, отображать ли песню в каталоге.
 - Поле `date` — год написания песни. Для неточных дат используем отрицательное значение.
 - Поле `edit` — год редакции песни.
+
+На песню ссылаются другие коллекции; сама `works` ссылок не хранит, поле связи — у ссылающейся коллекции:
+
+| Коллекция | Поле | Что это |
+|---|---|---|
+| `perfs` | `works_id` | исполнения песни на концертах и в студии |
+| `variants` | `work_id` | варианты (словесные разночтения) текста |
+| `books_entries` | `works_id` | место песни в оглавлении книги |
+| `comments` | `work_id` | комментарии «Словаря Заморских Слов» |
+| `works_see_also` | `work_id`, `related_work_id` | «см. также»: комментарий к одной песне отсылает к другой |
+| `cycles_entries` | `work_id` | вхождение песни в цикл |
+| `translations` | `works_id` | переводы на другие языки |
+| `recordings` | `works_id` | записи песни другими исполнителями |
+| `statements` | `work_id` (многие ко многим) | высказывания, где упомянута песня |
+
+Удалить песню — значит обнулить все эти ссылки (Directus ставит в них пусто). Иногда песни скрывают (`hidden`). (Считают несуществующими?) Чужие (`author`) исполненные песни из каталога тоже скрываем, сначала заведя их в `works`.
+
 
 **Варианты**
 
