@@ -48,6 +48,8 @@ EXPORTS = [('flows', 'flows?limit=-1&fields=*,operations.*'),
 # в этом порядке; '*' вместо списка — все поля. У одной коллекции в разных группах
 # поля могут быть разными. Необязательный третий элемент группы — центральная коллекция:
 # тогда рисуются только её связи, без линий между остальными («с чем связана эта таблица»).
+# Особая запись (название, 'via', связка, [опоры]) — сводный чертёж: опоры и связка с их линиями,
+# а все прочие связи каждой опоры — списком в блоке <опора>_refs (строка «коллекция поле»).
 GROUPS = [
     ('Издания', [('works', ['id']), 
                 ('books', ['id', 'series', 'name', 'fullname', 'show_on_catalogpage', 'show_on_songpage']), 
@@ -57,9 +59,12 @@ GROUPS = [
     ('Комментарии', ['works', ('comments',['body', 'work_id', 'sort_order']), 'works_see_also']),
     ('Песни', [('works', ['name', 'sort', 'incipit', 'fincipit', 'hidden', 'date', 'edit', 'author', 'music']), 'perfs', 'books_entries', 'translations', 'recordings', 'statements', 'variants', 'works_see_also', 'comments', 'cycles_entries'], 'works'),
     ('Варианты', ['works', 'variants', 'perfs', 'books_entries']),
+    ('События', [('events', ['id', 'status', 'date', 'date_approximate', 'year', 'time', 'dw', 'day_evening',
+                             'country', 'state', 'town', 'place', 'name', 'is_studio', 'set_id']),
+                 'announces', 'log_entries', 'perfs', 'performers', 'sets']),
     ('Исполнения', [('perfs', ['id', 'events_id', 'works_id', 'variants_id', 'num', 'note']),
                     'events', 'works', 'variants', 'performers', 'sets_entries'], 'perfs'),
-    ('События', ['events', 'announces']),
+    ('Песня, исполнение, событие', 'via', 'perfs', ['works', 'events']),
     ('Диски', [('works', ['id']), ('perfs', ['events_id', 'works_id', 'num']), ('sets',['title', 'year', 'ignore_in_catalogue']), ('sets_entries', ['perfs_id', 'sets_id', 'num']), 'disk_formats']),
     ('Исполнители', ['works', 'releases', 'recordings', 'performers', 'links']),
     ('Переводы', ['works', 'translations', 'languages', 'translators']),
@@ -145,13 +150,31 @@ def block(snap, coll, wanted):
     return [coll + ' {'] + rows + ['}']
 
 
+def overview(es, via, hubs):
+    """Сводный чертёж: связка via и её линии к опорам; прочие связи опоры — строками блока <опора>_refs."""
+    arrow = {'m2o': '}o--||', 'm2o?': '}o--o|', 'm2m': '}o--o{'}
+    lines = [f'{a} {arrow[k]} {b} : "{f}"' for a, b, f, k in es if a == via and b in hubs]
+    for hub in hubs:
+        rows = []
+        for a, b, f, k in es:
+            if hub not in (a, b) or {a, b} & ({via} | (set(hubs) - {hub})) or a == b:
+                continue
+            other = b if a == hub else a
+            note = ' "многие ко многим"' if k == 'm2m' else f' "поле у {hub}"' if a == hub else ''
+            for field in f.split(' / '):
+                rows.append(f'    {other} {field}{note}')
+        if rows:
+            lines += [f'{hub}_refs }}o--o| {hub} : "ссылаются"', f'{hub}_refs {{'] + sorted(rows) + ['}']
+    return lines
+
+
 def render(snap):
     """Легенда и [(название темы, чертёж mermaid)] в порядке GROUPS."""
     es, hidden = edges(snap)
     shown = {c['collection'] for c in snap['data']['collections']} - hidden
     norm = [(g[0], [(c, None) if isinstance(c, str) else (c[0], c[1]) for c in g[1]], g[2] if len(g) > 2 else None)
-            for g in GROUPS]
-    grouped = {c for _, cs, _ in norm for c, _ in cs}
+            if g[1] != 'via' else g for g in GROUPS]
+    grouped = {c for g in norm if g[1] != 'via' for c, _ in g[1]}
     groups = list(norm)
     rest = sorted(shown - grouped)
     if rest:
@@ -161,7 +184,11 @@ def render(snap):
         print('В GROUPS есть, в снимке нет:', c, file=sys.stderr)
     arrow = {'m2o': '}o--||', 'm2o?': '}o--o|', 'm2m': '}o--o{'}
     parts = []
-    for title, cs, center in groups:
+    for g in groups:
+        if g[1] == 'via':
+            parts.append((g[0], mermaid(overview(es, g[2], g[3]))))
+            continue
+        title, cs, center = g
         mine = {c for c, _ in cs}
         mine_es = [(a, b, f, k) for a, b, f, k in es if a in mine and b in mine
                    and (center is None or center in (a, b))]
@@ -175,6 +202,8 @@ def render(snap):
     legend = ('Чертежи между метками `<!-- schema:… -->` собирает скрипт `scripts/directus-schema.py` '
               'из снимка `docs/directus-snapshot.json` — их руками не править; текст вне меток скрипт не трогает. '
               'Подпись линии — поле, в котором хранится связь. '
+              'В блоке таблицы каждая строка — поле: сначала тип Directus (`text`, `string`, `integer`, '
+              '`boolean`…), затем имя поля, затем `PK` (первичный ключ) или `FK` (поле связи), если поле — ключ. '
               '`}o--||` — многие к одному, поле обязательно; `}o--o|` — многие к одному, поле может быть пустым; '
               '`}o--o{` — многие ко многим (через служебную таблицу). На схеме темы — только связи между '
               'её коллекциями; `works` и другие общие коллекции повторяются в нескольких темах.\n')
