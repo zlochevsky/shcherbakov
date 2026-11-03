@@ -28,21 +28,13 @@
 erDiagram
     perfs }o--o| events : "events_id"
     perfs }o--o| works : "works_id"
-    events {
+    perfs {
         text id PK
-        text status
-        date date
-        boolean date_approximate
-        integer year
-        time time
-        text dw
-        text day_evening
-        text country
-        text state
-        text town
-        text place
-        text name
-        boolean is_studio
+        text events_id FK
+        text works_id FK
+        bigInteger variants_id FK
+        integer num
+        text note
     }
 ```
 <!-- /schema:Песня, исполнение, событие -->
