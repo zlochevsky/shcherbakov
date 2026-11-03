@@ -61,7 +61,7 @@ One file per song: minimal front matter, the song text as the body (read raw wit
 
 - `params.id` — `sets.id` in Directus; title, year, format, images and track list all come from the set.
 - `params.year`, `params.image`, `params.images` — fallbacks used only when the set has no `year` / `album_img` / `extra_images`; no page sets them now.
-- Full-size image versions are not front matter: see «Полноразмерные изображения» under `sets` in [docs/directus.md](directus.md).
+- Full-size image versions are not set in front matter but by the file name: see «Полноразмерные изображения» under `sets` in [docs/directus.md](directus.md).
 
 ## Books — `content/Books/*.md` (`bookpage`)
 
@@ -77,9 +77,9 @@ One file per song: minimal front matter, the song text as the body (read raw wit
 - `title`, `params.subtitle`, `params.author` — heading block.
 - `params.backUrl`, `params.backTitle` — the "back" link in the corner navigation (at the top after «На главную страницу», at the bottom before «Наверх»), to the parent page. `backUrl` is a path from the site root without a leading `/` (`fans/index.html`; the template adds the site's subfolder itself), `backTitle` is the link text. Without them — the section's table of contents by the file's first folder: `fans` → «Фан-клуб», `Parodies` → «Пародии», `FOM` → «Щ-1», `SCH2` → «Щ-2»; any other page (Praises articles) — «Отзывы → praises.html». Section tables of contents (which live in those folders themselves) set the link explicitly.
 - `params.bgColor` — page background (`fans/fans-index.md`, `fans/memory.md`).
-- `params.monoPre` (bool) — `<pre>` in a monospace font (the page's `<body>` gets `class="mono-pre"`). By default `<pre>` uses the page font: in the fan club and parodies it holds mostly verse and quotations. Set where text is aligned with spaces: `tab.md` (tablature), `statistics.md` (tables), the SCH2 questions `101-e` and `203-e` (quotations aligned with spaces), letters of sections kept in the private overlay (2026-10-14). Crosswords (`<pre class="crossword">`) are monospace without it.
+- `params.monoPre` (bool) — `<pre>` in a monospace font (the page's `<body>` gets `class="mono-pre"`). By default `<pre>` uses the page font: in the fan club and parodies it holds mostly verse and quotations. Set where text is aligned with spaces: `tab.md` (tablature), `statistics.md` (tables), the SCH2 questions `101-e` and `203-e` (quotations aligned with spaces). Crosswords (`<pre class="crossword">`) are monospace without it.
 - `params.prevUrl`, `params.prevTitle`, `params.prevHint`, `params.nextUrl`, `params.nextTitle`, `params.nextHint` (strings) — a page in a series read in order: «[← previous] [next →]» in one line of the corner navigation, a separate group at the top and at the bottom (`layouts/partials/series-nav.html`). Url is site-relative (`SCH2/102-e.html`), Hint is the tooltip. Set by the converter on the SCH2 question pages (1.1 … 7.5, the 4.1 polemic in between, 2026-10-17); set by hand on the FOM chapters, in table-of-contents order (2026-10-17).
-- `params.palette` (string) — the page's own colour scheme: the `<body>` gets `class="palette-<name>"`, which overrides the palette variables (`assets/css/palette.css`, section "per-page schemes"). Available: `olive` — the old site's dark olive scheme (background `#666656`, light-yellow text, yellow links), used for a contents page of the private overlay (2026-10-15); `warm` — a warmer, yellower background (`#fcf2cf`) for the rest of that section (2026-10-15). A new scheme is a new `body.palette-<name>` block in `palette.css`.
+- `params.palette` (string) — the page's own colour scheme: the `<body>` gets `class="palette-<name>"`, which overrides the palette variables (`assets/css/palette.css`, section "per-page schemes"). Available: `olive` — the old site's dark olive scheme (background `#666656`, light-yellow text, yellow links); `warm` — a warmer, yellower background (`#fcf2cf`). A new scheme is a new `body.palette-<name>` block in `palette.css`.
 
 ## Other projects — `content/Disks/other.md` (`other-projects`)
 

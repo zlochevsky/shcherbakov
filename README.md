@@ -2,7 +2,7 @@
 
 # About
 
-This project, built with [HUGO](https://gohugo.io/), a static site generator, is a rebuild of the website dedicated to the works of Mikhail Shcherbakov, a russian songwriter and performer. The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. The maintained version, serving as the starting point for the project, is available at <https://lambda.mkshch.com/>.
+This project, built with [HUGO](https://gohugo.io/), a static site generator, is a rebuild of the website dedicated to the works of Mikhail Shcherbakov, a Russian songwriter and performer. The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. The maintained version, serving as the starting point for the project, is available at <https://lambda.mkshch.com/>.
 
 The goal of the project was to create a responsive layout for the website while preserving the original style and content as much as possible, making the website more usable for visitors and easier to maintain. The following objectives were set:
 
@@ -14,9 +14,9 @@ The goal of the project was to create a responsive layout for the website while 
 
 By design, the website was to keep its old-fashioned style while being as usable as possible. By October 2026 the main objectives have been achieved: all pages of the old website have been converted into HUGO, the markup has been updated and the layout is responsive; data on songs, concerts, albums and books is kept in a [Directus](https://directus.io/) database (on [PostgreSQL](https://www.postgresql.org/)), the song catalogue has been rethought, and song pages have chord display modes and transposition. New goals have been set and achieved as well: full-text search ([Pagefind](https://pagefind.app/)), a catalogue of translations and language sections, and in-browser text editing for the site editor. The aim not to depart from simplicity and the old look (objective 5) remains a working principle.
 
-The code, templates, and documentation were largely written with the help of AI ([Claude](https://claude.ai/)) under the guidance and review of project participants. AI was also used to prepare page content in languages ​​other than Russian and English.
+The code, templates, and documentation were largely written with the help of AI ([Claude](https://claude.ai/)) under the guidance and review of project participants. AI was also used to prepare page content in languages other than Russian and English.
 
-Specific implementation aspects, e.g. integration with the [studio records store](https://mkshch.com/) or changing the russian character encoding (from KOI8-R to UTF-8), are intentionally not considered here, as they are deemed not significant enough for the main readme file.
+Specific implementation aspects, e.g. integration with the [studio records store](https://mkshch.com/) or changing the Russian character encoding (from KOI8-R to UTF-8), are intentionally not considered here, as they are deemed not significant enough for the main readme file.
 
 Currently, the website is created and maintained by a small Russian-speaking community, which explains why the vast majority of the pages are in Russian. Unfortunately, this circumstance makes it more difficult to attract new people and resources to the project, but at the same time, it gives hope that the website will be cared for by individuals who are passionate about both the work and person of Mikhail Shcherbakov and the memory of the website's creator, Vladimir Smirnov.
 
