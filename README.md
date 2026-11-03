@@ -105,6 +105,13 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 - before each build the workflow archives announces whose expiry date has passed (sets their status in Directus to `archived`);
 - the build uses the public read-only Directus token from `params.json.example`, runs Hugo, then Pagefind to make the search index.
 
+## Who updates the site and how
+
+- **The maintainer and the music content administrator** edit files and commit them to git; the build on push publishes the site.
+- **Text editors** edit songs, translations, site pages and fan-club articles in the editor on the site (`/admin/`, see "Editing in the browser" below), without git: each save is a commit, and the build on push publishes it. A new song or translation is created in Directus; the Flow «Create text file for new song or translation» creates the file for its text (see [docs/directus.md](docs/directus.md)).
+- **The announces content administrator** works only in Directus Studio, without git. An announce appears on the site with the scheduled build, or at once with a manual run of the workflow (the «Run workflow» button on the Actions tab on GitHub). A rebuild on every save in Directus exists but is turned off.
+- **A concert history administrator** (photos and performances of past concerts) is still an idea. The photos are meant to be kept in the Directus file storage rather than as files in git: then this person too works only in Directus, and the same scheduled build updates the site.
+
 ## Editing in the browser
 
 `/admin/` on the site is [Sveltia CMS](https://sveltiacms.app/), an editor for files in this repository: `static/admin/index.html` loads it, and `static/admin/config.yml` sets what it edits. It does not change any other page of the site. Each save is a commit to `master` made through the GitHub API, and the usual workflow publishes it. Data kept in Directus (titles, years, albums, translators, announces, comments) is edited in Directus. The collapsible "Таблицы Directus" block at the bottom of the editor's left panel lists links to the Directus Studio tables by group (they open in a new tab); its last line, "Что в какой таблице", opens `/admin/directus.html`, the same links with descriptions. The groups and descriptions live in `content/admin-directus.md` and are edited in the editor itself ("Страницы сайта"); the block reads its list from that page (`.table-link` links with `data-label`), so there is one source. The block is inserted by a script in `static/admin/index.html`, since Sveltia has no custom links in its panel; whether it is open is remembered in the browser.
