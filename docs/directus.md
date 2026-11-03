@@ -15,6 +15,162 @@
 
 ## Коллекции
 
+**Снимок схемы.** Структура базы (коллекции, поля, связи — без данных) лежит в `docs/directus-snapshot.json`. После каждого изменения модели в Directus: `DIRECTUS_ADMIN_TOKEN=… python3 scripts/directus-schema.py --fetch` — скрипт забирает свежий снимок, заменяет в нём точную версию Directus на мажорную (репозиторий публичный, а Directus свою версию анонимам не показывает) и пересобирает схемы ниже; снимок и `directus.md` коммитятся вместе. Новая коллекция попадает на схему «Не распределены», пока её не впишут в `GROUPS` в скрипте. Восстановить структуру из снимка: `directus schema apply --force` (флаг — из-за обезличенной версии).
+
+<!-- schema:begin -->
+Схемы собраны скриптом `scripts/directus-schema.py` из снимка `docs/directus-snapshot.json` — руками не править. Подпись линии — поле, в котором хранится связь. `}o--||` — многие к одному, поле обязательно; `}o--o|` — многие к одному, поле может быть пустым; `}o--o{` — многие ко многим (через служебную таблицу). На схеме темы — только связи между её коллекциями; `works` и другие общие коллекции повторяются в нескольких темах.
+
+**Издания**
+
+```mermaid
+erDiagram
+    books }o--o| book_sets : "series"
+    books_entries }o--o| books : "books_id"
+    books_entries }o--o| works : "works_id"
+    works {
+        text id PK
+    }
+    books {
+        text id PK
+        integer series FK
+        text name
+        text fullname
+        boolean show_on_catalogpage
+        boolean show_on_songpage
+    }
+    books_entries {
+        text works_id FK
+        text books_id FK
+        bigInteger page
+    }
+```
+
+**Комментарии**
+
+```mermaid
+erDiagram
+    comments }o--o| works : "work_id"
+    works_see_also }o--o| works : "related_work_id"
+    works_see_also }o--o| works : "work_id"
+```
+
+**Песни**
+
+```mermaid
+erDiagram
+    works {
+        text name
+        text sort
+        text incipit
+        text fincipit
+        boolean hidden
+        bigInteger date
+        text edit
+        text author
+        text music
+    }
+```
+
+**Варианты**
+
+```mermaid
+erDiagram
+    books_entries }o--o| variants : "variants_id"
+    books_entries }o--o| works : "works_id"
+    perfs }o--o| variants : "variants_id"
+    perfs }o--o| works : "works_id"
+    variants }o--o| works : "work_id"
+```
+
+**Исполнения**
+
+```mermaid
+erDiagram
+    perfs }o--o| events : "events_id"
+    perfs }o--o| works : "works_id"
+```
+
+**События**
+
+```mermaid
+erDiagram
+    announces }o--o| events : "event"
+```
+
+**Диски**
+
+```mermaid
+erDiagram
+    perfs }o--o| works : "works_id"
+    sets }o--o| disk_formats : "format"
+    sets_entries }o--o| perfs : "perfs_id"
+    sets_entries }o--o| sets : "sets_id"
+    works {
+        text id PK
+    }
+    perfs {
+        text events_id FK
+        text works_id FK
+        integer num
+    }
+    sets {
+        text title
+        bigInteger year
+        boolean ignore_in_catalogue
+    }
+    sets_entries {
+        text perfs_id FK
+        text sets_id FK
+        integer num
+    }
+```
+
+**Исполнители**
+
+```mermaid
+erDiagram
+    links }o--o| performers : "performers_id"
+    links }o--o| recordings : "recordings_id"
+    links }o--o| releases : "releases_id"
+    performers }o--o{ performers : "members"
+    recordings }o--o{ performers : "performers"
+    recordings }o--o| releases : "releases_id"
+    recordings }o--o| works : "works_id"
+    releases }o--o{ performers : "performers"
+```
+
+**Переводы**
+
+```mermaid
+erDiagram
+    translations }o--o| languages : "languages_id"
+    translations }o--o{ translators : "translators / translations"
+    translations }o--o| works : "works_id"
+```
+
+**Циклы**
+
+```mermaid
+erDiagram
+    cycles_entries }o--o| cycles : "cycle_id"
+    cycles_entries }o--o| works : "work_id"
+```
+
+**Лог**
+
+```mermaid
+erDiagram
+    log_entries }o--o| events : "related_event"
+```
+
+**Высказывания**
+
+```mermaid
+erDiagram
+    statements }o--o{ works : "work_id"
+```
+<!-- schema:end -->
+
 - **`works`** (Песня) — `id` (строка, совпадает с именем файла страницы песни `content/texts/<год>/<id>.md`), `incipit` (полная первая строка — `<meta name="description">` страницы песни; в каталоге — для поиска у песен без названия), `name` (по конвенции — со строчной буквы, сайт сам делает заглавной первую букву; пусто — у песни нет названия (у 152 из 560 на 2026-11-02), тогда на её странице «* * *», а в списках — `fincipit`. Кавычки «» — часть названия. Выделение слова — разметкой `*так*` (с 2026-11-02 вместо разрядки пробелами): на сайте курсив `<em>`, в `<title>`, поиске и атрибутах снимается), `qualifier` (с 2026-11-02: уточнение, различающее песни с одинаковым названием там, где нет разметки — `<title>`, поиск, редактор сет-листов: «Завтра, вчера, всегда: вчера»; заполнено у трёх песен «Завтра, вчера, всегда»). Правило выбора названия — одно для всех шаблонов, `layouts/partials/work-title.html`: `name` (`html` — с курсивом, для видимого текста; `plain` — без разметки, с «: `qualifier`»), иначе `fincipit`; редактор сет-листов повторяет его в `workTitle()`; `fincipit` (короткая первая строка: в каталоге — рядом с названием в скобках или вместо названия, ключ сортировки «по первым словам»; `<title>` песни без названия), `sort` (всегда заполнено, нигде не выводится: порядок песен в каталоге — при сборке и по кнопке «по названию», одинаково: цифры, кириллица, латиница, «ё» как «е», числа по значению — и поиск в редакторе сет-листов; на сайте поиск по `sort` не идёт. Обычно — название без оформления с заглавной, у песен без названия — первая строка, бывает длиннее `fincipit`; соглашения: номера с ведущим нулём «Интермедия 01», различители «Караван (с народным рефреном)», «На всей Земле 1», латиница без диакритики «Deja»; четыре песни с названием стоят по первой строке: `axchtoet`, `vsemuvre`, `eslispus`, `odnazkim`), `hidden` (не показывать в каталоге песен), **`noindex`** (с 2026-10-01: страница песни получает `noindex` и не попадает в `sitemap.xml`; независимо от `hidden`), `date` (год создания; отрицательное значение используем для неточной датировки — при построении URL вида `texts/<year>/<id>.html` в шаблонах обязательно брать `math.Abs`, иначе получится путь со знаком «минус», не совпадающий с реальной папкой), `author`/`music` (для песен не за своим авторством — «чужих»), `is_popurri`, `is_poem` (произведение целиком является стихотворением без музыки; **не путать с `perfs.is_poem`** ниже — это разные поля на разных коллекциях с похожим, но не идентичным смыслом), `description`, **`edit`** (год последней большой редакции — см. раздел «Редакции» ниже), **`date_created`** (заполняется автоматически Directus только для новых записей, у старых — `null`; используется для даты в меню «Каталог песен»), `is_new` (метка «новое» у песни в каталоге песен; на 2026-10-18 не стоит ни у одной).
 - **`variants`** (Вариант) — `work_id` → `works`, `date`, `is_last_auth`, `url`. Коллекция задумана для словесных вариантов исполнения (через `perfs.variants_id`), **не** путаем варианты исполнений с полноценными редакциями текста — в коллекции нет поля для самого текста.
 - **`perfs`** (Исполнение) — `id` (собирается автоматически, см. Flow «Auto perf id»), `works_id` → `works`, `variants_id` → `variants`, `events_id` → `events`, `num` (integer, порядок в программе концерта; прежний `number` был big integer и удалён, проставляется тем же Flow'ом), `is_premiere` (первое исполнение), `is_first`/`is_last` (первая/последняя песня всего концерта), `is_bis` (на бис), `is_first_after_break`/`is_last_before_break` (граница антракта), `take` (булево — дубль/повтор попытки), `is_poem` (стихи), `note` (замечание по исполнению, не авторское), `mls_instrument` (не булево — на чём играет МЛС (Михаил Леонидович Стародубцев) в этом исполнении), набор булевых про инструменты/дуэт (`with_mls` (в дуэте ли с МЛС), `plays_mls_guitar` (играет ли МЛС на гитаре), `plays_mls_keyboards` (играет ли МЛС на клавишах), `has_mls_voice` (поёт ли МЛС), `has_synth` (участвует ли в исполнении синтезатор как секвенсор, то есть синтезирован ли аккомпанемент, это параметр для студийных исполнений, в отличие от sings_with_minus -- редчайших живых исполнений под минус на концерте), `is_ensemble` (для исполнений не в дуэте с МЛС, но в ансамбле с другими музыкантами), `is_pseudo_duet` (даб щербаковского голоса на студийных исполнениях, для дабов гитары, видимо, параметр сочтён несущественным и их не учитывает), `mks_no_guitar` (MKS (МКЩ, Михаил Константинович Щербаков) не играет на гитаре, редко, но бывает), `mks_no_voice` (Щербаков не поёт, редко, но встречается, напр. на мелодийных композициях в "Целом лете" второго издания), `sings_with_minus` (поёт на концерте под минус, очень редко), `sings_mls_only` (очень редко, когда МЛС поёт щербаковскую песню, а Щербаков -- нет), `sings_incomplete` (для неполностью спетых песен), `performers` (M2M-связь с коллекцией `performers` ниже; на 2026-10-18 заполнена почти нигде — 5 исполнений из 13 616, остальные участники дуэтов пока не перенесены из старых текстовых заметок/`note`).
