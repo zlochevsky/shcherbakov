@@ -21,52 +21,37 @@
 Чертежи между метками `<!-- schema:… -->` собирает скрипт `scripts/directus-schema.py` из снимка `docs/directus-snapshot.json` — их руками не править; текст вне меток скрипт не трогает. Подпись линии — поле, в котором хранится связь. В блоке таблицы каждая строка — поле: сначала тип Directus (`text`, `string`, `integer`, `boolean`…), затем имя поля, затем `PK` (первичный ключ) или `FK` (поле связи), если поле — ключ. `}o--||` — многие к одному, поле обязательно; `}o--o|` — многие к одному, поле может быть пустым; `}o--o{` — многие ко многим (через служебную таблицу). На схеме темы — только связи между её коллекциями; `works` и другие общие коллекции повторяются в нескольких темах.
 <!-- /schema:legend -->
 
-**Издания**
+### Песня, исполнение, событие
 
-<!-- schema:Издания -->
+<!-- schema:Песня, исполнение, событие -->
 ```mermaid
 erDiagram
-    books }o--o| book_sets : "series"
-    books_entries }o--o| books : "books_id"
-    books_entries }o--o| works : "works_id"
-    works {
+    perfs }o--o| events : "events_id"
+    perfs }o--o| works : "works_id"
+    events {
         text id PK
-    }
-    books {
-        text id PK
-        integer series FK
+        text status
+        date date
+        boolean date_approximate
+        integer year
+        time time
+        text dw
+        text day_evening
+        text country
+        text state
+        text town
+        text place
         text name
-        text fullname
-        boolean show_on_catalogpage
-        boolean show_on_songpage
-    }
-    books_entries {
-        text works_id FK
-        text books_id FK
-        integer page
+        boolean is_studio
     }
 ```
-<!-- /schema:Издания -->
+<!-- /schema:Песня, исполнение, событие -->
 
-Песни `works` входят списком оглавления в книги `books` посредством m2m-связи через таблицу `books_entries`. Книги входят в свою очередь в многотомники и серии `book_sets` (Собрание песен, Ковчег неутомимый / После Ковчега).
+Ядро Базы: песня (`works`) исполнена (`perfs`) на событии (`events`). Подробнее — [коллекции песни](#коллекции-песни) и [коллекции события](#коллекции-события) (туда же входят исполнения и диски).
 
-**Комментарии**
+### Коллекции песни
 
-<!-- schema:Комментарии -->
-```mermaid
-erDiagram
-    comments }o--o| works : "work_id"
-    works_see_also }o--o| works : "related_work_id"
-    works_see_also }o--o| works : "work_id"
-    comments {
-        text body
-        string work_id FK
-        integer sort_order
-    }
-```
-<!-- /schema:Комментарии -->
-
-Для Комментариев (Словаря Заморских Слов) ведётся таблица `comments` где на каждую песню `works` имеются записи (на деле — одна запись на песню со всеми комментариями в поле `body`, но это не обязательно, а лишь от лени, потому что у каждого комментария могут быть имя автора, контакт автора, время добавления и выдержка). Для ссылок на комментарии к другой песне используется таблица `works_see_also`.
+К коллекциям события — [ниже](#коллекции-события).
 
 **Песни**
 
@@ -128,6 +113,52 @@ erDiagram
 
 Удалить песню — значит обнулить все эти ссылки (Directus ставит в них пусто). Иногда песни скрывают — `hidden` (считают несуществующими?). Чужие песни из каталога на сайте тоже скрываем.
 
+**Издания**
+
+<!-- schema:Издания -->
+```mermaid
+erDiagram
+    books }o--o| book_sets : "series"
+    books_entries }o--o| books : "books_id"
+    books_entries }o--o| works : "works_id"
+    works {
+        text id PK
+    }
+    books {
+        text id PK
+        integer series FK
+        text name
+        text fullname
+        boolean show_on_catalogpage
+        boolean show_on_songpage
+    }
+    books_entries {
+        text works_id FK
+        text books_id FK
+        integer page
+    }
+```
+<!-- /schema:Издания -->
+
+Песни `works` входят списком оглавления в книги `books` посредством m2m-связи через таблицу `books_entries`. Книги входят в свою очередь в многотомники и серии `book_sets` (Собрание песен, Ковчег неутомимый / После Ковчега).
+
+**Комментарии**
+
+<!-- schema:Комментарии -->
+```mermaid
+erDiagram
+    comments }o--o| works : "work_id"
+    works_see_also }o--o| works : "related_work_id"
+    works_see_also }o--o| works : "work_id"
+    comments {
+        text body
+        string work_id FK
+        integer sort_order
+    }
+```
+<!-- /schema:Комментарии -->
+
+Для Комментариев (Словаря Заморских Слов) ведётся таблица `comments` где на каждую песню `works` имеются записи (на деле — одна запись на песню со всеми комментариями в поле `body`, но это не обязательно, а лишь от лени, потому что у каждого комментария могут быть имя автора, контакт автора, время добавления и выдержка). Для ссылок на комментарии к другой песне используется таблица `works_see_also`.
 
 **Варианты**
 
@@ -143,6 +174,56 @@ erDiagram
 <!-- /schema:Варианты -->
 
 Таблица `variants` (на будущее; возможно, избыточна) предполагается для фиксации мелких вариантов текста. Не имеет поля для полноценного текста песни, а только для описания варианта. Теоретически, может использоваться для хранения, какой вариант в каком издании зафиксирован, на каком событии был исполнен (автором).
+
+**Переводы**
+
+<!-- schema:Переводы -->
+```mermaid
+erDiagram
+    translations }o--o| languages : "languages_id"
+    translations }o--o{ translators : "translators / translations"
+    translations }o--o| works : "works_id"
+```
+<!-- /schema:Переводы -->
+
+**Циклы**
+
+<!-- schema:Циклы -->
+```mermaid
+erDiagram
+    cycles_entries }o--o| cycles : "cycle_id"
+    cycles_entries }o--o| works : "work_id"
+```
+<!-- /schema:Циклы -->
+
+**Высказывания**
+
+<!-- schema:Высказывания -->
+```mermaid
+erDiagram
+    statements }o--o{ works : "work_id"
+```
+<!-- /schema:Высказывания -->
+
+**Исполнители**
+
+<!-- schema:Исполнители -->
+```mermaid
+erDiagram
+    links }o--o| performers : "performers_id"
+    links }o--o| recordings : "recordings_id"
+    links }o--o| releases : "releases_id"
+    performers }o--o{ performers : "members"
+    recordings }o--o{ performers : "performers"
+    recordings }o--o| releases : "releases_id"
+    recordings }o--o| works : "works_id"
+    releases }o--o{ performers : "performers"
+```
+<!-- /schema:Исполнители -->
+
+### Коллекции события
+
+К коллекциям песни — [выше](#коллекции-песни).
 
 **События**
 
@@ -247,35 +328,6 @@ erDiagram
 
 Пока что шаблон страницы мало использует эти данные, поля в базе почти не заполнены. Работа с исполнениями в Базе — отдельное направление работы. Могут быть добавлены другие поля, например, исполнена ли песня на распевке до концерта.
 
-**Песня, исполнение, событие**
-
-<!-- schema:Песня, исполнение, событие -->
-```mermaid
-erDiagram
-    perfs }o--o| events : "events_id"
-    perfs }o--o| works : "works_id"
-    works_refs }o--o| works : "ссылаются"
-    works_refs {
-        books_entries works_id
-        comments work_id
-        cycles_entries work_id
-        recordings works_id
-        statements work_id "многие ко многим"
-        translations works_id
-        variants work_id
-        works_see_also related_work_id
-        works_see_also work_id
-    }
-    events_refs }o--o| events : "ссылаются"
-    events_refs {
-        announces event
-        log_entries related_event
-        performers performers "многие ко многим"
-        sets set_id "поле у events"
-    }
-```
-<!-- /schema:Песня, исполнение, событие -->
-
 **Диски**
 
 <!-- schema:Диски -->
@@ -306,43 +358,6 @@ erDiagram
 ```
 <!-- /schema:Диски -->
 
-**Исполнители**
-
-<!-- schema:Исполнители -->
-```mermaid
-erDiagram
-    links }o--o| performers : "performers_id"
-    links }o--o| recordings : "recordings_id"
-    links }o--o| releases : "releases_id"
-    performers }o--o{ performers : "members"
-    recordings }o--o{ performers : "performers"
-    recordings }o--o| releases : "releases_id"
-    recordings }o--o| works : "works_id"
-    releases }o--o{ performers : "performers"
-```
-<!-- /schema:Исполнители -->
-
-**Переводы**
-
-<!-- schema:Переводы -->
-```mermaid
-erDiagram
-    translations }o--o| languages : "languages_id"
-    translations }o--o{ translators : "translators / translations"
-    translations }o--o| works : "works_id"
-```
-<!-- /schema:Переводы -->
-
-**Циклы**
-
-<!-- schema:Циклы -->
-```mermaid
-erDiagram
-    cycles_entries }o--o| cycles : "cycle_id"
-    cycles_entries }o--o| works : "work_id"
-```
-<!-- /schema:Циклы -->
-
 **Лог**
 
 <!-- schema:Лог -->
@@ -352,14 +367,7 @@ erDiagram
 ```
 <!-- /schema:Лог -->
 
-**Высказывания**
-
-<!-- schema:Высказывания -->
-```mermaid
-erDiagram
-    statements }o--o{ works : "work_id"
-```
-<!-- /schema:Высказывания -->
+### Все коллекции: поля и связи
 
 - **`works`** (Песня) — `id` (строка, совпадает с именем файла страницы песни `content/texts/<год>/<id>.md`), `incipit` (полная первая строка — `<meta name="description">` страницы песни; в каталоге — для поиска у песен без названия), `name` (по конвенции — со строчной буквы, сайт сам делает заглавной первую букву; пусто — у песни нет названия (у 152 из 560 на 2026-11-02), тогда на её странице «* * *», а в списках — `fincipit`. Кавычки «» — часть названия. Выделение слова — разметкой `*так*` (с 2026-11-02 вместо разрядки пробелами): на сайте курсив `<em>`, в `<title>`, поиске и атрибутах снимается), `qualifier` (с 2026-11-02: уточнение, различающее песни с одинаковым названием там, где нет разметки — `<title>`, поиск, редактор сет-листов: «Завтра, вчера, всегда: вчера»; заполнено у трёх песен «Завтра, вчера, всегда»). Правило выбора названия — одно для всех шаблонов, `layouts/partials/work-title.html`: `name` (`html` — с курсивом, для видимого текста; `plain` — без разметки, с «: `qualifier`»), иначе `fincipit`; редактор сет-листов повторяет его в `workTitle()`; `fincipit` (короткая первая строка: в каталоге — рядом с названием в скобках или вместо названия, ключ сортировки «по первым словам»; `<title>` песни без названия), `sort` (всегда заполнено, нигде не выводится: порядок песен в каталоге — при сборке и по кнопке «по названию», одинаково: цифры, кириллица, латиница, «ё» как «е», числа по значению — и поиск в редакторе сет-листов; на сайте поиск по `sort` не идёт. Обычно — название без оформления с заглавной, у песен без названия — первая строка, бывает длиннее `fincipit`; соглашения: номера с ведущим нулём «Интермедия 01», различители «Караван (с народным рефреном)», «На всей Земле 1», латиница без диакритики «Deja»; четыре песни с названием стоят по первой строке: `axchtoet`, `vsemuvre`, `eslispus`, `odnazkim`), `hidden` (не показывать в каталоге песен), **`noindex`** (с 2026-10-01: страница песни получает `noindex` и не попадает в `sitemap.xml`; независимо от `hidden`), `date` (год создания; отрицательное значение используем для неточной датировки — при построении URL вида `texts/<year>/<id>.html` в шаблонах обязательно брать `math.Abs`, иначе получится путь со знаком «минус», не совпадающий с реальной папкой), `author`/`music` (для песен не за своим авторством — «чужих»), `is_popurri`, `is_poem` (произведение целиком является стихотворением без музыки; **не путать с `perfs.is_poem`** ниже — это разные поля на разных коллекциях с похожим, но не идентичным смыслом), `description`, **`edit`** (год последней большой редакции — см. раздел «Редакции» ниже), **`date_created`** (заполняется автоматически Directus только для новых записей, у старых — `null`; используется для даты в меню «Каталог песен»), `is_new` (метка «новое» у песни в каталоге песен; на 2026-10-18 не стоит ни у одной).
 - **`variants`** (Вариант) — `work_id` → `works`, `date`, `is_last_auth`, `url`. Коллекция задумана для словесных вариантов исполнения (через `perfs.variants_id`), **не** путаем варианты исполнений с полноценными редакциями текста — в коллекции нет поля для самого текста.
