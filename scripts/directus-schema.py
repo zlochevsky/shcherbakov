@@ -6,14 +6,17 @@
     DIRECTUS_ADMIN_TOKEN=… python3 scripts/directus-schema.py --fetch
 
 --fetch  забрать свежий снимок (GET /schema/snapshot, нужен токен администратора
-         в переменной окружения DIRECTUS_ADMIN_TOKEN) в docs/directus-snapshot.json;
-без него  взять уже лежащий там снимок.
+         в переменной окружения DIRECTUS_ADMIN_TOKEN) в docs/directus-snapshot.json,
+         а Flows и модель прав (flows, roles, policies, access, permissions) —
+         в docs/directus-export/; без него  взять уже лежащий снимок.
 
 Дальше скрипт всегда:
   1) заменяет точную версию Directus в снимке на мажорную («11»): репозиторий
      публичный, а сам Directus версию анонимам не показывает;
-  2) пересобирает схемы Mermaid в docs/directus.md между метками
-     <!-- schema:begin --> и <!-- schema:end -->.
+  2) пересобирает в docs/directus.md чертежи Mermaid — каждый между своими метками
+     <!-- schema:Тема --> и <!-- /schema:Тема -->. Текст вне меток (заголовки тем,
+     пояснения автора) не трогает; порядок тем в документе можно менять руками.
+     Тема из GROUPS, которой ещё нет в документе, дописывается после последней.
 
 Какая коллекция на какой схеме — решает человек: список GROUPS ниже.
 Коллекция, которой нет ни в одной группе, попадает на схему «Не распределены»,
@@ -22,6 +25,7 @@
 """
 import json
 import os
+import re
 import sys
 import urllib.request
 from pathlib import Path
@@ -29,8 +33,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SNAPSHOT = ROOT / 'docs' / 'directus-snapshot.json'
 DOC = ROOT / 'docs' / 'directus.md'
-BEGIN, END = '<!-- schema:begin -->', '<!-- schema:end -->'
-API = 'https://db.sch.com.ru/schema/snapshot'
+LEGEND = 'legend'  # метки <!-- schema:legend --> … <!-- /schema:legend --> вокруг пояснения к схемам
+BASE = 'https://db.sch.com.ru/'
+EXPORT = ROOT / 'docs' / 'directus-export'
+EXPORTS = [('flows', 'flows?limit=-1&fields=*,operations.*'),
+           ('roles', 'roles?limit=-1&fields=*'),
+           ('policies', 'policies?limit=-1&fields=*'),
+           ('access', 'access?limit=-1&fields=*'),
+           ('permissions', 'permissions?limit=-1&fields=*')]
 
 # Порядок групп = порядок схем в документе. Линия рисуется, только если ОБЕ коллекции
 # в группе, поэтому общие (works, performers, links…) вписаны в каждую тему, где нужны.
@@ -43,8 +53,8 @@ GROUPS = [
                 'book_sets', 
                 ('books_entries',['works_id', 'books_id', 'page']), 
                 ]),
-    ('Комментарии', ['works', 'comments', 'works_see_also']),
-    ('Песни', [('works', ['name', 'sort', 'incipit', 'fincipit', 'hidden', 'date', 'edit', 'author', 'music'])]),
+    ('Комментарии', ['works', ('comments',['body', 'work_id', 'sort_order']), 'works_see_also']),
+    ('Песни', [('works', ['name', 'sort', 'incipit', 'fincipit', 'hidden', 'date', 'edit', 'author', 'music']), 'perfs', 'books_entries', 'translations', 'recordings', 'statements', 'variants', 'works_see_also']),
     ('Варианты', ['works', 'variants', 'perfs', 'books_entries']),
     ('Исполнения', ['works', 'events', 'perfs']),
     ('События', ['events', 'announces']),
@@ -57,12 +67,31 @@ GROUPS = [
 ]
 
 
-def fetch():
+def get(path):
     tok = os.environ.get('DIRECTUS_ADMIN_TOKEN')
     if not tok:
-        sys.exit('нет токена: задайте DIRECTUS_ADMIN_TOKEN (снимок схемы отдаётся только администратору)')
-    req = urllib.request.Request(API, headers={'Authorization': 'Bearer ' + tok})
+        sys.exit('нет токена: задайте DIRECTUS_ADMIN_TOKEN (снимок схемы и права отдаются только администратору)')
+    req = urllib.request.Request(BASE + path, headers={'Authorization': 'Bearer ' + tok})
     return json.load(urllib.request.urlopen(req))
+
+
+def fetch():
+    return get('schema/snapshot')
+
+
+def export_settings():
+    """Flows и модель прав — в docs/directus-export/*.json, ключи отсортированы ради читаемого diff.
+
+    Сознательно НЕ выгружаются directus_settings (ключи сервисов, вписанные в Studio, лежат там
+    открытым текстом) и directus_users/sessions/activity/revisions (учётные данные и история).
+    Секреты во Flows — только через {{$env.X}}; перед коммитом смотреть diff flows.json.
+    """
+    EXPORT.mkdir(exist_ok=True)
+    for name, path in EXPORTS:
+        data = get(path)['data']
+        (EXPORT / f'{name}.json').write_text(
+            json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+    print('Flows и права:', EXPORT.relative_to(ROOT))
 
 
 def edges(snap):
@@ -115,6 +144,7 @@ def block(snap, coll, wanted):
 
 
 def render(snap):
+    """Легенда и [(название темы, чертёж mermaid)] в порядке GROUPS."""
     es, hidden = edges(snap)
     shown = {c['collection'] for c in snap['data']['collections']} - hidden
     norm = [(t, [(c, None) if isinstance(c, str) else (c[0], c[1]) for c in cs]) for t, cs in GROUPS]
@@ -137,26 +167,50 @@ def render(snap):
                 lines += block(snap, c, wanted)
             elif c in shown and not any(c in (a, b) for a, b, _, _ in mine_es):
                 lines.append(c)
-        parts.append(f'**{title}**\n\n' + mermaid(lines))
-    head = ('Схемы собраны скриптом `scripts/directus-schema.py` из снимка `docs/directus-snapshot.json` — '
-            'руками не править. Подпись линии — поле, в котором хранится связь. '
-            '`}o--||` — многие к одному, поле обязательно; `}o--o|` — многие к одному, поле может быть пустым; '
-            '`}o--o{` — многие ко многим (через служебную таблицу). На схеме темы — только связи между '
-            'её коллекциями; `works` и другие общие коллекции повторяются в нескольких темах.\n\n')
-    return head + '\n'.join(parts)
+        parts.append((title, mermaid(lines)))
+    legend = ('Чертежи между метками `<!-- schema:… -->` собирает скрипт `scripts/directus-schema.py` '
+              'из снимка `docs/directus-snapshot.json` — их руками не править; текст вне меток скрипт не трогает. '
+              'Подпись линии — поле, в котором хранится связь. '
+              '`}o--||` — многие к одному, поле обязательно; `}o--o|` — многие к одному, поле может быть пустым; '
+              '`}o--o{` — многие ко многим (через служебную таблицу). На схеме темы — только связи между '
+              'её коллекциями; `works` и другие общие коллекции повторяются в нескольких темах.\n')
+    return legend, parts
+
+
+def block_re(name):
+    # метка — только целая строка, чтобы пример метки в тексте не считался меткой
+    return re.compile(r'(^<!-- schema:' + re.escape(name) + r' -->\n).*?(^<!-- /schema:' + re.escape(name)
+                      + r' -->$)', re.S | re.M)
 
 
 def main():
     snap = fetch() if '--fetch' in sys.argv else json.loads(SNAPSHOT.read_text(encoding='utf-8'))
-    ver = str(snap['data'].get('directus', ''))
+    if '--fetch' in sys.argv:
+        export_settings()
+    ver =str(snap['data'].get('directus', ''))
     snap['data']['directus'] = ver.split('.')[0]
     SNAPSHOT.write_text(json.dumps(snap, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     doc = DOC.read_text(encoding='utf-8')
-    if BEGIN not in doc or END not in doc:
-        sys.exit(f'в {DOC} нет меток {BEGIN} … {END}')
-    pre, rest = doc.split(BEGIN, 1)
-    _, post = rest.split(END, 1)
-    DOC.write_text(pre + BEGIN + '\n' + render(snap) + END + post, encoding='utf-8')
+    legend, parts = render(snap)
+    if not block_re(LEGEND).search(doc):
+        sys.exit(f'в {DOC} нет меток <!-- schema:{LEGEND} --> … <!-- /schema:{LEGEND} -->')
+    # Заменяется только содержимое между парными метками; всё вокруг — текст автора.
+    for name, body in [(LEGEND, legend)] + parts:
+        rx = block_re(name)
+        if rx.search(doc):
+            doc = rx.sub(lambda m: m.group(1) + body + m.group(2), doc, count=1)
+        else:
+            # Новая тема: дописать заголовок и чертёж после последнего чертежа.
+            last = list(re.finditer(r'^<!-- /schema:[^>]+ -->$', doc, re.M))[-1]
+            new = f'\n\n**{name}**\n\n<!-- schema:{name} -->\n{body}<!-- /schema:{name} -->'
+            doc = doc[:last.end()] + new + doc[last.end():]
+            print('Новая схема дописана в конец:', name, file=sys.stderr)
+    known = {LEGEND} | {n for n, _ in parts}
+    for m in re.finditer(r'^<!-- schema:([^>]+?) -->$', doc, re.M):
+        if m.group(1) not in known:
+            print(f'В документе есть схема «{m.group(1)}», которой нет в GROUPS — удалите её вручную',
+                  file=sys.stderr)
+    DOC.write_text(doc, encoding='utf-8')
     print('снимок:', SNAPSHOT.relative_to(ROOT), '(версия', ver, '→', snap['data']['directus'] + ');',
           'схемы:', DOC.relative_to(ROOT))
 

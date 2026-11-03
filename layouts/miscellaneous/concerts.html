@@ -100,6 +100,7 @@
 	{{- $eventPerfs := index $perfsByEvent .id | default slice -}}
 	{{- $year := $event.year -}}
 	{{- if not $year }}{{ $year = $event.date | time.Format "2006" }}{{ end -}}
+	{{- $year = string $year -}}{{/* строкой: year из Directus (bigint — строка, integer — число) и запасной из date сравниваются ниже */}}
 
 	{{- if ne ($scratch.Get "year") $year -}}
 		{{- if $scratch.Get "year" }}</div>{{ end }}

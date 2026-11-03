@@ -86,6 +86,11 @@ const PARAM_SHORT_LABELS = {
 const DEFAULT_PARAM_KEYS = ['is_premiere', 'is_bis', 'is_poem'];
 /* ───────────────────────────────────────────────────────────── */
 
+// Объявлено, хотя не вызывается: иначе Vue вешает слушатель @input от Directus
+// на корневой элемент, и событие ввода из поля поиска песни всплывает к нему —
+// Directus принимает объект Event за значение поля («isTrusted» is not allowed).
+defineEmits(['input']);
+
 const props = defineProps({
 	value: { type: [Array, Object], default: null },
 	collection: { type: String, default: null },

@@ -48,8 +48,8 @@ Standard Hugo directories:
 Project directories:
 
 - `docs` -- project documentation (mostly in Russian): the Directus schema and conventions ([docs/directus.md](docs/directus.md)), the front matter reference, the site structure analysis ([docs/site-structure-analysis.md](docs/site-structure-analysis.md)) and plans for migrating legacy sections;
-- `scripts` -- Python tools: `check-links.py` (links to pages that do not exist yet), `check-separation.py` (see "Two sites in one" below), `sveltia-normalize.py` (see "Editing in the browser" below), `comments-markup` (markup of the comments texts), `legacy-convert` (used to convert legacy pages to Hugo content; the conversion is complete);
-- `directus-extensions` -- sources of some custom Directus extensions;
+- `scripts` -- Python tools: `check-links.py` (links to pages that do not exist yet), `check-separation.py` (see "Two sites in one" below), `sveltia-normalize.py` (see "Editing in the browser" below), `comments-markup` (markup of the comments texts), `legacy-convert` (used to convert legacy pages to Hugo content; the conversion is complete), `directus-schema.py` (Directus schema snapshot, Flows and permissions export, relation diagrams in docs/directus.md);
+- `directus-extensions` -- all Directus extensions: sources of our own (`setlist-editor`, `perf-picker`, `album-tracklist`) and built third-party packages, see [docs/directus.md](docs/directus.md);
 - `workfiles` -- local working files (images, tables, drafts). The directory is in `.gitignore`.
 
 A part of the site's content (song catalogue, concerts, performances, albums, books, announces) is served from an external Directus database (`db.sch.com.ru`) rather than from files in this repository. To learn how the data is organised:

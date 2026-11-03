@@ -52,12 +52,12 @@ a:visited {
 					{{- if and $event.date (eq (len $event.date) 10) -}}
 						{{- $eventLabel = printf "%s %s" $eventLabel (dateFormat "02.01.2006" $event.date) -}}
 					{{- else if $event.year -}}
-						{{- $eventLabel = printf "%s %s" $eventLabel $event.year -}}
+						{{- $eventLabel = printf "%s %v" $eventLabel $event.year -}}
 					{{- end -}}
 				{{- else if hasPrefix $event.id "s" -}}
 					{{- $eventLabel = "запись" -}}
 					{{- with $event.year -}}
-						{{- $eventLabel = printf "%s %s г." $eventLabel . -}}
+						{{- $eventLabel = printf "%s %v г." $eventLabel . -}}
 					{{- end -}}
 				{{- end -}}
 			{{- end -}}

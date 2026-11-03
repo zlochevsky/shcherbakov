@@ -48,8 +48,8 @@
 Папки проекта:
 
 - `docs` — документация проекта (в основном на русском): схема и соглашения Directus ([docs/directus.md](docs/directus.md)), справочник по front matter, анализ структуры сайта ([docs/site-structure-analysis.md](docs/site-structure-analysis.md)) и планы переноса старых разделов;
-- `scripts` — инструменты на Python: `check-links.py` (ссылки на ещё не существующие страницы), `check-separation.py` (см. «Два сайта в одном» ниже), `sveltia-normalize.py` (см. «Правка в браузере» ниже), `comments-markup` (разметка текстов «Словаря»), `legacy-convert` (им старые страницы переводились в содержимое Hugo; перенос закончен);
-- `directus-extensions` — исходники некоторых собственных расширений Directus;
+- `scripts` — инструменты на Python: `check-links.py` (ссылки на ещё не существующие страницы), `check-separation.py` (см. «Два сайта в одном» ниже), `sveltia-normalize.py` (см. «Правка в браузере» ниже), `comments-markup` (разметка текстов «Словаря»), `legacy-convert` (им старые страницы переводились в содержимое Hugo; перенос закончен), `directus-schema.py` (снимок схемы Directus, выгрузка Flow и прав, схемы связей в docs/directus.md);
+- `directus-extensions` — все расширения Directus: исходники собственных (`setlist-editor`, `perf-picker`, `album-tracklist`) и готовые сборки чужих, см. [docs/directus.md](docs/directus.md);
 - `workfiles` — локальные рабочие файлы (картинки, таблицы, черновики). Папка внесена в `.gitignore`.
 
 Часть содержимого сайта (каталог песен, концерты, исполнения, альбомы, книги, анонсы) берётся не из файлов этого репозитория, а из внешней базы Directus (`db.sch.com.ru`). Как устроены данные, можно узнать так:
