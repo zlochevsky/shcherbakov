@@ -119,11 +119,12 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 ### Signing in
 
 - "Sign In with GitHub" works for anyone with write access to the repository. Sign-in goes through an OAuth proxy, `sveltia-cms-auth` on Cloudflare Workers (`https://sveltia-cms-auth.sergey-897.workers.dev`, the `base_url` in `config.yml`):
-  - the proxy holds the client ID and secret of the GitHub OAuth App in its variables, plus `ALLOWED_DOMAINS` (the site's host and `localhost`);
+  - the proxy holds the client ID and secret of the GitHub OAuth App in its variables, plus `ALLOWED_DOMAINS` (the site's host and `localhost`); copies of the client ID and secret are in the owner's `pass`, `github.com/shcherbakov-sveltia-cms-auth_clientID` and `github.com/shcherbakov-sveltia-cms-auth_secret`;
   - the OAuth App is registered in the repository owner's GitHub settings, with the callback URL `<proxy>/callback`;
   - the editor asks GitHub for the `public_repo` scope (`auth_scope`), not the default `repo`, which would also reach private repositories.
 - "Sign In Using Access Token" takes a GitHub personal access token that each editor makes in their own GitHub settings; the token stays in their browser:
   - the repository owner can use a fine-grained token: Repository access → this repository, Permissions → "Contents: Read and write";
+  - a token has an expiry date (the owner's `sveltia-cms-zlochevsky` expires on 2027-10-06; a copy is in the owner's `pass`, `github.com/sveltia_token_zlochevsky`). After that GitHub rejects it and the editor can no longer load or save: regenerate the token on its GitHub settings page (Regenerate) and sign in again with the new value;
   - a collaborator cannot use a fine-grained token, because such a token reaches only repositories of its own owner or of an organization. A collaborator makes a classic token with the `public_repo` scope instead. It can write to every public repository the collaborator has access to, not only this one.
 - On localhost the editor also offers to work with a local copy of the repository, without signing in to GitHub — see "Editing on your own computer".
 
