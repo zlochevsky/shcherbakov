@@ -10751,8 +10751,8 @@
           "is_generated": false,
           "generation_expression": null,
           "has_auto_increment": false,
-          "foreign_key_table": null,
-          "foreign_key_column": null
+          "foreign_key_table": "sets",
+          "foreign_key_column": "id"
         }
       },
       {
@@ -14185,6 +14185,15 @@
           "one_deselect_action": "nullify",
           "one_field": "entries",
           "sort_field": null
+        },
+        "schema": {
+          "table": "sets_entries",
+          "column": "sets_id",
+          "foreign_key_table": "sets",
+          "foreign_key_column": "id",
+          "constraint_name": "sets_entries_sets_id_fkey",
+          "on_update": "NO ACTION",
+          "on_delete": "SET NULL"
         }
       },
       {
