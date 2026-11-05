@@ -2,25 +2,49 @@
 
 # About
 
-This project, built with [HUGO](https://gohugo.io/), a static site generator, is a rebuild of the website dedicated to the works of Mikhail Shcherbakov, a Russian songwriter and performer. The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. The maintained version, serving as the starting point for the project, is available at <https://lambda.mkshch.com/>.
+A website presenting the work of Mikhail Shcherbakov, a Russian songwriter and performer.
 
-The goal of the project was to create a responsive layout for the website while preserving the original style and content as much as possible, making the website more usable for visitors and easier to maintain. The following objectives were set:
+## History
 
-1. Convert current set of the whole website's pages into HUGO project manually.
+The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. A community formed around it: people discussed Shcherbakov's work, added photographs, shared impressions of concerts, sent links to materials on the internet, ran sociological surveys of the audience, and so on. After the website's creator died at the end of 1999, the community kept growing and ran the website for about ten more years. With the rise of social networks the community's activity faded, although editors kept the website up for another fifteen years. In the 2020s, the idea of a new website came up in private conversations. The obstacles seen were unjustified spending on development, a possible (though never examined) rejection of the project by the community if it were done on a commercial basis, and others.
+
+In 2024, contact with the website's administrator was lost. After that, the editor declared one of the website's mirrors, <https://lambda.mkshch.com/>, its main address, leaving a redirect on the original server, to which limited technical access remained. The version the project took as its starting point is expected to stay available on one of the mirrors, e.g. <https://deniskhin.com/scherbakov/>, after the project moves to the main address.
+
+Since the website was technically about a quarter of a century out of date, an initiative group (Sergey Zlochevsky, Denis Milokhin and Liya Shabakaeva) decided to make it usable on mobile screens without losing any content, and to make shared work on it possible. To some extent, this was achieved by October 2026.
+
+The first step was to make the website convenient for visitors on any device and easy to maintain. The following objectives were set:
+
+1. Convert all pages of the old website into a [HUGO](https://gohugo.io/) project manually.
 2. Update the website's markup to be more friendly to modern browsers and search engines.
 3. Make the layout responsive for convenient use on various devices.
 4. Improve the overall user experience and interface, while preserving the style and intent of the website's creators. Add functionality, e.g. in the chords pages. Use JavaScript where appropriate.
-5. Maintain the simplicity and appearance of the current version: avoid excessive CSS complexity, refrain from overloading the user interface, optimize the graphic elements.
+5. Maintain the simplicity and appearance of the old version: avoid excessive CSS complexity, refrain from overloading the user interface, optimize the graphic elements.
 
-By design, the website was to keep its old-fashioned style while being as usable as possible. By October 2026 the main objectives have been achieved: all pages of the old website have been converted into HUGO, the markup has been updated and the layout is responsive; data on songs, concerts, albums and books is kept in a [Directus](https://directus.io/) database (on [PostgreSQL](https://www.postgresql.org/)), the song catalogue has been rethought, and song pages have chord display modes and transposition. New goals have been set and achieved as well: full-text search ([Pagefind](https://pagefind.app/)), a catalogue of translations and language sections, and in-browser text editing for the site editor. The aim not to depart from simplicity and the old look (objective 5) remains a working principle.
-
-The code, templates, and documentation were largely written with the help of AI ([Claude](https://claude.ai/)) under the guidance and review of project participants. AI was also used to prepare page content in languages other than Russian and English.
+By October 2026 these objectives have been achieved: all pages of the old website have been converted into HUGO, the markup has been updated and the layout is responsive; data on songs, concerts, albums and books is kept in a [Directus](https://directus.io/) database (on [PostgreSQL](https://www.postgresql.org/)), the song catalogue has been rethought, and song pages have chord display modes and transposition. New goals have been set and achieved as well: full-text search ([Pagefind](https://pagefind.app/)), a catalogue of translations and language sections, and in-browser text editing for the site editor. The project is meant to replace the old website at its address, so old links should lead to the corresponding new pages: redirects are planned for pages whose path has changed.
 
 Specific implementation aspects, e.g. integration with the [studio records store](https://mkshch.com/) or changing the Russian character encoding (from KOI8-R to UTF-8), are intentionally not considered here, as they are deemed not significant enough for the main readme file.
 
+## Goal
+
+The goal is to present Mikhail Shcherbakov's work on the internet, including verified texts by the author, information on upcoming and past concerts and links to materials on the internet, and to create and maintain the means for working on the project together. The work is loosely divided into several areas.
+
+1. **Events** — following Shcherbakov's concerts, keeping the announcements (in the news section) and the "Log", keeping the information on the main page up to date, maintaining the "Dictionary of Foreign Words".
+2. **Fan club, performers, criticism** — looking for information on events among performers of Shcherbakov's songs (not started yet), not missing interesting photographs, following publications on the internet (including discussions in blogs and social networks, and videos), fans' creative work, criticism, and academic work.
+3. **Code and maintenance** — development, support, and the project's infrastructure. Writing the documentation, keeping it up to date and in order. Further organizing of the fan club and criticism materials now that they have been moved from the old website. How the website works is described in this README and in `docs/`.
+4. **Performances** — the database of concerts and studio recordings: adding and checking what was performed, where and when, and what was special about particular performances. The books and discs sections of the website go with it.
+5. **Texts and music** — keeping the song catalogue, correcting errors found in the texts, recording performance variants in the texts. Chords (notation) in the song texts: correcting errors, refining, making the notation more convenient, without a zealous drive to show every nuance in it.
+6. **Statements** — organizing the author's remarks (answers to notes from the audience, introductions to songs). An ambitious area; work has not started yet.
+7. **Language sections** — adding song translations into other languages, creating website pages in other languages. Each language section is meant to be curated by one person.
+
+Editing rights in the database are given by area: each area can have its own role with access only to the sections it needs (see ["Who updates the site and how"](#who-updates-the-site-and-how) below). When the work is shared among people, the website does not rest on one person. How new participants will join the work is not decided yet (see [docs/showcase-and-club.md](docs/showcase-and-club.md)). The editorial email is always available: <deniskhin@gmail.com>.
+
 Currently, the website is created and maintained by a small Russian-speaking community, which explains why the vast majority of the pages are in Russian. Unfortunately, this circumstance makes it more difficult to attract new people and resources to the project, but at the same time, it gives hope that the website will be cared for by individuals who are passionate about both the work and person of Mikhail Shcherbakov and the memory of the website's creator, Vladimir Smirnov.
 
-The website is created and maintained by people not affiliated with the author, Mikhail Shcherbakov, although some of them know him personally. Moreover, a significant portion of the content is not approved by the author. Therefore, the website will remain unofficial in the foreseeable future. Nevertheless, it continues to be, as it has been for the past decades, the most complete collection of the author's texts on the internet, as well as materials dedicated to him.
+## Principles
+
+- **Simplicity and the old look.** The website keeps its old-fashioned style while striving to become more convenient: no excessive CSS complexity, no overloaded interface, optimized graphics (objective 5 has become a standing principle).
+- **Unofficial status.** The website is created and maintained by people not affiliated with the author, Mikhail Shcherbakov, although some of them know him personally. The texts of most songs in the catalogue have been checked against the edition "Собрание текстов" (Collected Texts, 2023), but a significant portion of the content is not approved by the author, so the website will remain unofficial in the foreseeable future. Nevertheless, as in the past decades, it remains the most complete collection of the author's texts and materials about him on the internet.
+- **AI under human review.** The code, templates, and documentation were largely written with the help of AI ([Claude](https://claude.ai/)) under the guidance of project participants. AI was also used to translate the main pages into other languages; these translations await review by the section curators.
 
 # Terminology
 
