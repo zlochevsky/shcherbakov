@@ -5,6 +5,7 @@
         "textFinishAtLine": 43
     }
 }
+
 Где-то в горах высоких или в песках далёких -           Cm Fm
 Билли, один из многих славных ребят.                    Cm D7 G Cm G
 К пыли давно привычный, Билли - солдат обычный,         Cm Fm
@@ -15,7 +16,7 @@
 Билли шагает, Билли поёт.                               Cm F Ab G
 
     Good-bye, good-bye my home.                         Cm
-    Good-bye, good-bye my mummy.                        Fm
+    Good-bye, good-bye my mommy.                        Fm
     Good-bye, good-bye my baby.                         Cm
     Good-bye my love.                                   D7   G   Cm A7
 
@@ -29,7 +30,7 @@
 янки стреляет, янки поёт.                               Dm G B A
 
     Good-bye, good-bye my home.                         Dm
-    Good-bye, good-bye my mummy.                        Gm
+    Good-bye, good-bye my mommy.                        Gm
     Good-bye, good-bye my baby.                         Dm
     Good-bye my love.                                   E7 A Dm H7
 
@@ -43,7 +44,7 @@
 Томми шагает. Томми поёт.                               Em A C H
 
     Good-bye, good-bye my home.                         Em
-    Good-bye, good-bye my mummy.                        Am
+    Good-bye, good-bye my mommy.                        Am
     Good-bye, good-bye my baby.                         Em
     Good-bye my love.                                   F#7 H Em
 
@@ -57,4 +58,3 @@
 |----------------|----------------|----------------|
 |----------------|----------------|----------------|
 |----------------|----------------|0---------------|
-
