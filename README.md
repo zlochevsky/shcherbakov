@@ -2,15 +2,17 @@
 
 # About
 
-A website presenting the work of Mikhail Shcherbakov, a Russian songwriter and performer.
+A website presenting the work of Mikhail Shcherbakov, a Russian songwriter and performer: song texts with chords, concerts, discography, reviews and fans' materials. The project continues the website created by Vladimir Smirnov in the mid-1990s, keeping its look and content, and is run by fans.
 
 ## History
 
-The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. A community formed around it: people discussed Shcherbakov's work, added photographs, shared impressions of concerts, sent links to materials on the internet, ran sociological surveys of the audience, and so on. After the website's creator died at the end of 1999, the community kept growing and ran the website for about ten more years. With the rise of social networks the community's activity faded, although editors kept the website up for another fifteen years. In the 2020s, the idea of a new website came up in private conversations. The obstacles seen were unjustified spending on development, a possible (though never examined) rejection of the project by the community if it were done on a commercial basis, and others.
+The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. A community formed around it, with enthusiastic discussions of Mikhail Shcherbakov's work. Thanks to the community and to Vladimir's own activity, materials were added to the website in abundance: people shared impressions of concerts, sent links to reviews on the internet, photographs, academic and critical works, interviews; some participants wrote articles themselves; joint studies of Mikhail Shcherbakov's audience were carried out with the Public Opinion Foundation (FOM), and so on. After the tragic death of the website's creator at the end of 1999, the community stayed more or less active for about ten more years. During that time and after it, editors faithfully kept the website up in its original form. With the spread of the LiveJournal blogging platform and the arrival of Facebook, activity within the community naturally declined. After that, the idea of a new website came up again and again in private conversations. Depending on ready-made engines and site builders like WordPress was undesirable, investing in private development risked being unjustified, and a project controlled by one person, it seemed, could sooner or later set itself against the community.
 
-In 2024, contact with the website's administrator was lost. After that, the editor declared one of the website's mirrors, <https://lambda.mkshch.com/>, its main address, leaving a redirect on the original server, to which limited technical access remained. The version the project took as its starting point is expected to stay available on one of the mirrors, e.g. <https://deniskhin.com/scherbakov/>, after the project moves to the main address.
+In 2024, contact with the website's administrator was lost. After that, the editor declared one of the website's mirrors, <https://lambda.mkshch.com/>, its main address, leaving a redirect on the original server (limited technical access to the server remained). The version the project took as its starting point is expected to stay available on one of the mirrors, e.g. <https://deniskhin.com/scherbakov/>, after the project moves to the main address.
 
-Since the website was technically about a quarter of a century out of date, an initiative group (Sergey Zlochevsky, Denis Milokhin and Liya Shabakaeva) decided to make it usable on mobile screens without losing any content, and to make shared work on it possible. To some extent, this was achieved by October 2026.
+Since the website was technically about twenty-five years out of date, an initiative group (Sergey Zlochevsky, Denis Milokhin and Liya Shabakaeva) decided to make it usable on mobile screens without losing any content, and to make shared work on it possible. To some extent, this was achieved by October 2026.
+
+## First stage
 
 The first step was to make the website convenient for visitors on any device and easy to maintain. The following objectives were set:
 
@@ -20,37 +22,53 @@ The first step was to make the website convenient for visitors on any device and
 4. Improve the overall user experience and interface, while preserving the style and intent of the website's creators. Add functionality, e.g. in the chords pages. Use JavaScript where appropriate.
 5. Maintain the simplicity and appearance of the old version: avoid excessive CSS complexity, refrain from overloading the user interface, optimize the graphic elements.
 
-By October 2026 these objectives have been achieved: all pages of the old website have been converted into HUGO, the markup has been updated and the layout is responsive; data on songs, concerts, albums and books is kept in a [Directus](https://directus.io/) database (on [PostgreSQL](https://www.postgresql.org/)), the song catalogue has been rethought, and song pages have chord display modes and transposition. New goals have been set and achieved as well: full-text search ([Pagefind](https://pagefind.app/)), a catalogue of translations and language sections, and in-browser text editing for the site editor. The project is meant to replace the old website at its address, so old links should lead to the corresponding new pages: redirects are planned for pages whose path has changed.
-
-Specific implementation aspects, e.g. integration with the [studio records store](https://mkshch.com/) or changing the Russian character encoding (from KOI8-R to UTF-8), are intentionally not considered here, as they are deemed not significant enough for the main readme file.
+By October 2026 these objectives have been achieved: all HTML pages of the old website have been converted into HUGO, the markup has been updated and the layout has become responsive; the pages have been re-encoded from KOI8-R to UTF-8; data on songs, concerts, albums and books is now kept in a [Directus](https://directus.io/) database (on [PostgreSQL](https://www.postgresql.org/)), the alphabetical, chronological and other song catalogues have been rethought as a single catalogue, and song pages have chord display modes and transposition. New goals have been set and achieved as well: full-text search ([Pagefind](https://pagefind.app/)), a catalogue of translations, language sections, and in-browser text editing for the site's editors. The project is meant to replace the old website at its address, so old links should lead to the corresponding new pages: redirects are planned for pages whose path has changed.
 
 ## Goal
 
-The goal is to present Mikhail Shcherbakov's work on the internet, including verified texts by the author, information on upcoming and past concerts and links to materials on the internet, and to create and maintain the means for working on the project together. The work is loosely divided into several areas.
+The goal of the project is to develop, through the community's efforts, a website presenting Mikhail Shcherbakov's work on the internet.
 
-1. **Events** — following Shcherbakov's concerts, keeping the announcements (in the news section) and the "Log", keeping the information on the main page up to date, maintaining the "Dictionary of Foreign Words".
-2. **Fan club, performers, criticism** — looking for information on events among performers of Shcherbakov's songs (not started yet), not missing interesting photographs, following publications on the internet (including discussions in blogs and social networks, and videos), fans' creative work, criticism, and academic work.
+The project sees its task as follows:
+
+- to publish the author's latest editions of the texts and provide them with harmonies (where possible, the author's own and correct ones);
+- to announce upcoming concerts and share information about past ones;
+- to keep data on the author's printed editions, the discography, and the catalogue of performances, shown on the website as the concert catalogue;
+- to publish materials related to Mikhail Shcherbakov's work on the website, and links to such materials on the internet (reviews, criticism, essays, reflections, research, interviews, concert photographs, song translations into other languages, fans' creative work, other people's projects with Shcherbakov's songs);
+- not to publish the author's recordings of songs, but to link to the online store and to streaming services that pay royalties;
+- to maintain and improve the website and make shared work on it possible;
+- to maintain continuity with the old website.
+
+## Work areas
+
+1. **Events** — following Shcherbakov's concerts and keeping the information on the main page up to date, keeping the announcements, the news section and the "Log".
+2. **Fan club, performers, criticism** — looking for information on events among performers of Shcherbakov's songs (not started yet), not missing interesting photographs, following publications on the internet (including discussions in blogs and social networks, and videos), fans' creative work, criticism, academic work; maintaining the "Dictionary of Foreign Words".
 3. **Code and maintenance** — development, support, and the project's infrastructure. Writing the documentation, keeping it up to date and in order. Further organizing of the fan club and criticism materials now that they have been moved from the old website. How the website works is described in this README and in `docs/`.
 4. **Performances** — the database of concerts and studio recordings: adding and checking what was performed, where and when, and what was special about particular performances. The books and discs sections of the website go with it.
 5. **Texts and music** — keeping the song catalogue, correcting errors found in the texts, recording performance variants in the texts. Chords (notation) in the song texts: correcting errors, refining, making the notation more convenient, without a zealous drive to show every nuance in it.
 6. **Statements** — organizing the author's remarks (answers to notes from the audience, introductions to songs). An ambitious area; work has not started yet.
 7. **Language sections** — adding song translations into other languages, creating website pages in other languages. Each language section is meant to be curated by one person.
 
-Editing rights in the database are given by area: each area can have its own role with access only to the sections it needs (see ["Who updates the site and how"](#who-updates-the-site-and-how) below). When the work is shared among people, the website does not rest on one person. How new participants will join the work is not decided yet (see [docs/showcase-and-club.md](docs/showcase-and-club.md)). The editorial email is always available: <deniskhin@gmail.com>.
-
-Currently, the website is created and maintained by a small Russian-speaking community, which explains why the vast majority of the pages are in Russian. Unfortunately, this circumstance makes it more difficult to attract new people and resources to the project, but at the same time, it gives hope that the website will be cared for by individuals who are passionate about both the work and person of Mikhail Shcherbakov and the memory of the website's creator, Vladimir Smirnov.
-
 ## Principles
 
-- **Simplicity and the old look.** The website keeps its old-fashioned style while striving to become more convenient: no excessive CSS complexity, no overloaded interface, optimized graphics (objective 5 has become a standing principle).
-- **Unofficial status.** The website is created and maintained by people not affiliated with the author, Mikhail Shcherbakov, although some of them know him personally. The texts of most songs in the catalogue have been checked against the edition "Собрание текстов" (Collected Texts, 2023), but a significant portion of the content is not approved by the author, so the website will remain unofficial in the foreseeable future. Nevertheless, as in the past decades, it remains the most complete collection of the author's texts and materials about him on the internet.
+- **Simplicity and the old look.** The website keeps its old-fashioned style while striving to become more convenient: no excessive CSS complexity, no overloaded interface, new graphics optimized.
+- **Unofficial status.** The website is created and maintained by people not affiliated with the author, Mikhail Shcherbakov, although some of them know him personally. The texts of most songs in the catalogue have been checked against the edition "Собрание текстов" (Collected Texts, 2023), but a fair part of the other content is not approved by the author, so the website will remain unofficial in the foreseeable future. Nevertheless, as in the past decades, it remains the most complete collection of the author's texts and materials about him on the internet.
 - **AI under human review.** The code, templates, and documentation were largely written with the help of AI ([Claude](https://claude.ai/)) under the guidance of project participants. AI was also used to translate the main pages into other languages; these translations await review by the section curators.
+
+## Participation
+
+Editing rights in the database are given by area: each person can get the role with access to the sections they need (see ["Who updates the site and how"](#who-updates-the-site-and-how) below). When the work is shared among people, the website does not rest on one person.
+
+The data outside the database (e.g. song texts, chords, translations, articles, gallery pages, other pages of the old website, page parameters (front matter), page templates, project documentation) is kept in this public repository. Participants with write access edit it directly (including through the `/admin/` editor); anyone can propose a change with a pull request.
+
+Currently, the website is created and maintained by a small Russian-speaking community. The vast majority of the website's pages and of the code documentation is naturally written in Russian, but the community considers itself open to working both with those who speak Russian but do not read it (e.g. children of emigrants who know another language well) and with those who do not know Russian at all. The community encourages good equirhythmic translations of Mikhail Shcherbakov's songs into other languages. It would like to widen the website's language coverage by finding curators for its language sections. The community is ready to expand the documentation in English. It hopes that the website will be cared for by people who hold dear the work and person of Mikhail Shcherbakov.
+
+How new participants will join the work is not decided yet. The editorial email is always available: <deniskhin@gmail.com>.
 
 # Terminology
 
 - Performer abbreviations used throughout the database: MKS — Mikhail Konstantinovich Shcherbakov; MLS — Mikhail Leonidovich Starodubtsev.
-- The term "event" almost always refers to a concert (public or private/home) or a studio recording session (or a series of sessions).
-- The project clearly distinguishes between songs (`works` — e.g. in the song catalogue) and performances (`perfs` — e.g. on the concerts list page). Performances belong to events (both concerts and studio recordings), while songs belong to published editions. Performances are naturally linked to songs in the database, but they remain distinct entities.
+- The term "event" always or almost always refers to a concert (public or private/home) or a studio recording session (or a series of sessions).
+- The project clearly distinguishes between songs (`works` — e.g. for the song catalogue) and performances (`perfs` — e.g. for the concerts list page). Performances of songs are always linked to an event (a concert or a studio recording). Printed editions contain the songs themselves (song texts), with no link to the events at which they may have been performed.
 
 # Structure
 
@@ -72,13 +90,14 @@ Standard Hugo directories:
 Project directories:
 
 - `docs` -- project documentation (mostly in Russian): the Directus schema and conventions ([docs/directus.md](docs/directus.md)), the front matter reference, the site structure analysis ([docs/site-structure-analysis.md](docs/site-structure-analysis.md)) and plans for migrating legacy sections;
-- `scripts` -- Python tools: `check-links.py` (links to pages that do not exist yet), `check-separation.py` (see "Two sites in one" below), `sveltia-normalize.py` (see "Editing in the browser" below), `comments-markup` (markup of the comments texts), `legacy-convert` (used to convert legacy pages to Hugo content; the conversion is complete), `directus-schema.py` (Directus schema snapshot, Flows and permissions export, relation diagrams in docs/directus.md);
+- `scripts` -- Python tools: `check-links.py` (links to pages that do not exist yet), `check-separation.py` (see "Two sites in one" below), `sveltia-normalize.py` (see "Editing in the browser" below), `comments-markup` (markup of the comments texts), `legacy-convert` (used to convert legacy pages to Hugo content; the conversion is complete), `directus-schema.py` (Directus schema snapshot, Flows and permissions export, relation diagrams in docs/directus.md), `directus-roles.py` (editor roles and permissions by work area, see «Роли и права» in docs/directus.md);
 - `directus-extensions` -- all Directus extensions: sources of our own (`setlist-editor`, `perf-picker`, `album-tracklist`) and built third-party packages, see [docs/directus.md](docs/directus.md);
 - `workfiles` -- local working files (images, tables, drafts). The directory is in `.gitignore`.
 
 A part of the site's content (song catalogue, concerts, performances, albums, books, announces) is served from an external Directus database (`db.sch.com.ru`) rather than from files in this repository. To learn how the data is organised:
 
 - [docs/directus.md](docs/directus.md) describes the collections, their relations, automation (Flows) and naming conventions;
+- [docs/directus-snapshot.json](docs/directus-snapshot.json) is a snapshot of the database schema (all collections, fields and relations), [docs/directus-export/](docs/directus-export/) an export of the Flows and the permission model; both are refreshed with `scripts/directus-schema.py --fetch` after every model change, so git history shows what changed and when. They need neither the server nor a token;
 - `https://db.sch.com.ru/server/specs/oas` with the public token (see Building) returns the OpenAPI description of exactly the collections and fields that token can read. Open it in any OpenAPI viewer, e.g. Swagger UI;
 - the API itself shows real records, e.g. `https://db.sch.com.ru/items/works?limit=5` with the token in the `Authorization: Bearer` header or the `access_token` query parameter.
 
@@ -131,10 +150,21 @@ The site is built and published to GitHub Pages by GitHub Actions ([.github/work
 
 ## Who updates the site and how
 
-- **The maintainer and the music content administrator** edit files and commit them to git; the build on push publishes the site.
-- **Text editors** edit songs, translations, site pages and fan-club articles in the editor on the site (`/admin/`, see "Editing in the browser" below), without git: each save is a commit, and the build on push publishes it. A new song or translation is created in Directus; the Flow «Create text file for new song or translation» creates the file for its text (see [docs/directus.md](docs/directus.md)).
-- **The announces content administrator** works only in Directus Studio, without git. An announce appears on the site with the scheduled build, or at once with a manual run of the workflow (the «Run workflow» button on the Actions tab on GitHub). A rebuild on every save in Directus exists but is turned off.
-- **A concert history administrator** (photos and performances of past concerts) is still an idea. The photos are meant to be kept in the Directus file storage rather than as files in git: then this person too works only in Directus, and the same scheduled build updates the site.
+Changes reach the site in two ways: through the Directus database and through the repository.
+
+**The Directus database** (Directus Studio, `db.sch.com.ru`). Roles:
+
+- **Administrator** — everything, including the data model, Flows and permissions (the "Code and maintenance" area);
+- **Content editor** — editing in all site tables;
+- **six area editors** («Редактор: События», «…: Фан-клуб, исполнители, критика», «…: Исполнения», «…: Тексты и музыкальная часть», «…: Высказывания», «…: Языковые разделы», i.e. Events, Fan club, Performances, Texts and music, Statements, Language sections) — read everything, edit only their area's tables. Which tables belong to which area: «Роли и права» in [docs/directus.md](docs/directus.md).
+
+Changes in the database appear on the site with the scheduled build (twice a day), or at once with a manual run of the workflow (the «Run workflow» button on the Actions tab on GitHub). A rebuild on every save in Directus exists but is turned off.
+
+**The repository** (song texts and translations, pages, articles, templates). Participants with write access edit the files either in the editor on the site (`/admin/`, see "Editing in the browser" below) without git, or in their own clone with git. Each save in the editor is a commit; the build on push publishes the site. A new song or translation is created in Directus; the Flow «Create text file for new song or translation» creates the file for its text (see [docs/directus.md](docs/directus.md)).
+
+Rights in the database and in the repository are independent: a texts editor, for instance, needs both the «Редактор: Тексты и музыкальная часть» role in Directus and write access to the repository.
+
+Photos of past concerts are meant to be kept in the Directus file storage rather than as files in git — still an idea.
 
 ## Editing in the browser
 
