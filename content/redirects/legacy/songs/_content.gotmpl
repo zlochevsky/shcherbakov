@@ -1,0 +1,26 @@
+{{- /* Перенаправления со старых адресов песен (htmtexts/<год>/<id>.html — хронологический и алфавитный
+       каталоги, htmaccords/<год>/<id>.html — гармонический) на новые страницы песен, а со старых оглавлений
+       по годам — на каталог песен. Список — data/legacy-songs.json: songs — старый путь → id песни,
+       indexes — старые оглавления. Страницу песни находит при сборке макет redirect-song, поэтому
+       перенос песни в другую папку года перенаправление не ломает. */ -}}
+{{- $data := index hugo.Data "legacy-songs" -}}
+{{- range $from, $id := $data.songs -}}
+	{{- template "add" (dict "page" $ "from" $from "song" $id) -}}
+{{- end -}}
+{{- range $data.indexes -}}
+	{{- template "add" (dict "page" $ "from" . "song" "") -}}
+{{- end -}}
+
+{{- define "add" -}}
+	{{- $up := strings.Repeat (sub (len (split .from "/")) 1) "../" -}}
+	{{- .page.AddPage (dict
+		"path" (replace (replace .from "/" "-") "." "-")
+		"kind" "page"
+		"title" .from
+		"url" (printf "/%s" .from)
+		"type" "miscellaneous"
+		"layout" "redirect-song"
+		"sitemap" (dict "disable" true)
+		"params" (dict "song" .song "up" $up "noindex" true)
+	) -}}
+{{- end -}}

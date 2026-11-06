@@ -1,0 +1,12 @@
+{{- /* Перенаправление со старого адреса песни (см. content/redirects/legacy/songs/_content.gotmpl):
+       params.song — id песни, params.up — «../» до корня сайта. Песня ищется среди страниц texts/ по имени
+       файла; без id или если песни нет — каталог песен. */ -}}
+{{- $pages := partialCached "song-pages-by-id.html" . "song-pages-by-id" -}}
+{{- $to := "catalogue.html" -}}
+{{- with .Params.song }}{{ with index $pages . }}{{ $to = strings.TrimPrefix site.BaseURL .Permalink }}{{ end }}{{ end -}}
+{{- $target := printf "%s%s" .Params.up $to -}}
+<!doctype html><meta charset="utf-8">
+<link rel="canonical" href="{{ partial "redirect-canonical.html" (dict "page" . "target" $target) }}">
+<meta name="robots" content="noindex, follow">
+<meta http-equiv="refresh" content="0; url={{ $target }}">
+<script>location.replace({{ $target | jsonify | safeJS }});</script>

@@ -1,0 +1,6 @@
+{{- /* Страницы песен (content/texts/<год>/<id>.md) по id — имени файла. Вызывать через partialCached. */ -}}
+{{- $m := dict -}}
+{{- range where site.RegularPages "Section" "texts" -}}
+	{{- $m = merge $m (dict .File.ContentBaseName .) -}}
+{{- end -}}
+{{- return $m -}}
