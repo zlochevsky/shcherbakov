@@ -67,7 +67,7 @@ How new participants will join the work is not decided yet. The editorial email 
 # Terminology
 
 - Performer abbreviations used throughout the database: MKS — Mikhail Konstantinovich Shcherbakov; MLS — Mikhail Leonidovich Starodubtsev.
-- The term "event" always or almost always refers to a concert (public or private/home) or a studio recording session (or a series of sessions).
+- The term "event" in the project always or almost always refers to a concert (public or private/home) or a studio recording session (or a series of sessions).
 - The project clearly distinguishes between songs (`works` — e.g. for the song catalogue) and performances (`perfs` — e.g. for the concerts list page). Performances of songs are always linked to an event (a concert or a studio recording). Printed editions contain the songs themselves (song texts), with no link to the events at which they may have been performed.
 
 # Structure
@@ -76,25 +76,25 @@ Hugo's configuration is `hugo.json` in the root directory (site parameters); the
 
 Standard Hugo directories:
 
-- `content` -- the pages: `.md` files whose body is mostly HTML markup. At the top of each file there is *front matter* -- page parameters in JSON. The fields the templates actually read are listed in [docs/frontmatter.md](docs/frontmatter.md). It holds both sections of the old site and new ones:
+- `content` — the pages: `.md` files whose body is mostly HTML markup. At the top of each file there is *front matter* — page parameters in JSON. The fields the templates actually read are listed in [docs/frontmatter.md](docs/frontmatter.md). It holds both sections of the old site and new ones:
     - inherited from the old site: sections `Archive/`, `Books/`, `Disks/`, `fans/`, `FOM/`, `Images/`, `Parodies/`, `Praises/`, `SCH2/`, `Tapes/`, pages `about.md`, `bio.md`, `buy.md`, `kniga_pamyati.md`, `log.md`, `news.md`, `no.md`, `praises.md`, `sociology.md`, `statistics.md`, `tab.md`;
     - new sections and pages:
-        - sections: language subdirectories `de/`, `en/`, `eo/`, `fr/`, `he/`, `uk/` (more may follow), `texts/` for song texts, `redirects/legacy/` for redirect pages from old URLs (such as `/Tapes/index.html`); redirects from old song addresses (`/htmtexts/<year>/<id>.html`, `/htmaccords/<year>/<id>.html`) and yearly indexes are not files: `redirects/legacy/songs/_content.gotmpl` creates them at build time from `data/legacy-songs.json` (old path → song id), and the `redirect-song` layout finds the song page, `Cycles/` for song cycles (its pages have front matter only, as they take their content from the Directus database at build time);
-        - pages: `admin-directus.md` -- a reference page for the editor describing the tables in the Directus database; `catalogue.md` -- the song catalogue; `concerts.md` -- the concert catalogue; `translations.md` -- the translations catalogue (all three catalogues have front matter only, as they take their content from Directus at build time); `search.md` -- the search page (front matter only too, as the page has no text of its own); `_index.md` and `_footer.md`, the content of the home page;
-- `layouts` -- templates: page layouts in `layouts/miscellaneous`, shared parts in `layouts/partials`, shortcodes for page bodies in `layouts/shortcodes`. `{{< lastmod "translations" >}}` gives the date of the latest record added to a Directus collection (on the home page). `{{< translations-count >}}` gives the number of translations into the page's language and the date of the latest one, as " (59, 07.10.26)" with the date in red (on the main language pages). Records migrated from the old site have no creation date, so for them only the number is shown;
-- `assets` -- files processed during the build: CSS (`assets/css`; all shared colours are CSS variables in `assets/css/palette.css`, embedded into every page by `layouts/partials/palette.html` together with `assets/css/site.css`, the rules for every page, e.g. no underline on hovered links; `assets/css/mobile-header.css` is the compact mobile header shared by the home page, search and the three catalogues) and SVG icons (`assets/svg`: album icons for the song catalogue, `svg/cd`, and format icons, `svg/format`);
-- `static` -- files copied to the site as they are: images, PDFs and other downloadable files; `static/admin` is the in-browser editor (see "Editing in the browser" below);
-- `archetypes` -- templates for new pages, not used in the project (archetypes only apply when a page is created with `hugo new content ...` in the terminal);
-- `public` -- where Hugo puts the built site. It is not stored in git: the published site is built by GitHub Actions (see below).
+        - sections: language subdirectories `de/`, `en/`, `eo/`, `fr/`, `he/`, `uk/` (more may follow), `texts/` for song texts; `redirects/legacy/` for redirect pages from old URLs (such as `/Tapes/index.html`); redirects from old song addresses (`/htmtexts/<year>/<id>.html`, `/htmaccords/<year>/<id>.html`) and yearly indexes are not files: `redirects/legacy/songs/_content.gotmpl` creates them at build time from `data/legacy-songs.json` (old path → song id), and the `redirect-song` layout finds the song page; `Cycles/` for song cycles (its pages have front matter only, as they take their content from the Directus database at build time);
+        - pages: `admin-directus.md` — a reference page for the editor describing the tables in the Directus database; `catalogue.md` — the song catalogue; `concerts.md` — the concert catalogue; `translations.md` — the translations catalogue (all three catalogues have front matter only, as they take their content from Directus at build time); `search.md` — the search page (front matter only too, as the page has no text of its own); `_index.md` and `_footer.md`, the content of the home page;
+- `layouts` — templates: page layouts in `layouts/miscellaneous`, shared parts in `layouts/partials`, shortcodes for page bodies in `layouts/shortcodes`. `{{< lastmod "translations" >}}` gives the date of the latest record added to a Directus collection (on the home page). `{{< translations-count >}}` gives the number of translations into the page's language and the date of the latest one, as " (59, 07.10.26)" with the date in red (on the main language pages). Records migrated from the old site have no creation date, so for them only the number is shown;
+- `assets` — files processed during the build: CSS (`assets/css`; all shared colours are CSS variables in `assets/css/palette.css`, embedded into every page by `layouts/partials/palette.html` together with `assets/css/site.css`, the rules for every page, e.g. no underline on hovered links; `assets/css/mobile-header.css` is the compact mobile header shared by the home page, search and the three catalogues) and SVG icons (`assets/svg`: album icons for the song catalogue, `svg/cd`, and format icons, `svg/format`);
+- `static` — files copied to the site as they are: images, PDFs and other downloadable files; `static/admin` is the in-browser editor (see "Editing in the browser" below);
+- `archetypes` — templates for new pages, not used in the project (archetypes only apply when a page is created with `hugo new content ...` in the terminal);
+- `public` — where Hugo puts the built site. It is not stored in git: the published site is built by GitHub Actions (see below).
 
 Project directories:
 
-- `docs` -- project documentation (mostly in Russian): the Directus schema and conventions ([docs/directus.md](docs/directus.md)), the front matter reference, the site structure analysis ([docs/site-structure-analysis.md](docs/site-structure-analysis.md)) and plans for migrating legacy sections;
-- `scripts` -- Python tools: `check-links.py` (links to pages that do not exist yet), `check-separation.py` (see "Two sites in one" below), `sveltia-normalize.py` (see "Editing in the browser" below), `comments-markup` (markup of the comments texts), `legacy-convert` (used to convert legacy pages to Hugo content; the conversion is complete), `directus-schema.py` (Directus schema snapshot, Flows and permissions export, relation diagrams in docs/directus.md), `directus-roles.py` (editor roles and permissions by work area, see «Роли и права» in docs/directus.md);
-- `directus-extensions` -- all Directus extensions: sources of our own (`setlist-editor`, `perf-picker`, `album-tracklist`) and built third-party packages, see [docs/directus.md](docs/directus.md);
-- `workfiles` -- local working files (images, tables, drafts). The directory is in `.gitignore`.
+- `docs` — project documentation (mostly in Russian): the Directus schema and conventions ([docs/directus.md](docs/directus.md)), the front matter reference, the site structure analysis ([docs/site-structure-analysis.md](docs/site-structure-analysis.md)) and plans for migrating legacy sections;
+- `scripts` — Python tools: `check-links.py` (links to pages that do not exist yet), `check-separation.py` (see "Two sites in one" below), `sveltia-normalize.py` (see "Editing in the browser" below), `comments-markup` (markup of the «Словарь» texts), `legacy-convert` (used to convert legacy pages to Hugo content; the conversion is complete), `directus-schema.py` (Directus schema snapshot, Flows and permissions export, relation diagrams in docs/directus.md), `directus-roles.py` (editor roles and permissions by work area, see «Роли и права» in docs/directus.md);
+- `directus-extensions` — all Directus extensions: sources of our own (`setlist-editor`, `perf-picker`, `album-tracklist`) and built third-party packages, see [docs/directus.md](docs/directus.md);
+- `workfiles` — local working files (images, tables, drafts). The directory is in `.gitignore`.
 
-A part of the site's content (song catalogue, concerts, performances, albums, books, announces) is served from an external Directus database (`db.sch.com.ru`) rather than from files in this repository. To learn how the data is organised:
+As mentioned, a part of the site's content (namely song metadata, concerts, data on performances, albums, books, announces and more) comes not from files in this repository but from an external Directus database (`db.sch.com.ru`). To learn how the data is organised:
 
 - [docs/directus.md](docs/directus.md) describes the collections, their relations, automation (Flows) and naming conventions;
 - [docs/directus-snapshot.json](docs/directus-snapshot.json) is a snapshot of the database schema (all collections, fields and relations), [docs/directus-export/](docs/directus-export/) an export of the Flows and the permission model; both are refreshed with `scripts/directus-schema.py --fetch` after every model change, so git history shows what changed and when. They need neither the server nor a token;
@@ -109,13 +109,13 @@ The order of entries is set twice, and the two must agree: **Hugo looks only at 
 
 Besides the standard `name`, `pageRef`, `weight`, `parent`/`identifier`, an entry may have `params`:
 
-- `shortName` -- the label in the mobile version (the full `name` is shown on wide screens): «Песни», «Концерты», «Главная»;
-- `mobileOnly: "yes"` -- the entry is shown only in the mobile version;
-- `icon: "home"` / `"search"` -- a grey icon before the label (`layouts/partials/menu-icon.html`);
-- `date: "hide"` / `"show"` -- an exception for the date: hide or show it on this entry regardless of the page (normally not needed, see below).
+- `shortName` — the label in the mobile version (the full `name` is shown on wide screens): «Песни», «Концерты», «Главная»;
+- `mobileOnly: "yes"` — the entry is shown only in the mobile version;
+- `icon: "home"` / `"search"` — a grey icon before the label (`layouts/partials/menu-icon.html`);
+- `date: "hide"` / `"show"` — an exception for the date: hide or show it on this entry regardless of the page (normally not needed, see below);
+- `collapsible: "yes"` with children marked `toggleChild: "yes"` — a section whose sub-entries open as further cells («Фан-клуб»); `dropdown: "yes"` — a list opening inside its own cell («Языки», the children have `lang`).
 
-The update date after an entry's label is a property of the page it leads to, not of the entry: one link behaves the same in every menu. On the page it is set by the «Показывать дату в меню» checkbox (`params.menuDate`) and «Откуда дата для меню» (`params.menuDateFrom`), both in the editor under the page's parameters. The source: empty -- the page's own «Дата» field (`lastmod`, top level of the front matter); `praises`, `club`, `images`, `texts`, `translations` -- the latest «Дата» among reviews, fan-club articles (fans, parodies, Щ-1, Щ-2), picture pages, song texts, translations; `announces` -- the latest publication date among the active Directus announces (none active -- no date). A collapsible entry without a page of its own («Фан-клуб») gets the latest of its children's dates. No date -- none in the menu: Hugo does not fall back to the file's modification time (`hugo.json` → `frontmatter.lastmod`), which on the site would be the build time. The date is computed by `layouts/partials/menu-entry-date.html` and `menu-date.html` and printed by `menu-datum.html`: «13.10.26» in line with the label; in narrow menu columns below the label in a smaller font and with the full year, «13.10.2026».
-- `collapsible: "yes"` with children marked `toggleChild: "yes"` -- a section whose sub-entries open as further cells («Фан-клуб»); `dropdown: "yes"` -- a list opening inside its own cell («Языки», the children have `lang`).
+The update date after an entry's label is a property of the page it leads to, not of the entry: one link behaves the same in every menu. On the page it is set by the «Показывать дату в меню» checkbox (`params.menuDate`) and «Откуда дата для меню» (`params.menuDateFrom`), both in the editor under the page's parameters. The source: empty — the page's own «Дата» field (`lastmod`, top level of the front matter); `praises`, `club`, `images`, `texts`, `translations` — the latest «Дата» among reviews, fan-club articles (fans, parodies, Щ-1, Щ-2), picture pages, song texts, translations; `announces` — the latest publication date among the active Directus announces (none active — no date). A collapsible entry without a page of its own («Фан-клуб») gets the latest of its children's dates. No date — none in the menu: Hugo does not fall back to the file's modification time (`hugo.json` → `frontmatter.lastmod`), which on the site would be the build time. The date is computed by `layouts/partials/menu-entry-date.html` and `menu-date.html` and printed by `menu-datum.html`: «13.10.26» in line with the label; in narrow menu columns below the label in a smaller font and with the full year, «13.10.2026».
 
 In the mobile version the menu hides behind the button and is laid out in columns: one column below 18.75em, two from 18.75em, three from 35em (300 and 560 px at the default font size; all thresholds are in `em`, so they grow with the reader's font size). The home page header has two steps: below 25em the title and the button are smaller; from 25em the button has its full size and the title is centred.
 
@@ -200,7 +200,7 @@ A picture inserted with the editor's button is copied into the clone's `static/I
 - Language pages: title and body.
 - Site pages: title and body of the home page, biography, about, where to buy, news (the chronicle; announces come from Directus), what is missing, tablature, statistics, the log (the old chronicle), the list of reviews (`praises.md`) and «Другие публикации» on the books page; the body of the footer. The song and translation catalogues, concerts and search have only the title, search engine fields and the date: the whole content of these pages is built by the template (from Directus; for search, from the Pagefind index), the file body is not output, so they have no «Текст» field. The home page body is HTML laid out in blocks, so edit it with care: an unclosed tag breaks the home page.
 - Reviews (`content/Praises`): title, author, subtitle and body.
-- Fan-club articles — one collection over several folders: `fans` (with the comments page `kom.md`), `Parodies`, `FOM` (Щ-1), `SCH2` (Щ-2), plus `sociology.md` and `kniga_pamyati.md`. The editor's sidebar shows a folder tree; picking a folder narrows the list. Fields: title, address (`url`), author, subtitle, "back" link and body. The "back" link is the corner-navigation item at the top and bottom of the page ([Фан-клуб], [Пародии], [Щ-1]) that leads to the parent page: the "address" is a path from the site root without a leading slash (`fans/index.html`), the "title" is the link text. Empty — the section's own table of contents; set it only when the parent is another page (as on the Щ-1 table of contents, which leads to «Фан-клуб»). Entries are selected by address, so the redirects from old addresses live deeper, in `content/redirects/legacy/`, and are not listed.
+- Fan-club articles — one collection over several folders: `fans` (with the «Словарь» page `kom.md`), `Parodies`, `FOM` (Щ-1), `SCH2` (Щ-2), plus `sociology.md` and `kniga_pamyati.md`. The editor's sidebar shows a folder tree; picking a folder narrows the list. Fields: title, address (`url`), author, subtitle, "back" link and body. The "back" link is the corner-navigation item at the top and bottom of the page ([Фан-клуб], [Пародии], [Щ-1]) that leads to the parent page: the "address" is a path from the site root without a leading slash (`fans/index.html`), the "title" is the link text. Empty — the section's own table of contents; set it only when the parent is another page (as on the Щ-1 table of contents, which leads to «Фан-клуб»). Entries are selected by address, so the redirects from old addresses live deeper, in `content/redirects/legacy/`, and are not listed.
 - Albums, cassettes, books, cycles and the tour archive (`Disks`, `Tapes`, `Books`, `Cycles`, `Archive`) — also one collection with a folder tree: title, address, page type (album, cassette, book, cycle, tour page, tables of contents), under the parameters the Directus record id and subtitle, search engine fields, date and body. The data (tracks, covers, imprint) come from Directus by `params.id`, so the page type and id of existing pages must not be changed.
 - Showcase pages — simple article pages in the site root outside the fan club («Что такое таблатуры», «Статистика» and new ones): title, address (`/imya.html`), author, subtitle, "back" link (empty — the home page), monospace `<pre>`, search engine fields, date and body.
 - Picture pages in `content/Images` (`images-page` layout): title, subtitle, "back" link, background colour, centred text and body (HTML). The redirects from old addresses in `content/Images/redirects` are not listed. Pictures themselves live in `static/Images` and are referred to by file name; the editor's insert-image button writes an address from the domain root (`/Images/…`), which does not open on github.io (site in the `/shcherbakov/` subfolder), so type the file name by hand.
@@ -214,7 +214,7 @@ Other front matter keys are kept as they are, but the editor writes the keys it 
 ### New entries
 
 - Songs and translations cannot be created, deleted or renamed in the editor, because a file name is the record's id in Directus. A new song or translation is created in Directus; a Directus Flow then commits an empty file for its text (see [docs/directus.md](docs/directus.md)), and after a reload the entry shows up in the editor.
-- A new page — the «+» button at the top of the editor (or «New» in a collection's list): first the kind is chosen — «Страница витрины», «Рецензия», «Статья фан-клуба», «Диск, книга, гастроли», «Страница картинок» — then its form is filled in. The file name is typed in Latin letters. New sections (folders) are not created in the editor: that is a decision about the site's structure, made by the developer.
+- A new page — the «+» button at the top of the editor (or «New» in a collection's list): first the kind is chosen — «Страница витрины», «Рецензия», «Статья фан-клуба», «Диск, книга, гастроли», «Страница картинок» — then its form is filled in. The file name is typed in Latin letters. New sections (folders) are not created in the editor: that is a decision about the site's structure, made by the developer. Nor are new page kinds (templates): that is code; a kind added by the developer appears in the list of kinds.
   - For a fan-club article and for an album, book or tour page the section folder is set by the "Parent Folder" field (the folder open in the list is filled in), and the address goes into the «Адрес» field — the same section and name: `/fans/imya.html`, `/Disks/imya.html`. A showcase page's address is `/imya.html`. Without it the page would not show in the list: these collections select entries by address.
   - An album, cassette, book or cycle also needs the page type and the Directus record id: the Directus record comes first, then the page. A review needs no address: `Praises/<name>.html`.
   - The editor fills `type` and `layout` (except the album/book page type) itself; the "back" link defaults to the section's table of contents, on a showcase page to the home page.
@@ -237,24 +237,16 @@ Other front matter keys are kept as they are, but the editor writes the keys it 
 
 # Links
 
-Current development build of the project, published automatically via GitHub Actions (see `.github/workflows/static.yml`), is viewable on our GitHub Pages:
+The current development version of the project, published automatically by GitHub Actions (see `.github/workflows/static.yml`), is on GitHub Pages:
 
 - <https://zlochevsky.github.io/shcherbakov/>
 
-Links on Mikhail Shcherbakov:
+About Mikhail Shcherbakov:
 
-- <https://lambda.mkshch.com/> -- startpoint version of the site (mostly in Russian);
-- <https://lambda.mkshch.com/English/index.html> -- the english page of the site.
+- <https://deniskhin.com/scherbakov> — the original version of the website;
+- <https://deniskhin.com/scherbakov/index.html> — the website's English page.
 
-Links on the website creator:
+About the website's creator:
 
-- <https://blackalpinist.com/> -- collection of mountaineering resources for the Russian communities of North America. (mostly in Russian);
-- <https://blackalpinist.com/~mi/orizaba/release_e.html> -- press release on December 28 1999 about death of Vladimir Smirnov and his companions (in English).
-
-Links on HUGO:
-
-- https://gohugo.io/ -- the official HUGO site
-- https://gohugo.io/installation/ -- HUGO installation manuals
-- https://gohugo.io/documentation/ -- HUGO documentation
-- https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3 -- HUGO video tutorials
-
+- <https://blackalpinist.com/> — a collection of mountaineering resources for the Russian-speaking communities of North America;
+- <https://blackalpinist.com/~mi/orizaba/release_e.html> — the press release of 28 December 1999 on the death of Vladimir Smirnov and his companions (in English).
