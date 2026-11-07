@@ -8,7 +8,7 @@ A website presenting the work of Mikhail Shcherbakov, a Russian songwriter and p
 
 The original website was created by Vladimir Smirnov in the mid-1990s at <https://blackalpinist.com/scherbakov/>. A community formed around it, with enthusiastic discussions of Mikhail Shcherbakov's work. Thanks to the community and to Vladimir's own activity, materials were added to the website in abundance: people shared impressions of concerts, sent links to reviews on the internet, photographs, academic and critical works, interviews; some participants wrote articles themselves; joint studies of Mikhail Shcherbakov's audience were carried out with the Public Opinion Foundation (FOM), and so on. After the tragic death of the website's creator at the end of 1999, the community stayed more or less active for about ten more years. During that time and after it, editors faithfully kept the website up in its original form. With the spread of the LiveJournal blogging platform and the arrival of Facebook, activity within the community naturally declined. After that, the idea of a new website came up again and again in private conversations. Depending on ready-made engines and site builders like WordPress was undesirable, investing in private development risked being unjustified, and a project controlled by one person, it seemed, could sooner or later set itself against the community.
 
-In 2024, contact with the website's administrator was lost. After that, the editor declared one of the website's mirrors, <https://lambda.mkshch.com/>, its main address, leaving a redirect on the original server (limited technical access to the server remained). The version the project took as its starting point is expected to stay available on one of the mirrors, e.g. <https://deniskhin.com/scherbakov/>, after the project moves to the main address.
+In 2024, contact with the website's administrator was lost. After that, the editor declared one of the website's mirrors, <https://lambda.mkshch.com/>, its main address, leaving a redirect on the original server (limited technical access to the server remained). The version the project took as its starting point is expected to stay available on one of the mirrors, e.g. <https://deniskhin.ru/scherbakov/>, after the project moves to the main address.
 
 Since the website was technically about twenty-five years out of date, an initiative group (Sergey Zlochevsky, Denis Milokhin and Liya Shabakaeva) decided to make it usable on mobile screens without losing any content, and to make shared work on it possible. To some extent, this was achieved by October 2026.
 
@@ -243,8 +243,8 @@ The current development version of the project, published automatically by GitHu
 
 About Mikhail Shcherbakov:
 
-- <https://deniskhin.com/scherbakov> — the original version of the website;
-- <https://deniskhin.com/scherbakov/index.html> — the website's English page.
+- <https://deniskhin.ru/scherbakov> — the original version of the website;
+- <https://deniskhin.ru/scherbakov/English/index.html> — the website's English page.
 
 About the website's creator:
 
