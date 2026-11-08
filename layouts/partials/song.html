@@ -102,7 +102,7 @@
             {{- else -}}
                 {{- if gt $pos 0 -}}
                     {{/* split line into text and chords at position */}}
-                    {{- if and (gt (len $line) $lp) ( gt (len (findRE `[A-Ha-hm#0-9]+|(?:пр|вст|ок)\.` $line)) 0) -}}{{/* «пр.», «вст.», «ок.» — проигрыш, вступление, окончание: тоже в колонку аккордов */}}
+                    {{- if and (gt (len $line) $lp) (or (gt (len (findRE `[A-Ha-hm#0-9]+|(?:пр|вст|ок)\.` $line)) 0) (findRE `^\s*\[[^\]]*\]` (substr $line $lp))) -}}{{/* «пр.», «вст.», «ок.» — проигрыш, вступление, окончание — и пометки в [скобках] (каподастр и т. п.): тоже в колонку аккордов */}}
                         {{- $p1 := substr $line 0 $lp -}}{{/* text substring */}}
                         {{- $hidden := len (findRE `\x{0301}` $p1) -}}{{/* невидимые в строке символы: знак ударения и теги (<i>…</i>) — в режиме «справа» добавляются пробелами, чтобы аккорды стояли в колонке */}}
                         {{- range findRE `</?(?:i|em|b|strong|span|a|sup|sub|small|u)\b[^>]*>` $p1 }}{{ $hidden = add $hidden (strings.RuneCount .) }}{{ end -}}
