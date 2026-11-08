@@ -134,7 +134,7 @@
 
 <h2 id="creative">Иное творчество фанатов</h2>
 <ul>
-<li><img src="../Images/new.gif" alt="new"> <a href="utf/covers.html">Чужая музыка и не только в исполнении Михаила Щербакова</a> (подготовлено А. Тугаревым) (01.04.24).</li>
+<li><img src="../Images/new.gif" alt="new"> <a href="../covers.html">Чужая музыка и не только в исполнении Михаила Щербакова</a> (подготовлено А. Тугаревым) (01.04.24).</li>
 <li><img src="../Images/new.gif" alt="new"> <a href="https://m-sch.livejournal.com/682075.html">Забыл, зачем купюры (тема денег в творчестве Михаила Щербакова)</a> (07.08.22).</li>
 <li><img src="../Images/new.gif" alt="new"> <a href="https://m-sch.livejournal.com/674289.html">Все ли дни недели упомянуты автором?</a> (14.08.21).</li>
 <li><img src="../Images/new.gif" alt="new"> <a href="https://m-sch.livejournal.com/664605.html">Много ли у МЩ запахов в песнях?</a> (05.01.21).</li>
