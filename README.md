@@ -164,7 +164,12 @@ Changes in the database appear on the site with the scheduled build (twice a day
 
 Rights in the database and in the repository are independent: a texts editor, for instance, needs both the «Редактор: Тексты и музыкальная часть» role in Directus and write access to the repository.
 
-Photos of past concerts are meant to be kept in the Directus file storage rather than as files in git — still an idea.
+Photos (mostly from concerts, but not only) — still an idea, checked on a test build (2026-11-08):
+
+- files live in the repository, in `static/photos/` (outside `Images/`: they belong to the showcase, not the fan club); an event's photos go into a subfolder `photos/<event id>/`, ordered by file name (`01.jpg`, `02.jpg`…). The template finds the subfolder by `id` itself (`os.FileExists`, `os.ReadDir`): no folder, no block. A string with the path in the Directus event record is needed only as an exception (photos kept elsewhere, or shared by several events);
+- before committing, photos are downsized to 2000 px on the long side: `magick mogrify -resize '2000x2000>' -quality 85 *.jpg` (a phone photo goes from 2.7 MB to 380 KB, EXIF rotation is kept). Every file stays in git forever;
+- thumbnails are made by Hugo's built-in image processing (the build needs no ImageMagick): `static/photos` is also mounted as `assets/photos` (`module.mounts`), the template applies `images.AutoOrient`, then `.Fill "400x300"` (≈13 KB); a click opens the downsized original itself. The first processing takes ≈0.35 s per photo; a rebuild takes the ready thumbnails from `resources/_gen` in a fraction of a second. In GitHub Actions this cache is lost between runs, so with hundreds of photos it has to be kept (`actions/cache`), or every build processes them all again;
+- one thumbnail per concert for the last 10 years is about 170 photos (168 published concerts in 2016–2026): ≈1 minute of first processing, ≈2 MB of thumbnails on the concerts page, loaded as the page scrolls with `loading="lazy"`.
 
 ## Editing in the browser
 
