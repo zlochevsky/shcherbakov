@@ -154,6 +154,46 @@ details.concert li.matched {
 	font-weight: bold;
 }
 
+/* Под строкой концерта — сначала программа, снимок сразу справа от неё (у самого длинного названия, а не у края
+   экрана: так на широком экране между ними нет пустой полосы). Не помещается рядом (телефон) — уходит под список */
+details.concert .concert-body {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+details.concert .concert-body > ol {
+	flex: 0 1 auto;
+	min-width: 0;
+}
+
+details.concert .concert-photo {
+	position: relative;
+	flex: 0 0 auto;
+	width: 324px;
+	max-width: calc(100% - 1.2em);
+	margin: .5em .6em;
+}
+
+details.concert .concert-photo img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 4px;
+	box-shadow: 2px 2px 2px #000;
+}
+
+details.concert .photo-count {
+	position: absolute;
+	right: 6px;
+	bottom: 6px;
+	font-size: .8em;
+	color: #fff;
+	background: rgba(0, 0, 0, .6);
+	border-radius: 3px;
+	padding: 0 .4em;
+}
+
 details.concert[hidden] {
 	display: none;
 }

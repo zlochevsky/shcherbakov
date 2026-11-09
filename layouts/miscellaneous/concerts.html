@@ -76,6 +76,12 @@
 			<label><input type="radio" name="f-home" value="0"> Без домашних</label>
 		</fieldset>
 		<fieldset class="filter-group">
+			<legend>Фотографии</legend>
+			<label><input type="radio" name="f-photo" value="" checked> Все</label>
+			<label><input type="radio" name="f-photo" value="1"> С фото</label>
+			<label><input type="radio" name="f-photo" value="0"> Без фото</label>
+		</fieldset>
+		<fieldset class="filter-group">
 			<legend>Есть программа</legend>
 			<label><input type="radio" name="f-program" value="" checked> Все</label>
 			<label><input type="radio" name="f-program" value="1"> Есть программа</label>
@@ -121,13 +127,26 @@
 	{{- if $event.is_home }}{{ $home = "1" }}{{ end -}}
 	{{- $program := "0" -}}
 	{{- if gt (len $eventPerfs) 0 }}{{ $program = "1" }}{{ end -}}
+	{{- /* Снимки события — файлы в static/photos/<id события>/, по порядку имён; первый — обложка (docs/photos-plan.md).
+	       Каталога нет — нет и снимка: поле в Directus для этого не нужно */ -}}
+	{{- $photos := slice -}}
+	{{- $photoDir := printf "static/photos/%s" $event.id -}}
+	{{- if os.FileExists $photoDir -}}
+		{{- range os.ReadDir $photoDir -}}
+			{{- if and (not .IsDir) (findRE `(?i)\.(jpe?g|png|webp)$` .Name) }}{{ $photos = $photos | append .Name }}{{ end -}}
+		{{- end -}}
+	{{- end -}}
+	{{- $photo := cond (gt (len $photos) 0) "1" "0" -}}
+	{{- $when := "" -}}
+	{{- with $event.name }}{{ $when = . }}{{ else }}{{ if $event.date_approximate }}{{ $when = printf "%v г." $event.year }}{{ else }}{{ $when = $event.date | time.Format "02.01.2006" }}{{ end }}{{ end -}}
 
 	{{- $place := slice -}}
 	{{- with $event.town }}{{ $place = $place | append . }}{{ end -}}
 	{{- with $event.place }}{{ $place = $place | append . }}{{ end -}}
 	{{- if and $event.country (ne $event.country "Россия") }}{{ $place = $place | append $event.country }}{{ end -}}
-	<details class="concert" data-year="{{ $year }}" data-duet="{{ $duet }}" data-premiere="{{ $premiere }}" data-foreign="{{ $foreign }}" data-home="{{ $home }}" data-program="{{ $program }}">
+	<details class="concert" data-year="{{ $year }}" data-duet="{{ $duet }}" data-premiere="{{ $premiere }}" data-foreign="{{ $foreign }}" data-home="{{ $home }}" data-program="{{ $program }}" data-photo="{{ $photo }}">
 		<summary>{{- with $event.name -}}{{ . }}{{- else -}}{{- if $event.date_approximate -}}{{ $event.year }} г.{{- else -}}{{ $event.date | time.Format "02.01.2006" }}{{ with $event.dw }} {{ . }}{{ end }}{{- end -}}{{- end }} &#8211; <span class="concert-place">{{ delimit $place ", " }}</span>{{ if $event.is_home }} <span class="tag">домашний</span>{{ end }}{{ if eq $duet "1" }} <span class="tag">дуэт ({{ $duetInstrument }})</span>{{ end }}</summary>
+		<div class="concert-body">
 		<ol>{{- range $eventPerfs -}}
 			{{- $perf := . -}}
 			{{- if .works_id -}}
@@ -143,6 +162,29 @@
 			{{- if $date }} <span class="perf-year">{{ $date }}{{ if .works_id.edit }}, {{ .works_id.edit }}{{ end }}</span>{{ end }}{{ if .is_premiere }} <span class="tag">премьера</span>{{ end }}</li>
 			{{- end -}}
 		{{- end -}}</ol>
+		{{- /* Обложка: снимок не больше рамки 324×432 выводится как есть (файл из static), больший — превью Hugo
+		       (поворот по EXIF, Fill Smart). Файл читается прямо из static/photos (images.Config, resources.FromString):
+		       подключать папку в module.mounts не нужно. Ссылка на сам снимок — только если он заметно больше превью
+		       (шире 500 точек). Несколько снимков — «1/N». loading="lazy": у свёрнутого концерта снимок не грузится */ -}}
+		{{- with $photos }}
+			{{- $rel := printf "photos/%s/%s" $event.id (index $photos 0) -}}
+			{{- $file := printf "static/%s" $rel -}}
+			{{- $cfg := images.Config $file -}}
+			{{- $src := $rel | relURL -}}
+			{{- $w := $cfg.Width }}{{ $h := $cfg.Height -}}
+			{{- if or (gt $w 324) (gt $h 432) }}
+				{{- $thumb := (resources.FromString $rel (os.ReadFile $file) | images.Filter images.AutoOrient).Fill "324x432 Smart q82" -}}
+				{{- $src = $thumb.RelPermalink }}{{ $w = $thumb.Width }}{{ $h = $thumb.Height -}}
+			{{- end }}
+			{{- $alt := printf "Снимок с концерта: %s, %s" $when (delimit $place ", ") -}}
+			<span class="concert-photo">
+			{{- if gt $cfg.Width 500 }}<a href="{{ $rel | relURL }}">{{ end -}}
+			<img src="{{ $src }}" width="{{ $w }}" height="{{ $h }}" alt="{{ $alt }}" loading="lazy">
+			{{- if gt $cfg.Width 500 }}</a>{{ end -}}
+			{{- if gt (len $photos) 1 }}<span class="photo-count">1/{{ len $photos }}</span>{{ end -}}
+			</span>
+		{{- end }}
+		</div>
 	</details>
 {{- end -}}
 {{- if $scratch.Get "year" }}</div>{{ end }}
@@ -161,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const allDetails = Array.from(list.querySelectorAll("details.concert"));
 	const yearBlocks = Array.from(list.querySelectorAll(".year-block"));
 	const total = allDetails.length;
-	const flagNames = ["duet", "premiere", "foreign", "home", "program"];
+	const flagNames = ["duet", "premiere", "foreign", "home", "photo", "program"];
 
 	function updateYearBlocks() {
 		yearBlocks.forEach(yb => {
