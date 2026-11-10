@@ -143,7 +143,7 @@
 	{{- $place := slice -}}
 	{{- with $event.town }}{{ $place = $place | append . }}{{ end -}}
 	{{- with $event.place }}{{ $place = $place | append . }}{{ end -}}
-	{{- if and $event.country (ne $event.country "Россия") }}{{ $place = $place | append $event.country }}{{ end -}}
+	{{- if and $event.country (ne $event.country "Россия") (ne $event.country "СССР") }}{{ $place = $place | append $event.country }}{{ end -}}
 	<details class="concert" data-year="{{ $year }}" data-duet="{{ $duet }}" data-premiere="{{ $premiere }}" data-foreign="{{ $foreign }}" data-home="{{ $home }}" data-program="{{ $program }}" data-photo="{{ $photo }}">
 		<summary>{{- with $event.name -}}{{ . }}{{- else -}}{{- if $event.date_approximate -}}{{ $event.year }} г.{{- else -}}{{ $event.date | time.Format "02.01.2006" }}{{ with $event.dw }} {{ . }}{{ end }}{{- end -}}{{- end }} &#8211; <span class="concert-place">{{ delimit $place ", " }}</span>{{ if $event.is_home }} <span class="tag">домашний</span>{{ end }}{{ if eq $duet "1" }} <span class="tag">дуэт ({{ $duetInstrument }})</span>{{ end }}</summary>
 		<div class="concert-body">
@@ -158,7 +158,7 @@
 				{{- $date = $dateint | cast.ToString -}}
 			{{- end -}}
 			<li class="songname" data-premiere="{{ if .is_premiere }}1{{ else }}0{{ end }}">{{- (partial "work-title.html" .works_id).html -}}
-			{{- if .works_id.name }}&ensp;<span class="song-incipit">({{ $perf.works_id.fincipit }})</span>{{ end -}}
+			{{- if .works_id.name }}&ensp;<span class="song-incipit">{{ $perf.works_id.fincipit }}</span>{{ end -}}
 			{{- if $date }} <span class="perf-year">{{ $date }}{{ if .works_id.edit }}, {{ .works_id.edit }}{{ end }}</span>{{ end }}{{ if .is_premiere }} <span class="tag">премьера</span>{{ end }}</li>
 			{{- end -}}
 		{{- end -}}</ol>
