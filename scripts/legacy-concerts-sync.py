@@ -13,6 +13,9 @@ Legacy markup of a programme line:
     + Title …                           premiere          -> perfs.is_premiere
     (соло) Title …                      in a duet concert, without M. Starodubtsev (no with_mls)
     (М. Стародубцев) Title …            sung by him alone -> perfs.sings_mls_only
+    (Ю. Ким, М. Щербаков) Title …       who sings         -> perfs.performers (JCK, MKS); without
+                                        «М. Щербаков» among them also mks_no_voice, mks_no_guitar
+    25. Title …                         a stray number before the line: dropped
     § Title … [year] (стихи)            read as a poem    -> perfs.is_poem
     … (фонограмма)                      to a backing track -> perfs.sings_with_minus
     … [year] (недопел) / (пропущен куплет)   not sung in full -> perfs.sings_incomplete
@@ -39,6 +42,8 @@ Manual fixes live in scripts/legacy-concerts-sync.json and are kept between runs
                own num values are given out again in the page's order (with --apply)
     "complete": ["<event id>", ...]   programme entered only in part: the songs it lacks are
                added (with --apply), if all it has matches the page
+    "db_only_perfs": ["<perf id>", ...]   the database knows more than the page (e.g. a «???»
+               the page lacks): left alone, compared as if absent
     "delete_perfs": ["<perf id>", ...]   wrong perfs, deleted with --apply (e.g. another
                concert's programme mixed in when the database was first filled)
 An "events" override changes what the page is taken to say, so with --fix it
@@ -73,12 +78,14 @@ MAP_FILE = os.path.join(ROOT, "scripts", "legacy-concerts-sync.json")
 UA = "schugo-legacy-concerts-sync"
 AUTHOR = "Щербаков"
 
+USSR = {"Россия", "Украина", "Беларусь", "Латвия", "Литва", "Эстония", "Казахстан", "Грузия", "Армения",
+        "Азербайджан", "Молдова", "Узбекистан", "Киргизия", "Таджикистан", "Туркмения"}
 COUNTRIES = {"США", "Израиль", "Германия", "Франция", "Канада", "Беларусь", "Украина",
              "Латвия", "Литва", "Эстония", "Великобритания", "Чехия", "Финляндия",
              "Нидерланды", "Бельгия", "Швейцария", "Австрия", "Австралия", "Казахстан",
              "Грузия", "Армения", "Кипр", "Черногория", "Сербия", "Италия", "Испания",
              "Польша", "Болгария", "Норвегия", "Швеция", "Дания", "Ирландия"}
-TOWN_COUNTRY = {"Минск": "Беларусь", "Киев": "Украина", "Харьков": "Украина",
+TOWN_COUNTRY = {"Минск": "Беларусь", "Киев": "Украина", "Харьков": "Украина", "Днепропетровск": "Украина",
                 "Одесса": "Украина", "Рига": "Латвия", "Таллин": "Эстония",
                 "Таллинн": "Эстония", "Вильнюс": "Литва", "Хайфа": "Израиль", "Иерусалим": "Израиль",
                 "Тель-Авив": "Израиль", "Алматы": "Казахстан", "Тбилиси": "Грузия"}
@@ -150,9 +157,10 @@ def parse_line(raw):
     t = html.unescape(re.sub(r"<[^>]+>", "", raw)).strip()
     if not t:
         return None
-    if t.startswith("---"):  # interval; «--- Д. Фиш (скрипка), Г. Кац (гитара)» — who joins the next act
-        return {"break": True, "after": t[3:].strip() or None}
+    if t.startswith("---") or t == "--":  # interval («--» — a typo); «--- Д. Фиш (скрипка), Г. Кац (гитара)» —
+        return {"break": True, "after": t[3:].strip() or None}  # who joins the next act
     s = {"raw": t, "premiere": False, "poem": False, "minus": False, "cover": False}
+    t = re.sub(r"^\d+\.\s+", "", t)  # a stray programme number («25. (М. Стародубцев) …»)
     if t.startswith("- "):  # an early song outside the main collection (italic on the page)
         s["early"], t = True, t[2:].strip()
     if t.startswith("+"):
@@ -165,6 +173,9 @@ def parse_line(raw):
         s["solo"], t = True, t[len("(соло)"):].strip()
     if t.startswith("(М. Стародубцев)"):  # sung by M. Starodubtsev alone
         s["mls_only"], t = True, t[len("(М. Стародубцев)"):].strip()
+    m = re.match(r"\(([^()]*\b[А-ЯЁ]\. [А-ЯЁ][^()]*)\)\s*", t)
+    if m:  # «(Ю. Ким, М. Щербаков) …», «(Ю. Ким) …» — who sings
+        s["performers"], t = [x.strip() for x in m.group(1).split(",")], t[m.end():]
     # notes after the year, in any order: «[1986] (недопел)», «[2025] (обновлённый текст)»
     while True:
         m = re.search(r"\s*\((фонограмма|стихи|недопел|пропущен куплет|обновлённый текст|аранжировка [^()]*)\)\s*$", t)
@@ -222,7 +233,9 @@ def parse_legacy(page, since):
               "status": "published", "is_home": True if "H" in flags else None,
               "with_mls": "D" in flags, "plays_mls_keyboard": keyboard,
               "date_approximate": not exact, **fields}
-        ol = re.search(r"<ol>(.*?)</ol>", body, re.S)
+        if int(y) <= 1991 and ev["country"] in USSR:  # as the database has it: «СССР» up to 1991
+            ev["country"] = "СССР"
+        ol =re.search(r"<ol>(.*?)</ol>", body, re.S)
         songs = [x for x in (parse_line(l) for l in (ol.group(1).splitlines() if ol else [])) if x]
         # keyboards on every song only when the keyboard is the only instrument
         # («дуэт (гитара, рояль)»: which songs had the piano is unknown)
@@ -351,6 +364,20 @@ def with_breaks(entries):
     return entries
 
 
+PERFORMERS = {"М. Щербаков": "MKS", "Ю. Ким": "JCK"}  # names in «(Ю. Ким, М. Щербаков) …» -> performers.id
+
+
+def performer_ids(s, problems=None):
+    """performers.id of «(Ю. Ким, М. Щербаков) …»; unknown names are reported and dropped."""
+    ids = []
+    for name in s.get("performers", []):
+        if name in PERFORMERS:
+            ids.append(PERFORMERS[name])
+        elif problems is not None:
+            problems.append(f"«{s['raw']}»: исполнитель «{name}» не знаком скрипту (PERFORMERS)")
+    return ids
+
+
 def build_perf(ev, e, pid, num, keyboard_all):
     """A new perf for programme entry e."""
     x, s = e["x"], e["x"]["song"]
@@ -363,6 +390,11 @@ def build_perf(ev, e, pid, num, keyboard_all):
         p["sings_with_minus"] = True
     if s.get("incomplete"):
         p["sings_incomplete"] = True
+    who = performer_ids(s)
+    if who:  # M2M perfs.performers; without M. Shcherbakov among them he neither sings nor plays
+        p["performers"] = [{"performers_id": x} for x in who]
+        if "MKS" not in who:
+            p["mks_no_voice"], p["mks_no_guitar"] = True, True
     if s.get("mls_only"):
         p["with_mls"], p["sings_mls_only"] = True, True
     elif ev.get("with_mls") and not s.get("solo"):
@@ -476,7 +508,8 @@ def plan_fixes(ev, item, db, have, seq):
             that is not a valid value is replaced by the page's one;
     perfs (only if the programme in the database has the same songs as the page):
             is_first / is_last / is_last_before_break / is_first_after_break / sings_incomplete
-            set; a «(соло)» song loses with_mls and
+            set; «(Ю. Ким, М. Щербаков)» fills empty performers (and mks_no_voice, mks_no_guitar
+            when he is not among them); a «(соло)» song loses with_mls and
             plays_mls_keyboards; in a keyboard-only duet a song with M. Starodubtsev gets
             plays_mls_keyboards and, if empty, mls_instrument («рояль»).
     Songs without M. Starodubtsev in the database that the page does not mark are left alone:
@@ -502,6 +535,12 @@ def plan_fixes(ev, item, db, have, seq):
                 pp[flag] = True
         if s.get("incomplete") and not p.get("sings_incomplete"):
             pp["sings_incomplete"] = True
+        who = performer_ids(s)
+        if who and not p.get("performers"):
+            pp["performers"] = [{"performers_id": x} for x in who]
+        for flag in ("mks_no_voice", "mks_no_guitar"):
+            if who and "MKS" not in who and not p.get(flag):
+                pp[flag] = True
         if s.get("solo"):
             if p.get("with_mls"):
                 pp["with_mls"] = False
@@ -532,7 +571,7 @@ def main():
         sys.exit("--apply needs DIRECTUS_ADMIN_TOKEN in the environment")
     token = admin or public_token()
     manual = {"works": {}, "events": {}, "skip": [], "db_only": [], "no_fix": [], "perfs": {}, "event_fixes": {},
-              "approx": {}, "delete_perfs": [], "complete": [], "reorder": []}
+              "approx": {}, "delete_perfs": [], "db_only_perfs": [], "complete": [], "reorder": []}
     if os.path.exists(MAP_FILE):
         with open(MAP_FILE) as f:
             manual.update(json.load(f))
@@ -547,20 +586,24 @@ def main():
     # fields --fix compares, plus those named in the map's "perfs"; note is not visible to the public token
     perf_fields = {"id", "events_id", "works_id", "num", "with_mls", "plays_mls_keyboards", "mls_instrument",
                    "plays_mls_guitar", "is_last_before_break", "is_first_after_break",
-                   "is_first", "is_last", "sings_incomplete"}
+                   "is_first", "is_last", "sings_incomplete", "mks_no_voice", "mks_no_guitar", "performers.id",
+                   "performers.performers_id"}
     perf_fields |= {k for v in manual["perfs"].values() for k in v}
     hidden = set() if admin else {"note"}
     for p in items("perfs", token, **{"fields": ",".join(sorted(perf_fields - hidden)),
                                       "filter[events_id][year][_gte]": str(args.since)}):
         db_perfs.setdefault(p["events_id"], []).append(p)
 
-    # perfs listed for deletion: compared as if already deleted
+    # perfs listed for deletion: compared as if already deleted; db_only_perfs (the database knows
+    # more than the page): compared as if absent, kept
     only = set(args.only.split(",")) if args.only else None
     doomed = set(manual["delete_perfs"])
     delete_perfs = [p["id"] for e, ps in db_perfs.items() for p in ps
                     if p["id"] in doomed and (not only or e in only)]
+    delete_links = [x["id"] for ps in db_perfs.values() for p in ps if p["id"] in delete_perfs
+                    for x in p.get("performers") or []]
     for e in db_perfs:
-        db_perfs[e] = [p for p in db_perfs[e] if p["id"] not in doomed]
+        db_perfs[e] = [p for p in db_perfs[e] if p["id"] not in doomed | set(manual["db_only_perfs"])]
 
     create_events, create_perfs, problems, diffs = [], [], [], []
     fixes = []  # (event id, event patch, [perf patch], [note])
@@ -727,6 +770,8 @@ def main():
             for pp in perf_patches:
                 for k, v in pp.items():
                     if k != "id":
+                        if k == "performers":
+                            v = "+".join(x["performers_id"] for x in v)
                         counts[f"{k} → {v!r}"] = counts.get(f"{k} → {v!r}", 0) + 1
             parts += [f"песни: {k} ×{n}" for k, n in counts.items()]
             print(f"  {eid:15} " + "; ".join(parts))
@@ -781,6 +826,10 @@ def main():
     if not args.apply:
         print("\nНичего не записано. Запись: DIRECTUS_ADMIN_TOKEN=... scripts/legacy-concerts-sync.py --apply")
         return
+    if delete_links:  # their rows in the perfs.performers junction go first
+        junction = next(r["collection"] for r in api("/relations", admin)["data"]
+                        if r.get("related_collection") == "perfs" and (r.get("meta") or {}).get("one_field") == "performers")
+        api(f"/items/{junction}", admin, "DELETE", delete_links)
     for i in range(0, len(delete_perfs), 100):
         api("/items/perfs", admin, "DELETE", delete_perfs[i:i + 100])
     if delete_perfs:
