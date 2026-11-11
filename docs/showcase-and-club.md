@@ -2,8 +2,8 @@
 
 Почему сайт разделён на витрину и фан-клуб и что из этого вытекает для разделов, ссылок, навигации
 и содержания. Замеры связей старого сайта и рассмотренные варианты — в
-[site-structure-analysis.md](site-structure-analysis.md), ход переноса — в
-[fanclub-migration.md](fanclub-migration.md). Здесь — только решения и их причины.
+[site-structure-analysis.md](site-structure-analysis.md), правила переноса старых страниц — в
+[legacy-conversion.md](legacy-conversion.md). Здесь — только решения и их причины.
 
 ## 1. Исходные условия
 
