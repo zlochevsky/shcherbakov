@@ -26,6 +26,8 @@ Legacy markup of a programme line:
     ---                                 interval
 Event flags (data-flags): D duet, P premiere, F abroad, H home concert,
 L programme known, I photo, C someone else's songs in the programme.
+Summary «… дуэт (гитара, рояль)»: with_mls; the instruments -> events.mls_instrument (not «?»),
+plays_mls_keyboard if one of them is a keyboard («клавиши», «рояль»).
 
 Manual fixes live in scripts/legacy-concerts-sync.json and are kept between runs:
     "works":  {"<legacy title as on the page>": "<works.id>"}   unmatched songs
@@ -802,6 +804,8 @@ def main():
     for ev, item in create_events:
         n = sum(1 for p in create_perfs if p["events_id"] == ev["id"])
         flags = ", ".join(k for k in ("with_mls", "plays_mls_keyboard", "is_home", "date_approximate") if ev.get(k))
+        if ev.get("mls_instrument"):
+            flags += f" ({ev['mls_instrument']})"
         print(f"  {ev['id']:15} {ev['country'] or '?'} | {ev['state'] or '-'} | {ev['town'] or '-'} | "
               f"{ev['place'] or '-'} | {ev['day_evening'] or '-'}{' | ' + flags if flags else ''} | исполнений: {n}"
               + (f" | хвост: {', '.join(item['notes'])}" if item["notes"] else ""))
