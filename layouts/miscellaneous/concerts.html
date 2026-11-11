@@ -119,6 +119,7 @@
 	{{- if $event.with_mls }}{{ $duet = "1" }}{{ end -}}
 	{{- $duetInstrument := "гитара" -}}
 	{{- if $event.plays_mls_keyboard }}{{ $duetInstrument = "клавиши" }}{{ end -}}
+	{{- with $event.mls_instrument }}{{ $duetInstrument = . }}{{ end -}}{{/* «гитара, рояль» и т. п.; пусто — по plays_mls_keyboard */}}
 	{{- $premiere := "0" -}}
 	{{- range $eventPerfs }}{{ if .is_premiere }}{{ $premiere = "1" }}{{ end }}{{ end -}}
 	{{- $foreign := "0" -}}

@@ -233,6 +233,8 @@ def parse_legacy(page, since):
               "status": "published", "is_home": True if "H" in flags else None,
               "with_mls": "D" in flags, "plays_mls_keyboard": keyboard,
               "date_approximate": not exact, **fields}
+        if instruments and "?" not in instruments:  # «дуэт (гитара, рояль)» -> events.mls_instrument
+            ev["mls_instrument"] = ", ".join(instruments)
         if int(y) <= 1991 and ev["country"] in USSR:  # as the database has it: «СССР» up to 1991
             ev["country"] = "СССР"
         ol =re.search(r"<ol>(.*?)</ol>", body, re.S)
@@ -504,7 +506,8 @@ def plan_fixes(ev, item, db, have, seq):
     """--fix: field corrections of an event already in the database, by the legacy page.
 
     Only what the page states explicitly is set; nothing it is silent about is cleared:
-    events: is_home / with_mls / plays_mls_keyboard set when the page says so; a day_evening
+    events: is_home / with_mls / plays_mls_keyboard set when the page says so; an empty mls_instrument
+            gets the instruments of «дуэт (…)» («гитара, рояль»; not «?»); a day_evening
             that is not a valid value is replaced by the page's one;
     perfs (only if the programme in the database has the same songs as the page):
             is_first / is_last / is_last_before_break / is_first_after_break / sings_incomplete
@@ -519,6 +522,8 @@ def plan_fixes(ev, item, db, have, seq):
     for f in ("is_home", "with_mls", "plays_mls_keyboard"):
         if ev.get(f) and not db.get(f):
             patch[f] = True
+    if ev.get("mls_instrument") and not db.get("mls_instrument"):
+        patch["mls_instrument"] = ev["mls_instrument"]
     if db.get("day_evening") not in (None, "дневной", "вечерний"):
         patch["day_evening"] = ev.get("day_evening")
         notes.append(f"day_evening {db['day_evening']!r} → {ev.get('day_evening')!r}")
@@ -580,7 +585,7 @@ def main():
     legacy = parse_legacy(page, args.since)
     works = Works(items("works", token, fields="id,name,incipit,author,date"), manual["works"])
     db_events = {e["id"]: e for e in items("events", token, **{
-        "fields": "id,date,day_evening,country,state,town,place,is_home,with_mls,plays_mls_keyboard,status",
+        "fields": "id,date,day_evening,country,state,town,place,is_home,with_mls,plays_mls_keyboard,mls_instrument,status",
         "filter[year][_gte]": str(args.since)})}
     db_perfs = {}
     # fields --fix compares, plus those named in the map's "perfs"; note is not visible to the public token
