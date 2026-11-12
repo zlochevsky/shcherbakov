@@ -1,9 +1,12 @@
-{{ $url := printf "%s%s?%s&%s&%s"
+{{/* sort=num: исполнения идут в порядке программы концерта (num сквозной по базе), группировка по событию
+       в шаблоне порядок сохраняет; без сортировки Directus отдаёт их по id — почти по алфавиту id песен */}}
+{{ $url := printf "%s%s?%s&%s&%s&%s"
 		site.Params.directus.url
 		"items/perfs/"
 		site.Params.directus.token
 		"limit=-1"
-		"fields=id,events_id,num,works_id.id,works_id.name,works_id.qualifier,works_id.incipit,works_id.fincipit,works_id.date,works_id.edit,is_premiere,with_mls,plays_mls_keyboards,mls_instrument,sings_with_minus,sings_incomplete,sings_mls_only,is_first,is_last,is_bis,is_first_after_break,is_poem,take,performers,is_ensemble,has_mls_voice,plays_mls_guitar,mks_no_voice,is_pseudo_duet,has_synth"
+		"sort=num"
+		"fields=id,events_id,num,works_id.id,works_id.name,works_id.qualifier,works_id.incipit,works_id.fincipit,works_id.date,works_id.edit,works_id.author,works_id.music,is_premiere,with_mls,plays_mls_keyboards,mls_instrument,sings_with_minus,sings_incomplete,sings_mls_only,is_first,is_last,is_bis,is_first_after_break,is_poem,take,performers.performers_id.id,performers.performers_id.name,is_ensemble,has_mls_voice,plays_mls_guitar,mks_no_voice,is_pseudo_duet,has_synth"
 		}}
 {{ $data := dict }}
 {{ with try (resources.GetRemote $url) }}

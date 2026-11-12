@@ -164,7 +164,29 @@
 			{{- end -}}
 			<li class="songname" data-premiere="{{ if .is_premiere }}1{{ else }}0{{ end }}">{{- (partial "work-title.html" .works_id).html -}}
 			{{- if .works_id.name }}&ensp;<span class="song-incipit">{{ $perf.works_id.fincipit }}</span>{{ end -}}
-			{{- if $date }} <span class="perf-year">{{ $date }}{{ if .works_id.edit }}, {{ .works_id.edit }}{{ end }}</span>{{ end }}{{ if .is_premiere }} <span class="tag">премьера</span>{{ end }}</li>
+			{{- /* чужая песня — авторы (works.author — слова, works.music — музыка; у песен Щербакова там «Щербаков»):
+			       один автор — «Б. Окуджава», разные — «сл. Ю. Ким, муз. В. Дашкевич», слова Щербакова — «муз. Ж. Брассенс» */ -}}
+			{{- $wa := .works_id.author | default "" }}{{ $wm := .works_id.music | default "" -}}
+			{{- /* несколько авторов музыки («Ю. Ким, В. Дашкевич») — через «и», чтобы не сливались с «сл. …, муз. …» */ -}}
+			{{- $wm = replace $wm ", " " и " -}}
+			{{- $credit := "" -}}
+			{{- if and $wa (ne $wa "Щербаков") -}}
+				{{- if or (not $wm) (eq $wm $wa) (eq $wm "Щербаков") }}{{ $credit = $wa }}{{ else }}{{ $credit = printf "сл. %s, муз. %s" $wa $wm }}{{ end -}}
+			{{- else if and $wm (ne $wm "Щербаков") -}}
+				{{- $credit = printf "муз. %s" $wm -}}
+			{{- end -}}
+			{{- with $credit }} <span class="perf-author">{{ . }}</span>{{ end -}}
+			{{- if $date }} <span class="perf-year">{{ $date }}{{ if .works_id.edit }}, {{ .works_id.edit }}{{ end }}</span>{{ end }}
+			{{- /* Щербаков не поёт (mks_no_voice) или поёт один Стародубцев (sings_mls_only) — «поёт …»: исполнители
+			       песни (perfs.performers) без МКЩ, иначе Стародубцев. Соло в дуэтном концерте: исполнение без with_mls
+			       («(соло)» старой страницы), кроме этих */ -}}
+			{{- $singers := slice -}}
+			{{- if or .mks_no_voice .sings_mls_only -}}
+				{{- range .performers }}{{ with .performers_id }}{{ if ne .id "MKS" }}{{ $singers = $singers | append .name }}{{ end }}{{ end }}{{ end -}}
+				{{- if not $singers }}{{ $singers = slice "М. Стародубцев" }}{{ end -}}
+			{{- end -}}
+			{{- with $singers }} <span class="perf-solo">{{ if gt (len .) 1 }}поют{{ else }}поёт{{ end }} {{ delimit . ", " }}</span>
+			{{- else }}{{ if and (eq $duet "1") (not $perf.with_mls) }} <span class="perf-solo">соло</span>{{ end }}{{ end }}{{ if .is_premiere }} <span class="tag">премьера</span>{{ end }}</li>
 			{{- end -}}
 		{{- end -}}</ol>
 		{{- /* Снимки концерта: $items — все снимки для галереи (src, w, h, cap), обложка — первый снимок.
