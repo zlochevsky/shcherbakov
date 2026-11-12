@@ -812,7 +812,7 @@ erDiagram
 ## Файлы и пресеты (Settings → Settings → Files & Storage)
 
 С 2026-11-12 снимки концертов загружаются в файловое хранилище Directus (правила загрузки и открытые вопросы —
-`docs/photos-plan.md`). Размеры для сайта делает Directus по пресетам; **Allowed Transformations** — «Limit
+`docs/photos-plan.md`). Файлы лежат на диске сервера (штатное локальное хранилище, `/var/www/sch.com.ru/perf/uploads`); они входят в ночную резервную копию всего сервера (restic), дамп базы их не содержит. `FILES_MAX_UPLOAD_SIZE: "5mb"` — в `environment:` сервиса directus в `docker-compose.yml` (сам `.env` в контейнер не передаётся, только через подстановку `${…}`): полноразмерный скан не загрузится. 291 снимок, перенесённый раньше в `static/photos/`, остаётся в репозитории (решение владельца). Размеры для сайта делает Directus по пресетам; **Allowed Transformations** — «Limit
 transformations to presets below», т. е. `/assets/<id>` отдаёт только оригинал или пресет (`?key=…`):
 
 | Пресет | Fit | Размер | Качество | Формат | Для чего |
