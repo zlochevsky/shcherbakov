@@ -257,6 +257,34 @@
         }
       },
       {
+        "collection": "events_files",
+        "meta": {
+          "accountability": "all",
+          "archive_app_filter": true,
+          "archive_field": null,
+          "archive_value": null,
+          "collapse": "open",
+          "collection": "events_files",
+          "color": null,
+          "display_template": null,
+          "group": null,
+          "hidden": true,
+          "icon": "import_export",
+          "item_duplication_fields": null,
+          "note": null,
+          "preview_url": null,
+          "singleton": false,
+          "sort": null,
+          "sort_field": null,
+          "translations": null,
+          "unarchive_value": null,
+          "versioning": false
+        },
+        "schema": {
+          "name": "events_files"
+        }
+      },
+      {
         "collection": "events_performers_3",
         "meta": {
           "accountability": "all",
@@ -4451,7 +4479,7 @@
           "readonly": false,
           "required": false,
           "searchable": true,
-          "sort": "21",
+          "sort": "22",
           "special": null,
           "translations": null,
           "validation": null,
@@ -4495,7 +4523,7 @@
           "readonly": false,
           "required": false,
           "searchable": true,
-          "sort": "22",
+          "sort": "23",
           "special": null,
           "translations": null,
           "validation": null,
@@ -4539,7 +4567,7 @@
           "readonly": false,
           "required": false,
           "searchable": true,
-          "sort": "23",
+          "sort": "24",
           "special": null,
           "translations": null,
           "validation": null,
@@ -4583,7 +4611,7 @@
           "readonly": false,
           "required": false,
           "searchable": true,
-          "sort": "24",
+          "sort": "25",
           "special": [
             "cast-boolean"
           ],
@@ -4629,7 +4657,7 @@
           "readonly": false,
           "required": false,
           "searchable": true,
-          "sort": "25",
+          "sort": "26",
           "special": [
             "cast-boolean"
           ],
@@ -4677,7 +4705,7 @@
           "readonly": false,
           "required": false,
           "searchable": true,
-          "sort": "26",
+          "sort": "27",
           "special": [
             "m2m"
           ],
@@ -4705,7 +4733,7 @@
           "readonly": false,
           "required": false,
           "searchable": true,
-          "sort": "27",
+          "sort": "28",
           "special": null,
           "translations": null,
           "validation": null,
@@ -4751,7 +4779,7 @@
           "readonly": false,
           "required": false,
           "searchable": true,
-          "sort": "28",
+          "sort": "29",
           "special": [
             "m2o"
           ],
@@ -4979,7 +5007,7 @@
           "readonly": false,
           "required": false,
           "searchable": true,
-          "sort": "281",
+          "sort": "30",
           "special": null,
           "translations": null,
           "validation": null,
@@ -4994,6 +5022,216 @@
           "max_length": 255,
           "numeric_precision": null,
           "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "events",
+        "field": "photos",
+        "type": "alias",
+        "meta": {
+          "collection": "events",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "photos",
+          "group": null,
+          "hidden": false,
+          "interface": "files",
+          "note": null,
+          "options": {
+            "allowedMimeTypes": [
+              "image/jpeg"
+            ],
+            "folder": "3a1d0e93-76b9-4534-9b11-0ced26e5a250",
+            "limit": 100
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": "301",
+          "special": [
+            "files"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        }
+      },
+      {
+        "collection": "events_files",
+        "field": "id",
+        "type": "integer",
+        "meta": {
+          "collection": "events_files",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": "1",
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "id",
+          "table": "events_files",
+          "data_type": "integer",
+          "default_value": "nextval('events_files_id_seq'::regclass)",
+          "max_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "is_nullable": false,
+          "is_unique": true,
+          "is_indexed": false,
+          "is_primary_key": true,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": true,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "events_files",
+        "field": "events_id",
+        "type": "text",
+        "meta": {
+          "collection": "events_files",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "events_id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": "11",
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "events_id",
+          "table": "events_files",
+          "data_type": "text",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "events",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "events_files",
+        "field": "directus_files_id",
+        "type": "uuid",
+        "meta": {
+          "collection": "events_files",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "directus_files_id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": "111",
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "directus_files_id",
+          "table": "events_files",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "events_files",
+        "field": "num",
+        "type": "integer",
+        "meta": {
+          "collection": "events_files",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "num",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": "1111",
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "num",
+          "table": "events_files",
+          "data_type": "integer",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
           "is_nullable": true,
           "is_unique": false,
           "is_indexed": false,
@@ -13615,6 +13853,56 @@
           "constraint_name": "events_set_id_fkey",
           "on_update": "NO ACTION",
           "on_delete": "SET NULL"
+        }
+      },
+      {
+        "collection": "events_files",
+        "field": "directus_files_id",
+        "related_collection": "directus_files",
+        "meta": {
+          "junction_field": "events_id",
+          "many_collection": "events_files",
+          "many_field": "directus_files_id",
+          "one_allowed_collections": null,
+          "one_collection": "directus_files",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "events_files",
+          "column": "directus_files_id",
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id",
+          "constraint_name": "events_files_directus_files_id_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE"
+        }
+      },
+      {
+        "collection": "events_files",
+        "field": "events_id",
+        "related_collection": "events",
+        "meta": {
+          "junction_field": "directus_files_id",
+          "many_collection": "events_files",
+          "many_field": "events_id",
+          "one_allowed_collections": null,
+          "one_collection": "events",
+          "one_collection_field": null,
+          "one_deselect_action": "delete",
+          "one_field": "photos",
+          "sort_field": "num"
+        },
+        "schema": {
+          "table": "events_files",
+          "column": "events_id",
+          "foreign_key_table": "events",
+          "foreign_key_column": "id",
+          "constraint_name": "events_files_events_id_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE"
         }
       },
       {

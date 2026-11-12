@@ -796,7 +796,8 @@ erDiagram
 - **Редактор: <направление>** (с 2026-11-06) — по роли на направление работы из README («Направления работы»). У каждой две политики: общая «Чтение всех таблиц (редакторы)» (чтение всех таблиц сайта, вход в Studio, правка своего профиля — фильтр `id = $CURRENT_USER`) и «Направление: <направление>» (создание, правка и удаление в таблицах направления):
     - **События** — `announces`, `log_entries`; `events` — только создание и правка (анонсу нужно событие с датой и городом; удаление события — за «Исполнениями»);
     - **Фан-клуб, исполнители, критика** — `links`, `recordings`, `releases`, `performers` и их связующие, `comments` и `works_see_also` («Словарь»);
-    - **Исполнения** — `events`, `perfs`, `sets`, `sets_entries`, `disk_formats`, `books`, `book_sets`, `books_entries` и связующие событий и исполнений с исполнителями;
+    - **Исполнения** — `events`, `perfs`, `sets`, `sets_entries`, `disk_formats`, `books`, `book_sets`, `books_entries`, `events_files` (снимки событий) и связующие событий и исполнений с исполнителями; `directus_files` (загрузка снимков), `performers` и `performers_members` — только создание и правка (завести приглашённого музыканта или новый состав; удаление исполнителя — за «Фан-клубом», на него ссылаются записи и диски);
+    - **Концерты** — каталог концертов: `events`, `events_files`, `perfs` и связующие событий и исполнений с исполнителями; `performers`, `performers_members`, `directus_files` и `works` — только создание и правка (новый исполнитель, снимок, песня, которой нет в базе; удаление песен и исполнителей — за их направлениями). Узкий вариант «Исполнений» без сет-листов, дисков и книг — для ведущего страницу концертов;
     - **Тексты и музыкальная часть** — `works`, `variants`, `cycles`, `cycles_entries`;
     - **Высказывания** — `statements`, `statements_works`;
     - **Языковые разделы** — `translations`, `translations_translators`, `translators`, `languages`, `links` (ссылки переводчиков).
@@ -807,6 +808,24 @@ erDiagram
 Служебные роли (пользователи-токены, не люди): **PublicReadAPI** — публичный токен сборки (`params.json.example`); **AnnouncesArchiverAPI** — архивация анонсов перед сборкой (секрет GitHub `DIRECTUS_ANNOUNCES_ARCHIVER_TOKEN`, см. «Деплой…»); **ReadOnlyAPI** — чтение; **ReadWriteAPI** — политика Administrator, полный доступ.
 
 Роли «Редактор: …» и их политики создаёт и обновляет `scripts/directus-roles.py` (таблицы направлений — в словаре `AREAS`): `DIRECTUS_ADMIN_TOKEN=… scripts/directus-roles.py` показывает, что будет сделано, с `--apply` — записывает. Права политик скрипт каждый раз заменяет своим списком, поэтому правки этих политик в Studio при следующем запуске пропадут — меняйте сам скрипт. Новая таблица сайта добавляется в `SITE_TABLES` (чтение) и в направление. После запуска — `python3 scripts/directus-schema.py --fetch`, чтобы обновить выгрузку прав.
+
+## Файлы и пресеты (Settings → Settings → Files & Storage)
+
+С 2026-11-12 снимки концертов загружаются в файловое хранилище Directus (правила загрузки и открытые вопросы —
+`docs/photos-plan.md`). Размеры для сайта делает Directus по пресетам; **Allowed Transformations** — «Limit
+transformations to presets below», т. е. `/assets/<id>` отдаёт только оригинал или пресет (`?key=…`):
+
+| Пресет | Fit | Размер | Качество | Формат | Для чего |
+|---|---|---|---|---|---|
+| `concert-cover` | Inside | 648×864 | 80 | JPEG | обложка концерта в каталоге (рамка 324×432, ×2 для чётких экранов) |
+| `gallery` | Inside | 2000×2000 | 85 | JPEG | просмотр снимков концерта поверх страницы |
+
+Upscaling у обоих выключен. JPEG, а не WebP — выбор владельца (снимок, сохранённый посетителем, открывается везде).
+Снимки события — поле `events.photos` (Files, M2M через `events_files`: `events_id`, `directus_files_id`, порядок `num`;
+папка загрузки `concerts`, только `image/jpeg`). Токену сборки (PublicRead) нужно чтение `events.photos`,
+`events_files` и `directus_files` (`id`, `width`, `height`, `title`); без него Directus молча не отдаёт эти поля,
+и каталог показывает снимки из `static/photos`.
+Hugo скачивает копии при сборке (`resources.GetRemote`), сайт от Directus при просмотре не зависит.
 
 ## Flows (Settings → Flows)
 

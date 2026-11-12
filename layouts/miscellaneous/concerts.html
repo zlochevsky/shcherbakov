@@ -128,11 +128,15 @@
 	{{- if $event.is_home }}{{ $home = "1" }}{{ end -}}
 	{{- $program := "0" -}}
 	{{- if gt (len $eventPerfs) 0 }}{{ $program = "1" }}{{ end -}}
-	{{- /* Снимки события — файлы в static/photos/<id события>/, по порядку имён; первый — обложка (docs/photos-plan.md).
-	       Каталога нет — нет и снимка: поле в Directus для этого не нужно */ -}}
+	{{- /* Снимки события: сначала поле photos (файлы Directus, порядок — num), иначе файлы в static/photos/<id события>/
+	       по порядку имён; первый — обложка (docs/photos-plan.md) */ -}}
+	{{- $dxPhotos := slice -}}
+	{{- range sort ($event.photos | default slice) "num" -}}
+		{{- with .directus_files_id }}{{ $dxPhotos = $dxPhotos | append . }}{{ end -}}
+	{{- end -}}
 	{{- $photos := slice -}}
 	{{- $photoDir := printf "static/photos/%s" $event.id -}}
-	{{- if os.FileExists $photoDir -}}
+	{{- if $dxPhotos }}{{ $photos = $dxPhotos }}{{ else if os.FileExists $photoDir -}}
 		{{- range os.ReadDir $photoDir -}}
 			{{- if and (not .IsDir) (findRE `(?i)\.(jpe?g|png|webp)$` .Name) }}{{ $photos = $photos | append .Name }}{{ end -}}
 		{{- end -}}
@@ -167,7 +171,28 @@
 		       (поворот по EXIF, Fill Smart). Файл читается прямо из static/photos (images.Config, resources.FromString):
 		       подключать папку в module.mounts не нужно. Ссылка на сам снимок — только если он заметно больше превью
 		       (шире 500 точек). Несколько снимков — «1/N». loading="lazy": у свёрнутого концерта снимок не грузится */ -}}
-		{{- with $photos }}
+		{{- /* Снимки из Directus: копии по пресетам (docs/directus.md, «Файлы и пресеты»), Hugo скачивает их при сборке:
+		       concert-cover (вписан в 648×864) — обложка, выводится в рамку 324 точки; gallery (до 2000) — по ссылке */ -}}
+		{{- with $dxPhotos }}
+			{{- $first := index $dxPhotos 0 -}}
+			{{- $asset := printf "%sassets/%s?key=%%s%s" site.Params.directus.url $first.id site.Params.directus.token -}}
+			{{- $cover := "" }}{{ $full := "" -}}
+			{{- /* на сайте — photos/<id события>/<id файла>-cover.jpg и …-gallery.jpg */ -}}
+			{{- $out := printf "photos/%s/%s-%%s.jpg" $event.id $first.id -}}
+			{{- with try (resources.GetRemote (printf $asset "concert-cover")) }}{{ with .Err }}{{ warnf "concert %s cover: %s" $event.id . }}{{ else with .Value }}{{ $cover = resources.Copy (printf $out "cover") . }}{{ end }}{{ end -}}
+			{{- with try (resources.GetRemote (printf $asset "gallery")) }}{{ with .Err }}{{ warnf "concert %s gallery: %s" $event.id . }}{{ else with .Value }}{{ $full = resources.Copy (printf $out "gallery") . }}{{ end }}{{ end -}}
+			{{- with $cover }}
+			{{- /* название файла — в alt, только если оно словесное, а не номер из имени файла («01») */ -}}
+			{{- $alt := printf "Снимок с концерта: %s, %s" $when (delimit $place ", ") -}}
+			{{- with $first.title }}{{ if findRE `\pL` . }}{{ $alt = . }}{{ end }}{{ end -}}
+			<span class="concert-photo">
+			{{- with $full }}<a href="{{ .RelPermalink }}">{{ end -}}
+			<img src="{{ .RelPermalink }}" width="{{ div .Width 2 }}" height="{{ div .Height 2 }}" alt="{{ $alt }}" loading="lazy">
+			{{- with $full }}</a>{{ end -}}
+			{{- if gt (len $dxPhotos) 1 }}<span class="photo-count">1/{{ len $dxPhotos }}</span>{{ end -}}
+			</span>
+			{{- end }}
+		{{- else with $photos }}
 			{{- $rel := printf "photos/%s/%s" $event.id (index $photos 0) -}}
 			{{- $file := printf "static/%s" $rel -}}
 			{{- $cfg := images.Config $file -}}

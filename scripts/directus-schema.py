@@ -127,7 +127,9 @@ def edges(snap):
     # одна линия на служебную таблицу, даже если поле M2M заведено с обеих сторон
     for junction, sides in m2m.items():
         a, field, jf = sorted(sides)[0]
-        other = next(x['related_collection'] for x in rels if x['collection'] == junction and x['field'] == jf)
+        other = next((x['related_collection'] for x in rels if x['collection'] == junction and x['field'] == jf), None)
+        if other is None:  # вторая сторона — системная коллекция (events_files → directus_files): не рисуем
+            continue
         label = ' / '.join(f for _, f, _ in sorted(sides))
         out.append((a, other, label, 'm2m'))
     return sorted(set(out)), hidden

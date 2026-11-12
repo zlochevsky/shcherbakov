@@ -27,7 +27,8 @@ BASE = os.environ.get("DIRECTUS_URL", "https://db.sch.com.ru")
 
 SITE_TABLES = [
     "announces", "book_sets", "books", "books_entries", "comments", "cycles",
-    "cycles_entries", "disk_formats", "events", "events_performers_3",
+    "cycles_entries", "disk_formats", "events", "events_files",
+    "events_performers_3", "directus_files", "directus_folders",
     "languages", "links", "log_entries", "performers", "performers_members",
     "perfs", "perfs_performers_1", "recordings", "recordings_performers",
     "releases", "releases_performers", "sets", "sets_entries", "statements",
@@ -55,9 +56,15 @@ AREAS = {
         "releases_performers", "performers", "performers_members",
         "comments", "works_see_also"], []),
     "Исполнения": ("album", [
-        "events", "events_performers_3", "perfs", "perfs_performers_1",
-        "sets", "sets_entries", "disk_formats", "books", "book_sets",
-        "books_entries"], []),
+        "events", "events_files", "events_performers_3", "perfs",
+        "perfs_performers_1", "sets", "sets_entries", "disk_formats", "books",
+        "book_sets", "books_entries"],
+        ["performers", "performers_members", "directus_files"]),
+    # каталог концертов: события, их программы и снимки (без сет-листов дисков и книг)
+    "Концерты": ("mic", [
+        "events", "events_files", "events_performers_3", "perfs",
+        "perfs_performers_1"],
+        ["performers", "performers_members", "directus_files", "works"]),
     "Тексты и музыкальная часть": ("lyrics", [
         "works", "variants", "cycles", "cycles_entries"], []),
     "Высказывания": ("format_quote", ["statements", "statements_works"], []),
