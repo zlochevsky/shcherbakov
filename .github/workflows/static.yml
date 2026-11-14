@@ -76,6 +76,19 @@ jobs:
       - name: Create config with the public Directus token
         run: cp config/_default/params.json.example config/_default/params.json
 
+      # Копии снимков из Directus (обложка и галерея по пресетам) хранятся между запусками: скрипт докачивает только
+      # новые и изменённые файлы и убирает лишние, шаблон берёт их из assets/dx-photos/ вместо скачивания
+      # (layouts/partials/dx-photo.html). Ключ уникален у каждого запуска, восстанавливается последний сохранённый.
+      - name: Restore photo cache
+        uses: actions/cache@v4
+        with:
+          path: assets/dx-photos
+          key: dx-photos-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: dx-photos-
+
+      - name: Update photo cache
+        run: python3 scripts/photos-cache.py
+
       - name: Build
         run: hugo -d public --cleanDestinationDir
 

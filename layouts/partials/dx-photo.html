@@ -1,0 +1,21 @@
+{{- /* Копия снимка Directus по пресету: из локального кэша assets/dx-photos/ (его наполняет scripts/photos-cache.py,
+       в GitHub Actions он переживает сборку), иначе — скачать из Directus. Имя в кэше — <id файла>-<пресет>-<версия>,
+       версия — PRESETS_VERSION + цифры modified_on (или uploaded_on) файла: заменённый или исправленный в Directus файл
+       получает новое имя. PRESETS_VERSION — то же, что в scripts/photos-cache.py; при смене самих пресетов поднять в обоих.
+       Вход: dict file (id, modified_on, uploaded_on), preset, event (id события, для предупреждения). Возвращает ресурс
+       или "" */ -}}
+{{- $presetsVersion := "1" -}}
+{{- $f := .file -}}
+{{- $ver := printf "%s%s" $presetsVersion (replaceRE `\D` "" (or $f.modified_on $f.uploaded_on "")) -}}
+{{- $ver = substr $ver 0 (add (len $presetsVersion) 14) -}}
+{{- $r := "" -}}
+{{- with resources.Get (printf "dx-photos/%s-%s-%s.jpg" $f.id .preset $ver) -}}
+	{{- $r = . -}}
+{{- else -}}
+	{{- $url := printf "%sassets/%s?key=%s%s" site.Params.directus.url $f.id .preset site.Params.directus.token -}}
+	{{- $event := .event }}{{ $preset := .preset -}}
+	{{- with try (resources.GetRemote $url) -}}
+		{{- with .Err }}{{ warnf "concert %s %s: %s" $event $preset . }}{{ else with .Value }}{{ $r = . }}{{ end -}}
+	{{- end -}}
+{{- end -}}
+{{- return $r -}}

@@ -183,14 +183,13 @@
 		{{- end -}}</ol>
 		{{- /* Снимки концерта: $items — все снимки для галереи (src, w, h, cap), обложка — первый снимок.
 		       Из Directus — копии по пресетам (docs/directus.md, «Файлы и пресеты»), Hugo скачивает их при сборке
-		       в photos/<id события>/<id файла>-cover.jpg (concert-cover, вписан в 648×864, выводится в рамку 324)
+		       (или берёт из кэша assets/dx-photos/, партиал dx-photo.html) в photos/<id события>/<id файла>-cover.jpg (concert-cover, вписан в 648×864, выводится в рамку 324)
 		       и …-gallery.jpg (gallery, до 2000). Подпись (cap) — название файла Directus, если оно словесное,
 		       а не номер из имени файла («01»); credit — «Фото: автор (источник)» из своих полей файла author, source:
 		       в галерее под подписью, у обложки — под ней. loading="lazy": у свёрнутого концерта обложка не грузится */ -}}
 		{{- $items := slice }}{{ $coverSrc := "" }}{{ $coverW := 0 }}{{ $coverH := 0 }}{{ $coverCredit := "" -}}
 		{{- $alt := printf "Снимок с концерта: %s, %s" $when (delimit $place ", ") -}}
 		{{- range $i, $f := $photos -}}
-			{{- $asset := printf "%sassets/%s?key=%%s%s" site.Params.directus.url $f.id site.Params.directus.token -}}
 			{{- $out := printf "photos/%s/%s-%%s.jpg" $event.id $f.id -}}
 			{{- $cap := "" }}{{ with $f.title }}{{ if findRE `\pL` . }}{{ $cap = . }}{{ end }}{{ end -}}
 			{{- $credit := "" -}}
@@ -198,9 +197,9 @@
 			{{- else }}{{ with $f.source }}{{ $credit = printf "Источник: %s" . }}{{ end }}{{ end -}}
 			{{- if eq $i 0 -}}
 				{{- with $cap }}{{ $alt = . }}{{ end }}{{ $coverCredit = $credit -}}
-				{{- with try (resources.GetRemote (printf $asset "concert-cover")) }}{{ with .Err }}{{ warnf "concert %s cover: %s" $event.id . }}{{ else with .Value }}{{ with resources.Copy (printf $out "cover") . }}{{ $coverSrc = .RelPermalink }}{{ $coverW = div .Width 2 }}{{ $coverH = div .Height 2 }}{{ end }}{{ end }}{{ end -}}
+				{{- with partial "dx-photo.html" (dict "file" $f "preset" "concert-cover" "event" $event.id) }}{{ with resources.Copy (printf $out "cover") . }}{{ $coverSrc = .RelPermalink }}{{ $coverW = div .Width 2 }}{{ $coverH = div .Height 2 }}{{ end }}{{ end -}}
 			{{- end -}}
-			{{- with try (resources.GetRemote (printf $asset "gallery")) }}{{ with .Err }}{{ warnf "concert %s gallery: %s" $event.id . }}{{ else with .Value }}{{ with resources.Copy (printf $out "gallery") . }}{{ $items = $items | append (dict "src" .RelPermalink "w" .Width "h" .Height "cap" $cap "credit" $credit) }}{{ end }}{{ end }}{{ end -}}
+			{{- with partial "dx-photo.html" (dict "file" $f "preset" "gallery" "event" $event.id) }}{{ with resources.Copy (printf $out "gallery") . }}{{ $items = $items | append (dict "src" .RelPermalink "w" .Width "h" .Height "cap" $cap "credit" $credit) }}{{ end }}{{ end -}}
 		{{- end -}}
 		{{- /* Обложка — кнопка галереи (просмотр поверх страницы, скрипт внизу), если снимков несколько или единственный
 		       шире 500 точек; иначе — просто картинка. Значок «⧉ N» — число снимков (docs/photos-plan.md) */ -}}
