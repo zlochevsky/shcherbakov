@@ -183,11 +183,15 @@ details.concert .concert-body > ol {
 }
 
 details.concert .concert-photo {
-	position: relative;
 	flex: 0 0 auto;
 	width: 324px;
 	max-width: calc(100% - 1.2em);
 	margin: .5em .6em;
+}
+
+details.concert .concert-photo .cover {
+	position: relative;
+	display: block;
 }
 
 details.concert .concert-photo img {
@@ -199,8 +203,8 @@ details.concert .concert-photo img {
 }
 
 /* обложка-кнопка открывает галерею: выглядит как картинка, курсор — рука */
-details.concert button.concert-photo {
-	display: block;
+details.concert .concert-photo button.cover {
+	width: 100%;
 	padding: 0;
 	border: 0;
 	background: none;
@@ -209,10 +213,17 @@ details.concert button.concert-photo {
 	text-align: left;
 }
 
-details.concert button.concert-photo:focus-visible {
+details.concert .concert-photo button.cover:focus-visible {
 	outline: 2px solid currentColor;
 	outline-offset: 3px;
 	border-radius: 4px;
+}
+
+/* «Фото: автор (источник)» первого снимка — под обложкой */
+details.concert .photo-credit {
+	margin-top: .3em;
+	font-size: .8em;
+	color: var(--muted);
 }
 
 details.concert .photo-count {

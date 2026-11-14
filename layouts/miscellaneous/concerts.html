@@ -128,18 +128,10 @@
 	{{- if $event.is_home }}{{ $home = "1" }}{{ end -}}
 	{{- $program := "0" -}}
 	{{- if gt (len $eventPerfs) 0 }}{{ $program = "1" }}{{ end -}}
-	{{- /* Снимки события: сначала поле photos (файлы Directus, порядок — num), иначе файлы в static/photos/<id события>/
-	       по порядку имён; первый — обложка (docs/photos-plan.md) */ -}}
-	{{- $dxPhotos := slice -}}
-	{{- range sort ($event.photos | default slice) "num" -}}
-		{{- with .directus_files_id }}{{ $dxPhotos = $dxPhotos | append . }}{{ end -}}
-	{{- end -}}
+	{{- /* Снимки события — поле photos (файлы Directus, порядок — num); первый — обложка (docs/photos-plan.md) */ -}}
 	{{- $photos := slice -}}
-	{{- $photoDir := printf "static/photos/%s" $event.id -}}
-	{{- if $dxPhotos }}{{ $photos = $dxPhotos }}{{ else if os.FileExists $photoDir -}}
-		{{- range os.ReadDir $photoDir -}}
-			{{- if and (not .IsDir) (findRE `(?i)\.(jpe?g|png|webp)$` .Name) }}{{ $photos = $photos | append .Name }}{{ end -}}
-		{{- end -}}
+	{{- range sort ($event.photos | default slice) "num" -}}
+		{{- with .directus_files_id }}{{ $photos = $photos | append . }}{{ end -}}
 	{{- end -}}
 	{{- $photo := cond (gt (len $photos) 0) "1" "0" -}}
 	{{- $when := "" -}}
@@ -192,47 +184,36 @@
 		{{- /* Снимки концерта: $items — все снимки для галереи (src, w, h, cap), обложка — первый снимок.
 		       Из Directus — копии по пресетам (docs/directus.md, «Файлы и пресеты»), Hugo скачивает их при сборке
 		       в photos/<id события>/<id файла>-cover.jpg (concert-cover, вписан в 648×864, выводится в рамку 324)
-		       и …-gallery.jpg (gallery, до 2000). Из static/photos: снимок не больше рамки 324×432 — обложка как есть,
-		       больший — превью Hugo (поворот по EXIF, Fill Smart); файл читается прямо из static/photos (images.Config,
-		       resources.FromString), module.mounts не нужен. Подпись (cap) — название файла Directus, если оно словесное,
-		       а не номер из имени файла («01»). loading="lazy": у свёрнутого концерта обложка не грузится */ -}}
-		{{- $items := slice }}{{ $coverSrc := "" }}{{ $coverW := 0 }}{{ $coverH := 0 -}}
+		       и …-gallery.jpg (gallery, до 2000). Подпись (cap) — название файла Directus, если оно словесное,
+		       а не номер из имени файла («01»); credit — «Фото: автор (источник)» из своих полей файла author, source:
+		       в галерее под подписью, у обложки — под ней. loading="lazy": у свёрнутого концерта обложка не грузится */ -}}
+		{{- $items := slice }}{{ $coverSrc := "" }}{{ $coverW := 0 }}{{ $coverH := 0 }}{{ $coverCredit := "" -}}
 		{{- $alt := printf "Снимок с концерта: %s, %s" $when (delimit $place ", ") -}}
-		{{- with $dxPhotos }}
-			{{- range $i, $f := $dxPhotos -}}
-				{{- $asset := printf "%sassets/%s?key=%%s%s" site.Params.directus.url $f.id site.Params.directus.token -}}
-				{{- $out := printf "photos/%s/%s-%%s.jpg" $event.id $f.id -}}
-				{{- $cap := "" }}{{ with $f.title }}{{ if findRE `\pL` . }}{{ $cap = . }}{{ end }}{{ end -}}
-				{{- if eq $i 0 -}}
-					{{- with $cap }}{{ $alt = . }}{{ end -}}
-					{{- with try (resources.GetRemote (printf $asset "concert-cover")) }}{{ with .Err }}{{ warnf "concert %s cover: %s" $event.id . }}{{ else with .Value }}{{ with resources.Copy (printf $out "cover") . }}{{ $coverSrc = .RelPermalink }}{{ $coverW = div .Width 2 }}{{ $coverH = div .Height 2 }}{{ end }}{{ end }}{{ end -}}
-				{{- end -}}
-				{{- with try (resources.GetRemote (printf $asset "gallery")) }}{{ with .Err }}{{ warnf "concert %s gallery: %s" $event.id . }}{{ else with .Value }}{{ with resources.Copy (printf $out "gallery") . }}{{ $items = $items | append (dict "src" .RelPermalink "w" .Width "h" .Height "cap" $cap) }}{{ end }}{{ end }}{{ end -}}
+		{{- range $i, $f := $photos -}}
+			{{- $asset := printf "%sassets/%s?key=%%s%s" site.Params.directus.url $f.id site.Params.directus.token -}}
+			{{- $out := printf "photos/%s/%s-%%s.jpg" $event.id $f.id -}}
+			{{- $cap := "" }}{{ with $f.title }}{{ if findRE `\pL` . }}{{ $cap = . }}{{ end }}{{ end -}}
+			{{- $credit := "" -}}
+			{{- with $f.author }}{{ $credit = printf "Фото: %s" . }}{{ with $f.source }}{{ $credit = printf "%s (%s)" $credit . }}{{ end -}}
+			{{- else }}{{ with $f.source }}{{ $credit = printf "Источник: %s" . }}{{ end }}{{ end -}}
+			{{- if eq $i 0 -}}
+				{{- with $cap }}{{ $alt = . }}{{ end }}{{ $coverCredit = $credit -}}
+				{{- with try (resources.GetRemote (printf $asset "concert-cover")) }}{{ with .Err }}{{ warnf "concert %s cover: %s" $event.id . }}{{ else with .Value }}{{ with resources.Copy (printf $out "cover") . }}{{ $coverSrc = .RelPermalink }}{{ $coverW = div .Width 2 }}{{ $coverH = div .Height 2 }}{{ end }}{{ end }}{{ end -}}
 			{{- end -}}
-		{{- else with $photos }}
-			{{- range $photos -}}
-				{{- $rel := printf "photos/%s/%s" $event.id . -}}
-				{{- $cfg := images.Config (printf "static/%s" $rel) -}}
-				{{- $items = $items | append (dict "src" ($rel | relURL) "w" $cfg.Width "h" $cfg.Height "cap" "") -}}
-			{{- end -}}
-			{{- $rel := printf "photos/%s/%s" $event.id (index $photos 0) -}}
-			{{- $file := printf "static/%s" $rel -}}
-			{{- $cfg := images.Config $file -}}
-			{{- $coverSrc = $rel | relURL }}{{ $coverW = $cfg.Width }}{{ $coverH = $cfg.Height -}}
-			{{- if or (gt $coverW 324) (gt $coverH 432) }}
-				{{- $thumb := (resources.FromString $rel (os.ReadFile $file) | images.Filter images.AutoOrient).Fill "324x432 Smart q82" -}}
-				{{- $coverSrc = $thumb.RelPermalink }}{{ $coverW = $thumb.Width }}{{ $coverH = $thumb.Height -}}
-			{{- end }}
-		{{- end }}
+			{{- with try (resources.GetRemote (printf $asset "gallery")) }}{{ with .Err }}{{ warnf "concert %s gallery: %s" $event.id . }}{{ else with .Value }}{{ with resources.Copy (printf $out "gallery") . }}{{ $items = $items | append (dict "src" .RelPermalink "w" .Width "h" .Height "cap" $cap "credit" $credit) }}{{ end }}{{ end }}{{ end -}}
+		{{- end -}}
 		{{- /* Обложка — кнопка галереи (просмотр поверх страницы, скрипт внизу), если снимков несколько или единственный
 		       шире 500 точек; иначе — просто картинка. Значок «⧉ N» — число снимков (docs/photos-plan.md) */ -}}
 		{{- with $coverSrc }}
 			{{- $n := len $items -}}
 			{{- $opens := or (gt $n 1) (and (eq $n 1) (gt (index $items 0).w 500)) -}}
-			{{- if $opens }}<button type="button" class="concert-photo" data-gallery="{{ $items | jsonify }}" aria-label="Открыть все снимки концерта ({{ $n }})">{{ else }}<span class="concert-photo">{{ end -}}
+			<figure class="concert-photo">
+			{{- if $opens }}<button type="button" class="cover" data-gallery="{{ $items | jsonify }}" aria-label="Открыть все снимки концерта ({{ $n }})">{{ else }}<span class="cover">{{ end -}}
 			<img src="{{ . }}" width="{{ $coverW }}" height="{{ $coverH }}" alt="{{ $alt }}" loading="lazy">
 			{{- if gt $n 1 }}<span class="photo-count" aria-hidden="true">⧉ {{ $n }}</span>{{ end -}}
-			{{- if $opens }}</button>{{ else }}</span>{{ end }}
+			{{- if $opens }}</button>{{ else }}</span>{{ end -}}
+			{{- with $coverCredit }}<figcaption class="photo-credit">{{ . }}</figcaption>{{ end -}}
+			</figure>
 		{{- end }}
 		</div>
 	</details>
@@ -395,7 +376,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	<button type="button" class="g-close" aria-label="Закрыть">×</button>
 </dialog>
 <script>
-// Галерея концерта: обложка-кнопка с data-gallery (JSON: src, w, h, cap) открывает снимки поверх страницы.
+// Галерея концерта: обложка-кнопка с data-gallery (JSON: src, w, h, cap, credit) открывает снимки поверх страницы.
 // Стрелки, клавиши ← →, свайп; закрытие — Escape (штатно у <dialog>), крестик, щелчок мимо снимка.
 (() => {
 	const dlg = document.getElementById("cgallery");
@@ -412,14 +393,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		img.width = it.w;
 		img.height = it.h;
 		img.alt = it.cap || alt;
-		cap.textContent = it.cap || "";
+		cap.textContent = [it.cap, it.credit].filter(Boolean).join(" · ");
 		counter.textContent = `${pos + 1} / ${items.length}`;
 		// соседние снимки — заранее, чтобы листание не ждало загрузки
 		[pos + 1, pos - 1].forEach(j => { const n = items[(j + items.length) % items.length]; if (n) new Image().src = n.src; });
 	}
 
 	document.addEventListener("click", e => {
-		const btn = e.target.closest("button.concert-photo[data-gallery]");
+		const btn = e.target.closest(".concert-photo button[data-gallery]");
 		if (!btn) return;
 		try { items = JSON.parse(btn.dataset.gallery); } catch { return; }
 		if (!items.length) return;

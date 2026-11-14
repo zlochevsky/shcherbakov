@@ -50,6 +50,9 @@ EXPORTS = [('flows', 'flows?limit=-1&fields=*,operations.*'),
 # тогда рисуются только её связи, без линий между остальными («с чем связана эта таблица»).
 # Вместо имени центральной коллекции можно дать словарь: {'center': …, 'direction': 'LR' (слева направо),
 # 'left': коллекция, которую поставить слева — её линии пишутся «от неё», и Mermaid кладёт её первой}.
+# Системные коллекции Directus, которые рисуются на схемах (их нет в снимке схемы — только имя, без полей).
+SYSTEM = {'directus_files'}
+
 GROUPS = [
     # Ядро: песня — исполнение — событие, в строку слева направо.
     ('Песня, исполнение, событие', ['works', 'perfs', 'events']),
@@ -69,7 +72,7 @@ GROUPS = [
     # Коллекции события
     ('События', [('events', ['id', 'status', 'date', 'date_approximate', 'year', 'time', 'dw', 'day_evening',
                              'country', 'state', 'town', 'place', 'name', 'is_studio', 'set_id']),
-                 'announces', 'log_entries', 'perfs', 'performers', 'sets']),
+                 'announces', 'log_entries', 'perfs', 'performers', 'sets', 'directus_files']),
     ('Исполнения', [('perfs', ['id', 'events_id', 'works_id', 'variants_id', 'num', 'note']),
                     'events', 'works', 'variants', 'performers', 'sets_entries'], 'perfs'),
     ('Диски', [('works', ['id']), ('perfs', ['events_id', 'works_id', 'num']), ('sets',['title', 'year', 'ignore_in_catalogue']), ('sets_entries', ['perfs_id', 'sets_id', 'num']), 'disk_formats']),
@@ -112,7 +115,7 @@ def edges(snap):
                 for f in data['fields']}
     rels = [r for r in data['relations']
             if not r['collection'].startswith('directus_') and r['related_collection']
-            and not r['related_collection'].startswith('directus_')]
+            and (not r['related_collection'].startswith('directus_') or r['related_collection'] in SYSTEM)]
     out = []
     m2m = {}  # служебная таблица → (коллекция, поле M2M) с каждой стороны, где поле заведено
     for r in rels:
@@ -128,7 +131,7 @@ def edges(snap):
     for junction, sides in m2m.items():
         a, field, jf = sorted(sides)[0]
         other = next((x['related_collection'] for x in rels if x['collection'] == junction and x['field'] == jf), None)
-        if other is None:  # вторая сторона — системная коллекция (events_files → directus_files): не рисуем
+        if other is None:  # вторая сторона — системная коллекция не из SYSTEM: не рисуем
             continue
         label = ' / '.join(f for _, f, _ in sorted(sides))
         out.append((a, other, label, 'm2m'))
@@ -158,7 +161,7 @@ def block(snap, coll, wanted):
 def render(snap):
     """Легенда и [(название темы, чертёж mermaid)] в порядке GROUPS."""
     es, hidden = edges(snap)
-    shown = {c['collection'] for c in snap['data']['collections']} - hidden
+    shown = ({c['collection'] for c in snap['data']['collections']} | SYSTEM) - hidden
     def opts(g):
         o = g[2] if len(g) > 2 else {}
         return {'center': o} if isinstance(o, str) else o
